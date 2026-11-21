@@ -1,170 +1,510 @@
 {
-  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
-  "status": "passed_no_mandatory_correction",
-  "reviewedDocuments": [
-    {
-      "path": "manual/review/01_Review_계획과_좌표계.md",
-      "sha256": "80c75f2d101c6f43fa988a8f04cba5f6ba9f216a303c037e73b6bf0a5eb666d0",
-      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
-    },
-    {
-      "path": "manual/review/02_Masking_Sampling_IOF.md",
-      "sha256": "52027b8d063f11d7eee5d3f6bcdacb267d0ae7d0c64b5f47c1b21db703a9663f",
-      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
-    },
-    {
-      "path": "manual/review/03_Vision_패킷과_단위.md",
-      "sha256": "71e56b1e8f69ca1e0a8257c595d8ffcc3ee7cf3303771950f4ec62302fb9ccb0",
-      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
-    },
-    {
-      "path": "manual/review/04_ReviewOffset_적용과_롤백.md",
-      "sha256": "9cca44b67da7c3f7a82e23d5813238d498953c816594136adb2df514b0d1d7ba",
-      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
-    },
-    {
-      "path": "manual/review/05_결과_Revision_Product_연결.md",
-      "sha256": "9356941839f561c82ead8b9d7104c2ff69568374fef8df4c65c888b9a1311187",
-      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
-    },
-    {
-      "path": "manual/review/06_DefaultOffset_ZeroOrder_FirstBeam.md",
-      "sha256": "89697106e4c14a7ebeb5bd94ce549dae95847a75ff220be22e3607f346c62a9a",
-      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
-    },
-    {
-      "path": "manual/review/07_Align_Distortion_윈도우_복구.md",
-      "sha256": "dcb7a940bbe7a0487e4b48ac14f1c0f837fecce049acd600394f7597bbb6c2ad",
-      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
-    }
-  ],
-  "reviewedAnalysis": [
-    "analysis-parts/review-analysis.md",
-    "analysis-parts/review-analysis.json"
-  ],
-  "readSourceRanges": [
-    {
-      "path": "Drilling.Common/Review/CReviewManager.cs",
-      "startLine": 153,
-      "endLine": 196,
-      "selectedSourceSha256": "45c5984ac9020707236e29f8642a5722be8da48415420598d0bd373f5f77808a"
-    },
-    {
-      "path": "Drilling.Common/Correction/CAlignInterpolation.cs",
-      "startLine": 276,
-      "endLine": 308,
-      "selectedSourceSha256": "5f13d33e6e0302d0e5901ea04c4093c1a7170feb1bba8dd0b23464ab87deedae"
-    },
-    {
-      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
-      "startLine": 264,
-      "endLine": 302,
-      "selectedSourceSha256": "a16baf2122424d603411ad5fb27e13cffb55352d12cc09d43846f5d380cf3322"
-    },
-    {
-      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
-      "startLine": 385,
-      "endLine": 480,
-      "selectedSourceSha256": "546814c29f9c4b7e152c2c464225906b2c78d57e20184b18909a0cad47c64024"
-    },
-    {
-      "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
-      "startLine": 412,
-      "endLine": 472,
-      "selectedSourceSha256": "fce579fcd722290e08645c066045287ba9c84d5c869815be13ee1c7a080489eb"
-    },
-    {
-      "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
-      "startLine": 719,
-      "endLine": 722,
-      "selectedSourceSha256": "38e8206b6c7cc028f6dca5783411275c0124889227afd2e83ffbe769bf1b6e2d"
-    },
-    {
-      "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
-      "startLine": 1327,
-      "endLine": 1328,
-      "selectedSourceSha256": "7c25e0f49ec79924de9c15657b8545594252824fce453357b0e9a5741a53fa99"
-    },
-    {
-      "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
-      "startLine": 29,
-      "endLine": 62,
-      "selectedSourceSha256": "ea988b0b93429a12d7cd628c35a36bc685279673f78c4bed3ff2c501dd7f2765"
-    },
-    {
-      "path": "Drilling.UI/Views/CReviewShotMapControl.cs",
-      "startLine": 282,
-      "endLine": 299,
-      "selectedSourceSha256": "d860d16ef72bada3d845adb2ebd65a2444ec164a7e2921f49875b9df4052e791"
-    }
-  ],
-  "results": [
-    {
-      "id": "XC-01",
-      "status": "consistent",
-      "topic": "공통 Margin과 Recipe 카메라 AK 위치는 별도",
-      "detail": "Review의 Design−Margin 상쇄 조건을 함께 명시함. 모든 물리목표 이동 단정 없음."
-    },
-    {
-      "id": "XC-02",
-      "status": "consistent",
-      "topic": "RETAINED·EDITED 적용 후보와 기존 Fine 보간",
-      "detail": "새 후보 필터와 이전 Lagrange/Use/계보 잔건을 구분. Direct/Rough OK선택·Fine 비OK전체차단과 일치."
-    },
-    {
-      "id": "XC-03",
-      "status": "consistent",
-      "topic": "전일자 적용 이력과 경로/계보 한계",
-      "detail": "날짜 전체 cache 개선과 외부writer/다른경로/Revision 한계가 분리됨."
-    },
-    {
-      "id": "XC-04",
-      "status": "consistent",
-      "topic": "SIMPLE0/INSPECTION1·RUN/RESULT·별도 panel",
-      "detail": "현재 구성과 모드별 결과필터·BEAM_INSPECTION Offset금지를 구분함."
-    },
-    {
-      "id": "XC-05",
-      "status": "consistent",
-      "topic": "Level과 JUDGE/미측정 색상",
-      "detail": "Live/최근MANUAL LOAD/REVIEW DATA의 각 표시 경로를 구분. 낮은 Level이 실측OK를 입증하지 않음."
-    },
-    {
-      "id": "XC-06",
-      "status": "consistent",
-      "topic": "Default DOE 혼합과 현재 source 한계",
-      "detail": "DOE ON1/16·OFF1·일반 Review 선택Beam·Default Setting후Recipe덮기 예외를 유지."
-    },
-    {
-      "id": "XC-07",
-      "status": "consistent",
-      "topic": "23회귀와 장비 정식 빌드",
-      "detail": "별도 원문 복사회귀23개는 파일/순수계산 반례 검사. WPF/실기/장비정식빌드 통과로 확대하지 않음."
-    }
-  ],
-  "recommendations": [
-    {
-      "id": "XC-MARGIN",
-      "status": "resolved_by_review_agent",
-      "detail": "같은Margin으로설계점재생성시상쇄문장Review01추가"
-    },
-    {
-      "id": "XC-DEFAULT",
-      "status": "resolved_by_review_agent",
-      "detail": "Default의Setting→Recipe덮기예외Review06추가"
-    }
-  ],
-  "scope": {
-    "sourceReadOnly": true,
-    "sourceModified": false,
-    "otherManualEdited": false,
-    "equipmentBuildRun": false,
-    "equipmentExecution": false,
-    "vendorExecution": false,
-    "productionRowsCopied": false
+  "schemaVersion": "a3-architecture-independent-crosscheck/1",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "sourceBranch": "master",
+  "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+  "comparisonCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "diff": {
+    "files": 1,
+    "addedLines": 1562,
+    "deletedLines": 0,
+    "paths": [
+      "Drilling.Common/Log/CLogManager.cs"
+    ]
   },
-  "limitations": [
-    "Review7장 변경절·관련기존설명과 분석 md/json을 교차검토. 모든 소스원문의 새 전체 정독/장비 실행은 아님",
-    "SVG 시각 QA는 Root 최종후보 담당"
-  ]
+  "reviewScope": {
+    "fullRead": [
+      "Drilling.Common/Log/CLogManager.cs"
+    ],
+    "relatedSourceRanges": [
+      {
+        "file": "Drilling.Common/Log/CLogManager.cs",
+        "startLine": 18,
+        "endLine": 69,
+        "label": "로그 구성과 저장 위치",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L18-L69",
+        "fileSha256": "9212676723d170166d61a6d7baeafeec6cf6b660d2ae5ef59c22de14dc2e3728"
+      },
+      {
+        "file": "Drilling.Common/Log/CLogManager.cs",
+        "startLine": 72,
+        "endLine": 174,
+        "label": "PM 세션 저장·완료·조회",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L72-L174",
+        "fileSha256": "9212676723d170166d61a6d7baeafeec6cf6b660d2ae5ef59c22de14dc2e3728"
+      },
+      {
+        "file": "Drilling.Common/Log/CLogManager.cs",
+        "startLine": 185,
+        "endLine": 301,
+        "label": "Recipe·Setting 이력 API",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L185-L301",
+        "fileSha256": "9212676723d170166d61a6d7baeafeec6cf6b660d2ae5ef59c22de14dc2e3728"
+      },
+      {
+        "file": "Drilling.Common/Log/CLogManager.cs",
+        "startLine": 341,
+        "endLine": 420,
+        "label": "동기 텍스트 기록과 파일 잠금",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L341-L420",
+        "fileSha256": "9212676723d170166d61a6d7baeafeec6cf6b660d2ae5ef59c22de14dc2e3728"
+      },
+      {
+        "file": "Drilling.Common/Log/CLogManager.cs",
+        "startLine": 422,
+        "endLine": 537,
+        "label": "Interface 큐·Flush·종료",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L422-L537",
+        "fileSha256": "9212676723d170166d61a6d7baeafeec6cf6b660d2ae5ef59c22de14dc2e3728"
+      },
+      {
+        "file": "Drilling.Common/Log/CLogManager.cs",
+        "startLine": 539,
+        "endLine": 714,
+        "label": "이력 파서·조회 기간·필드 처리",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L539-L714",
+        "fileSha256": "9212676723d170166d61a6d7baeafeec6cf6b660d2ae5ef59c22de14dc2e3728"
+      },
+      {
+        "file": "Drilling.Common/Log/CLogManager.cs",
+        "startLine": 716,
+        "endLine": 796,
+        "label": "Alarm JSONL 기록·조회",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L716-L796",
+        "fileSha256": "9212676723d170166d61a6d7baeafeec6cf6b660d2ae5ef59c22de14dc2e3728"
+      },
+      {
+        "file": "Drilling.Common/Log/CLogManager.cs",
+        "startLine": 801,
+        "endLine": 940,
+        "label": "Sequence 큐·배치·오류 처리",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L801-L940",
+        "fileSha256": "9212676723d170166d61a6d7baeafeec6cf6b660d2ae5ef59c22de14dc2e3728"
+      },
+      {
+        "file": "Drilling.Common/Log/CLogManager.cs",
+        "startLine": 945,
+        "endLine": 994,
+        "label": "일반 로그 탐색 범위",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L945-L994",
+        "fileSha256": "9212676723d170166d61a6d7baeafeec6cf6b660d2ae5ef59c22de14dc2e3728"
+      },
+      {
+        "file": "Drilling.Common/Log/CLogManager.cs",
+        "startLine": 997,
+        "endLine": 1399,
+        "label": "시퀀스 문구·기판 식별자 투영",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L997-L1399",
+        "fileSha256": "9212676723d170166d61a6d7baeafeec6cf6b660d2ae5ef59c22de14dc2e3728"
+      },
+      {
+        "file": "Drilling.Common/Log/CLogManager.cs",
+        "startLine": 1401,
+        "endLine": 1501,
+        "label": "전체/페이지 로그 읽기와 인코딩",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1401-L1501",
+        "fileSha256": "9212676723d170166d61a6d7baeafeec6cf6b660d2ae5ef59c22de14dc2e3728"
+      },
+      {
+        "file": "Drilling.Common/Log/CLogManager.cs",
+        "startLine": 1503,
+        "endLine": 1562,
+        "label": "PM 레코드와 시작 실패 기록",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1503-L1562",
+        "fileSha256": "9212676723d170166d61a6d7baeafeec6cf6b660d2ae5ef59c22de14dc2e3728"
+      },
+      {
+        "file": "Drilling.UI/CAppStartup.cs",
+        "startLine": 15,
+        "endLine": 36,
+        "label": "애플리케이션 DI 연결",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CAppStartup.cs#L15-L36",
+        "fileSha256": "98e8716b093e6970d73233f8488d538acf7fa02f5d140ab1baebd9e8abdcd9b9"
+      },
+      {
+        "file": "Drilling.Common/Managers/CManager.cs",
+        "startLine": 76,
+        "endLine": 134,
+        "label": "Alarm·Review·Product·Station에 로그 연결",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L76-L134",
+        "fileSha256": "6db41ef7d7938136bce10c0d3acd4d9293a57cc4336ff26dc3a79041db2914f8"
+      },
+      {
+        "file": "Drilling.Common/Managers/CManager.cs",
+        "startLine": 227,
+        "endLine": 265,
+        "label": "종료 시 큐 정리와 5초 대기",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L227-L265",
+        "fileSha256": "6db41ef7d7938136bce10c0d3acd4d9293a57cc4336ff26dc3a79041db2914f8"
+      },
+      {
+        "file": "Drilling.UI/CRootView.cs",
+        "startLine": 1307,
+        "endLine": 1322,
+        "label": "이력 저장 성공 후 PM 잠금",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1307-L1322",
+        "fileSha256": "09f2e5df917b40012488baaad112bcba54488350e86e3bdc181cffa5ffeee8ab"
+      },
+      {
+        "file": "Drilling.UI/CRootView.cs",
+        "startLine": 1467,
+        "endLine": 1493,
+        "label": "이력 완료 실패 시 PM 잠금 유지",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1467-L1493",
+        "fileSha256": "09f2e5df917b40012488baaad112bcba54488350e86e3bdc181cffa5ffeee8ab"
+      },
+      {
+        "file": "Drilling.UI/CRootView.cs",
+        "startLine": 125,
+        "endLine": 129,
+        "label": "PM 잠금의 초기 메모리 상태",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L125-L129",
+        "fileSha256": "09f2e5df917b40012488baaad112bcba54488350e86e3bdc181cffa5ffeee8ab"
+      },
+      {
+        "file": "Drilling.UI/Menu/Menus/CMenuPm.cs",
+        "startLine": 35,
+        "endLine": 56,
+        "label": "PM 화면 이력 소비",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L35-L56",
+        "fileSha256": "1393394dca1a9500052acf8e9238a1ce0db7006515a36cc5c68d3d88fccb3258"
+      },
+      {
+        "file": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+        "startLine": 222,
+        "endLine": 243,
+        "label": "Recipe 저장 검증 후 이력 기록",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CJhmiRecipeFile.cs#L222-L243",
+        "fileSha256": "83965473a623f54f27fccf5d963e476d696721927341629e26b0a525581bada4"
+      },
+      {
+        "file": "Drilling.File/JHMI/CSettingFile.cs",
+        "startLine": 86,
+        "endLine": 139,
+        "label": "Setting 저장 검증 후 변경값 기록",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CSettingFile.cs#L86-L139",
+        "fileSha256": "c049c9c77518b5df70fe76f234c4c5d952c9ef880aed3cd8cdd8845be89c0ab4"
+      },
+      {
+        "file": "Drilling.Common/Managers/CRecipeManager.cs",
+        "startLine": 146,
+        "endLine": 159,
+        "label": "Recipe 저장·캐시·이력 재로딩",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CRecipeManager.cs#L146-L159",
+        "fileSha256": "b8d208d8945081e6a6d500f40d51e3f4fca414124329325c36c7fffedb86c9b9"
+      },
+      {
+        "file": "Drilling.Common/Station/CStationProcess.cs",
+        "startLine": 2360,
+        "endLine": 2418,
+        "label": "Station·Sequence 로그 호출과 예외 경계",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2360-L2418",
+        "fileSha256": "7e5b1fd549370e222890c0882624bd116e1375ae160cb55e0d94cf3513f8b917"
+      },
+      {
+        "file": "Drilling.Common/Review/CReviewManager.cs",
+        "startLine": 1028,
+        "endLine": 1050,
+        "label": "Review 로그 분기와 예외 격리",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1028-L1050",
+        "fileSha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d"
+      },
+      {
+        "file": "Drilling.Common/Review/CReviewManager.cs",
+        "startLine": 2739,
+        "endLine": 2751,
+        "label": "Fine 진행 상태의 비동기 로그",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2739-L2751",
+        "fileSha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d"
+      },
+      {
+        "file": "Drilling.Common/Review/CReviewManager.cs",
+        "startLine": 509,
+        "endLine": 575,
+        "label": "기존 Review 좌표·Head·Masking 계획",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L509-L575",
+        "fileSha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d"
+      },
+      {
+        "file": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+        "startLine": 11,
+        "endLine": 56,
+        "label": "기존 Review 결과 CSV 정의와 저장 루트",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L11-L56",
+        "fileSha256": "5a8c29eaaf994eab9e46a077532ed9c6027381a95e2ef253f83dd57b40a756c3"
+      },
+      {
+        "file": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+        "startLine": 60,
+        "endLine": 78,
+        "label": "기존 Review Offset 저장소",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L60-L78",
+        "fileSha256": "f14cd0667a5687200ac831d5c70d988e7c3493c5e8c285e946d98b246fb3be6f"
+      },
+      {
+        "file": "Drilling.Common/Product/CProductManager.cs",
+        "startLine": 789,
+        "endLine": 816,
+        "label": "Product 원본 저장과 보조 로그",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Product/CProductManager.cs#L789-L816",
+        "fileSha256": "93d3416633fddbcbd2ea9efe7958bd79a32c00eff8c017fb6cebfe757068596d"
+      },
+      {
+        "file": "Drilling.Common/Alarm/CAlarmManager.cs",
+        "startLine": 339,
+        "endLine": 375,
+        "label": "상위 Alarm worker의 실패 처리",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L339-L375",
+        "fileSha256": "5cbff85f66cfcf6744d14dd9955a75c2eb21a6536e0f7fd7517472b7f95fa872"
+      },
+      {
+        "file": "Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs",
+        "startLine": 124,
+        "endLine": 175,
+        "label": "최신 선택 파일만 표시·취소",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L124-L175",
+        "fileSha256": "5d06e93a3ba16a27c93f45c6825f5ef8324b118a9c80bb7ef241987423a8c303"
+      },
+      {
+        "file": "Drilling.UI/CUiLogService.cs",
+        "startLine": 35,
+        "endLine": 60,
+        "label": "버튼 로그의 I/O 예외 격리",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L35-L60",
+        "fileSha256": "e26730fb54b010598ad048992b59d5537b05e268bf8f8b7e3a478a0e8d633cf7"
+      },
+      {
+        "file": "Drilling.Common/Interface/CInterfaceManager.cs",
+        "startLine": 719,
+        "endLine": 772,
+        "label": "Interface 명령·수신·프로토콜 기록 분기",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L719-L772",
+        "fileSha256": "abcba67628431513583ebafd5d0a27a1d3feb991a17d7c46ed5373fbab571b0f"
+      },
+      {
+        "file": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+        "startLine": 9,
+        "endLine": 24,
+        "label": "기존 가공 계획의 진입점",
+        "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+        "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L9-L24",
+        "fileSha256": "18c6b5e5afc1fdb76dafc1fd6bc33a810af4a84492b53c686eef336adb989831"
+      }
+    ],
+    "excluded": [
+      "Non-master Manual Inspection feature branches",
+      "SDK loading/decompilation",
+      "Equipment/AeroScript execution",
+      "Actual operational records and authentication values"
+    ]
+  },
+  "findings": [
+    {
+      "id": "LOG-01",
+      "priority": "high",
+      "status": "source-confirmed-risk",
+      "summary": "Setting audit values are not key-redacted"
+    },
+    {
+      "id": "LOG-02",
+      "priority": "high",
+      "status": "source-confirmed-order",
+      "summary": "Actual Recipe/Setting persistence precedes synchronous history write"
+    },
+    {
+      "id": "LOG-03",
+      "priority": "medium",
+      "status": "source-confirmed-policy",
+      "summary": "Queue rejection and failed batches have no replay"
+    },
+    {
+      "id": "LOG-04",
+      "priority": "medium",
+      "status": "source-confirmed-policy",
+      "summary": "Writer error fields remain sticky after later success"
+    },
+    {
+      "id": "LOG-05",
+      "priority": "medium",
+      "status": "source-confirmed-policy",
+      "summary": "PM persistence gates UI lock changes but does not restore startup lock"
+    },
+    {
+      "id": "LOG-06",
+      "priority": "medium",
+      "status": "source-confirmed-resource-risk",
+      "summary": "Full-file read memory and no automatic retention"
+    },
+    {
+      "id": "LOG-07",
+      "priority": "medium",
+      "status": "independent-exact-source-harness-reproduced",
+      "summary": "Empty old Setting field loses row; empty Recipe Batch Tab/Group corrupt action/item metadata (4 synthetic reproductions); empty trailing new Setting value succeeds"
+    },
+    {
+      "id": "LOG-08",
+      "priority": "low",
+      "status": "source-confirmed-intentional-projection",
+      "summary": "Sequence projection suppresses duplicate/polling events; it is not a raw wire audit"
+    },
+    {
+      "id": "LOG-09",
+      "priority": "medium",
+      "status": "independent-exact-source-harness-reproduced",
+      "summary": "Simple five-argument Recipe writer leaves newline unescaped; one event becomes two physical lines"
+    }
+  ],
+  "documentValidation": [
+    {
+      "file": "README.md",
+      "utf8Readable": true,
+      "codeFencesBalanced": true,
+      "relativeLinksExist": "report-internal links exist; publication-parent/evidence links deferred to root publish validation",
+      "noReplacementCharacters": true
+    },
+    {
+      "file": "01_Commit변경요약.md",
+      "utf8Readable": true,
+      "codeFencesBalanced": true,
+      "relativeLinksExist": "report-internal links exist; publication-parent/evidence links deferred to root publish validation",
+      "noReplacementCharacters": true
+    },
+    {
+      "file": "02_데이터구조와흐름.md",
+      "utf8Readable": true,
+      "codeFencesBalanced": true,
+      "relativeLinksExist": "report-internal links exist; publication-parent/evidence links deferred to root publish validation",
+      "noReplacementCharacters": true
+    },
+    {
+      "file": "03_가공Review영향.md",
+      "utf8Readable": true,
+      "codeFencesBalanced": true,
+      "relativeLinksExist": "report-internal links exist; publication-parent/evidence links deferred to root publish validation",
+      "noReplacementCharacters": true
+    },
+    {
+      "file": "04_통합흐름도.md",
+      "utf8Readable": true,
+      "codeFencesBalanced": true,
+      "relativeLinksExist": "report-internal links exist; publication-parent/evidence links deferred to root publish validation",
+      "noReplacementCharacters": true
+    },
+    {
+      "file": "05_위험도별발견사항.md",
+      "utf8Readable": true,
+      "codeFencesBalanced": true,
+      "relativeLinksExist": "report-internal links exist; publication-parent/evidence links deferred to root publish validation",
+      "noReplacementCharacters": true
+    },
+    {
+      "file": "06_근거와검증.md",
+      "utf8Readable": true,
+      "codeFencesBalanced": true,
+      "relativeLinksExist": "report-internal links exist; publication-parent/evidence links deferred to root publish validation",
+      "noReplacementCharacters": true
+    }
+  ],
+  "sourceLinkValidation": {
+    "count": 35,
+    "allFileAndLineRangesExist": true,
+    "allPinnedToCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+    "extraDirectLink": {
+      "file": "Drilling.Common/Log/CLogManager.cs",
+      "startLine": 356,
+      "endLine": 364,
+      "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3"
+    },
+    "uniqueEvidenceRanges": 35,
+    "referenceOccurrencesValidated": 96
+  },
+  "execution": {
+    "equipmentProgram": false,
+    "aeroScript": false,
+    "vendorDllLoaded": false,
+    "decompiled": false,
+    "formalEquipmentBuild": false,
+    "loggerRuntimeTest": "performed by independent QA; JSON reviewed by this document author"
+  },
+  "integrationStatus": "pending-root-final-validation-and-publication",
+  "outputs": [
+    "README.md",
+    "01_Commit변경요약.md",
+    "02_데이터구조와흐름.md",
+    "03_가공Review영향.md",
+    "04_통합흐름도.md",
+    "05_위험도별발견사항.md",
+    "06_근거와검증.md",
+    "diagrams/integrated.svg"
+  ],
+  "independentLoggerVerification": {
+    "source": "audits/log-pure-regression.json",
+    "sourceExtraction": "audits/log-source-extraction.json",
+    "normal": {
+      "passed": 27,
+      "total": 27
+    },
+    "defectReproductions": {
+      "reproduced": 5,
+      "probes": 5
+    },
+    "assertionFailures": 0,
+    "behaviorStatus": "defects_reproduced_not_program_correctness_pass",
+    "framework": "net10.0 exact full source copy plus DTO/enum stubs",
+    "vendorOrEquipmentAssembliesLoaded": false
+  },
+  "sourceUnchangedCheck": {
+    "head": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+    "workingTreeClean": true,
+    "logFileSha256": "9212676723D170166D61A6D7BAEAFEEC6CF6B660D2AE5EF59C22DE14DC2E3728"
+  },
+  "publicEvidenceLinks": [
+    "evidence/architecture-crosscheck.json",
+    "evidence/log-pure-regression.json",
+    "evidence/log-source-extraction.json"
+  ],
+  "deferredPublicationRelativeLinks": [
+    "../20261120_090030_SW아키텍쳐분석/README.md",
+    "../A3%20LD%20Code%20Ref/README.md",
+    "evidence/architecture-crosscheck.json",
+    "evidence/log-pure-regression.json",
+    "evidence/log-source-extraction.json"
+  ],
+  "svgValidation": {
+    "xmlParsed": true,
+    "externalImageDependencies": false
+  }
 }

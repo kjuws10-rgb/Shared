@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 18c6b5e5afc1fdb76dafc1fd6bc33a810af4a84492b53c686eef336adb989831 |
 | 파일 분류 | code |
 | 원본 크기/행 | 71,390 bytes / 1,431 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -187,7 +187,7 @@
 
 ### MethodDeclaration `Build` · L11–202
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:11–202](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L11-L202)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:11–202](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L11-L202)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -206,18 +206,18 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L229-L229) | CShotCoordinatePlanBuilder.Build | False |
-| [Drilling.Common/Review/CReviewManager.cs:518–518](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L518-L518) | CShotCoordinatePlanBuilder.Build | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L26-L26) | CShotCoordinatePlanBuilder.Build | False |
-| [Drilling.Common/Station/CStationProcess.cs:1611–1611](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1611-L1611) | CShotCoordinatePlanBuilder.Build | False |
-| [Drilling.UI/CRootView.cs:1830–1830](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1830-L1830) | CShotCoordinatePlanBuilder.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L344-L344) | CShotCoordinatePlanBuilder.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:784–784](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L784-L784) | CShotCoordinatePlanBuilder.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5769–5769](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5769-L5769) | CShotCoordinatePlanBuilder.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6238–6238](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6238-L6238) | CShotCoordinatePlanBuilder.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7795–7795](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7795-L7795) | CShotCoordinatePlanBuilder.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3129–3129](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3129-L3129) | CShotCoordinatePlanBuilder.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2728–2728](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2728-L2728) | CShotCoordinatePlanBuilder.Build | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L229-L229) | CShotCoordinatePlanBuilder.Build | False |
+| [Drilling.Common/Review/CReviewManager.cs:518–518](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L518-L518) | CShotCoordinatePlanBuilder.Build | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L26-L26) | CShotCoordinatePlanBuilder.Build | False |
+| [Drilling.Common/Station/CStationProcess.cs:1611–1611](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1611-L1611) | CShotCoordinatePlanBuilder.Build | False |
+| [Drilling.UI/CRootView.cs:1830–1830](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1830-L1830) | CShotCoordinatePlanBuilder.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L344-L344) | CShotCoordinatePlanBuilder.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:784–784](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L784-L784) | CShotCoordinatePlanBuilder.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5769–5769](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5769-L5769) | CShotCoordinatePlanBuilder.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6238–6238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6238-L6238) | CShotCoordinatePlanBuilder.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7795–7795](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7795-L7795) | CShotCoordinatePlanBuilder.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3129–3129](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3129-L3129) | CShotCoordinatePlanBuilder.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2728–2728](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2728-L2728) | CShotCoordinatePlanBuilder.Build | False |
 
 호출하는 대상과 해석 범위:
 
@@ -536,7 +536,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectHeadNo` · L37–40
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:37–40](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L37-L40)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:37–40](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L37-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -563,7 +563,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L42–45
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:42–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L42-L45)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:42–45](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L42-L45)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -590,7 +590,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L192–198
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:192–198](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L192-L198)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:192–198](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L192-L198)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -619,7 +619,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadOffsetScale` · L204–211
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:204–211](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L204-L211)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:204–211](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L204-L211)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -639,8 +639,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L35-L35) | ReadOffsetScale | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L36-L36) | ReadOffsetScale | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L35-L35) | ReadOffsetScale | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L36-L36) | ReadOffsetScale | False |
 
 호출하는 대상과 해석 범위:
 
@@ -678,7 +678,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildDesignShots` · L215–221
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:215–221](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L215-L221)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:215–221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L215-L221)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -697,11 +697,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:690–690](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L690-L690) | CShotCoordinatePlanBuilder.BuildDesignShots | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:714–714](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L714-L714) | CShotCoordinatePlanBuilder.BuildDesignShots | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L340-L340) | CShotCoordinatePlanBuilder.BuildDesignShots | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5767–5767](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5767-L5767) | CShotCoordinatePlanBuilder.BuildDesignShots | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7798–7798](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7798-L7798) | CShotCoordinatePlanBuilder.BuildDesignShots | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:690–690](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L690-L690) | CShotCoordinatePlanBuilder.BuildDesignShots | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:714–714](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L714-L714) | CShotCoordinatePlanBuilder.BuildDesignShots | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L340-L340) | CShotCoordinatePlanBuilder.BuildDesignShots | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5767–5767](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5767-L5767) | CShotCoordinatePlanBuilder.BuildDesignShots | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7798–7798](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7798-L7798) | CShotCoordinatePlanBuilder.BuildDesignShots | False |
 
 호출하는 대상과 해석 범위:
 
@@ -737,7 +737,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildDesignShots` · L223–286
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:223–286](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L223-L286)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:223–286](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L223-L286)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -757,8 +757,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L48-L48) | BuildDesignShots | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L220-L220) | BuildDesignShots | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L48-L48) | BuildDesignShots | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L220-L220) | BuildDesignShots | False |
 
 호출하는 대상과 해석 범위:
 
@@ -874,7 +874,7 @@ flowchart TD
 
 ### MethodDeclaration `OrderShots` · L288–351
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:288–351](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L288-L351)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:288–351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L288-L351)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -894,7 +894,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L200-L200) | OrderShots | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L200-L200) | OrderShots | False |
 
 호출하는 대상과 해석 범위:
 
@@ -972,7 +972,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectGroupKey` · L290–293
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:290–293](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L290-L293)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:290–293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L290-L293)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1006,7 +1006,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectDescendingRowKey` · L296–299
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:296–299](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L296-L299)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:296–299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L296-L299)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1033,7 +1033,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectAscendingRowKey` · L301–304
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:301–304](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L301-L304)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:301–304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L301-L304)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1060,7 +1060,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectHeadNo` · L308–311
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:308–311](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L308-L311)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:308–311](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L308-L311)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1087,7 +1087,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectHeadGroupKey` · L313–316
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:313–316](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L313-L316)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:313–316](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L313-L316)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1114,7 +1114,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectScannerGx` · L318–321
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:318–321](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L318-L321)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:318–321](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L318-L321)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1141,7 +1141,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectScannerGy` · L323–326
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:323–326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L323-L326)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:323–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L323-L326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1168,7 +1168,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectCellNo` · L328–331
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:328–331](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L328-L331)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:328–331](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L328-L331)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1195,7 +1195,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectCellShotNo` · L333–336
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:333–336](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L333-L336)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:333–336](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L333-L336)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1222,7 +1222,7 @@ flowchart TD
 
 ### MethodDeclaration `UseScannerGyForMachiningSort` · L353–374
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:353–374](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L353-L374)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:353–374](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L353-L374)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1241,7 +1241,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:345–345](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L345-L345) | UseScannerGyForMachiningSort | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:345–345](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L345-L345) | UseScannerGyForMachiningSort | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1295,7 +1295,7 @@ flowchart TD
 
 ### MethodDeclaration `AssignHeadNo` · L376–409
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:376–409](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L376-L409)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:376–409](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L376-L409)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1318,7 +1318,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L54-L54) | AssignHeadNo | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L54-L54) | AssignHeadNo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1359,7 +1359,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L388–395
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:388–395](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L388-L395)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:388–395](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L388-L395)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1408,7 +1408,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsHasValue` · L397–400
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:397–400](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L397-L400)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:397–400](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L397-L400)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1435,7 +1435,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectHead` · L402–405
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:402–405](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L402-L405)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:402–405](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L402-L405)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1462,7 +1462,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectHeadCandidate` · L411–429
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:411–429](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L411-L429)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:411–429](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L411-L429)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1482,7 +1482,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:408–408](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L408-L408) | SelectHeadCandidate | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:408–408](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L408-L408) | SelectHeadCandidate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1507,7 +1507,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectDistance` · L413–416
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:413–416](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L413-L416)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:413–416](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L413-L416)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1534,7 +1534,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L418–421
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:418–421](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L418-L421)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:418–421](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L418-L421)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1569,7 +1569,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectHeadNo` · L423–426
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:423–426](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L423-L426)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:423–426](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L423-L426)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1596,7 +1596,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildActiveHeadNumbers` · L431–448
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:431–448](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L431-L448)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:431–448](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L431-L448)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1616,7 +1616,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L23-L23) | BuildActiveHeadNumbers | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L23-L23) | BuildActiveHeadNumbers | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1661,7 +1661,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHeadUse` · L450–453
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:450–453](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L450-L453)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:450–453](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L450-L453)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1681,7 +1681,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L436-L436) | ReadHeadUse | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L436-L436) | ReadHeadUse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1700,7 +1700,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHeadCenterX` · L455–462
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:455–462](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L455-L462)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:455–462](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L455-L462)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1721,8 +1721,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L61-L61) | ReadHeadCenterX | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:390–390](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L390-L390) | ReadHeadCenterX | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L61-L61) | ReadHeadCenterX | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:390–390](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L390-L390) | ReadHeadCenterX | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1751,7 +1751,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHeadCenterY` · L464–475
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:464–475](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L464-L475)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:464–475](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L464-L475)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1771,7 +1771,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L62-L62) | ReadHeadCenterY | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L62-L62) | ReadHeadCenterY | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1812,7 +1812,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHeadDefaultOffset` · L477–480
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:477–480](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L477-L480)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:477–480](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L477-L480)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1833,8 +1833,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L64-L64) | ReadHeadDefaultOffset | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L65-L65) | ReadHeadDefaultOffset | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L64-L64) | ReadHeadDefaultOffset | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L65-L65) | ReadHeadDefaultOffset | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1853,7 +1853,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadFirstBeamOffset` · L482–485
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:482–485](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L482-L485)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:482–485](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L482-L485)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1874,8 +1874,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L66-L66) | ReadFirstBeamOffset | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L67-L67) | ReadFirstBeamOffset | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L66-L66) | ReadFirstBeamOffset | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L67-L67) | ReadFirstBeamOffset | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1894,7 +1894,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHeadEncoderScale` · L487–490
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:487–490](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L487-L490)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:487–490](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L487-L490)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1915,7 +1915,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L68-L68) | ReadHeadEncoderScale | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L68-L68) | ReadHeadEncoderScale | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1934,7 +1934,7 @@ flowchart TD
 
 ### MethodDeclaration `ConvertRecipeYToStageY` · L492–495
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:492–495](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L492-L495)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:492–495](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L492-L495)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1953,9 +1953,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L71-L71) | ConvertRecipeYToStageY | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L141-L141) | ConvertRecipeYToStageY | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L142-L142) | ConvertRecipeYToStageY | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L71-L71) | ConvertRecipeYToStageY | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L141-L141) | ConvertRecipeYToStageY | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L142-L142) | ConvertRecipeYToStageY | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1967,7 +1967,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyScannerAxis` · L497–500
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:497–500](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L497-L500)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:497–500](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L497-L500)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1988,7 +1988,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L135-L135) | ApplyScannerAxis | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L135-L135) | ApplyScannerAxis | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2000,7 +2000,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadScannerReferenceOffsetX` · L502–507
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:502–507](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L502-L507)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:502–507](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L502-L507)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2019,7 +2019,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L32-L32) | ReadScannerReferenceOffsetX | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L32-L32) | ReadScannerReferenceOffsetX | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2044,7 +2044,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDirection` · L509–543
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:509–543](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L509-L543)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:509–543](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L509-L543)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2065,11 +2065,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L29-L29) | ReadDirection | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1256–1256](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1256-L1256) | CShotCoordinatePlanBuilder.ReadDirection | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1285–1285](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1285-L1285) | CShotCoordinatePlanBuilder.ReadDirection | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1304–1304](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1304-L1304) | CShotCoordinatePlanBuilder.ReadDirection | False |
-| [Drilling.Common/Review/CReviewManager.cs:517–517](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L517-L517) | CShotCoordinatePlanBuilder.ReadDirection | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L29-L29) | ReadDirection | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1256–1256](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1256-L1256) | CShotCoordinatePlanBuilder.ReadDirection | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1285–1285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1285-L1285) | CShotCoordinatePlanBuilder.ReadDirection | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1304–1304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1304-L1304) | CShotCoordinatePlanBuilder.ReadDirection | False |
+| [Drilling.Common/Review/CReviewManager.cs:517–517](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L517-L517) | CShotCoordinatePlanBuilder.ReadDirection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2133,7 +2133,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L511–514
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:511–514](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L511-L514)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:511–514](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L511-L514)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2167,7 +2167,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeDirection` · L545–553
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:545–553](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L545-L553)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:545–553](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L545-L553)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2187,8 +2187,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:526–526](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L526-L526) | NormalizeDirection | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:542–542](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L542-L542) | NormalizeDirection | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:526–526](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L526-L526) | NormalizeDirection | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:542–542](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L542-L542) | NormalizeDirection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2220,7 +2220,7 @@ flowchart TD
 
 ### MethodDeclaration `ToShotKey` · L555–558
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:555–558](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L555-L558)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:555–558](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L555-L558)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2240,7 +2240,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:266–266](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L266-L266) | ToShotKey | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:266–266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L266-L266) | ToShotKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2261,7 +2261,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDouble` · L560–576
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:560–576](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L560-L576)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:560–576](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L560-L576)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2282,29 +2282,29 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L26-L26) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L27-L27) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L28-L28) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L30-L30) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L33-L33) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L34-L34) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L226-L226) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L236-L236) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L237-L237) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L238-L238) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:275–275](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L275-L275) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:276–276](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L276-L276) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L277-L277) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:278–278](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L278-L278) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:459–459](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L459-L459) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L460-L460) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:472–472](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L472-L472) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:473–473](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L473-L473) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L479-L479) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:484–484](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L484-L484) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L489-L489) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:504–504](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L504-L504) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:505–505](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L505-L505) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L26-L26) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L27-L27) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L28-L28) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L30-L30) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L33-L33) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L34-L34) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L226-L226) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L236-L236) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L237-L237) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L238-L238) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:275–275](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L275-L275) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:276–276](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L276-L276) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L277-L277) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:278–278](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L278-L278) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:459–459](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L459-L459) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L460-L460) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:472–472](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L472-L472) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:473–473](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L473-L473) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L479-L479) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:484–484](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L484-L484) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L489-L489) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:504–504](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L504-L504) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:505–505](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L505-L505) | ReadDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2341,7 +2341,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L562–565
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:562–565](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L562-L565)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:562–565](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L562-L565)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2375,7 +2375,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadNullableDouble` · L578–594
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:578–594](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L578-L594)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:578–594](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L578-L594)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2395,8 +2395,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L391-L391) | ReadNullableDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:466–466](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L466-L466) | ReadNullableDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L391-L391) | ReadNullableDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:466–466](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L466-L466) | ReadNullableDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2433,7 +2433,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L580–583
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:580–583](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L580-L583)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:580–583](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L580-L583)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2467,7 +2467,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadInt` · L596–622
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:596–622](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L596-L622)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:596–622](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L596-L622)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2488,10 +2488,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L16-L16) | ReadInt | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L17-L17) | ReadInt | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L217-L217) | ReadInt | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L227-L227) | ReadInt | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L16-L16) | ReadInt | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L17-L17) | ReadInt | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L217-L217) | ReadInt | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L227-L227) | ReadInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2540,7 +2540,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L598–601
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:598–601](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L598-L601)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:598–601](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L598-L601)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2574,7 +2574,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadBool` · L624–653
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:624–653](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L624-L653)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:624–653](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L624-L653)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2595,7 +2595,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L452-L452) | ReadBool | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L452-L452) | ReadBool | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2647,7 +2647,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L626–629
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:626–629](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L626-L629)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:626–629](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L626-L629)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2681,7 +2681,7 @@ flowchart TD
 
 ### FieldDeclaration `MaximumAbsoluteOffset` · L659–659
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:659–659](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L659-L659)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:659–659](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L659-L659)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2702,7 +2702,7 @@ flowchart TD
 
 ### FieldDeclaration `ParameterPattern` · L660–660
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:660–660](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L660-L660)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:660–660](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L660-L660)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2730,7 +2730,7 @@ flowchart TD
 
 ### MethodDeclaration `IsParameterKey` · L661–661
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:661–661](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L661-L661)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:661–661](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L661-L661)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2749,11 +2749,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:367–367](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CAlignInterpolation.cs#L367-L367) | CAlignShotOffsetData.IsParameterKey | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:723–723](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L723-L723) | IsParameterKey | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:748–748](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L748-L748) | IsParameterKey | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:782–782](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L782-L782) | IsParameterKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:773–773](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L773-L773) | CAlignShotOffsetData.IsParameterKey | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:367–367](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L367-L367) | CAlignShotOffsetData.IsParameterKey | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:723–723](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L723-L723) | IsParameterKey | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:748–748](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L748-L748) | IsParameterKey | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:782–782](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L782-L782) | IsParameterKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:773–773](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CJhmiRecipeFile.cs#L773-L773) | CAlignShotOffsetData.IsParameterKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2771,7 +2771,7 @@ flowchart TD
 
 ### MethodDeclaration `ParameterKey` · L662–662
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:662–662](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L662-L662)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:662–662](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L662-L662)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2792,15 +2792,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:747–747](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L747-L747) | ParameterKey | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2960–2960](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2960-L2960) | CAlignShotOffsetData.ParameterKey | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2960–2960](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2960-L2960) | CAlignShotOffsetData.ParameterKey | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:747–747](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L747-L747) | ParameterKey | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2960–2960](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2960-L2960) | CAlignShotOffsetData.ParameterKey | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2960–2960](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2960-L2960) | CAlignShotOffsetData.ParameterKey | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `RoundValue` · L663–670
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:663–670](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L663-L670)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:663–670](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L663-L670)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2819,23 +2819,23 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CAlignInterpolation.cs#L171-L171) | CAlignShotOffsetData.RoundValue | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:672–672](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L672-L672) | RoundValue | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:679–679](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L679-L679) | RoundValue | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:702–702](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L702-L702) | RoundValue | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:702–702](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L702-L702) | RoundValue | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L137-L137) | CAlignShotOffsetData.RoundValue | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L137-L137) | CAlignShotOffsetData.RoundValue | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L325-L325) | CAlignShotOffsetData.RoundValue | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L326-L326) | CAlignShotOffsetData.RoundValue | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2954–2954](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2954-L2954) | CAlignShotOffsetData.RoundValue | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2954–2954](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2954-L2954) | CAlignShotOffsetData.RoundValue | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3206–3206](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3206-L3206) | CAlignShotOffsetData.RoundValue | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3206–3206](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3206-L3206) | CAlignShotOffsetData.RoundValue | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5879–5879](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5879-L5879) | CAlignShotOffsetData.RoundValue | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5880–5880](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5880-L5880) | CAlignShotOffsetData.RoundValue | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6089–6089](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6089-L6089) | CAlignShotOffsetData.RoundValue | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7331–7331](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7331-L7331) | CAlignShotOffsetData.RoundValue | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L171-L171) | CAlignShotOffsetData.RoundValue | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:672–672](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L672-L672) | RoundValue | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:679–679](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L679-L679) | RoundValue | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:702–702](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L702-L702) | RoundValue | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:702–702](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L702-L702) | RoundValue | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L137-L137) | CAlignShotOffsetData.RoundValue | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L137-L137) | CAlignShotOffsetData.RoundValue | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L325-L325) | CAlignShotOffsetData.RoundValue | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L326-L326) | CAlignShotOffsetData.RoundValue | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2954–2954](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2954-L2954) | CAlignShotOffsetData.RoundValue | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2954–2954](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2954-L2954) | CAlignShotOffsetData.RoundValue | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3206–3206](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3206-L3206) | CAlignShotOffsetData.RoundValue | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3206–3206](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3206-L3206) | CAlignShotOffsetData.RoundValue | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5879–5879](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5879-L5879) | CAlignShotOffsetData.RoundValue | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5880–5880](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5880-L5880) | CAlignShotOffsetData.RoundValue | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6089–6089](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6089-L6089) | CAlignShotOffsetData.RoundValue | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7331–7331](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7331-L7331) | CAlignShotOffsetData.RoundValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2874,7 +2874,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatValue` · L672–672
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:672–672](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L672-L672)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:672–672](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L672-L672)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2893,10 +2893,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:750–750](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L750-L750) | FormatValue | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:158–158](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Correction/CAlignOffsetLogFile.cs#L158-L158) | CAlignShotOffsetData.FormatValue | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L307-L307) | CAlignShotOffsetData.FormatValue | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:309–309](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L309-L309) | CAlignShotOffsetData.FormatValue | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:750–750](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L750-L750) | FormatValue | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:158–158](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Correction/CAlignOffsetLogFile.cs#L158-L158) | CAlignShotOffsetData.FormatValue | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L307-L307) | CAlignShotOffsetData.FormatValue | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:309–309](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L309-L309) | CAlignShotOffsetData.FormatValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2916,7 +2916,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadValue` · L673–680
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:673–680](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L673-L680)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:673–680](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L673-L680)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2936,10 +2936,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:279–279](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L279-L279) | CAlignShotOffsetData.ReadValue | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:280–280](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L280-L280) | CAlignShotOffsetData.ReadValue | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2960–2960](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2960-L2960) | CAlignShotOffsetData.ReadValue | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2960–2960](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2960-L2960) | CAlignShotOffsetData.ReadValue | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:279–279](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L279-L279) | CAlignShotOffsetData.ReadValue | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:280–280](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L280-L280) | CAlignShotOffsetData.ReadValue | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2960–2960](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2960-L2960) | CAlignShotOffsetData.ReadValue | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2960–2960](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2960-L2960) | CAlignShotOffsetData.ReadValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2983,7 +2983,7 @@ flowchart TD
 
 ### MethodDeclaration `Calculate` · L682–706
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:682–706](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L682-L706)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:682–706](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L682-L706)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3004,8 +3004,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CAlignInterpolation.cs#L339-L339) | CAlignShotOffsetData.Calculate | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2920–2920](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2920-L2920) | CAlignShotOffsetData.Calculate | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L339-L339) | CAlignShotOffsetData.Calculate | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2920–2920](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2920-L2920) | CAlignShotOffsetData.Calculate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3086,7 +3086,7 @@ flowchart TD
 
 ### MethodDeclaration `ZeroValues` · L708–715
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:708–715](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L708-L715)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:708–715](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L708-L715)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3106,7 +3106,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2921–2921](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2921-L2921) | CAlignShotOffsetData.ZeroValues | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2921–2921](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2921-L2921) | CAlignShotOffsetData.ZeroValues | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3137,7 +3137,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildDesignParameters` · L717–728
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:717–728](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L717-L728)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:717–728](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L717-L728)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3157,8 +3157,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:689–689](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L689-L689) | BuildDesignParameters | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:713–713](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L713-L713) | BuildDesignParameters | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:689–689](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L689-L689) | BuildDesignParameters | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:713–713](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L713-L713) | BuildDesignParameters | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3189,7 +3189,7 @@ flowchart TD
 
 ### MethodDeclaration `Apply` · L730–773
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:730–773](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L730-L773)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:730–773](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L730-L773)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3209,8 +3209,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CRecipeManager.cs#L103-L103) | CAlignShotOffsetData.Apply | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2967–2967](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2967-L2967) | CAlignShotOffsetData.Apply | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CRecipeManager.cs#L103-L103) | CAlignShotOffsetData.Apply | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2967–2967](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2967-L2967) | CAlignShotOffsetData.Apply | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3248,7 +3248,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Add` · L743–772
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:743–772](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L743-L772)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:743–772](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L743-L772)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3269,8 +3269,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:735–735](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L735-L735) | Add | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:736–736](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L736-L736) | Add | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:735–735](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L735-L735) | Add | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:736–736](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L736-L736) | Add | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3326,7 +3326,7 @@ flowchart TD
 
 ### MethodDeclaration `RetainUneditedOffsets` · L777–787
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:777–787](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L777-L787)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:777–787](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L777-L787)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3346,7 +3346,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CRecipeManager.cs#L153-L153) | global::Drilling.Common.Recipe.CAlignShotOffsetData.RetainUneditedOffsets | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CRecipeManager.cs#L153-L153) | global::Drilling.Common.Recipe.CAlignShotOffsetData.RetainUneditedOffsets | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3396,7 +3396,7 @@ flowchart TD
 
 ### PropertyDeclaration `Empty` · L792–792
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:792–792](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L792-L792)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:792–792](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L792-L792)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3423,7 +3423,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Empty` · L792–792
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:792–792](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L792-L792)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:792–792](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L792-L792)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3438,7 +3438,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsMasked` · L794–800
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:794–800](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L794-L800)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:794–800](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L794-L800)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3453,7 +3453,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsMasked` · L796–799
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:796–799](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L796-L799)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:796–799](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L796-L799)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3474,7 +3474,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShouldSkipLaser` · L802–808
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:802–808](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L802-L808)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:802–808](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L802-L808)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3489,7 +3489,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ShouldSkipLaser` · L804–807
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:804–807](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L804-L807)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:804–807](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L804-L807)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3510,7 +3510,7 @@ flowchart TD
 
 ### FieldDeclaration `MaximumCellModelTypeCount` · L813–813
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:813–813](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L813-L813)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:813–813](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L813-L813)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3531,7 +3531,7 @@ flowchart TD
 
 ### FieldDeclaration `MaximumMaskingHoleCount` · L814–814
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:814–814](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L814-L814)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:814–814](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L814-L814)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3552,7 +3552,7 @@ flowchart TD
 
 ### FieldDeclaration `Epsilon` · L815–815
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:815–815](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L815-L815)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:815–815](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L815-L815)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3573,7 +3573,7 @@ flowchart TD
 
 ### FieldDeclaration `_models` · L816–816
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:816–816](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L816-L816)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:816–816](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L816-L816)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3588,7 +3588,7 @@ flowchart TD
 
 ### FieldDeclaration `_modelPatterns` · L817–817
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:817–817](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L817-L817)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:817–817](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L817-L817)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3603,7 +3603,7 @@ flowchart TD
 
 ### FieldDeclaration `_cellModelTypes` · L818–818
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:818–818](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L818-L818)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:818–818](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L818-L818)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3618,7 +3618,7 @@ flowchart TD
 
 ### FieldDeclaration `_modelTypeCount` · L819–819
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:819–819](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L819-L819)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:819–819](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L819-L819)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3633,7 +3633,7 @@ flowchart TD
 
 ### FieldDeclaration `_splitBeamCount` · L820–820
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:820–820](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L820-L820)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:820–820](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L820-L820)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3648,7 +3648,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L821–834
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:821–834](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L821-L834)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:821–834](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L821-L834)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3671,7 +3671,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:873–873](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L873-L873) | new CRecipeShotMaskingPlan | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:873–873](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L873-L873) | new CRecipeShotMaskingPlan | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -3687,7 +3687,7 @@ flowchart TD
 
 ### MethodDeclaration `Build` · L836–874
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:836–874](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L836-L874)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:836–874](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L836-L874)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3706,20 +3706,20 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L228-L228) | CRecipeShotMaskingPlan.Build | False |
-| [Drilling.Common/Review/CReviewManager.cs:560–560](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L560-L560) | CRecipeShotMaskingPlan.Build | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L28-L28) | CRecipeShotMaskingPlan.Build | False |
-| [Drilling.Common/Station/CStationProcess.cs:1612–1612](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1612-L1612) | CRecipeShotMaskingPlan.Build | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L57-L57) | CRecipeShotMaskingPlan.Build | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:180–180](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L180-L180) | CRecipeShotMaskingPlan.Build | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:516–516](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L516-L516) | CRecipeShotMaskingPlan.Build | False |
-| [Drilling.UI/CRootView.cs:1831–1831](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1831-L1831) | CRecipeShotMaskingPlan.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L347-L347) | CRecipeShotMaskingPlan.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:806–806](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L806-L806) | CRecipeShotMaskingPlan.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5770–5770](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5770-L5770) | CRecipeShotMaskingPlan.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6245–6245](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6245-L6245) | CRecipeShotMaskingPlan.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7796–7796](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7796-L7796) | CRecipeShotMaskingPlan.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3639–3639](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3639-L3639) | CRecipeShotMaskingPlan.Build | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L228-L228) | CRecipeShotMaskingPlan.Build | False |
+| [Drilling.Common/Review/CReviewManager.cs:560–560](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L560-L560) | CRecipeShotMaskingPlan.Build | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L28-L28) | CRecipeShotMaskingPlan.Build | False |
+| [Drilling.Common/Station/CStationProcess.cs:1612–1612](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1612-L1612) | CRecipeShotMaskingPlan.Build | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L57-L57) | CRecipeShotMaskingPlan.Build | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:180–180](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L180-L180) | CRecipeShotMaskingPlan.Build | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:516–516](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L516-L516) | CRecipeShotMaskingPlan.Build | False |
+| [Drilling.UI/CRootView.cs:1831–1831](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1831-L1831) | CRecipeShotMaskingPlan.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L347-L347) | CRecipeShotMaskingPlan.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:806–806](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L806-L806) | CRecipeShotMaskingPlan.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5770–5770](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5770-L5770) | CRecipeShotMaskingPlan.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6245–6245](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6245-L6245) | CRecipeShotMaskingPlan.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7796–7796](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7796-L7796) | CRecipeShotMaskingPlan.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3639–3639](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3639-L3639) | CRecipeShotMaskingPlan.Build | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3818,7 +3818,7 @@ flowchart TD
 
 ### MethodDeclaration `EvaluateShot` · L876–933
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:876–933](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L876-L933)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:876–933](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L876-L933)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3837,21 +3837,21 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L238-L238) | masking.EvaluateShot | False |
-| [Drilling.Common/Review/CReviewManager.cs:564–564](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L564-L564) | maskingPlan.EvaluateShot | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L64-L64) | _mask.EvaluateShot | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L65-L65) | _mask.EvaluateShot | False |
-| [Drilling.Common/Station/CStationProcess.cs:1613–1613](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1613-L1613) | shotMaskingPlan.EvaluateShot | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L66-L66) | shotMaskingPlan.EvaluateShot | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L319-L319) | maskingPlan.EvaluateShot | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:547–547](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L547-L547) | maskingPlan.EvaluateShot | False |
-| [Drilling.UI/CRootView.cs:1839–1839](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1839-L1839) | maskingPlan.EvaluateShot | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:361–361](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L361-L361) | maskingPlan.EvaluateShot | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:809–809](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L809-L809) | maskingPlan.EvaluateShot | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5810–5810](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5810-L5810) | _maskingPlan.EvaluateShot | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6255–6255](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6255-L6255) | masking.EvaluateShot | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7801–7801](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7801-L7801) | masking.EvaluateShot | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3667–3667](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3667-L3667) | shotMaskingPlan.EvaluateShot | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L238-L238) | masking.EvaluateShot | False |
+| [Drilling.Common/Review/CReviewManager.cs:564–564](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L564-L564) | maskingPlan.EvaluateShot | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L64-L64) | _mask.EvaluateShot | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L65-L65) | _mask.EvaluateShot | False |
+| [Drilling.Common/Station/CStationProcess.cs:1613–1613](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1613-L1613) | shotMaskingPlan.EvaluateShot | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L66-L66) | shotMaskingPlan.EvaluateShot | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L319-L319) | maskingPlan.EvaluateShot | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:547–547](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L547-L547) | maskingPlan.EvaluateShot | False |
+| [Drilling.UI/CRootView.cs:1839–1839](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1839-L1839) | maskingPlan.EvaluateShot | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:361–361](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L361-L361) | maskingPlan.EvaluateShot | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:809–809](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L809-L809) | maskingPlan.EvaluateShot | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5810–5810](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5810-L5810) | _maskingPlan.EvaluateShot | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6255–6255](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6255-L6255) | masking.EvaluateShot | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7801–7801](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7801-L7801) | masking.EvaluateShot | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3667–3667](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3667-L3667) | shotMaskingPlan.EvaluateShot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3975,7 +3975,7 @@ flowchart TD
 
 ### MethodDeclaration `GetModelType` · L935–938
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:935–938](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L935-L938)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:935–938](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L935-L938)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3994,7 +3994,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:878–878](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L878-L878) | GetModelType | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:878–878](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L878-L878) | GetModelType | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4016,7 +4016,7 @@ flowchart TD
 
 ### MethodDeclaration `IsChessSkipped` · L940–949
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:940–949](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L940-L949)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:940–949](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L940-L949)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4036,7 +4036,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:880–880](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L880-L880) | IsChessSkipped | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:880–880](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L880-L880) | IsChessSkipped | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4071,7 +4071,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildModel` · L951–971
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:951–971](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L951-L971)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:951–971](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L951-L971)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4091,7 +4091,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:859–859](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L859-L859) | BuildModel | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:859–859](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L859-L859) | BuildModel | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4169,7 +4169,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildEdge` · L973–997
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:973–997](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L973-L997)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:973–997](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L973-L997)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4189,7 +4189,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:970–970](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L970-L970) | BuildEdge | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:970–970](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L970-L970) | BuildEdge | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4264,7 +4264,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadInt` · L999–1020
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:999–1020](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L999-L1020)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:999–1020](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L999-L1020)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4285,11 +4285,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:839–839](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L839-L839) | ReadInt | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:841–841](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L841-L841) | ReadInt | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:866–866](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L866-L866) | ReadInt | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:870–870](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L870-L870) | ReadInt | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:954–954](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L954-L954) | ReadInt | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:839–839](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L839-L839) | ReadInt | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:841–841](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L841-L841) | ReadInt | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:866–866](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L866-L866) | ReadInt | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:870–870](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L870-L870) | ReadInt | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:954–954](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L954-L954) | ReadInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4336,7 +4336,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDouble` · L1022–1033
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1022–1033](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1022-L1033)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1022–1033](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1022-L1033)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4357,19 +4357,19 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:840–840](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L840-L840) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:958–958](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L958-L958) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:959–959](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L959-L959) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:960–960](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L960-L960) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:961–961](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L961-L961) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:976–976](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L976-L976) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:976–976](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L976-L976) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:977–977](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L977-L977) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:977–977](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L977-L977) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:978–978](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L978-L978) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:978–978](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L978-L978) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:979–979](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L979-L979) | ReadDouble | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:979–979](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L979-L979) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:840–840](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L840-L840) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:958–958](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L958-L958) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:959–959](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L959-L959) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:960–960](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L960-L960) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:961–961](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L961-L961) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:976–976](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L976-L976) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:976–976](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L976-L976) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:977–977](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L977-L977) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:977–977](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L977-L977) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:978–978](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L978-L978) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:978–978](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L978-L978) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:979–979](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L979-L979) | ReadDouble | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:979–979](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L979-L979) | ReadDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4404,7 +4404,7 @@ flowchart TD
 
 ### MethodDeclaration `PositiveModulo` · L1035–1038
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1035–1038](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1035-L1038)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1035–1038](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1035-L1038)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4424,9 +4424,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:948–948](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L948-L948) | PositiveModulo | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:948–948](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L948-L948) | PositiveModulo | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:948–948](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L948-L948) | PositiveModulo | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:948–948](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L948-L948) | PositiveModulo | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:948–948](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L948-L948) | PositiveModulo | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:948–948](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L948-L948) | PositiveModulo | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -4438,7 +4438,7 @@ flowchart TD
 
 ### MethodDeclaration `FromPositiveOffset` · L1042–1045
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1042–1045](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1042-L1045)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1042–1045](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1042-L1045)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4458,10 +4458,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:976–976](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L976-L976) | ST_MASKING_POINT.FromPositiveOffset | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:977–977](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L977-L977) | ST_MASKING_POINT.FromPositiveOffset | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:978–978](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L978-L978) | ST_MASKING_POINT.FromPositiveOffset | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:979–979](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L979-L979) | ST_MASKING_POINT.FromPositiveOffset | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:976–976](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L976-L976) | ST_MASKING_POINT.FromPositiveOffset | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:977–977](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L977-L977) | ST_MASKING_POINT.FromPositiveOffset | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:978–978](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L978-L978) | ST_MASKING_POINT.FromPositiveOffset | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:979–979](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L979-L979) | ST_MASKING_POINT.FromPositiveOffset | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4484,7 +4484,7 @@ flowchart TD
 
 ### MethodDeclaration `Touches` · L1050–1053
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1050–1053](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1050-L1053)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1050–1053](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1050-L1053)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4503,7 +4503,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:921–921](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L921-L921) | edgeArea.Touches | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:921–921](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L921-L921) | edgeArea.Touches | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4524,7 +4524,7 @@ flowchart TD
 
 ### PropertyDeclaration `HasMasking` · L1068–1074
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1068–1074](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1068-L1074)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1068–1074](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1068-L1074)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4539,7 +4539,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_HasMasking` · L1070–1073
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1070–1073](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1070-L1073)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1070–1073](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1070-L1073)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4560,7 +4560,7 @@ flowchart TD
 
 ### MethodDeclaration `FromCenter` · L1079–1082
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1079–1082](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1079-L1082)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1079–1082](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1079-L1082)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4581,7 +4581,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:907–907](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L907-L907) | ST_MASKING_RECT.FromCenter | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:907–907](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L907-L907) | ST_MASKING_RECT.FromCenter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4600,7 +4600,7 @@ flowchart TD
 
 ### MethodDeclaration `FromCorners` · L1084–1087
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1084–1087](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1084-L1087)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1084–1087](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1084-L1087)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4622,7 +4622,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1131–1131](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1131-L1131) | ST_MASKING_RECT.FromCorners | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1131–1131](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1131-L1131) | ST_MASKING_RECT.FromCorners | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4649,7 +4649,7 @@ flowchart TD
 
 ### MethodDeclaration `Intersects` · L1089–1092
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1089–1092](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1089-L1092)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1089–1092](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1089-L1092)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4668,8 +4668,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1052–1052](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1052-L1052) | area.Intersects | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1099–1099](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1099-L1099) | new ST_MASKING_RECT(X, X + SizeX, Y, Y + SizeY).Intersects | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1052–1052](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1052-L1052) | area.Intersects | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1099–1099](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1099-L1099) | new ST_MASKING_RECT(X, X + SizeX, Y, Y + SizeY).Intersects | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -4681,7 +4681,7 @@ flowchart TD
 
 ### MethodDeclaration `Intersects` · L1097–1100
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1097–1100](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1097-L1100)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1097–1100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1097-L1100)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4700,7 +4700,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:911–911](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L911-L911) | hole.Intersects | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:911–911](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L911-L911) | hole.Intersects | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4721,7 +4721,7 @@ flowchart TD
 
 ### MethodDeclaration `Create` · L1105–1122
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1105–1122](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1105-L1122)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1105–1122](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1105-L1122)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4743,7 +4743,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:891–891](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L891-L891) | .Create | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:891–891](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L891-L891) | .Create | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4802,7 +4802,7 @@ flowchart TD
 
 ### MethodDeclaration `AddCorner` · L1124–1132
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1124–1132](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1124-L1132)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1124–1132](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1124-L1132)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4825,10 +4825,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1117–1117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1117-L1117) | AddCorner | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1118–1118](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1118-L1118) | AddCorner | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1119–1119](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1119-L1119) | AddCorner | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1120–1120](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1120-L1120) | AddCorner | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1117–1117](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1117-L1117) | AddCorner | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1118–1118](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1118-L1118) | AddCorner | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1119–1119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1119-L1119) | AddCorner | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1120–1120](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1120-L1120) | AddCorner | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4871,7 +4871,7 @@ flowchart TD
 
 ### MethodDeclaration `IsParameterKey` · L1139–1155
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1139–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1139-L1155)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1139–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1139-L1155)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4890,8 +4890,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7622–7622](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7622-L7622) | CReviewOffsetData.IsParameterKey | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7990–7990](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7990-L7990) | CReviewOffsetData.IsParameterKey | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7622–7622](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7622-L7622) | CReviewOffsetData.IsParameterKey | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7990–7990](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7990-L7990) | CReviewOffsetData.IsParameterKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4961,7 +4961,7 @@ flowchart TD
 
 ### MethodDeclaration `RemoveFromParameters` · L1157–1161
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1157–1161](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1157-L1161)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1157–1161](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1157-L1161)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4980,9 +4980,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1195–1195](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1195-L1195) | RemoveFromParameters | False |
-| [Drilling.Common/Station/CStationProcess.cs:1555–1555](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1555-L1555) | CReviewOffsetData.RemoveFromParameters | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4355–4355](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4355-L4355) | CReviewOffsetData.RemoveFromParameters | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1195–1195](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1195-L1195) | RemoveFromParameters | False |
+| [Drilling.Common/Station/CStationProcess.cs:1555–1555](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1555-L1555) | CReviewOffsetData.RemoveFromParameters | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4355–4355](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4355-L4355) | CReviewOffsetData.RemoveFromParameters | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5014,7 +5014,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateRows` · L1163–1188
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1163–1188](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1163-L1188)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1163–1188](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1163-L1188)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5036,9 +5036,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1193–1193](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1193-L1193) | ValidateRows | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:239–240](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L239-L240) | CReviewOffsetData.ValidateRows | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:725–725](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L725-L725) | CReviewOffsetData.ValidateRows | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1193–1193](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1193-L1193) | ValidateRows | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:239–240](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L239-L240) | CReviewOffsetData.ValidateRows | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:725–725](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L725-L725) | CReviewOffsetData.ValidateRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5121,7 +5121,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyToParameters` · L1190–1203
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1190–1203](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1190-L1203)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1190–1203](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1190-L1203)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5141,10 +5141,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1563–1563](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1563-L1563) | CReviewOffsetData.ApplyToParameters | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L232-L232) | CReviewOffsetData.ApplyToParameters | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1115–1115](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1115-L1115) | CReviewOffsetData.ApplyToParameters | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4289–4289](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4289-L4289) | CReviewOffsetData.ApplyToParameters | False |
+| [Drilling.Common/Station/CStationProcess.cs:1563–1563](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1563-L1563) | CReviewOffsetData.ApplyToParameters | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L232-L232) | CReviewOffsetData.ApplyToParameters | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1115–1115](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1115-L1115) | CReviewOffsetData.ApplyToParameters | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4289–4289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4289-L4289) | CReviewOffsetData.ApplyToParameters | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5189,7 +5189,7 @@ flowchart TD
 
 ### MethodDeclaration `IsDesignCoordinate` · L1205–1213
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1205–1213](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1205-L1213)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1205–1213](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1205-L1213)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5209,9 +5209,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:281–281](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L281-L281) | CReviewOffsetData.IsDesignCoordinate | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7609–7609](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7609-L7609) | CReviewOffsetData.IsDesignCoordinate | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:8072–8072](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L8072-L8072) | CReviewOffsetData.IsDesignCoordinate | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:281–281](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L281-L281) | CReviewOffsetData.IsDesignCoordinate | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7609–7609](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7609-L7609) | CReviewOffsetData.IsDesignCoordinate | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:8072–8072](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L8072-L8072) | CReviewOffsetData.IsDesignCoordinate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5249,7 +5249,7 @@ flowchart TD
 
 ### MethodDeclaration `ToScanner` · L1215–1215
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1215–1215](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1215-L1215)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1215–1215](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1215-L1215)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5272,10 +5272,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L145-L145) | CReviewOffsetData.ToScanner | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1930–1930](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1930-L1930) | CReviewOffsetData.ToScanner | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2079–2079](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2079-L2079) | CReviewOffsetData.ToScanner | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5872–5872](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5872-L5872) | CReviewOffsetData.ToScanner | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L145-L145) | CReviewOffsetData.ToScanner | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1930–1930](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1930-L1930) | CReviewOffsetData.ToScanner | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2079–2079](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2079-L2079) | CReviewOffsetData.ToScanner | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5872–5872](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5872-L5872) | CReviewOffsetData.ToScanner | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5294,7 +5294,7 @@ flowchart TD
 
 ### MethodDeclaration `ToDesign` · L1216–1216
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1216–1216](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1216-L1216)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1216–1216](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1216-L1216)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5317,12 +5317,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L134-L134) | CReviewOffsetData.ToDesign | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L324-L324) | CReviewOffsetData.ToDesign | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3205–3205](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3205-L3205) | CReviewOffsetData.ToDesign | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4108–4108](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4108-L4108) | CReviewOffsetData.ToDesign | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7609–7609](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7609-L7609) | CReviewOffsetData.ToDesign | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:8072–8072](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L8072-L8072) | CReviewOffsetData.ToDesign | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L134-L134) | CReviewOffsetData.ToDesign | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L324-L324) | CReviewOffsetData.ToDesign | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3205–3205](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3205-L3205) | CReviewOffsetData.ToDesign | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4108–4108](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4108-L4108) | CReviewOffsetData.ToDesign | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7609–7609](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7609-L7609) | CReviewOffsetData.ToDesign | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:8072–8072](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L8072-L8072) | CReviewOffsetData.ToDesign | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5341,7 +5341,7 @@ flowchart TD
 
 ### PropertyDeclaration `FilePath` · L1221–1221
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1221–1221](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1221-L1221)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1221–1221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1221-L1221)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5356,7 +5356,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_FilePath` · L1221–1221
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1221–1221](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1221-L1221)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1221–1221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1221-L1221)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5371,7 +5371,7 @@ flowchart TD
 
 ### PropertyDeclaration `RowNumber` · L1222–1222
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1222–1222](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1222-L1222)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1222–1222](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1222-L1222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5386,7 +5386,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_RowNumber` · L1222–1222
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1222–1222](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1222-L1222)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1222–1222](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1222-L1222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5401,7 +5401,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L1224–1228
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1224–1228](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1224-L1228)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1224–1228](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1224-L1228)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5422,12 +5422,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1173-L1173) | new CReviewOffsetValidationException | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1176–1176](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1176-L1176) | new CReviewOffsetValidationException | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1178–1178](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1178-L1178) | new CReviewOffsetValidationException | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1180–1180](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1180-L1180) | new CReviewOffsetValidationException | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:722–722](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L722-L722) | new CReviewOffsetValidationException | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:735–735](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L735-L735) | new CReviewOffsetValidationException | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1173-L1173) | new CReviewOffsetValidationException | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1176–1176](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1176-L1176) | new CReviewOffsetValidationException | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1178–1178](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1178-L1178) | new CReviewOffsetValidationException | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1180–1180](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1180-L1180) | new CReviewOffsetValidationException | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:722–722](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L722-L722) | new CReviewOffsetValidationException | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:735–735](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L735-L735) | new CReviewOffsetValidationException | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -5441,7 +5441,7 @@ flowchart TD
 
 ### MethodDeclaration `Apply` · L1233–1251
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1233–1251](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1233-L1251)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1233–1251](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1233-L1251)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5461,22 +5461,22 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:156–156](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L156-L156) | transform.Apply | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L139-L139) | preparedShot.ScannerTransform.Apply | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L140-L140) | preparedShot.ScannerTransform.Apply | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L141-L141) | preparedShot.ScannerTransform.Apply | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L142-L142) | preparedShot.ScannerTransform.Apply | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L149-L149) | preparedShot.ScannerTransform.Apply | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1287–1287](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1287-L1287) | Read(parameters, headNo).Apply | False |
-| [Drilling.Common/Review/CReviewManager.cs:3714–3714](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L3714-L3714) | scannerAxisTransform.Apply | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:870–870](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L870-L870) | CScannerAxisTransform.Read(common, head.HeadNo).Apply | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:938–938](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L938-L938) | transform.Apply | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7263–7263](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7263-L7263) | CScannerAxisTransform.Read(_parameters, shot.HeadNo).Apply | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7267–7267](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7267-L7267) | CScannerAxisTransform.Read(_parameters, shot.HeadNo).Apply | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3454–3454](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3454-L3454) | scannerTransform.Apply | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3455–3455](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3455-L3455) | scannerTransform.Apply | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3891–3891](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3891-L3891) | transform.Apply | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3892–3892](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3892-L3892) | transform.Apply | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:156–156](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L156-L156) | transform.Apply | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L139-L139) | preparedShot.ScannerTransform.Apply | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L140-L140) | preparedShot.ScannerTransform.Apply | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L141-L141) | preparedShot.ScannerTransform.Apply | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L142-L142) | preparedShot.ScannerTransform.Apply | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L149-L149) | preparedShot.ScannerTransform.Apply | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1287–1287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1287-L1287) | Read(parameters, headNo).Apply | False |
+| [Drilling.Common/Review/CReviewManager.cs:3714–3714](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3714-L3714) | scannerAxisTransform.Apply | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:870–870](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L870-L870) | CScannerAxisTransform.Read(common, head.HeadNo).Apply | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:938–938](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L938-L938) | transform.Apply | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7263–7263](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7263-L7263) | CScannerAxisTransform.Read(_parameters, shot.HeadNo).Apply | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7267–7267](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7267-L7267) | CScannerAxisTransform.Read(_parameters, shot.HeadNo).Apply | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3454–3454](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3454-L3454) | scannerTransform.Apply | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3455–3455](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3455-L3455) | scannerTransform.Apply | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3891–3891](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3891-L3891) | transform.Apply | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3892–3892](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3892-L3892) | transform.Apply | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -5507,7 +5507,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadStageDirection` · L1256–1256
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1256–1256](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1256-L1256)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1256–1256](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1256-L1256)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5526,15 +5526,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L110-L110) | CScannerAxisTransform.ReadStageDirection | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:251–251](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L251-L251) | CScannerAxisTransform.ReadStageDirection | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L227-L227) | CScannerAxisTransform.ReadStageDirection | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3894–3894](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3894-L3894) | CScannerAxisTransform.ReadStageDirection | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6265–6265](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6265-L6265) | CScannerAxisTransform.ReadStageDirection | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6341–6341](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6341-L6341) | CScannerAxisTransform.ReadStageDirection | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7458–7458](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7458-L7458) | CScannerAxisTransform.ReadStageDirection | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7494–7494](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7494-L7494) | CScannerAxisTransform.ReadStageDirection | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:6056–6056](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuReview.cs#L6056-L6056) | CScannerAxisTransform.ReadStageDirection | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L110-L110) | CScannerAxisTransform.ReadStageDirection | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:251–251](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L251-L251) | CScannerAxisTransform.ReadStageDirection | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L227-L227) | CScannerAxisTransform.ReadStageDirection | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3894–3894](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3894-L3894) | CScannerAxisTransform.ReadStageDirection | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6265–6265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6265-L6265) | CScannerAxisTransform.ReadStageDirection | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6341–6341](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6341-L6341) | CScannerAxisTransform.ReadStageDirection | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7458–7458](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7458-L7458) | CScannerAxisTransform.ReadStageDirection | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7494–7494](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7494-L7494) | CScannerAxisTransform.ReadStageDirection | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:6056–6056](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L6056-L6056) | CScannerAxisTransform.ReadStageDirection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5552,7 +5552,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateDefault` · L1257–1260
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1257–1260](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1257-L1260)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1257–1260](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1257-L1260)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5571,8 +5571,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1265–1265](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1265-L1265) | CreateDefault | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1272–1272](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1272-L1272) | CreateDefault | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1265–1265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1265-L1265) | CreateDefault | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1272–1272](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1272-L1272) | CreateDefault | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5591,7 +5591,7 @@ flowchart TD
 
 ### MethodDeclaration `Read` · L1262–1267
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1262–1267](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1262-L1267)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1262–1267](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1262-L1267)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5611,18 +5611,18 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L152-L152) | CScannerAxisTransform.Read | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L63-L63) | CScannerAxisTransform.Read | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1287–1287](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1287-L1287) | Read | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1297–1297](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1297-L1297) | Read | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:870–870](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L870-L870) | CScannerAxisTransform.Read | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:913–913](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L913-L913) | CScannerAxisTransform.Read | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5881–5881](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5881-L5881) | CScannerAxisTransform.Read | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7244–7244](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7244-L7244) | CScannerAxisTransform.Read | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7263–7263](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7263-L7263) | CScannerAxisTransform.Read | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7267–7267](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7267-L7267) | CScannerAxisTransform.Read | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3452–3452](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3452-L3452) | CScannerAxisTransform.Read | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3854–3854](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3854-L3854) | CScannerAxisTransform.Read | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L152-L152) | CScannerAxisTransform.Read | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L63-L63) | CScannerAxisTransform.Read | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1287–1287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1287-L1287) | Read | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1297–1297](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1297-L1297) | Read | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:870–870](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L870-L870) | CScannerAxisTransform.Read | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:913–913](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L913-L913) | CScannerAxisTransform.Read | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5881–5881](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5881-L5881) | CScannerAxisTransform.Read | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7244–7244](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7244-L7244) | CScannerAxisTransform.Read | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7263–7263](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7263-L7263) | CScannerAxisTransform.Read | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7267–7267](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7267-L7267) | CScannerAxisTransform.Read | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3452–3452](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3452-L3452) | CScannerAxisTransform.Read | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3854–3854](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3854-L3854) | CScannerAxisTransform.Read | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5653,7 +5653,7 @@ flowchart TD
 
 ### MethodDeclaration `Read` · L1269–1274
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1269–1274](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1269-L1274)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1269–1274](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1269-L1274)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5673,8 +5673,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:478–478](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L478-L478) | CScannerAxisTransform.Read | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2352–2352](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2352-L2352) | CScannerAxisTransform.Read | False |
+| [Drilling.Common/Review/CReviewManager.cs:478–478](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L478-L478) | CScannerAxisTransform.Read | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2352–2352](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2352-L2352) | CScannerAxisTransform.Read | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5705,7 +5705,7 @@ flowchart TD
 
 ### MethodDeclaration `DesignOffsetToScanner` · L1276–1281
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1276–1281](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1276-L1281)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1276–1281](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1276-L1281)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5727,7 +5727,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4249–4249](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4249-L4249) | CScannerAxisTransform.DesignOffsetToScanner | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4249–4249](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L4249-L4249) | CScannerAxisTransform.DesignOffsetToScanner | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5759,7 +5759,7 @@ flowchart TD
 
 ### MethodDeclaration `DesignOffsetToScanner` · L1283–1288
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1283–1288](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1283-L1288)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1283–1288](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1283-L1288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5781,10 +5781,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L144-L144) | CScannerAxisTransform.DesignOffsetToScanner | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1215–1215](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1215-L1215) | CScannerAxisTransform.DesignOffsetToScanner | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1280–1280](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1280-L1280) | DesignOffsetToScanner | False |
-| [Drilling.UI/CRootView.cs:1805–1805](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1805-L1805) | CScannerAxisTransform.DesignOffsetToScanner | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L144-L144) | CScannerAxisTransform.DesignOffsetToScanner | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1215–1215](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1215-L1215) | CScannerAxisTransform.DesignOffsetToScanner | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1280–1280](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1280-L1280) | DesignOffsetToScanner | False |
+| [Drilling.UI/CRootView.cs:1805–1805](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1805-L1805) | CScannerAxisTransform.DesignOffsetToScanner | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5809,7 +5809,7 @@ flowchart TD
 
 ### MethodDeclaration `Format` · L1290–1293
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1290–1293](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1290-L1293)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1290–1293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1290-L1293)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5828,9 +5828,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2308–2308](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2308-L2308) | CScannerAxisTransform.Format | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5881–5881](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5881-L5881) | CScannerAxisTransform.Format | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7244–7244](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7244-L7244) | CScannerAxisTransform.Format | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2308–2308](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2308-L2308) | CScannerAxisTransform.Format | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5881–5881](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5881-L5881) | CScannerAxisTransform.Format | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7244–7244](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7244-L7244) | CScannerAxisTransform.Format | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5853,7 +5853,7 @@ flowchart TD
 
 ### MethodDeclaration `ScannerOffsetToDesign` · L1295–1305
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1295–1305](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1295-L1305)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1295–1305](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1295-L1305)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5875,16 +5875,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1216–1216](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1216-L1216) | CScannerAxisTransform.ScannerOffsetToDesign | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2516–2516](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2516-L2516) | CScannerAxisTransform.ScannerOffsetToDesign | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5869–5869](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5869-L5869) | CScannerAxisTransform.ScannerOffsetToDesign | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7250–7250](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7250-L7250) | CScannerAxisTransform.ScannerOffsetToDesign | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7254–7254](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7254-L7254) | CScannerAxisTransform.ScannerOffsetToDesign | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7271–7271](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7271-L7271) | CScannerAxisTransform.ScannerOffsetToDesign | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3456–3460](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3456-L3460) | CScannerAxisTransform.ScannerOffsetToDesign | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3461–3465](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3461-L3465) | CScannerAxisTransform.ScannerOffsetToDesign | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3501–3505](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3501-L3505) | CScannerAxisTransform.ScannerOffsetToDesign | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3506–3510](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3506-L3510) | CScannerAxisTransform.ScannerOffsetToDesign | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1216–1216](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1216-L1216) | CScannerAxisTransform.ScannerOffsetToDesign | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2516–2516](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2516-L2516) | CScannerAxisTransform.ScannerOffsetToDesign | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5869–5869](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5869-L5869) | CScannerAxisTransform.ScannerOffsetToDesign | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7250–7250](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7250-L7250) | CScannerAxisTransform.ScannerOffsetToDesign | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7254–7254](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7254-L7254) | CScannerAxisTransform.ScannerOffsetToDesign | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7271–7271](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7271-L7271) | CScannerAxisTransform.ScannerOffsetToDesign | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3456–3460](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3456-L3460) | CScannerAxisTransform.ScannerOffsetToDesign | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3461–3465](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3461-L3465) | CScannerAxisTransform.ScannerOffsetToDesign | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3501–3505](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3501-L3505) | CScannerAxisTransform.ScannerOffsetToDesign | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3506–3510](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3506-L3510) | CScannerAxisTransform.ScannerOffsetToDesign | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5926,7 +5926,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadOnOff` · L1307–1310
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1307–1310](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1307-L1310)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1307–1310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1307-L1310)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5947,9 +5947,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1266–1266](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1266-L1266) | ReadOnOff | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1266–1266](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1266-L1266) | ReadOnOff | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1266–1266](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1266-L1266) | ReadOnOff | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1266–1266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1266-L1266) | ReadOnOff | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1266–1266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1266-L1266) | ReadOnOff | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1266–1266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1266-L1266) | ReadOnOff | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5971,7 +5971,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadOnOff` · L1312–1323
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1312–1323](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1312-L1323)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1312–1323](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1312-L1323)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5992,9 +5992,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1273–1273](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1273-L1273) | ReadOnOff | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1273–1273](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1273-L1273) | ReadOnOff | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1273–1273](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1273-L1273) | ReadOnOff | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1273–1273](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1273-L1273) | ReadOnOff | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1273–1273](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1273-L1273) | ReadOnOff | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1273–1273](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1273-L1273) | ReadOnOff | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6031,7 +6031,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseOnOff` · L1325–1344
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1325–1344](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1325-L1344)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1325–1344](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1325-L1344)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6052,8 +6052,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1309–1309](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1309-L1309) | ParseOnOff | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1318–1318](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1318-L1318) | ParseOnOff | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1309–1309](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1309-L1309) | ParseOnOff | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1318–1318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1318-L1318) | ParseOnOff | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6099,7 +6099,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatOnOff` · L1346–1349
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1346–1349](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1346-L1349)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1346–1349](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1346-L1349)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6118,9 +6118,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1292–1292](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1292-L1292) | FormatOnOff | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1292–1292](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1292-L1292) | FormatOnOff | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1292–1292](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1292-L1292) | FormatOnOff | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1292–1292](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1292-L1292) | FormatOnOff | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1292–1292](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1292-L1292) | FormatOnOff | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1292–1292](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1292-L1292) | FormatOnOff | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -6133,7 +6133,7 @@ flowchart TD
 
 ### PropertyDeclaration `AlignOffsetX` · L1385–1385
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1385–1385](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1385-L1385)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1385–1385](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1385-L1385)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6148,7 +6148,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AlignOffsetX` · L1385–1385
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1385–1385](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1385-L1385)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1385–1385](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1385-L1385)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6163,7 +6163,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_AlignOffsetX` · L1385–1385
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1385–1385](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1385-L1385)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1385–1385](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1385-L1385)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6184,7 +6184,7 @@ flowchart TD
 
 ### PropertyDeclaration `AlignOffsetY` · L1386–1386
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1386–1386](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1386-L1386)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1386–1386](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1386-L1386)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6199,7 +6199,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AlignOffsetY` · L1386–1386
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1386–1386](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1386-L1386)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1386–1386](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1386-L1386)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6214,7 +6214,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_AlignOffsetY` · L1386–1386
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1386–1386](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1386-L1386)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1386–1386](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1386-L1386)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6235,7 +6235,7 @@ flowchart TD
 
 ### PropertyDeclaration `AlignScannerOffsetX` · L1387–1387
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1387–1387](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1387-L1387)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1387–1387](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1387-L1387)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6250,7 +6250,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AlignScannerOffsetX` · L1387–1387
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1387–1387](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1387-L1387)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1387–1387](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1387-L1387)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6265,7 +6265,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_AlignScannerOffsetX` · L1387–1387
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1387–1387](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1387-L1387)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1387–1387](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1387-L1387)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6286,7 +6286,7 @@ flowchart TD
 
 ### PropertyDeclaration `AlignScannerOffsetY` · L1388–1388
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1388–1388](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1388-L1388)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1388–1388](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1388-L1388)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6301,7 +6301,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AlignScannerOffsetY` · L1388–1388
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1388–1388](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1388-L1388)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1388–1388](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1388-L1388)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6316,7 +6316,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_AlignScannerOffsetY` · L1388–1388
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1388–1388](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1388-L1388)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1388–1388](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1388-L1388)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6337,7 +6337,7 @@ flowchart TD
 
 ### PropertyDeclaration `ReviewOffsetIsDesign` · L1410–1410
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1410–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1410-L1410)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1410–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1410-L1410)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6352,7 +6352,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ReviewOffsetIsDesign` · L1410–1410
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1410–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1410-L1410)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1410–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1410-L1410)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6367,7 +6367,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ReviewOffsetIsDesign` · L1410–1410
 
-[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1410–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1410-L1410)
+[Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:1410–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L1410-L1410)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

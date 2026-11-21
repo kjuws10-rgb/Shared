@@ -1,6 +1,6 @@
 # 전체 파일 목차
 
-기준 Commit `28764c91d521777b8ee068dd7aaf2d3902ce9fe2` · Git 추적 699개를 빠짐없이 분류했습니다.
+기준 Commit `334b3599651b2e8e0181fd4459bafaf3cddafff3` · Git 추적 700개를 빠짐없이 분류했습니다.
 
 | 파일 | 분류 | 줄 | 타입/멤버 | 문서 |
 | --- | --- | --- | --- | --- |
@@ -505,6 +505,7 @@
 | Drilling.Common/Interface/Socket/CSocketComm.cs | code | 134 | 1/7 | [상세]&#40;files/Drilling.Common/Interface/Socket/CSocketComm.cs.md) |
 | Drilling.Common/Interface/Socket/CSocketServerComm.cs | code | 404 | 1/28 | [상세]&#40;files/Drilling.Common/Interface/Socket/CSocketServerComm.cs.md) |
 | Drilling.Common/Interface/Vision/CVisionComm.cs | code | 999 | 11/101 | [상세]&#40;files/Drilling.Common/Interface/Vision/CVisionComm.cs.md) |
+| Drilling.Common/Log/CLogManager.cs | code | 1562 | 10/151 | [상세]&#40;files/Drilling.Common/Log/CLogManager.cs.md) |
 | Drilling.Common/Managers/CAlignKeyMarginSettings.cs | code | 53 | 2/9 | [상세]&#40;files/Drilling.Common/Managers/CAlignKeyMarginSettings.cs.md) |
 | Drilling.Common/Managers/CManager.cs | code | 789 | 15/126 | [상세]&#40;files/Drilling.Common/Managers/CManager.cs.md) |
 | Drilling.Common/Managers/CRecipeManager.cs | code | 454 | 11/60 | [상세]&#40;files/Drilling.Common/Managers/CRecipeManager.cs.md) |

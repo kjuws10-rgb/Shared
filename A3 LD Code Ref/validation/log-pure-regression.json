@@ -1,0 +1,262 @@
+{
+  "schemaVersion": "a3-log-pure-regression/1",
+  "completed": true,
+  "checks": 32,
+  "checkFailures": 0,
+  "positiveRegressions": {
+    "passed": 27,
+    "total": 27
+  },
+  "findingReproductions": {
+    "reproduced": 5,
+    "probes": 5
+  },
+  "behaviorStatus": "defects_reproduced_not_program_correctness_pass",
+  "sourcePath": "Drilling.Common/Log/CLogManager.cs",
+  "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+  "sourceSha256": "9212676723d170166d61a6d7baeafeec6cf6b660d2ae5ef59c22de14dc2e3728",
+  "stubSha256": "8f53fda41de0ef9719667e4aa0ba19c6b46e82c51b9d90183525a9e68d0b9c6b",
+  "findings": [
+    {
+      "name": "setting_empty_old_roundtrip_loss",
+      "reproduced": true,
+      "evidence": {
+        "expectedRows": 1,
+        "actualRows": 0,
+        "expectedOld": "empty",
+        "sourceLines": "376-383,618-659"
+      }
+    },
+    {
+      "name": "recipe_both_empty_roundtrip_loss",
+      "reproduced": true,
+      "evidence": {
+        "expectedRows": 1,
+        "actualRows": 1,
+        "actualItems": [
+          {
+            "Action": "MODIFY\\",
+            "ItemName": "QA_VALUE",
+            "Tab": "",
+            "Group": "",
+            "OldValue": "1",
+            "NewValue": "2"
+          }
+        ],
+        "sourceLines": "245-264,574-660"
+      }
+    },
+    {
+      "name": "recipe_tab_empty_roundtrip_loss",
+      "reproduced": true,
+      "evidence": {
+        "expectedRows": 1,
+        "actualRows": 1,
+        "actualItems": [
+          {
+            "Action": "MODIFY\\GROUP",
+            "ItemName": "QA_VALUE",
+            "Tab": "",
+            "Group": "",
+            "OldValue": "1",
+            "NewValue": "2"
+          }
+        ],
+        "sourceLines": "245-264,574-660"
+      }
+    },
+    {
+      "name": "recipe_group_empty_roundtrip_loss",
+      "reproduced": true,
+      "evidence": {
+        "expectedRows": 1,
+        "actualRows": 1,
+        "actualItems": [
+          {
+            "Action": "MODIFY",
+            "ItemName": "TAB\\QA_VALUE",
+            "Tab": "",
+            "Group": "",
+            "OldValue": "1",
+            "NewValue": "2"
+          }
+        ],
+        "sourceLines": "245-264,574-660"
+      }
+    },
+    {
+      "name": "simple_recipe_overload_unescaped_line_break",
+      "reproduced": true,
+      "evidence": {
+        "expectedPhysicalLines": 1,
+        "actualPhysicalLines": 2,
+        "sourceLines": "356-363"
+      }
+    }
+  ],
+  "results": [
+    {
+      "name": "setting_nonempty_value_roundtrip",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "recipe_batch_nonempty_fields_roundtrip",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "reproduce_setting_empty_old_field_is_not_roundtripped",
+      "kind": "finding_reproduction",
+      "passed": true
+    },
+    {
+      "name": "setting_empty_new_trailing_field_roundtrips",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "reproduce_recipe_batch_both_empty_metadata_or_action_shift",
+      "kind": "finding_reproduction",
+      "passed": true
+    },
+    {
+      "name": "reproduce_recipe_batch_tab_empty_metadata_or_action_shift",
+      "kind": "finding_reproduction",
+      "passed": true
+    },
+    {
+      "name": "reproduce_recipe_batch_group_empty_metadata_or_action_shift",
+      "kind": "finding_reproduction",
+      "passed": true
+    },
+    {
+      "name": "escaped_backslash_setting_roundtrip",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "reproduce_simple_recipe_overload_keeps_raw_newline",
+      "kind": "finding_reproduction",
+      "passed": true
+    },
+    {
+      "name": "invalid_timestamp_falls_back_to_current_time_observation",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "same_file_managers_share_line_write_lock",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "pm_reason_validation_and_completion_idempotence",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "pm_history_cache_is_instance_local_observation",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "interface_flush_preserves_queue_order_and_stop_is_final",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "interface_queue_byte_limit_reports_failure_without_throwing_producer",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "interface_file_error_is_reported_by_flush_and_stop",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "sequence_newline_escape_and_complete_drain",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "sequence_file_error_is_reported_without_control_code",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "sequence_suppressed_initial_off_does_not_start_writer",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "review_glass_mapping_does_not_inherit_process_before_own_plan",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "alarm_jsonl_roundtrip_and_corruption_warning",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "alarm_cancellation_and_invalid_range_are_explicit",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "log_scope_rejects_parent_alarm_and_executable",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "text_reader_encoding_utf8",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "text_reader_encoding_utf8bom",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "text_reader_encoding_utf16le",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "text_reader_encoding_utf16be",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "text_reader_encoding_utf32le",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "text_reader_encoding_utf32be",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "text_reader_page_surrogate_boundary_and_invalid_offset",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "text_reader_pre_cancel_and_alarm_rejection",
+      "kind": "positive_regression",
+      "passed": true
+    },
+    {
+      "name": "no_vendor_or_equipment_assemblies_loaded",
+      "kind": "positive_regression",
+      "passed": true
+    }
+  ],
+  "loadedVendorAssemblies": [],
+  "fixtureRoot": "<private-run>\\verification\\fixtures",
+  "scope": "Exact full CLogManager.cs source copy plus framework and inert DTO/enum stubs. Synthetic temporary files only. Defect reproduction is counted separately from positive regressions and is not a program-correctness pass. CProgramOpenLog.Write not invoked. Equipment build/App/Root/vendor/PLC/Vision/motion not run."
+}

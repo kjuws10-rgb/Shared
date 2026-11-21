@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.UI/CRootView.cs
-Commit: 28764c91d521777b8ee068dd7aaf2d3902ce9fe2
+Commit: 334b3599651b2e8e0181fd4459bafaf3cddafff3
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI
@@ -255,7 +255,7 @@ L000125 |         private string _lastMainLiveStatusError = ""; ⟦EOL⟧
 L000126 |         private string _lastClockTickError = ""; ⟦EOL⟧
 // 해설 L127: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(false, null) / 변수의 초기값을 지정합니다: _pmLockStatus = new(false, null)
 L000127 |         private ST_PM_LOCK_STATUS _pmLockStatus = new(false, null); ⟦EOL⟧
-// 해설 L128: 선언·서명/매개변수·접근 조건입니다 · ST_PM_HISTORY_ENTRY? Drilling.UI.CRootView._activePmSession
+// 해설 L128: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Log.ST_PM_HISTORY_ENTRY? Drilling.UI.CRootView._activePmSession
 L000128 |         private ST_PM_HISTORY_ENTRY? _activePmSession; ⟦EOL⟧
 // 해설 L129: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.CRootView._isPmUnlocking
 L000129 |         private bool _isPmUnlocking; ⟦EOL⟧

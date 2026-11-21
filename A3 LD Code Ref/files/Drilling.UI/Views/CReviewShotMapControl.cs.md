@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 4b948d74cec87fc29244a8bbec94452a92aa3b70e04a1f1ea6b59876d3bd1223 |
 | 파일 분류 | code |
 | 원본 크기/행 | 13,031 bytes / 364 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -80,7 +80,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `CellSize` · L15–15
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L15-L15)
+[Drilling.UI/Views/CReviewShotMapControl.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -101,7 +101,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `CellMargin` · L16–16
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L16-L16)
+[Drilling.UI/Views/CReviewShotMapControl.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -122,7 +122,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `CellPitch` · L17–17
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L17-L17)
+[Drilling.UI/Views/CReviewShotMapControl.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -143,7 +143,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `BeamSelectionBackground` · L19–19
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L19-L19)
+[Drilling.UI/Views/CReviewShotMapControl.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -171,7 +171,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `BeamSelectionBorder` · L20–20
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L20-L20)
+[Drilling.UI/Views/CReviewShotMapControl.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -199,7 +199,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `CurrentBackground` · L21–21
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L21-L21)
+[Drilling.UI/Views/CReviewShotMapControl.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -227,7 +227,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `CurrentBorder` · L22–22
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L22-L22)
+[Drilling.UI/Views/CReviewShotMapControl.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -255,7 +255,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `MaskingBackground` · L23–23
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L23-L23)
+[Drilling.UI/Views/CReviewShotMapControl.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L23-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -283,7 +283,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `MaskingBorder` · L24–24
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L24-L24)
+[Drilling.UI/Views/CReviewShotMapControl.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L24-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -311,7 +311,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `ActiveSelectionBorder` · L25–25
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L25-L25)
+[Drilling.UI/Views/CReviewShotMapControl.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L25-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -339,7 +339,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `SelectionMarkerBackground` · L26–26
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L26-L26)
+[Drilling.UI/Views/CReviewShotMapControl.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -367,7 +367,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `SelectionMarkerForeground` · L27–27
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L27-L27)
+[Drilling.UI/Views/CReviewShotMapControl.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -395,7 +395,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `White` · L28–28
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L28-L28)
+[Drilling.UI/Views/CReviewShotMapControl.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -416,7 +416,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_pens` · L30–30
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L30-L30)
+[Drilling.UI/Views/CReviewShotMapControl.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -437,7 +437,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_blinkTimer` · L31–34
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:31–34](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L31-L34)
+[Drilling.UI/Views/CReviewShotMapControl.cs:31–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L31-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -468,7 +468,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_toolTip` · L35–35
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L35-L35)
+[Drilling.UI/Views/CReviewShotMapControl.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L35-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -483,7 +483,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_toolTipTitle` · L36–36
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L36-L36)
+[Drilling.UI/Views/CReviewShotMapControl.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L36-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -498,7 +498,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_toolTipDetail` · L37–37
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L37-L37)
+[Drilling.UI/Views/CReviewShotMapControl.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L37-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -513,7 +513,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_blinkVisible` · L38–38
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L38-L38)
+[Drilling.UI/Views/CReviewShotMapControl.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -534,7 +534,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_rowsAttached` · L39–39
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L39-L39)
+[Drilling.UI/Views/CReviewShotMapControl.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -549,7 +549,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_hoveredShot` · L40–40
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L40-L40)
+[Drilling.UI/Views/CReviewShotMapControl.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L40-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -564,7 +564,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `RowsProperty` · L42–49
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:42–49](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L42-L49)
+[Drilling.UI/Views/CReviewShotMapControl.cs:42–49](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L42-L49)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -598,7 +598,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `IsBeamInspectionModeProperty` · L51–55
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:51–55](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L51-L55)
+[Drilling.UI/Views/CReviewShotMapControl.cs:51–55](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L51-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -630,7 +630,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L57–100
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:57–100](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L57-L100)
+[Drilling.UI/Views/CReviewShotMapControl.cs:57–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L57-L100)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -706,7 +706,7 @@ flowchart TD
 
 ### PropertyDeclaration `Rows` · L102–106
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:102–106](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L102-L106)
+[Drilling.UI/Views/CReviewShotMapControl.cs:102–106](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L102-L106)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -721,7 +721,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Rows` · L104–104
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L104-L104)
+[Drilling.UI/Views/CReviewShotMapControl.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L104-L104)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -748,7 +748,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Rows` · L105–105
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L105-L105)
+[Drilling.UI/Views/CReviewShotMapControl.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L105-L105)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -781,7 +781,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsBeamInspectionMode` · L108–112
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:108–112](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L108-L112)
+[Drilling.UI/Views/CReviewShotMapControl.cs:108–112](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L108-L112)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -796,7 +796,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsBeamInspectionMode` · L110–110
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L110-L110)
+[Drilling.UI/Views/CReviewShotMapControl.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L110-L110)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -823,7 +823,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_IsBeamInspectionMode` · L111–111
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L111-L111)
+[Drilling.UI/Views/CReviewShotMapControl.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L111-L111)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -856,7 +856,7 @@ flowchart TD
 
 ### MethodDeclaration `MeasureOverride` · L114–119
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:114–119](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L114-L119)
+[Drilling.UI/Views/CReviewShotMapControl.cs:114–119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L114-L119)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -897,7 +897,7 @@ flowchart TD
 
 ### MethodDeclaration `OnRender` · L121–133
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:121–133](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L121-L133)
+[Drilling.UI/Views/CReviewShotMapControl.cs:121–133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L121-L133)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -949,7 +949,7 @@ flowchart TD
 
 ### MethodDeclaration `OnMouseMove` · L135–147
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:135–147](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L135-L147)
+[Drilling.UI/Views/CReviewShotMapControl.cs:135–147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L135-L147)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1008,7 +1008,7 @@ flowchart TD
 
 ### MethodDeclaration `OnMouseLeave` · L149–154
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:149–154](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L149-L154)
+[Drilling.UI/Views/CReviewShotMapControl.cs:149–154](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L149-L154)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1043,7 +1043,7 @@ flowchart TD
 
 ### MethodDeclaration `OnMouseLeftButtonDown` · L156–165
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:156–165](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L156-L165)
+[Drilling.UI/Views/CReviewShotMapControl.cs:156–165](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L156-L165)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1098,7 +1098,7 @@ flowchart TD
 
 ### MethodDeclaration `OnMouseRightButtonDown` · L167–177
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:167–177](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L167-L177)
+[Drilling.UI/Views/CReviewShotMapControl.cs:167–177](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L167-L177)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1155,7 +1155,7 @@ flowchart TD
 
 ### MethodDeclaration `OnRowsChanged` · L179–190
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:179–190](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L179-L190)
+[Drilling.UI/Views/CReviewShotMapControl.cs:179–190](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L179-L190)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1208,7 +1208,7 @@ flowchart TD
 
 ### MethodDeclaration `AttachRows` · L192–203
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:192–203](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L192-L203)
+[Drilling.UI/Views/CReviewShotMapControl.cs:192–203](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L192-L203)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1227,8 +1227,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L85-L85) | AttachRows | False |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:185–185](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L185-L185) | control.AttachRows | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L85-L85) | AttachRows | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:185–185](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L185-L185) | control.AttachRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1263,7 +1263,7 @@ flowchart TD
 
 ### MethodDeclaration `DetachRows` · L205–216
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:205–216](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L205-L216)
+[Drilling.UI/Views/CReviewShotMapControl.cs:205–216](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L205-L216)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1282,8 +1282,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L96-L96) | DetachRows | False |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L184-L184) | control.DetachRows | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L96-L96) | DetachRows | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L184-L184) | control.DetachRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1318,7 +1318,7 @@ flowchart TD
 
 ### MethodDeclaration `Shot_VisualChanged` · L218–229
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:218–229](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L218-L229)
+[Drilling.UI/Views/CReviewShotMapControl.cs:218–229](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L218-L229)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1374,7 +1374,7 @@ flowchart TD
 
 ### MethodDeclaration `BlinkTimer_Tick` · L231–241
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:231–241](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L231-L241)
+[Drilling.UI/Views/CReviewShotMapControl.cs:231–241](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L231-L241)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1425,7 +1425,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawShot` · L243–300
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:243–300](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L243-L300)
+[Drilling.UI/Views/CReviewShotMapControl.cs:243–300](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L243-L300)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1447,7 +1447,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L130-L130) | DrawShot | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L130-L130) | DrawShot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1537,7 +1537,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawSelectionMarker` · L302–315
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:302–315](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L302-L315)
+[Drilling.UI/Views/CReviewShotMapControl.cs:302–315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L302-L315)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1557,7 +1557,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:296–296](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L296-L296) | DrawSelectionMarker | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:296–296](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L296-L296) | DrawSelectionMarker | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1599,7 +1599,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawCross` · L317–322
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:317–322](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L317-L322)
+[Drilling.UI/Views/CReviewShotMapControl.cs:317–322](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L317-L322)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1622,7 +1622,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L293-L293) | DrawCross | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L293-L293) | DrawCross | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1654,7 +1654,7 @@ flowchart TD
 
 ### MethodDeclaration `HitTestShot` · L324–336
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:324–336](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L324-L336)
+[Drilling.UI/Views/CReviewShotMapControl.cs:324–336](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L324-L336)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1703,7 +1703,7 @@ flowchart TD
 
 ### MethodDeclaration `GetPen` · L338–354
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:338–354](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L338-L354)
+[Drilling.UI/Views/CReviewShotMapControl.cs:338–354](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L338-L354)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1723,10 +1723,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L290-L290) | GetPen | False |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L310-L310) | GetPen | False |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L312-L312) | GetPen | False |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L319-L319) | GetPen | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L290-L290) | GetPen | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L310-L310) | GetPen | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L312-L312) | GetPen | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L319-L319) | GetPen | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1774,7 +1774,7 @@ flowchart TD
 
 ### MethodDeclaration `FrozenBrush` · L356–356
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L356-L356)
+[Drilling.UI/Views/CReviewShotMapControl.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L356-L356)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1795,14 +1795,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L19-L19) | FrozenBrush | False |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L20-L20) | FrozenBrush | False |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L21-L21) | FrozenBrush | False |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L22-L22) | FrozenBrush | False |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L23-L23) | FrozenBrush | False |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L24-L24) | FrozenBrush | False |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L25-L25) | FrozenBrush | False |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L27-L27) | FrozenBrush | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L19-L19) | FrozenBrush | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L20-L20) | FrozenBrush | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L21-L21) | FrozenBrush | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L22-L22) | FrozenBrush | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L23-L23) | FrozenBrush | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L24-L24) | FrozenBrush | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L25-L25) | FrozenBrush | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L27-L27) | FrozenBrush | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1820,7 +1820,7 @@ flowchart TD
 
 ### MethodDeclaration `FrozenBrush` · L358–363
 
-[Drilling.UI/Views/CReviewShotMapControl.cs:358–363](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L358-L363)
+[Drilling.UI/Views/CReviewShotMapControl.cs:358–363](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L358-L363)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1842,8 +1842,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L26-L26) | FrozenBrush | False |
-| [Drilling.UI/Views/CReviewShotMapControl.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L356-L356) | FrozenBrush | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L26-L26) | FrozenBrush | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewShotMapControl.cs#L356-L356) | FrozenBrush | False |
 
 호출하는 대상과 해석 범위:
 

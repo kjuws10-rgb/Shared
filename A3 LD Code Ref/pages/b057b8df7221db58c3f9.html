@@ -1,13 +1,13 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Review/CReviewRulePlanBuilder.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Review/CReviewRulePlanBuilder.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs">Git 원본</a></p><h1>Drilling.Common/Review/CReviewRulePlanBuilder.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Review/CReviewRulePlanBuilder.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Review/CReviewRulePlanBuilder.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs">Git 원본</a></p><h1>Drilling.Common/Review/CReviewRulePlanBuilder.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>28764c91d521777b8ee068dd7aaf2d3902ce9fe2</td></tr>
+<tr><td>원본 Commit</td><td>334b3599651b2e8e0181fd4459bafaf3cddafff3</td></tr>
 <tr><td>원본 SHA256</td><td>fec50e7ea6890b4831eeed538aee7eff6c6570e4f1d7ea3f009368fa2bafb84b</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
 <tr><td>원본 크기/행</td><td>24,934 bytes / 537 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>리뷰 계획·측정·결과 해석 계층입니다. 물리 이동 좌표와 Vision 식별 패킷, 측정 저장의 역할을 별도로 확인합니다.</p>
@@ -70,7 +70,7 @@
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
 <h3 id="L5">MethodDeclaration <code>Build</code> · L5–17</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L5-L17">Drilling.Common/Review/CReviewRulePlanBuilder.cs:5–17</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L5-L17">Drilling.Common/Review/CReviewRulePlanBuilder.cs:5–17</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.ST_REVIEW_RULE_PLAN Drilling.Common.Review.CReviewRulePlanBuilder.Build(Drilling.Common.Review.ST_REVIEW_PLAN, Drilling.Common.Review.ST_REVIEW_RULE_CONFIGURATION)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -84,9 +84,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L260-L260">Drilling.Common/Review/CAutoFineReviewCoordinator.cs:260–260</a></td><td>CReviewRulePlanBuilder.Build</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6337-L6337">Drilling.UI/Menu/Menus/CMenuCorrection.cs:6337–6337</a></td><td>CReviewRulePlanBuilder.Build</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuReview.cs#L2354-L2354">Drilling.UI/Menu/Menus/CMenuReview.cs:2354–2354</a></td><td>CReviewRulePlanBuilder.Build</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L260-L260">Drilling.Common/Review/CAutoFineReviewCoordinator.cs:260–260</a></td><td>CReviewRulePlanBuilder.Build</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6337-L6337">Drilling.UI/Menu/Menus/CMenuCorrection.cs:6337–6337</a></td><td>CReviewRulePlanBuilder.Build</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2354-L2354">Drilling.UI/Menu/Menus/CMenuReview.cs:2354–2354</a></td><td>CReviewRulePlanBuilder.Build</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -117,7 +117,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L19">MethodDeclaration <code>BuildSimple</code> · L19–23</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L19-L23">Drilling.Common/Review/CReviewRulePlanBuilder.cs:19–23</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L19-L23">Drilling.Common/Review/CReviewRulePlanBuilder.cs:19–23</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_RULE_TARGET&gt; Drilling.Common.Review.CReviewRulePlanBuilder.BuildSimple(Drilling.Common.Review.ST_REVIEW_PLAN, string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -131,7 +131,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L10-L10">Drilling.Common/Review/CReviewRulePlanBuilder.cs:10–10</a></td><td>BuildSimple</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L10-L10">Drilling.Common/Review/CReviewRulePlanBuilder.cs:10–10</a></td><td>BuildSimple</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -151,7 +151,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L25">MethodDeclaration <code>BuildRough</code> · L25–67</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L25-L67">Drilling.Common/Review/CReviewRulePlanBuilder.cs:25–67</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L25-L67">Drilling.Common/Review/CReviewRulePlanBuilder.cs:25–67</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_RULE_TARGET&gt; Drilling.Common.Review.CReviewRulePlanBuilder.BuildRough(Drilling.Common.Review.ST_REVIEW_PLAN, Drilling.Common.Review.EN_REVIEW_REFERENCE_LINE, Drilling.Common.Review.EN_REVIEW_CORRECTION_SCOPE)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -166,7 +166,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L11-L11">Drilling.Common/Review/CReviewRulePlanBuilder.cs:11–11</a></td><td>BuildRough</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L11-L11">Drilling.Common/Review/CReviewRulePlanBuilder.cs:11–11</a></td><td>BuildRough</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -267,7 +267,7 @@
  N6 --&gt;|포함| N8</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L69">MethodDeclaration <code>BuildRoughByHeadCell</code> · L69–133</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L69-L133">Drilling.Common/Review/CReviewRulePlanBuilder.cs:69–133</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L69-L133">Drilling.Common/Review/CReviewRulePlanBuilder.cs:69–133</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_RULE_TARGET&gt; Drilling.Common.Review.CReviewRulePlanBuilder.BuildRoughByHeadCell(Drilling.Common.Review.ST_REVIEW_PLAN, Drilling.Common.Review.EN_REVIEW_REFERENCE_LINE)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -281,7 +281,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L29-L29">Drilling.Common/Review/CReviewRulePlanBuilder.cs:29–29</a></td><td>BuildRoughByHeadCell</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L29-L29">Drilling.Common/Review/CReviewRulePlanBuilder.cs:29–29</a></td><td>BuildRoughByHeadCell</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -399,7 +399,7 @@
  N10 --&gt;|포함| N12</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L135">MethodDeclaration <code>ResolveRoughCellSelectionY</code> · L135–166</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L135-L166">Drilling.Common/Review/CReviewRulePlanBuilder.cs:135–166</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L135-L166">Drilling.Common/Review/CReviewRulePlanBuilder.cs:135–166</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.Dictionary&lt;int, double&gt; Drilling.Common.Review.CReviewRulePlanBuilder.ResolveRoughCellSelectionY(Drilling.Common.Review.ST_REVIEW_PLAN, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.CReviewRulePlanBuilder.CellSlice&gt;, System.Collections.Generic.IReadOnlyDictionary&lt;int, (double MinY, double MaxY)&gt;, Drilling.Common.Review.EN_REVIEW_REFERENCE_LINE)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -415,7 +415,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L98-L98">Drilling.Common/Review/CReviewRulePlanBuilder.cs:98–98</a></td><td>ResolveRoughCellSelectionY</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L98-L98">Drilling.Common/Review/CReviewRulePlanBuilder.cs:98–98</a></td><td>ResolveRoughCellSelectionY</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -476,7 +476,7 @@
  N0 --&gt;|포함| N4</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L168">MethodDeclaration <code>CellContainsHead</code> · L168–179</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L168-L179">Drilling.Common/Review/CReviewRulePlanBuilder.cs:168–179</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L168-L179">Drilling.Common/Review/CReviewRulePlanBuilder.cs:168–179</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Review.CReviewRulePlanBuilder.CellContainsHead(Drilling.Common.Review.ST_REVIEW_PLAN, Drilling.Common.Review.CReviewRulePlanBuilder.CellSlice, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -491,7 +491,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L145-L145">Drilling.Common/Review/CReviewRulePlanBuilder.cs:145–145</a></td><td>CellContainsHead</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L145-L145">Drilling.Common/Review/CReviewRulePlanBuilder.cs:145–145</a></td><td>CellContainsHead</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -517,7 +517,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L181">MethodDeclaration <code>PreferRoughCellSelectionY</code> · L181–184</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L181-L184">Drilling.Common/Review/CReviewRulePlanBuilder.cs:181–184</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L181-L184">Drilling.Common/Review/CReviewRulePlanBuilder.cs:181–184</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Review.CReviewRulePlanBuilder.PreferRoughCellSelectionY(double, double, Drilling.Common.Review.EN_REVIEW_REFERENCE_LINE)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -532,7 +532,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L152-L152">Drilling.Common/Review/CReviewRulePlanBuilder.cs:152–152</a></td><td>PreferRoughCellSelectionY</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L152-L152">Drilling.Common/Review/CReviewRulePlanBuilder.cs:152–152</a></td><td>PreferRoughCellSelectionY</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -541,7 +541,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L186">MethodDeclaration <code>TryGetCellYRange</code> · L186–211</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L186-L211">Drilling.Common/Review/CReviewRulePlanBuilder.cs:186–211</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L186-L211">Drilling.Common/Review/CReviewRulePlanBuilder.cs:186–211</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Review.CReviewRulePlanBuilder.TryGetCellYRange(Drilling.Common.Review.ST_REVIEW_PLAN, Drilling.Common.Review.CReviewRulePlanBuilder.CellSlice, out double, out double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -557,8 +557,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L102-L102">Drilling.Common/Review/CReviewRulePlanBuilder.cs:102–102</a></td><td>TryGetCellYRange</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L145-L145">Drilling.Common/Review/CReviewRulePlanBuilder.cs:145–145</a></td><td>TryGetCellYRange</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L102-L102">Drilling.Common/Review/CReviewRulePlanBuilder.cs:102–102</a></td><td>TryGetCellYRange</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L145-L145">Drilling.Common/Review/CReviewRulePlanBuilder.cs:145–145</a></td><td>TryGetCellYRange</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -611,7 +611,7 @@
  N2 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L213">MethodDeclaration <code>ResolveReferenceY</code> · L213–221</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L213-L221">Drilling.Common/Review/CReviewRulePlanBuilder.cs:213–221</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L213-L221">Drilling.Common/Review/CReviewRulePlanBuilder.cs:213–221</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Review.CReviewRulePlanBuilder.ResolveReferenceY((double MinY, double MaxY), Drilling.Common.Review.EN_REVIEW_REFERENCE_LINE)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -625,8 +625,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L46-L46">Drilling.Common/Review/CReviewRulePlanBuilder.cs:46–46</a></td><td>ResolveReferenceY</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L140-L140">Drilling.Common/Review/CReviewRulePlanBuilder.cs:140–140</a></td><td>ResolveReferenceY</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L46-L46">Drilling.Common/Review/CReviewRulePlanBuilder.cs:46–46</a></td><td>ResolveReferenceY</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L140-L140">Drilling.Common/Review/CReviewRulePlanBuilder.cs:140–140</a></td><td>ResolveReferenceY</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -640,7 +640,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L223">MethodDeclaration <code>UpdateHeadRange</code> · L223–238</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L223-L238">Drilling.Common/Review/CReviewRulePlanBuilder.cs:223–238</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L223-L238">Drilling.Common/Review/CReviewRulePlanBuilder.cs:223–238</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Review.CReviewRulePlanBuilder.UpdateHeadRange(Drilling.Common.Review.ST_REVIEW_PLAN_POINT, System.Collections.Generic.IDictionary&lt;int, (double MinY, double MaxY)&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -654,10 +654,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L38-L38">Drilling.Common/Review/CReviewRulePlanBuilder.cs:38–38</a></td><td>UpdateHeadRange</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L41-L41">Drilling.Common/Review/CReviewRulePlanBuilder.cs:41–41</a></td><td>UpdateHeadRange</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L85-L85">Drilling.Common/Review/CReviewRulePlanBuilder.cs:85–85</a></td><td>UpdateHeadRange</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L88-L88">Drilling.Common/Review/CReviewRulePlanBuilder.cs:88–88</a></td><td>UpdateHeadRange</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L38-L38">Drilling.Common/Review/CReviewRulePlanBuilder.cs:38–38</a></td><td>UpdateHeadRange</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L41-L41">Drilling.Common/Review/CReviewRulePlanBuilder.cs:41–41</a></td><td>UpdateHeadRange</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L85-L85">Drilling.Common/Review/CReviewRulePlanBuilder.cs:85–85</a></td><td>UpdateHeadRange</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L88-L88">Drilling.Common/Review/CReviewRulePlanBuilder.cs:88–88</a></td><td>UpdateHeadRange</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -692,7 +692,7 @@
  N1 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L240">MethodDeclaration <code>FindNearestRow</code> · L240–254</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L240-L254">Drilling.Common/Review/CReviewRulePlanBuilder.cs:240–254</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L240-L254">Drilling.Common/Review/CReviewRulePlanBuilder.cs:240–254</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Review.CReviewRulePlanBuilder.FindNearestRow(double, double, int, double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -708,7 +708,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L384-L384">Drilling.Common/Review/CReviewRulePlanBuilder.cs:384–384</a></td><td>FindNearestRow</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L384-L384">Drilling.Common/Review/CReviewRulePlanBuilder.cs:384–384</a></td><td>FindNearestRow</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -746,7 +746,7 @@
  M --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L256">MethodDeclaration <code>IsEarlierRoughPoint</code> · L256–280</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L256-L280">Drilling.Common/Review/CReviewRulePlanBuilder.cs:256–280</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L256-L280">Drilling.Common/Review/CReviewRulePlanBuilder.cs:256–280</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Review.CReviewRulePlanBuilder.IsEarlierRoughPoint(Drilling.Common.Review.ST_REVIEW_PLAN_POINT, Drilling.Common.Review.ST_REVIEW_PLAN_POINT, double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -761,8 +761,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L59-L59">Drilling.Common/Review/CReviewRulePlanBuilder.cs:59–59</a></td><td>IsEarlierRoughPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L124-L124">Drilling.Common/Review/CReviewRulePlanBuilder.cs:124–124</a></td><td>IsEarlierRoughPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L59-L59">Drilling.Common/Review/CReviewRulePlanBuilder.cs:59–59</a></td><td>IsEarlierRoughPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L124-L124">Drilling.Common/Review/CReviewRulePlanBuilder.cs:124–124</a></td><td>IsEarlierRoughPoint</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -813,7 +813,7 @@
  M --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L282">MethodDeclaration <code>BuildFine</code> · L282–294</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L282-L294">Drilling.Common/Review/CReviewRulePlanBuilder.cs:282–294</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L282-L294">Drilling.Common/Review/CReviewRulePlanBuilder.cs:282–294</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_RULE_TARGET&gt; Drilling.Common.Review.CReviewRulePlanBuilder.BuildFine(Drilling.Common.Review.ST_REVIEW_PLAN, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -827,7 +827,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L12-L12">Drilling.Common/Review/CReviewRulePlanBuilder.cs:12–12</a></td><td>BuildFine</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L12-L12">Drilling.Common/Review/CReviewRulePlanBuilder.cs:12–12</a></td><td>BuildFine</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -884,7 +884,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L296">MethodDeclaration <code>IsExecutableRoughPoint</code> · L296–296</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L296-L296">Drilling.Common/Review/CReviewRulePlanBuilder.cs:296–296</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L296-L296">Drilling.Common/Review/CReviewRulePlanBuilder.cs:296–296</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Review.CReviewRulePlanBuilder.IsExecutableRoughPoint(Drilling.Common.Review.ST_REVIEW_PLAN_POINT)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -897,8 +897,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L54-L54">Drilling.Common/Review/CReviewRulePlanBuilder.cs:54–54</a></td><td>IsExecutableRoughPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L118-L118">Drilling.Common/Review/CReviewRulePlanBuilder.cs:118–118</a></td><td>IsExecutableRoughPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L54-L54">Drilling.Common/Review/CReviewRulePlanBuilder.cs:54–54</a></td><td>IsExecutableRoughPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L118-L118">Drilling.Common/Review/CReviewRulePlanBuilder.cs:118–118</a></td><td>IsExecutableRoughPoint</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -914,7 +914,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L297">MethodDeclaration <code>BuildEdge</code> · L297–319</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L297-L319">Drilling.Common/Review/CReviewRulePlanBuilder.cs:297–319</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L297-L319">Drilling.Common/Review/CReviewRulePlanBuilder.cs:297–319</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_RULE_TARGET&gt; Drilling.Common.Review.CReviewRulePlanBuilder.BuildEdge(Drilling.Common.Review.ST_REVIEW_PLAN)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -927,7 +927,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L13-L13">Drilling.Common/Review/CReviewRulePlanBuilder.cs:13–13</a></td><td>BuildEdge</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L13-L13">Drilling.Common/Review/CReviewRulePlanBuilder.cs:13–13</a></td><td>BuildEdge</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -973,7 +973,7 @@
  N2 --&gt;|포함| N4</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L321">MethodDeclaration <code>EnumerateCells</code> · L321–359</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L321-L359">Drilling.Common/Review/CReviewRulePlanBuilder.cs:321–359</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L321-L359">Drilling.Common/Review/CReviewRulePlanBuilder.cs:321–359</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.CReviewRulePlanBuilder.CellSlice&gt; Drilling.Common.Review.CReviewRulePlanBuilder.EnumerateCells(Drilling.Common.Review.ST_REVIEW_PLAN)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -986,10 +986,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L32-L32">Drilling.Common/Review/CReviewRulePlanBuilder.cs:32–32</a></td><td>EnumerateCells</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L74-L74">Drilling.Common/Review/CReviewRulePlanBuilder.cs:74–74</a></td><td>EnumerateCells</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L300-L300">Drilling.Common/Review/CReviewRulePlanBuilder.cs:300–300</a></td><td>EnumerateCells</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L363-L363">Drilling.Common/Review/CReviewRulePlanBuilder.cs:363–363</a></td><td>EnumerateCells</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L32-L32">Drilling.Common/Review/CReviewRulePlanBuilder.cs:32–32</a></td><td>EnumerateCells</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L74-L74">Drilling.Common/Review/CReviewRulePlanBuilder.cs:74–74</a></td><td>EnumerateCells</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L300-L300">Drilling.Common/Review/CReviewRulePlanBuilder.cs:300–300</a></td><td>EnumerateCells</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L363-L363">Drilling.Common/Review/CReviewRulePlanBuilder.cs:363–363</a></td><td>EnumerateCells</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1067,7 +1067,7 @@
  N3 --&gt;|포함| N5</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L361">MethodDeclaration <code>BuildFineFromCellSource</code> · L361–401</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L361-L401">Drilling.Common/Review/CReviewRulePlanBuilder.cs:361–401</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L361-L401">Drilling.Common/Review/CReviewRulePlanBuilder.cs:361–401</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_RULE_TARGET&gt; Drilling.Common.Review.CReviewRulePlanBuilder.BuildFineFromCellSource(Drilling.Common.Review.ST_REVIEW_PLAN, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1081,7 +1081,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L286-L286">Drilling.Common/Review/CReviewRulePlanBuilder.cs:286–286</a></td><td>BuildFineFromCellSource</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L286-L286">Drilling.Common/Review/CReviewRulePlanBuilder.cs:286–286</a></td><td>BuildFineFromCellSource</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1199,7 +1199,7 @@
  N4 --&gt;|포함| N5</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L403">MethodDeclaration <code>CreateFineCellRange</code> · L403–421</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L403-L421">Drilling.Common/Review/CReviewRulePlanBuilder.cs:403–421</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L403-L421">Drilling.Common/Review/CReviewRulePlanBuilder.cs:403–421</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.CReviewRulePlanBuilder.FineCellRange Drilling.Common.Review.CReviewRulePlanBuilder.CreateFineCellRange(Drilling.Common.Review.ST_REVIEW_PLAN, Drilling.Common.Review.CReviewRulePlanBuilder.CellSlice)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1213,7 +1213,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L364-L364">Drilling.Common/Review/CReviewRulePlanBuilder.cs:364–364</a></td><td>CreateFineCellRange</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L364-L364">Drilling.Common/Review/CReviewRulePlanBuilder.cs:364–364</a></td><td>CreateFineCellRange</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1277,7 +1277,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L423">MethodDeclaration <code>DistanceToRange</code> · L423–431</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L423-L431">Drilling.Common/Review/CReviewRulePlanBuilder.cs:423–431</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L423-L431">Drilling.Common/Review/CReviewRulePlanBuilder.cs:423–431</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Review.CReviewRulePlanBuilder.DistanceToRange(double, double, double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1292,7 +1292,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L150-L150">Drilling.Common/Review/CReviewRulePlanBuilder.cs:150–150</a></td><td>DistanceToRange</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L150-L150">Drilling.Common/Review/CReviewRulePlanBuilder.cs:150–150</a></td><td>DistanceToRange</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -1308,7 +1308,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L433">MethodDeclaration <code>GetPoint</code> · L433–433</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L433-L433">Drilling.Common/Review/CReviewRulePlanBuilder.cs:433–433</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L433-L433">Drilling.Common/Review/CReviewRulePlanBuilder.cs:433–433</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.ST_REVIEW_PLAN_POINT Drilling.Common.Review.CReviewRulePlanBuilder.GetPoint(Drilling.Common.Review.ST_REVIEW_PLAN, Drilling.Common.Review.CReviewRulePlanBuilder.CellSlice, int, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1324,22 +1324,22 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L38-L38">Drilling.Common/Review/CReviewRulePlanBuilder.cs:38–38</a></td><td>GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L41-L41">Drilling.Common/Review/CReviewRulePlanBuilder.cs:41–41</a></td><td>GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L53-L53">Drilling.Common/Review/CReviewRulePlanBuilder.cs:53–53</a></td><td>GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L85-L85">Drilling.Common/Review/CReviewRulePlanBuilder.cs:85–85</a></td><td>GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L88-L88">Drilling.Common/Review/CReviewRulePlanBuilder.cs:88–88</a></td><td>GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L117-L117">Drilling.Common/Review/CReviewRulePlanBuilder.cs:117–117</a></td><td>GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L172-L172">Drilling.Common/Review/CReviewRulePlanBuilder.cs:172–172</a></td><td>GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L172-L172">Drilling.Common/Review/CReviewRulePlanBuilder.cs:172–172</a></td><td>GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L192-L192">Drilling.Common/Review/CReviewRulePlanBuilder.cs:192–192</a></td><td>GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L201-L201">Drilling.Common/Review/CReviewRulePlanBuilder.cs:201–201</a></td><td>GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L310-L310">Drilling.Common/Review/CReviewRulePlanBuilder.cs:310–310</a></td><td>GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L391-L391">Drilling.Common/Review/CReviewRulePlanBuilder.cs:391–391</a></td><td>GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L407-L407">Drilling.Common/Review/CReviewRulePlanBuilder.cs:407–407</a></td><td>GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L408-L408">Drilling.Common/Review/CReviewRulePlanBuilder.cs:408–408</a></td><td>GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L409-L409">Drilling.Common/Review/CReviewRulePlanBuilder.cs:409–409</a></td><td>GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L410-L410">Drilling.Common/Review/CReviewRulePlanBuilder.cs:410–410</a></td><td>GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L38-L38">Drilling.Common/Review/CReviewRulePlanBuilder.cs:38–38</a></td><td>GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L41-L41">Drilling.Common/Review/CReviewRulePlanBuilder.cs:41–41</a></td><td>GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L53-L53">Drilling.Common/Review/CReviewRulePlanBuilder.cs:53–53</a></td><td>GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L85-L85">Drilling.Common/Review/CReviewRulePlanBuilder.cs:85–85</a></td><td>GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L88-L88">Drilling.Common/Review/CReviewRulePlanBuilder.cs:88–88</a></td><td>GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L117-L117">Drilling.Common/Review/CReviewRulePlanBuilder.cs:117–117</a></td><td>GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L172-L172">Drilling.Common/Review/CReviewRulePlanBuilder.cs:172–172</a></td><td>GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L172-L172">Drilling.Common/Review/CReviewRulePlanBuilder.cs:172–172</a></td><td>GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L192-L192">Drilling.Common/Review/CReviewRulePlanBuilder.cs:192–192</a></td><td>GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L201-L201">Drilling.Common/Review/CReviewRulePlanBuilder.cs:201–201</a></td><td>GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L310-L310">Drilling.Common/Review/CReviewRulePlanBuilder.cs:310–310</a></td><td>GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L391-L391">Drilling.Common/Review/CReviewRulePlanBuilder.cs:391–391</a></td><td>GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L407-L407">Drilling.Common/Review/CReviewRulePlanBuilder.cs:407–407</a></td><td>GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L408-L408">Drilling.Common/Review/CReviewRulePlanBuilder.cs:408–408</a></td><td>GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L409-L409">Drilling.Common/Review/CReviewRulePlanBuilder.cs:409–409</a></td><td>GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L410-L410">Drilling.Common/Review/CReviewRulePlanBuilder.cs:410–410</a></td><td>GetPoint</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -1347,7 +1347,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L434">MethodDeclaration <code>FineCellRows</code> · L434–445</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L434-L445">Drilling.Common/Review/CReviewRulePlanBuilder.cs:434–445</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L434-L445">Drilling.Common/Review/CReviewRulePlanBuilder.cs:434–445</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Linq.IGrouping&lt;double, Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;&gt; Drilling.Common.Review.CReviewRulePlanBuilder.FineCellRows(System.Collections.Generic.IReadOnlyList&lt;System.Linq.IGrouping&lt;double, Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;&gt;, int, double, double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1363,7 +1363,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L292-L292">Drilling.Common/Review/CReviewRulePlanBuilder.cs:292–292</a></td><td>FineCellRows</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L292-L292">Drilling.Common/Review/CReviewRulePlanBuilder.cs:292–292</a></td><td>FineCellRows</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1414,7 +1414,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L447">MethodDeclaration <code>CreateTarget</code> · L447–452</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L447-L452">Drilling.Common/Review/CReviewRulePlanBuilder.cs:447–452</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L447-L452">Drilling.Common/Review/CReviewRulePlanBuilder.cs:447–452</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.ST_REVIEW_RULE_TARGET Drilling.Common.Review.CReviewRulePlanBuilder.CreateTarget(Drilling.Common.Review.ST_REVIEW_PLAN_POINT, string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1428,12 +1428,12 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L22-L22">Drilling.Common/Review/CReviewRulePlanBuilder.cs:22–22</a></td><td>CreateTarget</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L66-L66">Drilling.Common/Review/CReviewRulePlanBuilder.cs:66–66</a></td><td>CreateTarget</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L132-L132">Drilling.Common/Review/CReviewRulePlanBuilder.cs:132–132</a></td><td>CreateTarget</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L292-L292">Drilling.Common/Review/CReviewRulePlanBuilder.cs:292–292</a></td><td>CreateTarget</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L313-L313">Drilling.Common/Review/CReviewRulePlanBuilder.cs:313–313</a></td><td>CreateTarget</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L394-L394">Drilling.Common/Review/CReviewRulePlanBuilder.cs:394–394</a></td><td>CreateTarget</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L22-L22">Drilling.Common/Review/CReviewRulePlanBuilder.cs:22–22</a></td><td>CreateTarget</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L66-L66">Drilling.Common/Review/CReviewRulePlanBuilder.cs:66–66</a></td><td>CreateTarget</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L132-L132">Drilling.Common/Review/CReviewRulePlanBuilder.cs:132–132</a></td><td>CreateTarget</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L292-L292">Drilling.Common/Review/CReviewRulePlanBuilder.cs:292–292</a></td><td>CreateTarget</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L313-L313">Drilling.Common/Review/CReviewRulePlanBuilder.cs:313–313</a></td><td>CreateTarget</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L394-L394">Drilling.Common/Review/CReviewRulePlanBuilder.cs:394–394</a></td><td>CreateTarget</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1454,7 +1454,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L454">MethodDeclaration <code>TryGetPoint</code> · L454–460</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L454-L460">Drilling.Common/Review/CReviewRulePlanBuilder.cs:454–460</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L454-L460">Drilling.Common/Review/CReviewRulePlanBuilder.cs:454–460</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.ST_REVIEW_PLAN_POINT? Drilling.Common.Review.CReviewRulePlanBuilder.TryGetPoint(Drilling.Common.Review.ST_REVIEW_PLAN, string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1468,7 +1468,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L21-L21">Drilling.Common/Review/CReviewRulePlanBuilder.cs:21–21</a></td><td>TryGetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L21-L21">Drilling.Common/Review/CReviewRulePlanBuilder.cs:21–21</a></td><td>TryGetPoint</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1501,7 +1501,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L462">MethodDeclaration <code>CoordinateKey</code> · L462–462</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L462-L462">Drilling.Common/Review/CReviewRulePlanBuilder.cs:462–462</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L462-L462">Drilling.Common/Review/CReviewRulePlanBuilder.cs:462–462</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Review.CReviewRulePlanBuilder.CoordinateKey(double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1514,7 +1514,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L291-L291">Drilling.Common/Review/CReviewRulePlanBuilder.cs:291–291</a></td><td>CoordinateKey</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L291-L291">Drilling.Common/Review/CReviewRulePlanBuilder.cs:291–291</a></td><td>CoordinateKey</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1526,7 +1526,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L466">MethodDeclaration <code>SelectEdgeShotKeys</code> · L466–474</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L466-L474">Drilling.Common/Review/CReviewRulePlanBuilder.cs:466–474</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L466-L474">Drilling.Common/Review/CReviewRulePlanBuilder.cs:466–474</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyCollection&lt;string&gt; Drilling.Common.Review.CReviewRulePlanBuilder.SelectEdgeShotKeys(Drilling.Common.Review.ST_REVIEW_PLAN)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -1539,7 +1539,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuReview.cs#L2291-L2291">Drilling.UI/Menu/Menus/CMenuReview.cs:2291–2291</a></td><td>CReviewRulePlanBuilder.SelectEdgeShotKeys</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2291-L2291">Drilling.UI/Menu/Menus/CMenuReview.cs:2291–2291</a></td><td>CReviewRulePlanBuilder.SelectEdgeShotKeys</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1558,7 +1558,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L468">LocalFunctionStatement <code>SelectShotKey</code> · L468–471</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L468-L471">Drilling.Common/Review/CReviewRulePlanBuilder.cs:468–471</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L468-L471">Drilling.Common/Review/CReviewRulePlanBuilder.cs:468–471</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string SelectShotKey(Drilling.Common.Review.ST_REVIEW_PLAN_POINT)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -1576,7 +1576,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L476">MethodDeclaration <code>SelectCenterShotKeys</code> · L476–484</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L476-L484">Drilling.Common/Review/CReviewRulePlanBuilder.cs:476–484</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L476-L484">Drilling.Common/Review/CReviewRulePlanBuilder.cs:476–484</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyCollection&lt;string&gt; Drilling.Common.Review.CReviewRulePlanBuilder.SelectCenterShotKeys(Drilling.Common.Review.ST_REVIEW_PLAN)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -1589,7 +1589,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuReview.cs#L2297-L2297">Drilling.UI/Menu/Menus/CMenuReview.cs:2297–2297</a></td><td>CReviewRulePlanBuilder.SelectCenterShotKeys</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2297-L2297">Drilling.UI/Menu/Menus/CMenuReview.cs:2297–2297</a></td><td>CReviewRulePlanBuilder.SelectCenterShotKeys</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1608,7 +1608,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L478">LocalFunctionStatement <code>SelectShotKey</code> · L478–481</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L478-L481">Drilling.Common/Review/CReviewRulePlanBuilder.cs:478–481</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L478-L481">Drilling.Common/Review/CReviewRulePlanBuilder.cs:478–481</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string SelectShotKey(Drilling.Common.Review.ST_REVIEW_PLAN_POINT)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -1626,7 +1626,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L486">MethodDeclaration <code>IsCellEdgeShot</code> · L486–494</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L486-L494">Drilling.Common/Review/CReviewRulePlanBuilder.cs:486–494</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L486-L494">Drilling.Common/Review/CReviewRulePlanBuilder.cs:486–494</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Review.CReviewRulePlanBuilder.IsCellEdgeShot(Drilling.Common.Review.ST_REVIEW_PLAN_POINT)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1639,7 +1639,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L498-L498">Drilling.Common/Review/CReviewRulePlanBuilder.cs:498–498</a></td><td>IsCellEdgeShot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L498-L498">Drilling.Common/Review/CReviewRulePlanBuilder.cs:498–498</a></td><td>IsCellEdgeShot</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1666,7 +1666,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L496">MethodDeclaration <code>IsCellCenterShot</code> · L496–499</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L496-L499">Drilling.Common/Review/CReviewRulePlanBuilder.cs:496–499</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L496-L499">Drilling.Common/Review/CReviewRulePlanBuilder.cs:496–499</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Review.CReviewRulePlanBuilder.IsCellCenterShot(Drilling.Common.Review.ST_REVIEW_PLAN_POINT)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1689,7 +1689,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L505">EnumMemberDeclaration <code>Simple</code> · L505–505</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L505-L505">Drilling.Common/Review/CReviewRulePlanBuilder.cs:505–505</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L505-L505">Drilling.Common/Review/CReviewRulePlanBuilder.cs:505–505</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.EN_REVIEW_CORRECTION_RULE.Simple</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1699,7 +1699,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L506">EnumMemberDeclaration <code>Rough</code> · L506–506</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L506-L506">Drilling.Common/Review/CReviewRulePlanBuilder.cs:506–506</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L506-L506">Drilling.Common/Review/CReviewRulePlanBuilder.cs:506–506</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.EN_REVIEW_CORRECTION_RULE.Rough</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1709,7 +1709,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L507">EnumMemberDeclaration <code>Fine</code> · L507–507</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L507-L507">Drilling.Common/Review/CReviewRulePlanBuilder.cs:507–507</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L507-L507">Drilling.Common/Review/CReviewRulePlanBuilder.cs:507–507</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.EN_REVIEW_CORRECTION_RULE.Fine</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1719,7 +1719,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L508">EnumMemberDeclaration <code>Edge</code> · L508–508</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L508-L508">Drilling.Common/Review/CReviewRulePlanBuilder.cs:508–508</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L508-L508">Drilling.Common/Review/CReviewRulePlanBuilder.cs:508–508</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.EN_REVIEW_CORRECTION_RULE.Edge</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1729,7 +1729,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L513">EnumMemberDeclaration <code>Head</code> · L513–513</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L513-L513">Drilling.Common/Review/CReviewRulePlanBuilder.cs:513–513</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L513-L513">Drilling.Common/Review/CReviewRulePlanBuilder.cs:513–513</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.EN_REVIEW_CORRECTION_SCOPE.Head</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1739,7 +1739,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L514">EnumMemberDeclaration <code>HeadCell</code> · L514–514</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L514-L514">Drilling.Common/Review/CReviewRulePlanBuilder.cs:514–514</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L514-L514">Drilling.Common/Review/CReviewRulePlanBuilder.cs:514–514</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.EN_REVIEW_CORRECTION_SCOPE.HeadCell</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1749,7 +1749,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L519">EnumMemberDeclaration <code>First</code> · L519–519</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L519-L519">Drilling.Common/Review/CReviewRulePlanBuilder.cs:519–519</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L519-L519">Drilling.Common/Review/CReviewRulePlanBuilder.cs:519–519</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.EN_REVIEW_REFERENCE_LINE.First</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1759,7 +1759,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L520">EnumMemberDeclaration <code>Center</code> · L520–520</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L520-L520">Drilling.Common/Review/CReviewRulePlanBuilder.cs:520–520</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L520-L520">Drilling.Common/Review/CReviewRulePlanBuilder.cs:520–520</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.EN_REVIEW_REFERENCE_LINE.Center</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1769,7 +1769,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L521">EnumMemberDeclaration <code>Last</code> · L521–521</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L521-L521">Drilling.Common/Review/CReviewRulePlanBuilder.cs:521–521</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L521-L521">Drilling.Common/Review/CReviewRulePlanBuilder.cs:521–521</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.EN_REVIEW_REFERENCE_LINE.Last</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1779,7 +1779,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L535">PropertyDeclaration <code>ShotKeys</code> · L535–535</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L535-L535">Drilling.Common/Review/CReviewRulePlanBuilder.cs:535–535</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L535-L535">Drilling.Common/Review/CReviewRulePlanBuilder.cs:535–535</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyCollection&lt;string&gt; Drilling.Common.Review.ST_REVIEW_RULE_PLAN.ShotKeys</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1801,7 +1801,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L535">GetAccessorDeclaration <code>get_ShotKeys</code> · L535–535</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L535-L535">Drilling.Common/Review/CReviewRulePlanBuilder.cs:535–535</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L535-L535">Drilling.Common/Review/CReviewRulePlanBuilder.cs:535–535</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyCollection&lt;string&gt; Drilling.Common.Review.ST_REVIEW_RULE_PLAN.ShotKeys.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>

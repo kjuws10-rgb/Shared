@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 5a8c29eaaf994eab9e46a077532ed9c6027381a95e2ef253f83dd57b40a756c3 |
 | 파일 분류 | code |
 | 원본 크기/행 | 75,195 bytes / 1,352 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -97,7 +97,7 @@
 
 ### FieldDeclaration `BeamInspectionBaseHeaders` · L12–12
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L12-L12)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -127,7 +127,7 @@
 
 ### FieldDeclaration `BeamInspectionHeaders` · L13–13
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L13-L13)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -157,7 +157,7 @@
 
 ### FieldDeclaration `Headers` · L14–50
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:14–50](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L14-L50)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:14–50](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L14-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -178,7 +178,7 @@
 
 ### FieldDeclaration `_reviewRoot` · L51–51
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L51-L51)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L51-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -208,7 +208,7 @@
 
 ### FieldDeclaration `_lastSavedPath` · L52–52
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L52-L52)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L52-L52)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -223,7 +223,7 @@
 
 ### PropertyDeclaration `RootPath` · L55–55
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L55-L55)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L55-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -238,7 +238,7 @@
 
 ### PropertyDeclaration `SearchRootPaths` · L56–56
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L56-L56)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L56-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -253,7 +253,7 @@
 
 ### PropertyDeclaration `LastSavedPath` · L57–57
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L57-L57)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L57-L57)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -268,7 +268,7 @@
 
 ### MethodDeclaration `Load` · L59–103
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:59–103](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L59-L103)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:59–103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L59-L103)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -412,7 +412,7 @@ flowchart TD
 
 ### MethodDeclaration `Save` · L105–140
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:105–140](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L105-L140)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:105–140](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L105-L140)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -517,7 +517,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveReinspectionRevision` · L142–155
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:142–155](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L142-L155)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:142–155](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L142-L155)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -554,7 +554,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveEditedRevision` · L157–184
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:157–184](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L157-L184)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:157–184](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L157-L184)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -601,7 +601,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveRevision` · L186–258
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:186–258](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L186-L258)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:186–258](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L186-L258)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -625,8 +625,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:148–154](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L148-L154) | SaveRevision | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:177–183](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L177-L183) | SaveRevision | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:148–154](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L148-L154) | SaveRevision | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:177–183](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L177-L183) | SaveRevision | False |
 
 호출하는 대상과 해석 범위:
 
@@ -772,7 +772,7 @@ flowchart TD
 
 ### MethodDeclaration `StripRevisionSuffix` · L260–269
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:260–269](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L260-L269)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:260–269](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L260-L269)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -791,7 +791,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L254-L254) | StripRevisionSuffix | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L254-L254) | StripRevisionSuffix | False |
 
 호출하는 대상과 해석 범위:
 
@@ -823,7 +823,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateReinspectionUpdate` · L271–296
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:271–296](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L271-L296)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:271–296](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L271-L296)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -842,7 +842,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L242-L242) | ValidateReinspectionUpdate | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L242-L242) | ValidateReinspectionUpdate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -903,7 +903,7 @@ flowchart TD
 
 ### MethodDeclaration `FindReinspectionRowIndex` · L298–325
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:298–325](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L298-L325)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:298–325](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L298-L325)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -923,7 +923,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L243-L243) | FindReinspectionRowIndex | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L243-L243) | FindReinspectionRowIndex | False |
 
 호출하는 대상과 해석 범위:
 
@@ -981,7 +981,7 @@ flowchart TD
 
 ### MethodDeclaration `IsReinspectionTargetRow` · L327–350
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:327–350](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L327-L350)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:327–350](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L327-L350)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1001,7 +1001,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L304-L304) | IsReinspectionTargetRow | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L304-L304) | IsReinspectionTargetRow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1067,7 +1067,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyReinspectionUpdate` · L352–376
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:352–376](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L352-L376)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:352–376](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L352-L376)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1151,7 +1151,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyEditedResultUpdate` · L378–404
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:378–404](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L378-L404)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:378–404](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L378-L404)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1234,7 +1234,7 @@ flowchart TD
 
 ### MethodDeclaration `SetCoordinatePair` · L406–429
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:406–429](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L406-L429)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:406–429](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L406-L429)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1258,16 +1258,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:361–361](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L361-L361) | SetCoordinatePair | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:362–362](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L362-L362) | SetCoordinatePair | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L363-L363) | SetCoordinatePair | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L364-L364) | SetCoordinatePair | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:365–365](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L365-L365) | SetCoordinatePair | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:385–385](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L385-L385) | SetCoordinatePair | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:386–386](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L386-L386) | SetCoordinatePair | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:387–387](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L387-L387) | SetCoordinatePair | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:390–390](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L390-L390) | SetCoordinatePair | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L391-L391) | SetCoordinatePair | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:361–361](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L361-L361) | SetCoordinatePair | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:362–362](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L362-L362) | SetCoordinatePair | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L363-L363) | SetCoordinatePair | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L364-L364) | SetCoordinatePair | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:365–365](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L365-L365) | SetCoordinatePair | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:385–385](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L385-L385) | SetCoordinatePair | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:386–386](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L386-L386) | SetCoordinatePair | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:387–387](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L387-L387) | SetCoordinatePair | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:390–390](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L390-L390) | SetCoordinatePair | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L391-L391) | SetCoordinatePair | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1315,7 +1315,7 @@ flowchart TD
 
 ### MethodDeclaration `SetIfPresent` · L431–441
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:431–441](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L431-L441)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:431–441](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L431-L441)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1337,17 +1337,17 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L358-L358) | SetIfPresent | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:371–371](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L371-L371) | SetIfPresent | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L372-L372) | SetIfPresent | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:373–373](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L373-L373) | SetIfPresent | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:374–374](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L374-L374) | SetIfPresent | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:375–375](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L375-L375) | SetIfPresent | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:399–399](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L399-L399) | SetIfPresent | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:400–400](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L400-L400) | SetIfPresent | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:401–401](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L401-L401) | SetIfPresent | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:402–402](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L402-L402) | SetIfPresent | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:403–403](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L403-L403) | SetIfPresent | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L358-L358) | SetIfPresent | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:371–371](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L371-L371) | SetIfPresent | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L372-L372) | SetIfPresent | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:373–373](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L373-L373) | SetIfPresent | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:374–374](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L374-L374) | SetIfPresent | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:375–375](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L375-L375) | SetIfPresent | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:399–399](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L399-L399) | SetIfPresent | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:400–400](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L400-L400) | SetIfPresent | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:401–401](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L401-L401) | SetIfPresent | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:402–402](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L402-L402) | SetIfPresent | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:403–403](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L403-L403) | SetIfPresent | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1376,7 +1376,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatRevisionSavedAt` · L443–448
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:443–448](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L443-L448)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:443–448](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L443-L448)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1396,7 +1396,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L234-L234) | FormatRevisionSavedAt | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L234-L234) | FormatRevisionSavedAt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1420,7 +1420,7 @@ flowchart TD
 
 ### MethodDeclaration `ToResultRows` · L450–478
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:450–478](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L450-L478)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:450–478](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L450-L478)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1440,7 +1440,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L69-L69) | ToResultRows | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L69-L69) | ToResultRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1507,7 +1507,7 @@ flowchart TD
 
 ### MethodDeclaration `ToResultRow` · L480–525
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:480–525](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L480-L525)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:480–525](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L480-L525)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1531,9 +1531,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L454-L454) | ToResultRow | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:466–472](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L466-L472) | ToResultRow | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:477–477](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L477-L477) | ToResultRow | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L454-L454) | ToResultRow | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:466–472](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L466-L472) | ToResultRow | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:477–477](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L477-L477) | ToResultRow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1664,7 +1664,7 @@ flowchart TD
 
 ### MethodDeclaration `ToRow` · L527–574
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:527–574](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L527-L574)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:527–574](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L527-L574)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1685,8 +1685,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L131-L131) | ToRow | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L136-L136) | ToRow | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L131-L131) | ToRow | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L136-L136) | ToRow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1812,7 +1812,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateMetadata` · L576–610
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:576–610](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L576-L610)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:576–610](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L576-L610)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1831,7 +1831,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L123-L123) | CreateMetadata | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L123-L123) | CreateMetadata | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1902,7 +1902,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatShotName` · L612–615
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:612–615](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L612-L615)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:612–615](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L612-L615)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1921,8 +1921,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L534-L534) | FormatShotName | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L606-L606) | FormatShotName | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L534-L534) | FormatShotName | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L606-L606) | FormatShotName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1942,7 +1942,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateResultFileName` · L617–628
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:617–628](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L617-L628)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:617–628](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L617-L628)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1993,7 +1993,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadOptionalInt` · L630–633
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:630–633](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L630-L633)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:630–633](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L630-L633)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2014,12 +2014,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L90-L90) | ReadOptionalInt | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L93-L93) | ReadOptionalInt | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L97-L97) | ReadOptionalInt | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L99-L99) | ReadOptionalInt | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L317-L317) | ReadOptionalInt | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:516–516](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L516-L516) | ReadOptionalInt | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L90-L90) | ReadOptionalInt | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L93-L93) | ReadOptionalInt | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L97-L97) | ReadOptionalInt | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L99-L99) | ReadOptionalInt | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L317-L317) | ReadOptionalInt | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:516–516](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L516-L516) | ReadOptionalInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2041,7 +2041,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadFirstText` · L635–647
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:635–647](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L635-L647)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:635–647](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L635-L647)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2061,18 +2061,18 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L86-L86) | ReadFirstText | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L87-L87) | ReadFirstText | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L88-L88) | ReadFirstText | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L89-L89) | ReadFirstText | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L331-L331) | ReadFirstText | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L339-L339) | ReadFirstText | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L348-L348) | ReadFirstText | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:495–495](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L495-L495) | ReadFirstText | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:508–508](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L508-L508) | ReadFirstText | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:651–651](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L651-L651) | ReadFirstText | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:668–668](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L668-L668) | ReadFirstText | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:691–691](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L691-L691) | ReadFirstText | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L86-L86) | ReadFirstText | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L87-L87) | ReadFirstText | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L88-L88) | ReadFirstText | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L89-L89) | ReadFirstText | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L331-L331) | ReadFirstText | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L339-L339) | ReadFirstText | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L348-L348) | ReadFirstText | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:495–495](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L495-L495) | ReadFirstText | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:508–508](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L508-L508) | ReadFirstText | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:651–651](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L651-L651) | ReadFirstText | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:668–668](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L668-L668) | ReadFirstText | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:691–691](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L691-L691) | ReadFirstText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2111,7 +2111,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadRequiredPositiveInt` · L649–664
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:649–664](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L649-L664)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:649–664](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L649-L664)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2132,8 +2132,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:504–504](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L504-L504) | ReadRequiredPositiveInt | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:505–505](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L505-L505) | ReadRequiredPositiveInt | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:504–504](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L504-L504) | ReadRequiredPositiveInt | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:505–505](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L505-L505) | ReadRequiredPositiveInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2185,7 +2185,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadOneBasedIndex` · L666–672
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:666–672](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L666-L672)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:666–672](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L666-L672)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2205,8 +2205,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:517–517](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L517-L517) | ReadOneBasedIndex | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:518–518](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L518-L518) | ReadOneBasedIndex | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:517–517](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L517-L517) | ReadOneBasedIndex | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:518–518](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L518-L518) | ReadOneBasedIndex | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2230,7 +2230,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadOptionalFiniteDouble` · L674–677
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:674–677](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L674-L677)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:674–677](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L674-L677)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2250,10 +2250,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:470–470](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L470-L470) | ReadOptionalFiniteDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:471–471](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L471-L471) | ReadOptionalFiniteDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:506–506](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L506-L506) | ReadOptionalFiniteDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:507–507](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L507-L507) | ReadOptionalFiniteDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:470–470](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L470-L470) | ReadOptionalFiniteDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:471–471](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L471-L471) | ReadOptionalFiniteDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:506–506](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L506-L506) | ReadOptionalFiniteDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:507–507](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L507-L507) | ReadOptionalFiniteDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2272,7 +2272,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadOptionalDouble` · L679–687
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:679–687](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L679-L687)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:679–687](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L679-L687)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2292,8 +2292,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L100-L100) | ReadOptionalDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L101-L101) | ReadOptionalDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L100-L100) | ReadOptionalDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L101-L101) | ReadOptionalDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2337,7 +2337,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadOptionalNullableFiniteDouble` · L689–695
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:689–695](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L689-L695)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:689–695](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L689-L695)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2357,9 +2357,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:519–519](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L519-L519) | ReadOptionalNullableFiniteDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:520–520](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L520-L520) | ReadOptionalNullableFiniteDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:676–676](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L676-L676) | ReadOptionalNullableFiniteDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:519–519](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L519-L519) | ReadOptionalNullableFiniteDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:520–520](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L520-L520) | ReadOptionalNullableFiniteDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:676–676](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L676-L676) | ReadOptionalNullableFiniteDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2385,7 +2385,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeResultStatus` · L697–702
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:697–702](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L697-L702)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:697–702](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L697-L702)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2404,8 +2404,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L89-L89) | NormalizeResultStatus | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:543–543](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L543-L543) | NormalizeResultStatus | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L89-L89) | NormalizeResultStatus | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:543–543](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L543-L543) | NormalizeResultStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2429,7 +2429,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeInspectionMethod` · L704–707
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:704–707](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L704-L707)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:704–707](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L704-L707)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2466,7 +2466,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadOptionalNullableInt` · L709–712
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:709–712](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L709-L712)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:709–712](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L709-L712)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2486,8 +2486,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L94-L94) | ReadOptionalNullableInt | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:522–522](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L522-L522) | ReadOptionalNullableInt | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L94-L94) | ReadOptionalNullableInt | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:522–522](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L522-L522) | ReadOptionalNullableInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2509,7 +2509,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatDate` · L714–717
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:714–717](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L714-L717)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:714–717](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L714-L717)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2528,13 +2528,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:447–447](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L447-L447) | FormatDate | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:538–538](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L538-L538) | FormatDate | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:827–827](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L827-L827) | FormatDate | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1043–1043](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1043-L1043) | FormatDate | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1156–1156](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1156-L1156) | FormatDate | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1161–1161](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1161-L1161) | FormatDate | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1284–1284](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1284-L1284) | FormatDate | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:447–447](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L447-L447) | FormatDate | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:538–538](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L538-L538) | FormatDate | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:827–827](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L827-L827) | FormatDate | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1043–1043](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1043-L1043) | FormatDate | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1156–1156](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1156-L1156) | FormatDate | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1161–1161](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1161-L1161) | FormatDate | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1284–1284](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1284-L1284) | FormatDate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2553,7 +2553,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatDouble` · L719–722
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:719–722](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L719-L722)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:719–722](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L719-L722)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2572,21 +2572,21 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:426–426](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L426-L426) | FormatDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L427-L427) | FormatDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L552-L552) | FormatDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:553–553](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L553-L553) | FormatDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:558–558](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L558-L558) | FormatDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:559–559](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L559-L559) | FormatDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L566-L566) | FormatDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L567-L567) | FormatDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L568-L568) | FormatDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:569–569](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L569-L569) | FormatDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:836–836](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L836-L836) | FormatDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:837–837](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L837-L837) | FormatDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:844–844](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L844-L844) | FormatDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:845–845](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L845-L845) | FormatDouble | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1328–1328](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1328-L1328) | FormatDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:426–426](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L426-L426) | FormatDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L427-L427) | FormatDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L552-L552) | FormatDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:553–553](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L553-L553) | FormatDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:558–558](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L558-L558) | FormatDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:559–559](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L559-L559) | FormatDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L566-L566) | FormatDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L567-L567) | FormatDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L568-L568) | FormatDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:569–569](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L569-L569) | FormatDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:836–836](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L836-L836) | FormatDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:837–837](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L837-L837) | FormatDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:844–844](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L844-L844) | FormatDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:845–845](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L845-L845) | FormatDouble | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1328–1328](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1328-L1328) | FormatDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2605,7 +2605,7 @@ flowchart TD
 
 ### MethodDeclaration `SanitizeFileName` · L724–729
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:724–729](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L724-L729)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:724–729](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L724-L729)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2624,12 +2624,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:627–627](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L627-L627) | SanitizeFileName | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:731–731](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L731-L731) | SanitizeFileName | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:732–732](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L732-L732) | SanitizeFileName | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L733-L733) | SanitizeFileName | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L733-L733) | SanitizeFileName | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:734–734](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L734-L734) | SanitizeFileName | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:627–627](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L627-L627) | SanitizeFileName | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:731–731](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L731-L731) | SanitizeFileName | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:732–732](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L732-L732) | SanitizeFileName | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L733-L733) | SanitizeFileName | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L733-L733) | SanitizeFileName | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:734–734](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L734-L734) | SanitizeFileName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2664,7 +2664,7 @@ flowchart TD
 
 ### MethodDeclaration `ManualDirectory` · L731–731
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:731–731](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L731-L731)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:731–731](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L731-L731)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2684,11 +2684,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L130-L130) | ManualDirectory | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:851–851](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L851-L851) | ManualDirectory | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1080–1080](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1080-L1080) | ManualDirectory | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1217–1217](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1217-L1217) | ManualDirectory | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1322–1322](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1322-L1322) | ManualDirectory | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L130-L130) | ManualDirectory | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:851–851](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L851-L851) | ManualDirectory | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1080–1080](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1080-L1080) | ManualDirectory | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1217–1217](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1217-L1217) | ManualDirectory | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1322–1322](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1322-L1322) | ManualDirectory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2708,7 +2708,7 @@ flowchart TD
 
 ### MethodDeclaration `AutoDirectory` · L732–732
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:732–732](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L732-L732)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:732–732](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L732-L732)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2727,7 +2727,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1216–1216](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1216-L1216) | AutoDirectory | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1216–1216](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1216-L1216) | AutoDirectory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2747,7 +2747,7 @@ flowchart TD
 
 ### MethodDeclaration `ZeroDefenceDirectory` · L733–733
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L733-L733)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L733-L733)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2767,8 +2767,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1214–1214](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1214-L1214) | ZeroDefenceDirectory | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1331–1331](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1331-L1331) | ZeroDefenceDirectory | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1214–1214](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1214-L1214) | ZeroDefenceDirectory | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1331–1331](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1331-L1331) | ZeroDefenceDirectory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2790,7 +2790,7 @@ flowchart TD
 
 ### MethodDeclaration `ResultFileStem` · L734–734
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:734–734](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L734-L734)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:734–734](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L734-L734)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2810,11 +2810,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L131-L131) | ResultFileStem | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:851–851](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L851-L851) | ResultFileStem | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1080–1080](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1080-L1080) | ResultFileStem | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1220–1220](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1220-L1220) | ResultFileStem | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1322–1322](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1322-L1322) | ResultFileStem | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L131-L131) | ResultFileStem | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:851–851](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L851-L851) | ResultFileStem | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1080–1080](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1080-L1080) | ResultFileStem | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1220–1220](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1220-L1220) | ResultFileStem | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1322–1322](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1322-L1322) | ResultFileStem | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2832,7 +2832,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteUniqueCsv` · L736–770
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:736–770](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L736-L770)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:736–770](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L736-L770)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2855,12 +2855,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L131-L131) | WriteUniqueCsv | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L256-L256) | WriteUniqueCsv | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:851–851](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L851-L851) | WriteUniqueCsv | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1080–1080](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1080-L1080) | WriteUniqueCsv | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1221–1221](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1221-L1221) | WriteUniqueCsv | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1322–1322](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1322-L1322) | WriteUniqueCsv | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L131-L131) | WriteUniqueCsv | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L256-L256) | WriteUniqueCsv | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:851–851](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L851-L851) | WriteUniqueCsv | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1080–1080](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1080-L1080) | WriteUniqueCsv | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1221–1221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1221-L1221) | WriteUniqueCsv | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1322–1322](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1322-L1322) | WriteUniqueCsv | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2934,7 +2934,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteUniqueLines` · L772–804
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:772–804](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L772-L804)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:772–804](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L772-L804)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2956,7 +2956,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1346–1346](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1346-L1346) | WriteUniqueLines | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1346–1346](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1346-L1346) | WriteUniqueLines | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3035,7 +3035,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveBeamInspection` · L809–854
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:809–854](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L809-L854)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:809–854](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L809-L854)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3173,7 +3173,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadLastBeamInspection` · L856–856
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:856–856](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L856-L856)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:856–856](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L856-L856)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3208,7 +3208,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadLastBeamInspectionCore` · L857–992
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:857–992](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L857-L992)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:857–992](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L857-L992)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3227,7 +3227,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:856–856](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L856-L856) | LoadLastBeamInspectionCore | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:856–856](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L856-L856) | LoadLastBeamInspectionCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3593,7 +3593,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Get` · L911–911
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:911–911](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L911-L911)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:911–911](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L911-L911)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3612,18 +3612,18 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:914–914](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L914-L914) | Get | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:929–929](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L929-L929) | Get | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:930–930](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L930-L930) | Get | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:945–945](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L945-L945) | Get | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:946–946](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L946-L946) | Get | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:947–947](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L947-L947) | Get | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:914–914](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L914-L914) | Get | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:929–929](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L929-L929) | Get | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:930–930](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L930-L930) | Get | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:945–945](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L945-L945) | Get | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:946–946](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L946-L946) | Get | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:947–947](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L947-L947) | Get | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### LocalFunctionStatement `RequireName` · L912–918
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:912–918](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L912-L918)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:912–918](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L912-L918)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3642,10 +3642,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:920–920](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L920-L920) | RequireName | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:924–924](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L924-L924) | RequireName | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:925–925](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L925-L925) | RequireName | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:926–926](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L926-L926) | RequireName | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:920–920](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L920-L920) | RequireName | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:924–924](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L924-L924) | RequireName | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:925–925](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L925-L925) | RequireName | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:926–926](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L926-L926) | RequireName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3681,7 +3681,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadNameNumber` · L994–1000
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:994–1000](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L994-L1000)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:994–1000](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L994-L1000)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3702,8 +3702,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:936–936](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L936-L936) | ReadNameNumber | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:937–937](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L937-L937) | ReadNameNumber | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:936–936](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L936-L936) | ReadNameNumber | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:937–937](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L937-L937) | ReadNameNumber | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3741,7 +3741,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadFinite` · L1002–1012
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:1002–1012](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1002-L1012)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:1002–1012](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1002-L1012)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3763,8 +3763,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:956–956](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L956-L956) | ReadFinite | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:956–956](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L956-L956) | ReadFinite | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:956–956](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L956-L956) | ReadFinite | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:956–956](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L956-L956) | ReadFinite | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3799,7 +3799,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadFiniteValue` · L1014–1019
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:1014–1019](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1014-L1019)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:1014–1019](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1014-L1019)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3820,9 +3820,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:929–929](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L929-L929) | ReadFiniteValue | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:930–930](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L930-L930) | ReadFiniteValue | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1006–1006](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1006-L1006) | ReadFiniteValue | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:929–929](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L929-L929) | ReadFiniteValue | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:930–930](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L930-L930) | ReadFiniteValue | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1006–1006](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1006-L1006) | ReadFiniteValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3856,7 +3856,7 @@ flowchart TD
 
 ### MethodDeclaration `Error` · L1021–1021
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:1021–1021](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1021-L1021)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:1021–1021](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1021-L1021)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3876,16 +3876,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:910–910](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L910-L910) | Error | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:916–916](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L916-L916) | Error | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:922–922](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L922-L922) | Error | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:932–932](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L932-L932) | Error | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:939–939](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L939-L939) | Error | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:941–941](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L941-L941) | Error | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:951–951](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L951-L951) | Error | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:959–959](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L959-L959) | Error | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:998–998](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L998-L998) | Error | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1010–1010](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1010-L1010) | Error | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:910–910](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L910-L910) | Error | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:916–916](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L916-L916) | Error | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:922–922](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L922-L922) | Error | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:932–932](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L932-L932) | Error | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:939–939](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L939-L939) | Error | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:941–941](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L941-L941) | Error | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:951–951](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L951-L951) | Error | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:959–959](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L959-L959) | Error | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:998–998](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L998-L998) | Error | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1010–1010](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1010-L1010) | Error | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3903,7 +3903,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseOnOff` · L1022–1022
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:1022–1022](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1022-L1022)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:1022–1022](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1022-L1022)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3922,8 +3922,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:977–977](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L977-L977) | ParseOnOff | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:977–977](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L977-L977) | ParseOnOff | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:977–977](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L977-L977) | ParseOnOff | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:977–977](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L977-L977) | ParseOnOff | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3943,7 +3943,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveOneShot` · L1025–1083
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:1025–1083](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1025-L1083)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:1025–1083](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1025-L1083)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4103,7 +4103,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveFineCorrection` · L1086–1223
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:1086–1223](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1086-L1223)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:1086–1223](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1086-L1223)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4374,7 +4374,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveRoughCorrection` · L1225–1325
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:1225–1325](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1225-L1325)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:1225–1325](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1225-L1325)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4582,7 +4582,7 @@ flowchart TD
 
 ### MethodDeclaration `Int` · L1327–1327
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:1327–1327](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1327-L1327)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:1327–1327](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1327-L1327)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4601,30 +4601,30 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1053–1053](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1053-L1053) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1054–1054](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1054-L1054) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1057–1057](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1057-L1057) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1062–1062](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1062-L1062) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1163–1163](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1163-L1163) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1165–1165](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1165-L1165) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1166–1166](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1166-L1166) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1168–1168](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1168-L1168) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1173-L1173) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1174–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1174-L1174) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1177–1177](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1177-L1177) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1178–1178](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1178-L1178) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1181–1181](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1181-L1181) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1182–1182](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1182-L1182) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1183–1183](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1183-L1183) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1184–1184](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1184-L1184) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1293–1293](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1293-L1293) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1294–1294](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1294-L1294) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1295-L1295) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1296–1296](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1296-L1296) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1299–1299](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1299-L1299) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1300–1300](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1300-L1300) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1301–1301](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1301-L1301) | Int | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1302–1302](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1302-L1302) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1053–1053](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1053-L1053) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1054–1054](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1054-L1054) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1057–1057](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1057-L1057) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1062–1062](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1062-L1062) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1163–1163](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1163-L1163) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1165–1165](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1165-L1165) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1166–1166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1166-L1166) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1168–1168](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1168-L1168) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1173-L1173) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1174–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1174-L1174) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1177–1177](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1177-L1177) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1178–1178](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1178-L1178) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1181–1181](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1181-L1181) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1182–1182](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1182-L1182) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1183–1183](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1183-L1183) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1184–1184](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1184-L1184) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1293–1293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1293-L1293) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1294–1294](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1294-L1294) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1295-L1295) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1296–1296](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1296-L1296) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1299–1299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1299-L1299) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1300–1300](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1300-L1300) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1301–1301](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1301-L1301) | Int | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1302–1302](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1302-L1302) | Int | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4642,7 +4642,7 @@ flowchart TD
 
 ### MethodDeclaration `Number` · L1328–1328
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:1328–1328](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1328-L1328)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:1328–1328](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1328-L1328)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4661,39 +4661,39 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1058–1058](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1058-L1058) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1059–1059](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1059-L1059) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1060–1060](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1060-L1060) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1061–1061](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1061-L1061) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1063–1063](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1063-L1063) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1064–1064](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1064-L1064) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1065–1065](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1065-L1065) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1066–1066](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1066-L1066) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1067–1067](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1067-L1067) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1071–1071](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1071-L1071) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1072–1072](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1072-L1072) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1073–1073](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1073-L1073) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1074–1074](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1074-L1074) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1185–1185](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1185-L1185) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1186–1186](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1186-L1186) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1187–1187](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1187-L1187) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1188–1188](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1188-L1188) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1189–1189](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1189-L1189) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1190–1190](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1190-L1190) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1194–1194](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1194-L1194) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1195–1195](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1195-L1195) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1196–1196](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1196-L1196) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1197–1197](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1197-L1197) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1303–1303](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1303-L1303) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1304–1304](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1304-L1304) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1305–1305](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1305-L1305) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1306–1306](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1306-L1306) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1307–1307](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1307-L1307) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1308–1308](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1308-L1308) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1312–1312](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1312-L1312) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1313–1313](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1313-L1313) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1314–1314](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1314-L1314) | Number | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1315–1315](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1315-L1315) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1058–1058](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1058-L1058) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1059–1059](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1059-L1059) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1060–1060](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1060-L1060) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1061–1061](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1061-L1061) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1063–1063](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1063-L1063) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1064–1064](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1064-L1064) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1065–1065](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1065-L1065) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1066–1066](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1066-L1066) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1067–1067](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1067-L1067) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1071–1071](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1071-L1071) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1072–1072](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1072-L1072) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1073–1073](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1073-L1073) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1074–1074](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1074-L1074) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1185–1185](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1185-L1185) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1186–1186](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1186-L1186) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1187–1187](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1187-L1187) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1188–1188](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1188-L1188) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1189–1189](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1189-L1189) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1190–1190](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1190-L1190) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1194–1194](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1194-L1194) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1195–1195](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1195-L1195) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1196–1196](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1196-L1196) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1197–1197](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1197-L1197) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1303–1303](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1303-L1303) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1304–1304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1304-L1304) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1305–1305](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1305-L1305) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1306–1306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1306-L1306) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1307–1307](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1307-L1307) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1308–1308](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1308-L1308) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1312–1312](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1312-L1312) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1313–1313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1313-L1313) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1314–1314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1314-L1314) | Number | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1315–1315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1315-L1315) | Number | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4711,7 +4711,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveZeroLine` · L1329–1349
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:1329–1349](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1329-L1349)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:1329–1349](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1329-L1349)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4797,7 +4797,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Field` · L1332–1332
 
-[Drilling.File/ReviewResult/CReviewResultFile.cs:1332–1332](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1332-L1332)
+[Drilling.File/ReviewResult/CReviewResultFile.cs:1332–1332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1332-L1332)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "a3-independent-browser-qa/1",
-  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
   "outputPath": "<private-run>\\staging\\A3Ref",
   "offline": true,
   "passed": true,
@@ -22,6 +22,10 @@
       "passed": true
     },
     {
+      "name": "newly_restored_log_source_is_in_catalog",
+      "passed": true
+    },
+    {
       "name": "source_path_search",
       "passed": true,
       "actualCount": 1,
@@ -34,8 +38,8 @@
     {
       "name": "method_name_search",
       "passed": true,
-      "actualCount": 75,
-      "expectedCount": 75
+      "actualCount": 1,
+      "expectedCount": 1
     },
     {
       "name": "korean_keyword_search",
@@ -52,14 +56,14 @@
     {
       "name": "case_lowercase_search",
       "passed": true,
-      "actualCount": 241,
-      "expectedCount": 241
+      "actualCount": 242,
+      "expectedCount": 242
     },
     {
       "name": "case_uppercase_search",
       "passed": true,
-      "actualCount": 241,
-      "expectedCount": 241
+      "actualCount": 242,
+      "expectedCount": 242
     },
     {
       "name": "case_insensitive_identical_rows",
@@ -74,8 +78,8 @@
     {
       "name": "kind_filter_code",
       "passed": true,
-      "actualCount": 342,
-      "expectedCount": 342
+      "actualCount": 343,
+      "expectedCount": 343
     },
     {
       "name": "kind_filter_data_schema",
@@ -98,14 +102,14 @@
     {
       "name": "combined_query_and_kind_filter",
       "passed": true,
-      "actualCount": 74,
-      "expectedCount": 74
+      "actualCount": 75,
+      "expectedCount": 75
     },
     {
       "name": "reset_restores_all_rows",
       "passed": true,
-      "actualCount": 699,
-      "expectedCount": 699
+      "actualCount": 700,
+      "expectedCount": 700
     },
     {
       "name": "all_file_navigation_targets",
@@ -147,7 +151,8 @@
     },
     {
       "name": "manual_chapters_available",
-      "passed": true
+      "passed": true,
+      "chapterCount": 17
     },
     {
       "name": "all_manual_pages_listed_on_homepage",
@@ -218,15 +223,19 @@
       "passed": true
     },
     {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
       "name": "all_manual_pages_open_and_images_render",
       "passed": true,
-      "chapterCount": 16,
+      "chapterCount": 17,
       "brokenImages": 0
     },
     {
       "name": "all_svg_files_render_offline",
       "passed": true,
-      "svgFiles": 730,
+      "svgFiles": 733,
       "brokenSvg": 0
     },
     {

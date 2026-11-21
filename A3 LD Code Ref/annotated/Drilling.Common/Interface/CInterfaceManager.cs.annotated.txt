@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.Common/Interface/CInterfaceManager.cs
-Commit: 28764c91d521777b8ee068dd7aaf2d3902ce9fe2
+Commit: 334b3599651b2e8e0181fd4459bafaf3cddafff3
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Interface
@@ -50,7 +50,7 @@ L000022 |         private Func<int>? _visionLineCapacity; ⟦EOL⟧
 L000023 |         private Action<CVisionLineCountExceededException>? _visionCountLimitAlarm; ⟦EOL⟧
 // 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(StringComparer.OrdinalIgnoreCase) / 변수의 초기값을 지정합니다: _devices = new(StringComparer.OrdinalIgnoreCase)
 L000024 |         private readonly ConcurrentDictionary<string, CInterfaceDevice> _devices = new(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
-// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · CLogManager? Drilling.Common.Interface.CInterfaceManager._logManager
+// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Log.CLogManager? Drilling.Common.Interface.CInterfaceManager._logManager
 L000025 |         private readonly CLogManager? _logManager; ⟦EOL⟧
 // 해설 L26: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CBETFileBase? Drilling.Common.Interface.CInterfaceManager._betFile
 L000026 |         private readonly CBETFileBase? _betFile; ⟦EOL⟧
@@ -86,19 +86,19 @@ L000040 |         private readonly ConcurrentDictionary<int, CManualStageMotionS
 L000041 | #endregion ⟦EOL⟧
 // 해설 L42: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #region 생성·초기화
 L000042 | #region 생성·초기화 ⟦EOL⟧
-// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, Drilling.Common.Log.CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface
 L000043 |         public CInterfaceManager( ⟦EOL⟧
-// 해설 L44: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>
+// 해설 L44: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, Drilling.Common.Log.CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface
 L000044 |             bool? simulationMode = null,  ⟦EOL⟧
-// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>
+// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, Drilling.Common.Log.CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface
 L000045 |             CLogManager? logManager = null,  ⟦EOL⟧
-// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, Drilling.Common.Log.CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface
 L000046 |             CBETFileBase? betFile = null,  ⟦EOL⟧
-// 해설 L47: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>
+// 해설 L47: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, Drilling.Common.Log.CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface
 L000047 |             IReadOnlyList<ST_MELSEC_MAP_DATA>? melsecMap = null,  ⟦EOL⟧
-// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>
+// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, Drilling.Common.Log.CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface
 L000048 |             CMelsecNetApi? melsecNetApi = null ⟦EOL⟧
-// 해설 L49: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>
+// 해설 L49: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, Drilling.Common.Log.CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface
 L000049 |         ) ⟦EOL⟧
 // 해설 L50: 구문 블록 경계입니다 · 소속 .ctor.
 L000050 |         { ⟦EOL⟧
@@ -118,7 +118,7 @@ L000056 |             AttenuatorSnapshots = new CAttenuatorStatusSnapshotService
 L000057 |                 () => GetInterfaceList(EN_EQP_MODULE.Attenuator).Select(data => data.Number).ToArray(),  ⟦EOL⟧
 // 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsConnect(EN_EQP_MODULE.Attenuator, number) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(EN_EQP_MODULE.Attenuator, number)
 L000058 |                 number => IsConnect(EN_EQP_MODULE.Attenuator, number) || IsSimul(EN_EQP_MODULE.Attenuator, number),  ⟦EOL⟧
-// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>
+// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, Drilling.Common.Log.CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface
 L000059 |                 async (number, command, token) => ⟦EOL⟧
 // 해설 L60: 구문 블록 경계입니다 · 소속 .ctor.
 L000060 |             { ⟦EOL⟧
@@ -142,7 +142,7 @@ L000068 |                 var status = GetAttenuatorStatusValue(number); ⟦EOL�
 L000069 |                 return command switch ⟦EOL⟧
 // 해설 L70: 구문 블록 경계입니다 · 소속 .ctor.
 L000070 |                 { ⟦EOL⟧
-// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>
+// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, Drilling.Common.Log.CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface
 L000071 |                     EN_ATTENUATOR_COMMAND.PollState => $"TS:0:{status.CommandState}", ⟦EOL⟧
 // 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: status.CurrentPosition.ToString("R", CultureInfo.InvariantCulture)
 L000072 |                     EN_ATTENUATOR_COMMAND.PollCurrentPosition => $"TP:{status.CurrentPosition.ToString("R", CultureInfo.InvariantCulture)}", ⟦EOL⟧
@@ -150,11 +150,11 @@ L000072 |                     EN_ATTENUATOR_COMMAND.PollCurrentPosition => $"TP:
 L000073 |                     EN_ATTENUATOR_COMMAND.PollTargetPosition => $"TH:{status.TargetPosition.ToString("R", CultureInfo.InvariantCulture)}", ⟦EOL⟧
 // 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("지원하지 않는 ATT 스냅샷 명령입니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("지원하지 않는 ATT 스냅샷 명령입니다.")
 L000074 |                     _ => throw new InvalidOperationException("지원하지 않는 ATT 스냅샷 명령입니다.")}; ⟦EOL⟧
-// 해설 L75: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>
+// 해설 L75: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, Drilling.Common.Log.CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface
 L000075 |             },  ⟦EOL⟧
-// 해설 L76: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>
+// 해설 L76: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, Drilling.Common.Log.CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface
 L000076 |                 GetAttenuatorStatusValue ⟦EOL⟧
-// 해설 L77: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>
+// 해설 L77: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.CInterfaceManager.CInterfaceManager(bool?, Drilling.Common.Log.CLogManager?, Drilling.Common.Interface.CBETFileBase?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface
 L000077 |             ); ⟦EOL⟧
 // 해설 L78: 값을 대상에 대입합니다: OpticSnapshots = CreateOpticSnapshots() / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateOpticSnapshots()
 L000078 |             OpticSnapshots = CreateOpticSnapshots(); ⟦EOL⟧

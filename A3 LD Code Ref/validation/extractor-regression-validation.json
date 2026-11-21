@@ -1,17 +1,8 @@
 {
-  "schemaVersion": "a3-tool-selftest/1",
-  "command": [
-    "<private-local-artifact>",
-    "run",
-    "--project",
-    "<private-run>\\qa-tool-fixture\\tools\\SymbolExtractor",
-    "-c",
-    "Release",
-    "--",
-    "--self-test"
-  ],
-  "exitCode": 0,
-  "passedAssertions": 18,
+  "schemaVersion": "a3-extractor-regression/1",
   "passed": true,
-  "scope": "Isolated metadata-extractor synthetic fixture; no equipment source build or execution and no vendor DLL load."
+  "testsRun": 18,
+  "exitCode": 0,
+  "scope": "Copied Roslyn tool self-test against synthetic source and framework metadata only; no equipment app or vendor SDK executed.",
+  "programSha256": "6ce9c904a23779bda315d5080dd01f1187d0e2f8cef75b38660a2317697fa56e"
 }

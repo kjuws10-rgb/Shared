@@ -1,13 +1,13 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Interface/Vision/CVisionComm.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Interface/Vision/CVisionComm.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs">Git 원본</a></p><h1>Drilling.Common/Interface/Vision/CVisionComm.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Interface/Vision/CVisionComm.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Interface/Vision/CVisionComm.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs">Git 원본</a></p><h1>Drilling.Common/Interface/Vision/CVisionComm.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>28764c91d521777b8ee068dd7aaf2d3902ce9fe2</td></tr>
+<tr><td>원본 Commit</td><td>334b3599651b2e8e0181fd4459bafaf3cddafff3</td></tr>
 <tr><td>원본 SHA256</td><td>5534448198c3a9db2dd6342cd0e3f2fdc2c30e0cb86326d4ade8d5ed8e09123f</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
 <tr><td>원본 크기/행</td><td>50,229 bytes / 999 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>외부 통신과 장치 인터페이스를 연결합니다. 요청 생성·전송·수신·장치 실행을 같은 의미로 합치지 않습니다.</p>
@@ -132,7 +132,7 @@
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
 <h3 id="L13">FieldDeclaration <code>_pending</code> · L13–13</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L13-L13">Drilling.Common/Interface/Vision/CVisionComm.cs:13–13</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L13-L13">Drilling.Common/Interface/Vision/CVisionComm.cs:13–13</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Concurrent.ConcurrentDictionary&lt;int, System.Threading.Tasks.TaskCompletionSource&lt;Drilling.Common.Interface.Vision.ST_VISION_PACKET&gt;&gt; Drilling.Common.Interface.Vision.CVisionComm._pending</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -151,7 +151,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L14">FieldDeclaration <code>_lifecycleLock</code> · L14–14</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L14-L14">Drilling.Common/Interface/Vision/CVisionComm.cs:14–14</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L14-L14">Drilling.Common/Interface/Vision/CVisionComm.cs:14–14</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.SemaphoreSlim Drilling.Common.Interface.Vision.CVisionComm._lifecycleLock</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -170,7 +170,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L15">FieldDeclaration <code>_writeLock</code> · L15–15</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L15-L15">Drilling.Common/Interface/Vision/CVisionComm.cs:15–15</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L15-L15">Drilling.Common/Interface/Vision/CVisionComm.cs:15–15</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.SemaphoreSlim Drilling.Common.Interface.Vision.CVisionComm._writeLock</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -189,7 +189,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L16">FieldDeclaration <code>_clientReady</code> · L16–16</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L16-L16">Drilling.Common/Interface/Vision/CVisionComm.cs:16–16</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L16-L16">Drilling.Common/Interface/Vision/CVisionComm.cs:16–16</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.SemaphoreSlim Drilling.Common.Interface.Vision.CVisionComm._clientReady</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -208,7 +208,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L17">FieldDeclaration <code>_listener</code> · L17–17</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L17-L17">Drilling.Common/Interface/Vision/CVisionComm.cs:17–17</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L17-L17">Drilling.Common/Interface/Vision/CVisionComm.cs:17–17</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Net.Sockets.TcpListener? Drilling.Common.Interface.Vision.CVisionComm._listener</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -218,7 +218,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L18">FieldDeclaration <code>_client</code> · L18–18</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L18-L18">Drilling.Common/Interface/Vision/CVisionComm.cs:18–18</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L18-L18">Drilling.Common/Interface/Vision/CVisionComm.cs:18–18</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Net.Sockets.TcpClient? Drilling.Common.Interface.Vision.CVisionComm._client</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -228,7 +228,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L19">FieldDeclaration <code>_stream</code> · L19–19</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L19-L19">Drilling.Common/Interface/Vision/CVisionComm.cs:19–19</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L19-L19">Drilling.Common/Interface/Vision/CVisionComm.cs:19–19</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Net.Sockets.NetworkStream? Drilling.Common.Interface.Vision.CVisionComm._stream</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -238,7 +238,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L20">FieldDeclaration <code>_serverCancellation</code> · L20–20</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L20-L20">Drilling.Common/Interface/Vision/CVisionComm.cs:20–20</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L20-L20">Drilling.Common/Interface/Vision/CVisionComm.cs:20–20</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.CancellationTokenSource? Drilling.Common.Interface.Vision.CVisionComm._serverCancellation</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -248,7 +248,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L21">FieldDeclaration <code>_acceptTask</code> · L21–21</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L21-L21">Drilling.Common/Interface/Vision/CVisionComm.cs:21–21</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L21-L21">Drilling.Common/Interface/Vision/CVisionComm.cs:21–21</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task? Drilling.Common.Interface.Vision.CVisionComm._acceptTask</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -258,7 +258,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L22">FieldDeclaration <code>_receiveTask</code> · L22–22</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L22-L22">Drilling.Common/Interface/Vision/CVisionComm.cs:22–22</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L22-L22">Drilling.Common/Interface/Vision/CVisionComm.cs:22–22</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task? Drilling.Common.Interface.Vision.CVisionComm._receiveTask</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -268,7 +268,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L23">FieldDeclaration <code>_uniqueId</code> · L23–23</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L23-L23">Drilling.Common/Interface/Vision/CVisionComm.cs:23–23</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L23-L23">Drilling.Common/Interface/Vision/CVisionComm.cs:23–23</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionComm._uniqueId</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -278,7 +278,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L24">FieldDeclaration <code>_flyingLineCapacity</code> · L24–24</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L24-L24">Drilling.Common/Interface/Vision/CVisionComm.cs:24–24</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L24-L24">Drilling.Common/Interface/Vision/CVisionComm.cs:24–24</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionComm._flyingLineCapacity</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -288,7 +288,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L27">PropertyDeclaration <code>HasConnectedClient</code> · L27–27</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L27-L27">Drilling.Common/Interface/Vision/CVisionComm.cs:27–27</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L27-L27">Drilling.Common/Interface/Vision/CVisionComm.cs:27–27</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Interface.Vision.CVisionComm.HasConnectedClient</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal</td></tr>
@@ -306,7 +306,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L28">PropertyDeclaration <code>LineCapacityProvider</code> · L28–28</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L28-L28">Drilling.Common/Interface/Vision/CVisionComm.cs:28–28</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L28-L28">Drilling.Common/Interface/Vision/CVisionComm.cs:28–28</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Func&lt;int&gt;? Drilling.Common.Interface.Vision.CVisionComm.LineCapacityProvider</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal</td></tr>
@@ -316,7 +316,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L28">GetAccessorDeclaration <code>get_LineCapacityProvider</code> · L28–28</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L28-L28">Drilling.Common/Interface/Vision/CVisionComm.cs:28–28</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L28-L28">Drilling.Common/Interface/Vision/CVisionComm.cs:28–28</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Func&lt;int&gt;? Drilling.Common.Interface.Vision.CVisionComm.LineCapacityProvider.get</td></tr>
 <tr><td>접근/수식자</td><td>Internal / get</td></tr>
@@ -326,7 +326,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L28">SetAccessorDeclaration <code>set_LineCapacityProvider</code> · L28–28</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L28-L28">Drilling.Common/Interface/Vision/CVisionComm.cs:28–28</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L28-L28">Drilling.Common/Interface/Vision/CVisionComm.cs:28–28</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.Vision.CVisionComm.LineCapacityProvider.set</td></tr>
 <tr><td>접근/수식자</td><td>Internal / set</td></tr>
@@ -340,7 +340,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L29">PropertyDeclaration <code>ConfiguredLineCapacity</code> · L29–29</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L29-L29">Drilling.Common/Interface/Vision/CVisionComm.cs:29–29</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L29-L29">Drilling.Common/Interface/Vision/CVisionComm.cs:29–29</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionComm.ConfiguredLineCapacity</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -360,7 +360,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L30">PropertyDeclaration <code>ResponseLineCapacity</code> · L30–30</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L30-L30">Drilling.Common/Interface/Vision/CVisionComm.cs:30–30</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L30-L30">Drilling.Common/Interface/Vision/CVisionComm.cs:30–30</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionComm.ResponseLineCapacity</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -379,7 +379,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L31">EventFieldDeclaration <code>ProtocolTrace</code> · L31–31</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L31-L31">Drilling.Common/Interface/Vision/CVisionComm.cs:31–31</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L31-L31">Drilling.Common/Interface/Vision/CVisionComm.cs:31–31</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Action&lt;Drilling.Common.Interface.ST_COMM_PROTOCOL_TRACE&gt;? Drilling.Common.Interface.Vision.CVisionComm.ProtocolTrace</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal, event</td></tr>
@@ -389,7 +389,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L32">MethodDeclaration <code>Connect</code> · L32–76</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L32-L76">Drilling.Common/Interface/Vision/CVisionComm.cs:32–76</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L32-L76">Drilling.Common/Interface/Vision/CVisionComm.cs:32–76</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.Vision.CVisionComm.Connect(System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, override, async</td></tr>
@@ -402,7 +402,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L108-L108">Drilling.Common/Interface/Vision/CVisionComm.cs:108–108</a></td><td>Connect</td><td>True</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L108-L108">Drilling.Common/Interface/Vision/CVisionComm.cs:108–108</a></td><td>Connect</td><td>True</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -472,7 +472,7 @@
  N0 --&gt;|포함| N4</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L55">LocalFunctionStatement <code>AcceptLoopCallback</code> · L55–58</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L55-L58">Drilling.Common/Interface/Vision/CVisionComm.cs:55–58</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L55-L58">Drilling.Common/Interface/Vision/CVisionComm.cs:55–58</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task AcceptLoopCallback()</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -491,7 +491,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L78">MethodDeclaration <code>Disconnect</code> · L78–91</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L78-L91">Drilling.Common/Interface/Vision/CVisionComm.cs:78–91</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L78-L91">Drilling.Common/Interface/Vision/CVisionComm.cs:78–91</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.Vision.CVisionComm.Disconnect(System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, override, async</td></tr>
@@ -532,7 +532,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L93">MethodDeclaration <code>Execute</code> · L93–142</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L93-L142">Drilling.Common/Interface/Vision/CVisionComm.cs:93–142</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L93-L142">Drilling.Common/Interface/Vision/CVisionComm.cs:93–142</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task&lt;string&gt; Drilling.Common.Interface.Vision.CVisionComm.Execute(string, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, override, async</td></tr>
@@ -637,7 +637,7 @@
  N6 --&gt;|포함| N7</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L144">MethodDeclaration <code>AcceptLoop</code> · L144–165</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L144-L165">Drilling.Common/Interface/Vision/CVisionComm.cs:144–165</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L144-L165">Drilling.Common/Interface/Vision/CVisionComm.cs:144–165</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.Vision.CVisionComm.AcceptLoop(System.Net.Sockets.TcpListener, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, async</td></tr>
@@ -651,7 +651,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L57-L57">Drilling.Common/Interface/Vision/CVisionComm.cs:57–57</a></td><td>AcceptLoop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L57-L57">Drilling.Common/Interface/Vision/CVisionComm.cs:57–57</a></td><td>AcceptLoop</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -689,7 +689,7 @@
  N2 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L167">MethodDeclaration <code>ReplaceClient</code> · L167–187</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L167-L187">Drilling.Common/Interface/Vision/CVisionComm.cs:167–187</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L167-L187">Drilling.Common/Interface/Vision/CVisionComm.cs:167–187</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.Vision.CVisionComm.ReplaceClient(System.Net.Sockets.TcpClient, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -703,7 +703,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L153-L153">Drilling.Common/Interface/Vision/CVisionComm.cs:153–153</a></td><td>ReplaceClient</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L153-L153">Drilling.Common/Interface/Vision/CVisionComm.cs:153–153</a></td><td>ReplaceClient</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -737,7 +737,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L173">LocalFunctionStatement <code>ReceiveLoopCallback</code> · L173–176</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L173-L176">Drilling.Common/Interface/Vision/CVisionComm.cs:173–176</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L173-L176">Drilling.Common/Interface/Vision/CVisionComm.cs:173–176</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task ReceiveLoopCallback()</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -756,7 +756,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L189">MethodDeclaration <code>ReceiveLoop</code> · L189–252</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L189-L252">Drilling.Common/Interface/Vision/CVisionComm.cs:189–252</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L189-L252">Drilling.Common/Interface/Vision/CVisionComm.cs:189–252</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.Vision.CVisionComm.ReceiveLoop(System.Net.Sockets.TcpClient, System.Net.Sockets.NetworkStream, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, async</td></tr>
@@ -771,7 +771,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L175-L175">Drilling.Common/Interface/Vision/CVisionComm.cs:175–175</a></td><td>ReceiveLoop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L175-L175">Drilling.Common/Interface/Vision/CVisionComm.cs:175–175</a></td><td>ReceiveLoop</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -871,7 +871,7 @@
  N9 --&gt;|포함| N10</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L254">MethodDeclaration <code>WaitForClient</code> · L254–273</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L254-L273">Drilling.Common/Interface/Vision/CVisionComm.cs:254–273</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L254-L273">Drilling.Common/Interface/Vision/CVisionComm.cs:254–273</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task&lt;System.Net.Sockets.NetworkStream&gt; Drilling.Common.Interface.Vision.CVisionComm.WaitForClient(System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, async</td></tr>
@@ -884,7 +884,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L111-L111">Drilling.Common/Interface/Vision/CVisionComm.cs:111–111</a></td><td>WaitForClient</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L111-L111">Drilling.Common/Interface/Vision/CVisionComm.cs:111–111</a></td><td>WaitForClient</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -925,7 +925,7 @@
  N1 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L275">MethodDeclaration <code>SendRequest</code> · L275–313</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L275-L313">Drilling.Common/Interface/Vision/CVisionComm.cs:275–313</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L275-L313">Drilling.Common/Interface/Vision/CVisionComm.cs:275–313</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task&lt;Drilling.Common.Interface.Vision.ST_VISION_PACKET&gt; Drilling.Common.Interface.Vision.CVisionComm.SendRequest(System.Net.Sockets.NetworkStream, Drilling.Common.Interface.Vision.ST_VISION_PACKET, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, async</td></tr>
@@ -940,7 +940,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L117-L117">Drilling.Common/Interface/Vision/CVisionComm.cs:117–117</a></td><td>SendRequest</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L117-L117">Drilling.Common/Interface/Vision/CVisionComm.cs:117–117</a></td><td>SendRequest</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1011,7 +1011,7 @@
  N1 --&gt;|포함| N6</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L315">MethodDeclaration <code>SendPacket</code> · L315–331</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L315-L331">Drilling.Common/Interface/Vision/CVisionComm.cs:315–331</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L315-L331">Drilling.Common/Interface/Vision/CVisionComm.cs:315–331</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.Vision.CVisionComm.SendPacket(System.Net.Sockets.NetworkStream, Drilling.Common.Interface.Vision.ST_VISION_PACKET, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, async</td></tr>
@@ -1026,9 +1026,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L208-L208">Drilling.Common/Interface/Vision/CVisionComm.cs:208–208</a></td><td>SendPacket</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L214-L214">Drilling.Common/Interface/Vision/CVisionComm.cs:214–214</a></td><td>SendPacket</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L286-L286">Drilling.Common/Interface/Vision/CVisionComm.cs:286–286</a></td><td>SendPacket</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L208-L208">Drilling.Common/Interface/Vision/CVisionComm.cs:208–208</a></td><td>SendPacket</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L214-L214">Drilling.Common/Interface/Vision/CVisionComm.cs:214–214</a></td><td>SendPacket</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L286-L286">Drilling.Common/Interface/Vision/CVisionComm.cs:286–286</a></td><td>SendPacket</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1070,7 +1070,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L333">MethodDeclaration <code>ReadPacket</code> · L333–346</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L333-L346">Drilling.Common/Interface/Vision/CVisionComm.cs:333–346</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L333-L346">Drilling.Common/Interface/Vision/CVisionComm.cs:333–346</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task&lt;Drilling.Common.Interface.Vision.ST_VISION_PACKET&gt; Drilling.Common.Interface.Vision.CVisionComm.ReadPacket(System.Net.Sockets.NetworkStream, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static, async</td></tr>
@@ -1084,7 +1084,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L196-L196">Drilling.Common/Interface/Vision/CVisionComm.cs:196–196</a></td><td>ReadPacket</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L196-L196">Drilling.Common/Interface/Vision/CVisionComm.cs:196–196</a></td><td>ReadPacket</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1117,7 +1117,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L348">MethodDeclaration <code>ParseRequest</code> · L348–362</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L348-L362">Drilling.Common/Interface/Vision/CVisionComm.cs:348–362</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L348-L362">Drilling.Common/Interface/Vision/CVisionComm.cs:348–362</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.ST_VISION_PACKET Drilling.Common.Interface.Vision.CVisionComm.ParseRequest(string, int, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1132,7 +1132,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L114-L114">Drilling.Common/Interface/Vision/CVisionComm.cs:114–114</a></td><td>ParseRequest</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L114-L114">Drilling.Common/Interface/Vision/CVisionComm.cs:114–114</a></td><td>ParseRequest</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1177,7 +1177,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L364">MethodDeclaration <code>ParseFlyingReady</code> · L364–383</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L364-L383">Drilling.Common/Interface/Vision/CVisionComm.cs:364–383</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L364-L383">Drilling.Common/Interface/Vision/CVisionComm.cs:364–383</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.ST_VISION_PACKET Drilling.Common.Interface.Vision.CVisionComm.ParseFlyingReady(int, string, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1192,7 +1192,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L356-L356">Drilling.Common/Interface/Vision/CVisionComm.cs:356–356</a></td><td>ParseFlyingReady</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L356-L356">Drilling.Common/Interface/Vision/CVisionComm.cs:356–356</a></td><td>ParseFlyingReady</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1240,7 +1240,7 @@
  N1 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L385">MethodDeclaration <code>ParseMarkSearch</code> · L385–394</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L385-L394">Drilling.Common/Interface/Vision/CVisionComm.cs:385–394</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L385-L394">Drilling.Common/Interface/Vision/CVisionComm.cs:385–394</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.ST_VISION_MARK_SEARCH Drilling.Common.Interface.Vision.CVisionComm.ParseMarkSearch(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1253,8 +1253,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L355-L355">Drilling.Common/Interface/Vision/CVisionComm.cs:355–355</a></td><td>ParseMarkSearch</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L378-L378">Drilling.Common/Interface/Vision/CVisionComm.cs:378–378</a></td><td>ParseMarkSearch</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L355-L355">Drilling.Common/Interface/Vision/CVisionComm.cs:355–355</a></td><td>ParseMarkSearch</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L378-L378">Drilling.Common/Interface/Vision/CVisionComm.cs:378–378</a></td><td>ParseMarkSearch</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1292,7 +1292,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L396">MethodDeclaration <code>NormalizeCommand</code> · L396–408</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L396-L408">Drilling.Common/Interface/Vision/CVisionComm.cs:396–408</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L396-L408">Drilling.Common/Interface/Vision/CVisionComm.cs:396–408</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.EN_VISION_COMMAND Drilling.Common.Interface.Vision.CVisionComm.NormalizeCommand(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1305,8 +1305,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L112-L112">Drilling.Common/Interface/Vision/CVisionComm.cs:112–112</a></td><td>NormalizeCommand</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L351-L351">Drilling.Common/Interface/Vision/CVisionComm.cs:351–351</a></td><td>NormalizeCommand</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L112-L112">Drilling.Common/Interface/Vision/CVisionComm.cs:112–112</a></td><td>NormalizeCommand</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L351-L351">Drilling.Common/Interface/Vision/CVisionComm.cs:351–351</a></td><td>NormalizeCommand</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1334,7 +1334,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L410">MethodDeclaration <code>ParseInt</code> · L410–410</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L410-L410">Drilling.Common/Interface/Vision/CVisionComm.cs:410–410</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L410-L410">Drilling.Common/Interface/Vision/CVisionComm.cs:410–410</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionComm.ParseInt(string, string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1348,12 +1348,12 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L393-L393">Drilling.Common/Interface/Vision/CVisionComm.cs:393–393</a></td><td>ParseInt</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L393-L393">Drilling.Common/Interface/Vision/CVisionComm.cs:393–393</a></td><td>ParseInt</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L393-L393">Drilling.Common/Interface/Vision/CVisionComm.cs:393–393</a></td><td>ParseInt</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L393-L393">Drilling.Common/Interface/Vision/CVisionComm.cs:393–393</a></td><td>ParseInt</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L393-L393">Drilling.Common/Interface/Vision/CVisionComm.cs:393–393</a></td><td>ParseInt</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L393-L393">Drilling.Common/Interface/Vision/CVisionComm.cs:393–393</a></td><td>ParseInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L393-L393">Drilling.Common/Interface/Vision/CVisionComm.cs:393–393</a></td><td>ParseInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L393-L393">Drilling.Common/Interface/Vision/CVisionComm.cs:393–393</a></td><td>ParseInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L393-L393">Drilling.Common/Interface/Vision/CVisionComm.cs:393–393</a></td><td>ParseInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L393-L393">Drilling.Common/Interface/Vision/CVisionComm.cs:393–393</a></td><td>ParseInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L393-L393">Drilling.Common/Interface/Vision/CVisionComm.cs:393–393</a></td><td>ParseInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L393-L393">Drilling.Common/Interface/Vision/CVisionComm.cs:393–393</a></td><td>ParseInt</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1369,7 +1369,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L411">MethodDeclaration <code>DescribeResponse</code> · L411–446</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L411-L446">Drilling.Common/Interface/Vision/CVisionComm.cs:411–446</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L411-L446">Drilling.Common/Interface/Vision/CVisionComm.cs:411–446</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Interface.Vision.CVisionComm.DescribeResponse(Drilling.Common.Interface.Vision.ST_VISION_PACKET, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1383,7 +1383,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L118-L118">Drilling.Common/Interface/Vision/CVisionComm.cs:118–118</a></td><td>DescribeResponse</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L118-L118">Drilling.Common/Interface/Vision/CVisionComm.cs:118–118</a></td><td>DescribeResponse</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1485,7 +1485,7 @@
  N3 --&gt;|포함| N4</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L448">MethodDeclaration <code>DescribePacket</code> · L448–448</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L448-L448">Drilling.Common/Interface/Vision/CVisionComm.cs:448–448</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L448-L448">Drilling.Common/Interface/Vision/CVisionComm.cs:448–448</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Interface.Vision.CVisionComm.DescribePacket(Drilling.Common.Interface.Vision.ST_VISION_PACKET)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1498,12 +1498,12 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L197-L197">Drilling.Common/Interface/Vision/CVisionComm.cs:197–197</a></td><td>DescribePacket</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L323-L323">Drilling.Common/Interface/Vision/CVisionComm.cs:323–323</a></td><td>DescribePacket</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L197-L197">Drilling.Common/Interface/Vision/CVisionComm.cs:197–197</a></td><td>DescribePacket</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L323-L323">Drilling.Common/Interface/Vision/CVisionComm.cs:323–323</a></td><td>DescribePacket</td><td>False</td></tr>
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L449">MethodDeclaration <code>NextUniqueId</code> · L449–459</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L449-L459">Drilling.Common/Interface/Vision/CVisionComm.cs:449–459</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L449-L459">Drilling.Common/Interface/Vision/CVisionComm.cs:449–459</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionComm.NextUniqueId()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1512,7 +1512,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L114-L114">Drilling.Common/Interface/Vision/CVisionComm.cs:114–114</a></td><td>NextUniqueId</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L114-L114">Drilling.Common/Interface/Vision/CVisionComm.cs:114–114</a></td><td>NextUniqueId</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1536,7 +1536,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L461">MethodDeclaration <code>RaiseProtocolTrace</code> · L461–464</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L461-L464">Drilling.Common/Interface/Vision/CVisionComm.cs:461–464</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L461-L464">Drilling.Common/Interface/Vision/CVisionComm.cs:461–464</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.Vision.CVisionComm.RaiseProtocolTrace(string, string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1550,11 +1550,11 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L65-L65">Drilling.Common/Interface/Vision/CVisionComm.cs:65–65</a></td><td>RaiseProtocolTrace</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L186-L186">Drilling.Common/Interface/Vision/CVisionComm.cs:186–186</a></td><td>RaiseProtocolTrace</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L205-L205">Drilling.Common/Interface/Vision/CVisionComm.cs:205–205</a></td><td>RaiseProtocolTrace</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L247-L247">Drilling.Common/Interface/Vision/CVisionComm.cs:247–247</a></td><td>RaiseProtocolTrace</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L325-L325">Drilling.Common/Interface/Vision/CVisionComm.cs:325–325</a></td><td>RaiseProtocolTrace</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L65-L65">Drilling.Common/Interface/Vision/CVisionComm.cs:65–65</a></td><td>RaiseProtocolTrace</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L186-L186">Drilling.Common/Interface/Vision/CVisionComm.cs:186–186</a></td><td>RaiseProtocolTrace</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L205-L205">Drilling.Common/Interface/Vision/CVisionComm.cs:205–205</a></td><td>RaiseProtocolTrace</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L247-L247">Drilling.Common/Interface/Vision/CVisionComm.cs:247–247</a></td><td>RaiseProtocolTrace</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L325-L325">Drilling.Common/Interface/Vision/CVisionComm.cs:325–325</a></td><td>RaiseProtocolTrace</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1568,7 +1568,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L466">MethodDeclaration <code>IsServerListening</code> · L466–469</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L466-L469">Drilling.Common/Interface/Vision/CVisionComm.cs:466–469</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L466-L469">Drilling.Common/Interface/Vision/CVisionComm.cs:466–469</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Interface.Vision.CVisionComm.IsServerListening()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1577,7 +1577,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L246-L246">Drilling.Common/Interface/Vision/CVisionComm.cs:246–246</a></td><td>IsServerListening</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L246-L246">Drilling.Common/Interface/Vision/CVisionComm.cs:246–246</a></td><td>IsServerListening</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -1585,7 +1585,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L471">MethodDeclaration <code>StopServer</code> · L471–500</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L471-L500">Drilling.Common/Interface/Vision/CVisionComm.cs:471–500</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L471-L500">Drilling.Common/Interface/Vision/CVisionComm.cs:471–500</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.Vision.CVisionComm.StopServer()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, async</td></tr>
@@ -1594,9 +1594,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L44-L44">Drilling.Common/Interface/Vision/CVisionComm.cs:44–44</a></td><td>StopServer</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L69-L69">Drilling.Common/Interface/Vision/CVisionComm.cs:69–69</a></td><td>StopServer</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L84-L84">Drilling.Common/Interface/Vision/CVisionComm.cs:84–84</a></td><td>StopServer</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L44-L44">Drilling.Common/Interface/Vision/CVisionComm.cs:44–44</a></td><td>StopServer</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L69-L69">Drilling.Common/Interface/Vision/CVisionComm.cs:69–69</a></td><td>StopServer</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L84-L84">Drilling.Common/Interface/Vision/CVisionComm.cs:84–84</a></td><td>StopServer</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1646,7 +1646,7 @@
  M --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L502">MethodDeclaration <code>FailPending</code> · L502–511</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L502-L511">Drilling.Common/Interface/Vision/CVisionComm.cs:502–511</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L502-L511">Drilling.Common/Interface/Vision/CVisionComm.cs:502–511</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.Vision.CVisionComm.FailPending(System.Exception)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1659,8 +1659,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L244-L244">Drilling.Common/Interface/Vision/CVisionComm.cs:244–244</a></td><td>FailPending</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L499-L499">Drilling.Common/Interface/Vision/CVisionComm.cs:499–499</a></td><td>FailPending</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L244-L244">Drilling.Common/Interface/Vision/CVisionComm.cs:244–244</a></td><td>FailPending</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L499-L499">Drilling.Common/Interface/Vision/CVisionComm.cs:499–499</a></td><td>FailPending</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1685,7 +1685,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L513">MethodDeclaration <code>IgnoreCancellation</code> · L513–522</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L513-L522">Drilling.Common/Interface/Vision/CVisionComm.cs:513–522</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L513-L522">Drilling.Common/Interface/Vision/CVisionComm.cs:513–522</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.Vision.CVisionComm.IgnoreCancellation(System.Threading.Tasks.Task)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static, async</td></tr>
@@ -1698,8 +1698,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L479-L479">Drilling.Common/Interface/Vision/CVisionComm.cs:479–479</a></td><td>IgnoreCancellation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L484-L484">Drilling.Common/Interface/Vision/CVisionComm.cs:484–484</a></td><td>IgnoreCancellation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L479-L479">Drilling.Common/Interface/Vision/CVisionComm.cs:479–479</a></td><td>IgnoreCancellation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L484-L484">Drilling.Common/Interface/Vision/CVisionComm.cs:484–484</a></td><td>IgnoreCancellation</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -1716,7 +1716,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L524">MethodDeclaration <code>ResolveBindAddress</code> · L524–532</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L524-L532">Drilling.Common/Interface/Vision/CVisionComm.cs:524–532</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L524-L532">Drilling.Common/Interface/Vision/CVisionComm.cs:524–532</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Net.IPAddress Drilling.Common.Interface.Vision.CVisionComm.ResolveBindAddress(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1729,7 +1729,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L51-L51">Drilling.Common/Interface/Vision/CVisionComm.cs:51–51</a></td><td>ResolveBindAddress</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L51-L51">Drilling.Common/Interface/Vision/CVisionComm.cs:51–51</a></td><td>ResolveBindAddress</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1755,7 +1755,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L537">EnumMemberDeclaration <code>MarkFindSingle</code> · L537–537</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L537-L537">Drilling.Common/Interface/Vision/CVisionComm.cs:537–537</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L537-L537">Drilling.Common/Interface/Vision/CVisionComm.cs:537–537</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.EN_VISION_COMMAND.MarkFindSingle</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1765,7 +1765,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L538">EnumMemberDeclaration <code>FlyingReady</code> · L538–538</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L538-L538">Drilling.Common/Interface/Vision/CVisionComm.cs:538–538</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L538-L538">Drilling.Common/Interface/Vision/CVisionComm.cs:538–538</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.EN_VISION_COMMAND.FlyingReady</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1775,7 +1775,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L539">EnumMemberDeclaration <code>FlyingMoveDone</code> · L539–539</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L539-L539">Drilling.Common/Interface/Vision/CVisionComm.cs:539–539</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L539-L539">Drilling.Common/Interface/Vision/CVisionComm.cs:539–539</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.EN_VISION_COMMAND.FlyingMoveDone</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1785,7 +1785,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L540">EnumMemberDeclaration <code>MarkFindLine</code> · L540–540</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L540-L540">Drilling.Common/Interface/Vision/CVisionComm.cs:540–540</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L540-L540">Drilling.Common/Interface/Vision/CVisionComm.cs:540–540</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.EN_VISION_COMMAND.MarkFindLine</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1795,7 +1795,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L541">EnumMemberDeclaration <code>MarkFindSettingSingle</code> · L541–541</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L541-L541">Drilling.Common/Interface/Vision/CVisionComm.cs:541–541</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L541-L541">Drilling.Common/Interface/Vision/CVisionComm.cs:541–541</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.EN_VISION_COMMAND.MarkFindSettingSingle</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1805,7 +1805,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L542">EnumMemberDeclaration <code>MarkFindManual</code> · L542–542</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L542-L542">Drilling.Common/Interface/Vision/CVisionComm.cs:542–542</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L542-L542">Drilling.Common/Interface/Vision/CVisionComm.cs:542–542</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.EN_VISION_COMMAND.MarkFindManual</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1815,7 +1815,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L543">EnumMemberDeclaration <code>KeepAliveRequest</code> · L543–543</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L543-L543">Drilling.Common/Interface/Vision/CVisionComm.cs:543–543</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L543-L543">Drilling.Common/Interface/Vision/CVisionComm.cs:543–543</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.EN_VISION_COMMAND.KeepAliveRequest</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1825,7 +1825,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L544">EnumMemberDeclaration <code>KeepAlive</code> · L544–544</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L544-L544">Drilling.Common/Interface/Vision/CVisionComm.cs:544–544</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L544-L544">Drilling.Common/Interface/Vision/CVisionComm.cs:544–544</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.EN_VISION_COMMAND.KeepAlive</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1835,7 +1835,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L556">PropertyDeclaration <code>ActualCount</code> · L556–556</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L556-L556">Drilling.Common/Interface/Vision/CVisionComm.cs:556–556</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L556-L556">Drilling.Common/Interface/Vision/CVisionComm.cs:556–556</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionLineCountExceededException.ActualCount</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1845,7 +1845,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L556">GetAccessorDeclaration <code>get_ActualCount</code> · L556–556</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L556-L556">Drilling.Common/Interface/Vision/CVisionComm.cs:556–556</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L556-L556">Drilling.Common/Interface/Vision/CVisionComm.cs:556–556</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionLineCountExceededException.ActualCount.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -1855,7 +1855,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L557">PropertyDeclaration <code>MaximumCount</code> · L557–557</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L557-L557">Drilling.Common/Interface/Vision/CVisionComm.cs:557–557</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L557-L557">Drilling.Common/Interface/Vision/CVisionComm.cs:557–557</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionLineCountExceededException.MaximumCount</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1865,7 +1865,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L557">GetAccessorDeclaration <code>get_MaximumCount</code> · L557–557</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L557-L557">Drilling.Common/Interface/Vision/CVisionComm.cs:557–557</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L557-L557">Drilling.Common/Interface/Vision/CVisionComm.cs:557–557</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionLineCountExceededException.MaximumCount.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -1875,7 +1875,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L561">FieldDeclaration <code>PacketLogSeparator</code> · L561–561</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L561-L561">Drilling.Common/Interface/Vision/CVisionComm.cs:561–561</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L561-L561">Drilling.Common/Interface/Vision/CVisionComm.cs:561–561</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Interface.Vision.CVisionProtocol.PacketLogSeparator</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -1889,7 +1889,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L562">FieldDeclaration <code>PacketLogBodyIndent</code> · L562–562</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L562-L562">Drilling.Common/Interface/Vision/CVisionComm.cs:562–562</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L562-L562">Drilling.Common/Interface/Vision/CVisionComm.cs:562–562</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Interface.Vision.CVisionProtocol.PacketLogBodyIndent</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -1903,7 +1903,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L563">FieldDeclaration <code>HeaderSize</code> · L563–563</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L563-L563">Drilling.Common/Interface/Vision/CVisionComm.cs:563–563</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L563-L563">Drilling.Common/Interface/Vision/CVisionComm.cs:563–563</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionProtocol.HeaderSize</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, const</td></tr>
@@ -1917,7 +1917,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L564">FieldDeclaration <code>MarkSearchSize</code> · L564–564</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L564-L564">Drilling.Common/Interface/Vision/CVisionComm.cs:564–564</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L564-L564">Drilling.Common/Interface/Vision/CVisionComm.cs:564–564</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionProtocol.MarkSearchSize</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, const</td></tr>
@@ -1931,7 +1931,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L565">FieldDeclaration <code>MarkFindPackedSize</code> · L565–565</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L565-L565">Drilling.Common/Interface/Vision/CVisionComm.cs:565–565</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L565-L565">Drilling.Common/Interface/Vision/CVisionComm.cs:565–565</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionProtocol.MarkFindPackedSize</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, const</td></tr>
@@ -1945,7 +1945,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L566">FieldDeclaration <code>SingleResultBodySize</code> · L566–566</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L566-L566">Drilling.Common/Interface/Vision/CVisionComm.cs:566–566</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L566-L566">Drilling.Common/Interface/Vision/CVisionComm.cs:566–566</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionProtocol.SingleResultBodySize</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, const</td></tr>
@@ -1959,7 +1959,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L567">FieldDeclaration <code>MaximumBodySize</code> · L567–567</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L567-L567">Drilling.Common/Interface/Vision/CVisionComm.cs:567–567</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L567-L567">Drilling.Common/Interface/Vision/CVisionComm.cs:567–567</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionProtocol.MaximumBodySize</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, const</td></tr>
@@ -1973,7 +1973,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L570">FieldDeclaration <code>MaximumMarkCount</code> · L570–570</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L570-L570">Drilling.Common/Interface/Vision/CVisionComm.cs:570–570</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L570-L570">Drilling.Common/Interface/Vision/CVisionComm.cs:570–570</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionProtocol.MaximumMarkCount</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, const</td></tr>
@@ -1987,7 +1987,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L571">FieldDeclaration <code>DefaultMaxHoleCountPerLine</code> · L571–571</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L571-L571">Drilling.Common/Interface/Vision/CVisionComm.cs:571–571</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L571-L571">Drilling.Common/Interface/Vision/CVisionComm.cs:571–571</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionProtocol.DefaultMaxHoleCountPerLine</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, const</td></tr>
@@ -2001,7 +2001,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L572">FieldDeclaration <code>MaxHoleCountPerLineSettingKey</code> · L572–572</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L572-L572">Drilling.Common/Interface/Vision/CVisionComm.cs:572–572</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L572-L572">Drilling.Common/Interface/Vision/CVisionComm.cs:572–572</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Interface.Vision.CVisionProtocol.MaxHoleCountPerLineSettingKey</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, const</td></tr>
@@ -2015,7 +2015,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L573">MethodDeclaration <code>ValidateLineCapacity</code> · L573–578</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L573-L578">Drilling.Common/Interface/Vision/CVisionComm.cs:573–578</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L573-L578">Drilling.Common/Interface/Vision/CVisionComm.cs:573–578</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionProtocol.ValidateLineCapacity(int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2028,13 +2028,13 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CInterfaceManager.cs#L90-L90">Drilling.Common/Interface/CInterfaceManager.cs:90–90</a></td><td>CVisionProtocol.ValidateLineCapacity</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L29-L29">Drilling.Common/Interface/Vision/CVisionComm.cs:29–29</a></td><td>CVisionProtocol.ValidateLineCapacity</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L584-L584">Drilling.Common/Interface/Vision/CVisionComm.cs:584–584</a></td><td>ValidateLineCapacity</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L618-L618">Drilling.Common/Interface/Vision/CVisionComm.cs:618–618</a></td><td>ValidateLineCapacity</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L716-L716">Drilling.Common/Interface/Vision/CVisionComm.cs:716–716</a></td><td>ValidateLineCapacity</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L783-L783">Drilling.Common/Interface/Vision/CVisionComm.cs:783–783</a></td><td>ValidateLineCapacity</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CSettingManager.cs#L111-L111">Drilling.Common/Managers/CSettingManager.cs:111–111</a></td><td>CVisionProtocol.ValidateLineCapacity</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L90-L90">Drilling.Common/Interface/CInterfaceManager.cs:90–90</a></td><td>CVisionProtocol.ValidateLineCapacity</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L29-L29">Drilling.Common/Interface/Vision/CVisionComm.cs:29–29</a></td><td>CVisionProtocol.ValidateLineCapacity</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L584-L584">Drilling.Common/Interface/Vision/CVisionComm.cs:584–584</a></td><td>ValidateLineCapacity</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L618-L618">Drilling.Common/Interface/Vision/CVisionComm.cs:618–618</a></td><td>ValidateLineCapacity</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L716-L716">Drilling.Common/Interface/Vision/CVisionComm.cs:716–716</a></td><td>ValidateLineCapacity</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L783-L783">Drilling.Common/Interface/Vision/CVisionComm.cs:783–783</a></td><td>ValidateLineCapacity</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CSettingManager.cs#L111-L111">Drilling.Common/Managers/CSettingManager.cs:111–111</a></td><td>CVisionProtocol.ValidateLineCapacity</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2056,7 +2056,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L579">MethodDeclaration <code>CreateEmpty</code> · L579–579</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L579-L579">Drilling.Common/Interface/Vision/CVisionComm.cs:579–579</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L579-L579">Drilling.Common/Interface/Vision/CVisionComm.cs:579–579</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.ST_VISION_PACKET Drilling.Common.Interface.Vision.CVisionProtocol.CreateEmpty(Drilling.Common.Interface.Vision.EN_VISION_COMMAND, int, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2071,12 +2071,12 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L208-L208">Drilling.Common/Interface/Vision/CVisionComm.cs:208–208</a></td><td>CVisionProtocol.CreateEmpty</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L214-L214">Drilling.Common/Interface/Vision/CVisionComm.cs:214–214</a></td><td>CVisionProtocol.CreateEmpty</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L357-L357">Drilling.Common/Interface/Vision/CVisionComm.cs:357–357</a></td><td>CVisionProtocol.CreateEmpty</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L358-L358">Drilling.Common/Interface/Vision/CVisionComm.cs:358–358</a></td><td>CVisionProtocol.CreateEmpty</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L359-L359">Drilling.Common/Interface/Vision/CVisionComm.cs:359–359</a></td><td>CVisionProtocol.CreateEmpty</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L360-L360">Drilling.Common/Interface/Vision/CVisionComm.cs:360–360</a></td><td>CVisionProtocol.CreateEmpty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L208-L208">Drilling.Common/Interface/Vision/CVisionComm.cs:208–208</a></td><td>CVisionProtocol.CreateEmpty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L214-L214">Drilling.Common/Interface/Vision/CVisionComm.cs:214–214</a></td><td>CVisionProtocol.CreateEmpty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L357-L357">Drilling.Common/Interface/Vision/CVisionComm.cs:357–357</a></td><td>CVisionProtocol.CreateEmpty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L358-L358">Drilling.Common/Interface/Vision/CVisionComm.cs:358–358</a></td><td>CVisionProtocol.CreateEmpty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L359-L359">Drilling.Common/Interface/Vision/CVisionComm.cs:359–359</a></td><td>CVisionProtocol.CreateEmpty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L360-L360">Drilling.Common/Interface/Vision/CVisionComm.cs:360–360</a></td><td>CVisionProtocol.CreateEmpty</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2088,7 +2088,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L580">MethodDeclaration <code>CreateMarkFindSingle</code> · L580–580</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L580-L580">Drilling.Common/Interface/Vision/CVisionComm.cs:580–580</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L580-L580">Drilling.Common/Interface/Vision/CVisionComm.cs:580–580</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.ST_VISION_PACKET Drilling.Common.Interface.Vision.CVisionProtocol.CreateMarkFindSingle(int, Drilling.Common.Interface.Vision.ST_VISION_MARK_SEARCH)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2102,7 +2102,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L355-L355">Drilling.Common/Interface/Vision/CVisionComm.cs:355–355</a></td><td>CVisionProtocol.CreateMarkFindSingle</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L355-L355">Drilling.Common/Interface/Vision/CVisionComm.cs:355–355</a></td><td>CVisionProtocol.CreateMarkFindSingle</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2116,7 +2116,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L581">MethodDeclaration <code>CreateFlyingReady</code> · L581–600</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L581-L600">Drilling.Common/Interface/Vision/CVisionComm.cs:581–600</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L581-L600">Drilling.Common/Interface/Vision/CVisionComm.cs:581–600</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.ST_VISION_PACKET Drilling.Common.Interface.Vision.CVisionProtocol.CreateFlyingReady(int, int, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.Vision.ST_VISION_MARK_SEARCH&gt;, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2132,7 +2132,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L382-L382">Drilling.Common/Interface/Vision/CVisionComm.cs:382–382</a></td><td>CVisionProtocol.CreateFlyingReady</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L382-L382">Drilling.Common/Interface/Vision/CVisionComm.cs:382–382</a></td><td>CVisionProtocol.CreateFlyingReady</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2174,7 +2174,7 @@
  M --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L602">MethodDeclaration <code>CreateSingleResult</code> · L602–613</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L602-L613">Drilling.Common/Interface/Vision/CVisionComm.cs:602–613</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L602-L613">Drilling.Common/Interface/Vision/CVisionComm.cs:602–613</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.ST_VISION_PACKET Drilling.Common.Interface.Vision.CVisionProtocol.CreateSingleResult(Drilling.Common.Interface.Vision.EN_VISION_COMMAND, int, int, Drilling.Common.Interface.Vision.ST_VISION_MARK_FIND, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2218,7 +2218,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L615">MethodDeclaration <code>CreateLineResult</code> · L615–635</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L615-L635">Drilling.Common/Interface/Vision/CVisionComm.cs:615–635</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L615-L635">Drilling.Common/Interface/Vision/CVisionComm.cs:615–635</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.ST_VISION_PACKET Drilling.Common.Interface.Vision.CVisionProtocol.CreateLineResult(int, int, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.Vision.ST_VISION_MARK_FIND&gt;, int, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2280,7 +2280,7 @@
  M --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L637">MethodDeclaration <code>Create</code> · L637–642</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L637-L642">Drilling.Common/Interface/Vision/CVisionComm.cs:637–642</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L637-L642">Drilling.Common/Interface/Vision/CVisionComm.cs:637–642</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.ST_VISION_PACKET Drilling.Common.Interface.Vision.CVisionProtocol.Create(Drilling.Common.Interface.Vision.EN_VISION_COMMAND, int, byte[], int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2296,11 +2296,11 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L579-L579">Drilling.Common/Interface/Vision/CVisionComm.cs:579–579</a></td><td>Create</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L580-L580">Drilling.Common/Interface/Vision/CVisionComm.cs:580–580</a></td><td>Create</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L599-L599">Drilling.Common/Interface/Vision/CVisionComm.cs:599–599</a></td><td>Create</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L612-L612">Drilling.Common/Interface/Vision/CVisionComm.cs:612–612</a></td><td>Create</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L634-L634">Drilling.Common/Interface/Vision/CVisionComm.cs:634–634</a></td><td>Create</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L579-L579">Drilling.Common/Interface/Vision/CVisionComm.cs:579–579</a></td><td>Create</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L580-L580">Drilling.Common/Interface/Vision/CVisionComm.cs:580–580</a></td><td>Create</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L599-L599">Drilling.Common/Interface/Vision/CVisionComm.cs:599–599</a></td><td>Create</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L612-L612">Drilling.Common/Interface/Vision/CVisionComm.cs:612–612</a></td><td>Create</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L634-L634">Drilling.Common/Interface/Vision/CVisionComm.cs:634–634</a></td><td>Create</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2319,7 +2319,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L644">MethodDeclaration <code>Encode</code> · L644–661</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L644-L661">Drilling.Common/Interface/Vision/CVisionComm.cs:644–661</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L644-L661">Drilling.Common/Interface/Vision/CVisionComm.cs:644–661</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>byte[] Drilling.Common.Interface.Vision.CVisionProtocol.Encode(Drilling.Common.Interface.Vision.ST_VISION_PACKET)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2332,7 +2332,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L317-L317">Drilling.Common/Interface/Vision/CVisionComm.cs:317–317</a></td><td>CVisionProtocol.Encode</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L317-L317">Drilling.Common/Interface/Vision/CVisionComm.cs:317–317</a></td><td>CVisionProtocol.Encode</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2370,7 +2370,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L663">MethodDeclaration <code>DecodeHeader</code> · L663–673</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L663-L673">Drilling.Common/Interface/Vision/CVisionComm.cs:663–673</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L663-L673">Drilling.Common/Interface/Vision/CVisionComm.cs:663–673</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.ST_VISION_PACKET_HEADER Drilling.Common.Interface.Vision.CVisionProtocol.DecodeHeader(System.ReadOnlySpan&lt;byte&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2383,8 +2383,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L338-L338">Drilling.Common/Interface/Vision/CVisionComm.cs:338–338</a></td><td>CVisionProtocol.DecodeHeader</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L677-L677">Drilling.Common/Interface/Vision/CVisionComm.cs:677–677</a></td><td>DecodeHeader</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L338-L338">Drilling.Common/Interface/Vision/CVisionComm.cs:338–338</a></td><td>CVisionProtocol.DecodeHeader</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L677-L677">Drilling.Common/Interface/Vision/CVisionComm.cs:677–677</a></td><td>DecodeHeader</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2418,7 +2418,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L675">MethodDeclaration <code>Decode</code> · L675–685</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L675-L685">Drilling.Common/Interface/Vision/CVisionComm.cs:675–685</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L675-L685">Drilling.Common/Interface/Vision/CVisionComm.cs:675–685</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.ST_VISION_PACKET Drilling.Common.Interface.Vision.CVisionProtocol.Decode(System.ReadOnlySpan&lt;byte&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2460,7 +2460,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L687">MethodDeclaration <code>DecodeMarkSearchRequest</code> · L687–701</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L687-L701">Drilling.Common/Interface/Vision/CVisionComm.cs:687–701</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L687-L701">Drilling.Common/Interface/Vision/CVisionComm.cs:687–701</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.ST_VISION_MARK_SEARCH Drilling.Common.Interface.Vision.CVisionProtocol.DecodeMarkSearchRequest(Drilling.Common.Interface.Vision.ST_VISION_PACKET)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2473,7 +2473,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L895-L895">Drilling.Common/Interface/Vision/CVisionComm.cs:895–895</a></td><td>DecodeMarkSearchRequest</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L895-L895">Drilling.Common/Interface/Vision/CVisionComm.cs:895–895</a></td><td>DecodeMarkSearchRequest</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2503,7 +2503,7 @@
  M --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L703">MethodDeclaration <code>DecodeFlyingReadyRequest</code> · L703–737</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L703-L737">Drilling.Common/Interface/Vision/CVisionComm.cs:703–737</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L703-L737">Drilling.Common/Interface/Vision/CVisionComm.cs:703–737</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.ST_VISION_FLYING_READY Drilling.Common.Interface.Vision.CVisionProtocol.DecodeFlyingReadyRequest(Drilling.Common.Interface.Vision.ST_VISION_PACKET, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2517,7 +2517,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L910-L910">Drilling.Common/Interface/Vision/CVisionComm.cs:910–910</a></td><td>DecodeFlyingReadyRequest</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L910-L910">Drilling.Common/Interface/Vision/CVisionComm.cs:910–910</a></td><td>DecodeFlyingReadyRequest</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2580,7 +2580,7 @@
  M --&gt;|포함| N4</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L740">MethodDeclaration <code>DecodeFlyingMoveDoneResponse</code> · L740–751</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L740-L751">Drilling.Common/Interface/Vision/CVisionComm.cs:740–751</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L740-L751">Drilling.Common/Interface/Vision/CVisionComm.cs:740–751</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionProtocol.DecodeFlyingMoveDoneResponse(Drilling.Common.Interface.Vision.ST_VISION_PACKET)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2595,8 +2595,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L417-L417">Drilling.Common/Interface/Vision/CVisionComm.cs:417–417</a></td><td>CVisionProtocol.DecodeFlyingMoveDoneResponse</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L869-L869">Drilling.Common/Interface/Vision/CVisionComm.cs:869–869</a></td><td>DecodeFlyingMoveDoneResponse</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L417-L417">Drilling.Common/Interface/Vision/CVisionComm.cs:417–417</a></td><td>CVisionProtocol.DecodeFlyingMoveDoneResponse</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L869-L869">Drilling.Common/Interface/Vision/CVisionComm.cs:869–869</a></td><td>DecodeFlyingMoveDoneResponse</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2634,7 +2634,7 @@
  M --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L753">MethodDeclaration <code>DecodeSingleResult</code> · L753–767</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L753-L767">Drilling.Common/Interface/Vision/CVisionComm.cs:753–767</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L753-L767">Drilling.Common/Interface/Vision/CVisionComm.cs:753–767</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.ST_VISION_SINGLE_RESULT Drilling.Common.Interface.Vision.CVisionProtocol.DecodeSingleResult(Drilling.Common.Interface.Vision.ST_VISION_PACKET)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2647,8 +2647,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L422-L422">Drilling.Common/Interface/Vision/CVisionComm.cs:422–422</a></td><td>CVisionProtocol.DecodeSingleResult</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L923-L923">Drilling.Common/Interface/Vision/CVisionComm.cs:923–923</a></td><td>DecodeSingleResult</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L422-L422">Drilling.Common/Interface/Vision/CVisionComm.cs:422–422</a></td><td>CVisionProtocol.DecodeSingleResult</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L923-L923">Drilling.Common/Interface/Vision/CVisionComm.cs:923–923</a></td><td>DecodeSingleResult</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2682,7 +2682,7 @@
  M --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L769">MethodDeclaration <code>DecodeLineResult</code> · L769–808</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L769-L808">Drilling.Common/Interface/Vision/CVisionComm.cs:769–808</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L769-L808">Drilling.Common/Interface/Vision/CVisionComm.cs:769–808</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.ST_VISION_LINE_RESULT Drilling.Common.Interface.Vision.CVisionProtocol.DecodeLineResult(Drilling.Common.Interface.Vision.ST_VISION_PACKET, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2696,8 +2696,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L428-L428">Drilling.Common/Interface/Vision/CVisionComm.cs:428–428</a></td><td>CVisionProtocol.DecodeLineResult</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L930-L930">Drilling.Common/Interface/Vision/CVisionComm.cs:930–930</a></td><td>DecodeLineResult</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L428-L428">Drilling.Common/Interface/Vision/CVisionComm.cs:428–428</a></td><td>CVisionProtocol.DecodeLineResult</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L930-L930">Drilling.Common/Interface/Vision/CVisionComm.cs:930–930</a></td><td>DecodeLineResult</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2766,7 +2766,7 @@
  M --&gt;|포함| N5</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L810">MethodDeclaration <code>EncodeMarkSearch</code> · L810–815</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L810-L815">Drilling.Common/Interface/Vision/CVisionComm.cs:810–815</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L810-L815">Drilling.Common/Interface/Vision/CVisionComm.cs:810–815</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>byte[] Drilling.Common.Interface.Vision.CVisionProtocol.EncodeMarkSearch(Drilling.Common.Interface.Vision.ST_VISION_MARK_SEARCH)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2779,7 +2779,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L580-L580">Drilling.Common/Interface/Vision/CVisionComm.cs:580–580</a></td><td>EncodeMarkSearch</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L580-L580">Drilling.Common/Interface/Vision/CVisionComm.cs:580–580</a></td><td>EncodeMarkSearch</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2794,7 +2794,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L817">MethodDeclaration <code>FormatPacketLog</code> · L817–832</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L817-L832">Drilling.Common/Interface/Vision/CVisionComm.cs:817–832</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L817-L832">Drilling.Common/Interface/Vision/CVisionComm.cs:817–832</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Interface.Vision.CVisionProtocol.FormatPacketLog(string, Drilling.Common.Interface.Vision.ST_VISION_PACKET, string, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2810,8 +2810,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L205-L205">Drilling.Common/Interface/Vision/CVisionComm.cs:205–205</a></td><td>CVisionProtocol.FormatPacketLog</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L325-L325">Drilling.Common/Interface/Vision/CVisionComm.cs:325–325</a></td><td>CVisionProtocol.FormatPacketLog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L205-L205">Drilling.Common/Interface/Vision/CVisionComm.cs:205–205</a></td><td>CVisionProtocol.FormatPacketLog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L325-L325">Drilling.Common/Interface/Vision/CVisionComm.cs:325–325</a></td><td>CVisionProtocol.FormatPacketLog</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2878,7 +2878,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L834">MethodDeclaration <code>GetCommandName</code> · L834–847</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L834-L847">Drilling.Common/Interface/Vision/CVisionComm.cs:834–847</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L834-L847">Drilling.Common/Interface/Vision/CVisionComm.cs:834–847</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Interface.Vision.CVisionProtocol.GetCommandName(int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2891,7 +2891,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L828-L828">Drilling.Common/Interface/Vision/CVisionComm.cs:828–828</a></td><td>GetCommandName</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L828-L828">Drilling.Common/Interface/Vision/CVisionComm.cs:828–828</a></td><td>GetCommandName</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -2905,7 +2905,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L849">MethodDeclaration <code>AppendPacketLogBody</code> · L849–889</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L849-L889">Drilling.Common/Interface/Vision/CVisionComm.cs:849–889</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L849-L889">Drilling.Common/Interface/Vision/CVisionComm.cs:849–889</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.Vision.CVisionProtocol.AppendPacketLogBody(System.Text.StringBuilder, Drilling.Common.Interface.Vision.ST_VISION_PACKET, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2920,7 +2920,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L830-L830">Drilling.Common/Interface/Vision/CVisionComm.cs:830–830</a></td><td>AppendPacketLogBody</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L830-L830">Drilling.Common/Interface/Vision/CVisionComm.cs:830–830</a></td><td>AppendPacketLogBody</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2990,7 +2990,7 @@
  N1 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L891">MethodDeclaration <code>AppendMarkFindSingleLogBody</code> · L891–906</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L891-L906">Drilling.Common/Interface/Vision/CVisionComm.cs:891–906</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L891-L906">Drilling.Common/Interface/Vision/CVisionComm.cs:891–906</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.Vision.CVisionProtocol.AppendMarkFindSingleLogBody(System.Text.StringBuilder, Drilling.Common.Interface.Vision.ST_VISION_PACKET)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -3004,7 +3004,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L863-L863">Drilling.Common/Interface/Vision/CVisionComm.cs:863–863</a></td><td>AppendMarkFindSingleLogBody</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L863-L863">Drilling.Common/Interface/Vision/CVisionComm.cs:863–863</a></td><td>AppendMarkFindSingleLogBody</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -3071,7 +3071,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L908">MethodDeclaration <code>AppendFlyingReadyLogBody</code> · L908–919</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L908-L919">Drilling.Common/Interface/Vision/CVisionComm.cs:908–919</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L908-L919">Drilling.Common/Interface/Vision/CVisionComm.cs:908–919</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.Vision.CVisionProtocol.AppendFlyingReadyLogBody(System.Text.StringBuilder, Drilling.Common.Interface.Vision.ST_VISION_PACKET, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -3086,7 +3086,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L866-L866">Drilling.Common/Interface/Vision/CVisionComm.cs:866–866</a></td><td>AppendFlyingReadyLogBody</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L866-L866">Drilling.Common/Interface/Vision/CVisionComm.cs:866–866</a></td><td>AppendFlyingReadyLogBody</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -3153,7 +3153,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L921">MethodDeclaration <code>AppendSingleResultLogBody</code> · L921–926</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L921-L926">Drilling.Common/Interface/Vision/CVisionComm.cs:921–926</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L921-L926">Drilling.Common/Interface/Vision/CVisionComm.cs:921–926</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.Vision.CVisionProtocol.AppendSingleResultLogBody(System.Text.StringBuilder, Drilling.Common.Interface.Vision.ST_VISION_PACKET)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -3167,8 +3167,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L878-L878">Drilling.Common/Interface/Vision/CVisionComm.cs:878–878</a></td><td>AppendSingleResultLogBody</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L905-L905">Drilling.Common/Interface/Vision/CVisionComm.cs:905–905</a></td><td>AppendSingleResultLogBody</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L878-L878">Drilling.Common/Interface/Vision/CVisionComm.cs:878–878</a></td><td>AppendSingleResultLogBody</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L905-L905">Drilling.Common/Interface/Vision/CVisionComm.cs:905–905</a></td><td>AppendSingleResultLogBody</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -3190,7 +3190,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L928">MethodDeclaration <code>AppendLineResultLogBody</code> · L928–938</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L928-L938">Drilling.Common/Interface/Vision/CVisionComm.cs:928–938</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L928-L938">Drilling.Common/Interface/Vision/CVisionComm.cs:928–938</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.Vision.CVisionProtocol.AppendLineResultLogBody(System.Text.StringBuilder, Drilling.Common.Interface.Vision.ST_VISION_PACKET, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -3205,7 +3205,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L874-L874">Drilling.Common/Interface/Vision/CVisionComm.cs:874–874</a></td><td>AppendLineResultLogBody</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L874-L874">Drilling.Common/Interface/Vision/CVisionComm.cs:874–874</a></td><td>AppendLineResultLogBody</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -3242,7 +3242,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L940">MethodDeclaration <code>AppendMarkResultLog</code> · L940–953</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L940-L953">Drilling.Common/Interface/Vision/CVisionComm.cs:940–953</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L940-L953">Drilling.Common/Interface/Vision/CVisionComm.cs:940–953</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.Vision.CVisionProtocol.AppendMarkResultLog(System.Text.StringBuilder, Drilling.Common.Interface.Vision.ST_VISION_MARK_FIND, int?)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -3257,8 +3257,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L925-L925">Drilling.Common/Interface/Vision/CVisionComm.cs:925–925</a></td><td>AppendMarkResultLog</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L936-L936">Drilling.Common/Interface/Vision/CVisionComm.cs:936–936</a></td><td>AppendMarkResultLog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L925-L925">Drilling.Common/Interface/Vision/CVisionComm.cs:925–925</a></td><td>AppendMarkResultLog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L936-L936">Drilling.Common/Interface/Vision/CVisionComm.cs:936–936</a></td><td>AppendMarkResultLog</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -3315,7 +3315,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L955">MethodDeclaration <code>FormatLogNumber</code> · L955–958</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L955-L958">Drilling.Common/Interface/Vision/CVisionComm.cs:955–958</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L955-L958">Drilling.Common/Interface/Vision/CVisionComm.cs:955–958</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Interface.Vision.CVisionProtocol.FormatLogNumber(double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -3328,10 +3328,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L952-L952">Drilling.Common/Interface/Vision/CVisionComm.cs:952–952</a></td><td>FormatLogNumber</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L952-L952">Drilling.Common/Interface/Vision/CVisionComm.cs:952–952</a></td><td>FormatLogNumber</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L952-L952">Drilling.Common/Interface/Vision/CVisionComm.cs:952–952</a></td><td>FormatLogNumber</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L952-L952">Drilling.Common/Interface/Vision/CVisionComm.cs:952–952</a></td><td>FormatLogNumber</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L952-L952">Drilling.Common/Interface/Vision/CVisionComm.cs:952–952</a></td><td>FormatLogNumber</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L952-L952">Drilling.Common/Interface/Vision/CVisionComm.cs:952–952</a></td><td>FormatLogNumber</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L952-L952">Drilling.Common/Interface/Vision/CVisionComm.cs:952–952</a></td><td>FormatLogNumber</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L952-L952">Drilling.Common/Interface/Vision/CVisionComm.cs:952–952</a></td><td>FormatLogNumber</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -3344,7 +3344,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L960">MethodDeclaration <code>WriteMarkSearch</code> · L960–968</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L960-L968">Drilling.Common/Interface/Vision/CVisionComm.cs:960–968</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L960-L968">Drilling.Common/Interface/Vision/CVisionComm.cs:960–968</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.Vision.CVisionProtocol.WriteMarkSearch(System.Span&lt;byte&gt;, int, Drilling.Common.Interface.Vision.ST_VISION_MARK_SEARCH)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -3359,8 +3359,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L596-L596">Drilling.Common/Interface/Vision/CVisionComm.cs:596–596</a></td><td>WriteMarkSearch</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L813-L813">Drilling.Common/Interface/Vision/CVisionComm.cs:813–813</a></td><td>WriteMarkSearch</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L596-L596">Drilling.Common/Interface/Vision/CVisionComm.cs:596–596</a></td><td>WriteMarkSearch</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L813-L813">Drilling.Common/Interface/Vision/CVisionComm.cs:813–813</a></td><td>WriteMarkSearch</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -3382,7 +3382,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L970">MethodDeclaration <code>WriteMarkFind</code> · L970–977</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L970-L977">Drilling.Common/Interface/Vision/CVisionComm.cs:970–977</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L970-L977">Drilling.Common/Interface/Vision/CVisionComm.cs:970–977</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.Vision.CVisionProtocol.WriteMarkFind(System.Span&lt;byte&gt;, int, Drilling.Common.Interface.Vision.ST_VISION_MARK_FIND)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -3397,9 +3397,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L611-L611">Drilling.Common/Interface/Vision/CVisionComm.cs:611–611</a></td><td>WriteMarkFind</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L629-L629">Drilling.Common/Interface/Vision/CVisionComm.cs:629–629</a></td><td>WriteMarkFind</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L632-L632">Drilling.Common/Interface/Vision/CVisionComm.cs:632–632</a></td><td>WriteMarkFind</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L611-L611">Drilling.Common/Interface/Vision/CVisionComm.cs:611–611</a></td><td>WriteMarkFind</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L629-L629">Drilling.Common/Interface/Vision/CVisionComm.cs:629–629</a></td><td>WriteMarkFind</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L632-L632">Drilling.Common/Interface/Vision/CVisionComm.cs:632–632</a></td><td>WriteMarkFind</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -3419,7 +3419,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L979">MethodDeclaration <code>ReadPackedMarkFind</code> · L979–979</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L979-L979">Drilling.Common/Interface/Vision/CVisionComm.cs:979–979</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L979-L979">Drilling.Common/Interface/Vision/CVisionComm.cs:979–979</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.ST_VISION_MARK_FIND Drilling.Common.Interface.Vision.CVisionProtocol.ReadPackedMarkFind(System.ReadOnlySpan&lt;byte&gt;, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -3433,8 +3433,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L766-L766">Drilling.Common/Interface/Vision/CVisionComm.cs:766–766</a></td><td>ReadPackedMarkFind</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L804-L804">Drilling.Common/Interface/Vision/CVisionComm.cs:804–804</a></td><td>ReadPackedMarkFind</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L766-L766">Drilling.Common/Interface/Vision/CVisionComm.cs:766–766</a></td><td>ReadPackedMarkFind</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L804-L804">Drilling.Common/Interface/Vision/CVisionComm.cs:804–804</a></td><td>ReadPackedMarkFind</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -3456,7 +3456,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L980">MethodDeclaration <code>ReadMarkSearch</code> · L980–980</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L980-L980">Drilling.Common/Interface/Vision/CVisionComm.cs:980–980</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L980-L980">Drilling.Common/Interface/Vision/CVisionComm.cs:980–980</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.Vision.ST_VISION_MARK_SEARCH Drilling.Common.Interface.Vision.CVisionProtocol.ReadMarkSearch(System.ReadOnlySpan&lt;byte&gt;, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -3470,8 +3470,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L700-L700">Drilling.Common/Interface/Vision/CVisionComm.cs:700–700</a></td><td>ReadMarkSearch</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L733-L733">Drilling.Common/Interface/Vision/CVisionComm.cs:733–733</a></td><td>ReadMarkSearch</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L700-L700">Drilling.Common/Interface/Vision/CVisionComm.cs:700–700</a></td><td>ReadMarkSearch</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L733-L733">Drilling.Common/Interface/Vision/CVisionComm.cs:733–733</a></td><td>ReadMarkSearch</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -3495,7 +3495,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L981">MethodDeclaration <code>ValidateBodyLength</code> · L981–987</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L981-L987">Drilling.Common/Interface/Vision/CVisionComm.cs:981–987</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L981-L987">Drilling.Common/Interface/Vision/CVisionComm.cs:981–987</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.Vision.CVisionProtocol.ValidateBodyLength(int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -3508,9 +3508,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L640-L640">Drilling.Common/Interface/Vision/CVisionComm.cs:640–640</a></td><td>ValidateBodyLength</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L653-L653">Drilling.Common/Interface/Vision/CVisionComm.cs:653–653</a></td><td>ValidateBodyLength</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L671-L671">Drilling.Common/Interface/Vision/CVisionComm.cs:671–671</a></td><td>ValidateBodyLength</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L640-L640">Drilling.Common/Interface/Vision/CVisionComm.cs:640–640</a></td><td>ValidateBodyLength</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L653-L653">Drilling.Common/Interface/Vision/CVisionComm.cs:653–653</a></td><td>ValidateBodyLength</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L671-L671">Drilling.Common/Interface/Vision/CVisionComm.cs:671–671</a></td><td>ValidateBodyLength</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -3529,7 +3529,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L989">MethodDeclaration <code>ReadInt32</code> · L989–989</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L989-L989">Drilling.Common/Interface/Vision/CVisionComm.cs:989–989</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L989-L989">Drilling.Common/Interface/Vision/CVisionComm.cs:989–989</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.Vision.CVisionProtocol.ReadInt32(System.ReadOnlySpan&lt;byte&gt;, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -3543,23 +3543,23 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L670-L670">Drilling.Common/Interface/Vision/CVisionComm.cs:670–670</a></td><td>ReadInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L670-L670">Drilling.Common/Interface/Vision/CVisionComm.cs:670–670</a></td><td>ReadInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L670-L670">Drilling.Common/Interface/Vision/CVisionComm.cs:670–670</a></td><td>ReadInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L670-L670">Drilling.Common/Interface/Vision/CVisionComm.cs:670–670</a></td><td>ReadInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L717-L717">Drilling.Common/Interface/Vision/CVisionComm.cs:717–717</a></td><td>ReadInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L718-L718">Drilling.Common/Interface/Vision/CVisionComm.cs:718–718</a></td><td>ReadInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L747-L747">Drilling.Common/Interface/Vision/CVisionComm.cs:747–747</a></td><td>ReadInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L766-L766">Drilling.Common/Interface/Vision/CVisionComm.cs:766–766</a></td><td>ReadInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L784-L784">Drilling.Common/Interface/Vision/CVisionComm.cs:784–784</a></td><td>ReadInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L785-L785">Drilling.Common/Interface/Vision/CVisionComm.cs:785–785</a></td><td>ReadInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L979-L979">Drilling.Common/Interface/Vision/CVisionComm.cs:979–979</a></td><td>ReadInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L980-L980">Drilling.Common/Interface/Vision/CVisionComm.cs:980–980</a></td><td>ReadInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L980-L980">Drilling.Common/Interface/Vision/CVisionComm.cs:980–980</a></td><td>ReadInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L980-L980">Drilling.Common/Interface/Vision/CVisionComm.cs:980–980</a></td><td>ReadInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L980-L980">Drilling.Common/Interface/Vision/CVisionComm.cs:980–980</a></td><td>ReadInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L980-L980">Drilling.Common/Interface/Vision/CVisionComm.cs:980–980</a></td><td>ReadInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L980-L980">Drilling.Common/Interface/Vision/CVisionComm.cs:980–980</a></td><td>ReadInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L670-L670">Drilling.Common/Interface/Vision/CVisionComm.cs:670–670</a></td><td>ReadInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L670-L670">Drilling.Common/Interface/Vision/CVisionComm.cs:670–670</a></td><td>ReadInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L670-L670">Drilling.Common/Interface/Vision/CVisionComm.cs:670–670</a></td><td>ReadInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L670-L670">Drilling.Common/Interface/Vision/CVisionComm.cs:670–670</a></td><td>ReadInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L717-L717">Drilling.Common/Interface/Vision/CVisionComm.cs:717–717</a></td><td>ReadInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L718-L718">Drilling.Common/Interface/Vision/CVisionComm.cs:718–718</a></td><td>ReadInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L747-L747">Drilling.Common/Interface/Vision/CVisionComm.cs:747–747</a></td><td>ReadInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L766-L766">Drilling.Common/Interface/Vision/CVisionComm.cs:766–766</a></td><td>ReadInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L784-L784">Drilling.Common/Interface/Vision/CVisionComm.cs:784–784</a></td><td>ReadInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L785-L785">Drilling.Common/Interface/Vision/CVisionComm.cs:785–785</a></td><td>ReadInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L979-L979">Drilling.Common/Interface/Vision/CVisionComm.cs:979–979</a></td><td>ReadInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L980-L980">Drilling.Common/Interface/Vision/CVisionComm.cs:980–980</a></td><td>ReadInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L980-L980">Drilling.Common/Interface/Vision/CVisionComm.cs:980–980</a></td><td>ReadInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L980-L980">Drilling.Common/Interface/Vision/CVisionComm.cs:980–980</a></td><td>ReadInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L980-L980">Drilling.Common/Interface/Vision/CVisionComm.cs:980–980</a></td><td>ReadInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L980-L980">Drilling.Common/Interface/Vision/CVisionComm.cs:980–980</a></td><td>ReadInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L980-L980">Drilling.Common/Interface/Vision/CVisionComm.cs:980–980</a></td><td>ReadInt32</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -3573,7 +3573,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L990">MethodDeclaration <code>ReadDouble</code> · L990–994</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L990-L994">Drilling.Common/Interface/Vision/CVisionComm.cs:990–994</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L990-L994">Drilling.Common/Interface/Vision/CVisionComm.cs:990–994</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Interface.Vision.CVisionProtocol.ReadDouble(System.ReadOnlySpan&lt;byte&gt;, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -3587,10 +3587,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L979-L979">Drilling.Common/Interface/Vision/CVisionComm.cs:979–979</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L979-L979">Drilling.Common/Interface/Vision/CVisionComm.cs:979–979</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L979-L979">Drilling.Common/Interface/Vision/CVisionComm.cs:979–979</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L979-L979">Drilling.Common/Interface/Vision/CVisionComm.cs:979–979</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L979-L979">Drilling.Common/Interface/Vision/CVisionComm.cs:979–979</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L979-L979">Drilling.Common/Interface/Vision/CVisionComm.cs:979–979</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L979-L979">Drilling.Common/Interface/Vision/CVisionComm.cs:979–979</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L979-L979">Drilling.Common/Interface/Vision/CVisionComm.cs:979–979</a></td><td>ReadDouble</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -3609,7 +3609,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L996">MethodDeclaration <code>WriteInt32</code> · L996–996</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L996-L996">Drilling.Common/Interface/Vision/CVisionComm.cs:996–996</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L996-L996">Drilling.Common/Interface/Vision/CVisionComm.cs:996–996</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.Vision.CVisionProtocol.WriteInt32(System.Span&lt;byte&gt;, int, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -3624,22 +3624,22 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L592-L592">Drilling.Common/Interface/Vision/CVisionComm.cs:592–592</a></td><td>WriteInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L593-L593">Drilling.Common/Interface/Vision/CVisionComm.cs:593–593</a></td><td>WriteInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L610-L610">Drilling.Common/Interface/Vision/CVisionComm.cs:610–610</a></td><td>WriteInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L625-L625">Drilling.Common/Interface/Vision/CVisionComm.cs:625–625</a></td><td>WriteInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L626-L626">Drilling.Common/Interface/Vision/CVisionComm.cs:626–626</a></td><td>WriteInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L655-L655">Drilling.Common/Interface/Vision/CVisionComm.cs:655–655</a></td><td>WriteInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L656-L656">Drilling.Common/Interface/Vision/CVisionComm.cs:656–656</a></td><td>WriteInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L657-L657">Drilling.Common/Interface/Vision/CVisionComm.cs:657–657</a></td><td>WriteInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L658-L658">Drilling.Common/Interface/Vision/CVisionComm.cs:658–658</a></td><td>WriteInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L962-L962">Drilling.Common/Interface/Vision/CVisionComm.cs:962–962</a></td><td>WriteInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L963-L963">Drilling.Common/Interface/Vision/CVisionComm.cs:963–963</a></td><td>WriteInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L964-L964">Drilling.Common/Interface/Vision/CVisionComm.cs:964–964</a></td><td>WriteInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L965-L965">Drilling.Common/Interface/Vision/CVisionComm.cs:965–965</a></td><td>WriteInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L966-L966">Drilling.Common/Interface/Vision/CVisionComm.cs:966–966</a></td><td>WriteInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L967-L967">Drilling.Common/Interface/Vision/CVisionComm.cs:967–967</a></td><td>WriteInt32</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L972-L972">Drilling.Common/Interface/Vision/CVisionComm.cs:972–972</a></td><td>WriteInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L592-L592">Drilling.Common/Interface/Vision/CVisionComm.cs:592–592</a></td><td>WriteInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L593-L593">Drilling.Common/Interface/Vision/CVisionComm.cs:593–593</a></td><td>WriteInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L610-L610">Drilling.Common/Interface/Vision/CVisionComm.cs:610–610</a></td><td>WriteInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L625-L625">Drilling.Common/Interface/Vision/CVisionComm.cs:625–625</a></td><td>WriteInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L626-L626">Drilling.Common/Interface/Vision/CVisionComm.cs:626–626</a></td><td>WriteInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L655-L655">Drilling.Common/Interface/Vision/CVisionComm.cs:655–655</a></td><td>WriteInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L656-L656">Drilling.Common/Interface/Vision/CVisionComm.cs:656–656</a></td><td>WriteInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L657-L657">Drilling.Common/Interface/Vision/CVisionComm.cs:657–657</a></td><td>WriteInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L658-L658">Drilling.Common/Interface/Vision/CVisionComm.cs:658–658</a></td><td>WriteInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L962-L962">Drilling.Common/Interface/Vision/CVisionComm.cs:962–962</a></td><td>WriteInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L963-L963">Drilling.Common/Interface/Vision/CVisionComm.cs:963–963</a></td><td>WriteInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L964-L964">Drilling.Common/Interface/Vision/CVisionComm.cs:964–964</a></td><td>WriteInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L965-L965">Drilling.Common/Interface/Vision/CVisionComm.cs:965–965</a></td><td>WriteInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L966-L966">Drilling.Common/Interface/Vision/CVisionComm.cs:966–966</a></td><td>WriteInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L967-L967">Drilling.Common/Interface/Vision/CVisionComm.cs:967–967</a></td><td>WriteInt32</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L972-L972">Drilling.Common/Interface/Vision/CVisionComm.cs:972–972</a></td><td>WriteInt32</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -3653,7 +3653,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L997">MethodDeclaration <code>WriteDouble</code> · L997–997</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L997-L997">Drilling.Common/Interface/Vision/CVisionComm.cs:997–997</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L997-L997">Drilling.Common/Interface/Vision/CVisionComm.cs:997–997</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.Vision.CVisionProtocol.WriteDouble(System.Span&lt;byte&gt;, int, double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -3668,10 +3668,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L973-L973">Drilling.Common/Interface/Vision/CVisionComm.cs:973–973</a></td><td>WriteDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L974-L974">Drilling.Common/Interface/Vision/CVisionComm.cs:974–974</a></td><td>WriteDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L975-L975">Drilling.Common/Interface/Vision/CVisionComm.cs:975–975</a></td><td>WriteDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L976-L976">Drilling.Common/Interface/Vision/CVisionComm.cs:976–976</a></td><td>WriteDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L973-L973">Drilling.Common/Interface/Vision/CVisionComm.cs:973–973</a></td><td>WriteDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L974-L974">Drilling.Common/Interface/Vision/CVisionComm.cs:974–974</a></td><td>WriteDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L975-L975">Drilling.Common/Interface/Vision/CVisionComm.cs:975–975</a></td><td>WriteDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L976-L976">Drilling.Common/Interface/Vision/CVisionComm.cs:976–976</a></td><td>WriteDouble</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>

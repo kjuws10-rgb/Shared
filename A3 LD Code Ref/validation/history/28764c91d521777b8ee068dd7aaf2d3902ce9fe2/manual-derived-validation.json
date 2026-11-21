@@ -1,0 +1,784 @@
+{
+  "schemaVersion": "a3-independent-manual-derived-qa/1",
+  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "passed": true,
+  "checks": [
+    {
+      "name": "sixteen_frozen_manual_chapters",
+      "passed": true
+    },
+    {
+      "name": "sixteen_combined_manual_sections",
+      "passed": true
+    },
+    {
+      "name": "manual_source_byte_identical",
+      "passed": true,
+      "manualPath": "architecture/01-startup-and-composition.md"
+    },
+    {
+      "name": "combined_manual_exact_body_except_relocated_urls",
+      "passed": true,
+      "manualPath": "architecture/01-startup-and-composition.md"
+    },
+    {
+      "name": "manual_html_full_visible_character_sequence",
+      "passed": true,
+      "manualPath": "architecture/01-startup-and-composition.md",
+      "sourceVisibleCharacters": 6131,
+      "htmlVisibleCharacters": 6131,
+      "firstMismatch": null
+    },
+    {
+      "name": "manual_html_images_match_markdown_assets",
+      "passed": true,
+      "manualPath": "architecture/01-startup-and-composition.md",
+      "imageReferences": 1
+    },
+    {
+      "name": "manual_source_byte_identical",
+      "passed": true,
+      "manualPath": "architecture/02-recipe-settings-and-csv.md"
+    },
+    {
+      "name": "combined_manual_exact_body_except_relocated_urls",
+      "passed": true,
+      "manualPath": "architecture/02-recipe-settings-and-csv.md"
+    },
+    {
+      "name": "manual_html_full_visible_character_sequence",
+      "passed": true,
+      "manualPath": "architecture/02-recipe-settings-and-csv.md",
+      "sourceVisibleCharacters": 8784,
+      "htmlVisibleCharacters": 8784,
+      "firstMismatch": null
+    },
+    {
+      "name": "manual_html_images_match_markdown_assets",
+      "passed": true,
+      "manualPath": "architecture/02-recipe-settings-and-csv.md",
+      "imageReferences": 1
+    },
+    {
+      "name": "manual_source_byte_identical",
+      "passed": true,
+      "manualPath": "architecture/03-coordinate-script-and-mof.md"
+    },
+    {
+      "name": "combined_manual_exact_body_except_relocated_urls",
+      "passed": true,
+      "manualPath": "architecture/03-coordinate-script-and-mof.md"
+    },
+    {
+      "name": "manual_html_full_visible_character_sequence",
+      "passed": true,
+      "manualPath": "architecture/03-coordinate-script-and-mof.md",
+      "sourceVisibleCharacters": 9968,
+      "htmlVisibleCharacters": 9968,
+      "firstMismatch": null
+    },
+    {
+      "name": "manual_html_images_match_markdown_assets",
+      "passed": true,
+      "manualPath": "architecture/03-coordinate-script-and-mof.md",
+      "imageReferences": 1
+    },
+    {
+      "name": "manual_source_byte_identical",
+      "passed": true,
+      "manualPath": "architecture/04-product-and-station-lifecycle.md"
+    },
+    {
+      "name": "combined_manual_exact_body_except_relocated_urls",
+      "passed": true,
+      "manualPath": "architecture/04-product-and-station-lifecycle.md"
+    },
+    {
+      "name": "manual_html_full_visible_character_sequence",
+      "passed": true,
+      "manualPath": "architecture/04-product-and-station-lifecycle.md",
+      "sourceVisibleCharacters": 10705,
+      "htmlVisibleCharacters": 10705,
+      "firstMismatch": null
+    },
+    {
+      "name": "manual_html_images_match_markdown_assets",
+      "passed": true,
+      "manualPath": "architecture/04-product-and-station-lifecycle.md",
+      "imageReferences": 1
+    },
+    {
+      "name": "manual_source_byte_identical",
+      "passed": true,
+      "manualPath": "architecture/05-device-interfaces-and-drivers.md"
+    },
+    {
+      "name": "combined_manual_exact_body_except_relocated_urls",
+      "passed": true,
+      "manualPath": "architecture/05-device-interfaces-and-drivers.md"
+    },
+    {
+      "name": "manual_html_full_visible_character_sequence",
+      "passed": true,
+      "manualPath": "architecture/05-device-interfaces-and-drivers.md",
+      "sourceVisibleCharacters": 6996,
+      "htmlVisibleCharacters": 6996,
+      "firstMismatch": null
+    },
+    {
+      "name": "manual_html_images_match_markdown_assets",
+      "passed": true,
+      "manualPath": "architecture/05-device-interfaces-and-drivers.md",
+      "imageReferences": 1
+    },
+    {
+      "name": "manual_source_byte_identical",
+      "passed": true,
+      "manualPath": "architecture/06-threading-snapshots-and-logs.md"
+    },
+    {
+      "name": "combined_manual_exact_body_except_relocated_urls",
+      "passed": true,
+      "manualPath": "architecture/06-threading-snapshots-and-logs.md"
+    },
+    {
+      "name": "manual_html_full_visible_character_sequence",
+      "passed": true,
+      "manualPath": "architecture/06-threading-snapshots-and-logs.md",
+      "sourceVisibleCharacters": 8104,
+      "htmlVisibleCharacters": 8104,
+      "firstMismatch": null
+    },
+    {
+      "name": "manual_html_images_match_markdown_assets",
+      "passed": true,
+      "manualPath": "architecture/06-threading-snapshots-and-logs.md",
+      "imageReferences": 1
+    },
+    {
+      "name": "manual_source_byte_identical",
+      "passed": true,
+      "manualPath": "architecture/07-change-impact-and-offline-reference.md"
+    },
+    {
+      "name": "combined_manual_exact_body_except_relocated_urls",
+      "passed": true,
+      "manualPath": "architecture/07-change-impact-and-offline-reference.md"
+    },
+    {
+      "name": "manual_html_full_visible_character_sequence",
+      "passed": true,
+      "manualPath": "architecture/07-change-impact-and-offline-reference.md",
+      "sourceVisibleCharacters": 5867,
+      "htmlVisibleCharacters": 5867,
+      "firstMismatch": null
+    },
+    {
+      "name": "manual_html_images_match_markdown_assets",
+      "passed": true,
+      "manualPath": "architecture/07-change-impact-and-offline-reference.md",
+      "imageReferences": 1
+    },
+    {
+      "name": "manual_source_byte_identical",
+      "passed": true,
+      "manualPath": "architecture/08-alarm-cause-analysis.md"
+    },
+    {
+      "name": "combined_manual_exact_body_except_relocated_urls",
+      "passed": true,
+      "manualPath": "architecture/08-alarm-cause-analysis.md"
+    },
+    {
+      "name": "manual_html_full_visible_character_sequence",
+      "passed": true,
+      "manualPath": "architecture/08-alarm-cause-analysis.md",
+      "sourceVisibleCharacters": 4609,
+      "htmlVisibleCharacters": 4609,
+      "firstMismatch": null
+    },
+    {
+      "name": "manual_html_images_match_markdown_assets",
+      "passed": true,
+      "manualPath": "architecture/08-alarm-cause-analysis.md",
+      "imageReferences": 1
+    },
+    {
+      "name": "manual_source_byte_identical",
+      "passed": true,
+      "manualPath": "architecture/README.md"
+    },
+    {
+      "name": "combined_manual_exact_body_except_relocated_urls",
+      "passed": true,
+      "manualPath": "architecture/README.md"
+    },
+    {
+      "name": "manual_html_full_visible_character_sequence",
+      "passed": true,
+      "manualPath": "architecture/README.md",
+      "sourceVisibleCharacters": 1154,
+      "htmlVisibleCharacters": 1154,
+      "firstMismatch": null
+    },
+    {
+      "name": "manual_html_images_match_markdown_assets",
+      "passed": true,
+      "manualPath": "architecture/README.md",
+      "imageReferences": 0
+    },
+    {
+      "name": "manual_source_byte_identical",
+      "passed": true,
+      "manualPath": "review/01_Review_계획과_좌표계.md"
+    },
+    {
+      "name": "combined_manual_exact_body_except_relocated_urls",
+      "passed": true,
+      "manualPath": "review/01_Review_계획과_좌표계.md"
+    },
+    {
+      "name": "manual_html_full_visible_character_sequence",
+      "passed": true,
+      "manualPath": "review/01_Review_계획과_좌표계.md",
+      "sourceVisibleCharacters": 7893,
+      "htmlVisibleCharacters": 7893,
+      "firstMismatch": null
+    },
+    {
+      "name": "manual_html_images_match_markdown_assets",
+      "passed": true,
+      "manualPath": "review/01_Review_계획과_좌표계.md",
+      "imageReferences": 1
+    },
+    {
+      "name": "manual_source_byte_identical",
+      "passed": true,
+      "manualPath": "review/02_Masking_Sampling_IOF.md"
+    },
+    {
+      "name": "combined_manual_exact_body_except_relocated_urls",
+      "passed": true,
+      "manualPath": "review/02_Masking_Sampling_IOF.md"
+    },
+    {
+      "name": "manual_html_full_visible_character_sequence",
+      "passed": true,
+      "manualPath": "review/02_Masking_Sampling_IOF.md",
+      "sourceVisibleCharacters": 6723,
+      "htmlVisibleCharacters": 6723,
+      "firstMismatch": null
+    },
+    {
+      "name": "manual_html_images_match_markdown_assets",
+      "passed": true,
+      "manualPath": "review/02_Masking_Sampling_IOF.md",
+      "imageReferences": 1
+    },
+    {
+      "name": "manual_source_byte_identical",
+      "passed": true,
+      "manualPath": "review/03_Vision_패킷과_단위.md"
+    },
+    {
+      "name": "combined_manual_exact_body_except_relocated_urls",
+      "passed": true,
+      "manualPath": "review/03_Vision_패킷과_단위.md"
+    },
+    {
+      "name": "manual_html_full_visible_character_sequence",
+      "passed": true,
+      "manualPath": "review/03_Vision_패킷과_단위.md",
+      "sourceVisibleCharacters": 7904,
+      "htmlVisibleCharacters": 7904,
+      "firstMismatch": null
+    },
+    {
+      "name": "manual_html_images_match_markdown_assets",
+      "passed": true,
+      "manualPath": "review/03_Vision_패킷과_단위.md",
+      "imageReferences": 1
+    },
+    {
+      "name": "manual_source_byte_identical",
+      "passed": true,
+      "manualPath": "review/04_ReviewOffset_적용과_롤백.md"
+    },
+    {
+      "name": "combined_manual_exact_body_except_relocated_urls",
+      "passed": true,
+      "manualPath": "review/04_ReviewOffset_적용과_롤백.md"
+    },
+    {
+      "name": "manual_html_full_visible_character_sequence",
+      "passed": true,
+      "manualPath": "review/04_ReviewOffset_적용과_롤백.md",
+      "sourceVisibleCharacters": 9882,
+      "htmlVisibleCharacters": 9882,
+      "firstMismatch": null
+    },
+    {
+      "name": "manual_html_images_match_markdown_assets",
+      "passed": true,
+      "manualPath": "review/04_ReviewOffset_적용과_롤백.md",
+      "imageReferences": 1
+    },
+    {
+      "name": "manual_source_byte_identical",
+      "passed": true,
+      "manualPath": "review/05_결과_Revision_Product_연결.md"
+    },
+    {
+      "name": "combined_manual_exact_body_except_relocated_urls",
+      "passed": true,
+      "manualPath": "review/05_결과_Revision_Product_연결.md"
+    },
+    {
+      "name": "manual_html_full_visible_character_sequence",
+      "passed": true,
+      "manualPath": "review/05_결과_Revision_Product_연결.md",
+      "sourceVisibleCharacters": 11878,
+      "htmlVisibleCharacters": 11878,
+      "firstMismatch": null
+    },
+    {
+      "name": "manual_html_images_match_markdown_assets",
+      "passed": true,
+      "manualPath": "review/05_결과_Revision_Product_연결.md",
+      "imageReferences": 1
+    },
+    {
+      "name": "manual_source_byte_identical",
+      "passed": true,
+      "manualPath": "review/06_DefaultOffset_ZeroOrder_FirstBeam.md"
+    },
+    {
+      "name": "combined_manual_exact_body_except_relocated_urls",
+      "passed": true,
+      "manualPath": "review/06_DefaultOffset_ZeroOrder_FirstBeam.md"
+    },
+    {
+      "name": "manual_html_full_visible_character_sequence",
+      "passed": true,
+      "manualPath": "review/06_DefaultOffset_ZeroOrder_FirstBeam.md",
+      "sourceVisibleCharacters": 8799,
+      "htmlVisibleCharacters": 8799,
+      "firstMismatch": null
+    },
+    {
+      "name": "manual_html_images_match_markdown_assets",
+      "passed": true,
+      "manualPath": "review/06_DefaultOffset_ZeroOrder_FirstBeam.md",
+      "imageReferences": 1
+    },
+    {
+      "name": "manual_source_byte_identical",
+      "passed": true,
+      "manualPath": "review/07_Align_Distortion_윈도우_복구.md"
+    },
+    {
+      "name": "combined_manual_exact_body_except_relocated_urls",
+      "passed": true,
+      "manualPath": "review/07_Align_Distortion_윈도우_복구.md"
+    },
+    {
+      "name": "manual_html_full_visible_character_sequence",
+      "passed": true,
+      "manualPath": "review/07_Align_Distortion_윈도우_복구.md",
+      "sourceVisibleCharacters": 9015,
+      "htmlVisibleCharacters": 9015,
+      "firstMismatch": null
+    },
+    {
+      "name": "manual_html_images_match_markdown_assets",
+      "passed": true,
+      "manualPath": "review/07_Align_Distortion_윈도우_복구.md",
+      "imageReferences": 1
+    },
+    {
+      "name": "manual_svg_exact_content_with_lf_normalization",
+      "passed": true,
+      "svgPath": "architecture/diagrams/01-startup.svg",
+      "sourceRawBytesMatch": true
+    },
+    {
+      "name": "manual_svg_exact_content_with_lf_normalization",
+      "passed": true,
+      "svgPath": "architecture/diagrams/02-recipe.svg",
+      "sourceRawBytesMatch": true
+    },
+    {
+      "name": "manual_svg_exact_content_with_lf_normalization",
+      "passed": true,
+      "svgPath": "architecture/diagrams/03-coordinate.svg",
+      "sourceRawBytesMatch": true
+    },
+    {
+      "name": "manual_svg_exact_content_with_lf_normalization",
+      "passed": true,
+      "svgPath": "architecture/diagrams/04-product.svg",
+      "sourceRawBytesMatch": true
+    },
+    {
+      "name": "manual_svg_exact_content_with_lf_normalization",
+      "passed": true,
+      "svgPath": "architecture/diagrams/05-device.svg",
+      "sourceRawBytesMatch": true
+    },
+    {
+      "name": "manual_svg_exact_content_with_lf_normalization",
+      "passed": true,
+      "svgPath": "architecture/diagrams/06-thread.svg",
+      "sourceRawBytesMatch": true
+    },
+    {
+      "name": "manual_svg_exact_content_with_lf_normalization",
+      "passed": true,
+      "svgPath": "architecture/diagrams/07-change.svg",
+      "sourceRawBytesMatch": true
+    },
+    {
+      "name": "manual_svg_exact_content_with_lf_normalization",
+      "passed": true,
+      "svgPath": "architecture/diagrams/08-alarm.svg",
+      "sourceRawBytesMatch": true
+    },
+    {
+      "name": "manual_svg_exact_content_with_lf_normalization",
+      "passed": true,
+      "svgPath": "review/diagrams/review-01.svg",
+      "sourceRawBytesMatch": false
+    },
+    {
+      "name": "manual_svg_exact_content_with_lf_normalization",
+      "passed": true,
+      "svgPath": "review/diagrams/review-02.svg",
+      "sourceRawBytesMatch": false
+    },
+    {
+      "name": "manual_svg_exact_content_with_lf_normalization",
+      "passed": true,
+      "svgPath": "review/diagrams/review-03.svg",
+      "sourceRawBytesMatch": false
+    },
+    {
+      "name": "manual_svg_exact_content_with_lf_normalization",
+      "passed": true,
+      "svgPath": "review/diagrams/review-04.svg",
+      "sourceRawBytesMatch": false
+    },
+    {
+      "name": "manual_svg_exact_content_with_lf_normalization",
+      "passed": true,
+      "svgPath": "review/diagrams/review-05.svg",
+      "sourceRawBytesMatch": false
+    },
+    {
+      "name": "manual_svg_exact_content_with_lf_normalization",
+      "passed": true,
+      "svgPath": "review/diagrams/review-06.svg",
+      "sourceRawBytesMatch": false
+    },
+    {
+      "name": "manual_svg_exact_content_with_lf_normalization",
+      "passed": true,
+      "svgPath": "review/diagrams/review-07.svg",
+      "sourceRawBytesMatch": false
+    },
+    {
+      "name": "diagram_spec_exact_content_with_lf_normalization",
+      "passed": true,
+      "specPath": "architecture/diagram-spec.json",
+      "sourceRawBytesMatch": true
+    },
+    {
+      "name": "diagram_spec_current_commit",
+      "passed": true,
+      "specPath": "architecture/diagram-spec.json"
+    },
+    {
+      "name": "spec_diagram_svg_exists",
+      "passed": true,
+      "svgPath": "architecture/diagrams/01-startup.svg"
+    },
+    {
+      "name": "spec_node_labels_present_in_svg",
+      "passed": true,
+      "svgPath": "architecture/diagrams/01-startup.svg",
+      "nodeLabels": 6
+    },
+    {
+      "name": "spec_diagram_svg_exists",
+      "passed": true,
+      "svgPath": "architecture/diagrams/02-recipe.svg"
+    },
+    {
+      "name": "spec_node_labels_present_in_svg",
+      "passed": true,
+      "svgPath": "architecture/diagrams/02-recipe.svg",
+      "nodeLabels": 6
+    },
+    {
+      "name": "spec_diagram_svg_exists",
+      "passed": true,
+      "svgPath": "architecture/diagrams/03-coordinate.svg"
+    },
+    {
+      "name": "spec_node_labels_present_in_svg",
+      "passed": true,
+      "svgPath": "architecture/diagrams/03-coordinate.svg",
+      "nodeLabels": 6
+    },
+    {
+      "name": "spec_diagram_svg_exists",
+      "passed": true,
+      "svgPath": "architecture/diagrams/04-product.svg"
+    },
+    {
+      "name": "spec_node_labels_present_in_svg",
+      "passed": true,
+      "svgPath": "architecture/diagrams/04-product.svg",
+      "nodeLabels": 6
+    },
+    {
+      "name": "spec_diagram_svg_exists",
+      "passed": true,
+      "svgPath": "architecture/diagrams/05-device.svg"
+    },
+    {
+      "name": "spec_node_labels_present_in_svg",
+      "passed": true,
+      "svgPath": "architecture/diagrams/05-device.svg",
+      "nodeLabels": 6
+    },
+    {
+      "name": "spec_diagram_svg_exists",
+      "passed": true,
+      "svgPath": "architecture/diagrams/06-thread.svg"
+    },
+    {
+      "name": "spec_node_labels_present_in_svg",
+      "passed": true,
+      "svgPath": "architecture/diagrams/06-thread.svg",
+      "nodeLabels": 6
+    },
+    {
+      "name": "spec_diagram_svg_exists",
+      "passed": true,
+      "svgPath": "architecture/diagrams/07-change.svg"
+    },
+    {
+      "name": "spec_node_labels_present_in_svg",
+      "passed": true,
+      "svgPath": "architecture/diagrams/07-change.svg",
+      "nodeLabels": 6
+    },
+    {
+      "name": "spec_diagram_svg_exists",
+      "passed": true,
+      "svgPath": "architecture/diagrams/08-alarm.svg"
+    },
+    {
+      "name": "spec_node_labels_present_in_svg",
+      "passed": true,
+      "svgPath": "architecture/diagrams/08-alarm.svg",
+      "nodeLabels": 6
+    },
+    {
+      "name": "diagram_spec_exact_content_with_lf_normalization",
+      "passed": true,
+      "specPath": "review/diagram-spec.json",
+      "sourceRawBytesMatch": false
+    },
+    {
+      "name": "diagram_spec_current_commit",
+      "passed": true,
+      "specPath": "review/diagram-spec.json"
+    },
+    {
+      "name": "spec_diagram_svg_exists",
+      "passed": true,
+      "svgPath": "review/diagrams/review-01.svg"
+    },
+    {
+      "name": "spec_node_labels_present_in_svg",
+      "passed": true,
+      "svgPath": "review/diagrams/review-01.svg",
+      "nodeLabels": 8
+    },
+    {
+      "name": "spec_diagram_svg_exists",
+      "passed": true,
+      "svgPath": "review/diagrams/review-02.svg"
+    },
+    {
+      "name": "spec_node_labels_present_in_svg",
+      "passed": true,
+      "svgPath": "review/diagrams/review-02.svg",
+      "nodeLabels": 8
+    },
+    {
+      "name": "spec_diagram_svg_exists",
+      "passed": true,
+      "svgPath": "review/diagrams/review-03.svg"
+    },
+    {
+      "name": "spec_node_labels_present_in_svg",
+      "passed": true,
+      "svgPath": "review/diagrams/review-03.svg",
+      "nodeLabels": 8
+    },
+    {
+      "name": "spec_diagram_svg_exists",
+      "passed": true,
+      "svgPath": "review/diagrams/review-04.svg"
+    },
+    {
+      "name": "spec_node_labels_present_in_svg",
+      "passed": true,
+      "svgPath": "review/diagrams/review-04.svg",
+      "nodeLabels": 8
+    },
+    {
+      "name": "spec_diagram_svg_exists",
+      "passed": true,
+      "svgPath": "review/diagrams/review-05.svg"
+    },
+    {
+      "name": "spec_node_labels_present_in_svg",
+      "passed": true,
+      "svgPath": "review/diagrams/review-05.svg",
+      "nodeLabels": 8
+    },
+    {
+      "name": "spec_diagram_svg_exists",
+      "passed": true,
+      "svgPath": "review/diagrams/review-06.svg"
+    },
+    {
+      "name": "spec_node_labels_present_in_svg",
+      "passed": true,
+      "svgPath": "review/diagrams/review-06.svg",
+      "nodeLabels": 8
+    },
+    {
+      "name": "spec_diagram_svg_exists",
+      "passed": true,
+      "svgPath": "review/diagrams/review-07.svg"
+    },
+    {
+      "name": "spec_node_labels_present_in_svg",
+      "passed": true,
+      "svgPath": "review/diagrams/review-07.svg",
+      "nodeLabels": 8
+    },
+    {
+      "name": "every_svg_spec_is_referenced_by_manual",
+      "passed": true
+    }
+  ],
+  "totalChecks": 116,
+  "manualChapters": 16,
+  "manualSvgFiles": 15,
+  "diagramSpecs": 2,
+  "manualVisibleCharacters": 124412,
+  "chapterTextCounts": [
+    {
+      "manualPath": "architecture/01-startup-and-composition.md",
+      "sourceVisibleCharacters": 6131,
+      "htmlVisibleCharacters": 6131,
+      "matched": true
+    },
+    {
+      "manualPath": "architecture/02-recipe-settings-and-csv.md",
+      "sourceVisibleCharacters": 8784,
+      "htmlVisibleCharacters": 8784,
+      "matched": true
+    },
+    {
+      "manualPath": "architecture/03-coordinate-script-and-mof.md",
+      "sourceVisibleCharacters": 9968,
+      "htmlVisibleCharacters": 9968,
+      "matched": true
+    },
+    {
+      "manualPath": "architecture/04-product-and-station-lifecycle.md",
+      "sourceVisibleCharacters": 10705,
+      "htmlVisibleCharacters": 10705,
+      "matched": true
+    },
+    {
+      "manualPath": "architecture/05-device-interfaces-and-drivers.md",
+      "sourceVisibleCharacters": 6996,
+      "htmlVisibleCharacters": 6996,
+      "matched": true
+    },
+    {
+      "manualPath": "architecture/06-threading-snapshots-and-logs.md",
+      "sourceVisibleCharacters": 8104,
+      "htmlVisibleCharacters": 8104,
+      "matched": true
+    },
+    {
+      "manualPath": "architecture/07-change-impact-and-offline-reference.md",
+      "sourceVisibleCharacters": 5867,
+      "htmlVisibleCharacters": 5867,
+      "matched": true
+    },
+    {
+      "manualPath": "architecture/08-alarm-cause-analysis.md",
+      "sourceVisibleCharacters": 4609,
+      "htmlVisibleCharacters": 4609,
+      "matched": true
+    },
+    {
+      "manualPath": "architecture/README.md",
+      "sourceVisibleCharacters": 1154,
+      "htmlVisibleCharacters": 1154,
+      "matched": true
+    },
+    {
+      "manualPath": "review/01_Review_계획과_좌표계.md",
+      "sourceVisibleCharacters": 7893,
+      "htmlVisibleCharacters": 7893,
+      "matched": true
+    },
+    {
+      "manualPath": "review/02_Masking_Sampling_IOF.md",
+      "sourceVisibleCharacters": 6723,
+      "htmlVisibleCharacters": 6723,
+      "matched": true
+    },
+    {
+      "manualPath": "review/03_Vision_패킷과_단위.md",
+      "sourceVisibleCharacters": 7904,
+      "htmlVisibleCharacters": 7904,
+      "matched": true
+    },
+    {
+      "manualPath": "review/04_ReviewOffset_적용과_롤백.md",
+      "sourceVisibleCharacters": 9882,
+      "htmlVisibleCharacters": 9882,
+      "matched": true
+    },
+    {
+      "manualPath": "review/05_결과_Revision_Product_연결.md",
+      "sourceVisibleCharacters": 11878,
+      "htmlVisibleCharacters": 11878,
+      "matched": true
+    },
+    {
+      "manualPath": "review/06_DefaultOffset_ZeroOrder_FirstBeam.md",
+      "sourceVisibleCharacters": 8799,
+      "htmlVisibleCharacters": 8799,
+      "matched": true
+    },
+    {
+      "manualPath": "review/07_Align_Distortion_윈도우_복구.md",
+      "sourceVisibleCharacters": 9015,
+      "htmlVisibleCharacters": 9015,
+      "matched": true
+    }
+  ],
+  "scope": "Exact frozen Markdown bytes; SVG/spec preserve all bytes except documented CRLF-to-LF normalization; spec literal backslash-n denotes line separation. Exact combined Markdown body except relocated link URLs; Unicode-alphanumeric visible HTML text with markup/whitespace and generated offline navigation labels excluded. This is derivative preservation, not source behavior certification."
+}

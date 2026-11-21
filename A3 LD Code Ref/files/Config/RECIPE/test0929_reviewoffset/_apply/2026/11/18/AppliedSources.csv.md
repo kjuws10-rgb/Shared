@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | f3e6c0187a4e860238c099b9d53e5dc1441db0db5587a4bbb4cb039cbcea2c8c |
 | 파일 분류 | data_schema |
 | 원본 크기/행 | 177 bytes / 2 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Config/RECIPE/test0929_reviewoffset/_apply/2026/11/18/AppliedSources.csv) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Config/RECIPE/test0929_reviewoffset/_apply/2026/11/18/AppliedSources.csv) |
 
 ## 파일의 역할과 읽는 순서
 

@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 07820c2ab6d3b94b466c68f2ee3561100ce5af1be2c67fc32fabeb589ec39b00 |
 | 파일 분류 | code |
 | 원본 크기/행 | 574 bytes / 21 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMainView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMainView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -34,7 +34,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L9–12
 
-[Drilling.UI/Views/CMainView.xaml.cs:9–12](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMainView.xaml.cs#L9-L12)
+[Drilling.UI/Views/CMainView.xaml.cs:9–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMainView.xaml.cs#L9-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -61,7 +61,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OpenInterlockDetailsDialog` · L14–19
 
-[Drilling.UI/Views/CMainView.xaml.cs:14–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMainView.xaml.cs#L14-L19)
+[Drilling.UI/Views/CMainView.xaml.cs:14–19](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMainView.xaml.cs#L14-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

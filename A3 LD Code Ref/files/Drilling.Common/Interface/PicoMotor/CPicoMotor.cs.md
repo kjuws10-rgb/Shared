@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 1ed2d4e75aff571327da9adc26627362304999b597201fd3d93de4d4f818fa93 |
 | 파일 분류 | code |
 | 원본 크기/행 | 39,764 bytes / 1,018 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -161,7 +161,7 @@
 
 ### FieldDeclaration `StepPerMillimeter` · L8–8
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L8-L8)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L8-L8)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -182,7 +182,7 @@
 
 ### MethodDeclaration `BuildAxisCommand` · L9–18
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:9–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L9-L18)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:9–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L9-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -235,7 +235,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildAxisCommand` · L20–24
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:20–24](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L20-L24)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:20–24](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L20-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -273,7 +273,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildGlobalCommand` · L26–29
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:26–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L26-L29)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:26–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L26-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -302,7 +302,7 @@ flowchart TD
 
 ### MethodDeclaration `MillimeterToStep` · L31–34
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:31–34](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L31-L34)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:31–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L31-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -321,13 +321,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L479-L479) | CPicoMotor.MillimeterToStep | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:584–584](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L584-L584) | CPicoMotor.MillimeterToStep | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:815–815](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L815-L815) | CPicoMotor.MillimeterToStep | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:818–818](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L818-L818) | CPicoMotor.MillimeterToStep | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:837–837](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L837-L837) | CPicoMotor.MillimeterToStep | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:840–840](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L840-L840) | CPicoMotor.MillimeterToStep | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:843–843](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L843-L843) | CPicoMotor.MillimeterToStep | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L479-L479) | CPicoMotor.MillimeterToStep | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:584–584](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L584-L584) | CPicoMotor.MillimeterToStep | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:815–815](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L815-L815) | CPicoMotor.MillimeterToStep | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:818–818](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L818-L818) | CPicoMotor.MillimeterToStep | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:837–837](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L837-L837) | CPicoMotor.MillimeterToStep | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:840–840](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L840-L840) | CPicoMotor.MillimeterToStep | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:843–843](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L843-L843) | CPicoMotor.MillimeterToStep | False |
 
 호출하는 대상과 해석 범위:
 
@@ -348,7 +348,7 @@ flowchart TD
 
 ### MethodDeclaration `StepToMillimeter` · L36–39
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:36–39](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L36-L39)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:36–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L36-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -367,15 +367,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:447–447](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L447-L447) | CPicoMotor.StepToMillimeter | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:448–448](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L448-L448) | CPicoMotor.StepToMillimeter | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:449–449](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L449-L449) | CPicoMotor.StepToMillimeter | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L450-L450) | CPicoMotor.StepToMillimeter | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L452-L452) | CPicoMotor.StepToMillimeter | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:453–453](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L453-L453) | CPicoMotor.StepToMillimeter | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:884–884](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L884-L884) | CPicoMotor.StepToMillimeter | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:916–916](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L916-L916) | CPicoMotor.StepToMillimeter | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:6320–6320](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L6320-L6320) | CPicoMotor.StepToMillimeter | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:447–447](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L447-L447) | CPicoMotor.StepToMillimeter | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:448–448](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L448-L448) | CPicoMotor.StepToMillimeter | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:449–449](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L449-L449) | CPicoMotor.StepToMillimeter | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L450-L450) | CPicoMotor.StepToMillimeter | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L452-L452) | CPicoMotor.StepToMillimeter | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:453–453](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L453-L453) | CPicoMotor.StepToMillimeter | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:884–884](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L884-L884) | CPicoMotor.StepToMillimeter | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:916–916](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L916-L916) | CPicoMotor.StepToMillimeter | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:6320–6320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L6320-L6320) | CPicoMotor.StepToMillimeter | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -387,7 +387,7 @@ flowchart TD
 
 ### MethodDeclaration `TryParseLong` · L41–44
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:41–44](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L41-L44)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:41–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L41-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -424,7 +424,7 @@ flowchart TD
 
 ### MethodDeclaration `TryParseInt` · L46–49
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:46–49](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L46-L49)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:46–49](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L46-L49)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -461,7 +461,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeResponse` · L51–54
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:51–54](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L51-L54)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:51–54](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L51-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -480,10 +480,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L43-L43) | NormalizeResponse | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L48-L48) | NormalizeResponse | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L265-L265) | CPicoMotor.NormalizeResponse | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L277-L277) | CPicoMotor.NormalizeResponse | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L43-L43) | NormalizeResponse | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L48-L48) | NormalizeResponse | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L265-L265) | CPicoMotor.NormalizeResponse | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L277-L277) | CPicoMotor.NormalizeResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -506,7 +506,7 @@ flowchart TD
 
 ### MethodDeclaration `ToError` · L56–59
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:56–59](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L56-L59)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:56–59](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L56-L59)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -525,7 +525,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:457–457](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L457-L457) | CPicoMotor.ToError | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:457–457](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L457-L457) | CPicoMotor.ToError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -545,7 +545,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Connect` · L64–64
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L64-L64)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L64-L64)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -560,7 +560,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Disconnect` · L65–65
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L65-L65)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L65-L65)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -575,7 +575,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SelectMotor` · L66–66
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L66-L66)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L66-L66)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -590,7 +590,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetVelocity` · L67–67
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L67-L67)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L67-L67)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -605,7 +605,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetAcceleration` · L68–68
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L68-L68)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L68-L68)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -620,7 +620,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `StopMotion` · L69–69
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L69-L69)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L69-L69)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -635,7 +635,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Home` · L70–70
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L70-L70)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L70-L70)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -650,7 +650,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `JogNegative` · L71–71
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L71-L71)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L71-L71)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -665,7 +665,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `JogPositive` · L72–72
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L72-L72)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L72-L72)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -680,7 +680,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `MoveRelativeNegative` · L73–73
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L73-L73)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L73-L73)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -695,7 +695,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `MoveRelativePositive` · L74–74
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L74-L74)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L74-L74)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -710,7 +710,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `MoveAbsolute` · L75–75
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L75-L75)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L75-L75)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -725,7 +725,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `AllMotorStart` · L76–76
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L76-L76)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L76-L76)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -740,7 +740,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `AllMotorStop` · L77–77
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L77-L77)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L77-L77)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -755,7 +755,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Refresh` · L78–78
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L78-L78)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L78-L78)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -770,7 +770,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Ok` · L83–83
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L83-L83)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L83-L83)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -785,7 +785,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Error` · L84–84
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L84-L84)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L84-L84)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -800,7 +800,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `OverTemp` · L85–85
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L85-L85)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L85-L85)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -815,7 +815,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `CommandNotExist` · L86–86
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L86-L86)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L86-L86)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -830,7 +830,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `ParameterOutOfRange` · L87–87
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L87-L87)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L87-L87)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -845,7 +845,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `AxisNoOutOfRange` · L88–88
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L88-L88)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L88-L88)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -860,7 +860,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `EepromWriteFail` · L89–89
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L89-L89)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L89-L89)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -875,7 +875,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `EepromReadFail` · L90–90
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L90-L90)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L90-L90)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -890,7 +890,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `AxisNoMissing` · L91–91
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L91-L91)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L91-L91)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -905,7 +905,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `CommandParameterMissing` · L92–92
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L92-L92)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L92-L92)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -920,7 +920,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Rs485ExtFault` · L93–93
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L93-L93)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L93-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -935,7 +935,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Rs485CrcFault` · L94–94
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L94-L94)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L94-L94)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -950,7 +950,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `ControllerNoOutOfRange` · L95–95
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L95-L95)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L95-L95)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -965,7 +965,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `ScanInProgress` · L96–96
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L96-L96)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L96-L96)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -980,7 +980,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Timeout` · L97–97
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L97-L97)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L97-L97)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -995,7 +995,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `InvalidResponse` · L98–98
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L98-L98)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L98-L98)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1010,7 +1010,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `NotSupported` · L99–99
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L99-L99)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L99-L99)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1025,7 +1025,7 @@ flowchart TD
 
 ### PropertyDeclaration `Empty` · L123–123
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L123-L123)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L123-L123)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1052,7 +1052,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Empty` · L123–123
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L123-L123)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L123-L123)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1067,7 +1067,7 @@ flowchart TD
 
 ### FieldDeclaration `_syncRoot` · L128–128
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L128-L128)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L128-L128)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1095,7 +1095,7 @@ flowchart TD
 
 ### FieldDeclaration `_cmdLib` · L129–129
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L129-L129)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L129-L129)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1110,7 +1110,7 @@ flowchart TD
 
 ### FieldDeclaration `_deviceKey` · L130–130
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L130-L130)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L130-L130)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1131,7 +1131,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsConnected` · L131–137
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:131–137](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L131-L137)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:131–137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L131-L137)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1146,7 +1146,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsConnected` · L133–136
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:133–136](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L133-L136)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:133–136](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L133-L136)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1174,7 +1174,7 @@ flowchart TD
 
 ### PropertyDeclaration `DeviceKey` · L139–145
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:139–145](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L139-L145)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:139–145](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L139-L145)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1189,7 +1189,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DeviceKey` · L141–144
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:141–144](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L141-L144)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:141–144](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L141-L144)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1210,7 +1210,7 @@ flowchart TD
 
 ### MethodDeclaration `Connect` · L147–174
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:147–174](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L147-L174)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:147–174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L147-L174)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1229,7 +1229,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:795–795](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L795-L795) | session.Connect | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:795–795](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L795-L795) | session.Connect | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1284,7 +1284,7 @@ flowchart TD
 
 ### MethodDeclaration `Disconnect` · L176–195
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:176–195](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L176-L195)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:176–195](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L176-L195)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1297,8 +1297,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:368–368](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L368-L368) | Disconnect | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:804–804](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L804-L804) | session.Disconnect | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:368–368](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L368-L368) | Disconnect | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:804–804](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L804-L804) | session.Disconnect | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1340,7 +1340,7 @@ flowchart TD
 
 ### MethodDeclaration `GetIdentification` · L197–206
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:197–206](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L197-L206)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:197–206](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L197-L206)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1353,7 +1353,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:441–441](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L441-L441) | session.GetIdentification | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:441–441](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L441-L441) | session.GetIdentification | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1375,7 +1375,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesCmdlib8742` · L200–203
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:200–203](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L200-L203)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:200–203](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L200-L203)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1409,7 +1409,7 @@ flowchart TD
 
 ### MethodDeclaration `GetPositionStep` · L208–218
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:208–218](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L208-L218)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:208–218](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L208-L218)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1428,10 +1428,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:447–447](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L447-L447) | session.GetPositionStep | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:448–448](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L448-L448) | session.GetPositionStep | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:449–449](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L449-L449) | session.GetPositionStep | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L450-L450) | session.GetPositionStep | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:447–447](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L447-L447) | session.GetPositionStep | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:448–448](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L448-L448) | session.GetPositionStep | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:449–449](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L449-L449) | session.GetPositionStep | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L450-L450) | session.GetPositionStep | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1452,7 +1452,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesCmdlib8742` · L211–214
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:211–214](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L211-L214)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:211–214](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L211-L214)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1488,7 +1488,7 @@ flowchart TD
 
 ### MethodDeclaration `GetVelocityStep` · L220–230
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:220–230](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L220-L230)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:220–230](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L220-L230)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1507,7 +1507,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L452-L452) | session.GetVelocityStep | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L452-L452) | session.GetVelocityStep | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1528,7 +1528,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesCmdlib8742` · L223–226
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:223–226](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L223-L226)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:223–226](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L223-L226)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1564,7 +1564,7 @@ flowchart TD
 
 ### MethodDeclaration `GetAccelerationStep` · L232–242
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:232–242](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L232-L242)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:232–242](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L232-L242)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1583,7 +1583,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:453–453](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L453-L453) | session.GetAccelerationStep | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:453–453](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L453-L453) | session.GetAccelerationStep | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1604,7 +1604,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesCmdlib8742` · L235–238
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:235–238](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L235-L238)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:235–238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L235-L238)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1640,7 +1640,7 @@ flowchart TD
 
 ### MethodDeclaration `GetMotionDone` · L244–254
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:244–254](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L244-L254)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:244–254](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L244-L254)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1659,7 +1659,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L454-L454) | session.GetMotionDone | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L454-L454) | session.GetMotionDone | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1680,7 +1680,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesCmdlib8742` · L247–250
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:247–250](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L247-L250)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:247–250](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L247-L250)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1716,7 +1716,7 @@ flowchart TD
 
 ### MethodDeclaration `GetErrorCode` · L256–266
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:256–266](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L256-L266)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:256–266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L256-L266)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1729,7 +1729,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:442–442](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L442-L442) | session.GetErrorCode | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:442–442](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L442-L442) | session.GetErrorCode | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1755,7 +1755,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesCmdlib8742` · L259–262
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:259–262](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L259-L262)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:259–262](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L259-L262)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1789,7 +1789,7 @@ flowchart TD
 
 ### MethodDeclaration `GetHomePositionStep` · L268–278
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:268–278](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L268-L278)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:268–278](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L268-L278)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1808,8 +1808,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:322–322](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L322-L322) | GetHomePositionStep | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L451-L451) | session.GetHomePositionStep | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:322–322](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L322-L322) | GetHomePositionStep | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L451-L451) | session.GetHomePositionStep | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1835,7 +1835,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesCmdlib8742` · L271–274
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:271–274](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L271-L274)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:271–274](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L271-L274)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1871,7 +1871,7 @@ flowchart TD
 
 ### MethodDeclaration `SetVelocity` · L280–288
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:280–288](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L280-L288)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:280–288](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L280-L288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1891,7 +1891,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:815–815](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L815-L815) | live.SetVelocity | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:815–815](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L815-L815) | live.SetVelocity | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1909,7 +1909,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesCmdlib8742` · L282–285
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:282–285](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L282-L285)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:282–285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L282-L285)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1945,7 +1945,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAcceleration` · L290–298
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:290–298](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L290-L298)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:290–298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L290-L298)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1965,7 +1965,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:818–818](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L818-L818) | live.SetAcceleration | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:818–818](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L818-L818) | live.SetAcceleration | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1983,7 +1983,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesCmdlib8742` · L292–295
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:292–295](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L292-L295)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:292–295](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L292-L295)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2019,7 +2019,7 @@ flowchart TD
 
 ### MethodDeclaration `StopMotion` · L300–308
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:300–308](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L300-L308)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:300–308](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L300-L308)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2038,7 +2038,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:821–821](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L821-L821) | live.StopMotion | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:821–821](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L821-L821) | live.StopMotion | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2056,7 +2056,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesCmdlib8742` · L302–305
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:302–305](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L302-L305)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:302–305](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L302-L305)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2092,7 +2092,7 @@ flowchart TD
 
 ### MethodDeclaration `AbortMotion` · L310–318
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:310–318](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L310-L318)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:310–318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L310-L318)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2105,7 +2105,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:824–824](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L824-L824) | live.AbortMotion | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:824–824](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L824-L824) | live.AbortMotion | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2123,7 +2123,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesCmdlib8742` · L312–315
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:312–315](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L312-L315)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:312–315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L312-L315)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2157,7 +2157,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveHome` · L320–324
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:320–324](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L320-L324)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:320–324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L320-L324)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2176,7 +2176,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:828–828](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L828-L828) | live.MoveHome | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:828–828](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L828-L828) | live.MoveHome | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2198,7 +2198,7 @@ flowchart TD
 
 ### MethodDeclaration `JogNegative` · L326–334
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:326–334](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L326-L334)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:326–334](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L326-L334)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2217,7 +2217,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:831–831](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L831-L831) | live.JogNegative | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:831–831](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L831-L831) | live.JogNegative | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2235,7 +2235,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesCmdlib8742` · L328–331
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:328–331](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L328-L331)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:328–331](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L328-L331)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2271,7 +2271,7 @@ flowchart TD
 
 ### MethodDeclaration `JogPositive` · L336–344
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:336–344](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L336-L344)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:336–344](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L336-L344)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2290,7 +2290,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:834–834](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L834-L834) | live.JogPositive | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:834–834](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L834-L834) | live.JogPositive | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2308,7 +2308,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesCmdlib8742` · L338–341
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:338–341](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L338-L341)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:338–341](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L338-L341)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2344,7 +2344,7 @@ flowchart TD
 
 ### MethodDeclaration `RelativeMove` · L346–354
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:346–354](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L346-L354)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:346–354](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L346-L354)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2364,9 +2364,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:590–590](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L590-L590) | session.RelativeMove | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:837–837](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L837-L837) | live.RelativeMove | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:840–840](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L840-L840) | live.RelativeMove | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:590–590](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L590-L590) | session.RelativeMove | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:837–837](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L837-L837) | live.RelativeMove | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:840–840](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L840-L840) | live.RelativeMove | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2384,7 +2384,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesCmdlib8742` · L348–351
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:348–351](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L348-L351)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:348–351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L348-L351)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2422,7 +2422,7 @@ flowchart TD
 
 ### MethodDeclaration `AbsoluteMove` · L356–364
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:356–364](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L356-L364)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:356–364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L356-L364)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2442,8 +2442,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L323-L323) | AbsoluteMove | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:843–843](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L843-L843) | live.AbsoluteMove | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L323-L323) | AbsoluteMove | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:843–843](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L843-L843) | live.AbsoluteMove | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2461,7 +2461,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesCmdlib8742` · L358–361
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:358–361](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L358-L361)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:358–361](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L358-L361)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2499,7 +2499,7 @@ flowchart TD
 
 ### MethodDeclaration `Dispose` · L366–369
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:366–369](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L366-L369)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:366–369](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L366-L369)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2512,8 +2512,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:763–763](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L763-L763) | session.Dispose | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:777–777](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L777-L777) | session.Dispose | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:763–763](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L763-L763) | session.Dispose | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:777–777](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L777-L777) | session.Dispose | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2531,7 +2531,7 @@ flowchart TD
 
 ### MethodDeclaration `Execute` · L371–382
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:371–382](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L371-L382)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:371–382](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L371-L382)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2550,8 +2550,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L205-L205) | Execute | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:386–386](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L386-L386) | Execute | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L205-L205) | Execute | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:386–386](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L386-L386) | Execute | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2586,7 +2586,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteOrThrow` · L384–390
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:384–390](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L384-L390)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:384–390](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L384-L390)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2606,20 +2606,20 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L216-L216) | ExecuteOrThrow | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L228-L228) | ExecuteOrThrow | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L240-L240) | ExecuteOrThrow | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:252–252](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L252-L252) | ExecuteOrThrow | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L264-L264) | ExecuteOrThrow | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:276–276](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L276-L276) | ExecuteOrThrow | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L287-L287) | ExecuteOrThrow | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L297-L297) | ExecuteOrThrow | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L307-L307) | ExecuteOrThrow | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L317-L317) | ExecuteOrThrow | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L333-L333) | ExecuteOrThrow | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L343-L343) | ExecuteOrThrow | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L353-L353) | ExecuteOrThrow | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L363-L363) | ExecuteOrThrow | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L216-L216) | ExecuteOrThrow | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L228-L228) | ExecuteOrThrow | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L240-L240) | ExecuteOrThrow | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:252–252](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L252-L252) | ExecuteOrThrow | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L264-L264) | ExecuteOrThrow | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:276–276](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L276-L276) | ExecuteOrThrow | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L287-L287) | ExecuteOrThrow | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L297-L297) | ExecuteOrThrow | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L307-L307) | ExecuteOrThrow | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L317-L317) | ExecuteOrThrow | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L333-L333) | ExecuteOrThrow | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L343-L343) | ExecuteOrThrow | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L353-L353) | ExecuteOrThrow | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L363-L363) | ExecuteOrThrow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2650,7 +2650,7 @@ flowchart TD
 
 ### MethodDeclaration `ClampMotorNo` · L392–395
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:392–395](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L392-L395)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:392–395](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L392-L395)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2669,18 +2669,18 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:213–213](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L213-L213) | ClampMotorNo | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L225-L225) | ClampMotorNo | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L237-L237) | ClampMotorNo | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L249-L249) | ClampMotorNo | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L273-L273) | ClampMotorNo | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L284-L284) | ClampMotorNo | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L294-L294) | ClampMotorNo | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L304-L304) | ClampMotorNo | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L330-L330) | ClampMotorNo | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L340-L340) | ClampMotorNo | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L350-L350) | ClampMotorNo | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:360–360](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L360-L360) | ClampMotorNo | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:213–213](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L213-L213) | ClampMotorNo | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L225-L225) | ClampMotorNo | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L237-L237) | ClampMotorNo | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L249-L249) | ClampMotorNo | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L273-L273) | ClampMotorNo | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L284-L284) | ClampMotorNo | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L294-L294) | ClampMotorNo | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L304-L304) | ClampMotorNo | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L330-L330) | ClampMotorNo | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L340-L340) | ClampMotorNo | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L350-L350) | ClampMotorNo | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:360–360](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L360-L360) | ClampMotorNo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2699,7 +2699,7 @@ flowchart TD
 
 ### MethodDeclaration `ToInt32Step` · L397–405
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:397–405](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L397-L405)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:397–405](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L397-L405)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2718,8 +2718,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L350-L350) | ToInt32Step | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:360–360](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L360-L360) | ToInt32Step | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L350-L350) | ToInt32Step | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:360–360](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L360-L360) | ToInt32Step | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2741,7 +2741,7 @@ flowchart TD
 
 ### FieldDeclaration `_syncRoot` · L410–410
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:410–410](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L410-L410)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:410–410](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L410-L410)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2769,7 +2769,7 @@ flowchart TD
 
 ### FieldDeclaration `_sessions` · L411–411
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L411-L411)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L411-L411)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2790,7 +2790,7 @@ flowchart TD
 
 ### FieldDeclaration `_statuses` · L412–412
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:412–412](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L412-L412)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:412–412](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L412-L412)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2811,7 +2811,7 @@ flowchart TD
 
 ### FieldDeclaration `_allMoveTokens` · L413–413
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:413–413](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L413-L413)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:413–413](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L413-L413)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2832,7 +2832,7 @@ flowchart TD
 
 ### FieldDeclaration `_motionTokens` · L414–414
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:414–414](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L414-L414)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:414–414](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L414-L414)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2853,7 +2853,7 @@ flowchart TD
 
 ### FieldDeclaration `SimulationIntervalMs` · L415–415
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:415–415](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L415-L415)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:415–415](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L415-L415)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2874,7 +2874,7 @@ flowchart TD
 
 ### MethodDeclaration `GetStatus` · L416–422
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:416–422](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L416-L422)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:416–422](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L416-L422)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2893,24 +2893,24 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:1527–1527](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CInterfaceManager.cs#L1527-L1527) | _picoMotorService.GetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:428–428](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L428-L428) | GetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:439–439](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L439-L439) | GetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:524–524](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L524-L524) | GetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L552-L552) | GetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:599–599](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L599-L599) | GetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L606-L606) | GetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:611–611](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L611-L611) | GetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:654–654](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L654-L654) | GetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:679–679](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L679-L679) | GetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:694–694](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L694-L694) | GetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:797–797](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L797-L797) | GetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:805–805](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L805-L805) | GetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:850–850](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L850-L850) | GetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:864–864](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L864-L864) | GetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:912–912](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L912-L912) | GetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:930–930](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L930-L930) | GetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:947–947](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L947-L947) | GetStatus | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:1527–1527](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L1527-L1527) | _picoMotorService.GetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:428–428](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L428-L428) | GetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:439–439](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L439-L439) | GetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:524–524](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L524-L524) | GetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L552-L552) | GetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:599–599](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L599-L599) | GetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L606-L606) | GetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:611–611](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L611-L611) | GetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:654–654](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L654-L654) | GetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:679–679](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L679-L679) | GetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:694–694](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L694-L694) | GetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:797–797](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L797-L797) | GetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:805–805](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L805-L805) | GetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:850–850](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L850-L850) | GetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:864–864](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L864-L864) | GetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:912–912](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L912-L912) | GetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:930–930](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L930-L930) | GetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:947–947](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L947-L947) | GetStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2940,7 +2940,7 @@ flowchart TD
 
 ### MethodDeclaration `Refresh` · L424–465
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:424–465](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L424-L465)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:424–465](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L424-L465)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2961,9 +2961,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:1523–1523](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CInterfaceManager.cs#L1523-L1523) | _picoMotorService.Refresh | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:596–596](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L596-L596) | Refresh | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:846–846](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L846-L846) | Refresh | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:1523–1523](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L1523-L1523) | _picoMotorService.Refresh | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:596–596](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L596-L596) | Refresh | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:846–846](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L846-L846) | Refresh | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2998,7 +2998,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectStatus` · L435–462
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:435–462](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L435-L462)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:435–462](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L435-L462)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3098,7 +3098,7 @@ flowchart TD
 
 ### MethodDeclaration `Execute` · L467–527
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:467–527](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L467-L527)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:467–527](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L467-L527)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3122,7 +3122,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:1575–1575](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CInterfaceManager.cs#L1575-L1575) | _picoMotorService.Execute | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:1575–1575](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L1575-L1575) | _picoMotorService.Execute | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3229,7 +3229,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ExecuteLiveCallback` · L470–473
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:470–473](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L470-L473)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:470–473](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L470-L473)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3256,7 +3256,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteAllMove` · L529–625
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:529–625](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L529-L625)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:529–625](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L529-L625)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3280,7 +3280,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:1618–1618](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CInterfaceManager.cs#L1618-L1618) | _picoMotorService.ExecuteAllMove | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:1618–1618](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L1618-L1618) | _picoMotorService.ExecuteAllMove | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3459,7 +3459,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L531–534
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:531–534](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L531-L534)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:531–534](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L531-L534)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3486,7 +3486,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L536–539
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:536–539](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L536-L539)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:536–539](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L536-L539)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3513,7 +3513,7 @@ flowchart TD
 
 ### LocalFunctionStatement `GeneratedMoveCallback` · L585–592
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:585–592](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L585-L592)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:585–592](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L585-L592)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3552,7 +3552,7 @@ flowchart TD
 
 ### MethodDeclaration `CancelAllMove` · L627–634
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:627–634](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L627-L634)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:627–634](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L627-L634)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3571,9 +3571,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:488–488](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L488-L488) | CancelAllMove | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:563–563](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L563-L563) | CancelAllMove | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:825–825](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L825-L825) | CancelAllMove | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:488–488](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L488-L488) | CancelAllMove | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:563–563](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L563-L563) | CancelAllMove | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:825–825](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L825-L825) | CancelAllMove | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3606,7 +3606,7 @@ flowchart TD
 
 ### MethodDeclaration `CancelMotion` · L636–645
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:636–645](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L636-L645)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:636–645](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L636-L645)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3625,9 +3625,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L489-L489) | CancelMotion | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:493–493](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L493-L493) | CancelMotion | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:903–903](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L903-L903) | CancelMotion | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L489-L489) | CancelMotion | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:493–493](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L493-L493) | CancelMotion | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:903–903](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L903-L903) | CancelMotion | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3660,7 +3660,7 @@ flowchart TD
 
 ### MethodDeclaration `IsMoveCommand` · L647–650
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:647–650](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L647-L650)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:647–650](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L647-L650)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3679,7 +3679,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:498–498](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L498-L498) | IsMoveCommand | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:498–498](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L498-L498) | IsMoveCommand | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -3691,7 +3691,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateSimulationMove` · L652–675
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:652–675](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L652-L675)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:652–675](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L652-L675)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3711,8 +3711,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:498–498](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L498-L498) | ValidateSimulationMove | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:558–558](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L558-L558) | ValidateSimulationMove | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:498–498](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L498-L498) | ValidateSimulationMove | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:558–558](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L558-L558) | ValidateSimulationMove | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3764,7 +3764,7 @@ flowchart TD
 
 ### MethodDeclaration `SimulateAllMotorMoveByDelta` · L677–721
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:677–721](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L677-L721)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:677–721](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L677-L721)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3786,7 +3786,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:579–579](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L579-L579) | SimulateAllMotorMoveByDelta | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:579–579](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L579-L579) | SimulateAllMotorMoveByDelta | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3875,7 +3875,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectMotorNo` · L680–683
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:680–683](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L680-L683)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:680–683](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L680-L683)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3902,7 +3902,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L685–688
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:685–688](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L685-L688)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:685–688](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L685-L688)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3936,7 +3936,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitAllMotorsDone` · L723–747
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:723–747](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L723-L747)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:723–747](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L723-L747)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3957,7 +3957,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:595–595](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L595-L595) | WaitAllMotorsDone | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:595–595](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L595-L595) | WaitAllMotorsDone | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4007,7 +4007,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Matches` · L726–729
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:726–729](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L726-L729)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:726–729](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L726-L729)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4035,7 +4035,7 @@ flowchart TD
 
 ### MethodDeclaration `GetSimulationStepDistance` · L749–752
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:749–752](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L749-L752)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:749–752](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L749-L752)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4054,10 +4054,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:697–697](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L697-L697) | GetSimulationStepDistance | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:888–888](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L888-L888) | GetSimulationStepDistance | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:889–889](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L889-L889) | GetSimulationStepDistance | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:939–939](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L939-L939) | GetSimulationStepDistance | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:697–697](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L697-L697) | GetSimulationStepDistance | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:888–888](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L888-L888) | GetSimulationStepDistance | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:889–889](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L889-L889) | GetSimulationStepDistance | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:939–939](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L939-L939) | GetSimulationStepDistance | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4076,7 +4076,7 @@ flowchart TD
 
 ### MethodDeclaration `Disconnect` · L754–766
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:754–766](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L754-L766)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:754–766](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L754-L766)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4095,7 +4095,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:2098–2098](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CInterfaceManager.cs#L2098-L2098) | _picoMotorService.Disconnect | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:2098–2098](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L2098-L2098) | _picoMotorService.Disconnect | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4144,7 +4144,7 @@ flowchart TD
 
 ### MethodDeclaration `DisconnectAll` · L768–783
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:768–783](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L768-L783)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:768–783](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L768-L783)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4157,9 +4157,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CInterfaceManager.cs#L193-L193) | _picoMotorService.DisconnectAll | False |
-| [Drilling.Common/Interface/CInterfaceManager.cs:258–258](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CInterfaceManager.cs#L258-L258) | _picoMotorService.DisconnectAll | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:787–787](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L787-L787) | DisconnectAll | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L193-L193) | _picoMotorService.DisconnectAll | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:258–258](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L258-L258) | _picoMotorService.DisconnectAll | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:787–787](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L787-L787) | DisconnectAll | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4208,7 +4208,7 @@ flowchart TD
 
 ### MethodDeclaration `Dispose` · L785–788
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:785–788](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L785-L788)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:785–788](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L785-L788)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4235,7 +4235,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteLive` · L790–860
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:790–860](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L790-L860)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:790–860](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L790-L860)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4257,7 +4257,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:472–472](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L472-L472) | ExecuteLive | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:472–472](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L472-L472) | ExecuteLive | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4408,7 +4408,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteSimulation` · L862–899
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:862–899](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L862-L899)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:862–899](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L862-L899)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4430,7 +4430,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:509–509](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L509-L509) | ExecuteSimulation | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:509–509](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L509-L509) | ExecuteSimulation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4499,7 +4499,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteSimulationPositionMove` · L901–960
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:901–960](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L901-L960)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:901–960](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L901-L960)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4522,7 +4522,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:505–505](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L505-L505) | ExecuteSimulationPositionMove | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:505–505](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L505-L505) | ExecuteSimulationPositionMove | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4657,7 +4657,7 @@ flowchart TD
 
 ### MethodDeclaration `GetSession` · L962–976
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:962–976](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L962-L976)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:962–976](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L962-L976)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4677,10 +4677,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:438–438](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L438-L438) | GetSession | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:583–583](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L583-L583) | GetSession | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:794–794](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L794-L794) | GetSession | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:809–809](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L809-L809) | GetSession | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:438–438](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L438-L438) | GetSession | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:583–583](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L583-L583) | GetSession | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:794–794](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L794-L794) | GetSession | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:809–809](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L809-L809) | GetSession | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4722,7 +4722,7 @@ flowchart TD
 
 ### MethodDeclaration `SetStatus` · L978–982
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:978–982](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L978-L982)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:978–982](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L978-L982)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4742,20 +4742,20 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L460-L460) | SetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:524–524](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L524-L524) | SetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:571–571](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L571-L571) | SetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:599–599](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L599-L599) | SetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L606-L606) | SetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:611–611](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L611-L611) | SetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:713–713](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L713-L713) | SetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:797–797](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L797-L797) | SetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:805–805](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L805-L805) | SetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:851–859](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L851-L859) | SetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:898–898](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L898-L898) | SetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:935–935](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L935-L935) | SetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:941–941](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L941-L941) | SetStatus | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:947–947](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L947-L947) | SetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L460-L460) | SetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:524–524](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L524-L524) | SetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:571–571](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L571-L571) | SetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:599–599](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L599-L599) | SetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L606-L606) | SetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:611–611](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L611-L611) | SetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:713–713](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L713-L713) | SetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:797–797](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L797-L797) | SetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:805–805](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L805-L805) | SetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:851–859](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L851-L859) | SetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:898–898](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L898-L898) | SetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:935–935](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L935-L935) | SetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:941–941](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L941-L941) | SetStatus | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:947–947](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L947-L947) | SetStatus | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -4777,7 +4777,7 @@ flowchart TD
 
 ### MethodDeclaration `GetPosition` · L984–993
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:984–993](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L984-L993)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:984–993](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L984-L993)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4797,11 +4797,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:687–687](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L687-L687) | GetPosition | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:700–700](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L700-L700) | GetPosition | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:865–865](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L865-L865) | GetPosition | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:913–913](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L913-L913) | GetPosition | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:931–931](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L931-L931) | GetPosition | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:687–687](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L687-L687) | GetPosition | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:700–700](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L700-L700) | GetPosition | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:865–865](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L865-L865) | GetPosition | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:913–913](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L913-L913) | GetPosition | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:931–931](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L931-L931) | GetPosition | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -4823,7 +4823,7 @@ flowchart TD
 
 ### MethodDeclaration `SetPosition` · L995–1016
 
-[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:995–1016](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L995-L1016)
+[Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:995–1016](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L995-L1016)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4844,16 +4844,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:704–704](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L704-L704) | SetPosition | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:710–710](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L710-L710) | SetPosition | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:884–884](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L884-L884) | SetPosition | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:885–885](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L885-L885) | SetPosition | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:886–886](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L886-L886) | SetPosition | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:887–887](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L887-L887) | SetPosition | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:888–888](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L888-L888) | SetPosition | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:889–889](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L889-L889) | SetPosition | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:935–935](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L935-L935) | SetPosition | False |
-| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:941–941](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L941-L941) | SetPosition | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:704–704](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L704-L704) | SetPosition | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:710–710](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L710-L710) | SetPosition | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:884–884](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L884-L884) | SetPosition | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:885–885](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L885-L885) | SetPosition | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:886–886](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L886-L886) | SetPosition | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:887–887](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L887-L887) | SetPosition | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:888–888](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L888-L888) | SetPosition | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:889–889](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L889-L889) | SetPosition | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:935–935](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L935-L935) | SetPosition | False |
+| [Drilling.Common/Interface/PicoMotor/CPicoMotor.cs:941–941](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/PicoMotor/CPicoMotor.cs#L941-L941) | SetPosition | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 

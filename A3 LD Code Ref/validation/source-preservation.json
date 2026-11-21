@@ -1,17 +1,17 @@
 {
   "schemaVersion": "a3-source-preservation/1",
+  "passed": true,
   "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
   "sourceBranch": "master",
-  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
-  "baselineCommit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
-  "passed": true,
-  "beforeHead": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
-  "afterHead": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+  "baselineCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "beforeHead": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+  "afterHead": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
   "beforeStatus": "",
   "afterStatus": "",
   "pushUrlBefore": "DISABLED",
   "pushUrlAfter": "DISABLED",
-  "trackedFiles": 699,
+  "trackedFiles": 700,
   "allTrackedByteHashesIdentical": true,
   "sourceWrites": false,
   "equipmentBuild": "not_run",
@@ -2525,6 +2525,11 @@
       "sha256": "5534448198c3a9db2dd6342cd0e3f2fdc2c30e0cb86326d4ade8d5ed8e09123f"
     },
     {
+      "path": "Drilling.Common/Log/CLogManager.cs",
+      "size": 81211,
+      "sha256": "9212676723d170166d61a6d7baeafeec6cf6b660d2ae5ef59c22de14dc2e3728"
+    },
+    {
       "path": "Drilling.Common/Managers/CAlignKeyMarginSettings.cs",
       "size": 2098,
       "sha256": "1d5a5568cadfa7d9c22efe92232696811c540a7535f971bc50cdeb845f216f37"
@@ -3514,6 +3519,5 @@
       "size": 198,
       "sha256": "f32d4e86d4b93bea9949bff6f47095a25796bcd622019f83bf88fbe5648347fa"
     }
-  ],
-  "scope": "Read-only analysis clone; SHA-256 covers original complete file bytes. No operational record bodies or credential values are reproduced."
+  ]
 }

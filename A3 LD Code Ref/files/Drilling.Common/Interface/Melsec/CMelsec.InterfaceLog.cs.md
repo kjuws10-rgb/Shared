@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | a0beca33de55d4620ea1348d73298aa74274add332d51cad6c7907e6e559a103 |
 | 파일 분류 | code |
 | 원본 크기/행 | 21,089 bytes / 336 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -59,7 +59,7 @@
 
 ### FieldDeclaration `_pollLogSamples` · L12–12
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L12-L12)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -87,7 +87,7 @@
 
 ### FieldDeclaration `_pendingMelsecLogs` · L13–13
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L13-L13)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -115,7 +115,7 @@
 
 ### FieldDeclaration `_melsecTimingPeaks` · L16–16
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L16-L16)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -143,7 +143,7 @@
 
 ### FieldDeclaration `_melsecTimingReportedAt` · L17–17
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L17-L17)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -171,7 +171,7 @@
 
 ### MethodDeclaration `RecordMelsecTiming` · L19–25
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:19–25](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L19-L25)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:19–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L19-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -192,10 +192,10 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:660–660](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.cs#L660-L660) | RecordMelsecTiming | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:1698–1698](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.cs#L1698-L1698) | RecordMelsecTiming | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:1812–1812](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.cs#L1812-L1812) | RecordMelsecTiming | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:2905–2905](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.cs#L2905-L2905) | RecordMelsecTiming | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:660–660](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L660-L660) | RecordMelsecTiming | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:1698–1698](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L1698-L1698) | RecordMelsecTiming | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:1812–1812](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L1812-L1812) | RecordMelsecTiming | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:2905–2905](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L2905-L2905) | RecordMelsecTiming | False |
 
 호출하는 대상과 해석 범위:
 
@@ -230,7 +230,7 @@ flowchart TD
 
 ### MethodDeclaration `PublishMelsecTimings` · L27–36
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:27–36](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L27-L36)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:27–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L27-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -243,7 +243,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.cs#L228-L228) | PublishMelsecTimings | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L228-L228) | PublishMelsecTimings | False |
 
 호출하는 대상과 해석 범위:
 
@@ -251,7 +251,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | 29 | Stopwatch.GetElapsedTime | resolved | System.TimeSpan System.Diagnostics.Stopwatch.GetElapsedTime(long) |
 | 31 | Stopwatch.GetTimestamp | resolved | long System.Diagnostics.Stopwatch.GetTimestamp() |
-| 33 | _logManager.WriteInterfaceCommand | unresolved | None |
+| 33 | _logManager.WriteInterfaceCommand | resolved | void Drilling.Common.Log.CLogManager.WriteInterfaceCommand(Drilling.Common.Interface.EN_EQP_MODULE, string, string, string, string) · Drilling.Common/Log/CLogManager.cs:307 |
 | 34 | FormattableString.Invariant | resolved | string System.FormattableString.Invariant(System.FormattableString) |
 | 35 | _melsecTimingPeaks.Clear | resolved | void System.Collections.Generic.Dictionary<string, (double Milliseconds, string Id)>.Clear() |
 
@@ -284,7 +284,7 @@ flowchart TD
 
 ### MethodDeclaration `QueuePollReadLog` · L44–57
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:44–57](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L44-L57)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:44–57](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L44-L57)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -307,7 +307,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:2940–2940](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.cs#L2940-L2940) | QueuePollReadLog | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:2940–2940](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L2940-L2940) | QueuePollReadLog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -361,7 +361,7 @@ flowchart TD
 
 ### MethodDeclaration `QueuePollQualityLog` · L59–71
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:59–71](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L59-L71)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:59–71](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L59-L71)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -382,7 +382,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:2811–2811](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.cs#L2811-L2811) | QueuePollQualityLog | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:2811–2811](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L2811-L2811) | QueuePollQualityLog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -427,7 +427,7 @@ flowchart TD
 
 ### MethodDeclaration `FlushMelsecLogs` · L73–85
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:73–85](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L73-L85)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:73–85](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L73-L85)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -440,8 +440,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.cs#L164-L164) | FlushMelsecLogs | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.cs#L227-L227) | FlushMelsecLogs | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L164-L164) | FlushMelsecLogs | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L227-L227) | FlushMelsecLogs | False |
 
 호출하는 대상과 해석 범위:
 
@@ -482,7 +482,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteTransferLog` · L87–92
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:87–92](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L87-L92)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:87–92](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L87-L92)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -506,10 +506,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:1670–1670](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.cs#L1670-L1670) | WriteTransferLog | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:1756–1756](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.cs#L1756-L1756) | WriteTransferLog | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:1781–1781](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.cs#L1781-L1781) | WriteTransferLog | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:1835–1835](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.cs#L1835-L1835) | WriteTransferLog | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:1670–1670](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L1670-L1670) | WriteTransferLog | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:1756–1756](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L1756-L1756) | WriteTransferLog | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:1781–1781](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L1781-L1781) | WriteTransferLog | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:1835–1835](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L1835-L1835) | WriteTransferLog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -541,7 +541,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteMelsecLog` · L94–136
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:94–136](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L94-L136)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:94–136](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L94-L136)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -560,8 +560,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L84-L84) | WriteMelsecLog | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L91-L91) | WriteMelsecLog | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L84-L84) | WriteMelsecLog | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L91-L91) | WriteMelsecLog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -591,7 +591,7 @@ flowchart TD
 | 123 | FormatMelsecLogWords | resolved | string Drilling.Common.Interface.CMelsec.FormatMelsecLogWords(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, Drilling.Common.Interface.CMelsec.ST_MELSEC_ADDRESS, ushort[], bool) · Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:213 |
 | 126 | DescribeMelsecLogDetail | resolved | string Drilling.Common.Interface.CMelsec.DescribeMelsecLogDetail(string) · Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:180 |
 | 128 | EscapeMelsecLogText | resolved | string Drilling.Common.Interface.CMelsec.EscapeMelsecLogText(string) · Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:318 |
-| 129 | _logManager.WriteInterfaceCommand | unresolved | None |
+| 129 | _logManager.WriteInterfaceCommand | resolved | void Drilling.Common.Log.CLogManager.WriteInterfaceCommand(Drilling.Common.Interface.EN_EQP_MODULE, string, string, string, string) · Drilling.Common/Log/CLogManager.cs:307 |
 | 134 | System.Diagnostics.Debug.WriteLine | resolved | void System.Diagnostics.Debug.WriteLine(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -687,7 +687,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildMelsecLogHeader` · L138–139
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:138–139](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L138-L139)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:138–139](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L138-L139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -709,8 +709,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:1663–1663](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.cs#L1663-L1663) | BuildMelsecLogHeader | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:1774–1774](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.cs#L1774-L1774) | BuildMelsecLogHeader | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:1663–1663](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L1663-L1663) | BuildMelsecLogHeader | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:1774–1774](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L1774-L1774) | BuildMelsecLogHeader | False |
 
 호출하는 대상과 해석 범위:
 
@@ -728,7 +728,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatMelsecLogHeader` · L141–148
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:141–148](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L141-L148)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:141–148](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L141-L148)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -751,8 +751,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:104–105](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L104-L105) | FormatMelsecLogHeader | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L139-L139) | FormatMelsecLogHeader | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:104–105](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L104-L105) | FormatMelsecLogHeader | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L139-L139) | FormatMelsecLogHeader | False |
 
 호출하는 대상과 해석 범위:
 
@@ -788,7 +788,7 @@ flowchart TD
 
 ### MethodDeclaration `DescribeMelsecLogType` · L150–156
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:150–156](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L150-L156)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:150–156](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L150-L156)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -807,7 +807,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L113-L113) | DescribeMelsecLogType | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L113-L113) | DescribeMelsecLogType | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -828,7 +828,7 @@ flowchart TD
 
 ### MethodDeclaration `DescribeMelsecLogQuality` · L158–163
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:158–163](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L158-L163)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:158–163](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L158-L163)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -847,8 +847,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L107-L107) | DescribeMelsecLogQuality | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L109-L109) | DescribeMelsecLogQuality | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L107-L107) | DescribeMelsecLogQuality | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L109-L109) | DescribeMelsecLogQuality | False |
 
 호출하는 대상과 해석 범위:
 
@@ -876,7 +876,7 @@ flowchart TD
 
 ### MethodDeclaration `DescribeMelsecLogSource` · L165–169
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:165–169](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L165-L169)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:165–169](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L165-L169)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -895,7 +895,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L117-L117) | DescribeMelsecLogSource | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L117-L117) | DescribeMelsecLogSource | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -916,7 +916,7 @@ flowchart TD
 
 ### MethodDeclaration `DescribeMelsecLogResult` · L171–178
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:171–178](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L171-L178)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:171–178](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L171-L178)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -935,7 +935,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L106-L106) | DescribeMelsecLogResult | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L106-L106) | DescribeMelsecLogResult | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -956,7 +956,7 @@ flowchart TD
 
 ### MethodDeclaration `DescribeMelsecLogDetail` · L180–187
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:180–187](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L180-L187)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:180–187](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L180-L187)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -975,7 +975,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L126-L126) | DescribeMelsecLogDetail | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L126-L126) | DescribeMelsecLogDetail | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -996,7 +996,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveMelsecLogArea` · L189–211
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:189–211](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L189-L211)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:189–211](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L189-L211)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1015,7 +1015,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L142-L142) | ResolveMelsecLogArea | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L142-L142) | ResolveMelsecLogArea | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1068,7 +1068,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatMelsecLogWords` · L213–264
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:213–264](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L213-L264)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:213–264](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L213-L264)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1090,7 +1090,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L123-L123) | FormatMelsecLogWords | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L123-L123) | FormatMelsecLogWords | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1270,7 +1270,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatMelsecLogSignalState` · L266–272
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:266–272](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L266-L272)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:266–272](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L266-L272)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1290,10 +1290,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L237-L237) | FormatMelsecLogSignalState | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L247-L247) | FormatMelsecLogSignalState | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L301-L301) | FormatMelsecLogSignalState | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L306-L306) | FormatMelsecLogSignalState | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L237-L237) | FormatMelsecLogSignalState | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L247-L247) | FormatMelsecLogSignalState | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L301-L301) | FormatMelsecLogSignalState | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L306-L306) | FormatMelsecLogSignalState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1320,7 +1320,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatMelsecLogNumber` · L274–281
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:274–281](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L274-L281)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:274–281](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L274-L281)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1339,14 +1339,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L236-L236) | FormatMelsecLogNumber | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L242-L242) | FormatMelsecLogNumber | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L246-L246) | FormatMelsecLogNumber | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:260–260](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L260-L260) | FormatMelsecLogNumber | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L301-L301) | FormatMelsecLogNumber | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L306-L306) | FormatMelsecLogNumber | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L308-L308) | FormatMelsecLogNumber | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L308-L308) | FormatMelsecLogNumber | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L236-L236) | FormatMelsecLogNumber | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L242-L242) | FormatMelsecLogNumber | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L246-L246) | FormatMelsecLogNumber | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:260–260](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L260-L260) | FormatMelsecLogNumber | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L301-L301) | FormatMelsecLogNumber | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L306-L306) | FormatMelsecLogNumber | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L308-L308) | FormatMelsecLogNumber | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L308-L308) | FormatMelsecLogNumber | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1376,7 +1376,7 @@ flowchart TD
 
 ### MethodDeclaration `BriefMelsecLogValue` · L283–309
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:283–309](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L283-L309)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:283–309](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L283-L309)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1398,7 +1398,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L105-L105) | BriefMelsecLogValue | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L105-L105) | BriefMelsecLogValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1487,7 +1487,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatMelsecLogAddress` · L311–316
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:311–316](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L311-L316)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:311–316](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L311-L316)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1506,10 +1506,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L147-L147) | FormatMelsecLogAddress | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L259-L259) | FormatMelsecLogAddress | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:1698–1698](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.cs#L1698-L1698) | FormatMelsecLogAddress | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:1812–1812](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.cs#L1812-L1812) | FormatMelsecLogAddress | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L147-L147) | FormatMelsecLogAddress | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L259-L259) | FormatMelsecLogAddress | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:1698–1698](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L1698-L1698) | FormatMelsecLogAddress | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:1812–1812](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L1812-L1812) | FormatMelsecLogAddress | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1534,7 +1534,7 @@ flowchart TD
 
 ### MethodDeclaration `EscapeMelsecLogText` · L318–334
 
-[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:318–334](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L318-L334)
+[Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:318–334](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L318-L334)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1553,9 +1553,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L128-L128) | EscapeMelsecLogText | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L226-L226) | EscapeMelsecLogText | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:295–295](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L295-L295) | EscapeMelsecLogText | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L128-L128) | EscapeMelsecLogText | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L226-L226) | EscapeMelsecLogText | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:295–295](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L295-L295) | EscapeMelsecLogText | False |
 
 호출하는 대상과 해석 범위:
 

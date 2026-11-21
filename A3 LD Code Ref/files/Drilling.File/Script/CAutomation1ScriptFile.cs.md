@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 1681351dcfa412fcae7313a2ff470b23be816cad1047ee586e3fb79f35850ac4 |
 | 파일 분류 | code |
 | 원본 크기/행 | 100,935 bytes / 2,455 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -269,7 +269,7 @@
 
 ### FieldDeclaration `DefaultScriptFileName` · L11–11
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L11-L11)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -290,7 +290,7 @@
 
 ### FieldDeclaration `ProcessCoordinateListFileName` · L12–12
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L12-L12)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -311,7 +311,7 @@
 
 ### FieldDeclaration `ProcessShotCoordinateCsvFileName` · L13–13
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L13-L13)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -332,7 +332,7 @@
 
 ### FieldDeclaration `StandardDirectoryName` · L14–14
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L14-L14)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -353,7 +353,7 @@
 
 ### FieldDeclaration `BufferedRunDirectoryName` · L15–15
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L15-L15)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -374,7 +374,7 @@
 
 ### FieldDeclaration `Automation1SimulatorUseKey` · L16–16
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L16-L16)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -395,7 +395,7 @@
 
 ### FieldDeclaration `Automation1SimulatorWaitMilliseconds` · L17–17
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L17-L17)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -416,7 +416,7 @@
 
 ### FieldDeclaration `MinimumEncoderScaleMagnitude` · L18–18
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L18-L18)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -437,7 +437,7 @@
 
 ### FieldDeclaration `MofSetupDelayMsec` · L19–19
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L19-L19)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -458,7 +458,7 @@
 
 ### EnumMemberDeclaration `X` · L22–22
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L22-L22)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -473,7 +473,7 @@
 
 ### EnumMemberDeclaration `Y` · L23–23
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L23-L23)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L23-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -488,7 +488,7 @@
 
 ### FieldDeclaration `_scriptDirectory` · L26–26
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L26-L26)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -503,7 +503,7 @@
 
 ### ConstructorDeclaration `.ctor` · L27–31
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:27–31](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L27-L31)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:27–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L27-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -522,8 +522,8 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CAppStartup.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CAppStartup.cs#L18-L18) | new CAutomation1ScriptFile | False |
-| [Drilling.UI/CRootView.cs:2547–2547](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2547-L2547) | new Drilling.File.Script.CAutomation1ScriptFile | False |
+| [Drilling.UI/CAppStartup.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CAppStartup.cs#L18-L18) | new CAutomation1ScriptFile | False |
+| [Drilling.UI/CRootView.cs:2547–2547](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2547-L2547) | new Drilling.File.Script.CAutomation1ScriptFile | False |
 
 호출하는 대상과 해석 범위:
 
@@ -549,7 +549,7 @@
 
 ### PropertyDeclaration `ScriptFileName` · L33–39
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:33–39](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L33-L39)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:33–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L33-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -564,7 +564,7 @@
 
 ### GetAccessorDeclaration `get_ScriptFileName` · L35–38
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:35–38](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L35-L38)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:35–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L35-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -585,7 +585,7 @@
 
 ### MethodDeclaration `Create` · L41–44
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:41–44](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L41-L44)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:41–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L41-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -621,7 +621,7 @@
 
 ### MethodDeclaration `Build` · L46–49
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:46–49](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L46-L49)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:46–49](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L46-L49)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -656,7 +656,7 @@
 
 ### MethodDeclaration `Build` · L51–109
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:51–109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L51-L109)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:51–109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L51-L109)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -677,7 +677,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L48-L48) | Build | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L48-L48) | Build | True |
 
 호출하는 대상과 해석 범위:
 
@@ -787,7 +787,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L58–61
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:58–61](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L58-L61)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:58–61](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L58-L61)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -823,7 +823,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L63–69
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:63–69](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L63-L69)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:63–69](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L63-L69)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -864,7 +864,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeHead` · L71–74
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:71–74](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L71-L74)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:71–74](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L71-L74)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -891,7 +891,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectTotalShots` · L102–105
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:102–105](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L102-L105)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:102–105](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L102-L105)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -918,7 +918,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadLatest` · L111–173
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:111–173](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L111-L173)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:111–173](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L111-L173)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1176,7 +1176,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Header` · L127–128
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:127–128](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L127-L128)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:127–128](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L127-L128)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1195,10 +1195,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L129-L129) | Header | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L130-L130) | Header | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L131-L131) | Header | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L167-L167) | Header | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L129-L129) | Header | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L130-L130) | Header | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L131-L131) | Header | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L167-L167) | Header | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1221,7 +1221,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildShotCoordinateCsvLines` · L175–325
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:175–325](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L175-L325)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:175–325](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L175-L325)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1242,7 +1242,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L83-L83) | BuildShotCoordinateCsvLines | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L83-L83) | BuildShotCoordinateCsvLines | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1368,7 +1368,7 @@ flowchart TD
 
 ### MethodDeclaration `ShotCellNo` · L327–330
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:327–330](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L327-L330)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:327–330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L327-L330)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1395,7 +1395,7 @@ flowchart TD
 
 ### MethodDeclaration `ShotRowNo` · L332–335
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:332–335](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L332-L335)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:332–335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L332-L335)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1422,7 +1422,7 @@ flowchart TD
 
 ### MethodDeclaration `ShotColumnNo` · L337–340
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:337–340](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L337-L340)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:337–340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L337-L340)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1449,7 +1449,7 @@ flowchart TD
 
 ### MethodDeclaration `ShotHeadNo` · L342–345
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:342–345](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L342-L345)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:342–345](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L342-L345)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1476,7 +1476,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadParameterText` · L347–352
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:347–352](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L347-L352)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:347–352](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L347-L352)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1497,8 +1497,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:368–368](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L368-L368) | ReadParameterText | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:369–369](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L369-L369) | ReadParameterText | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:368–368](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L368-L368) | ReadParameterText | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:369–369](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L369-L369) | ReadParameterText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1520,7 +1520,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildCoordinateListLines` · L354–388
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:354–388](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L354-L388)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:354–388](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L354-L388)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1542,7 +1542,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L98-L98) | BuildCoordinateListLines | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L98-L98) | BuildCoordinateListLines | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1613,7 +1613,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectHeadNo` · L357–360
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:357–360](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L357-L360)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:357–360](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L357-L360)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1640,7 +1640,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectTotalShots` · L370–373
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:370–373](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L370-L373)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:370–373](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L370-L373)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1667,7 +1667,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildHeadLines` · L390–582
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:390–582](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L390-L582)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:390–582](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L390-L582)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1690,7 +1690,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L92-L92) | BuildHeadLines | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L92-L92) | BuildHeadLines | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2117,7 +2117,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveMachiningAxis` · L584–606
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:584–606](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L584-L606)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:584–606](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L584-L606)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2137,7 +2137,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L432-L432) | ResolveMachiningAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L432-L432) | ResolveMachiningAxis | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2200,7 +2200,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveLineMachiningAxis` · L608–623
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:608–623](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L608-L623)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:608–623](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L608-L623)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2222,7 +2222,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:530–530](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L530-L530) | ResolveLineMachiningAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:530–530](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L530-L530) | ResolveLineMachiningAxis | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2269,7 +2269,7 @@ flowchart TD
 
 ### MethodDeclaration `IsScanLineFirstShot` · L625–633
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:625–633](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L625-L633)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:625–633](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L625-L633)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2289,7 +2289,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:527–527](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L527-L527) | IsScanLineFirstShot | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:527–527](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L527-L527) | IsScanLineFirstShot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2319,7 +2319,7 @@ flowchart TD
 
 ### MethodDeclaration `FindNextPointInSameScanLine` · L635–650
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:635–650](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L635-L650)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:635–650](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L635-L650)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2340,7 +2340,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L529-L529) | FindNextPointInSameScanLine | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L529-L529) | FindNextPointInSameScanLine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2378,7 +2378,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendLinePreApproachMove` · L652–676
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:652–676](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L652-L676)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:652–676](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L652-L676)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2405,7 +2405,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:531–531](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L531-L531) | AppendLinePreApproachMove | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:531–531](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L531-L531) | AppendLinePreApproachMove | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2462,7 +2462,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveLinePreApproachDirection` · L678–690
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:678–690](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L678-L690)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:678–690](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L678-L690)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2484,7 +2484,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L665-L665) | ResolveLinePreApproachDirection | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L665-L665) | ResolveLinePreApproachDirection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2524,7 +2524,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHeadScanFieldHalfWidth` · L692–701
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:692–701](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L692-L701)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:692–701](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L692-L701)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2544,7 +2544,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L433-L433) | ReadHeadScanFieldHalfWidth | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L433-L433) | ReadHeadScanFieldHalfWidth | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2580,7 +2580,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadScriptAxisPosition` · L703–711
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:703–711](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L703-L711)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:703–711](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L703-L711)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2601,9 +2601,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L664-L664) | ReadScriptAxisPosition | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:682–682](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L682-L682) | ReadScriptAxisPosition | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:682–682](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L682-L682) | ReadScriptAxisPosition | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L664-L664) | ReadScriptAxisPosition | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:682–682](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L682-L682) | ReadScriptAxisPosition | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:682–682](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L682-L682) | ReadScriptAxisPosition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2633,7 +2633,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadScriptScannerY` · L713–716
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:713–716](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L713-L716)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:713–716](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L713-L716)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2653,15 +2653,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L256-L256) | ReadScriptScannerY | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:521–521](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L521-L521) | ReadScriptScannerY | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:593–593](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L593-L593) | ReadScriptScannerY | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L594-L594) | ReadScriptScannerY | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L598-L598) | ReadScriptScannerY | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:616–616](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L616-L616) | ReadScriptScannerY | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:616–616](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L616-L616) | ReadScriptScannerY | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:673–673](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L673-L673) | ReadScriptScannerY | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:710–710](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L710-L710) | ReadScriptScannerY | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L256-L256) | ReadScriptScannerY | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:521–521](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L521-L521) | ReadScriptScannerY | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:593–593](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L593-L593) | ReadScriptScannerY | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L594-L594) | ReadScriptScannerY | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L598-L598) | ReadScriptScannerY | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:616–616](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L616-L616) | ReadScriptScannerY | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:616–616](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L616-L616) | ReadScriptScannerY | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:673–673](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L673-L673) | ReadScriptScannerY | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:710–710](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L710-L710) | ReadScriptScannerY | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2674,7 +2674,7 @@ flowchart TD
 
 ### MethodDeclaration `Clamp` · L718–721
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:718–721](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L718-L721)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:718–721](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L718-L721)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2695,7 +2695,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:666–666](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L666-L666) | Clamp | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:666–666](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L666-L666) | Clamp | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2716,7 +2716,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveScriptBuildDirectory` · L723–750
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:723–750](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L723-L750)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:723–750](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L723-L750)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2737,7 +2737,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L78-L78) | ResolveScriptBuildDirectory | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L78-L78) | ResolveScriptBuildDirectory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2816,7 +2816,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeScriptBuildName` · L752–764
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:752–764](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L752-L764)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:752–764](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L752-L764)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2835,7 +2835,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L733-L733) | NormalizeScriptBuildName | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L733-L733) | NormalizeScriptBuildName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2891,7 +2891,7 @@ flowchart TD
 
 ### MethodDeclaration `IsBufferedRunDirectory` · L766–770
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:766–770](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L766-L770)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:766–770](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L766-L770)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2910,7 +2910,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L79-L79) | IsBufferedRunDirectory | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L79-L79) | IsBufferedRunDirectory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2935,7 +2935,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateActiveHeads` · L772–838
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:772–838](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L772-L838)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:772–838](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L772-L838)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2954,7 +2954,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L77-L77) | ValidateActiveHeads | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L77-L77) | ValidateActiveHeads | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3044,7 +3044,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectHeadNo` · L774–777
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:774–777](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L774-L777)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:774–777](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L774-L777)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3071,7 +3071,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L779–782
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:779–782](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L779-L782)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:779–782](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L779-L782)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3105,7 +3105,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectKey` · L784–787
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:784–787](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L784-L787)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:784–787](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L784-L787)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3132,7 +3132,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectHeadNo2` · L789–792
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:789–792](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L789-L792)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:789–792](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L789-L792)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3159,7 +3159,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectScriptFileName` · L813–816
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:813–816](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L813-L816)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:813–816](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L813-L816)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3186,7 +3186,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeHead` · L818–821
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:818–821](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L818-L821)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:818–821](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L818-L821)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3220,7 +3220,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectDuplicateScriptFileName` · L823–826
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:823–826](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L823-L826)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:823–826](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L823-L826)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3247,7 +3247,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectFileName` · L828–831
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:828–831](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L828-L831)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:828–831](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L828-L831)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3274,7 +3274,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendStartFollowMoves` · L840–886
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:840–886](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L840-L886)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:840–886](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L840-L886)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3300,7 +3300,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:514–514](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L514-L514) | AppendStartFollowMoves | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:514–514](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L514-L514) | AppendStartFollowMoves | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3392,7 +3392,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendFollowTransitionMoves` · L888–934
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:888–934](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L888-L934)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:888–934](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L888-L934)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3419,7 +3419,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:524–524](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L524-L524) | AppendFollowTransitionMoves | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:524–524](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L524-L524) | AppendFollowTransitionMoves | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3515,7 +3515,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveFollowAxis` · L936–945
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:936–945](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L936-L945)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:936–945](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L936-L945)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3534,7 +3534,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:913–913](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L913-L913) | ResolveFollowAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:913–913](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L913-L913) | ResolveFollowAxis | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3570,7 +3570,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadFollowAxisPosition` · L947–955
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:947–955](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L947-L955)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:947–955](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L947-L955)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3590,8 +3590,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:914–914](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L914-L914) | ReadFollowAxisPosition | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:915–915](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L915-L915) | ReadFollowAxisPosition | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:914–914](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L914-L914) | ReadFollowAxisPosition | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:915–915](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L915-L915) | ReadFollowAxisPosition | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -3614,7 +3614,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendEncoderWait` · L957–967
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:957–967](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L957-L967)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:957–967](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L957-L967)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3636,9 +3636,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:541–541](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L541-L541) | AppendEncoderWait | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:884–884](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L884-L884) | AppendEncoderWait | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:932–932](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L932-L932) | AppendEncoderWait | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:541–541](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L541-L541) | AppendEncoderWait | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:884–884](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L884-L884) | AppendEncoderWait | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:932–932](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L932-L932) | AppendEncoderWait | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3677,7 +3677,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendHeadShotList` · L969–989
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:969–989](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L969-L989)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:969–989](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L969-L989)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3697,7 +3697,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L383-L383) | AppendHeadShotList | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L383-L383) | AppendHeadShotList | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3740,7 +3740,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectCellNo` · L972–975
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:972–975](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L972-L975)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:972–975](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L972-L975)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3767,7 +3767,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectKey` · L977–980
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:977–980](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L977-L980)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:977–980](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L977-L980)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3794,7 +3794,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatShotName` · L991–994
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:991–994](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L991-L994)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:991–994](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L991-L994)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3813,7 +3813,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:275–275](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L275-L275) | FormatShotName | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:275–275](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L275-L275) | FormatShotName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3834,7 +3834,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatRowName` · L996–1007
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:996–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L996-L1007)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:996–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L996-L1007)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3853,7 +3853,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:993–993](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L993-L993) | FormatRowName | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:993–993](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L993-L993) | FormatRowName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3888,7 +3888,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendDefaultSetting` · L1009–1024
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1009–1024](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1009-L1024)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1009–1024](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1009-L1024)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3954,7 +3954,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendScriptEnd` · L1026–1034
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1026–1034](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1026-L1034)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1026–1034](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1026-L1034)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4002,7 +4002,7 @@ flowchart TD
 
 ### MethodDeclaration `CalculateLaserPeriod` · L1036–1039
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1036–1039](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1036-L1039)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1036–1039](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1036-L1039)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4021,8 +4021,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:426–426](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L426-L426) | CalculateLaserPeriod | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1551–1551](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1551-L1551) | CalculateLaserPeriod | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:426–426](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L426-L426) | CalculateLaserPeriod | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1551–1551](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1551-L1551) | CalculateLaserPeriod | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -4035,7 +4035,7 @@ flowchart TD
 
 ### MethodDeclaration `CalculateShotDelaySeconds` · L1041–1050
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1041–1050](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1041-L1050)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1041–1050](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1041-L1050)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4055,7 +4055,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L427-L427) | CalculateShotDelaySeconds | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L427-L427) | CalculateShotDelaySeconds | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -4078,7 +4078,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendSingleAxisMoveDelay` · L1052–1060
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1052–1060](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1052-L1060)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1052–1060](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1052-L1060)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4099,8 +4099,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:550–550](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L550-L550) | AppendSingleAxisMoveDelay | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:554–554](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L554-L554) | AppendSingleAxisMoveDelay | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:550–550](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L550-L550) | AppendSingleAxisMoveDelay | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:554–554](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L554-L554) | AppendSingleAxisMoveDelay | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4131,7 +4131,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveCoordinatedRampRate` · L1062–1075
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1062–1075](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1062-L1075)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1062–1075](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1062-L1075)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4151,7 +4151,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:421–421](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L421-L421) | ResolveCoordinatedRampRate | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:421–421](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L421-L421) | ResolveCoordinatedRampRate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4185,7 +4185,7 @@ flowchart TD
 
 ### MethodDeclaration `ToAutomationSpeed` · L1077–1080
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1077–1080](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1077-L1080)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1077–1080](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1077-L1080)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4204,9 +4204,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:486–486](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L486-L486) | ToAutomationSpeed | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:487–487](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L487-L487) | ToAutomationSpeed | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:488–488](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L488-L488) | ToAutomationSpeed | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:486–486](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L486-L486) | ToAutomationSpeed | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:487–487](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L487-L487) | ToAutomationSpeed | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:488–488](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L488-L488) | ToAutomationSpeed | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -4218,7 +4218,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDelaySeconds` · L1082–1100
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1082–1100](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1082-L1100)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1082–1100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1082-L1100)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4239,7 +4239,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:424–424](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L424-L424) | ReadDelaySeconds | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:424–424](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L424-L424) | ReadDelaySeconds | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4280,7 +4280,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L1084–1087
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1084–1087](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1084-L1087)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1084–1087](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1084-L1087)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4314,7 +4314,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateHeadKeys` · L1102–1110
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1102–1110](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1102-L1110)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1102–1110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1102-L1110)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4334,18 +4334,18 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L60-L60) | CreateHeadKeys | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L166-L166) | CreateHeadKeys | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:396–396](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L396-L396) | CreateHeadKeys | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:398–398](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L398-L398) | CreateHeadKeys | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:400–400](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L400-L400) | CreateHeadKeys | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:406–406](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L406-L406) | CreateHeadKeys | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:428–428](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L428-L428) | CreateHeadKeys | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:429–429](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L429-L429) | CreateHeadKeys | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:694–694](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L694-L694) | CreateHeadKeys | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:906–906](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L906-L906) | CreateHeadKeys | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1114–1114](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1114-L1114) | CreateHeadKeys | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1121–1121](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1121-L1121) | CreateHeadKeys | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L60-L60) | CreateHeadKeys | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L166-L166) | CreateHeadKeys | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:396–396](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L396-L396) | CreateHeadKeys | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:398–398](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L398-L398) | CreateHeadKeys | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:400–400](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L400-L400) | CreateHeadKeys | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:406–406](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L406-L406) | CreateHeadKeys | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:428–428](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L428-L428) | CreateHeadKeys | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:429–429](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L429-L429) | CreateHeadKeys | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:694–694](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L694-L694) | CreateHeadKeys | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:906–906](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L906-L906) | CreateHeadKeys | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1114–1114](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1114-L1114) | CreateHeadKeys | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1121–1121](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1121-L1121) | CreateHeadKeys | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4366,7 +4366,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L1104–1107
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1104–1107](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1104-L1107)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1104–1107](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1104-L1107)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4393,7 +4393,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateEncoderScaleKeys` · L1112–1117
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1112–1117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1112-L1117)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1112–1117](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1112-L1117)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4412,7 +4412,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:412–412](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L412-L412) | CreateEncoderScaleKeys | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:412–412](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L412-L412) | CreateEncoderScaleKeys | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4435,7 +4435,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateEncoderFeedbackFlipKeys` · L1119–1124
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1119–1124](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1119-L1124)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1119–1124](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1119-L1124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4454,7 +4454,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:420–420](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L420-L420) | CreateEncoderFeedbackFlipKeys | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:420–420](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L420-L420) | CreateEncoderFeedbackFlipKeys | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4477,7 +4477,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveParameterName` · L1126–1137
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1126–1137](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1126-L1137)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1126–1137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1126-L1137)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4498,7 +4498,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:413–413](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L413-L413) | ResolveParameterName | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:413–413](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L413-L413) | ResolveParameterName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4533,7 +4533,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadText` · L1139–1155
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1139–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1139-L1155)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1139–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1139-L1155)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4554,10 +4554,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:396–396](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L396-L396) | ReadText | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:398–398](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L398-L398) | ReadText | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:400–400](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L400-L400) | ReadText | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:406–406](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L406-L406) | ReadText | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:396–396](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L396-L396) | ReadText | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:398–398](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L398-L398) | ReadText | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:400–400](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L400-L400) | ReadText | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:406–406](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L406-L406) | ReadText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4596,7 +4596,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L1141–1144
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1141–1144](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1141-L1144)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1141–1144](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1141-L1144)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4630,7 +4630,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDouble` · L1157–1160
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1157–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1157-L1160)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1157–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1157-L1160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4651,11 +4651,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:425–425](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L425-L425) | ReadDouble | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:431–431](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L431-L431) | ReadDouble | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:863–863](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L863-L863) | ReadDouble | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:900–900](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L900-L900) | ReadDouble | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1011–1011](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1011-L1011) | ReadDouble | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:425–425](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L425-L425) | ReadDouble | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:431–431](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L431-L431) | ReadDouble | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:863–863](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L863-L863) | ReadDouble | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:900–900](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L900-L900) | ReadDouble | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1011–1011](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1011-L1011) | ReadDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4674,7 +4674,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDouble` · L1162–1178
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1162–1178](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1162-L1178)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1162–1178](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1162-L1178)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4695,12 +4695,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:414–414](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L414-L414) | ReadDouble | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:428–428](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L428-L428) | ReadDouble | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:429–429](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L429-L429) | ReadDouble | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:694–694](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L694-L694) | ReadDouble | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:906–906](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L906-L906) | ReadDouble | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1159–1159](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1159-L1159) | ReadDouble | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:414–414](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L414-L414) | ReadDouble | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:428–428](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L428-L428) | ReadDouble | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:429–429](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L429-L429) | ReadDouble | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:694–694](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L694-L694) | ReadDouble | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:906–906](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L906-L906) | ReadDouble | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1159–1159](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1159-L1159) | ReadDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4737,7 +4737,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L1164–1167
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1164–1167](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1164-L1167)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1164–1167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1164-L1167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4771,7 +4771,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadOnOff` · L1180–1196
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1180–1196](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1180-L1196)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1180–1196](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1180-L1196)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4792,7 +4792,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:420–420](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L420-L420) | ReadOnOff | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:420–420](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L420-L420) | ReadOnOff | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4833,7 +4833,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseOnOff` · L1198–1217
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1198–1217](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1198-L1217)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1198–1217](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1198-L1217)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4854,7 +4854,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1191–1191](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1191-L1191) | ParseOnOff | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1191–1191](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1191-L1191) | ParseOnOff | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4900,7 +4900,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadInt` · L1219–1222
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1219–1222](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1219-L1222)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1219–1222](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1219-L1222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4921,9 +4921,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:422–422](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L422-L422) | ReadInt | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:423–423](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L423-L423) | ReadInt | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1012–1012](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1012-L1012) | ReadInt | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:422–422](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L422-L422) | ReadInt | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:423–423](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L423-L423) | ReadInt | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1012–1012](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1012-L1012) | ReadInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4942,7 +4942,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadInt` · L1224–1240
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1224–1240](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1224-L1240)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1224–1240](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1224-L1240)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4963,7 +4963,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1221–1221](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1221-L1221) | ReadInt | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1221–1221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1221-L1221) | ReadInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5000,7 +5000,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L1226–1229
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1226–1229](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1226-L1229)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1226–1229](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1226-L1229)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5034,7 +5034,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadBool` · L1242–1245
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1242–1245](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1242-L1245)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1242–1245](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1242-L1245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5055,10 +5055,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:179–179](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L179-L179) | ReadBool | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:395–395](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L395-L395) | ReadBool | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L430-L430) | ReadBool | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1028–1028](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1028-L1028) | ReadBool | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:179–179](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L179-L179) | ReadBool | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:395–395](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L395-L395) | ReadBool | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L430-L430) | ReadBool | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1028–1028](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1028-L1028) | ReadBool | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5077,7 +5077,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadBool` · L1247–1283
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1247–1283](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1247-L1283)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1247–1283](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1247-L1283)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5098,9 +5098,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L60-L60) | ReadBool | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L166-L166) | ReadBool | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1244–1244](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1244-L1244) | ReadBool | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L60-L60) | ReadBool | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L166-L166) | ReadBool | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1244–1244](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1244-L1244) | ReadBool | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5173,7 +5173,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L1249–1252
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1249–1252](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1249-L1252)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1249–1252](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1249-L1252)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5207,7 +5207,7 @@ flowchart TD
 
 ### MethodDeclaration `Format` · L1285–1288
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1285–1288](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1285-L1288)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1285–1288](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1285-L1288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5226,120 +5226,120 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L283-L283) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:285–285](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L285-L285) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L287-L287) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L289-L289) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L291-L291) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L293-L293) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:295–295](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L295-L295) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L297-L297) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:299–299](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L299-L299) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L301-L301) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L303-L303) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L305-L305) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:311–311](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L311-L311) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L313-L313) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L315-L315) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L317-L317) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:443–443](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L443-L443) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:443–443](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L443-L443) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:446–446](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L446-L446) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:480–480](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L480-L480) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:480–480](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L480-L480) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:482–482](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L482-L482) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:483–483](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L483-L483) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:485–485](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L485-L485) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:486–486](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L486-L486) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:487–487](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L487-L487) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:488–488](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L488-L488) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:497–497](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L497-L497) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:499–499](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L499-L499) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:500–500](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L500-L500) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:501–501](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L501-L501) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:502–502](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L502-L502) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:504–504](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L504-L504) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L534-L534) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L534-L534) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:544–544](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L544-L544) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L552-L552) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:675–675](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L675-L675) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:675–675](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L675-L675) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:883–883](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L883-L883) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:883–883](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L883-L883) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:931–931](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L931-L931) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:931–931](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L931-L931) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:966–966](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L966-L966) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1017–1017](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1017-L1017) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1059–1059](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1059-L1059) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1343–1343](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1343-L1343) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1554–1554](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1554-L1554) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1566–1566](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1566-L1566) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1570–1570](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1570-L1570) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1577–1577](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1577-L1577) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1581–1581](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1581-L1581) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1593–1593](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1593-L1593) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1597–1597](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1597-L1597) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1615–1615](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1615-L1615) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1615–1615](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1615-L1615) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1620–1620](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1620-L1620) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1621–1621](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1621-L1621) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1632–1632](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1632-L1632) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1633–1633](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1633-L1633) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1639–1639](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1639-L1639) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1647–1647](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1647-L1647) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1652–1652](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1652-L1652) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1664–1664](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1664-L1664) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1665–1665](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1665-L1665) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1667–1667](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1667-L1667) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1678–1678](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1678-L1678) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1763–1763](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1763-L1763) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1820–1820](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1820-L1820) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1841–1841](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1841-L1841) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1847–1847](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1847-L1847) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1992–1992](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1992-L1992) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1993–1993](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1993-L1993) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2004–2004](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2004-L2004) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2005–2005](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2005-L2005) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2027–2027](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2027-L2027) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2031–2031](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2031-L2031) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2038–2038](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2038-L2038) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2039–2039](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2039-L2039) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2051–2051](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2051-L2051) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2097–2097](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2097-L2097) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2105–2105](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2105-L2105) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2111–2111](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2111-L2111) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2111–2111](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2111-L2111) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2118–2118](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2118-L2118) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2123–2123](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2123-L2123) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2133–2133](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2133-L2133) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2133–2133](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2133-L2133) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2133–2133](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2133-L2133) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2133–2133](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2133-L2133) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2137–2137](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2137-L2137) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2137–2137](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2137-L2137) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2137–2137](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2137-L2137) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2137–2137](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2137-L2137) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2149–2149](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2149-L2149) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2156–2156](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2156-L2156) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2163–2163](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2163-L2163) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2163–2163](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2163-L2163) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2198–2198](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2198-L2198) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2267–2267](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2267-L2267) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2267–2267](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2267-L2267) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2281–2281](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2281-L2281) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2281–2281](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2281-L2281) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2289–2289](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2289-L2289) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2289–2289](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2289-L2289) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2310–2310](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2310-L2310) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2310–2310](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2310-L2310) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2310–2310](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2310-L2310) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2310–2310](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2310-L2310) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2317–2317](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2317-L2317) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2320–2320](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2320-L2320) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2320–2320](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2320-L2320) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2321–2321](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2321-L2321) | Format | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2338–2338](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2338-L2338) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L283-L283) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:285–285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L285-L285) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L287-L287) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L289-L289) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L291-L291) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L293-L293) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:295–295](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L295-L295) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L297-L297) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:299–299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L299-L299) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L301-L301) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L303-L303) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L305-L305) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:311–311](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L311-L311) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L313-L313) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L315-L315) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L317-L317) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:443–443](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L443-L443) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:443–443](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L443-L443) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:446–446](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L446-L446) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:480–480](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L480-L480) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:480–480](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L480-L480) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:482–482](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L482-L482) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:483–483](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L483-L483) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:485–485](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L485-L485) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:486–486](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L486-L486) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:487–487](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L487-L487) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:488–488](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L488-L488) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:497–497](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L497-L497) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:499–499](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L499-L499) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:500–500](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L500-L500) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:501–501](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L501-L501) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:502–502](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L502-L502) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:504–504](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L504-L504) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L534-L534) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L534-L534) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:544–544](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L544-L544) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L552-L552) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:675–675](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L675-L675) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:675–675](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L675-L675) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:883–883](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L883-L883) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:883–883](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L883-L883) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:931–931](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L931-L931) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:931–931](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L931-L931) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:966–966](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L966-L966) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1017–1017](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1017-L1017) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1059–1059](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1059-L1059) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1343–1343](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1343-L1343) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1554–1554](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1554-L1554) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1566–1566](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1566-L1566) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1570–1570](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1570-L1570) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1577–1577](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1577-L1577) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1581–1581](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1581-L1581) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1593–1593](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1593-L1593) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1597–1597](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1597-L1597) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1615–1615](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1615-L1615) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1615–1615](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1615-L1615) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1620–1620](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1620-L1620) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1621–1621](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1621-L1621) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1632–1632](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1632-L1632) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1633–1633](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1633-L1633) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1639–1639](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1639-L1639) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1647–1647](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1647-L1647) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1652–1652](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1652-L1652) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1664–1664](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1664-L1664) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1665–1665](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1665-L1665) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1667–1667](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1667-L1667) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1678–1678](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1678-L1678) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1763–1763](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1763-L1763) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1820–1820](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1820-L1820) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1841–1841](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1841-L1841) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1847–1847](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1847-L1847) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1992–1992](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1992-L1992) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1993–1993](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1993-L1993) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2004–2004](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2004-L2004) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2005–2005](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2005-L2005) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2027–2027](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2027-L2027) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2031–2031](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2031-L2031) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2038–2038](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2038-L2038) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2039–2039](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2039-L2039) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2051–2051](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2051-L2051) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2097–2097](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2097-L2097) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2105–2105](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2105-L2105) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2111–2111](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2111-L2111) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2111–2111](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2111-L2111) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2118–2118](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2118-L2118) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2123–2123](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2123-L2123) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2133–2133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2133-L2133) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2133–2133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2133-L2133) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2133–2133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2133-L2133) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2133–2133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2133-L2133) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2137–2137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2137-L2137) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2137–2137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2137-L2137) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2137–2137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2137-L2137) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2137–2137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2137-L2137) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2149–2149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2149-L2149) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2156–2156](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2156-L2156) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2163–2163](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2163-L2163) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2163–2163](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2163-L2163) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2198–2198](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2198-L2198) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2267–2267](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2267-L2267) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2267–2267](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2267-L2267) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2281–2281](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2281-L2281) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2281–2281](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2281-L2281) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2289–2289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2289-L2289) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2289–2289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2289-L2289) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2310–2310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2310-L2310) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2310–2310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2310-L2310) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2310–2310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2310-L2310) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2310–2310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2310-L2310) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2317–2317](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2317-L2317) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2320–2320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2320-L2320) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2320–2320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2320-L2320) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2321–2321](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2321-L2321) | Format | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2338–2338](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2338-L2338) | Format | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5358,7 +5358,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateCsvLine` · L1290–1304
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1290–1304](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1290-L1304)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1290–1304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1290-L1304)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5377,8 +5377,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:181–244](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L181-L244) | CreateCsvLine | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:257–320](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L257-L320) | CreateCsvLine | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:181–244](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L181-L244) | CreateCsvLine | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:257–320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L257-L320) | CreateCsvLine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5419,7 +5419,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendCsvField` · L1306–1328
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1306–1328](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1306-L1328)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1306–1328](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1306-L1328)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5439,7 +5439,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1300–1300](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1300-L1300) | AppendCsvField | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1300–1300](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1300-L1300) | AppendCsvField | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5487,7 +5487,7 @@ flowchart TD
 
 ### MethodDeclaration `IsReservedBuildFileName` · L1330–1334
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1330–1334](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1330-L1334)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1330–1334](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1330-L1334)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5506,7 +5506,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:807–807](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L807-L807) | IsReservedBuildFileName | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:807–807](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L807-L807) | IsReservedBuildFileName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5527,7 +5527,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateEncoderScale` · L1336–1350
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1336–1350](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1336-L1350)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1336–1350](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1336-L1350)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5547,7 +5547,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:417–417](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L417-L417) | ValidateEncoderScale | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:417–417](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L417-L417) | ValidateEncoderScale | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5604,7 +5604,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateAeroScriptAxisName` · L1352–1371
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1352–1371](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1352-L1371)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1352–1371](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1352-L1371)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5624,10 +5624,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:397–397](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L397-L397) | ValidateAeroScriptAxisName | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:399–399](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L399-L399) | ValidateAeroScriptAxisName | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:403–403](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L403-L403) | ValidateAeroScriptAxisName | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:409–409](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L409-L409) | ValidateAeroScriptAxisName | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:397–397](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L397-L397) | ValidateAeroScriptAxisName | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:399–399](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L399-L399) | ValidateAeroScriptAxisName | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:403–403](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L403-L403) | ValidateAeroScriptAxisName | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:409–409](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L409-L409) | ValidateAeroScriptAxisName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5675,7 +5675,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L1360–1363
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1360–1363](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1360-L1363)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1360–1363](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1360-L1363)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5711,7 +5711,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeFileName` · L1373–1382
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1373–1382](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1373-L1382)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1373–1382](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1373-L1382)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5730,7 +5730,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L43-L43) | NormalizeFileName | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L43-L43) | NormalizeFileName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5769,7 +5769,7 @@ flowchart TD
 
 ### FieldDeclaration `_scriptDirectory` · L1386–1386
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1386–1386](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1386-L1386)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1386–1386](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1386-L1386)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5784,7 +5784,7 @@ flowchart TD
 
 ### FieldDeclaration `_lines` · L1387–1387
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1387–1387](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1387-L1387)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1387–1387](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1387-L1387)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5805,7 +5805,7 @@ flowchart TD
 
 ### FieldDeclaration `_xAxis` · L1388–1388
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1388–1388](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1388-L1388)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1388–1388](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1388-L1388)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5826,7 +5826,7 @@ flowchart TD
 
 ### FieldDeclaration `_yAxis` · L1389–1389
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1389–1389](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1389-L1389)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1389–1389](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1389-L1389)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5847,7 +5847,7 @@ flowchart TD
 
 ### FieldDeclaration `_laserAxis` · L1390–1390
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1390–1390](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1390-L1390)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1390–1390](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1390-L1390)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5868,7 +5868,7 @@ flowchart TD
 
 ### FieldDeclaration `_stageXAxis` · L1391–1391
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1391–1391](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1391-L1391)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1391–1391](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1391-L1391)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5889,7 +5889,7 @@ flowchart TD
 
 ### FieldDeclaration `_stageYAxis` · L1392–1392
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1392–1392](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1392-L1392)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1392–1392](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1392-L1392)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5910,7 +5910,7 @@ flowchart TD
 
 ### FieldDeclaration `_deviceNo` · L1393–1393
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1393–1393](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1393-L1393)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1393–1393](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1393-L1393)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5925,7 +5925,7 @@ flowchart TD
 
 ### FieldDeclaration `_pointCount` · L1394–1394
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1394–1394](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1394-L1394)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1394–1394](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1394-L1394)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5940,7 +5940,7 @@ flowchart TD
 
 ### FieldDeclaration `_currentX` · L1395–1395
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1395–1395](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1395-L1395)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1395–1395](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1395-L1395)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5955,7 +5955,7 @@ flowchart TD
 
 ### FieldDeclaration `_currentY` · L1396–1396
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1396–1396](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1396-L1396)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1396–1396](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1396-L1396)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5970,7 +5970,7 @@ flowchart TD
 
 ### FieldDeclaration `_laserOutputPeriod` · L1397–1397
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1397–1397](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1397-L1397)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1397–1397](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1397-L1397)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5985,7 +5985,7 @@ flowchart TD
 
 ### FieldDeclaration `_jumpSpeedMeterPerSec` · L1398–1398
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1398–1398](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1398-L1398)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1398–1398](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1398-L1398)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6000,7 +6000,7 @@ flowchart TD
 
 ### FieldDeclaration `_markSpeedMeterPerSec` · L1399–1399
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1399–1399](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1399-L1399)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1399–1399](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1399-L1399)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6015,7 +6015,7 @@ flowchart TD
 
 ### FieldDeclaration `_tactTime` · L1400–1400
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1400–1400](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1400-L1400)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1400–1400](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1400-L1400)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6030,7 +6030,7 @@ flowchart TD
 
 ### FieldDeclaration `_nMarkDriveLaserControl` · L1401–1401
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1401–1401](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1401-L1401)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1401–1401](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1401-L1401)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6045,7 +6045,7 @@ flowchart TD
 
 ### FieldDeclaration `_scanPlannerStageEncoderMode` · L1402–1402
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1402–1402](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1402-L1402)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1402–1402](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1402-L1402)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6060,7 +6060,7 @@ flowchart TD
 
 ### FieldDeclaration `_createdAt` · L1403–1403
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1403–1403](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1403-L1403)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1403–1403](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1403-L1403)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6081,7 +6081,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L1404–1408
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1404–1408](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1404-L1408)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1404–1408](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1404-L1408)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6101,7 +6101,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L43-L43) | new CAutomation1Script | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L43-L43) | new CAutomation1Script | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -6114,7 +6114,7 @@ flowchart TD
 
 ### PropertyDeclaration `FileName` · L1410–1410
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1410–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1410-L1410)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1410–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1410-L1410)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6129,7 +6129,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_FileName` · L1410–1410
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1410–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1410-L1410)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1410–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1410-L1410)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6144,7 +6144,7 @@ flowchart TD
 
 ### PropertyDeclaration `FilePath` · L1412–1418
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1412–1418](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1412-L1418)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1412–1418](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1412-L1418)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6159,7 +6159,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_FilePath` · L1414–1417
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1414–1417](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1414-L1417)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1414–1417](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1414-L1417)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6187,7 +6187,7 @@ flowchart TD
 
 ### PropertyDeclaration `Lines` · L1420–1426
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1420–1426](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1420-L1426)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1420–1426](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1420-L1426)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6202,7 +6202,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Lines` · L1422–1425
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1422–1425](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1422-L1425)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1422–1425](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1422-L1425)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6223,7 +6223,7 @@ flowchart TD
 
 ### MethodDeclaration `Clear` · L1428–1447
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1428–1447](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1428-L1447)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1428–1447](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1428-L1447)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6266,7 +6266,7 @@ flowchart TD
 
 ### MethodDeclaration `AddLine` · L1449–1455
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1449–1455](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1449-L1455)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1449–1455](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1449-L1455)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6311,7 +6311,7 @@ flowchart TD
 
 ### MethodDeclaration `Start` · L1457–1467
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1457–1467](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1457-L1467)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1457–1467](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1457-L1467)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6363,7 +6363,7 @@ flowchart TD
 
 ### MethodDeclaration `SetDeviceNo` · L1469–1472
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1469–1472](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1469-L1472)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1469–1472](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1469-L1472)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6397,7 +6397,7 @@ flowchart TD
 
 ### MethodDeclaration `SetNMarkDriveLaserControl` · L1474–1477
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1474–1477](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1474-L1477)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1474–1477](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1474-L1477)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6424,7 +6424,7 @@ flowchart TD
 
 ### MethodDeclaration `SetScanPlannerStageEncoderMode` · L1479–1482
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1479–1482](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1479-L1482)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1479–1482](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1479-L1482)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6451,7 +6451,7 @@ flowchart TD
 
 ### MethodDeclaration `DefaultSetting` · L1484–1509
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1484–1509](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1484-L1509)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1484–1509](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1484-L1509)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6525,7 +6525,7 @@ flowchart TD
 
 ### MethodDeclaration `DefaultFigureScanSetting` · L1511–1534
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1511–1534](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1511-L1534)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1511–1534](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1511-L1534)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6600,7 +6600,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAxis` · L1536–1541
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1536–1541](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1536-L1541)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1536–1541](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1536-L1541)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6642,7 +6642,7 @@ flowchart TD
 
 ### MethodDeclaration `SetStageAxis` · L1543–1547
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1543–1547](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1543-L1547)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1543–1547](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1543-L1547)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6680,7 +6680,7 @@ flowchart TD
 
 ### MethodDeclaration `SetFrequency` · L1549–1556
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1549–1556](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1549-L1556)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1549–1556](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1549-L1556)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6728,7 +6728,7 @@ flowchart TD
 
 ### MethodDeclaration `SetLaserPower` · L1558–1572
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1558–1572](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1558-L1572)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1558–1572](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1558-L1572)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6788,7 +6788,7 @@ flowchart TD
 
 ### MethodDeclaration `SetLaserPowerNoDelay` · L1574–1583
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1574–1583](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1574-L1583)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1574–1583](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1574-L1583)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6842,7 +6842,7 @@ flowchart TD
 
 ### MethodDeclaration `SetPulseOnTimeLaserPower` · L1585–1601
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1585–1601](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1585-L1601)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1585–1601](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1585-L1601)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6904,7 +6904,7 @@ flowchart TD
 
 ### MethodDeclaration `SetLaserMode` · L1603–1609
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1603–1609](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1603-L1609)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1603–1609](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1603-L1609)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6923,9 +6923,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1496–1496](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1496-L1496) | SetLaserMode | True |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1523–1523](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1523-L1523) | SetLaserMode | True |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1600–1600](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1600-L1600) | SetLaserMode | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1496–1496](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1496-L1496) | SetLaserMode | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1523–1523](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1523-L1523) | SetLaserMode | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1600–1600](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1600-L1600) | SetLaserMode | True |
 
 호출하는 대상과 해석 범위:
 
@@ -6953,7 +6953,7 @@ flowchart TD
 
 ### MethodDeclaration `SetLaserDelay` · L1611–1616
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1611–1616](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1611-L1616)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1611–1616](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1611-L1616)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6991,7 +6991,7 @@ flowchart TD
 
 ### MethodDeclaration `SetJumpSpeed` · L1618–1623
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1618–1623](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1618-L1623)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1618–1623](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1618-L1623)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7031,7 +7031,7 @@ flowchart TD
 
 ### MethodDeclaration `SetJumpSpeedRate` · L1625–1635
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1625–1635](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1625-L1635)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1625–1635](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1625-L1635)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7083,7 +7083,7 @@ flowchart TD
 
 ### MethodDeclaration `SetMarkSpeed` · L1637–1641
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1637–1641](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1637-L1641)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1637–1641](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1637-L1641)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7119,7 +7119,7 @@ flowchart TD
 
 ### MethodDeclaration `SetStageSpeed` · L1643–1654
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1643–1654](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1643-L1654)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1643–1654](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1643-L1654)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7176,7 +7176,7 @@ flowchart TD
 
 ### MethodDeclaration `SetScannerAcc` · L1656–1668
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1656–1668](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1656-L1668)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1656–1668](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1656-L1668)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7195,7 +7195,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1491–1491](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1491-L1491) | SetScannerAcc | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1491–1491](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1491-L1491) | SetScannerAcc | True |
 
 호출하는 대상과 해석 범위:
 
@@ -7238,7 +7238,7 @@ flowchart TD
 
 ### MethodDeclaration `SetMarkAcc` · L1670–1679
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1670–1679](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1670-L1679)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1670–1679](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1670-L1679)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7286,7 +7286,7 @@ flowchart TD
 
 ### MethodDeclaration `SetIFOV` · L1681–1684
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1681–1684](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1681-L1684)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1681–1684](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1681-L1684)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7305,7 +7305,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1513–1513](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1513-L1513) | SetIFOV | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1513–1513](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1513-L1513) | SetIFOV | True |
 
 호출하는 대상과 해석 범위:
 
@@ -7324,7 +7324,7 @@ flowchart TD
 
 ### MethodDeclaration `SetIFOVEmulatedQuadratureDivider` · L1686–1709
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1686–1709](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1686-L1709)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1686–1709](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1686-L1709)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7337,7 +7337,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1999–1999](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1999-L1999) | SetIFOVEmulatedQuadratureDivider | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1999–1999](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1999-L1999) | SetIFOVEmulatedQuadratureDivider | True |
 
 호출하는 대상과 해석 범위:
 
@@ -7392,7 +7392,7 @@ flowchart TD
 
 ### MethodDeclaration `SetIFOVIO` · L1711–1741
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1711–1741](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1711-L1741)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1711–1741](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1711-L1741)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7470,7 +7470,7 @@ flowchart TD
 
 ### MethodDeclaration `SetIFOVScaleXY` · L1743–1754
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1743–1754](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1743-L1754)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1743–1754](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1743-L1754)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7516,7 +7516,7 @@ flowchart TD
 
 ### MethodDeclaration `SetIFOVTime` · L1756–1759
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1756–1759](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1756-L1759)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1756–1759](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1756-L1759)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7549,7 +7549,7 @@ flowchart TD
 
 ### MethodDeclaration `SetIFOVSize` · L1761–1764
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1761–1764](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1761-L1764)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1761–1764](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1761-L1764)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7584,7 +7584,7 @@ flowchart TD
 
 ### MethodDeclaration `SetIFOVTrackingSpeed` · L1766–1769
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1766–1769](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1766-L1769)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1766–1769](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1766-L1769)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7617,7 +7617,7 @@ flowchart TD
 
 ### MethodDeclaration `SetIFOVTrackingAccel` · L1771–1774
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1771–1774](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1771-L1774)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1771–1774](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1771-L1774)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7650,7 +7650,7 @@ flowchart TD
 
 ### MethodDeclaration `SetIFOVPair` · L1776–1781
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1776–1781](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1776-L1781)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1776–1781](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1776-L1781)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7696,7 +7696,7 @@ flowchart TD
 
 ### MethodDeclaration `SetIFOVSyncAxis` · L1783–1786
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1783–1786](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1783-L1786)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1783–1786](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1783-L1786)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7711,7 +7711,7 @@ flowchart TD
 
 ### MethodDeclaration `SetMoveBlending` · L1788–1791
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1788–1791](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1788-L1791)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1788–1791](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1788-L1791)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7730,8 +7730,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1488–1488](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1488-L1488) | SetMoveBlending | True |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1516–1516](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1516-L1516) | SetMoveBlending | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1488–1488](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1488-L1488) | SetMoveBlending | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1516–1516](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1516-L1516) | SetMoveBlending | True |
 
 호출하는 대상과 해석 범위:
 
@@ -7750,7 +7750,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAbsoluteMode` · L1793–1796
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1793–1796](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1793-L1796)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1793–1796](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1793-L1796)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7763,8 +7763,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1490–1490](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1490-L1490) | SetAbsoluteMode | True |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1518–1518](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1518-L1518) | SetAbsoluteMode | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1490–1490](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1490-L1490) | SetAbsoluteMode | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1518–1518](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1518-L1518) | SetAbsoluteMode | True |
 
 호출하는 대상과 해석 범위:
 
@@ -7782,7 +7782,7 @@ flowchart TD
 
 ### MethodDeclaration `SetIncrementalMode` · L1798–1801
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1798–1801](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1798-L1801)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1798–1801](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1798-L1801)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7809,7 +7809,7 @@ flowchart TD
 
 ### MethodDeclaration `SetWaitModeAuto` · L1803–1806
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1803–1806](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1803-L1806)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1803–1806](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1803-L1806)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7822,8 +7822,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1489–1489](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1489-L1489) | SetWaitModeAuto | True |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1517–1517](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1517-L1517) | SetWaitModeAuto | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1489–1489](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1489-L1489) | SetWaitModeAuto | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1517–1517](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1517-L1517) | SetWaitModeAuto | True |
 
 호출하는 대상과 해석 범위:
 
@@ -7841,7 +7841,7 @@ flowchart TD
 
 ### MethodDeclaration `SetMoveDelay` · L1808–1825
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1808–1825](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1808-L1825)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1808–1825](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1808-L1825)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7862,8 +7862,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1562–1562](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1562-L1562) | SetMoveDelay | True |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1589–1589](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1589-L1589) | SetMoveDelay | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1562–1562](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1562-L1562) | SetMoveDelay | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1589–1589](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1589-L1589) | SetMoveDelay | True |
 
 호출하는 대상과 해석 범위:
 
@@ -7902,7 +7902,7 @@ flowchart TD
 
 ### MethodDeclaration `SetExecuteLineCount` · L1827–1835
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1827–1835](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1827-L1835)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1827–1835](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1827-L1835)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7921,8 +7921,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1504–1504](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1504-L1504) | SetExecuteLineCount | True |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1527–1527](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1527-L1527) | SetExecuteLineCount | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1504–1504](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1504-L1504) | SetExecuteLineCount | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1527–1527](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1527-L1527) | SetExecuteLineCount | True |
 
 호출하는 대상과 해석 범위:
 
@@ -7951,7 +7951,7 @@ flowchart TD
 
 ### MethodDeclaration `SetScannerRotate` · L1837–1843
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1837–1843](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1837-L1843)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1837–1843](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1837-L1843)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7996,7 +7996,7 @@ flowchart TD
 
 ### MethodDeclaration `SetScannerRotate` · L1845–1848
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1845–1848](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1845-L1848)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1845–1848](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1845-L1848)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8034,7 +8034,7 @@ flowchart TD
 
 ### MethodDeclaration `SetMoveUpdateRate` · L1850–1853
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1850–1853](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1850-L1853)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1850–1853](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1850-L1853)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8053,8 +8053,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1501–1501](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1501-L1501) | SetMoveUpdateRate | True |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1526–1526](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1526-L1526) | SetMoveUpdateRate | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1501–1501](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1501-L1501) | SetMoveUpdateRate | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1526–1526](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1526-L1526) | SetMoveUpdateRate | True |
 
 호출하는 대상과 해석 범위:
 
@@ -8072,7 +8072,7 @@ flowchart TD
 
 ### MethodDeclaration `SetCoordinatedAccelLimit` · L1855–1858
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1855–1858](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1855-L1858)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1855–1858](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1855-L1858)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8106,7 +8106,7 @@ flowchart TD
 
 ### MethodDeclaration `SetTaskAccelLimit` · L1860–1864
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1860–1864](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1860-L1864)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1860–1864](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1860-L1864)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8142,7 +8142,7 @@ flowchart TD
 
 ### MethodDeclaration `SetScanTrajectoryFIRFilterX` · L1866–1869
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1866–1869](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1866-L1869)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1866–1869](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1866-L1869)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8175,7 +8175,7 @@ flowchart TD
 
 ### MethodDeclaration `SetScanTrajectoryFIRFilterY` · L1871–1874
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1871–1874](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1871-L1874)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1871–1874](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1871-L1874)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8208,7 +8208,7 @@ flowchart TD
 
 ### MethodDeclaration `SetStageTrajectoryFIRFilterX` · L1876–1882
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1876–1882](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1876-L1882)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1876–1882](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1876-L1882)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8253,7 +8253,7 @@ flowchart TD
 
 ### MethodDeclaration `SetStageTrajectoryFIRFilterY` · L1884–1890
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1884–1890](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1884-L1890)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1884–1890](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1884-L1890)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8298,7 +8298,7 @@ flowchart TD
 
 ### MethodDeclaration `SetProjection` · L1892–1895
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1892–1895](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1892-L1895)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1892–1895](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1892-L1895)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8322,7 +8322,7 @@ flowchart TD
 
 ### MethodDeclaration `SetProjectionOff` · L1897–1900
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1897–1900](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1897-L1900)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1897–1900](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1897-L1900)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8343,7 +8343,7 @@ flowchart TD
 
 ### MethodDeclaration `SetGearing` · L1902–1905
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1902–1905](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1902-L1905)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1902–1905](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1902-L1905)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8365,7 +8365,7 @@ flowchart TD
 
 ### MethodDeclaration `SetGearingOff` · L1907–1910
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1907–1910](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1907-L1910)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1907–1910](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1907-L1910)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8386,7 +8386,7 @@ flowchart TD
 
 ### MethodDeclaration `SetSoftwareLimitSetup` · L1912–1921
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1912–1921](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1912-L1921)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1912–1921](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1912-L1921)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8432,7 +8432,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAerotechEncoderReset` · L1923–1936
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1923–1936](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1923-L1936)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1923–1936](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1923-L1936)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8493,7 +8493,7 @@ flowchart TD
 
 ### MethodDeclaration `SetScanPlannerStageEncoder` · L1938–1945
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1938–1945](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1938-L1945)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1938–1945](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1938-L1945)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8542,7 +8542,7 @@ flowchart TD
 
 ### MethodDeclaration `SetEmulatedQuadratureDividerX` · L1947–1950
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1947–1950](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1947-L1950)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1947–1950](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1947-L1950)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8575,7 +8575,7 @@ flowchart TD
 
 ### MethodDeclaration `SetEmulatedQuadratureDividerY` · L1952–1955
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1952–1955](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1952-L1955)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1952–1955](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1952-L1955)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8608,7 +8608,7 @@ flowchart TD
 
 ### MethodDeclaration `SetStageEmulatedQuadratureDivider` · L1957–1968
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1957–1968](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1957-L1968)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1957–1968](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1957-L1968)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8661,7 +8661,7 @@ flowchart TD
 
 ### MethodDeclaration `SetPSO` · L1970–2047
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:1970–2047](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1970-L2047)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:1970–2047](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1970-L2047)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8818,7 +8818,7 @@ flowchart TD
 
 ### MethodDeclaration `SetPSODistance` · L2049–2052
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2049–2052](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2049-L2052)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2049–2052](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2049-L2052)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8853,7 +8853,7 @@ flowchart TD
 
 ### MethodDeclaration `SetPSOOnOff` · L2054–2057
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2054–2057](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2054-L2057)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2054–2057](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2054-L2057)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8872,8 +8872,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2019–2019](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2019-L2019) | SetPSOOnOff | True |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2042–2042](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2042-L2042) | SetPSOOnOff | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2019–2019](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2019-L2019) | SetPSOOnOff | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2042–2042](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2042-L2042) | SetPSOOnOff | True |
 
 호출하는 대상과 해석 범위:
 
@@ -8892,7 +8892,7 @@ flowchart TD
 
 ### MethodDeclaration `SetPSOChangePower` · L2059–2062
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2059–2062](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2059-L2062)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2059–2062](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2059-L2062)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8914,7 +8914,7 @@ flowchart TD
 
 ### MethodDeclaration `SetPSOFire` · L2064–2067
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2064–2067](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2064-L2067)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2064–2067](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2064-L2067)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8939,7 +8939,7 @@ flowchart TD
 
 ### MethodDeclaration `SetPSOLaserWindowMask` · L2069–2072
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2069–2072](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2069-L2072)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2069–2072](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2069-L2072)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8962,7 +8962,7 @@ flowchart TD
 
 ### MethodDeclaration `DeclareEncoderVariable` · L2074–2076
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2074–2076](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2074-L2076)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2074–2076](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2074-L2076)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8984,7 +8984,7 @@ flowchart TD
 
 ### MethodDeclaration `InitDeclareVariable` · L2078–2085
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2078–2085](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2078-L2085)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2078–2085](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2078-L2085)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9019,7 +9019,7 @@ flowchart TD
 
 ### MethodDeclaration `InitDeclareVariableIFOV` · L2087–2090
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2087–2090](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2087-L2090)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2087–2090](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2087-L2090)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9034,7 +9034,7 @@ flowchart TD
 
 ### MethodDeclaration `SetWaitForEncoder` · L2092–2098
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2092–2098](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2092-L2098)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2092–2098](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2092-L2098)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9081,7 +9081,7 @@ flowchart TD
 
 ### MethodDeclaration `SetWaitForEncoder` · L2100–2125
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2100–2125](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2100-L2125)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2100–2125](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2100-L2125)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9173,7 +9173,7 @@ flowchart TD
 
 ### MethodDeclaration `SetWaitForEncoder2Axis` · L2127–2141
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2127–2141](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2127-L2141)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2127–2141](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2127-L2141)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9253,7 +9253,7 @@ flowchart TD
 
 ### MethodDeclaration `SetWaitForStartAxis2` · L2143–2166
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2143–2166](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2143-L2166)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2143–2166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2143-L2166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9348,7 +9348,7 @@ flowchart TD
 
 ### MethodDeclaration `SetEncoderScaleFactor` · L2168–2178
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2168–2178](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2168-L2178)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2168–2178](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2168-L2178)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9402,7 +9402,7 @@ flowchart TD
 
 ### MethodDeclaration `SetEncoderScaleFactor` · L2180–2187
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2180–2187](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2180-L2187)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2180–2187](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2180-L2187)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9450,7 +9450,7 @@ flowchart TD
 
 ### MethodDeclaration `SetEncoderScaleFactor` · L2189–2200
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2189–2200](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2189-L2200)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2189–2200](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2189-L2200)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9513,7 +9513,7 @@ flowchart TD
 
 ### MethodDeclaration `SetEncoderScaleFactorByPrimaryDivider` · L2202–2214
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2202–2214](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2202-L2214)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2202–2214](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2202-L2214)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9574,7 +9574,7 @@ flowchart TD
 
 ### MethodDeclaration `InitEncoderCount` · L2216–2220
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2216–2220](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2216-L2220)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2216–2220](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2216-L2220)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9611,7 +9611,7 @@ flowchart TD
 
 ### MethodDeclaration `EncoderNotFeedback` · L2222–2226
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2222–2226](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2222-L2226)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2222–2226](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2222-L2226)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9648,7 +9648,7 @@ flowchart TD
 
 ### MethodDeclaration `ReleaseEncoderScaleFactor` · L2228–2232
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2228–2232](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2228-L2232)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2228–2232](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2228-L2232)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9685,7 +9685,7 @@ flowchart TD
 
 ### MethodDeclaration `LaserAuto` · L2234–2237
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2234–2237](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2234-L2237)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2234–2237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2234-L2237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9698,8 +9698,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2020–2020](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2020-L2020) | LaserAuto | True |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2046–2046](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2046-L2046) | LaserAuto | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2020–2020](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2020-L2020) | LaserAuto | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2046–2046](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2046-L2046) | LaserAuto | True |
 
 호출하는 대상과 해석 범위:
 
@@ -9717,7 +9717,7 @@ flowchart TD
 
 ### MethodDeclaration `LaserOn` · L2239–2242
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2239–2242](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2239-L2242)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2239–2242](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2239-L2242)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9744,7 +9744,7 @@ flowchart TD
 
 ### MethodDeclaration `LaserOff` · L2244–2247
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2244–2247](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2244-L2247)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2244–2247](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2244-L2247)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9757,7 +9757,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2318–2318](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2318-L2318) | LaserOff | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2318–2318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2318-L2318) | LaserOff | True |
 
 호출하는 대상과 해석 범위:
 
@@ -9775,7 +9775,7 @@ flowchart TD
 
 ### MethodDeclaration `PsoLaserControl` · L2249–2252
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2249–2252](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2249-L2252)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2249–2252](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2249-L2252)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9797,7 +9797,7 @@ flowchart TD
 
 ### MethodDeclaration `LaserFire` · L2254–2257
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2254–2257](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2254-L2257)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2254–2257](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2254-L2257)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9818,7 +9818,7 @@ flowchart TD
 
 ### MethodDeclaration `Jump` · L2259–2271
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2259–2271](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2259-L2271)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2259–2271](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2259-L2271)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9838,7 +9838,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2296–2296](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2296-L2296) | Jump | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2296–2296](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2296-L2296) | Jump | True |
 
 호출하는 대상과 해석 범위:
 
@@ -9875,7 +9875,7 @@ flowchart TD
 
 ### MethodDeclaration `Mark` · L2273–2285
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2273–2285](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2273-L2285)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2273–2285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2273-L2285)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9895,7 +9895,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2301–2301](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2301-L2301) | Mark | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2301–2301](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2301-L2301) | Mark | True |
 
 호출하는 대상과 해석 범위:
 
@@ -9932,7 +9932,7 @@ flowchart TD
 
 ### MethodDeclaration `GCodeMove` · L2287–2292
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2287–2292](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2287-L2292)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2287–2292](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2287-L2292)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9952,7 +9952,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1533–1533](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1533-L1533) | GCodeMove | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1533–1533](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1533-L1533) | GCodeMove | True |
 
 호출하는 대상과 해석 범위:
 
@@ -9976,7 +9976,7 @@ flowchart TD
 
 ### MethodDeclaration `JumpRel` · L2294–2297
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2294–2297](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2294-L2297)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2294–2297](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2294-L2297)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10010,7 +10010,7 @@ flowchart TD
 
 ### MethodDeclaration `MarkRel` · L2299–2302
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2299–2302](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2299-L2302)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2299–2302](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2299-L2302)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10044,7 +10044,7 @@ flowchart TD
 
 ### MethodDeclaration `Arc` · L2304–2313
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2304–2313](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2304-L2313)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2304–2313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2304-L2313)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10100,7 +10100,7 @@ flowchart TD
 
 ### MethodDeclaration `JumpLinear` · L2315–2324
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2315–2324](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2315-L2324)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2315–2324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2315-L2324)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10150,7 +10150,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitMoveDone` · L2326–2329
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2326–2329](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2326-L2329)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2326–2329](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2326-L2329)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10163,8 +10163,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1991–1991](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1991-L1991) | WaitMoveDone | True |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2003–2003](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2003-L2003) | WaitMoveDone | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1991–1991](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1991-L1991) | WaitMoveDone | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2003–2003](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2003-L2003) | WaitMoveDone | True |
 
 호출하는 대상과 해석 범위:
 
@@ -10182,7 +10182,7 @@ flowchart TD
 
 ### MethodDeclaration `Dwell` · L2331–2339
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2331–2339](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2331-L2339)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2331–2339](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2331-L2339)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10228,7 +10228,7 @@ flowchart TD
 
 ### MethodDeclaration `EnableAxisPair` · L2341–2344
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2341–2344](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2341-L2344)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2341–2344](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2341-L2344)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10255,7 +10255,7 @@ flowchart TD
 
 ### MethodDeclaration `DisableAxisPair` · L2346–2349
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2346–2349](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2346-L2349)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2346–2349](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2346-L2349)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10282,7 +10282,7 @@ flowchart TD
 
 ### MethodDeclaration `FaultAckAxisPair` · L2351–2354
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2351–2354](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2351-L2354)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2351–2354](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2351-L2354)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10297,7 +10297,7 @@ flowchart TD
 
 ### MethodDeclaration `HomeAxisPair` · L2356–2359
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2356–2359](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2356-L2359)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2356–2359](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2356-L2359)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10324,7 +10324,7 @@ flowchart TD
 
 ### MethodDeclaration `OffsetClearAxisPair` · L2361–2364
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2361–2364](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2361-L2364)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2361–2364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2361-L2364)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10339,7 +10339,7 @@ flowchart TD
 
 ### MethodDeclaration `OffsetSetAxisPair` · L2366–2369
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2366–2369](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2366-L2369)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2366–2369](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2366-L2369)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10361,7 +10361,7 @@ flowchart TD
 
 ### MethodDeclaration `SetSignalLogTrigger` · L2371–2374
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2371–2374](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2371-L2374)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2371–2374](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2371-L2374)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10382,7 +10382,7 @@ flowchart TD
 
 ### MethodDeclaration `ProgramStart` · L2376–2379
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2376–2379](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2376-L2379)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2376–2379](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2376-L2379)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10409,7 +10409,7 @@ flowchart TD
 
 ### MethodDeclaration `ProgramEnd` · L2381–2384
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2381–2384](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2381-L2384)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2381–2384](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2381-L2384)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10436,7 +10436,7 @@ flowchart TD
 
 ### MethodDeclaration `BufferedEnd` · L2386–2389
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2386–2389](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2386-L2389)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2386–2389](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2386-L2389)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10463,7 +10463,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitInpos` · L2391–2394
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2391–2394](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2391-L2394)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2391–2394](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2391-L2394)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10478,7 +10478,7 @@ flowchart TD
 
 ### MethodDeclaration `SetHomePos` · L2396–2399
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2396–2399](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2396-L2399)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2396–2399](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2396-L2399)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10493,7 +10493,7 @@ flowchart TD
 
 ### MethodDeclaration `SetGalvoPosZero` · L2401–2406
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2401–2406](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2401-L2406)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2401–2406](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2401-L2406)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10522,7 +10522,7 @@ flowchart TD
 
 ### MethodDeclaration `End` · L2408–2419
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2408–2419](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2408-L2419)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2408–2419](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2408-L2419)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10541,7 +10541,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2426–2426](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2426-L2426) | End | True |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2426–2426](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2426-L2426) | End | True |
 
 호출하는 대상과 해석 범위:
 
@@ -10578,7 +10578,7 @@ flowchart TD
 
 ### MethodDeclaration `Save` · L2421–2432
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2421–2432](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2421-L2432)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2421–2432](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2421-L2432)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10634,7 +10634,7 @@ flowchart TD
 
 ### MethodDeclaration `AddMoveTactTime` · L2434–2443
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2434–2443](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2434-L2443)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2434–2443](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2434-L2443)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10655,8 +10655,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2268–2268](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2268-L2268) | AddMoveTactTime | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2282–2282](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2282-L2282) | AddMoveTactTime | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2268–2268](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2268-L2268) | AddMoveTactTime | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2282–2282](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2282-L2282) | AddMoveTactTime | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10692,7 +10692,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeAxis` · L2445–2448
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2445–2448](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2445-L2448)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2445–2448](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2445-L2448)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10712,33 +10712,33 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1538–1538](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1538-L1538) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1539–1539](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1539-L1539) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1540–1540](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1540-L1540) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1545–1545](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1545-L1545) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1546–1546](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1546-L1546) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1780–1780](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1780-L1780) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1780–1780](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1780-L1780) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1847–1847](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1847-L1847) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1925–1925](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1925-L1925) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1926–1926](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1926-L1926) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1940–1940](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1940-L1940) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2094–2094](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2094-L2094) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2102–2102](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2102-L2102) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2129–2129](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2129-L2129) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2130–2130](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2130-L2130) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2145–2145](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2145-L2145) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2146–2146](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2146-L2146) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2175–2175](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2175-L2175) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2176–2176](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2176-L2176) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2182–2182](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2182-L2182) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2183–2183](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2183-L2183) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2196–2196](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2196-L2196) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2204–2204](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2204-L2204) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2205–2205](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2205-L2205) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2218–2218](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2218-L2218) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2224–2224](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2224-L2224) | NormalizeAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2230–2230](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2230-L2230) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1538–1538](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1538-L1538) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1539–1539](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1539-L1539) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1540–1540](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1540-L1540) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1545–1545](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1545-L1545) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1546–1546](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1546-L1546) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1780–1780](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1780-L1780) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1780–1780](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1780-L1780) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1847–1847](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1847-L1847) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1925–1925](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1925-L1925) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1926–1926](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1926-L1926) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1940–1940](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1940-L1940) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2094–2094](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2094-L2094) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2102–2102](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2102-L2102) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2129–2129](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2129-L2129) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2130–2130](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2130-L2130) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2145–2145](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2145-L2145) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2146–2146](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2146-L2146) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2175–2175](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2175-L2175) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2176–2176](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2176-L2176) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2182–2182](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2182-L2182) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2183–2183](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2183-L2183) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2196–2196](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2196-L2196) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2204–2204](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2204-L2204) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2205–2205](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2205-L2205) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2218–2218](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2218-L2218) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2224–2224](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2224-L2224) | NormalizeAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2230–2230](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2230-L2230) | NormalizeAxis | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10760,7 +10760,7 @@ flowchart TD
 
 ### MethodDeclaration `IsUsableAxis` · L2450–2453
 
-[Drilling.File/Script/CAutomation1ScriptFile.cs:2450–2453](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2450-L2453)
+[Drilling.File/Script/CAutomation1ScriptFile.cs:2450–2453](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2450-L2453)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10779,32 +10779,32 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1645–1645](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1645-L1645) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1650–1650](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1650-L1650) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1688–1688](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1688-L1688) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1693–1693](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1693-L1693) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1698–1698](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1698-L1698) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1704–1704](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1704-L1704) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1715–1715](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1715-L1715) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1722–1722](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1722-L1722) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1732–1732](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1732-L1732) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1737–1737](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1737-L1737) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1745–1745](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1745-L1745) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1750–1750](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1750-L1750) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1878–1878](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1878-L1878) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1886–1886](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1886-L1886) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1927–1927](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1927-L1927) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1932–1932](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1932-L1932) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1941–1941](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1941-L1941) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1959–1959](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1959-L1959) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:1964–1964](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L1964-L1964) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2147–2147](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2147-L2147) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2147–2147](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2147-L2147) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2154–2154](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2154-L2154) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2154–2154](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2154-L2154) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2161–2161](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2161-L2161) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2161–2161](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2161-L2161) | IsUsableAxis | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:2206–2206](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L2206-L2206) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1645–1645](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1645-L1645) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1650–1650](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1650-L1650) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1688–1688](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1688-L1688) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1693–1693](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1693-L1693) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1698–1698](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1698-L1698) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1704–1704](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1704-L1704) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1715–1715](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1715-L1715) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1722–1722](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1722-L1722) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1732–1732](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1732-L1732) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1737–1737](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1737-L1737) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1745–1745](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1745-L1745) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1750–1750](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1750-L1750) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1878–1878](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1878-L1878) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1886–1886](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1886-L1886) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1927–1927](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1927-L1927) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1932–1932](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1932-L1932) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1941–1941](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1941-L1941) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1959–1959](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1959-L1959) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:1964–1964](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L1964-L1964) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2147–2147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2147-L2147) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2147–2147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2147-L2147) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2154–2154](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2154-L2154) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2154–2154](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2154-L2154) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2161–2161](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2161-L2161) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2161–2161](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2161-L2161) | IsUsableAxis | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:2206–2206](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L2206-L2206) | IsUsableAxis | False |
 
 호출하는 대상과 해석 범위:
 

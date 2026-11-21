@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 086ad178a8c91e4954f749894b4589b6b7b1a06190f2bfad4b2cf8ffe1def688 |
 | 파일 분류 | code |
 | 원본 크기/행 | 29,341 bytes / 460 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -88,7 +88,7 @@
 
 ### FieldDeclaration `_prepared` · L18–18
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L18-L18)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -103,7 +103,7 @@
 
 ### FieldDeclaration `_result` · L19–19
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L19-L19)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -118,7 +118,7 @@
 
 ### FieldDeclaration `_saved` · L20–20
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L20-L20)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -133,7 +133,7 @@
 
 ### FieldDeclaration `_saveGate` · L21–21
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L21-L21)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -161,7 +161,7 @@
 
 ### PropertyDeclaration `Outcome` · L22–22
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L22-L22)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -176,7 +176,7 @@
 
 ### GetAccessorDeclaration `get_Outcome` · L22–22
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L22-L22)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -191,7 +191,7 @@
 
 ### SetAccessorDeclaration `set_Outcome` · L22–22
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L22-L22)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -212,7 +212,7 @@
 
 ### PropertyDeclaration `FollowUpInspectionCompleted` · L25–27
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:25–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L25-L27)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:25–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L25-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -239,7 +239,7 @@
 
 ### MethodDeclaration `Prepare` · L29–41
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:29–41](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L29-L41)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:29–41](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L29-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -293,7 +293,7 @@
 
 ### MethodDeclaration `Measure` · L43–77
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:43–77](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L43-L77)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:43–77](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L43-L77)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -312,7 +312,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:3201–3201](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3201-L3201) | _autoFineReview.Measure | False |
+| [Drilling.UI/CRootView.cs:3201–3201](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3201-L3201) | _autoFineReview.Measure | False |
 
 호출하는 대상과 해석 범위:
 
@@ -408,7 +408,7 @@ flowchart TD
 
 ### MethodDeclaration `Save` · L79–93
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:79–93](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L79-L93)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:79–93](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L79-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -427,7 +427,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:3213–3213](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3213-L3213) | _autoFineReview.Save | False |
+| [Drilling.UI/CRootView.cs:3213–3213](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3213-L3213) | _autoFineReview.Save | False |
 
 호출하는 대상과 해석 범위:
 
@@ -472,7 +472,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveCore` · L95–169
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:95–169](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L95-L169)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:95–169](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L95-L169)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -491,7 +491,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L87-L87) | SaveCore | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L87-L87) | SaveCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -669,7 +669,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateMeasurements` · L171–199
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:171–199](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L171-L199)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:171–199](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L171-L199)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -689,8 +689,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L55-L55) | ValidateMeasurements | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L102-L102) | ValidateMeasurements | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L55-L55) | ValidateMeasurements | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L102-L102) | ValidateMeasurements | False |
 
 호출하는 대상과 해석 범위:
 
@@ -776,7 +776,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Identity` · L198–198
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:198–198](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L198-L198)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:198–198](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L198-L198)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -795,8 +795,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L184-L184) | Identity | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L191-L191) | Identity | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L184-L184) | Identity | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L191-L191) | Identity | False |
 
 호출하는 대상과 해석 범위:
 
@@ -816,7 +816,7 @@ flowchart TD
 
 ### MethodDeclaration `Normalize` · L201–201
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L201-L201)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L201-L201)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -835,8 +835,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L127-L127) | Normalize | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L132-L132) | Normalize | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L127-L127) | Normalize | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L132-L132) | Normalize | False |
 
 호출하는 대상과 해석 범위:
 
@@ -860,7 +860,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildPlan` · L203–316
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:203–316](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L203-L316)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:203–316](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L203-L316)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -880,7 +880,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2692–2692](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2692-L2692) | CAutoFineReviewCoordinator.BuildPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:2692–2692](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2692-L2692) | CAutoFineReviewCoordinator.BuildPlan | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1191,7 +1191,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Tolerance` · L315–315
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L315-L315)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L315-L315)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1210,8 +1210,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L254-L254) | Tolerance | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L255-L255) | Tolerance | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L254-L254) | Tolerance | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L255-L255) | Tolerance | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1237,7 +1237,7 @@ flowchart TD
 
 ### MethodDeclaration `FindTopmostCells` · L318–340
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:318–340](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L318-L340)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:318–340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L318-L340)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1256,7 +1256,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L261-L261) | FindTopmostCells | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L261-L261) | FindTopmostCells | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1350,7 +1350,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Read` · L320–320
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L320-L320)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L320-L320)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1370,14 +1370,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:322–322](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L322-L322) | Read | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L326-L326) | Read | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L326-L326) | Read | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L326-L326) | Read | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L326-L326) | Read | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L326-L326) | Read | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L326-L326) | Read | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L326-L326) | Read | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:322–322](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L322-L322) | Read | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L326-L326) | Read | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L326-L326) | Read | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L326-L326) | Read | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L326-L326) | Read | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L326-L326) | Read | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L326-L326) | Read | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L326-L326) | Read | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1398,7 +1398,7 @@ flowchart TD
 
 ### FieldDeclaration `BeamNo` · L346–346
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L346-L346)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L346-L346)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1419,7 +1419,7 @@ flowchart TD
 
 ### PropertyDeclaration `ZeroLineFollowUp` · L351–351
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L351-L351)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L351-L351)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1434,7 +1434,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ZeroLineFollowUp` · L351–351
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L351-L351)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L351-L351)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1449,7 +1449,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ZeroLineFollowUp` · L351–351
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L351-L351)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L351-L351)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1470,7 +1470,7 @@ flowchart TD
 
 ### PropertyDeclaration `ZeroLineRunId` · L352–352
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:352–352](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L352-L352)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:352–352](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L352-L352)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1485,7 +1485,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ZeroLineRunId` · L352–352
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:352–352](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L352-L352)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:352–352](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L352-L352)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1500,7 +1500,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ZeroLineRunId` · L352–352
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:352–352](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L352-L352)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:352–352](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L352-L352)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1521,7 +1521,7 @@ flowchart TD
 
 ### PropertyDeclaration `ZeroLineSavedAt` · L353–353
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L353-L353)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L353-L353)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1536,7 +1536,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ZeroLineSavedAt` · L353–353
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L353-L353)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L353-L353)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1551,7 +1551,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ZeroLineSavedAt` · L353–353
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L353-L353)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L353-L353)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1572,7 +1572,7 @@ flowchart TD
 
 ### PropertyDeclaration `ZeroLineFollowUp` · L357–357
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L357-L357)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L357-L357)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1587,7 +1587,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ZeroLineFollowUp` · L357–357
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L357-L357)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L357-L357)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1602,7 +1602,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ZeroLineFollowUp` · L357–357
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L357-L357)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L357-L357)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1623,7 +1623,7 @@ flowchart TD
 
 ### PropertyDeclaration `ZeroLineFollowUp` · L362–362
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:362–362](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L362-L362)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:362–362](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L362-L362)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1638,7 +1638,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ZeroLineFollowUp` · L362–362
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:362–362](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L362-L362)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:362–362](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L362-L362)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1653,7 +1653,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ZeroLineFollowUp` · L362–362
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:362–362](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L362-L362)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:362–362](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L362-L362)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1674,7 +1674,7 @@ flowchart TD
 
 ### PropertyDeclaration `ZeroLineRunId` · L363–363
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L363-L363)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L363-L363)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1689,7 +1689,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ZeroLineRunId` · L363–363
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L363-L363)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L363-L363)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1704,7 +1704,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ZeroLineRunId` · L363–363
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L363-L363)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L363-L363)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1725,7 +1725,7 @@ flowchart TD
 
 ### PropertyDeclaration `ZeroLineSavedAt` · L364–364
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L364-L364)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L364-L364)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1740,7 +1740,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ZeroLineSavedAt` · L364–364
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L364-L364)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L364-L364)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1755,7 +1755,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ZeroLineSavedAt` · L364–364
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L364-L364)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L364-L364)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1776,7 +1776,7 @@ flowchart TD
 
 ### FieldDeclaration `_gate` · L378–378
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L378-L378)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L378-L378)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1804,7 +1804,7 @@ flowchart TD
 
 ### FieldDeclaration `_latest` · L379–379
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L379-L379)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L379-L379)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1819,7 +1819,7 @@ flowchart TD
 
 ### FieldDeclaration `_revision` · L380–380
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:380–380](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L380-L380)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:380–380](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L380-L380)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1834,7 +1834,7 @@ flowchart TD
 
 ### MethodDeclaration `GetSnapshot` · L381–385
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:381–385](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L381-L385)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:381–385](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L381-L385)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1847,8 +1847,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L151-L151) | .FineMonitor.GetSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:2515–2515](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L2515-L2515) | _store.GetSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L151-L151) | .FineMonitor.GetSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:2515–2515](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L2515-L2515) | _store.GetSnapshot | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1870,7 +1870,7 @@ flowchart TD
 
 ### MethodDeclaration `Begin` · L387–405
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:387–405](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L387-L405)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:387–405](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L387-L405)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1890,7 +1890,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2759–2759](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2759-L2759) | FineMonitor.Begin | False |
+| [Drilling.Common/Review/CReviewManager.cs:2759–2759](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2759-L2759) | FineMonitor.Begin | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1928,7 +1928,7 @@ flowchart TD
 
 ### MethodDeclaration `Stage` · L407–407
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L407-L407)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L407-L407)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1948,7 +1948,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2694–2694](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2694-L2694) | FineMonitor.Stage | False |
+| [Drilling.Common/Review/CReviewManager.cs:2694–2694](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2694-L2694) | FineMonitor.Stage | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1966,7 +1966,7 @@ flowchart TD
 
 ### MethodDeclaration `Replace` · L408–436
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:408–436](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L408-L436)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:408–436](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L408-L436)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1988,8 +1988,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:404–404](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L404-L404) | Replace | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L407-L407) | Replace | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:404–404](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L404-L404) | Replace | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L407-L407) | Replace | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2059,7 +2059,7 @@ flowchart TD
 
 ### MethodDeclaration `Publish` · L438–447
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:438–447](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L438-L447)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:438–447](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L438-L447)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2078,9 +2078,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L64-L64) | review.FineMonitor.Publish | False |
-| [Drilling.Common/Review/CReviewManager.cs:2748–2748](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2748-L2748) | FineMonitor.Publish | False |
-| [Drilling.Common/Review/CReviewManager.cs:3116–3116](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L3116-L3116) | FineMonitor.Publish | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L64-L64) | review.FineMonitor.Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:2748–2748](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2748-L2748) | FineMonitor.Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:3116–3116](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3116-L3116) | FineMonitor.Publish | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2107,7 +2107,7 @@ flowchart TD
 
 ### MethodDeclaration `MarkOffsetSaved` · L449–458
 
-[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:449–458](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L449-L458)
+[Drilling.Common/Review/CAutoFineReviewCoordinator.cs:449–458](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L449-L458)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2127,8 +2127,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L166-L166) | review.FineMonitor.MarkOffsetSaved | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3234–3234](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3234-L3234) | .FineMonitor.MarkOffsetSaved | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L166-L166) | review.FineMonitor.MarkOffsetSaved | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3234–3234](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3234-L3234) | .FineMonitor.MarkOffsetSaved | False |
 
 호출하는 대상과 해석 범위:
 

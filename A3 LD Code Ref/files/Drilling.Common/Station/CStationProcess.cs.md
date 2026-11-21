@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 7e5b1fd549370e222890c0882624bd116e1375ae160cb55e0d94cf3513f8b917 |
 | 파일 분류 | code |
 | 원본 크기/행 | 353,539 bytes / 6,635 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -103,7 +103,7 @@
 | _reviewOffsetFile | FieldDeclaration | L79–79 | Drilling.Common.Review.CReviewOffsetFileBase? Drilling.Common.Station.CStationProcess._reviewOffsetFile |
 | _automationScriptFile | FieldDeclaration | L80–80 | Drilling.Common.Station.CAutomationScriptFileBase Drilling.Common.Station.CStationProcess._automationScriptFile |
 | _automationManager | FieldDeclaration | L81–81 | Drilling.Common.Automation.CAutomationManager Drilling.Common.Station.CStationProcess._automationManager |
-| _logManager | FieldDeclaration | L82–82 | CLogManager? Drilling.Common.Station.CStationProcess._logManager |
+| _logManager | FieldDeclaration | L82–82 | Drilling.Common.Log.CLogManager? Drilling.Common.Station.CStationProcess._logManager |
 | _manualMofCompletionPath | FieldDeclaration | L83–83 | string? Drilling.Common.Station.CStationProcess._manualMofCompletionPath |
 | _sequenceLock | FieldDeclaration | L84–84 | object Drilling.Common.Station.CStationProcess._sequenceLock |
 | _stageRequestResetGate | FieldDeclaration | L85–85 | System.Threading.SemaphoreSlim Drilling.Common.Station.CStationProcess._stageRequestResetGate |
@@ -142,7 +142,7 @@
 | _stageModelLogCycle | FieldDeclaration | L118–118 | string Drilling.Common.Station.CStationProcess._stageModelLogCycle |
 | _zeroLineCycle | FieldDeclaration | L119–119 | Drilling.Common.Station.CZeroLineProcessCoordinator? Drilling.Common.Station.CStationProcess._zeroLineCycle |
 | _zeroLinePrewait | FieldDeclaration | L120–120 | Drilling.Common.Station.CZeroLinePrewaitMonitor? Drilling.Common.Station.CStationProcess._zeroLinePrewait |
-| .ctor | ConstructorDeclaration | L123–167 | Drilling.Common.Station.CStationProcess.CStationProcess(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.CSettingManager, Drilling.Common.Station.CAutomationScriptFileBase, Drilling.Common.Automation.CAutomationManager, Drilling.Common.Review.CReviewOffsetFileBase?, Drilling.Common.Product.CProductManager?, CLogManager?, string, string?, Drilling.Common.Managers.CRecipeManager?, Drilling.Common.Review.CReviewManager?, System.Action<Drilling.Common.Station.ST_PROTECT_WINDOW_RETRY_EXHAUSTED>?) |
+| .ctor | ConstructorDeclaration | L123–167 | Drilling.Common.Station.CStationProcess.CStationProcess(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.CSettingManager, Drilling.Common.Station.CAutomationScriptFileBase, Drilling.Common.Automation.CAutomationManager, Drilling.Common.Review.CReviewOffsetFileBase?, Drilling.Common.Product.CProductManager?, Drilling.Common.Log.CLogManager?, string, string?, Drilling.Common.Managers.CRecipeManager?, Drilling.Common.Review.CReviewManager?, System.Action<Drilling.Common.Station.ST_PROTECT_WINDOW_RETRY_EXHAUSTED>?) |
 | CProcessStepAction | DelegateDeclaration | L171–171 | Drilling.Common.Station.CStationProcess.CProcessStepAction |
 | Current | PropertyDeclaration | L172–188 | Drilling.Common.Station.ST_STATION_PROCESS_STATUS Drilling.Common.Station.CStationProcess.Current |
 | get_Current | GetAccessorDeclaration | L174–187 | Drilling.Common.Station.ST_STATION_PROCESS_STATUS Drilling.Common.Station.CStationProcess.Current.get |
@@ -692,7 +692,7 @@
 
 ### FieldDeclaration `AutoStepIdle` · L26–26
 
-[Drilling.Common/Station/CStationProcess.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L26-L26)
+[Drilling.Common/Station/CStationProcess.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -713,7 +713,7 @@
 
 ### FieldDeclaration `AutoStepPowerCheck` · L27–27
 
-[Drilling.Common/Station/CStationProcess.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L27-L27)
+[Drilling.Common/Station/CStationProcess.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -734,7 +734,7 @@
 
 ### FieldDeclaration `AutoStepAlign` · L28–28
 
-[Drilling.Common/Station/CStationProcess.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L28-L28)
+[Drilling.Common/Station/CStationProcess.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -755,7 +755,7 @@
 
 ### FieldDeclaration `AutoStepProcess` · L29–29
 
-[Drilling.Common/Station/CStationProcess.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L29-L29)
+[Drilling.Common/Station/CStationProcess.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -776,7 +776,7 @@
 
 ### FieldDeclaration `AutoStepInspection` · L30–30
 
-[Drilling.Common/Station/CStationProcess.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L30-L30)
+[Drilling.Common/Station/CStationProcess.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -797,7 +797,7 @@
 
 ### FieldDeclaration `AutoStepComplete` · L31–31
 
-[Drilling.Common/Station/CStationProcess.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L31-L31)
+[Drilling.Common/Station/CStationProcess.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -818,7 +818,7 @@
 
 ### FieldDeclaration `ScriptBufferedRunUseKey` · L32–32
 
-[Drilling.Common/Station/CStationProcess.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L32-L32)
+[Drilling.Common/Station/CStationProcess.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L32-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -839,7 +839,7 @@
 
 ### FieldDeclaration `ScriptRunTimeoutMsKey` · L33–33
 
-[Drilling.Common/Station/CStationProcess.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L33-L33)
+[Drilling.Common/Station/CStationProcess.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -860,7 +860,7 @@
 
 ### FieldDeclaration `ScriptRunPollIntervalMsKey` · L34–34
 
-[Drilling.Common/Station/CStationProcess.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L34-L34)
+[Drilling.Common/Station/CStationProcess.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L34-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -881,7 +881,7 @@
 
 ### FieldDeclaration `ScriptBufferedRunLinesPerCommandKey` · L35–35
 
-[Drilling.Common/Station/CStationProcess.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L35-L35)
+[Drilling.Common/Station/CStationProcess.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L35-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -902,7 +902,7 @@
 
 ### FieldDeclaration `ScriptBufferedRunTimeoutMsKey` · L36–36
 
-[Drilling.Common/Station/CStationProcess.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L36-L36)
+[Drilling.Common/Station/CStationProcess.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L36-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -923,7 +923,7 @@
 
 ### FieldDeclaration `ScriptBufferedRunQueueSizeKey` · L37–37
 
-[Drilling.Common/Station/CStationProcess.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L37-L37)
+[Drilling.Common/Station/CStationProcess.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L37-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -944,7 +944,7 @@
 
 ### FieldDeclaration `StandardScriptDirectoryName` · L38–38
 
-[Drilling.Common/Station/CStationProcess.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L38-L38)
+[Drilling.Common/Station/CStationProcess.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -965,7 +965,7 @@
 
 ### FieldDeclaration `BufferedRunScriptDirectoryName` · L39–39
 
-[Drilling.Common/Station/CStationProcess.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L39-L39)
+[Drilling.Common/Station/CStationProcess.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -986,7 +986,7 @@
 
 ### FieldDeclaration `QueueCountLogDirectoryName` · L40–40
 
-[Drilling.Common/Station/CStationProcess.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L40-L40)
+[Drilling.Common/Station/CStationProcess.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L40-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1007,7 +1007,7 @@
 
 ### FieldDeclaration `ScannerStatusLogDirectoryName` · L41–41
 
-[Drilling.Common/Station/CStationProcess.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L41-L41)
+[Drilling.Common/Station/CStationProcess.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L41-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1028,7 +1028,7 @@
 
 ### FieldDeclaration `ScriptRunDefaultTimeoutMs` · L42–42
 
-[Drilling.Common/Station/CStationProcess.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L42-L42)
+[Drilling.Common/Station/CStationProcess.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L42-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1049,7 +1049,7 @@
 
 ### FieldDeclaration `ScriptRunDefaultPollIntervalMs` · L43–43
 
-[Drilling.Common/Station/CStationProcess.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L43-L43)
+[Drilling.Common/Station/CStationProcess.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L43-L43)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1070,7 +1070,7 @@
 
 ### FieldDeclaration `EncoderScaleReleaseTimeoutMs` · L44–44
 
-[Drilling.Common/Station/CStationProcess.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L44-L44)
+[Drilling.Common/Station/CStationProcess.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L44-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1091,7 +1091,7 @@
 
 ### FieldDeclaration `QueueCountLogIntervalMs` · L45–45
 
-[Drilling.Common/Station/CStationProcess.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L45-L45)
+[Drilling.Common/Station/CStationProcess.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L45-L45)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1112,7 +1112,7 @@
 
 ### FieldDeclaration `ScannerStatusLogIntervalMs` · L46–46
 
-[Drilling.Common/Station/CStationProcess.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L46-L46)
+[Drilling.Common/Station/CStationProcess.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1133,7 +1133,7 @@
 
 ### FieldDeclaration `QueueCountLogStopWaitMs` · L47–47
 
-[Drilling.Common/Station/CStationProcess.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L47-L47)
+[Drilling.Common/Station/CStationProcess.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L47-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1154,7 +1154,7 @@
 
 ### FieldDeclaration `MaximumProcessLogCount` · L48–48
 
-[Drilling.Common/Station/CStationProcess.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L48-L48)
+[Drilling.Common/Station/CStationProcess.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L48-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1175,7 +1175,7 @@
 
 ### FieldDeclaration `AutoStepWait` · L49–49
 
-[Drilling.Common/Station/CStationProcess.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L49-L49)
+[Drilling.Common/Station/CStationProcess.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L49-L49)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1196,7 +1196,7 @@
 
 ### FieldDeclaration `AutoStepRunning` · L50–50
 
-[Drilling.Common/Station/CStationProcess.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L50-L50)
+[Drilling.Common/Station/CStationProcess.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L50-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1217,7 +1217,7 @@
 
 ### FieldDeclaration `AutoStepOk` · L51–51
 
-[Drilling.Common/Station/CStationProcess.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L51-L51)
+[Drilling.Common/Station/CStationProcess.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L51-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1238,7 +1238,7 @@
 
 ### FieldDeclaration `AutoStepDone` · L52–52
 
-[Drilling.Common/Station/CStationProcess.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L52-L52)
+[Drilling.Common/Station/CStationProcess.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L52-L52)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1259,7 +1259,7 @@
 
 ### FieldDeclaration `AutoStepError` · L53–53
 
-[Drilling.Common/Station/CStationProcess.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L53-L53)
+[Drilling.Common/Station/CStationProcess.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L53-L53)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1280,7 +1280,7 @@
 
 ### FieldDeclaration `AutoStepStop` · L54–54
 
-[Drilling.Common/Station/CStationProcess.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L54-L54)
+[Drilling.Common/Station/CStationProcess.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L54-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1301,7 +1301,7 @@
 
 ### FieldDeclaration `AutoStepInfos` · L55–62
 
-[Drilling.Common/Station/CStationProcess.cs:55–62](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L55-L62)
+[Drilling.Common/Station/CStationProcess.cs:55–62](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L55-L62)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1339,7 +1339,7 @@
 
 ### FieldDeclaration `ProcessFlowItems` · L63–70
 
-[Drilling.Common/Station/CStationProcess.cs:63–70](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L63-L70)
+[Drilling.Common/Station/CStationProcess.cs:63–70](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L63-L70)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1377,7 +1377,7 @@
 
 ### FieldDeclaration `_interfaceManager` · L71–71
 
-[Drilling.Common/Station/CStationProcess.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L71-L71)
+[Drilling.Common/Station/CStationProcess.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L71-L71)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1392,7 +1392,7 @@
 
 ### FieldDeclaration `_motionManager` · L72–72
 
-[Drilling.Common/Station/CStationProcess.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L72-L72)
+[Drilling.Common/Station/CStationProcess.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L72-L72)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1407,7 +1407,7 @@
 
 ### FieldDeclaration `_interLockManager` · L73–73
 
-[Drilling.Common/Station/CStationProcess.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L73-L73)
+[Drilling.Common/Station/CStationProcess.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L73-L73)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1422,7 +1422,7 @@
 
 ### FieldDeclaration `_settingManager` · L74–74
 
-[Drilling.Common/Station/CStationProcess.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L74-L74)
+[Drilling.Common/Station/CStationProcess.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L74-L74)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1437,7 +1437,7 @@
 
 ### FieldDeclaration `_productManager` · L75–75
 
-[Drilling.Common/Station/CStationProcess.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L75-L75)
+[Drilling.Common/Station/CStationProcess.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L75-L75)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1452,7 +1452,7 @@
 
 ### FieldDeclaration `_recipeManager` · L76–76
 
-[Drilling.Common/Station/CStationProcess.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L76-L76)
+[Drilling.Common/Station/CStationProcess.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L76-L76)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1467,7 +1467,7 @@
 
 ### FieldDeclaration `_zeroLineReview` · L77–77
 
-[Drilling.Common/Station/CStationProcess.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L77-L77)
+[Drilling.Common/Station/CStationProcess.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L77-L77)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1482,7 +1482,7 @@
 
 ### FieldDeclaration `_protectWindowUsageRequest` · L78–78
 
-[Drilling.Common/Station/CStationProcess.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L78-L78)
+[Drilling.Common/Station/CStationProcess.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L78-L78)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1497,7 +1497,7 @@
 
 ### FieldDeclaration `_reviewOffsetFile` · L79–79
 
-[Drilling.Common/Station/CStationProcess.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L79-L79)
+[Drilling.Common/Station/CStationProcess.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L79-L79)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1512,7 +1512,7 @@
 
 ### FieldDeclaration `_automationScriptFile` · L80–80
 
-[Drilling.Common/Station/CStationProcess.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L80-L80)
+[Drilling.Common/Station/CStationProcess.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L80-L80)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1527,7 +1527,7 @@
 
 ### FieldDeclaration `_automationManager` · L81–81
 
-[Drilling.Common/Station/CStationProcess.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L81-L81)
+[Drilling.Common/Station/CStationProcess.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L81-L81)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1542,13 +1542,13 @@
 
 ### FieldDeclaration `_logManager` · L82–82
 
-[Drilling.Common/Station/CStationProcess.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L82-L82)
+[Drilling.Common/Station/CStationProcess.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L82-L82)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
-| 서명 | CLogManager? Drilling.Common.Station.CStationProcess._logManager |
+| 서명 | Drilling.Common.Log.CLogManager? Drilling.Common.Station.CStationProcess._logManager |
 | 접근/수식자 | Private / private, readonly |
-| 반환/값 타입 | CLogManager? |
+| 반환/값 타입 | Drilling.Common.Log.CLogManager? |
 | 소속 타입 | NamedType:Drilling.Common.Station.CStationProcess |
 
 현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
@@ -1557,7 +1557,7 @@
 
 ### FieldDeclaration `_manualMofCompletionPath` · L83–83
 
-[Drilling.Common/Station/CStationProcess.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L83-L83)
+[Drilling.Common/Station/CStationProcess.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L83-L83)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1572,7 +1572,7 @@
 
 ### FieldDeclaration `_sequenceLock` · L84–84
 
-[Drilling.Common/Station/CStationProcess.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L84-L84)
+[Drilling.Common/Station/CStationProcess.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L84-L84)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1600,7 +1600,7 @@
 
 ### FieldDeclaration `_stageRequestResetGate` · L85–85
 
-[Drilling.Common/Station/CStationProcess.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L85-L85)
+[Drilling.Common/Station/CStationProcess.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L85-L85)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1628,7 +1628,7 @@
 
 ### FieldDeclaration `_processLogLock` · L86–86
 
-[Drilling.Common/Station/CStationProcess.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L86-L86)
+[Drilling.Common/Station/CStationProcess.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L86-L86)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1656,7 +1656,7 @@
 
 ### FieldDeclaration `_sequenceActions` · L87–87
 
-[Drilling.Common/Station/CStationProcess.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L87-L87)
+[Drilling.Common/Station/CStationProcess.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L87-L87)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1684,7 +1684,7 @@
 
 ### FieldDeclaration `_processLogs` · L88–88
 
-[Drilling.Common/Station/CStationProcess.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L88-L88)
+[Drilling.Common/Station/CStationProcess.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L88-L88)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1705,7 +1705,7 @@
 
 ### FieldDeclaration `_autoStepStates` · L89–89
 
-[Drilling.Common/Station/CStationProcess.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L89-L89)
+[Drilling.Common/Station/CStationProcess.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L89-L89)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1733,7 +1733,7 @@
 
 ### FieldDeclaration `_scriptCreatedAt` · L90–90
 
-[Drilling.Common/Station/CStationProcess.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L90-L90)
+[Drilling.Common/Station/CStationProcess.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L90-L90)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1748,7 +1748,7 @@
 
 ### FieldDeclaration `_scriptStartedAt` · L91–91
 
-[Drilling.Common/Station/CStationProcess.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L91-L91)
+[Drilling.Common/Station/CStationProcess.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L91-L91)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1763,7 +1763,7 @@
 
 ### FieldDeclaration `_scriptCompletedAt` · L92–92
 
-[Drilling.Common/Station/CStationProcess.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L92-L92)
+[Drilling.Common/Station/CStationProcess.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L92-L92)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1778,7 +1778,7 @@
 
 ### FieldDeclaration `_lastScript` · L93–93
 
-[Drilling.Common/Station/CStationProcess.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L93-L93)
+[Drilling.Common/Station/CStationProcess.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L93-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1793,7 +1793,7 @@
 
 ### FieldDeclaration `_lastInterLockItems` · L94–94
 
-[Drilling.Common/Station/CStationProcess.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L94-L94)
+[Drilling.Common/Station/CStationProcess.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L94-L94)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1814,7 +1814,7 @@
 
 ### FieldDeclaration `_processModel` · L95–95
 
-[Drilling.Common/Station/CStationProcess.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L95-L95)
+[Drilling.Common/Station/CStationProcess.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L95-L95)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1829,7 +1829,7 @@
 
 ### FieldDeclaration `_preparedReviewOffsetFilePath` · L96–96
 
-[Drilling.Common/Station/CStationProcess.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L96-L96)
+[Drilling.Common/Station/CStationProcess.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L96-L96)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1850,7 +1850,7 @@
 
 ### FieldDeclaration `_preparedReviewOffsetSavedAt` · L97–97
 
-[Drilling.Common/Station/CStationProcess.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L97-L97)
+[Drilling.Common/Station/CStationProcess.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L97-L97)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1871,7 +1871,7 @@
 
 ### FieldDeclaration `_preparedReviewOffsetInvalidated` · L98–98
 
-[Drilling.Common/Station/CStationProcess.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L98-L98)
+[Drilling.Common/Station/CStationProcess.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L98-L98)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1886,7 +1886,7 @@
 
 ### FieldDeclaration `_statistics` · L99–99
 
-[Drilling.Common/Station/CStationProcess.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L99-L99)
+[Drilling.Common/Station/CStationProcess.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L99-L99)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1914,7 +1914,7 @@
 
 ### FieldDeclaration `_snapshot` · L100–100
 
-[Drilling.Common/Station/CStationProcess.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L100-L100)
+[Drilling.Common/Station/CStationProcess.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L100-L100)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1929,7 +1929,7 @@
 
 ### FieldDeclaration `_stationStatus` · L101–101
 
-[Drilling.Common/Station/CStationProcess.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L101-L101)
+[Drilling.Common/Station/CStationProcess.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L101-L101)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1944,7 +1944,7 @@
 
 ### FieldDeclaration `_sequenceState` · L102–102
 
-[Drilling.Common/Station/CStationProcess.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L102-L102)
+[Drilling.Common/Station/CStationProcess.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L102-L102)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1965,7 +1965,7 @@
 
 ### FieldDeclaration `_sequenceCancellation` · L103–103
 
-[Drilling.Common/Station/CStationProcess.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L103-L103)
+[Drilling.Common/Station/CStationProcess.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L103-L103)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1980,7 +1980,7 @@
 
 ### FieldDeclaration `_sequenceError` · L104–104
 
-[Drilling.Common/Station/CStationProcess.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L104-L104)
+[Drilling.Common/Station/CStationProcess.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L104-L104)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2001,7 +2001,7 @@
 
 ### FieldDeclaration `_manualMofActions` · L105–105
 
-[Drilling.Common/Station/CStationProcess.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L105-L105)
+[Drilling.Common/Station/CStationProcess.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L105-L105)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2029,7 +2029,7 @@
 
 ### FieldDeclaration `_manualMofCancellation` · L106–106
 
-[Drilling.Common/Station/CStationProcess.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L106-L106)
+[Drilling.Common/Station/CStationProcess.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L106-L106)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2044,7 +2044,7 @@
 
 ### FieldDeclaration `_manualMofExecution` · L107–107
 
-[Drilling.Common/Station/CStationProcess.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L107-L107)
+[Drilling.Common/Station/CStationProcess.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L107-L107)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2065,7 +2065,7 @@
 
 ### FieldDeclaration `_manualMofRunning` · L108–108
 
-[Drilling.Common/Station/CStationProcess.cs:108–108](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L108-L108)
+[Drilling.Common/Station/CStationProcess.cs:108–108](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L108-L108)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2080,7 +2080,7 @@
 
 ### FieldDeclaration `_manualMofRequiresStop` · L109–109
 
-[Drilling.Common/Station/CStationProcess.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L109-L109)
+[Drilling.Common/Station/CStationProcess.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L109-L109)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2095,7 +2095,7 @@
 
 ### FieldDeclaration `_manualMofMessage` · L110–110
 
-[Drilling.Common/Station/CStationProcess.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L110-L110)
+[Drilling.Common/Station/CStationProcess.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L110-L110)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2116,7 +2116,7 @@
 
 ### FieldDeclaration `_manualMofDirectory` · L111–111
 
-[Drilling.Common/Station/CStationProcess.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L111-L111)
+[Drilling.Common/Station/CStationProcess.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L111-L111)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2137,7 +2137,7 @@
 
 ### FieldDeclaration `_lastCompletedManualMof` · L112–112
 
-[Drilling.Common/Station/CStationProcess.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L112-L112)
+[Drilling.Common/Station/CStationProcess.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L112-L112)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2152,7 +2152,7 @@
 
 ### FieldDeclaration `_protectWindowCountGate` · L113–113
 
-[Drilling.Common/Station/CStationProcess.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L113-L113)
+[Drilling.Common/Station/CStationProcess.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L113-L113)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2180,7 +2180,7 @@
 
 ### FieldDeclaration `_protectWindowCounted` · L114–114
 
-[Drilling.Common/Station/CStationProcess.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L114-L114)
+[Drilling.Common/Station/CStationProcess.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L114-L114)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2195,7 +2195,7 @@
 
 ### FieldDeclaration `_stageMachiningCompleted` · L115–115
 
-[Drilling.Common/Station/CStationProcess.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L115-L115)
+[Drilling.Common/Station/CStationProcess.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L115-L115)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2210,7 +2210,7 @@
 
 ### FieldDeclaration `_stageOwnedTasks` · L116–116
 
-[Drilling.Common/Station/CStationProcess.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L116-L116)
+[Drilling.Common/Station/CStationProcess.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L116-L116)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2238,7 +2238,7 @@
 
 ### FieldDeclaration `_stageBufferedRuns` · L117–117
 
-[Drilling.Common/Station/CStationProcess.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L117-L117)
+[Drilling.Common/Station/CStationProcess.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L117-L117)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2266,7 +2266,7 @@
 
 ### FieldDeclaration `_stageModelLogCycle` · L118–118
 
-[Drilling.Common/Station/CStationProcess.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L118-L118)
+[Drilling.Common/Station/CStationProcess.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L118-L118)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2287,7 +2287,7 @@
 
 ### FieldDeclaration `_zeroLineCycle` · L119–119
 
-[Drilling.Common/Station/CStationProcess.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L119-L119)
+[Drilling.Common/Station/CStationProcess.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L119-L119)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2302,7 +2302,7 @@
 
 ### FieldDeclaration `_zeroLinePrewait` · L120–120
 
-[Drilling.Common/Station/CStationProcess.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L120-L120)
+[Drilling.Common/Station/CStationProcess.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L120-L120)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2317,11 +2317,11 @@
 
 ### ConstructorDeclaration `.ctor` · L123–167
 
-[Drilling.Common/Station/CStationProcess.cs:123–167](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L123-L167)
+[Drilling.Common/Station/CStationProcess.cs:123–167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L123-L167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
-| 서명 | Drilling.Common.Station.CStationProcess.CStationProcess(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.CSettingManager, Drilling.Common.Station.CAutomationScriptFileBase, Drilling.Common.Automation.CAutomationManager, Drilling.Common.Review.CReviewOffsetFileBase?, Drilling.Common.Product.CProductManager?, CLogManager?, string, string?, Drilling.Common.Managers.CRecipeManager?, Drilling.Common.Review.CReviewManager?, System.Action<Drilling.Common.Station.ST_PROTECT_WINDOW_RETRY_EXHAUSTED>?) |
+| 서명 | Drilling.Common.Station.CStationProcess.CStationProcess(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.CSettingManager, Drilling.Common.Station.CAutomationScriptFileBase, Drilling.Common.Automation.CAutomationManager, Drilling.Common.Review.CReviewOffsetFileBase?, Drilling.Common.Product.CProductManager?, Drilling.Common.Log.CLogManager?, string, string?, Drilling.Common.Managers.CRecipeManager?, Drilling.Common.Review.CReviewManager?, System.Action<Drilling.Common.Station.ST_PROTECT_WINDOW_RETRY_EXHAUSTED>?) |
 | 접근/수식자 | Public / public |
 | 반환/값 타입 | void |
 | 소속 타입 | NamedType:Drilling.Common.Station.CStationProcess |
@@ -2338,7 +2338,7 @@
 | automationManager | Drilling.Common.Automation.CAutomationManager | None | False /  |
 | reviewOffsetFile | Drilling.Common.Review.CReviewOffsetFileBase? | None | True / null |
 | productManager | Drilling.Common.Product.CProductManager? | None | True / null |
-| logManager | CLogManager? | None | True / null |
+| logManager | Drilling.Common.Log.CLogManager? | None | True / null |
 | stationName | string | None | True / "PROCESS" |
 | scriptDirectory | string? | None | True / null |
 | recipeManager | Drilling.Common.Managers.CRecipeManager? | None | True / null |
@@ -2349,7 +2349,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:49–63](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L49-L63) | new CStationProcess | False |
+| [Drilling.Common/Station/CStationManager.cs:49–63](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L49-L63) | new CStationProcess | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2421,7 +2421,7 @@ flowchart TD
 
 ### DelegateDeclaration `CProcessStepAction` · L171–171
 
-[Drilling.Common/Station/CStationProcess.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L171-L171)
+[Drilling.Common/Station/CStationProcess.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L171-L171)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2443,7 +2443,7 @@ flowchart TD
 
 ### PropertyDeclaration `Current` · L172–188
 
-[Drilling.Common/Station/CStationProcess.cs:172–188](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L172-L188)
+[Drilling.Common/Station/CStationProcess.cs:172–188](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L172-L188)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2458,7 +2458,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Current` · L174–187
 
-[Drilling.Common/Station/CStationProcess.cs:174–187](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L174-L187)
+[Drilling.Common/Station/CStationProcess.cs:174–187](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L174-L187)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2510,7 +2510,7 @@ flowchart TD
 
 ### PropertyDeclaration `Status` · L190–196
 
-[Drilling.Common/Station/CStationProcess.cs:190–196](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L190-L196)
+[Drilling.Common/Station/CStationProcess.cs:190–196](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L190-L196)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2525,7 +2525,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Status` · L192–195
 
-[Drilling.Common/Station/CStationProcess.cs:192–195](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L192-L195)
+[Drilling.Common/Station/CStationProcess.cs:192–195](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L192-L195)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2553,7 +2553,7 @@ flowchart TD
 
 ### PropertyDeclaration `SequenceState` · L198–204
 
-[Drilling.Common/Station/CStationProcess.cs:198–204](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L198-L204)
+[Drilling.Common/Station/CStationProcess.cs:198–204](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L198-L204)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2568,7 +2568,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SequenceState` · L200–203
 
-[Drilling.Common/Station/CStationProcess.cs:200–203](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L200-L203)
+[Drilling.Common/Station/CStationProcess.cs:200–203](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L200-L203)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2596,7 +2596,7 @@ flowchart TD
 
 ### MethodDeclaration `GetProcessFlow` · L206–209
 
-[Drilling.Common/Station/CStationProcess.cs:206–209](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L206-L209)
+[Drilling.Common/Station/CStationProcess.cs:206–209](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L206-L209)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2609,7 +2609,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L88-L88) | CStationProcess.GetProcessFlow | False |
+| [Drilling.Common/Station/CStationManager.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L88-L88) | CStationProcess.GetProcessFlow | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2621,7 +2621,7 @@ flowchart TD
 
 ### MethodDeclaration `PrepareProcess` · L211–227
 
-[Drilling.Common/Station/CStationProcess.cs:211–227](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L211-L227)
+[Drilling.Common/Station/CStationProcess.cs:211–227](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L211-L227)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2646,8 +2646,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L95-L95) | _processStation.PrepareProcess | False |
-| [Drilling.Common/Station/CStationProcess.cs:4050–4050](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4050-L4050) | PrepareProcess | False |
+| [Drilling.Common/Station/CStationManager.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L95-L95) | _processStation.PrepareProcess | False |
+| [Drilling.Common/Station/CStationProcess.cs:4050–4050](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4050-L4050) | PrepareProcess | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2684,7 +2684,7 @@ flowchart TD
 
 ### MethodDeclaration `PrepareProcessCore` · L229–270
 
-[Drilling.Common/Station/CStationProcess.cs:229–270](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L229-L270)
+[Drilling.Common/Station/CStationProcess.cs:229–270](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L229-L270)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2710,8 +2710,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L225-L225) | PrepareProcessCore | False |
-| [Drilling.Common/Station/CStationProcess.cs:3511–3511](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3511-L3511) | PrepareProcessCore | False |
+| [Drilling.Common/Station/CStationProcess.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L225-L225) | PrepareProcessCore | False |
+| [Drilling.Common/Station/CStationProcess.cs:3511–3511](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3511-L3511) | PrepareProcessCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2792,7 +2792,7 @@ flowchart TD
 
 ### MethodDeclaration `Start` · L272–323
 
-[Drilling.Common/Station/CStationProcess.cs:272–323](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L272-L323)
+[Drilling.Common/Station/CStationProcess.cs:272–323](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L272-L323)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2811,7 +2811,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L102-L102) | _processStation.Start | False |
+| [Drilling.Common/Station/CStationManager.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L102-L102) | _processStation.Start | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2904,7 +2904,7 @@ flowchart TD
 
 ### MethodDeclaration `Run` · L325–382
 
-[Drilling.Common/Station/CStationProcess.cs:325–382](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L325-L382)
+[Drilling.Common/Station/CStationProcess.cs:325–382](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L325-L382)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3004,7 +3004,7 @@ flowchart TD
 
 ### MethodDeclaration `RunSequenceStep` · L384–393
 
-[Drilling.Common/Station/CStationProcess.cs:384–393](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L384-L393)
+[Drilling.Common/Station/CStationProcess.cs:384–393](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L384-L393)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3026,11 +3026,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L344-L344) | RunSequenceStep | False |
-| [Drilling.Common/Station/CStationProcess.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L347-L347) | RunSequenceStep | False |
-| [Drilling.Common/Station/CStationProcess.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L350-L350) | RunSequenceStep | False |
-| [Drilling.Common/Station/CStationProcess.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L353-L353) | RunSequenceStep | False |
-| [Drilling.Common/Station/CStationProcess.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L356-L356) | RunSequenceStep | False |
+| [Drilling.Common/Station/CStationProcess.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L344-L344) | RunSequenceStep | False |
+| [Drilling.Common/Station/CStationProcess.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L347-L347) | RunSequenceStep | False |
+| [Drilling.Common/Station/CStationProcess.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L350-L350) | RunSequenceStep | False |
+| [Drilling.Common/Station/CStationProcess.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L353-L353) | RunSequenceStep | False |
+| [Drilling.Common/Station/CStationProcess.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L356-L356) | RunSequenceStep | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3070,7 +3070,7 @@ flowchart TD
 
 ### MethodDeclaration `CheckProcessModelLoaded` · L395–398
 
-[Drilling.Common/Station/CStationProcess.cs:395–398](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L395-L398)
+[Drilling.Common/Station/CStationProcess.cs:395–398](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L395-L398)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3083,7 +3083,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:387–387](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L387-L387) | CheckProcessModelLoaded | False |
+| [Drilling.Common/Station/CStationProcess.cs:387–387](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L387-L387) | CheckProcessModelLoaded | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3103,7 +3103,7 @@ flowchart TD
 
 ### MethodDeclaration `GetSequenceCancellationToken` · L400–406
 
-[Drilling.Common/Station/CStationProcess.cs:400–406](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L400-L406)
+[Drilling.Common/Station/CStationProcess.cs:400–406](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L400-L406)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3116,7 +3116,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:386–386](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L386-L386) | GetSequenceCancellationToken | False |
+| [Drilling.Common/Station/CStationProcess.cs:386–386](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L386-L386) | GetSequenceCancellationToken | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -3138,7 +3138,7 @@ flowchart TD
 
 ### MethodDeclaration `FinishSequence` · L408–422
 
-[Drilling.Common/Station/CStationProcess.cs:408–422](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L408-L422)
+[Drilling.Common/Station/CStationProcess.cs:408–422](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L408-L422)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3151,10 +3151,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L357-L357) | FinishSequence | False |
-| [Drilling.Common/Station/CStationProcess.cs:361–361](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L361-L361) | FinishSequence | False |
-| [Drilling.Common/Station/CStationProcess.cs:365–365](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L365-L365) | FinishSequence | False |
-| [Drilling.Common/Station/CStationProcess.cs:369–369](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L369-L369) | FinishSequence | False |
+| [Drilling.Common/Station/CStationProcess.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L357-L357) | FinishSequence | False |
+| [Drilling.Common/Station/CStationProcess.cs:361–361](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L361-L361) | FinishSequence | False |
+| [Drilling.Common/Station/CStationProcess.cs:365–365](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L365-L365) | FinishSequence | False |
+| [Drilling.Common/Station/CStationProcess.cs:369–369](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L369-L369) | FinishSequence | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3188,7 +3188,7 @@ flowchart TD
 
 ### MethodDeclaration `ProcessInterruptedSequence` · L424–433
 
-[Drilling.Common/Station/CStationProcess.cs:424–433](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L424-L433)
+[Drilling.Common/Station/CStationProcess.cs:424–433](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L424-L433)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3201,7 +3201,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L391-L391) | ProcessInterruptedSequence | False |
+| [Drilling.Common/Station/CStationProcess.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L391-L391) | ProcessInterruptedSequence | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3237,7 +3237,7 @@ flowchart TD
 
 ### MethodDeclaration `CompleteSequence` · L435–438
 
-[Drilling.Common/Station/CStationProcess.cs:435–438](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L435-L438)
+[Drilling.Common/Station/CStationProcess.cs:435–438](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L435-L438)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3271,7 +3271,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsureStartAllowed` · L440–446
 
-[Drilling.Common/Station/CStationProcess.cs:440–446](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L440-L446)
+[Drilling.Common/Station/CStationProcess.cs:440–446](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L440-L446)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3284,8 +3284,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:285–285](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L285-L285) | EnsureStartAllowed | False |
-| [Drilling.Common/Station/CStationProcess.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L306-L306) | EnsureStartAllowed | False |
+| [Drilling.Common/Station/CStationProcess.cs:285–285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L285-L285) | EnsureStartAllowed | False |
+| [Drilling.Common/Station/CStationProcess.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L306-L306) | EnsureStartAllowed | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3316,7 +3316,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadProcessModelForStart` · L448–458
 
-[Drilling.Common/Station/CStationProcess.cs:448–458](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L448-L458)
+[Drilling.Common/Station/CStationProcess.cs:448–458](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L448-L458)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3329,7 +3329,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L286-L286) | ReadProcessModelForStart | False |
+| [Drilling.Common/Station/CStationProcess.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L286-L286) | ReadProcessModelForStart | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3363,7 +3363,7 @@ flowchart TD
 
 ### MethodDeclaration `GetLiveInterlockItems` · L460–460
 
-[Drilling.Common/Station/CStationProcess.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L460-L460)
+[Drilling.Common/Station/CStationProcess.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L460-L460)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3382,7 +3382,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L76-L76) | _processStation.GetLiveInterlockItems | False |
+| [Drilling.Common/Station/CStationManager.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L76-L76) | _processStation.GetLiveInterlockItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3400,7 +3400,7 @@ flowchart TD
 
 ### MethodDeclaration `GetLiveInterlockItems` · L461–461
 
-[Drilling.Common/Station/CStationProcess.cs:461–461](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L461-L461)
+[Drilling.Common/Station/CStationProcess.cs:461–461](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L461-L461)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3420,7 +3420,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L72-L72) | _processStation.GetLiveInterlockItems | False |
+| [Drilling.Common/Station/CStationManager.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L72-L72) | _processStation.GetLiveInterlockItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3438,7 +3438,7 @@ flowchart TD
 
 ### MethodDeclaration `GetManualInterlockItems` · L462–472
 
-[Drilling.Common/Station/CStationProcess.cs:462–472](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L462-L472)
+[Drilling.Common/Station/CStationProcess.cs:462–472](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L462-L472)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3459,8 +3459,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L79-L79) | _processStation.GetManualInterlockItems | False |
-| [Drilling.Common/Station/CStationProcess.cs:3644–3644](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3644-L3644) | GetManualInterlockItems | False |
+| [Drilling.Common/Station/CStationManager.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L79-L79) | _processStation.GetManualInterlockItems | False |
+| [Drilling.Common/Station/CStationProcess.cs:3644–3644](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3644-L3644) | GetManualInterlockItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3524,7 +3524,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteAutoStep` · L474–499
 
-[Drilling.Common/Station/CStationProcess.cs:474–499](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L474-L499)
+[Drilling.Common/Station/CStationProcess.cs:474–499](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L474-L499)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3546,7 +3546,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L388-L388) | ExecuteAutoStep | False |
+| [Drilling.Common/Station/CStationProcess.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L388-L388) | ExecuteAutoStep | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3618,7 +3618,7 @@ flowchart TD
 
 ### MethodDeclaration `RunAlignStep` · L501–526
 
-[Drilling.Common/Station/CStationProcess.cs:501–526](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L501-L526)
+[Drilling.Common/Station/CStationProcess.cs:501–526](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L501-L526)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3706,7 +3706,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateProductAlignment` · L528–550
 
-[Drilling.Common/Station/CStationProcess.cs:528–550](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L528-L550)
+[Drilling.Common/Station/CStationProcess.cs:528–550](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L528-L550)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3728,9 +3728,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:510–510](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L510-L510) | UpdateProductAlignment | False |
-| [Drilling.Common/Station/CStationProcess.cs:512–512](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L512-L512) | UpdateProductAlignment | False |
-| [Drilling.Common/Station/CStationProcess.cs:556–556](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L556-L556) | UpdateProductAlignment | False |
+| [Drilling.Common/Station/CStationProcess.cs:510–510](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L510-L510) | UpdateProductAlignment | False |
+| [Drilling.Common/Station/CStationProcess.cs:512–512](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L512-L512) | UpdateProductAlignment | False |
+| [Drilling.Common/Station/CStationProcess.cs:556–556](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L556-L556) | UpdateProductAlignment | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3789,7 +3789,7 @@ flowchart TD
 
 ### MethodDeclaration `TryUpdateProductAlignmentAfterFailure` · L552–562
 
-[Drilling.Common/Station/CStationProcess.cs:552–562](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L552-L562)
+[Drilling.Common/Station/CStationProcess.cs:552–562](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L552-L562)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3810,8 +3810,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:516–516](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L516-L516) | TryUpdateProductAlignmentAfterFailure | False |
-| [Drilling.Common/Station/CStationProcess.cs:521–521](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L521-L521) | TryUpdateProductAlignmentAfterFailure | False |
+| [Drilling.Common/Station/CStationProcess.cs:516–516](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L516-L516) | TryUpdateProductAlignmentAfterFailure | False |
+| [Drilling.Common/Station/CStationProcess.cs:521–521](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L521-L521) | TryUpdateProductAlignmentAfterFailure | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3844,7 +3844,7 @@ flowchart TD
 
 ### MethodDeclaration `RunProcessStep` · L564–575
 
-[Drilling.Common/Station/CStationProcess.cs:564–575](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L564-L575)
+[Drilling.Common/Station/CStationProcess.cs:564–575](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L564-L575)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3886,7 +3886,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveStageToScanStart` · L577–609
 
-[Drilling.Common/Station/CStationProcess.cs:577–609](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L577-L609)
+[Drilling.Common/Station/CStationProcess.cs:577–609](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L577-L609)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4022,7 +4022,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveFirstShotStageY` · L611–637
 
-[Drilling.Common/Station/CStationProcess.cs:611–637](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L611-L637)
+[Drilling.Common/Station/CStationProcess.cs:611–637](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L611-L637)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4042,7 +4042,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:591–591](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L591-L591) | ResolveFirstShotStageY | False |
+| [Drilling.Common/Station/CStationProcess.cs:591–591](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L591-L591) | ResolveFirstShotStageY | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4089,7 +4089,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectShots` · L613–616
 
-[Drilling.Common/Station/CStationProcess.cs:613–616](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L613-L616)
+[Drilling.Common/Station/CStationProcess.cs:613–616](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L613-L616)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4116,7 +4116,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectStageY` · L626–629
 
-[Drilling.Common/Station/CStationProcess.cs:626–629](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L626-L629)
+[Drilling.Common/Station/CStationProcess.cs:626–629](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L626-L629)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4143,7 +4143,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectStageY2` · L631–634
 
-[Drilling.Common/Station/CStationProcess.cs:631–634](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L631-L634)
+[Drilling.Common/Station/CStationProcess.cs:631–634](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L631-L634)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4170,7 +4170,7 @@ flowchart TD
 
 ### MethodDeclaration `SendProcessControlCommand` · L639–651
 
-[Drilling.Common/Station/CStationProcess.cs:639–651](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L639-L651)
+[Drilling.Common/Station/CStationProcess.cs:639–651](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L639-L651)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4191,9 +4191,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:511–511](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L511-L511) | SendProcessControlCommand | False |
-| [Drilling.Common/Station/CStationProcess.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L594-L594) | SendProcessControlCommand | False |
-| [Drilling.Common/Station/CStationProcess.cs:595–607](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L595-L607) | SendProcessControlCommand | False |
+| [Drilling.Common/Station/CStationProcess.cs:511–511](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L511-L511) | SendProcessControlCommand | False |
+| [Drilling.Common/Station/CStationProcess.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L594-L594) | SendProcessControlCommand | False |
+| [Drilling.Common/Station/CStationProcess.cs:595–607](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L595-L607) | SendProcessControlCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4246,7 +4246,7 @@ flowchart TD
 
 ### MethodDeclaration `RunInspectionStep` · L653–656
 
-[Drilling.Common/Station/CStationProcess.cs:653–656](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L653-L656)
+[Drilling.Common/Station/CStationProcess.cs:653–656](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L653-L656)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4280,7 +4280,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildAutomationScript` · L658–667
 
-[Drilling.Common/Station/CStationProcess.cs:658–667](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L658-L667)
+[Drilling.Common/Station/CStationProcess.cs:658–667](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L658-L667)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4300,8 +4300,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:569–569](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L569-L569) | BuildAutomationScript | False |
-| [Drilling.Common/Station/CStationProcess.cs:4057–4057](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4057-L4057) | BuildAutomationScript | False |
+| [Drilling.Common/Station/CStationProcess.cs:569–569](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L569-L569) | BuildAutomationScript | False |
+| [Drilling.Common/Station/CStationProcess.cs:4057–4057](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4057-L4057) | BuildAutomationScript | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4340,7 +4340,7 @@ flowchart TD
 
 ### MethodDeclaration `UploadAutomationScript` · L669–691
 
-[Drilling.Common/Station/CStationProcess.cs:669–691](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L669-L691)
+[Drilling.Common/Station/CStationProcess.cs:669–691](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L669-L691)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4360,10 +4360,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L570-L570) | UploadAutomationScript | False |
-| [Drilling.Common/Station/CStationProcess.cs:3543–3543](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3543-L3543) | UploadAutomationScript | False |
-| [Drilling.Common/Station/CStationProcess.cs:4058–4058](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4058-L4058) | UploadAutomationScript | False |
-| [Drilling.Common/Station/CStationProcess.cs:4080–4080](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4080-L4080) | UploadAutomationScript | False |
+| [Drilling.Common/Station/CStationProcess.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L570-L570) | UploadAutomationScript | False |
+| [Drilling.Common/Station/CStationProcess.cs:3543–3543](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3543-L3543) | UploadAutomationScript | False |
+| [Drilling.Common/Station/CStationProcess.cs:4058–4058](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4058-L4058) | UploadAutomationScript | False |
+| [Drilling.Common/Station/CStationProcess.cs:4080–4080](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4080-L4080) | UploadAutomationScript | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4429,7 +4429,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L677–680
 
-[Drilling.Common/Station/CStationProcess.cs:677–680](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L677-L680)
+[Drilling.Common/Station/CStationProcess.cs:677–680](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L677-L680)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4456,7 +4456,7 @@ flowchart TD
 
 ### MethodDeclaration `RunScannerProcess` · L693–751
 
-[Drilling.Common/Station/CStationProcess.cs:693–751](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L693-L751)
+[Drilling.Common/Station/CStationProcess.cs:693–751](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L693-L751)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4476,7 +4476,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:574–574](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L574-L574) | RunScannerProcess | False |
+| [Drilling.Common/Station/CStationProcess.cs:574–574](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L574-L574) | RunScannerProcess | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4593,7 +4593,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L704–707
 
-[Drilling.Common/Station/CStationProcess.cs:704–707](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L704-L707)
+[Drilling.Common/Station/CStationProcess.cs:704–707](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L704-L707)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4620,7 +4620,7 @@ flowchart TD
 
 ### MethodDeclaration `RunBufferedHeadScripts` · L753–843
 
-[Drilling.Common/Station/CStationProcess.cs:753–843](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L753-L843)
+[Drilling.Common/Station/CStationProcess.cs:753–843](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L753-L843)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4641,7 +4641,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:721–721](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L721-L721) | RunBufferedHeadScripts | False |
+| [Drilling.Common/Station/CStationProcess.cs:721–721](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L721-L721) | RunBufferedHeadScripts | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4794,7 +4794,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectAutomationNo` · L758–761
 
-[Drilling.Common/Station/CStationProcess.cs:758–761](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L758-L761)
+[Drilling.Common/Station/CStationProcess.cs:758–761](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L758-L761)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4821,7 +4821,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L764–767
 
-[Drilling.Common/Station/CStationProcess.cs:764–767](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L764-L767)
+[Drilling.Common/Station/CStationProcess.cs:764–767](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L764-L767)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4848,7 +4848,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitForBufferedRunWorkers` · L845–869
 
-[Drilling.Common/Station/CStationProcess.cs:845–869](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L845-L869)
+[Drilling.Common/Station/CStationProcess.cs:845–869](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L845-L869)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4869,9 +4869,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:825–825](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L825-L825) | WaitForBufferedRunWorkers | False |
-| [Drilling.Common/Station/CStationProcess.cs:827–827](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L827-L827) | WaitForBufferedRunWorkers | False |
-| [Drilling.Common/Station/CStationProcess.cs:835–835](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L835-L835) | WaitForBufferedRunWorkers | False |
+| [Drilling.Common/Station/CStationProcess.cs:825–825](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L825-L825) | WaitForBufferedRunWorkers | False |
+| [Drilling.Common/Station/CStationProcess.cs:827–827](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L827-L827) | WaitForBufferedRunWorkers | False |
+| [Drilling.Common/Station/CStationProcess.cs:835–835](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L835-L835) | WaitForBufferedRunWorkers | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4923,7 +4923,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitAutomationHeadScriptsComplete` · L871–938
 
-[Drilling.Common/Station/CStationProcess.cs:871–938](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L871-L938)
+[Drilling.Common/Station/CStationProcess.cs:871–938](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L871-L938)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4944,7 +4944,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:734–734](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L734-L734) | WaitAutomationHeadScriptsComplete | False |
+| [Drilling.Common/Station/CStationProcess.cs:734–734](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L734-L734) | WaitAutomationHeadScriptsComplete | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5073,7 +5073,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildAutomation` · L882–885
 
-[Drilling.Common/Station/CStationProcess.cs:882–885](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L882-L885)
+[Drilling.Common/Station/CStationProcess.cs:882–885](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L882-L885)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5107,7 +5107,7 @@ flowchart TD
 
 ### MethodDeclaration `StopAutomationScriptTasks` · L940–963
 
-[Drilling.Common/Station/CStationProcess.cs:940–963](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L940-L963)
+[Drilling.Common/Station/CStationProcess.cs:940–963](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L940-L963)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5127,8 +5127,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:748–748](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L748-L748) | StopAutomationScriptTasks | False |
-| [Drilling.Common/Station/CStationProcess.cs:1233–1233](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1233-L1233) | StopAutomationScriptTasks | False |
+| [Drilling.Common/Station/CStationProcess.cs:748–748](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L748-L748) | StopAutomationScriptTasks | False |
+| [Drilling.Common/Station/CStationProcess.cs:1233–1233](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1233-L1233) | StopAutomationScriptTasks | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5186,7 +5186,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitAutomationScriptTasksStopped` · L965–979
 
-[Drilling.Common/Station/CStationProcess.cs:965–979](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L965-L979)
+[Drilling.Common/Station/CStationProcess.cs:965–979](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L965-L979)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5205,7 +5205,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:962–962](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L962-L962) | WaitAutomationScriptTasksStopped | False |
+| [Drilling.Common/Station/CStationProcess.cs:962–962](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L962-L962) | WaitAutomationScriptTasksStopped | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5243,7 +5243,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitAutomationScriptTaskStopped` · L981–1007
 
-[Drilling.Common/Station/CStationProcess.cs:981–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L981-L1007)
+[Drilling.Common/Station/CStationProcess.cs:981–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L981-L1007)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5262,7 +5262,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:971–971](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L971-L971) | WaitAutomationScriptTaskStopped | False |
+| [Drilling.Common/Station/CStationProcess.cs:971–971](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L971-L971) | WaitAutomationScriptTaskStopped | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5334,7 +5334,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateAutomationTaskTargets` · L1009–1017
 
-[Drilling.Common/Station/CStationProcess.cs:1009–1017](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1009-L1017)
+[Drilling.Common/Station/CStationProcess.cs:1009–1017](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1009-L1017)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5353,8 +5353,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:873–873](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L873-L873) | CreateAutomationTaskTargets | False |
-| [Drilling.Common/Station/CStationProcess.cs:942–942](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L942-L942) | CreateAutomationTaskTargets | False |
+| [Drilling.Common/Station/CStationProcess.cs:873–873](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L873-L873) | CreateAutomationTaskTargets | False |
+| [Drilling.Common/Station/CStationProcess.cs:942–942](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L942-L942) | CreateAutomationTaskTargets | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5385,7 +5385,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L1011–1014
 
-[Drilling.Common/Station/CStationProcess.cs:1011–1014](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1011-L1014)
+[Drilling.Common/Station/CStationProcess.cs:1011–1014](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1011-L1014)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5412,7 +5412,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseAutomationTaskStatus` · L1019–1034
 
-[Drilling.Common/Station/CStationProcess.cs:1019–1034](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1019-L1034)
+[Drilling.Common/Station/CStationProcess.cs:1019–1034](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1019-L1034)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5431,12 +5431,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:899–899](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L899-L899) | ParseAutomationTaskStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:988–988](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L988-L988) | ParseAutomationTaskStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:2916–2916](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2916-L2916) | ParseAutomationTaskStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:3670–3670](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3670-L3670) | ParseAutomationTaskStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:3828–3828](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3828-L3828) | ParseAutomationTaskStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:4170–4170](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4170-L4170) | ParseAutomationTaskStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:899–899](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L899-L899) | ParseAutomationTaskStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:988–988](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L988-L988) | ParseAutomationTaskStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:2916–2916](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2916-L2916) | ParseAutomationTaskStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:3670–3670](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3670-L3670) | ParseAutomationTaskStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:3828–3828](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3828-L3828) | ParseAutomationTaskStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:4170–4170](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4170-L4170) | ParseAutomationTaskStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5502,7 +5502,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAutomationTaskLineStatus` · L1036–1040
 
-[Drilling.Common/Station/CStationProcess.cs:1036–1040](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1036-L1040)
+[Drilling.Common/Station/CStationProcess.cs:1036–1040](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1036-L1040)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5523,7 +5523,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3249–3249](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3249-L3249) | _owner.ReadAutomationTaskLineStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:3249–3249](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3249-L3249) | _owner.ReadAutomationTaskLineStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5550,7 +5550,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseAutomationTaskLineStatus` · L1042–1057
 
-[Drilling.Common/Station/CStationProcess.cs:1042–1057](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1042-L1057)
+[Drilling.Common/Station/CStationProcess.cs:1042–1057](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1042-L1057)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5569,7 +5569,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1039–1039](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1039-L1039) | ParseAutomationTaskLineStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:1039–1039](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1039-L1039) | ParseAutomationTaskLineStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5627,7 +5627,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatAutomationErrorResponse` · L1059–1073
 
-[Drilling.Common/Station/CStationProcess.cs:1059–1073](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1059-L1073)
+[Drilling.Common/Station/CStationProcess.cs:1059–1073](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1059-L1073)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5646,8 +5646,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1021–1021](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1021-L1021) | FormatAutomationErrorResponse | False |
-| [Drilling.Common/Station/CStationProcess.cs:1044–1044](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1044-L1044) | FormatAutomationErrorResponse | False |
+| [Drilling.Common/Station/CStationProcess.cs:1021–1021](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1021-L1021) | FormatAutomationErrorResponse | False |
+| [Drilling.Common/Station/CStationProcess.cs:1044–1044](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1044-L1044) | FormatAutomationErrorResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5691,7 +5691,7 @@ flowchart TD
 
 ### MethodDeclaration `IsAutomationTaskComplete` · L1075–1078
 
-[Drilling.Common/Station/CStationProcess.cs:1075–1078](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1075-L1078)
+[Drilling.Common/Station/CStationProcess.cs:1075–1078](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1075-L1078)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5710,8 +5710,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:905–905](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L905-L905) | IsAutomationTaskComplete | False |
-| [Drilling.Common/Station/CStationProcess.cs:994–994](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L994-L994) | IsAutomationTaskComplete | False |
+| [Drilling.Common/Station/CStationProcess.cs:905–905](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L905-L905) | IsAutomationTaskComplete | False |
+| [Drilling.Common/Station/CStationProcess.cs:994–994](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L994-L994) | IsAutomationTaskComplete | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5732,7 +5732,7 @@ flowchart TD
 
 ### MethodDeclaration `IsAutomationTaskFailed` · L1080–1083
 
-[Drilling.Common/Station/CStationProcess.cs:1080–1083](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1080-L1083)
+[Drilling.Common/Station/CStationProcess.cs:1080–1083](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1080-L1083)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5751,10 +5751,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:912–912](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L912-L912) | IsAutomationTaskFailed | False |
-| [Drilling.Common/Station/CStationProcess.cs:994–994](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L994-L994) | IsAutomationTaskFailed | False |
-| [Drilling.Common/Station/CStationProcess.cs:3831–3831](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3831-L3831) | IsAutomationTaskFailed | False |
-| [Drilling.Common/Station/CStationProcess.cs:4171–4171](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4171-L4171) | IsAutomationTaskFailed | False |
+| [Drilling.Common/Station/CStationProcess.cs:912–912](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L912-L912) | IsAutomationTaskFailed | False |
+| [Drilling.Common/Station/CStationProcess.cs:994–994](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L994-L994) | IsAutomationTaskFailed | False |
+| [Drilling.Common/Station/CStationProcess.cs:3831–3831](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3831-L3831) | IsAutomationTaskFailed | False |
+| [Drilling.Common/Station/CStationProcess.cs:4171–4171](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4171-L4171) | IsAutomationTaskFailed | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5777,7 +5777,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatAutomationTaskTargets` · L1085–1093
 
-[Drilling.Common/Station/CStationProcess.cs:1085–1093](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1085-L1093)
+[Drilling.Common/Station/CStationProcess.cs:1085–1093](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1085-L1093)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5796,8 +5796,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:928–928](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L928-L928) | FormatAutomationTaskTargets | False |
-| [Drilling.Common/Station/CStationProcess.cs:948–948](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L948-L948) | FormatAutomationTaskTargets | False |
+| [Drilling.Common/Station/CStationProcess.cs:928–928](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L928-L928) | FormatAutomationTaskTargets | False |
+| [Drilling.Common/Station/CStationProcess.cs:948–948](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L948-L948) | FormatAutomationTaskTargets | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5818,7 +5818,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L1087–1090
 
-[Drilling.Common/Station/CStationProcess.cs:1087–1090](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1087-L1090)
+[Drilling.Common/Station/CStationProcess.cs:1087–1090](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1087-L1090)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5845,7 +5845,7 @@ flowchart TD
 
 ### MethodDeclaration `RunBufferedHeadScriptGroup` · L1095–1109
 
-[Drilling.Common/Station/CStationProcess.cs:1095–1109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1095-L1109)
+[Drilling.Common/Station/CStationProcess.cs:1095–1109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1095-L1109)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5869,7 +5869,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3387–3387](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3387-L3387) | _owner.RunBufferedHeadScriptGroup | False |
+| [Drilling.Common/Station/CStationProcess.cs:3387–3387](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3387-L3387) | _owner.RunBufferedHeadScriptGroup | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5904,7 +5904,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildBuffered` · L1097–1100
 
-[Drilling.Common/Station/CStationProcess.cs:1097–1100](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1097-L1100)
+[Drilling.Common/Station/CStationProcess.cs:1097–1100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1097-L1100)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5938,7 +5938,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L1103–1106
 
-[Drilling.Common/Station/CStationProcess.cs:1103–1106](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1103-L1106)
+[Drilling.Common/Station/CStationProcess.cs:1103–1106](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1103-L1106)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5965,7 +5965,7 @@ flowchart TD
 
 ### MethodDeclaration `StopBufferedRunTasks` · L1111–1143
 
-[Drilling.Common/Station/CStationProcess.cs:1111–1143](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1111-L1143)
+[Drilling.Common/Station/CStationProcess.cs:1111–1143](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1111-L1143)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5985,8 +5985,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:826–826](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L826-L826) | StopBufferedRunTasks | False |
-| [Drilling.Common/Station/CStationProcess.cs:834–834](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L834-L834) | StopBufferedRunTasks | False |
+| [Drilling.Common/Station/CStationProcess.cs:826–826](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L826-L826) | StopBufferedRunTasks | False |
+| [Drilling.Common/Station/CStationProcess.cs:834–834](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L834-L834) | StopBufferedRunTasks | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6064,7 +6064,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L1113–1116
 
-[Drilling.Common/Station/CStationProcess.cs:1113–1116](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1113-L1116)
+[Drilling.Common/Station/CStationProcess.cs:1113–1116](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1113-L1116)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6091,7 +6091,7 @@ flowchart TD
 
 ### MethodDeclaration `RunReviewStep` · L1145–1149
 
-[Drilling.Common/Station/CStationProcess.cs:1145–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1145-L1149)
+[Drilling.Common/Station/CStationProcess.cs:1145–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1145-L1149)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6111,7 +6111,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:655–655](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L655-L655) | RunReviewStep | False |
+| [Drilling.Common/Station/CStationProcess.cs:655–655](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L655-L655) | RunReviewStep | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6131,7 +6131,7 @@ flowchart TD
 
 ### MethodDeclaration `RunPowerCheckStep` · L1151–1155
 
-[Drilling.Common/Station/CStationProcess.cs:1151–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1151-L1155)
+[Drilling.Common/Station/CStationProcess.cs:1151–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1151-L1155)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6171,7 +6171,7 @@ flowchart TD
 
 ### MethodDeclaration `CompleteProcess` · L1157–1188
 
-[Drilling.Common/Station/CStationProcess.cs:1157–1188](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1157-L1188)
+[Drilling.Common/Station/CStationProcess.cs:1157–1188](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1157-L1188)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6190,7 +6190,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:437–437](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L437-L437) | CompleteProcess | False |
+| [Drilling.Common/Station/CStationProcess.cs:437–437](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L437-L437) | CompleteProcess | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6272,7 +6272,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L1173–1179
 
-[Drilling.Common/Station/CStationProcess.cs:1173–1179](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1173-L1179)
+[Drilling.Common/Station/CStationProcess.cs:1173–1179](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1173-L1179)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6300,7 +6300,7 @@ flowchart TD
 
 ### MethodDeclaration `Stop` · L1190–1220
 
-[Drilling.Common/Station/CStationProcess.cs:1190–1220](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1190-L1220)
+[Drilling.Common/Station/CStationProcess.cs:1190–1220](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1190-L1220)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6319,7 +6319,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L107-L107) | _processStation.Stop | False |
+| [Drilling.Common/Station/CStationManager.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L107-L107) | _processStation.Stop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6376,7 +6376,7 @@ flowchart TD
 
 ### MethodDeclaration `ProcessStop` · L1222–1245
 
-[Drilling.Common/Station/CStationProcess.cs:1222–1245](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1222-L1245)
+[Drilling.Common/Station/CStationProcess.cs:1222–1245](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1222-L1245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6395,7 +6395,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:360–360](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L360-L360) | ProcessStop | False |
+| [Drilling.Common/Station/CStationProcess.cs:360–360](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L360-L360) | ProcessStop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6456,7 +6456,7 @@ flowchart TD
 
 ### PropertyDeclaration `CanReset` · L1247–1256
 
-[Drilling.Common/Station/CStationProcess.cs:1247–1256](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1247-L1256)
+[Drilling.Common/Station/CStationProcess.cs:1247–1256](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1247-L1256)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6471,7 +6471,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CanReset` · L1249–1255
 
-[Drilling.Common/Station/CStationProcess.cs:1249–1255](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1249-L1255)
+[Drilling.Common/Station/CStationProcess.cs:1249–1255](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1249-L1255)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6502,7 +6502,7 @@ flowchart TD
 
 ### MethodDeclaration `Reset` · L1258–1281
 
-[Drilling.Common/Station/CStationProcess.cs:1258–1281](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1258-L1281)
+[Drilling.Common/Station/CStationProcess.cs:1258–1281](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1258-L1281)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6521,7 +6521,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L114-L114) | _processStation.Reset | False |
+| [Drilling.Common/Station/CStationManager.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L114-L114) | _processStation.Reset | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6565,7 +6565,7 @@ flowchart TD
 
 ### MethodDeclaration `ProcessReset` · L1283–1337
 
-[Drilling.Common/Station/CStationProcess.cs:1283–1337](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1283-L1337)
+[Drilling.Common/Station/CStationProcess.cs:1283–1337](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1283-L1337)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6584,7 +6584,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L364-L364) | ProcessReset | False |
+| [Drilling.Common/Station/CStationProcess.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L364-L364) | ProcessReset | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6699,7 +6699,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateSnapshot` · L1339–1362
 
-[Drilling.Common/Station/CStationProcess.cs:1339–1362](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1339-L1362)
+[Drilling.Common/Station/CStationProcess.cs:1339–1362](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1339-L1362)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6722,21 +6722,21 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L154-L154) | CreateSnapshot | False |
-| [Drilling.Common/Station/CStationProcess.cs:267–267](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L267-L267) | CreateSnapshot | False |
-| [Drilling.Common/Station/CStationProcess.cs:482–482](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L482-L482) | CreateSnapshot | False |
-| [Drilling.Common/Station/CStationProcess.cs:666–666](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L666-L666) | CreateSnapshot | False |
-| [Drilling.Common/Station/CStationProcess.cs:714–714](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L714-L714) | CreateSnapshot | False |
-| [Drilling.Common/Station/CStationProcess.cs:1186–1186](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1186-L1186) | CreateSnapshot | False |
-| [Drilling.Common/Station/CStationProcess.cs:1240–1240](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1240-L1240) | CreateSnapshot | False |
-| [Drilling.Common/Station/CStationProcess.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1295-L1295) | CreateSnapshot | False |
-| [Drilling.Common/Station/CStationProcess.cs:1333–1333](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1333-L1333) | CreateSnapshot | False |
-| [Drilling.Common/Station/CStationProcess.cs:1795–1795](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1795-L1795) | CreateSnapshot | False |
-| [Drilling.Common/Station/CStationProcess.cs:2290–2290](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2290-L2290) | CreateSnapshot | False |
-| [Drilling.Common/Station/CStationProcess.cs:3623–3629](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3623-L3629) | CreateSnapshot | False |
-| [Drilling.Common/Station/CStationProcess.cs:3807–3807](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3807-L3807) | CreateSnapshot | False |
-| [Drilling.Common/Station/CStationProcess.cs:3859–3859](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3859-L3859) | CreateSnapshot | False |
-| [Drilling.Common/Station/CStationProcess.cs:3890–3890](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3890-L3890) | CreateSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L154-L154) | CreateSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:267–267](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L267-L267) | CreateSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:482–482](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L482-L482) | CreateSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:666–666](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L666-L666) | CreateSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:714–714](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L714-L714) | CreateSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:1186–1186](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1186-L1186) | CreateSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:1240–1240](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1240-L1240) | CreateSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1295-L1295) | CreateSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:1333–1333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1333-L1333) | CreateSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:1795–1795](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1795-L1795) | CreateSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:2290–2290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2290-L2290) | CreateSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:3623–3629](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3623-L3629) | CreateSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:3807–3807](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3807-L3807) | CreateSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:3859–3859](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3859-L3859) | CreateSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:3890–3890](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3890-L3890) | CreateSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6767,7 +6767,7 @@ flowchart TD
 
 ### MethodDeclaration `GetInterLockSummary` · L1364–1364
 
-[Drilling.Common/Station/CStationProcess.cs:1364–1364](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1364-L1364)
+[Drilling.Common/Station/CStationProcess.cs:1364–1364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1364-L1364)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6787,8 +6787,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L291-L291) | GetInterLockSummary | False |
-| [Drilling.Common/Station/CStationProcess.cs:1289–1289](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1289-L1289) | GetInterLockSummary | False |
+| [Drilling.Common/Station/CStationProcess.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L291-L291) | GetInterLockSummary | False |
+| [Drilling.Common/Station/CStationProcess.cs:1289–1289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1289-L1289) | GetInterLockSummary | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6806,7 +6806,7 @@ flowchart TD
 
 ### MethodDeclaration `EvaluateInterlocks` · L1365–1400
 
-[Drilling.Common/Station/CStationProcess.cs:1365–1400](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1365-L1400)
+[Drilling.Common/Station/CStationProcess.cs:1365–1400](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1365-L1400)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6829,10 +6829,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L460-L460) | EvaluateInterlocks | False |
-| [Drilling.Common/Station/CStationProcess.cs:461–461](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L461-L461) | EvaluateInterlocks | False |
-| [Drilling.Common/Station/CStationProcess.cs:469–469](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L469-L469) | EvaluateInterlocks | False |
-| [Drilling.Common/Station/CStationProcess.cs:1364–1364](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1364-L1364) | EvaluateInterlocks | False |
+| [Drilling.Common/Station/CStationProcess.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L460-L460) | EvaluateInterlocks | False |
+| [Drilling.Common/Station/CStationProcess.cs:461–461](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L461-L461) | EvaluateInterlocks | False |
+| [Drilling.Common/Station/CStationProcess.cs:469–469](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L469-L469) | EvaluateInterlocks | False |
+| [Drilling.Common/Station/CStationProcess.cs:1364–1364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1364-L1364) | EvaluateInterlocks | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6923,7 +6923,7 @@ flowchart TD
 
 ### MethodDeclaration `GetDeviceStatus` · L1402–1413
 
-[Drilling.Common/Station/CStationProcess.cs:1402–1413](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1402-L1413)
+[Drilling.Common/Station/CStationProcess.cs:1402–1413](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1402-L1413)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6943,7 +6943,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1374–1374](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1374-L1374) | GetDeviceStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:1374–1374](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1374-L1374) | GetDeviceStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6999,7 +6999,7 @@ flowchart TD
 
 ### MethodDeclaration `CompleteProduct` · L1415–1425
 
-[Drilling.Common/Station/CStationProcess.cs:1415–1425](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1415-L1425)
+[Drilling.Common/Station/CStationProcess.cs:1415–1425](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1415-L1425)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7020,8 +7020,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1184–1184](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1184-L1184) | CompleteProduct | False |
-| [Drilling.Common/Station/CStationProcess.cs:3888–3888](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3888-L3888) | CompleteProduct | False |
+| [Drilling.Common/Station/CStationProcess.cs:1184–1184](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1184-L1184) | CompleteProduct | False |
+| [Drilling.Common/Station/CStationProcess.cs:3888–3888](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3888-L3888) | CompleteProduct | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7062,7 +7062,7 @@ flowchart TD
 
 ### MethodDeclaration `StopProduct` · L1427–1437
 
-[Drilling.Common/Station/CStationProcess.cs:1427–1437](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1427-L1437)
+[Drilling.Common/Station/CStationProcess.cs:1427–1437](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1427-L1437)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7082,7 +7082,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1443–1443](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1443-L1443) | StopProduct | False |
+| [Drilling.Common/Station/CStationProcess.cs:1443–1443](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1443-L1443) | StopProduct | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7123,7 +7123,7 @@ flowchart TD
 
 ### MethodDeclaration `TryStopProduct` · L1439–1449
 
-[Drilling.Common/Station/CStationProcess.cs:1439–1449](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1439-L1449)
+[Drilling.Common/Station/CStationProcess.cs:1439–1449](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1439-L1449)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7143,7 +7143,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1238–1238](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1238-L1238) | TryStopProduct | False |
+| [Drilling.Common/Station/CStationProcess.cs:1238–1238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1238-L1238) | TryStopProduct | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7178,7 +7178,7 @@ flowchart TD
 
 ### MethodDeclaration `SetProductError` · L1451–1461
 
-[Drilling.Common/Station/CStationProcess.cs:1451–1461](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1451-L1461)
+[Drilling.Common/Station/CStationProcess.cs:1451–1461](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1451-L1461)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7198,7 +7198,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1467–1467](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1467-L1467) | SetProductError | False |
+| [Drilling.Common/Station/CStationProcess.cs:1467–1467](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1467-L1467) | SetProductError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7239,7 +7239,7 @@ flowchart TD
 
 ### MethodDeclaration `TrySetProductError` · L1463–1473
 
-[Drilling.Common/Station/CStationProcess.cs:1463–1473](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1463-L1473)
+[Drilling.Common/Station/CStationProcess.cs:1463–1473](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1463-L1473)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7259,7 +7259,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2287–2287](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2287-L2287) | TrySetProductError | False |
+| [Drilling.Common/Station/CStationProcess.cs:2287–2287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2287-L2287) | TrySetProductError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7294,7 +7294,7 @@ flowchart TD
 
 ### MethodDeclaration `ReportProcessResult` · L1475–1489
 
-[Drilling.Common/Station/CStationProcess.cs:1475–1489](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1475-L1489)
+[Drilling.Common/Station/CStationProcess.cs:1475–1489](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1475-L1489)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7316,9 +7316,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1185–1185](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1185-L1185) | ReportProcessResult | False |
-| [Drilling.Common/Station/CStationProcess.cs:1495–1495](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1495-L1495) | ReportProcessResult | False |
-| [Drilling.Common/Station/CStationProcess.cs:3889–3889](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3889-L3889) | ReportProcessResult | False |
+| [Drilling.Common/Station/CStationProcess.cs:1185–1185](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1185-L1185) | ReportProcessResult | False |
+| [Drilling.Common/Station/CStationProcess.cs:1495–1495](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1495-L1495) | ReportProcessResult | False |
+| [Drilling.Common/Station/CStationProcess.cs:3889–3889](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3889-L3889) | ReportProcessResult | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7331,10 +7331,10 @@ flowchart TD
 | 1483 | _interfaceManager.GetInterfaceData | resolved | Drilling.Common.Interface.ST_INTERFACE_DATA? Drilling.Common.Interface.CInterfaceManager.GetInterfaceData(Drilling.Common.Interface.EN_EQP_MODULE, int) · Drilling.Common/Interface/CInterfaceManager.cs:348 |
 | 1484 | ReadStationStatus | resolved | Drilling.Common.Station.ST_STATION_STATUS Drilling.Common.Station.CStationProcess.ReadStationStatus() · Drilling.Common/Station/CStationProcess.cs:2342 |
 | 1486 | AddProcessLog | resolved | void Drilling.Common.Station.CStationProcess.AddProcessLog(string, string, string) · Drilling.Common/Station/CStationProcess.cs:2371 |
-| 1487 | .WriteStationState | unresolved | None |
+| 1487 | .WriteStationState | resolved | void Drilling.Common.Log.CLogManager.WriteStationState(string, string, string, string) · Drilling.Common/Log/CLogManager.cs:175 |
 | 1487 | stationState.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
 | 1487 | stationState.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
-| 1488 | .WriteInterfaceCommand | unresolved | None |
+| 1488 | .WriteInterfaceCommand | resolved | void Drilling.Common.Log.CLogManager.WriteInterfaceCommand(Drilling.Common.Interface.EN_EQP_MODULE, string, string, string, string) · Drilling.Common/Log/CLogManager.cs:307 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -7372,7 +7372,7 @@ flowchart TD
 
 ### MethodDeclaration `TryReportProcessResult` · L1491–1501
 
-[Drilling.Common/Station/CStationProcess.cs:1491–1501](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1491-L1501)
+[Drilling.Common/Station/CStationProcess.cs:1491–1501](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1491-L1501)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7394,8 +7394,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1239–1239](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1239-L1239) | TryReportProcessResult | False |
-| [Drilling.Common/Station/CStationProcess.cs:2289–2289](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2289-L2289) | TryReportProcessResult | False |
+| [Drilling.Common/Station/CStationProcess.cs:1239–1239](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1239-L1239) | TryReportProcessResult | False |
+| [Drilling.Common/Station/CStationProcess.cs:2289–2289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2289-L2289) | TryReportProcessResult | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7430,7 +7430,7 @@ flowchart TD
 
 ### MethodDeclaration `IsTerminalCleanupException` · L1503–1506
 
-[Drilling.Common/Station/CStationProcess.cs:1503–1506](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1503-L1506)
+[Drilling.Common/Station/CStationProcess.cs:1503–1506](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1503-L1506)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7449,9 +7449,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1445–1445](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1445-L1445) | IsTerminalCleanupException | False |
-| [Drilling.Common/Station/CStationProcess.cs:1469–1469](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1469-L1469) | IsTerminalCleanupException | False |
-| [Drilling.Common/Station/CStationProcess.cs:1497–1497](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1497-L1497) | IsTerminalCleanupException | False |
+| [Drilling.Common/Station/CStationProcess.cs:1445–1445](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1445-L1445) | IsTerminalCleanupException | False |
+| [Drilling.Common/Station/CStationProcess.cs:1469–1469](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1469-L1469) | IsTerminalCleanupException | False |
+| [Drilling.Common/Station/CStationProcess.cs:1497–1497](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1497-L1497) | IsTerminalCleanupException | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -7463,7 +7463,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCurrentProcessProductId` · L1508–1516
 
-[Drilling.Common/Station/CStationProcess.cs:1508–1516](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1508-L1516)
+[Drilling.Common/Station/CStationProcess.cs:1508–1516](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1508-L1516)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7476,11 +7476,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:530–530](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L530-L530) | GetCurrentProcessProductId | False |
-| [Drilling.Common/Station/CStationProcess.cs:1417–1417](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1417-L1417) | GetCurrentProcessProductId | False |
-| [Drilling.Common/Station/CStationProcess.cs:1429–1429](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1429-L1429) | GetCurrentProcessProductId | False |
-| [Drilling.Common/Station/CStationProcess.cs:1453–1453](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1453-L1453) | GetCurrentProcessProductId | False |
-| [Drilling.Common/Station/CStationProcess.cs:1480–1480](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1480-L1480) | GetCurrentProcessProductId | False |
+| [Drilling.Common/Station/CStationProcess.cs:530–530](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L530-L530) | GetCurrentProcessProductId | False |
+| [Drilling.Common/Station/CStationProcess.cs:1417–1417](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1417-L1417) | GetCurrentProcessProductId | False |
+| [Drilling.Common/Station/CStationProcess.cs:1429–1429](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1429-L1429) | GetCurrentProcessProductId | False |
+| [Drilling.Common/Station/CStationProcess.cs:1453–1453](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1453-L1453) | GetCurrentProcessProductId | False |
+| [Drilling.Common/Station/CStationProcess.cs:1480–1480](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1480-L1480) | GetCurrentProcessProductId | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7511,7 +7511,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildPreview` · L1518–1526
 
-[Drilling.Common/Station/CStationProcess.cs:1518–1526](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1518-L1526)
+[Drilling.Common/Station/CStationProcess.cs:1518–1526](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1518-L1526)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7531,7 +7531,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:262–262](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L262-L262) | BuildPreview | False |
+| [Drilling.Common/Station/CStationProcess.cs:262–262](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L262-L262) | BuildPreview | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7552,7 +7552,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildHead` · L1520–1523
 
-[Drilling.Common/Station/CStationProcess.cs:1520–1523](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1520-L1523)
+[Drilling.Common/Station/CStationProcess.cs:1520–1523](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1520-L1523)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7586,7 +7586,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildRuntimeParameters` · L1528–1547
 
-[Drilling.Common/Station/CStationProcess.cs:1528–1547](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1528-L1547)
+[Drilling.Common/Station/CStationProcess.cs:1528–1547](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1528-L1547)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7607,7 +7607,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L249-L249) | BuildRuntimeParameters | False |
+| [Drilling.Common/Station/CStationProcess.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L249-L249) | BuildRuntimeParameters | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7659,7 +7659,7 @@ flowchart TD
 
 ### MethodDeclaration `MergeLatestReviewOffsets` · L1549–1565
 
-[Drilling.Common/Station/CStationProcess.cs:1549–1565](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1549-L1565)
+[Drilling.Common/Station/CStationProcess.cs:1549–1565](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1549-L1565)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7680,7 +7680,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1545–1545](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1545-L1545) | MergeLatestReviewOffsets | False |
+| [Drilling.Common/Station/CStationProcess.cs:1545–1545](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1545-L1545) | MergeLatestReviewOffsets | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7725,7 +7725,7 @@ flowchart TD
 
 ### MethodDeclaration `InvalidatePreparedReviewOffset` · L1567–1577
 
-[Drilling.Common/Station/CStationProcess.cs:1567–1577](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1567-L1577)
+[Drilling.Common/Station/CStationProcess.cs:1567–1577](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1567-L1577)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7738,7 +7738,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L121-L121) | _processStation.InvalidatePreparedReviewOffset | False |
+| [Drilling.Common/Station/CStationManager.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L121-L121) | _processStation.InvalidatePreparedReviewOffset | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7773,7 +7773,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsurePreparedReviewOffsetIsCurrent` · L1579–1601
 
-[Drilling.Common/Station/CStationProcess.cs:1579–1601](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1579-L1601)
+[Drilling.Common/Station/CStationProcess.cs:1579–1601](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1579-L1601)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7793,8 +7793,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L289-L289) | EnsurePreparedReviewOffsetIsCurrent | False |
-| [Drilling.Common/Station/CStationProcess.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L566-L566) | EnsurePreparedReviewOffsetIsCurrent | False |
+| [Drilling.Common/Station/CStationProcess.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L289-L289) | EnsurePreparedReviewOffsetIsCurrent | False |
+| [Drilling.Common/Station/CStationProcess.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L566-L566) | EnsurePreparedReviewOffsetIsCurrent | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7850,7 +7850,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeReviewOffsetShotId` · L1603–1606
 
-[Drilling.Common/Station/CStationProcess.cs:1603–1606](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1603-L1606)
+[Drilling.Common/Station/CStationProcess.cs:1603–1606](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1603-L1606)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7890,7 +7890,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildProcessModel` · L1608–1679
 
-[Drilling.Common/Station/CStationProcess.cs:1608–1679](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1608-L1679)
+[Drilling.Common/Station/CStationProcess.cs:1608–1679](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1608-L1679)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7913,7 +7913,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:258–258](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L258-L258) | BuildProcessModel | False |
+| [Drilling.Common/Station/CStationProcess.cs:258–258](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L258-L258) | BuildProcessModel | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8003,7 +8003,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectHeadNo` · L1616–1619
 
-[Drilling.Common/Station/CStationProcess.cs:1616–1619](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1616-L1619)
+[Drilling.Common/Station/CStationProcess.cs:1616–1619](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1616-L1619)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8030,7 +8030,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectKey` · L1621–1624
 
-[Drilling.Common/Station/CStationProcess.cs:1621–1624](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1621-L1624)
+[Drilling.Common/Station/CStationProcess.cs:1621–1624](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1621-L1624)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8057,7 +8057,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L1626–1629
 
-[Drilling.Common/Station/CStationProcess.cs:1626–1629](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1626-L1629)
+[Drilling.Common/Station/CStationProcess.cs:1626–1629](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1626-L1629)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8091,7 +8091,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildHead` · L1646–1675
 
-[Drilling.Common/Station/CStationProcess.cs:1646–1675](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1646-L1675)
+[Drilling.Common/Station/CStationProcess.cs:1646–1675](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1646-L1675)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8193,7 +8193,7 @@ flowchart TD
 
 ### MethodDeclaration `SetHeadStatus` · L1681–1700
 
-[Drilling.Common/Station/CStationProcess.cs:1681–1700](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1681-L1700)
+[Drilling.Common/Station/CStationProcess.cs:1681–1700](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1681-L1700)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8213,16 +8213,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:482–482](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L482-L482) | SetHeadStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:697–697](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L697-L697) | SetHeadStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:1181–1181](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1181-L1181) | SetHeadStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:1240–1240](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1240-L1240) | SetHeadStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1295-L1295) | SetHeadStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:2290–2290](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2290-L2290) | SetHeadStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:3625–3625](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3625-L3625) | SetHeadStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:3807–3807](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3807-L3807) | SetHeadStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:3859–3859](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3859-L3859) | SetHeadStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:3890–3890](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3890-L3890) | SetHeadStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:482–482](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L482-L482) | SetHeadStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:697–697](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L697-L697) | SetHeadStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:1181–1181](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1181-L1181) | SetHeadStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:1240–1240](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1240-L1240) | SetHeadStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1295-L1295) | SetHeadStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:2290–2290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2290-L2290) | SetHeadStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:3625–3625](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3625-L3625) | SetHeadStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:3807–3807](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3807-L3807) | SetHeadStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:3859–3859](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3859-L3859) | SetHeadStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:3890–3890](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3890-L3890) | SetHeadStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8243,7 +8243,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L1683–1697
 
-[Drilling.Common/Station/CStationProcess.cs:1683–1697](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1683-L1697)
+[Drilling.Common/Station/CStationProcess.cs:1683–1697](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1683-L1697)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8285,7 +8285,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildProcessSequence` · L1702–1710
 
-[Drilling.Common/Station/CStationProcess.cs:1702–1710](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1702-L1710)
+[Drilling.Common/Station/CStationProcess.cs:1702–1710](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1702-L1710)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8305,7 +8305,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1353–1353](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1353-L1353) | BuildProcessSequence | False |
+| [Drilling.Common/Station/CStationProcess.cs:1353–1353](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1353-L1353) | BuildProcessSequence | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8326,7 +8326,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildProcess` · L1704–1707
 
-[Drilling.Common/Station/CStationProcess.cs:1704–1707](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1704-L1707)
+[Drilling.Common/Station/CStationProcess.cs:1704–1707](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1704-L1707)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8364,7 +8364,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildCurrentStepDetails` · L1712–1730
 
-[Drilling.Common/Station/CStationProcess.cs:1712–1730](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1712-L1730)
+[Drilling.Common/Station/CStationProcess.cs:1712–1730](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1712-L1730)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8385,7 +8385,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1354–1354](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1354-L1354) | BuildCurrentStepDetails | False |
+| [Drilling.Common/Station/CStationProcess.cs:1354–1354](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1354-L1354) | BuildCurrentStepDetails | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8421,7 +8421,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildProcess` · L1714–1717
 
-[Drilling.Common/Station/CStationProcess.cs:1714–1717](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1714-L1717)
+[Drilling.Common/Station/CStationProcess.cs:1714–1717](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1714-L1717)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8455,7 +8455,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildProcess2` · L1724–1727
 
-[Drilling.Common/Station/CStationProcess.cs:1724–1727](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1724-L1727)
+[Drilling.Common/Station/CStationProcess.cs:1724–1727](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1724-L1727)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8491,7 +8491,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildProcessSummary` · L1732–1736
 
-[Drilling.Common/Station/CStationProcess.cs:1732–1736](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1732-L1736)
+[Drilling.Common/Station/CStationProcess.cs:1732–1736](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1732-L1736)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8511,7 +8511,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1355–1355](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1355-L1355) | BuildProcessSummary | False |
+| [Drilling.Common/Station/CStationProcess.cs:1355–1355](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1355-L1355) | BuildProcessSummary | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8539,7 +8539,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildScriptStatusItems` · L1738–1764
 
-[Drilling.Common/Station/CStationProcess.cs:1738–1764](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1738-L1764)
+[Drilling.Common/Station/CStationProcess.cs:1738–1764](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1738-L1764)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8560,7 +8560,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1357–1357](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1357-L1357) | BuildScriptStatusItems | False |
+| [Drilling.Common/Station/CStationProcess.cs:1357–1357](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1357-L1357) | BuildScriptStatusItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8627,7 +8627,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectFileName` · L1741–1744
 
-[Drilling.Common/Station/CStationProcess.cs:1741–1744](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1741-L1744)
+[Drilling.Common/Station/CStationProcess.cs:1741–1744](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1741-L1744)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8654,7 +8654,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L1747–1750
 
-[Drilling.Common/Station/CStationProcess.cs:1747–1750](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1747-L1750)
+[Drilling.Common/Station/CStationProcess.cs:1747–1750](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1747-L1750)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8688,7 +8688,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildScriptLifecycleItems` · L1766–1775
 
-[Drilling.Common/Station/CStationProcess.cs:1766–1775](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1766-L1775)
+[Drilling.Common/Station/CStationProcess.cs:1766–1775](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1766-L1775)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8708,7 +8708,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1358–1358](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1358-L1358) | BuildScriptLifecycleItems | False |
+| [Drilling.Common/Station/CStationProcess.cs:1358–1358](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1358-L1358) | BuildScriptLifecycleItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8745,7 +8745,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildStatistics` · L1777–1786
 
-[Drilling.Common/Station/CStationProcess.cs:1777–1786](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1777-L1786)
+[Drilling.Common/Station/CStationProcess.cs:1777–1786](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1777-L1786)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8766,11 +8766,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L263-L263) | BuildStatistics | False |
-| [Drilling.Common/Station/CStationProcess.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L664-L664) | BuildStatistics | False |
-| [Drilling.Common/Station/CStationProcess.cs:698–698](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L698-L698) | BuildStatistics | False |
-| [Drilling.Common/Station/CStationProcess.cs:1182–1182](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1182-L1182) | BuildStatistics | False |
-| [Drilling.Common/Station/CStationProcess.cs:1236–1236](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1236-L1236) | BuildStatistics | False |
+| [Drilling.Common/Station/CStationProcess.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L263-L263) | BuildStatistics | False |
+| [Drilling.Common/Station/CStationProcess.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L664-L664) | BuildStatistics | False |
+| [Drilling.Common/Station/CStationProcess.cs:698–698](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L698-L698) | BuildStatistics | False |
+| [Drilling.Common/Station/CStationProcess.cs:1182–1182](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1182-L1182) | BuildStatistics | False |
+| [Drilling.Common/Station/CStationProcess.cs:1236–1236](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1236-L1236) | BuildStatistics | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8802,7 +8802,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L1779–1782
 
-[Drilling.Common/Station/CStationProcess.cs:1779–1782](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1779-L1782)
+[Drilling.Common/Station/CStationProcess.cs:1779–1782](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1779-L1782)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8829,7 +8829,7 @@ flowchart TD
 
 ### MethodDeclaration `EmptyStatistics` · L1788–1791
 
-[Drilling.Common/Station/CStationProcess.cs:1788–1791](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1788-L1791)
+[Drilling.Common/Station/CStationProcess.cs:1788–1791](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1788-L1791)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8842,8 +8842,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L99-L99) | EmptyStatistics | False |
-| [Drilling.Common/Station/CStationProcess.cs:1332–1332](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1332-L1332) | EmptyStatistics | False |
+| [Drilling.Common/Station/CStationProcess.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L99-L99) | EmptyStatistics | False |
+| [Drilling.Common/Station/CStationProcess.cs:1332–1332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1332-L1332) | EmptyStatistics | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8862,7 +8862,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshSnapshot` · L1793–1796
 
-[Drilling.Common/Station/CStationProcess.cs:1793–1796](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1793-L1796)
+[Drilling.Common/Station/CStationProcess.cs:1793–1796](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1793-L1796)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8875,11 +8875,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:484–484](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L484-L484) | RefreshSnapshot | False |
-| [Drilling.Common/Station/CStationProcess.cs:490–490](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L490-L490) | RefreshSnapshot | False |
-| [Drilling.Common/Station/CStationProcess.cs:496–496](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L496-L496) | RefreshSnapshot | False |
-| [Drilling.Common/Station/CStationProcess.cs:1242–1242](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1242-L1242) | RefreshSnapshot | False |
-| [Drilling.Common/Station/CStationProcess.cs:1266–1266](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1266-L1266) | RefreshSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:484–484](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L484-L484) | RefreshSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:490–490](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L490-L490) | RefreshSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:496–496](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L496-L496) | RefreshSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:1242–1242](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1242-L1242) | RefreshSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:1266–1266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1266-L1266) | RefreshSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8898,7 +8898,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetAutoStepStates` · L1798–1798
 
-[Drilling.Common/Station/CStationProcess.cs:1798–1798](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1798-L1798)
+[Drilling.Common/Station/CStationProcess.cs:1798–1798](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1798-L1798)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8911,7 +8911,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1331–1331](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1331-L1331) | ResetAutoStepStates | False |
+| [Drilling.Common/Station/CStationProcess.cs:1331–1331](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1331-L1331) | ResetAutoStepStates | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8929,7 +8929,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetAutoStepStatesCore` · L1799–1808
 
-[Drilling.Common/Station/CStationProcess.cs:1799–1808](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1799-L1808)
+[Drilling.Common/Station/CStationProcess.cs:1799–1808](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1799-L1808)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8948,8 +8948,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L247-L247) | ResetAutoStepStatesCore | False |
-| [Drilling.Common/Station/CStationProcess.cs:1798–1798](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1798-L1798) | ResetAutoStepStatesCore | False |
+| [Drilling.Common/Station/CStationProcess.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L247-L247) | ResetAutoStepStatesCore | False |
+| [Drilling.Common/Station/CStationProcess.cs:1798–1798](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1798-L1798) | ResetAutoStepStatesCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8983,7 +8983,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAutoStepState` · L1810–1813
 
-[Drilling.Common/Station/CStationProcess.cs:1810–1813](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1810-L1813)
+[Drilling.Common/Station/CStationProcess.cs:1810–1813](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1810-L1813)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9003,11 +9003,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:266–266](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L266-L266) | SetAutoStepState | False |
-| [Drilling.Common/Station/CStationProcess.cs:455–455](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L455-L455) | SetAutoStepState | False |
-| [Drilling.Common/Station/CStationProcess.cs:480–480](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L480-L480) | SetAutoStepState | False |
-| [Drilling.Common/Station/CStationProcess.cs:488–488](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L488-L488) | SetAutoStepState | False |
-| [Drilling.Common/Station/CStationProcess.cs:494–494](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L494-L494) | SetAutoStepState | False |
+| [Drilling.Common/Station/CStationProcess.cs:266–266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L266-L266) | SetAutoStepState | False |
+| [Drilling.Common/Station/CStationProcess.cs:455–455](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L455-L455) | SetAutoStepState | False |
+| [Drilling.Common/Station/CStationProcess.cs:480–480](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L480-L480) | SetAutoStepState | False |
+| [Drilling.Common/Station/CStationProcess.cs:488–488](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L488-L488) | SetAutoStepState | False |
+| [Drilling.Common/Station/CStationProcess.cs:494–494](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L494-L494) | SetAutoStepState | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -9019,7 +9019,7 @@ flowchart TD
 
 ### MethodDeclaration `MarkRunningAutoSteps` · L1815–1824
 
-[Drilling.Common/Station/CStationProcess.cs:1815–1824](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1815-L1824)
+[Drilling.Common/Station/CStationProcess.cs:1815–1824](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1815-L1824)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9038,8 +9038,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1241–1241](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1241-L1241) | MarkRunningAutoSteps | False |
-| [Drilling.Common/Station/CStationProcess.cs:2286–2286](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2286-L2286) | MarkRunningAutoSteps | False |
+| [Drilling.Common/Station/CStationProcess.cs:1241–1241](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1241-L1241) | MarkRunningAutoSteps | False |
+| [Drilling.Common/Station/CStationProcess.cs:2286–2286](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2286-L2286) | MarkRunningAutoSteps | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9071,7 +9071,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAutoStepState` · L1826–1840
 
-[Drilling.Common/Station/CStationProcess.cs:1826–1840](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1826-L1840)
+[Drilling.Common/Station/CStationProcess.cs:1826–1840](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1826-L1840)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9092,8 +9092,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1706–1706](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1706-L1706) | ReadAutoStepState | False |
-| [Drilling.Common/Station/CStationProcess.cs:1726–1726](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1726-L1726) | ReadAutoStepState | False |
+| [Drilling.Common/Station/CStationProcess.cs:1706–1706](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1706-L1706) | ReadAutoStepState | False |
+| [Drilling.Common/Station/CStationProcess.cs:1726–1726](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1726-L1726) | ReadAutoStepState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9126,7 +9126,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveStepScriptStatus` · L1842–1855
 
-[Drilling.Common/Station/CStationProcess.cs:1842–1855](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1842-L1855)
+[Drilling.Common/Station/CStationProcess.cs:1842–1855](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1842-L1855)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9146,7 +9146,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L479-L479) | ResolveStepScriptStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L479-L479) | ResolveStepScriptStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9184,7 +9184,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCurrentScriptStatusForComplete` · L1857–1865
 
-[Drilling.Common/Station/CStationProcess.cs:1857–1865](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1857-L1865)
+[Drilling.Common/Station/CStationProcess.cs:1857–1865](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1857-L1865)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9197,8 +9197,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1159–1159](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1159-L1159) | GetCurrentScriptStatusForComplete | False |
-| [Drilling.Common/Station/CStationProcess.cs:1846–1846](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1846-L1846) | GetCurrentScriptStatusForComplete | False |
+| [Drilling.Common/Station/CStationProcess.cs:1159–1159](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1159-L1159) | GetCurrentScriptStatusForComplete | False |
+| [Drilling.Common/Station/CStationProcess.cs:1846–1846](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1846-L1846) | GetCurrentScriptStatusForComplete | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -9222,7 +9222,7 @@ flowchart TD
 
 ### MethodDeclaration `GetProcessFlowItem` · L1867–1875
 
-[Drilling.Common/Station/CStationProcess.cs:1867–1875](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1867-L1875)
+[Drilling.Common/Station/CStationProcess.cs:1867–1875](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1867-L1875)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9241,7 +9241,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:478–478](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L478-L478) | GetProcessFlowItem | False |
+| [Drilling.Common/Station/CStationProcess.cs:478–478](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L478-L478) | GetProcessFlowItem | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9263,7 +9263,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L1869–1872
 
-[Drilling.Common/Station/CStationProcess.cs:1869–1872](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1869-L1872)
+[Drilling.Common/Station/CStationProcess.cs:1869–1872](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1869-L1872)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9297,7 +9297,7 @@ flowchart TD
 
 ### MethodDeclaration `GetAutoStepName` · L1877–1885
 
-[Drilling.Common/Station/CStationProcess.cs:1877–1885](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1877-L1885)
+[Drilling.Common/Station/CStationProcess.cs:1877–1885](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1877-L1885)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9316,7 +9316,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:477–477](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L477-L477) | GetAutoStepName | False |
+| [Drilling.Common/Station/CStationProcess.cs:477–477](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L477-L477) | GetAutoStepName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9335,7 +9335,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L1879–1882
 
-[Drilling.Common/Station/CStationProcess.cs:1879–1882](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1879-L1882)
+[Drilling.Common/Station/CStationProcess.cs:1879–1882](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1879-L1882)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9362,7 +9362,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateAutoStepStateMap` · L1887–1900
 
-[Drilling.Common/Station/CStationProcess.cs:1887–1900](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1887-L1900)
+[Drilling.Common/Station/CStationProcess.cs:1887–1900](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1887-L1900)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9375,7 +9375,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L89-L89) | CreateAutoStepStateMap | False |
+| [Drilling.Common/Station/CStationProcess.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L89-L89) | CreateAutoStepStateMap | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9394,7 +9394,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectKey` · L1889–1892
 
-[Drilling.Common/Station/CStationProcess.cs:1889–1892](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1889-L1892)
+[Drilling.Common/Station/CStationProcess.cs:1889–1892](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1889-L1892)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9421,7 +9421,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectAutoStepWait` · L1894–1897
 
-[Drilling.Common/Station/CStationProcess.cs:1894–1897](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1894-L1897)
+[Drilling.Common/Station/CStationProcess.cs:1894–1897](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1894-L1897)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9448,7 +9448,7 @@ flowchart TD
 
 ### MethodDeclaration `LifecycleState` · L1902–1915
 
-[Drilling.Common/Station/CStationProcess.cs:1902–1915](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1902-L1915)
+[Drilling.Common/Station/CStationProcess.cs:1902–1915](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1902-L1915)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9469,11 +9469,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1769–1769](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1769-L1769) | LifecycleState | False |
-| [Drilling.Common/Station/CStationProcess.cs:1770–1770](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1770-L1770) | LifecycleState | False |
-| [Drilling.Common/Station/CStationProcess.cs:1771–1771](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1771-L1771) | LifecycleState | False |
-| [Drilling.Common/Station/CStationProcess.cs:1772–1772](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1772-L1772) | LifecycleState | False |
-| [Drilling.Common/Station/CStationProcess.cs:1773–1773](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1773-L1773) | LifecycleState | False |
+| [Drilling.Common/Station/CStationProcess.cs:1769–1769](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1769-L1769) | LifecycleState | False |
+| [Drilling.Common/Station/CStationProcess.cs:1770–1770](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1770-L1770) | LifecycleState | False |
+| [Drilling.Common/Station/CStationProcess.cs:1771–1771](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1771-L1771) | LifecycleState | False |
+| [Drilling.Common/Station/CStationProcess.cs:1772–1772](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1772-L1772) | LifecycleState | False |
+| [Drilling.Common/Station/CStationProcess.cs:1773–1773](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1773-L1773) | LifecycleState | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -9497,7 +9497,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatAttenuatorStatus` · L1917–1920
 
-[Drilling.Common/Station/CStationProcess.cs:1917–1920](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1917-L1920)
+[Drilling.Common/Station/CStationProcess.cs:1917–1920](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1917-L1920)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9533,7 +9533,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatBETStatus` · L1922–1925
 
-[Drilling.Common/Station/CStationProcess.cs:1922–1925](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1922-L1925)
+[Drilling.Common/Station/CStationProcess.cs:1922–1925](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1922-L1925)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9573,7 +9573,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatCommState` · L1927–1935
 
-[Drilling.Common/Station/CStationProcess.cs:1927–1935](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1927-L1935)
+[Drilling.Common/Station/CStationProcess.cs:1927–1935](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1927-L1935)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9610,7 +9610,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatInterfaceName` · L1937–1940
 
-[Drilling.Common/Station/CStationProcess.cs:1937–1940](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1937-L1940)
+[Drilling.Common/Station/CStationProcess.cs:1937–1940](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1937-L1940)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9637,7 +9637,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatInterfaceName` · L1942–1945
 
-[Drilling.Common/Station/CStationProcess.cs:1942–1945](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1942-L1945)
+[Drilling.Common/Station/CStationProcess.cs:1942–1945](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1942-L1945)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9664,7 +9664,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatDouble` · L1947–1950
 
-[Drilling.Common/Station/CStationProcess.cs:1947–1950](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1947-L1950)
+[Drilling.Common/Station/CStationProcess.cs:1947–1950](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1947-L1950)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9683,40 +9683,40 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:511–511](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L511-L511) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:511–511](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L511-L511) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:511–511](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L511-L511) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:525–525](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L525-L525) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:525–525](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L525-L525) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L594-L594) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L594-L594) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L594-L594) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:596–596](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L596-L596) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L597-L597) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L598-L598) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:599–599](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L599-L599) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:600–600](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L600-L600) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:601–601](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L601-L601) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:602–602](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L602-L602) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L603-L603) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:604–604](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L604-L604) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L605-L605) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L606-L606) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L608-L608) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L608-L608) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L608-L608) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L608-L608) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L608-L608) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L608-L608) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L608-L608) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L608-L608) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L608-L608) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:1919–1919](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1919-L1919) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:1919–1919](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1919-L1919) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:1924–1924](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1924-L1924) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:1924–1924](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1924-L1924) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:1924–1924](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1924-L1924) | FormatDouble | False |
-| [Drilling.Common/Station/CStationProcess.cs:1924–1924](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1924-L1924) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:511–511](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L511-L511) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:511–511](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L511-L511) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:511–511](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L511-L511) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:525–525](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L525-L525) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:525–525](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L525-L525) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L594-L594) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L594-L594) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L594-L594) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:596–596](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L596-L596) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L597-L597) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L598-L598) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:599–599](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L599-L599) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:600–600](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L600-L600) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:601–601](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L601-L601) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:602–602](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L602-L602) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L603-L603) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:604–604](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L604-L604) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L605-L605) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L606-L606) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L608-L608) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L608-L608) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L608-L608) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L608-L608) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L608-L608) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L608-L608) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L608-L608) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L608-L608) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L608-L608) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:1919–1919](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1919-L1919) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:1919–1919](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1919-L1919) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:1924–1924](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1924-L1924) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:1924–1924](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1924-L1924) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:1924–1924](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1924-L1924) | FormatDouble | False |
+| [Drilling.Common/Station/CStationProcess.cs:1924–1924](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1924-L1924) | FormatDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9735,7 +9735,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDirectionAny` · L1952–1970
 
-[Drilling.Common/Station/CStationProcess.cs:1952–1970](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1952-L1970)
+[Drilling.Common/Station/CStationProcess.cs:1952–1970](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1952-L1970)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9756,7 +9756,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:590–590](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L590-L590) | ReadDirectionAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:590–590](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L590-L590) | ReadDirectionAny | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9800,7 +9800,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L1954–1957
 
-[Drilling.Common/Station/CStationProcess.cs:1954–1957](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1954-L1957)
+[Drilling.Common/Station/CStationProcess.cs:1954–1957](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1954-L1957)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9834,7 +9834,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeDirection` · L1972–1991
 
-[Drilling.Common/Station/CStationProcess.cs:1972–1991](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1972-L1991)
+[Drilling.Common/Station/CStationProcess.cs:1972–1991](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1972-L1991)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9854,7 +9854,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1966–1966](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1966-L1966) | NormalizeDirection | False |
+| [Drilling.Common/Station/CStationProcess.cs:1966–1966](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1966-L1966) | NormalizeDirection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9902,7 +9902,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeDirection` · L1993–2001
 
-[Drilling.Common/Station/CStationProcess.cs:1993–2001](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1993-L2001)
+[Drilling.Common/Station/CStationProcess.cs:1993–2001](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1993-L2001)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9922,8 +9922,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1969–1969](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1969-L1969) | NormalizeDirection | False |
-| [Drilling.Common/Station/CStationProcess.cs:1977–1977](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1977-L1977) | NormalizeDirection | False |
+| [Drilling.Common/Station/CStationProcess.cs:1969–1969](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1969-L1969) | NormalizeDirection | False |
+| [Drilling.Common/Station/CStationProcess.cs:1977–1977](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1977-L1977) | NormalizeDirection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9955,7 +9955,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatCommand` · L2003–2011
 
-[Drilling.Common/Station/CStationProcess.cs:2003–2011](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2003-L2011)
+[Drilling.Common/Station/CStationProcess.cs:2003–2011](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2003-L2011)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9975,7 +9975,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:641–641](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L641-L641) | FormatCommand | False |
+| [Drilling.Common/Station/CStationProcess.cs:641–641](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L641-L641) | FormatCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9998,7 +9998,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L2005–2008
 
-[Drilling.Common/Station/CStationProcess.cs:2005–2008](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2005-L2008)
+[Drilling.Common/Station/CStationProcess.cs:2005–2008](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2005-L2008)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10025,7 +10025,7 @@ flowchart TD
 
 ### MethodDeclaration `IsProcessControlSuccessResponse` · L2013–2022
 
-[Drilling.Common/Station/CStationProcess.cs:2013–2022](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2013-L2022)
+[Drilling.Common/Station/CStationProcess.cs:2013–2022](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2013-L2022)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10044,9 +10044,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:644–644](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L644-L644) | IsProcessControlSuccessResponse | False |
-| [Drilling.Common/Station/CStationProcess.cs:687–687](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L687-L687) | IsProcessControlSuccessResponse | False |
-| [Drilling.Common/Station/CStationProcess.cs:4249–4249](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4249-L4249) | IsProcessControlSuccessResponse | False |
+| [Drilling.Common/Station/CStationProcess.cs:644–644](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L644-L644) | IsProcessControlSuccessResponse | False |
+| [Drilling.Common/Station/CStationProcess.cs:687–687](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L687-L687) | IsProcessControlSuccessResponse | False |
+| [Drilling.Common/Station/CStationProcess.cs:4249–4249](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4249-L4249) | IsProcessControlSuccessResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10086,7 +10086,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatResponseForLog` · L2024–2027
 
-[Drilling.Common/Station/CStationProcess.cs:2024–2027](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2024-L2027)
+[Drilling.Common/Station/CStationProcess.cs:2024–2027](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2024-L2027)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10105,9 +10105,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L646-L646) | FormatResponseForLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:647–647](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L647-L647) | FormatResponseForLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:688–688](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L688-L688) | FormatResponseForLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L646-L646) | FormatResponseForLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:647–647](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L647-L647) | FormatResponseForLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:688–688](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L688-L688) | FormatResponseForLog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10133,7 +10133,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadNullableDoubleAny` · L2029–2045
 
-[Drilling.Common/Station/CStationProcess.cs:2029–2045](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2029-L2045)
+[Drilling.Common/Station/CStationProcess.cs:2029–2045](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2029-L2045)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10153,10 +10153,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:543–543](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L543-L543) | ReadNullableDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:544–544](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L544-L544) | ReadNullableDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:545–545](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L545-L545) | ReadNullableDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:547–547](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L547-L547) | ReadNullableDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:543–543](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L543-L543) | ReadNullableDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:544–544](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L544-L544) | ReadNullableDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:545–545](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L545-L545) | ReadNullableDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:547–547](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L547-L547) | ReadNullableDoubleAny | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10193,7 +10193,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L2031–2034
 
-[Drilling.Common/Station/CStationProcess.cs:2031–2034](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2031-L2034)
+[Drilling.Common/Station/CStationProcess.cs:2031–2034](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2031-L2034)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10227,7 +10227,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadNullableIntAny` · L2047–2073
 
-[Drilling.Common/Station/CStationProcess.cs:2047–2073](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2047-L2073)
+[Drilling.Common/Station/CStationProcess.cs:2047–2073](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2047-L2073)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10292,7 +10292,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L2049–2052
 
-[Drilling.Common/Station/CStationProcess.cs:2049–2052](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2049-L2052)
+[Drilling.Common/Station/CStationProcess.cs:2049–2052](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2049-L2052)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10326,7 +10326,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDouble` · L2075–2078
 
-[Drilling.Common/Station/CStationProcess.cs:2075–2078](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2075-L2078)
+[Drilling.Common/Station/CStationProcess.cs:2075–2078](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2075-L2078)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10365,7 +10365,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadInt` · L2080–2083
 
-[Drilling.Common/Station/CStationProcess.cs:2080–2083](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2080-L2083)
+[Drilling.Common/Station/CStationProcess.cs:2080–2083](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2080-L2083)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10404,7 +10404,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDoubleAny` · L2085–2101
 
-[Drilling.Common/Station/CStationProcess.cs:2085–2101](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2085-L2101)
+[Drilling.Common/Station/CStationProcess.cs:2085–2101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2085-L2101)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10425,32 +10425,32 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:505–505](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L505-L505) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:506–506](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L506-L506) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:507–507](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L507-L507) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:581–581](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L581-L581) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:582–582](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L582-L582) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:583–583](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L583-L583) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:584–584](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L584-L584) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:585–585](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L585-L585) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:586–586](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L586-L586) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:589–589](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L589-L589) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:593–593](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L593-L593) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:621–621](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L621-L621) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:622–622](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L622-L622) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:1614–1614](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1614-L1614) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:1615–1615](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1615-L1615) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:1649–1649](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1649-L1649) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:1650–1650](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1650-L1650) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:1651–1651](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1651-L1651) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:1652–1652](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1652-L1652) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:1653–1653](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1653-L1653) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:1654–1654](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1654-L1654) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:1655–1655](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1655-L1655) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:1658–1658](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1658-L1658) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:1659–1659](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1659-L1659) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:1668–1668](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1668-L1668) | ReadDoubleAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:3994–3994](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3994-L3994) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:505–505](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L505-L505) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:506–506](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L506-L506) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:507–507](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L507-L507) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:581–581](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L581-L581) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:582–582](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L582-L582) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:583–583](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L583-L583) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:584–584](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L584-L584) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:585–585](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L585-L585) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:586–586](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L586-L586) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:589–589](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L589-L589) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:593–593](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L593-L593) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:621–621](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L621-L621) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:622–622](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L622-L622) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:1614–1614](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1614-L1614) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:1615–1615](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1615-L1615) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:1649–1649](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1649-L1649) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:1650–1650](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1650-L1650) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:1651–1651](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1651-L1651) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:1652–1652](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1652-L1652) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:1653–1653](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1653-L1653) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:1654–1654](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1654-L1654) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:1655–1655](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1655-L1655) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:1658–1658](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1658-L1658) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:1659–1659](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1659-L1659) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:1668–1668](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1668-L1668) | ReadDoubleAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:3994–3994](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3994-L3994) | ReadDoubleAny | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10487,7 +10487,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L2087–2090
 
-[Drilling.Common/Station/CStationProcess.cs:2087–2090](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2087-L2090)
+[Drilling.Common/Station/CStationProcess.cs:2087–2090](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2087-L2090)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10521,7 +10521,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadIntAny` · L2103–2129
 
-[Drilling.Common/Station/CStationProcess.cs:2103–2129](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2103-L2129)
+[Drilling.Common/Station/CStationProcess.cs:2103–2129](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2103-L2129)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10542,15 +10542,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1660–1660](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1660-L1660) | ReadIntAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:2138–2138](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2138-L2138) | ReadIntAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:2143–2143](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2143-L2143) | ReadIntAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:2148–2148](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2148-L2148) | ReadIntAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:2153–2153](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2153-L2153) | ReadIntAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:2158–2158](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2158-L2158) | ReadIntAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:2255–2255](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2255-L2255) | ReadIntAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:2261–2261](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2261-L2261) | ReadIntAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:2633–2633](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2633-L2633) | ReadIntAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:1660–1660](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1660-L1660) | ReadIntAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:2138–2138](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2138-L2138) | ReadIntAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:2143–2143](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2143-L2143) | ReadIntAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:2148–2148](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2148-L2148) | ReadIntAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:2153–2153](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2153-L2153) | ReadIntAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:2158–2158](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2158-L2158) | ReadIntAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:2255–2255](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2255-L2255) | ReadIntAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:2261–2261](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2261-L2261) | ReadIntAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:2633–2633](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2633-L2633) | ReadIntAny | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10599,7 +10599,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L2105–2108
 
-[Drilling.Common/Station/CStationProcess.cs:2105–2108](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2105-L2108)
+[Drilling.Common/Station/CStationProcess.cs:2105–2108](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2105-L2108)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10633,7 +10633,7 @@ flowchart TD
 
 ### MethodDeclaration `IsBufferedRunEnabled` · L2131–2134
 
-[Drilling.Common/Station/CStationProcess.cs:2131–2134](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2131-L2134)
+[Drilling.Common/Station/CStationProcess.cs:2131–2134](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2131-L2134)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10652,12 +10652,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:660–660](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L660-L660) | IsBufferedRunEnabled | False |
-| [Drilling.Common/Station/CStationProcess.cs:710–710](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L710-L710) | IsBufferedRunEnabled | False |
-| [Drilling.Common/Station/CStationProcess.cs:3534–3534](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3534-L3534) | IsBufferedRunEnabled | False |
-| [Drilling.Common/Station/CStationProcess.cs:3802–3802](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3802-L3802) | IsBufferedRunEnabled | False |
-| [Drilling.Common/Station/CStationProcess.cs:4076–4076](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4076-L4076) | IsBufferedRunEnabled | False |
-| [Drilling.Common/Station/CStationProcess.cs:4101–4101](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4101-L4101) | IsBufferedRunEnabled | False |
+| [Drilling.Common/Station/CStationProcess.cs:660–660](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L660-L660) | IsBufferedRunEnabled | False |
+| [Drilling.Common/Station/CStationProcess.cs:710–710](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L710-L710) | IsBufferedRunEnabled | False |
+| [Drilling.Common/Station/CStationProcess.cs:3534–3534](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3534-L3534) | IsBufferedRunEnabled | False |
+| [Drilling.Common/Station/CStationProcess.cs:3802–3802](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3802-L3802) | IsBufferedRunEnabled | False |
+| [Drilling.Common/Station/CStationProcess.cs:4076–4076](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4076-L4076) | IsBufferedRunEnabled | False |
+| [Drilling.Common/Station/CStationProcess.cs:4101–4101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4101-L4101) | IsBufferedRunEnabled | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10676,7 +10676,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadScriptRunTimeoutMs` · L2136–2139
 
-[Drilling.Common/Station/CStationProcess.cs:2136–2139](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2136-L2139)
+[Drilling.Common/Station/CStationProcess.cs:2136–2139](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2136-L2139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10695,8 +10695,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:879–879](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L879-L879) | ReadScriptRunTimeoutMs | False |
-| [Drilling.Common/Station/CStationProcess.cs:3803–3803](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3803-L3803) | ReadScriptRunTimeoutMs | False |
+| [Drilling.Common/Station/CStationProcess.cs:879–879](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L879-L879) | ReadScriptRunTimeoutMs | False |
+| [Drilling.Common/Station/CStationProcess.cs:3803–3803](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3803-L3803) | ReadScriptRunTimeoutMs | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10717,7 +10717,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadScriptRunPollIntervalMs` · L2141–2144
 
-[Drilling.Common/Station/CStationProcess.cs:2141–2144](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2141-L2144)
+[Drilling.Common/Station/CStationProcess.cs:2141–2144](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2141-L2144)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10736,7 +10736,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:880–880](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L880-L880) | ReadScriptRunPollIntervalMs | False |
+| [Drilling.Common/Station/CStationProcess.cs:880–880](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L880-L880) | ReadScriptRunPollIntervalMs | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10757,7 +10757,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadBufferedRunLinesPerCommand` · L2146–2149
 
-[Drilling.Common/Station/CStationProcess.cs:2146–2149](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2146-L2149)
+[Drilling.Common/Station/CStationProcess.cs:2146–2149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2146-L2149)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10776,8 +10776,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:756–756](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L756-L756) | ReadBufferedRunLinesPerCommand | False |
-| [Drilling.Common/Station/CStationProcess.cs:4142–4142](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4142-L4142) | ReadBufferedRunLinesPerCommand | False |
+| [Drilling.Common/Station/CStationProcess.cs:756–756](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L756-L756) | ReadBufferedRunLinesPerCommand | False |
+| [Drilling.Common/Station/CStationProcess.cs:4142–4142](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4142-L4142) | ReadBufferedRunLinesPerCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10798,7 +10798,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadBufferedRunQueueSize` · L2151–2154
 
-[Drilling.Common/Station/CStationProcess.cs:2151–2154](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2151-L2154)
+[Drilling.Common/Station/CStationProcess.cs:2151–2154](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2151-L2154)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10817,8 +10817,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:755–755](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L755-L755) | ReadBufferedRunQueueSize | False |
-| [Drilling.Common/Station/CStationProcess.cs:4142–4142](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4142-L4142) | ReadBufferedRunQueueSize | False |
+| [Drilling.Common/Station/CStationProcess.cs:755–755](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L755-L755) | ReadBufferedRunQueueSize | False |
+| [Drilling.Common/Station/CStationProcess.cs:4142–4142](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4142-L4142) | ReadBufferedRunQueueSize | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10839,7 +10839,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadBufferedRunTimeoutMs` · L2156–2159
 
-[Drilling.Common/Station/CStationProcess.cs:2156–2159](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2156-L2159)
+[Drilling.Common/Station/CStationProcess.cs:2156–2159](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2156-L2159)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10858,9 +10858,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:757–757](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L757-L757) | ReadBufferedRunTimeoutMs | False |
-| [Drilling.Common/Station/CStationProcess.cs:3803–3803](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3803-L3803) | ReadBufferedRunTimeoutMs | False |
-| [Drilling.Common/Station/CStationProcess.cs:4142–4142](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4142-L4142) | ReadBufferedRunTimeoutMs | False |
+| [Drilling.Common/Station/CStationProcess.cs:757–757](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L757-L757) | ReadBufferedRunTimeoutMs | False |
+| [Drilling.Common/Station/CStationProcess.cs:3803–3803](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3803-L3803) | ReadBufferedRunTimeoutMs | False |
+| [Drilling.Common/Station/CStationProcess.cs:4142–4142](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4142-L4142) | ReadBufferedRunTimeoutMs | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10881,7 +10881,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadBool` · L2161–2174
 
-[Drilling.Common/Station/CStationProcess.cs:2161–2174](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2161-L2174)
+[Drilling.Common/Station/CStationProcess.cs:2161–2174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2161-L2174)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10937,7 +10937,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadBoolAny` · L2176–2197
 
-[Drilling.Common/Station/CStationProcess.cs:2176–2197](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2176-L2197)
+[Drilling.Common/Station/CStationProcess.cs:2176–2197](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2176-L2197)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10958,9 +10958,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2133–2133](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2133-L2133) | ReadBoolAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:2250–2250](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2250-L2250) | ReadBoolAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:2636–2636](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2636-L2636) | ReadBoolAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:2133–2133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2133-L2133) | ReadBoolAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:2250–2250](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2250-L2250) | ReadBoolAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:2636–2636](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2636-L2636) | ReadBoolAny | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11004,7 +11004,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L2178–2181
 
-[Drilling.Common/Station/CStationProcess.cs:2178–2181](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2178-L2181)
+[Drilling.Common/Station/CStationProcess.cs:2178–2181](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2178-L2181)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11038,7 +11038,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadBoolValue` · L2199–2212
 
-[Drilling.Common/Station/CStationProcess.cs:2199–2212](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2199-L2212)
+[Drilling.Common/Station/CStationProcess.cs:2199–2212](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2199-L2212)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11091,7 +11091,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadText` · L2214–2217
 
-[Drilling.Common/Station/CStationProcess.cs:2214–2217](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2214-L2217)
+[Drilling.Common/Station/CStationProcess.cs:2214–2217](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2214-L2217)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11132,7 +11132,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadTextAny` · L2219–2235
 
-[Drilling.Common/Station/CStationProcess.cs:2219–2235](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2219-L2235)
+[Drilling.Common/Station/CStationProcess.cs:2219–2235](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2219-L2235)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11153,15 +11153,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2634–2634](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2634-L2634) | ReadTextAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:2635–2635](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2635-L2635) | ReadTextAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:2638–2638](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2638-L2638) | ReadTextAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:3549–3549](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3549-L3549) | ReadTextAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:3549–3549](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3549-L3549) | ReadTextAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:4066–4066](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4066-L4066) | ReadTextAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:4066–4066](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4066-L4066) | ReadTextAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:4223–4223](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4223-L4223) | ReadTextAny | False |
-| [Drilling.Common/Station/CStationProcess.cs:4224–4224](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4224-L4224) | ReadTextAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:2634–2634](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2634-L2634) | ReadTextAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:2635–2635](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2635-L2635) | ReadTextAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:2638–2638](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2638-L2638) | ReadTextAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:3549–3549](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3549-L3549) | ReadTextAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:3549–3549](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3549-L3549) | ReadTextAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:4066–4066](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4066-L4066) | ReadTextAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:4066–4066](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4066-L4066) | ReadTextAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:4223–4223](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4223-L4223) | ReadTextAny | False |
+| [Drilling.Common/Station/CStationProcess.cs:4224–4224](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4224-L4224) | ReadTextAny | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11200,7 +11200,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L2221–2224
 
-[Drilling.Common/Station/CStationProcess.cs:2221–2224](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2221-L2224)
+[Drilling.Common/Station/CStationProcess.cs:2221–2224](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2221-L2224)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11234,7 +11234,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateHeadKeys` · L2237–2246
 
-[Drilling.Common/Station/CStationProcess.cs:2237–2246](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2237-L2246)
+[Drilling.Common/Station/CStationProcess.cs:2237–2246](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2237-L2246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11254,30 +11254,30 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1649–1649](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1649-L1649) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:1650–1650](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1650-L1650) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:1651–1651](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1651-L1651) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:1652–1652](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1652-L1652) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:1653–1653](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1653-L1653) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:1654–1654](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1654-L1654) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:1658–1658](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1658-L1658) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:1659–1659](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1659-L1659) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:1660–1660](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1660-L1660) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:1668–1668](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1668-L1668) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:2250–2250](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2250-L2250) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:2255–2255](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2255-L2255) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:2261–2261](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2261-L2261) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:2633–2633](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2633-L2633) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:2634–2634](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2634-L2634) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:2635–2635](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2635-L2635) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:2636–2636](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2636-L2636) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:2638–2638](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2638-L2638) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:3549–3549](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3549-L3549) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:3549–3549](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3549-L3549) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:4066–4066](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4066-L4066) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:4066–4066](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4066-L4066) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:4223–4223](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4223-L4223) | CreateHeadKeys | False |
-| [Drilling.Common/Station/CStationProcess.cs:4224–4224](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4224-L4224) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:1649–1649](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1649-L1649) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:1650–1650](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1650-L1650) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:1651–1651](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1651-L1651) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:1652–1652](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1652-L1652) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:1653–1653](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1653-L1653) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:1654–1654](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1654-L1654) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:1658–1658](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1658-L1658) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:1659–1659](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1659-L1659) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:1660–1660](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1660-L1660) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:1668–1668](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1668-L1668) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:2250–2250](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2250-L2250) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:2255–2255](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2255-L2255) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:2261–2261](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2261-L2261) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:2633–2633](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2633-L2633) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:2634–2634](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2634-L2634) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:2635–2635](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2635-L2635) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:2636–2636](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2636-L2636) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:2638–2638](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2638-L2638) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:3549–3549](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3549-L3549) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:3549–3549](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3549-L3549) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:4066–4066](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4066-L4066) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:4066–4066](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4066-L4066) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:4223–4223](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4223-L4223) | CreateHeadKeys | False |
+| [Drilling.Common/Station/CStationProcess.cs:4224–4224](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4224-L4224) | CreateHeadKeys | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11302,7 +11302,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L2240–2243
 
-[Drilling.Common/Station/CStationProcess.cs:2240–2243](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2240-L2243)
+[Drilling.Common/Station/CStationProcess.cs:2240–2243](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2240-L2243)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11329,7 +11329,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHeadUse` · L2248–2251
 
-[Drilling.Common/Station/CStationProcess.cs:2248–2251](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2248-L2251)
+[Drilling.Common/Station/CStationProcess.cs:2248–2251](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2248-L2251)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11349,8 +11349,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1635–1635](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1635-L1635) | ReadHeadUse | False |
-| [Drilling.Common/Station/CStationProcess.cs:2626–2626](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2626-L2626) | ReadHeadUse | False |
+| [Drilling.Common/Station/CStationProcess.cs:1635–1635](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1635-L1635) | ReadHeadUse | False |
+| [Drilling.Common/Station/CStationProcess.cs:2626–2626](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2626-L2626) | ReadHeadUse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11371,7 +11371,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHeadAutomationNo` · L2253–2256
 
-[Drilling.Common/Station/CStationProcess.cs:2253–2256](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2253-L2256)
+[Drilling.Common/Station/CStationProcess.cs:2253–2256](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2253-L2256)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11391,7 +11391,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1672–1672](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1672-L1672) | ReadHeadAutomationNo | False |
+| [Drilling.Common/Station/CStationProcess.cs:1672–1672](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1672-L1672) | ReadHeadAutomationNo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11415,7 +11415,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHeadAutomationTaskNo` · L2258–2262
 
-[Drilling.Common/Station/CStationProcess.cs:2258–2262](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2258-L2262)
+[Drilling.Common/Station/CStationProcess.cs:2258–2262](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2258-L2262)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11435,7 +11435,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1673–1673](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1673-L1673) | ReadHeadAutomationTaskNo | False |
+| [Drilling.Common/Station/CStationProcess.cs:1673–1673](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1673-L1673) | ReadHeadAutomationTaskNo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11460,7 +11460,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAnyParameter` · L2264–2275
 
-[Drilling.Common/Station/CStationProcess.cs:2264–2275](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2264-L2275)
+[Drilling.Common/Station/CStationProcess.cs:2264–2275](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2264-L2275)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11514,7 +11514,7 @@ flowchart TD
 
 ### MethodDeclaration `GetProcessModel` · L2277–2280
 
-[Drilling.Common/Station/CStationProcess.cs:2277–2280](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2277-L2280)
+[Drilling.Common/Station/CStationProcess.cs:2277–2280](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2277-L2280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11527,20 +11527,20 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:662–662](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L662-L662) | GetProcessModel | False |
-| [Drilling.Common/Station/CStationProcess.cs:3513–3513](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3513-L3513) | GetProcessModel | False |
-| [Drilling.Common/Station/CStationProcess.cs:3530–3530](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3530-L3530) | GetProcessModel | False |
-| [Drilling.Common/Station/CStationProcess.cs:3781–3781](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3781-L3781) | GetProcessModel | False |
-| [Drilling.Common/Station/CStationProcess.cs:3801–3801](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3801-L3801) | GetProcessModel | False |
-| [Drilling.Common/Station/CStationProcess.cs:3872–3872](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3872-L3872) | GetProcessModel | False |
-| [Drilling.Common/Station/CStationProcess.cs:3994–3994](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3994-L3994) | GetProcessModel | False |
-| [Drilling.Common/Station/CStationProcess.cs:4003–4003](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4003-L4003) | GetProcessModel | False |
-| [Drilling.Common/Station/CStationProcess.cs:4056–4056](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4056-L4056) | GetProcessModel | False |
-| [Drilling.Common/Station/CStationProcess.cs:4065–4065](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4065-L4065) | GetProcessModel | False |
-| [Drilling.Common/Station/CStationProcess.cs:4075–4075](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4075-L4075) | GetProcessModel | False |
-| [Drilling.Common/Station/CStationProcess.cs:4101–4101](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4101-L4101) | GetProcessModel | False |
-| [Drilling.Common/Station/CStationProcess.cs:4126–4126](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4126-L4126) | GetProcessModel | False |
-| [Drilling.Common/Station/CStationProcess.cs:4222–4222](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4222-L4222) | GetProcessModel | False |
+| [Drilling.Common/Station/CStationProcess.cs:662–662](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L662-L662) | GetProcessModel | False |
+| [Drilling.Common/Station/CStationProcess.cs:3513–3513](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3513-L3513) | GetProcessModel | False |
+| [Drilling.Common/Station/CStationProcess.cs:3530–3530](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3530-L3530) | GetProcessModel | False |
+| [Drilling.Common/Station/CStationProcess.cs:3781–3781](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3781-L3781) | GetProcessModel | False |
+| [Drilling.Common/Station/CStationProcess.cs:3801–3801](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3801-L3801) | GetProcessModel | False |
+| [Drilling.Common/Station/CStationProcess.cs:3872–3872](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3872-L3872) | GetProcessModel | False |
+| [Drilling.Common/Station/CStationProcess.cs:3994–3994](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3994-L3994) | GetProcessModel | False |
+| [Drilling.Common/Station/CStationProcess.cs:4003–4003](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4003-L4003) | GetProcessModel | False |
+| [Drilling.Common/Station/CStationProcess.cs:4056–4056](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4056-L4056) | GetProcessModel | False |
+| [Drilling.Common/Station/CStationProcess.cs:4065–4065](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4065-L4065) | GetProcessModel | False |
+| [Drilling.Common/Station/CStationProcess.cs:4075–4075](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4075-L4075) | GetProcessModel | False |
+| [Drilling.Common/Station/CStationProcess.cs:4101–4101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4101-L4101) | GetProcessModel | False |
+| [Drilling.Common/Station/CStationProcess.cs:4126–4126](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4126-L4126) | GetProcessModel | False |
+| [Drilling.Common/Station/CStationProcess.cs:4222–4222](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4222-L4222) | GetProcessModel | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11560,7 +11560,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAlarm` · L2282–2293
 
-[Drilling.Common/Station/CStationProcess.cs:2282–2293](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2282-L2293)
+[Drilling.Common/Station/CStationProcess.cs:2282–2293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2282-L2293)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11580,7 +11580,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:368–368](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L368-L368) | SetAlarm | False |
+| [Drilling.Common/Station/CStationProcess.cs:368–368](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L368-L368) | SetAlarm | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11618,7 +11618,7 @@ flowchart TD
 
 ### MethodDeclaration `SetSequenceState` · L2295–2312
 
-[Drilling.Common/Station/CStationProcess.cs:2295–2312](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2295-L2312)
+[Drilling.Common/Station/CStationProcess.cs:2295–2312](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2295-L2312)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11637,14 +11637,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L248-L248) | SetSequenceState | False |
-| [Drilling.Common/Station/CStationProcess.cs:375–375](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L375-L375) | SetSequenceState | False |
-| [Drilling.Common/Station/CStationProcess.cs:380–380](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L380-L380) | SetSequenceState | False |
-| [Drilling.Common/Station/CStationProcess.cs:456–456](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L456-L456) | SetSequenceState | False |
-| [Drilling.Common/Station/CStationProcess.cs:1294–1294](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1294-L1294) | SetSequenceState | False |
-| [Drilling.Common/Station/CStationProcess.cs:1335–1335](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1335-L1335) | SetSequenceState | False |
-| [Drilling.Common/Station/CStationProcess.cs:2284–2284](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2284-L2284) | SetSequenceState | False |
-| [Drilling.Common/Station/CStationProcess.cs:3512–3512](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3512-L3512) | SetSequenceState | False |
+| [Drilling.Common/Station/CStationProcess.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L248-L248) | SetSequenceState | False |
+| [Drilling.Common/Station/CStationProcess.cs:375–375](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L375-L375) | SetSequenceState | False |
+| [Drilling.Common/Station/CStationProcess.cs:380–380](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L380-L380) | SetSequenceState | False |
+| [Drilling.Common/Station/CStationProcess.cs:456–456](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L456-L456) | SetSequenceState | False |
+| [Drilling.Common/Station/CStationProcess.cs:1294–1294](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1294-L1294) | SetSequenceState | False |
+| [Drilling.Common/Station/CStationProcess.cs:1335–1335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1335-L1335) | SetSequenceState | False |
+| [Drilling.Common/Station/CStationProcess.cs:2284–2284](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2284-L2284) | SetSequenceState | False |
+| [Drilling.Common/Station/CStationProcess.cs:3512–3512](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3512-L3512) | SetSequenceState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11679,7 +11679,7 @@ flowchart TD
 
 ### MethodDeclaration `TryMoveSequenceState` · L2314–2332
 
-[Drilling.Common/Station/CStationProcess.cs:2314–2332](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2314-L2332)
+[Drilling.Common/Station/CStationProcess.cs:2314–2332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2314-L2332)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11699,7 +11699,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:389–389](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L389-L389) | TryMoveSequenceState | False |
+| [Drilling.Common/Station/CStationProcess.cs:389–389](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L389-L389) | TryMoveSequenceState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11735,7 +11735,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadSequenceState` · L2334–2340
 
-[Drilling.Common/Station/CStationProcess.cs:2334–2340](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2334-L2340)
+[Drilling.Common/Station/CStationProcess.cs:2334–2340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2334-L2340)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11748,10 +11748,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L202-L202) | ReadSequenceState | False |
-| [Drilling.Common/Station/CStationProcess.cs:223–223](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L223-L223) | ReadSequenceState | False |
-| [Drilling.Common/Station/CStationProcess.cs:426–426](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L426-L426) | ReadSequenceState | False |
-| [Drilling.Common/Station/CStationProcess.cs:891–891](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L891-L891) | ReadSequenceState | False |
+| [Drilling.Common/Station/CStationProcess.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L202-L202) | ReadSequenceState | False |
+| [Drilling.Common/Station/CStationProcess.cs:223–223](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L223-L223) | ReadSequenceState | False |
+| [Drilling.Common/Station/CStationProcess.cs:426–426](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L426-L426) | ReadSequenceState | False |
+| [Drilling.Common/Station/CStationProcess.cs:891–891](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L891-L891) | ReadSequenceState | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -11773,7 +11773,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadStationStatus` · L2342–2348
 
-[Drilling.Common/Station/CStationProcess.cs:2342–2348](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2342-L2348)
+[Drilling.Common/Station/CStationProcess.cs:2342–2348](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2342-L2348)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11786,12 +11786,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L194-L194) | ReadStationStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:442–442](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L442-L442) | ReadStationStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:1225–1225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1225-L1225) | ReadStationStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:1286–1286](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1286-L1286) | ReadStationStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:1484–1484](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1484-L1484) | ReadStationStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:2409–2409](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2409-L2409) | ReadStationStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L194-L194) | ReadStationStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:442–442](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L442-L442) | ReadStationStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:1225–1225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1225-L1225) | ReadStationStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:1286–1286](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1286-L1286) | ReadStationStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:1484–1484](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1484-L1484) | ReadStationStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:2409–2409](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2409-L2409) | ReadStationStatus | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -11813,7 +11813,7 @@ flowchart TD
 
 ### MethodDeclaration `SetStationState` · L2350–2369
 
-[Drilling.Common/Station/CStationProcess.cs:2350–2369](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2350-L2369)
+[Drilling.Common/Station/CStationProcess.cs:2350–2369](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2350-L2369)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11835,23 +11835,23 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:268–268](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L268-L268) | SetStationState | False |
-| [Drilling.Common/Station/CStationProcess.cs:483–483](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L483-L483) | SetStationState | False |
-| [Drilling.Common/Station/CStationProcess.cs:695–695](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L695-L695) | SetStationState | False |
-| [Drilling.Common/Station/CStationProcess.cs:1187–1187](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1187-L1187) | SetStationState | False |
-| [Drilling.Common/Station/CStationProcess.cs:1243–1243](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1243-L1243) | SetStationState | False |
-| [Drilling.Common/Station/CStationProcess.cs:1296–1296](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1296-L1296) | SetStationState | False |
-| [Drilling.Common/Station/CStationProcess.cs:1334–1334](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1334-L1334) | SetStationState | False |
-| [Drilling.Common/Station/CStationProcess.cs:2291–2291](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2291-L2291) | SetStationState | False |
-| [Drilling.Common/Station/CStationProcess.cs:3630–3630](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3630-L3630) | SetStationState | False |
-| [Drilling.Common/Station/CStationProcess.cs:3808–3808](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3808-L3808) | SetStationState | False |
+| [Drilling.Common/Station/CStationProcess.cs:268–268](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L268-L268) | SetStationState | False |
+| [Drilling.Common/Station/CStationProcess.cs:483–483](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L483-L483) | SetStationState | False |
+| [Drilling.Common/Station/CStationProcess.cs:695–695](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L695-L695) | SetStationState | False |
+| [Drilling.Common/Station/CStationProcess.cs:1187–1187](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1187-L1187) | SetStationState | False |
+| [Drilling.Common/Station/CStationProcess.cs:1243–1243](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1243-L1243) | SetStationState | False |
+| [Drilling.Common/Station/CStationProcess.cs:1296–1296](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1296-L1296) | SetStationState | False |
+| [Drilling.Common/Station/CStationProcess.cs:1334–1334](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1334-L1334) | SetStationState | False |
+| [Drilling.Common/Station/CStationProcess.cs:2291–2291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2291-L2291) | SetStationState | False |
+| [Drilling.Common/Station/CStationProcess.cs:3630–3630](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3630-L3630) | SetStationState | False |
+| [Drilling.Common/Station/CStationProcess.cs:3808–3808](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3808-L3808) | SetStationState | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 2355 | (_stationStatus with { State = state, ProcessStep = processStep, ScriptStatus = scriptStatus, LastMessage = message, ChangedAt = DateTimeOffset.Now } ).WithSequenceState | resolved | Drilling.Common.Station.ST_STATION_STATUS Drilling.Common.Station.ST_STATION_STATUS.WithSequenceState(Drilling.Common.Station.EN_STATION_SEQUENCE?) · Drilling.Common/Station/CStationManager.cs:537 |
-| 2368 | .WriteStationState | unresolved | None |
+| 2368 | .WriteStationState | resolved | void Drilling.Common.Log.CLogManager.WriteStationState(string, string, string, string) · Drilling.Common/Log/CLogManager.cs:175 |
 | 2368 | state.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
 | 2368 | state.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
 | 2368 | processStep.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
@@ -11890,7 +11890,7 @@ flowchart TD
 
 ### MethodDeclaration `AddProcessLog` · L2371–2389
 
-[Drilling.Common/Station/CStationProcess.cs:2371–2389](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2371-L2389)
+[Drilling.Common/Station/CStationProcess.cs:2371–2389](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2371-L2389)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11911,96 +11911,96 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L148-L148) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L166-L166) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L264-L264) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L265-L265) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:481–481](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L481-L481) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L489-L489) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:495–495](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L495-L495) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:525–525](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L525-L525) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:560–560](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L560-L560) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L608-L608) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:642–642](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L642-L642) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L646-L646) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:650–650](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L650-L650) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L665-L665) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:684–684](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L684-L684) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:689–689](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L689-L689) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:727–727](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L727-L727) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:729–729](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L729-L729) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:771–771](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L771-L771) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:800–800](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L800-L800) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:841–841](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L841-L841) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:867–867](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L867-L867) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:908–908](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L908-L908) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:948–948](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L948-L948) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:954–954](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L954-L954) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:958–958](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L958-L958) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:972–972](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L972-L972) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:976–976](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L976-L976) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1119–1119](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1119-L1119) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1136–1136](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1136-L1136) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1140–1140](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1140-L1140) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1148–1148](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1148-L1148) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1154–1154](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1154-L1154) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1163–1163](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1163-L1163) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1167–1167](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1167-L1167) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1200–1200](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1200-L1200) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1230–1230](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1230-L1230) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1265–1265](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1265-L1265) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1293–1293](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1293-L1293) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1300–1300](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1300-L1300) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1316–1316](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1316-L1316) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1321–1321](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1321-L1321) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1424–1424](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1424-L1424) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1436–1436](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1436-L1436) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1460–1460](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1460-L1460) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1486–1486](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1486-L1486) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1564–1564](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1564-L1564) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1575–1575](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1575-L1575) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:2285–2285](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2285-L2285) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:2410–2410](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2410-L2410) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:2591–2591](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2591-L2591) | _owner.AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:2987–2987](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2987-L2987) | _owner.AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:3158–3158](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3158-L3158) | _owner.AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:3272–3272](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3272-L3272) | _owner.AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:3528–3528](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3528-L3528) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:3595–3595](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3595-L3595) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:3614–3614](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3614-L3614) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:3707–3707](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3707-L3707) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:3786–3786](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3786-L3786) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:3844–3844](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3844-L3844) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:3891–3891](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3891-L3891) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:3917–3917](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3917-L3917) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:3948–3948](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3948-L3948) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:3952–3952](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3952-L3952) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:3974–3974](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3974-L3974) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:3993–3993](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3993-L3993) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4018–4018](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4018-L4018) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4068–4068](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4068-L4068) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4079–4079](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4079-L4079) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4095–4095](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4095-L4095) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4105–4105](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4105-L4105) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4107–4107](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4107-L4107) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4118–4118](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4118-L4118) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4120–4120](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4120-L4120) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4143–4143](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4143-L4143) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4181–4181](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4181-L4181) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4205–4205](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4205-L4205) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4219–4219](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4219-L4219) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4221–4221](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4221-L4221) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4226–4226](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4226-L4226) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4231–4231](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4231-L4231) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4307–4307](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4307-L4307) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4308–4308](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4308-L4308) | AddProcessLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4331–4331](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4331-L4331) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L148-L148) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L166-L166) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L264-L264) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L265-L265) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:481–481](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L481-L481) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L489-L489) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:495–495](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L495-L495) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:525–525](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L525-L525) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:560–560](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L560-L560) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L608-L608) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:642–642](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L642-L642) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L646-L646) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:650–650](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L650-L650) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L665-L665) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:684–684](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L684-L684) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:689–689](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L689-L689) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:727–727](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L727-L727) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:729–729](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L729-L729) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:771–771](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L771-L771) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:800–800](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L800-L800) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:841–841](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L841-L841) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:867–867](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L867-L867) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:908–908](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L908-L908) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:948–948](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L948-L948) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:954–954](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L954-L954) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:958–958](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L958-L958) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:972–972](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L972-L972) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:976–976](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L976-L976) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1119–1119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1119-L1119) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1136–1136](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1136-L1136) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1140–1140](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1140-L1140) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1148–1148](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1148-L1148) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1154–1154](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1154-L1154) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1163–1163](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1163-L1163) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1167–1167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1167-L1167) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1200–1200](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1200-L1200) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1230–1230](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1230-L1230) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1265–1265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1265-L1265) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1293–1293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1293-L1293) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1300–1300](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1300-L1300) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1316–1316](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1316-L1316) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1321–1321](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1321-L1321) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1424–1424](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1424-L1424) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1436–1436](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1436-L1436) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1460–1460](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1460-L1460) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1486–1486](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1486-L1486) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1564–1564](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1564-L1564) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1575–1575](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1575-L1575) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:2285–2285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2285-L2285) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:2410–2410](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2410-L2410) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:2591–2591](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2591-L2591) | _owner.AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:2987–2987](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2987-L2987) | _owner.AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:3158–3158](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3158-L3158) | _owner.AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:3272–3272](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3272-L3272) | _owner.AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:3528–3528](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3528-L3528) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:3595–3595](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3595-L3595) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:3614–3614](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3614-L3614) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:3707–3707](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3707-L3707) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:3786–3786](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3786-L3786) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:3844–3844](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3844-L3844) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:3891–3891](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3891-L3891) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:3917–3917](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3917-L3917) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:3948–3948](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3948-L3948) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:3952–3952](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3952-L3952) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:3974–3974](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3974-L3974) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:3993–3993](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3993-L3993) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4018–4018](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4018-L4018) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4068–4068](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4068-L4068) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4079–4079](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4079-L4079) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4095–4095](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4095-L4095) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4105–4105](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4105-L4105) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4107–4107](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4107-L4107) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4118–4118](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4118-L4118) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4120–4120](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4120-L4120) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4143–4143](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4143-L4143) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4181–4181](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4181-L4181) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4205–4205](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4205-L4205) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4219–4219](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4219-L4219) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4221–4221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4221-L4221) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4226–4226](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4226-L4226) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4231–4231](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4231-L4231) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4307–4307](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4307-L4307) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4308–4308](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4308-L4308) | AddProcessLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4331–4331](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4331-L4331) | AddProcessLog | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 2379 | .WriteSequence | unresolved | None |
+| 2379 | .WriteSequence | resolved | void Drilling.Common.Log.CLogManager.WriteSequence(string, string, string, string) · Drilling.Common/Log/CLogManager.cs:805 |
 | 2382 | _processLogs.Add | resolved | void System.Collections.Generic.List<Drilling.Common.Station.ST_PROCESS_LOG_ITEM>.Add(Drilling.Common.Station.ST_PROCESS_LOG_ITEM) |
 | 2382 | new ST_PROCESS_LOG_ITEM | resolved | Drilling.Common.Station.ST_PROCESS_LOG_ITEM.ST_PROCESS_LOG_ITEM(System.DateTimeOffset, string, string, string) · Drilling.Common/Station/CStationManager.cs:334 |
 | 2386 | _processLogs.RemoveRange | resolved | void System.Collections.Generic.List<Drilling.Common.Station.ST_PROCESS_LOG_ITEM>.RemoveRange(int, int) |
@@ -12044,7 +12044,7 @@ flowchart TD
 
 ### MethodDeclaration `ClearProcessLogs` · L2391–2397
 
-[Drilling.Common/Station/CStationProcess.cs:2391–2397](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2391-L2397)
+[Drilling.Common/Station/CStationProcess.cs:2391–2397](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2391-L2397)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12057,8 +12057,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L241-L241) | ClearProcessLogs | False |
-| [Drilling.Common/Station/CStationProcess.cs:1324–1324](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1324-L1324) | ClearProcessLogs | False |
+| [Drilling.Common/Station/CStationProcess.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L241-L241) | ClearProcessLogs | False |
+| [Drilling.Common/Station/CStationProcess.cs:1324–1324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1324-L1324) | ClearProcessLogs | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12086,7 +12086,7 @@ flowchart TD
 
 ### MethodDeclaration `GetProcessLogsSnapshot` · L2399–2405
 
-[Drilling.Common/Station/CStationProcess.cs:2399–2405](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2399-L2405)
+[Drilling.Common/Station/CStationProcess.cs:2399–2405](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2399-L2405)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12099,7 +12099,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1356–1356](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1356-L1356) | GetProcessLogsSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:1356–1356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1356-L1356) | GetProcessLogsSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12128,7 +12128,7 @@ flowchart TD
 
 ### MethodDeclaration `AddSequenceLog` · L2407–2419
 
-[Drilling.Common/Station/CStationProcess.cs:2407–2419](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2407-L2419)
+[Drilling.Common/Station/CStationProcess.cs:2407–2419](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2407-L2419)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12149,9 +12149,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1447–1447](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1447-L1447) | AddSequenceLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1471–1471](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1471-L1471) | AddSequenceLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:1499–1499](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1499-L1499) | AddSequenceLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1447–1447](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1447-L1447) | AddSequenceLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1471–1471](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1471-L1471) | AddSequenceLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:1499–1499](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1499-L1499) | AddSequenceLog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12159,7 +12159,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | 2409 | ReadStationStatus | resolved | Drilling.Common.Station.ST_STATION_STATUS Drilling.Common.Station.CStationProcess.ReadStationStatus() · Drilling.Common/Station/CStationProcess.cs:2342 |
 | 2410 | AddProcessLog | resolved | void Drilling.Common.Station.CStationProcess.AddProcessLog(string, string, string) · Drilling.Common/Station/CStationProcess.cs:2371 |
-| 2413 | .WriteStationState | unresolved | None |
+| 2413 | .WriteStationState | resolved | void Drilling.Common.Log.CLogManager.WriteStationState(string, string, string, string) · Drilling.Common/Log/CLogManager.cs:175 |
 | 2413 | stationStatus.State.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
 | 2413 | stationStatus.State.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
 
@@ -12192,7 +12192,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatInterLockBlockedMessage` · L2421–2430
 
-[Drilling.Common/Station/CStationProcess.cs:2421–2430](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2421-L2430)
+[Drilling.Common/Station/CStationProcess.cs:2421–2430](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2421-L2430)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12211,7 +12211,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1292–1292](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1292-L1292) | FormatInterLockBlockedMessage | False |
+| [Drilling.Common/Station/CStationProcess.cs:1292–1292](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1292-L1292) | FormatInterLockBlockedMessage | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12233,7 +12233,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L2423–2426
 
-[Drilling.Common/Station/CStationProcess.cs:2423–2426](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2423-L2426)
+[Drilling.Common/Station/CStationProcess.cs:2423–2426](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2423-L2426)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12260,7 +12260,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatStartInterLockBlockedMessage` · L2432–2452
 
-[Drilling.Common/Station/CStationProcess.cs:2432–2452](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2432-L2452)
+[Drilling.Common/Station/CStationProcess.cs:2432–2452](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2432-L2452)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12279,7 +12279,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L294-L294) | FormatStartInterLockBlockedMessage | False |
+| [Drilling.Common/Station/CStationProcess.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L294-L294) | FormatStartInterLockBlockedMessage | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12317,7 +12317,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L2434–2437
 
-[Drilling.Common/Station/CStationProcess.cs:2434–2437](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2434-L2437)
+[Drilling.Common/Station/CStationProcess.cs:2434–2437](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2434-L2437)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12344,7 +12344,7 @@ flowchart TD
 
 ### LocalFunctionStatement `FormatItem` · L2439–2443
 
-[Drilling.Common/Station/CStationProcess.cs:2439–2443](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2439-L2443)
+[Drilling.Common/Station/CStationProcess.cs:2439–2443](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2439-L2443)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12381,7 +12381,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatScriptStatus` · L2454–2460
 
-[Drilling.Common/Station/CStationProcess.cs:2454–2460](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2454-L2460)
+[Drilling.Common/Station/CStationProcess.cs:2454–2460](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2454-L2460)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12400,7 +12400,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1754–1754](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1754-L1754) | FormatScriptStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:1754–1754](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1754-L1754) | FormatScriptStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12429,7 +12429,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatExecuteState` · L2462–2481
 
-[Drilling.Common/Station/CStationProcess.cs:2462–2481](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2462-L2481)
+[Drilling.Common/Station/CStationProcess.cs:2462–2481](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2462-L2481)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12450,7 +12450,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1757–1757](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1757-L1757) | FormatExecuteState | False |
+| [Drilling.Common/Station/CStationProcess.cs:1757–1757](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1757-L1757) | FormatExecuteState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12490,7 +12490,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatScriptResult` · L2483–2496
 
-[Drilling.Common/Station/CStationProcess.cs:2483–2496](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2483-L2496)
+[Drilling.Common/Station/CStationProcess.cs:2483–2496](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2483-L2496)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12511,7 +12511,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1761–1761](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1761-L1761) | FormatScriptResult | False |
+| [Drilling.Common/Station/CStationProcess.cs:1761–1761](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1761-L1761) | FormatScriptResult | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12547,7 +12547,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatDateTime` · L2498–2501
 
-[Drilling.Common/Station/CStationProcess.cs:2498–2501](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2498-L2501)
+[Drilling.Common/Station/CStationProcess.cs:2498–2501](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2498-L2501)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12566,9 +12566,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1758–1758](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1758-L1758) | FormatDateTime | False |
-| [Drilling.Common/Station/CStationProcess.cs:1759–1759](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1759-L1759) | FormatDateTime | False |
-| [Drilling.Common/Station/CStationProcess.cs:1760–1760](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1760-L1760) | FormatDateTime | False |
+| [Drilling.Common/Station/CStationProcess.cs:1758–1758](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1758-L1758) | FormatDateTime | False |
+| [Drilling.Common/Station/CStationProcess.cs:1759–1759](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1759-L1759) | FormatDateTime | False |
+| [Drilling.Common/Station/CStationProcess.cs:1760–1760](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1760-L1760) | FormatDateTime | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12587,7 +12587,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatProcessResultDetail` · L2503–2515
 
-[Drilling.Common/Station/CStationProcess.cs:2503–2515](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2503-L2515)
+[Drilling.Common/Station/CStationProcess.cs:2503–2515](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2503-L2515)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12609,7 +12609,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1482–1482](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1482-L1482) | FormatProcessResultDetail | False |
+| [Drilling.Common/Station/CStationProcess.cs:1482–1482](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1482-L1482) | FormatProcessResultDetail | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12634,7 +12634,7 @@ flowchart TD
 
 ### MethodDeclaration `GetProcessResultCode` · L2517–2520
 
-[Drilling.Common/Station/CStationProcess.cs:2517–2520](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2517-L2520)
+[Drilling.Common/Station/CStationProcess.cs:2517–2520](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2517-L2520)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12653,10 +12653,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1481–1481](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1481-L1481) | GetProcessResultCode | False |
-| [Drilling.Common/Station/CStationProcess.cs:2471–2471](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2471-L2471) | GetProcessResultCode | False |
-| [Drilling.Common/Station/CStationProcess.cs:2492–2492](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2492-L2492) | GetProcessResultCode | False |
-| [Drilling.Common/Station/CStationProcess.cs:2505–2505](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2505-L2505) | GetProcessResultCode | False |
+| [Drilling.Common/Station/CStationProcess.cs:1481–1481](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1481-L1481) | GetProcessResultCode | False |
+| [Drilling.Common/Station/CStationProcess.cs:2471–2471](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2471-L2471) | GetProcessResultCode | False |
+| [Drilling.Common/Station/CStationProcess.cs:2492–2492](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2492-L2492) | GetProcessResultCode | False |
+| [Drilling.Common/Station/CStationProcess.cs:2505–2505](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2505-L2505) | GetProcessResultCode | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12681,7 +12681,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatDuration` · L2522–2525
 
-[Drilling.Common/Station/CStationProcess.cs:2522–2525](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2522-L2525)
+[Drilling.Common/Station/CStationProcess.cs:2522–2525](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2522-L2525)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12700,7 +12700,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1735–1735](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1735-L1735) | FormatDuration | False |
+| [Drilling.Common/Station/CStationProcess.cs:1735–1735](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1735-L1735) | FormatDuration | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12720,7 +12720,7 @@ flowchart TD
 
 ### FieldDeclaration `ScannerStatusReadTimeoutMs` · L2538–2538
 
-[Drilling.Common/Station/CStationProcess.cs:2538–2538](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2538-L2538)
+[Drilling.Common/Station/CStationProcess.cs:2538–2538](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2538-L2538)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12741,7 +12741,7 @@ flowchart TD
 
 ### FieldDeclaration `Header` · L2539–2539
 
-[Drilling.Common/Station/CStationProcess.cs:2539–2539](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2539-L2539)
+[Drilling.Common/Station/CStationProcess.cs:2539–2539](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2539-L2539)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12762,7 +12762,7 @@ flowchart TD
 
 ### FieldDeclaration `_owner` · L2540–2540
 
-[Drilling.Common/Station/CStationProcess.cs:2540–2540](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2540-L2540)
+[Drilling.Common/Station/CStationProcess.cs:2540–2540](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2540-L2540)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12777,7 +12777,7 @@ flowchart TD
 
 ### FieldDeclaration `_recipeId` · L2541–2541
 
-[Drilling.Common/Station/CStationProcess.cs:2541–2541](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2541-L2541)
+[Drilling.Common/Station/CStationProcess.cs:2541–2541](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2541-L2541)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12792,7 +12792,7 @@ flowchart TD
 
 ### FieldDeclaration `_targets` · L2542–2542
 
-[Drilling.Common/Station/CStationProcess.cs:2542–2542](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2542-L2542)
+[Drilling.Common/Station/CStationProcess.cs:2542–2542](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2542-L2542)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12807,7 +12807,7 @@ flowchart TD
 
 ### FieldDeclaration `_cancellation` · L2543–2543
 
-[Drilling.Common/Station/CStationProcess.cs:2543–2543](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2543-L2543)
+[Drilling.Common/Station/CStationProcess.cs:2543–2543](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2543-L2543)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12835,7 +12835,7 @@ flowchart TD
 
 ### FieldDeclaration `_writeLock` · L2544–2544
 
-[Drilling.Common/Station/CStationProcess.cs:2544–2544](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2544-L2544)
+[Drilling.Common/Station/CStationProcess.cs:2544–2544](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2544-L2544)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12863,7 +12863,7 @@ flowchart TD
 
 ### FieldDeclaration `_thread` · L2545–2545
 
-[Drilling.Common/Station/CStationProcess.cs:2545–2545](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2545-L2545)
+[Drilling.Common/Station/CStationProcess.cs:2545–2545](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2545-L2545)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12878,7 +12878,7 @@ flowchart TD
 
 ### FieldDeclaration `_snapshotOwnerId` · L2546–2546
 
-[Drilling.Common/Station/CStationProcess.cs:2546–2546](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2546-L2546)
+[Drilling.Common/Station/CStationProcess.cs:2546–2546](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2546-L2546)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12899,7 +12899,7 @@ flowchart TD
 
 ### FieldDeclaration `_lastError` · L2547–2547
 
-[Drilling.Common/Station/CStationProcess.cs:2547–2547](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2547-L2547)
+[Drilling.Common/Station/CStationProcess.cs:2547–2547](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2547-L2547)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12920,7 +12920,7 @@ flowchart TD
 
 ### FieldDeclaration `_started` · L2548–2548
 
-[Drilling.Common/Station/CStationProcess.cs:2548–2548](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2548-L2548)
+[Drilling.Common/Station/CStationProcess.cs:2548–2548](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2548-L2548)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12935,7 +12935,7 @@ flowchart TD
 
 ### FieldDeclaration `_stopped` · L2549–2549
 
-[Drilling.Common/Station/CStationProcess.cs:2549–2549](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2549-L2549)
+[Drilling.Common/Station/CStationProcess.cs:2549–2549](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2549-L2549)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12950,7 +12950,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L2550–2560
 
-[Drilling.Common/Station/CStationProcess.cs:2550–2560](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2550-L2560)
+[Drilling.Common/Station/CStationProcess.cs:2550–2560](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2550-L2560)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12971,7 +12971,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2565–2565](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2565-L2565) | new CScannerStatusLogger | False |
+| [Drilling.Common/Station/CStationProcess.cs:2565–2565](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2565-L2565) | new CScannerStatusLogger | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12995,7 +12995,7 @@ flowchart TD
 
 ### MethodDeclaration `Create` · L2562–2566
 
-[Drilling.Common/Station/CStationProcess.cs:2562–2566](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2562-L2566)
+[Drilling.Common/Station/CStationProcess.cs:2562–2566](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2562-L2566)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13018,7 +13018,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:712–712](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L712-L712) | CScannerStatusLogger.Create | False |
+| [Drilling.Common/Station/CStationProcess.cs:712–712](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L712-L712) | CScannerStatusLogger.Create | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13041,7 +13041,7 @@ flowchart TD
 
 ### MethodDeclaration `Start` · L2568–2578
 
-[Drilling.Common/Station/CStationProcess.cs:2568–2578](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2568-L2578)
+[Drilling.Common/Station/CStationProcess.cs:2568–2578](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2568-L2578)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13054,8 +13054,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:720–720](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L720-L720) | scannerStatusLogger.Start | False |
-| [Drilling.Common/Station/CStationProcess.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L733-L733) | scannerStatusLogger.Start | False |
+| [Drilling.Common/Station/CStationProcess.cs:720–720](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L720-L720) | scannerStatusLogger.Start | False |
+| [Drilling.Common/Station/CStationProcess.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L733-L733) | scannerStatusLogger.Start | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13088,7 +13088,7 @@ flowchart TD
 
 ### MethodDeclaration `StopAndWriteFinal` · L2580–2604
 
-[Drilling.Common/Station/CStationProcess.cs:2580–2604](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2580-L2604)
+[Drilling.Common/Station/CStationProcess.cs:2580–2604](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2580-L2604)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13101,8 +13101,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:744–744](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L744-L744) | scannerStatusLogger.StopAndWriteFinal | False |
-| [Drilling.Common/Station/CStationProcess.cs:2608–2608](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2608-L2608) | StopAndWriteFinal | False |
+| [Drilling.Common/Station/CStationProcess.cs:744–744](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L744-L744) | scannerStatusLogger.StopAndWriteFinal | False |
+| [Drilling.Common/Station/CStationProcess.cs:2608–2608](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2608-L2608) | StopAndWriteFinal | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13150,7 +13150,7 @@ flowchart TD
 
 ### MethodDeclaration `Dispose` · L2606–2610
 
-[Drilling.Common/Station/CStationProcess.cs:2606–2610](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2606-L2610)
+[Drilling.Common/Station/CStationProcess.cs:2606–2610](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2606-L2610)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13179,7 +13179,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateTargets` · L2612–2643
 
-[Drilling.Common/Station/CStationProcess.cs:2612–2643](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2612-L2643)
+[Drilling.Common/Station/CStationProcess.cs:2612–2643](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2612-L2643)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13200,7 +13200,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2564–2564](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2564-L2564) | CreateTargets | False |
+| [Drilling.Common/Station/CStationProcess.cs:2564–2564](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2564-L2564) | CreateTargets | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13297,7 +13297,7 @@ flowchart TD
 
 ### MethodDeclaration `AddAxisTarget` · L2645–2657
 
-[Drilling.Common/Station/CStationProcess.cs:2645–2657](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2645-L2657)
+[Drilling.Common/Station/CStationProcess.cs:2645–2657](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2645-L2657)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13323,9 +13323,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2634–2634](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2634-L2634) | AddAxisTarget | False |
-| [Drilling.Common/Station/CStationProcess.cs:2635–2635](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2635-L2635) | AddAxisTarget | False |
-| [Drilling.Common/Station/CStationProcess.cs:2638–2638](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2638-L2638) | AddAxisTarget | False |
+| [Drilling.Common/Station/CStationProcess.cs:2634–2634](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2634-L2634) | AddAxisTarget | False |
+| [Drilling.Common/Station/CStationProcess.cs:2635–2635](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2635-L2635) | AddAxisTarget | False |
+| [Drilling.Common/Station/CStationProcess.cs:2638–2638](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2638-L2638) | AddAxisTarget | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13347,7 +13347,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveRootDirectory` · L2659–2687
 
-[Drilling.Common/Station/CStationProcess.cs:2659–2687](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2659-L2687)
+[Drilling.Common/Station/CStationProcess.cs:2659–2687](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2659-L2687)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13366,7 +13366,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2615–2615](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2615-L2615) | ResolveRootDirectory | False |
+| [Drilling.Common/Station/CStationProcess.cs:2615–2615](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2615-L2615) | ResolveRootDirectory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13429,7 +13429,7 @@ flowchart TD
 
 ### MethodDeclaration `Run` · L2689–2695
 
-[Drilling.Common/Station/CStationProcess.cs:2689–2695](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2689-L2695)
+[Drilling.Common/Station/CStationProcess.cs:2689–2695](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2689-L2695)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13468,7 +13468,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteSnapshotOnce` · L2697–2731
 
-[Drilling.Common/Station/CStationProcess.cs:2697–2731](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2697-L2731)
+[Drilling.Common/Station/CStationProcess.cs:2697–2731](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2697-L2731)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13481,8 +13481,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2596–2596](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2596-L2596) | WriteSnapshotOnce | False |
-| [Drilling.Common/Station/CStationProcess.cs:2693–2693](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2693-L2693) | WriteSnapshotOnce | False |
+| [Drilling.Common/Station/CStationProcess.cs:2596–2596](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2596-L2596) | WriteSnapshotOnce | False |
+| [Drilling.Common/Station/CStationProcess.cs:2693–2693](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2693-L2693) | WriteSnapshotOnce | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13560,7 +13560,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadTargetSnapshot` · L2733–2892
 
-[Drilling.Common/Station/CStationProcess.cs:2733–2892](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2733-L2892)
+[Drilling.Common/Station/CStationProcess.cs:2733–2892](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2733-L2892)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13581,7 +13581,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2712–2712](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2712-L2712) | ReadTargetSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:2712–2712](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2712-L2712) | ReadTargetSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13688,7 +13688,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadTaskStatus` · L2894–2926
 
-[Drilling.Common/Station/CStationProcess.cs:2894–2926](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2894-L2926)
+[Drilling.Common/Station/CStationProcess.cs:2894–2926](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2894-L2926)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13708,7 +13708,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2735–2735](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2735-L2735) | ReadTaskStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:2735–2735](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2735-L2735) | ReadTaskStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13779,7 +13779,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadProcessorUsage` · L2928–2959
 
-[Drilling.Common/Station/CStationProcess.cs:2928–2959](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2928-L2959)
+[Drilling.Common/Station/CStationProcess.cs:2928–2959](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2928-L2959)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13799,7 +13799,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2736–2736](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2736-L2736) | ReadProcessorUsage | False |
+| [Drilling.Common/Station/CStationProcess.cs:2736–2736](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2736-L2736) | ReadProcessorUsage | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13866,7 +13866,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteTargetSnapshot` · L2961–2977
 
-[Drilling.Common/Station/CStationProcess.cs:2961–2977](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2961-L2977)
+[Drilling.Common/Station/CStationProcess.cs:2961–2977](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2961-L2977)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13886,7 +13886,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2716–2716](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2716-L2716) | WriteTargetSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:2716–2716](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2716-L2716) | WriteTargetSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13934,7 +13934,7 @@ flowchart TD
 
 ### MethodDeclaration `RememberError` · L2979–2988
 
-[Drilling.Common/Station/CStationProcess.cs:2979–2988](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2979-L2988)
+[Drilling.Common/Station/CStationProcess.cs:2979–2988](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2979-L2988)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13953,11 +13953,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2729–2729](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2729-L2729) | RememberError | False |
-| [Drilling.Common/Station/CStationProcess.cs:2868–2868](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2868-L2868) | RememberError | False |
-| [Drilling.Common/Station/CStationProcess.cs:2921–2921](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2921-L2921) | RememberError | False |
-| [Drilling.Common/Station/CStationProcess.cs:2954–2954](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2954-L2954) | RememberError | False |
-| [Drilling.Common/Station/CStationProcess.cs:2975–2975](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2975-L2975) | RememberError | False |
+| [Drilling.Common/Station/CStationProcess.cs:2729–2729](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2729-L2729) | RememberError | False |
+| [Drilling.Common/Station/CStationProcess.cs:2868–2868](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2868-L2868) | RememberError | False |
+| [Drilling.Common/Station/CStationProcess.cs:2921–2921](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2921-L2921) | RememberError | False |
+| [Drilling.Common/Station/CStationProcess.cs:2954–2954](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2954-L2954) | RememberError | False |
+| [Drilling.Common/Station/CStationProcess.cs:2975–2975](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2975-L2975) | RememberError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13989,7 +13989,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatLine` · L2990–3012
 
-[Drilling.Common/Station/CStationProcess.cs:2990–3012](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2990-L3012)
+[Drilling.Common/Station/CStationProcess.cs:2990–3012](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2990-L3012)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14008,7 +14008,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2971–2971](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2971-L2971) | FormatLine | False |
+| [Drilling.Common/Station/CStationProcess.cs:2971–2971](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2971-L2971) | FormatLine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14035,7 +14035,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseProcessorUsage` · L3014–3023
 
-[Drilling.Common/Station/CStationProcess.cs:3014–3023](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3014-L3023)
+[Drilling.Common/Station/CStationProcess.cs:3014–3023](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3014-L3023)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14054,7 +14054,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2949–2949](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2949-L2949) | ParseProcessorUsage | False |
+| [Drilling.Common/Station/CStationProcess.cs:2949–2949](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2949-L2949) | ParseProcessorUsage | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14101,7 +14101,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatScannerPosition` · L3025–3033
 
-[Drilling.Common/Station/CStationProcess.cs:3025–3033](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3025-L3033)
+[Drilling.Common/Station/CStationProcess.cs:3025–3033](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3025-L3033)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14120,8 +14120,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2852–2852](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2852-L2852) | FormatScannerPosition | False |
-| [Drilling.Common/Station/CStationProcess.cs:3037–3037](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3037-L3037) | FormatScannerPosition | False |
+| [Drilling.Common/Station/CStationProcess.cs:2852–2852](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2852-L2852) | FormatScannerPosition | False |
+| [Drilling.Common/Station/CStationProcess.cs:3037–3037](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3037-L3037) | FormatScannerPosition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14153,7 +14153,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatExtendedScannerValue` · L3035–3038
 
-[Drilling.Common/Station/CStationProcess.cs:3035–3038](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3035-L3038)
+[Drilling.Common/Station/CStationProcess.cs:3035–3038](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3035-L3038)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14173,9 +14173,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2853–2853](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2853-L2853) | FormatExtendedScannerValue | False |
-| [Drilling.Common/Station/CStationProcess.cs:2858–2858](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2858-L2858) | FormatExtendedScannerValue | False |
-| [Drilling.Common/Station/CStationProcess.cs:2859–2859](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2859-L2859) | FormatExtendedScannerValue | False |
+| [Drilling.Common/Station/CStationProcess.cs:2853–2853](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2853-L2853) | FormatExtendedScannerValue | False |
+| [Drilling.Common/Station/CStationProcess.cs:2858–2858](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2858-L2858) | FormatExtendedScannerValue | False |
+| [Drilling.Common/Station/CStationProcess.cs:2859–2859](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2859-L2859) | FormatExtendedScannerValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14195,7 +14195,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatExtendedScannerTemperature` · L3040–3048
 
-[Drilling.Common/Station/CStationProcess.cs:3040–3048](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3040-L3048)
+[Drilling.Common/Station/CStationProcess.cs:3040–3048](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3040-L3048)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14215,7 +14215,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2857–2857](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2857-L2857) | FormatExtendedScannerTemperature | False |
+| [Drilling.Common/Station/CStationProcess.cs:2857–2857](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2857-L2857) | FormatExtendedScannerTemperature | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14245,7 +14245,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatStatusText` · L3050–3053
 
-[Drilling.Common/Station/CStationProcess.cs:3050–3053](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3050-L3053)
+[Drilling.Common/Station/CStationProcess.cs:3050–3053](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3050-L3053)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14264,7 +14264,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2856–2856](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2856-L2856) | FormatStatusText | False |
+| [Drilling.Common/Station/CStationProcess.cs:2856–2856](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2856-L2856) | FormatStatusText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14286,7 +14286,7 @@ flowchart TD
 
 ### MethodDeclaration `IsAutomationAxisName` · L3055–3071
 
-[Drilling.Common/Station/CStationProcess.cs:3055–3071](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3055-L3071)
+[Drilling.Common/Station/CStationProcess.cs:3055–3071](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3055-L3071)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14305,7 +14305,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:2765–2765](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2765-L2765) | IsAutomationAxisName | False |
+| [Drilling.Common/Station/CStationProcess.cs:2765–2765](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2765-L2765) | IsAutomationAxisName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14346,7 +14346,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatCsv` · L3073–3087
 
-[Drilling.Common/Station/CStationProcess.cs:3073–3087](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3073-L3087)
+[Drilling.Common/Station/CStationProcess.cs:3073–3087](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3073-L3087)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14365,7 +14365,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3011–3011](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3011-L3011) | FormatCsv | False |
+| [Drilling.Common/Station/CStationProcess.cs:3011–3011](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3011-L3011) | FormatCsv | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14408,7 +14408,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatCsvField` · L3089–3098
 
-[Drilling.Common/Station/CStationProcess.cs:3089–3098](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3089-L3098)
+[Drilling.Common/Station/CStationProcess.cs:3089–3098](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3089-L3098)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14427,7 +14427,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3083–3083](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3083-L3083) | FormatCsvField | False |
+| [Drilling.Common/Station/CStationProcess.cs:3083–3083](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3083-L3083) | FormatCsvField | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14467,7 +14467,7 @@ flowchart TD
 
 ### FieldDeclaration `Header` · L3103–3103
 
-[Drilling.Common/Station/CStationProcess.cs:3103–3103](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3103-L3103)
+[Drilling.Common/Station/CStationProcess.cs:3103–3103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3103-L3103)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14488,7 +14488,7 @@ flowchart TD
 
 ### FieldDeclaration `_owner` · L3104–3104
 
-[Drilling.Common/Station/CStationProcess.cs:3104–3104](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3104-L3104)
+[Drilling.Common/Station/CStationProcess.cs:3104–3104](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3104-L3104)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14503,7 +14503,7 @@ flowchart TD
 
 ### FieldDeclaration `_recipeId` · L3105–3105
 
-[Drilling.Common/Station/CStationProcess.cs:3105–3105](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3105-L3105)
+[Drilling.Common/Station/CStationProcess.cs:3105–3105](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3105-L3105)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14518,7 +14518,7 @@ flowchart TD
 
 ### FieldDeclaration `_targets` · L3106–3106
 
-[Drilling.Common/Station/CStationProcess.cs:3106–3106](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3106-L3106)
+[Drilling.Common/Station/CStationProcess.cs:3106–3106](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3106-L3106)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14533,7 +14533,7 @@ flowchart TD
 
 ### FieldDeclaration `_cancellation` · L3107–3107
 
-[Drilling.Common/Station/CStationProcess.cs:3107–3107](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3107-L3107)
+[Drilling.Common/Station/CStationProcess.cs:3107–3107](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3107-L3107)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14561,7 +14561,7 @@ flowchart TD
 
 ### FieldDeclaration `_writeLock` · L3108–3108
 
-[Drilling.Common/Station/CStationProcess.cs:3108–3108](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3108-L3108)
+[Drilling.Common/Station/CStationProcess.cs:3108–3108](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3108-L3108)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14589,7 +14589,7 @@ flowchart TD
 
 ### FieldDeclaration `_thread` · L3109–3109
 
-[Drilling.Common/Station/CStationProcess.cs:3109–3109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3109-L3109)
+[Drilling.Common/Station/CStationProcess.cs:3109–3109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3109-L3109)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14604,7 +14604,7 @@ flowchart TD
 
 ### FieldDeclaration `_lastError` · L3110–3110
 
-[Drilling.Common/Station/CStationProcess.cs:3110–3110](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3110-L3110)
+[Drilling.Common/Station/CStationProcess.cs:3110–3110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3110-L3110)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14625,7 +14625,7 @@ flowchart TD
 
 ### FieldDeclaration `_started` · L3111–3111
 
-[Drilling.Common/Station/CStationProcess.cs:3111–3111](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3111-L3111)
+[Drilling.Common/Station/CStationProcess.cs:3111–3111](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3111-L3111)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14640,7 +14640,7 @@ flowchart TD
 
 ### FieldDeclaration `_stopped` · L3112–3112
 
-[Drilling.Common/Station/CStationProcess.cs:3112–3112](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3112-L3112)
+[Drilling.Common/Station/CStationProcess.cs:3112–3112](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3112-L3112)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14655,7 +14655,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L3113–3123
 
-[Drilling.Common/Station/CStationProcess.cs:3113–3123](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3113-L3123)
+[Drilling.Common/Station/CStationProcess.cs:3113–3123](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3113-L3123)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14676,7 +14676,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3128–3128](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3128-L3128) | new CQueueCountLogger | False |
+| [Drilling.Common/Station/CStationProcess.cs:3128–3128](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3128-L3128) | new CQueueCountLogger | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14700,7 +14700,7 @@ flowchart TD
 
 ### MethodDeclaration `Create` · L3125–3129
 
-[Drilling.Common/Station/CStationProcess.cs:3125–3129](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3125-L3129)
+[Drilling.Common/Station/CStationProcess.cs:3125–3129](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3125-L3129)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14722,7 +14722,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:711–711](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L711-L711) | CQueueCountLogger.Create | False |
+| [Drilling.Common/Station/CStationProcess.cs:711–711](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L711-L711) | CQueueCountLogger.Create | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14745,7 +14745,7 @@ flowchart TD
 
 ### MethodDeclaration `Start` · L3131–3140
 
-[Drilling.Common/Station/CStationProcess.cs:3131–3140](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3131-L3140)
+[Drilling.Common/Station/CStationProcess.cs:3131–3140](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3131-L3140)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14758,8 +14758,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:719–719](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L719-L719) | queueCountLogger.Start | False |
-| [Drilling.Common/Station/CStationProcess.cs:732–732](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L732-L732) | queueCountLogger.Start | False |
+| [Drilling.Common/Station/CStationProcess.cs:719–719](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L719-L719) | queueCountLogger.Start | False |
+| [Drilling.Common/Station/CStationProcess.cs:732–732](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L732-L732) | queueCountLogger.Start | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14789,7 +14789,7 @@ flowchart TD
 
 ### MethodDeclaration `StopAndWriteFinal` · L3142–3162
 
-[Drilling.Common/Station/CStationProcess.cs:3142–3162](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3142-L3162)
+[Drilling.Common/Station/CStationProcess.cs:3142–3162](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3142-L3162)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14802,8 +14802,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:745–745](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L745-L745) | queueCountLogger.StopAndWriteFinal | False |
-| [Drilling.Common/Station/CStationProcess.cs:3166–3166](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3166-L3166) | StopAndWriteFinal | False |
+| [Drilling.Common/Station/CStationProcess.cs:745–745](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L745-L745) | queueCountLogger.StopAndWriteFinal | False |
+| [Drilling.Common/Station/CStationProcess.cs:3166–3166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3166-L3166) | StopAndWriteFinal | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14846,7 +14846,7 @@ flowchart TD
 
 ### MethodDeclaration `Dispose` · L3164–3168
 
-[Drilling.Common/Station/CStationProcess.cs:3164–3168](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3164-L3168)
+[Drilling.Common/Station/CStationProcess.cs:3164–3168](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3164-L3168)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14875,7 +14875,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateTargets` · L3170–3189
 
-[Drilling.Common/Station/CStationProcess.cs:3170–3189](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3170-L3189)
+[Drilling.Common/Station/CStationProcess.cs:3170–3189](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3170-L3189)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14895,7 +14895,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3127–3127](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3127-L3127) | CreateTargets | False |
+| [Drilling.Common/Station/CStationProcess.cs:3127–3127](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3127-L3127) | CreateTargets | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14957,7 +14957,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveRootDirectory` · L3191–3219
 
-[Drilling.Common/Station/CStationProcess.cs:3191–3219](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3191-L3219)
+[Drilling.Common/Station/CStationProcess.cs:3191–3219](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3191-L3219)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14976,7 +14976,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3173–3173](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3173-L3173) | ResolveRootDirectory | False |
+| [Drilling.Common/Station/CStationProcess.cs:3173–3173](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3173-L3173) | ResolveRootDirectory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15039,7 +15039,7 @@ flowchart TD
 
 ### MethodDeclaration `Run` · L3221–3227
 
-[Drilling.Common/Station/CStationProcess.cs:3221–3227](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3221-L3227)
+[Drilling.Common/Station/CStationProcess.cs:3221–3227](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3221-L3227)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15078,7 +15078,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteSnapshotOnce` · L3229–3243
 
-[Drilling.Common/Station/CStationProcess.cs:3229–3243](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3229-L3243)
+[Drilling.Common/Station/CStationProcess.cs:3229–3243](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3229-L3243)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15091,8 +15091,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3161–3161](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3161-L3161) | WriteSnapshotOnce | False |
-| [Drilling.Common/Station/CStationProcess.cs:3225–3225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3225-L3225) | WriteSnapshotOnce | False |
+| [Drilling.Common/Station/CStationProcess.cs:3161–3161](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3161-L3161) | WriteSnapshotOnce | False |
+| [Drilling.Common/Station/CStationProcess.cs:3225–3225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3225-L3225) | WriteSnapshotOnce | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15127,7 +15127,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteTargetSnapshot` · L3245–3262
 
-[Drilling.Common/Station/CStationProcess.cs:3245–3262](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3245-L3262)
+[Drilling.Common/Station/CStationProcess.cs:3245–3262](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3245-L3262)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15146,7 +15146,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3240–3240](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3240-L3240) | WriteTargetSnapshot | False |
+| [Drilling.Common/Station/CStationProcess.cs:3240–3240](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3240-L3240) | WriteTargetSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15198,7 +15198,7 @@ flowchart TD
 
 ### MethodDeclaration `RememberError` · L3264–3273
 
-[Drilling.Common/Station/CStationProcess.cs:3264–3273](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3264-L3273)
+[Drilling.Common/Station/CStationProcess.cs:3264–3273](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3264-L3273)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15217,7 +15217,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3260–3260](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3260-L3260) | RememberError | False |
+| [Drilling.Common/Station/CStationProcess.cs:3260–3260](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3260-L3260) | RememberError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15249,7 +15249,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatLine` · L3275–3289
 
-[Drilling.Common/Station/CStationProcess.cs:3275–3289](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3275-L3289)
+[Drilling.Common/Station/CStationProcess.cs:3275–3289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3275-L3289)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15269,7 +15269,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3256–3256](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3256-L3256) | FormatLine | False |
+| [Drilling.Common/Station/CStationProcess.cs:3256–3256](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3256-L3256) | FormatLine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15302,7 +15302,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatCsv` · L3291–3305
 
-[Drilling.Common/Station/CStationProcess.cs:3291–3305](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3291-L3305)
+[Drilling.Common/Station/CStationProcess.cs:3291–3305](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3291-L3305)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15321,7 +15321,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3288–3288](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3288-L3288) | FormatCsv | False |
+| [Drilling.Common/Station/CStationProcess.cs:3288–3288](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3288-L3288) | FormatCsv | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15364,7 +15364,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatCsvField` · L3307–3316
 
-[Drilling.Common/Station/CStationProcess.cs:3307–3316](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3307-L3316)
+[Drilling.Common/Station/CStationProcess.cs:3307–3316](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3307-L3316)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15383,7 +15383,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3301–3301](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3301-L3301) | FormatCsvField | False |
+| [Drilling.Common/Station/CStationProcess.cs:3301–3301](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3301-L3301) | FormatCsvField | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15423,7 +15423,7 @@ flowchart TD
 
 ### FieldDeclaration `_owner` · L3321–3321
 
-[Drilling.Common/Station/CStationProcess.cs:3321–3321](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3321-L3321)
+[Drilling.Common/Station/CStationProcess.cs:3321–3321](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3321-L3321)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15438,7 +15438,7 @@ flowchart TD
 
 ### FieldDeclaration `_automationNo` · L3322–3322
 
-[Drilling.Common/Station/CStationProcess.cs:3322–3322](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3322-L3322)
+[Drilling.Common/Station/CStationProcess.cs:3322–3322](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3322-L3322)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15453,7 +15453,7 @@ flowchart TD
 
 ### FieldDeclaration `_headScripts` · L3323–3323
 
-[Drilling.Common/Station/CStationProcess.cs:3323–3323](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3323-L3323)
+[Drilling.Common/Station/CStationProcess.cs:3323–3323](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3323-L3323)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15468,7 +15468,7 @@ flowchart TD
 
 ### FieldDeclaration `_queueSize` · L3324–3324
 
-[Drilling.Common/Station/CStationProcess.cs:3324–3324](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3324-L3324)
+[Drilling.Common/Station/CStationProcess.cs:3324–3324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3324-L3324)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15483,7 +15483,7 @@ flowchart TD
 
 ### FieldDeclaration `_linesPerCommand` · L3325–3325
 
-[Drilling.Common/Station/CStationProcess.cs:3325–3325](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3325-L3325)
+[Drilling.Common/Station/CStationProcess.cs:3325–3325](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3325-L3325)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15498,7 +15498,7 @@ flowchart TD
 
 ### FieldDeclaration `_timeoutMs` · L3326–3326
 
-[Drilling.Common/Station/CStationProcess.cs:3326–3326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3326-L3326)
+[Drilling.Common/Station/CStationProcess.cs:3326–3326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3326-L3326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15513,7 +15513,7 @@ flowchart TD
 
 ### FieldDeclaration `_cancellationToken` · L3327–3327
 
-[Drilling.Common/Station/CStationProcess.cs:3327–3327](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3327-L3327)
+[Drilling.Common/Station/CStationProcess.cs:3327–3327](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3327-L3327)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15528,7 +15528,7 @@ flowchart TD
 
 ### FieldDeclaration `_thread` · L3328–3328
 
-[Drilling.Common/Station/CStationProcess.cs:3328–3328](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3328-L3328)
+[Drilling.Common/Station/CStationProcess.cs:3328–3328](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3328-L3328)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15543,7 +15543,7 @@ flowchart TD
 
 ### FieldDeclaration `_isComplete` · L3329–3329
 
-[Drilling.Common/Station/CStationProcess.cs:3329–3329](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3329-L3329)
+[Drilling.Common/Station/CStationProcess.cs:3329–3329](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3329-L3329)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15558,7 +15558,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L3330–3352
 
-[Drilling.Common/Station/CStationProcess.cs:3330–3352](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3330-L3352)
+[Drilling.Common/Station/CStationProcess.cs:3330–3352](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3330-L3352)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15583,7 +15583,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:775–775](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L775-L775) | new CBufferedRunWorker | False |
+| [Drilling.Common/Station/CStationProcess.cs:775–775](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L775-L775) | new CBufferedRunWorker | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15613,7 +15613,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsComplete` · L3354–3360
 
-[Drilling.Common/Station/CStationProcess.cs:3354–3360](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3354-L3360)
+[Drilling.Common/Station/CStationProcess.cs:3354–3360](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3354-L3360)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15628,7 +15628,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsComplete` · L3356–3359
 
-[Drilling.Common/Station/CStationProcess.cs:3356–3359](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3356-L3359)
+[Drilling.Common/Station/CStationProcess.cs:3356–3359](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3356-L3359)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15649,7 +15649,7 @@ flowchart TD
 
 ### PropertyDeclaration `Result` · L3362–3362
 
-[Drilling.Common/Station/CStationProcess.cs:3362–3362](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3362-L3362)
+[Drilling.Common/Station/CStationProcess.cs:3362–3362](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3362-L3362)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15664,7 +15664,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Result` · L3362–3362
 
-[Drilling.Common/Station/CStationProcess.cs:3362–3362](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3362-L3362)
+[Drilling.Common/Station/CStationProcess.cs:3362–3362](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3362-L3362)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15679,7 +15679,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Result` · L3362–3362
 
-[Drilling.Common/Station/CStationProcess.cs:3362–3362](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3362-L3362)
+[Drilling.Common/Station/CStationProcess.cs:3362–3362](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3362-L3362)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15700,7 +15700,7 @@ flowchart TD
 
 ### PropertyDeclaration `Error` · L3363–3363
 
-[Drilling.Common/Station/CStationProcess.cs:3363–3363](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3363-L3363)
+[Drilling.Common/Station/CStationProcess.cs:3363–3363](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3363-L3363)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15715,7 +15715,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Error` · L3363–3363
 
-[Drilling.Common/Station/CStationProcess.cs:3363–3363](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3363-L3363)
+[Drilling.Common/Station/CStationProcess.cs:3363–3363](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3363-L3363)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15730,7 +15730,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Error` · L3363–3363
 
-[Drilling.Common/Station/CStationProcess.cs:3363–3363](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3363-L3363)
+[Drilling.Common/Station/CStationProcess.cs:3363–3363](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3363-L3363)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15751,7 +15751,7 @@ flowchart TD
 
 ### PropertyDeclaration `AutomationNo` · L3365–3371
 
-[Drilling.Common/Station/CStationProcess.cs:3365–3371](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3365-L3371)
+[Drilling.Common/Station/CStationProcess.cs:3365–3371](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3365-L3371)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15766,7 +15766,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AutomationNo` · L3367–3370
 
-[Drilling.Common/Station/CStationProcess.cs:3367–3370](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3367-L3370)
+[Drilling.Common/Station/CStationProcess.cs:3367–3370](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3367-L3370)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15787,7 +15787,7 @@ flowchart TD
 
 ### MethodDeclaration `Start` · L3373–3376
 
-[Drilling.Common/Station/CStationProcess.cs:3373–3376](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3373-L3376)
+[Drilling.Common/Station/CStationProcess.cs:3373–3376](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3373-L3376)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15800,7 +15800,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:780–780](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L780-L780) | worker.Start | False |
+| [Drilling.Common/Station/CStationProcess.cs:780–780](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L780-L780) | worker.Start | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15818,7 +15818,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitForCompletion` · L3378–3381
 
-[Drilling.Common/Station/CStationProcess.cs:3378–3381](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3378-L3381)
+[Drilling.Common/Station/CStationProcess.cs:3378–3381](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3378-L3381)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15837,7 +15837,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:857–857](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L857-L857) | worker.WaitForCompletion | False |
+| [Drilling.Common/Station/CStationProcess.cs:857–857](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L857-L857) | worker.WaitForCompletion | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15856,7 +15856,7 @@ flowchart TD
 
 ### MethodDeclaration `Run` · L3383–3397
 
-[Drilling.Common/Station/CStationProcess.cs:3383–3397](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3383-L3397)
+[Drilling.Common/Station/CStationProcess.cs:3383–3397](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3383-L3397)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15902,7 +15902,7 @@ flowchart TD
 
 ### PropertyDeclaration `ManualMofStatus` · L3402–3409
 
-[Drilling.Common/Station/CStationProcess.cs:3402–3409](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3402-L3409)
+[Drilling.Common/Station/CStationProcess.cs:3402–3409](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3402-L3409)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15917,7 +15917,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ManualMofStatus` · L3404–3408
 
-[Drilling.Common/Station/CStationProcess.cs:3404–3408](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3404-L3408)
+[Drilling.Common/Station/CStationProcess.cs:3404–3408](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3404-L3408)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15957,7 +15957,7 @@ flowchart TD
 
 ### PropertyDeclaration `LastCompletedManualMof` · L3411–3418
 
-[Drilling.Common/Station/CStationProcess.cs:3411–3418](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3411-L3418)
+[Drilling.Common/Station/CStationProcess.cs:3411–3418](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3411-L3418)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15972,7 +15972,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_LastCompletedManualMof` · L3413–3417
 
-[Drilling.Common/Station/CStationProcess.cs:3413–3417](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3413-L3417)
+[Drilling.Common/Station/CStationProcess.cs:3413–3417](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3413-L3417)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16003,7 +16003,7 @@ flowchart TD
 
 ### MethodDeclaration `RunManualMofAsync` · L3420–3447
 
-[Drilling.Common/Station/CStationProcess.cs:3420–3447](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3420-L3447)
+[Drilling.Common/Station/CStationProcess.cs:3420–3447](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3420-L3447)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16024,7 +16024,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L25-L25) | _processStation.RunManualMofAsync | False |
+| [Drilling.Common/Station/CStationManager.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L25-L25) | _processStation.RunManualMofAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16101,7 +16101,7 @@ flowchart TD
 
 ### MethodDeclaration `StopManualMofAsync` · L3449–3482
 
-[Drilling.Common/Station/CStationProcess.cs:3449–3482](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3449-L3482)
+[Drilling.Common/Station/CStationProcess.cs:3449–3482](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3449-L3482)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16114,8 +16114,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L26-L26) | _processStation.StopManualMofAsync | False |
-| [Drilling.Common/Station/CStationProcess.cs:1197–1197](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1197-L1197) | StopManualMofAsync | False |
+| [Drilling.Common/Station/CStationManager.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L26-L26) | _processStation.StopManualMofAsync | False |
+| [Drilling.Common/Station/CStationProcess.cs:1197–1197](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1197-L1197) | StopManualMofAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16185,7 +16185,7 @@ flowchart TD
 
 ### MethodDeclaration `ObserveManualMofStop` · L3484–3493
 
-[Drilling.Common/Station/CStationProcess.cs:3484–3493](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3484-L3493)
+[Drilling.Common/Station/CStationProcess.cs:3484–3493](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3484-L3493)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16204,7 +16204,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3456–3456](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3456-L3456) | ObserveManualMofStop | False |
+| [Drilling.Common/Station/CStationProcess.cs:3456–3456](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3456-L3456) | ObserveManualMofStop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16236,7 +16236,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteManualMof` · L3495–3639
 
-[Drilling.Common/Station/CStationProcess.cs:3495–3639](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3495-L3639)
+[Drilling.Common/Station/CStationProcess.cs:3495–3639](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3495-L3639)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16259,7 +16259,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3444–3444](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3444-L3444) | ExecuteManualMof | False |
+| [Drilling.Common/Station/CStationProcess.cs:3444–3444](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3444-L3444) | ExecuteManualMof | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16604,7 +16604,7 @@ flowchart TD
 
 ### MethodDeclaration `CheckManualMofInterlocks` · L3641–3647
 
-[Drilling.Common/Station/CStationProcess.cs:3641–3647](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3641-L3647)
+[Drilling.Common/Station/CStationProcess.cs:3641–3647](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3641-L3647)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16625,8 +16625,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3516–3516](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3516-L3516) | CheckManualMofInterlocks | False |
-| [Drilling.Common/Station/CStationProcess.cs:3548–3548](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3548-L3548) | CheckManualMofInterlocks | False |
+| [Drilling.Common/Station/CStationProcess.cs:3516–3516](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3516-L3516) | CheckManualMofInterlocks | False |
+| [Drilling.Common/Station/CStationProcess.cs:3548–3548](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3548-L3548) | CheckManualMofInterlocks | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16663,7 +16663,7 @@ flowchart TD
 
 ### MethodDeclaration `CheckManualMofTasksIdle` · L3649–3681
 
-[Drilling.Common/Station/CStationProcess.cs:3649–3681](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3649-L3681)
+[Drilling.Common/Station/CStationProcess.cs:3649–3681](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3649-L3681)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16683,7 +16683,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3517–3517](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3517-L3517) | CheckManualMofTasksIdle | False |
+| [Drilling.Common/Station/CStationProcess.cs:3517–3517](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3517-L3517) | CheckManualMofTasksIdle | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16780,7 +16780,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenManualMofStage` · L3683–3689
 
-[Drilling.Common/Station/CStationProcess.cs:3683–3689](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3683-L3689)
+[Drilling.Common/Station/CStationProcess.cs:3683–3689](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3683-L3689)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16793,7 +16793,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3518–3518](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3518-L3518) | OpenManualMofStage | False |
+| [Drilling.Common/Station/CStationProcess.cs:3518–3518](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3518-L3518) | OpenManualMofStage | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16823,7 +16823,7 @@ flowchart TD
 
 ### MethodDeclaration `RunManualMofStageMove` · L3691–3698
 
-[Drilling.Common/Station/CStationProcess.cs:3691–3698](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3691-L3698)
+[Drilling.Common/Station/CStationProcess.cs:3691–3698](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3691-L3698)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16844,7 +16844,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3565–3565](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3565-L3565) | RunManualMofStageMove | False |
+| [Drilling.Common/Station/CStationProcess.cs:3565–3565](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3565-L3565) | RunManualMofStageMove | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16877,7 +16877,7 @@ flowchart TD
 
 ### MethodDeclaration `ObserveManualMofStageMove` · L3700–3710
 
-[Drilling.Common/Station/CStationProcess.cs:3700–3710](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3700-L3710)
+[Drilling.Common/Station/CStationProcess.cs:3700–3710](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3700-L3710)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16896,7 +16896,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3566–3566](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3566-L3566) | ObserveManualMofStageMove | False |
+| [Drilling.Common/Station/CStationProcess.cs:3566–3566](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3566-L3566) | ObserveManualMofStageMove | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16942,7 +16942,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadRequiredManualMofNumber` · L3712–3717
 
-[Drilling.Common/Station/CStationProcess.cs:3712–3717](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3712-L3717)
+[Drilling.Common/Station/CStationProcess.cs:3712–3717](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3712-L3717)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16962,9 +16962,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3520–3520](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3520-L3520) | ReadRequiredManualMofNumber | False |
-| [Drilling.Common/Station/CStationProcess.cs:3521–3521](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3521-L3521) | ReadRequiredManualMofNumber | False |
-| [Drilling.Common/Station/CStationProcess.cs:3522–3522](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3522-L3522) | ReadRequiredManualMofNumber | False |
+| [Drilling.Common/Station/CStationProcess.cs:3520–3520](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3520-L3520) | ReadRequiredManualMofNumber | False |
+| [Drilling.Common/Station/CStationProcess.cs:3521–3521](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3521-L3521) | ReadRequiredManualMofNumber | False |
+| [Drilling.Common/Station/CStationProcess.cs:3522–3522](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3522-L3522) | ReadRequiredManualMofNumber | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17000,7 +17000,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadManualMofShiftOffset` · L3719–3726
 
-[Drilling.Common/Station/CStationProcess.cs:3719–3726](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3719-L3726)
+[Drilling.Common/Station/CStationProcess.cs:3719–3726](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3719-L3726)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17020,8 +17020,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3430–3430](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3430-L3430) | ReadManualMofShiftOffset | False |
-| [Drilling.Common/Station/CStationProcess.cs:3431–3431](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3431-L3431) | ReadManualMofShiftOffset | False |
+| [Drilling.Common/Station/CStationProcess.cs:3430–3430](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3430-L3430) | ReadManualMofShiftOffset | False |
+| [Drilling.Common/Station/CStationProcess.cs:3431–3431](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3431-L3431) | ReadManualMofShiftOffset | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17063,7 +17063,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveManualMofCompletionPath` · L3728–3735
 
-[Drilling.Common/Station/CStationProcess.cs:3728–3735](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3728-L3735)
+[Drilling.Common/Station/CStationProcess.cs:3728–3735](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3728-L3735)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17082,7 +17082,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L153-L153) | ResolveManualMofCompletionPath | False |
+| [Drilling.Common/Station/CStationProcess.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L153-L153) | ResolveManualMofCompletionPath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17122,7 +17122,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadManualMofCompletion` · L3737–3746
 
-[Drilling.Common/Station/CStationProcess.cs:3737–3746](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3737-L3746)
+[Drilling.Common/Station/CStationProcess.cs:3737–3746](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3737-L3746)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17141,7 +17141,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L159-L159) | LoadManualMofCompletion | False |
+| [Drilling.Common/Station/CStationProcess.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L159-L159) | LoadManualMofCompletion | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17192,7 +17192,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveManualMofCompletion` · L3748–3766
 
-[Drilling.Common/Station/CStationProcess.cs:3748–3766](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3748-L3766)
+[Drilling.Common/Station/CStationProcess.cs:3748–3766](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3748-L3766)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17212,7 +17212,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3590–3590](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3590-L3590) | SaveManualMofCompletion | False |
+| [Drilling.Common/Station/CStationProcess.cs:3590–3590](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3590-L3590) | SaveManualMofCompletion | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17277,7 +17277,7 @@ flowchart TD
 
 ### MethodDeclaration `StartProtectWindowCompletionMonitoring` · L3770–3770
 
-[Drilling.Common/Station/CStationProcess.cs:3770–3770](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3770-L3770)
+[Drilling.Common/Station/CStationProcess.cs:3770–3770](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3770-L3770)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17296,7 +17296,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L20-L20) | _processStation.StartProtectWindowCompletionMonitoring | False |
+| [Drilling.Common/Station/CStationManager.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L20-L20) | _processStation.StartProtectWindowCompletionMonitoring | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17314,7 +17314,7 @@ flowchart TD
 
 ### MethodDeclaration `StopProtectWindowCompletionMonitoring` · L3771–3771
 
-[Drilling.Common/Station/CStationProcess.cs:3771–3771](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3771-L3771)
+[Drilling.Common/Station/CStationProcess.cs:3771–3771](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3771-L3771)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17327,7 +17327,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L21-L21) | _processStation.StopProtectWindowCompletionMonitoring | False |
+| [Drilling.Common/Station/CStationManager.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L21-L21) | _processStation.StopProtectWindowCompletionMonitoring | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17345,7 +17345,7 @@ flowchart TD
 
 ### MethodDeclaration `CountCompletedProtectWindowGlass` · L3772–3792
 
-[Drilling.Common/Station/CStationProcess.cs:3772–3792](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3772-L3792)
+[Drilling.Common/Station/CStationProcess.cs:3772–3792](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3772-L3792)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17358,8 +17358,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1172–1172](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1172-L1172) | CountCompletedProtectWindowGlass | False |
-| [Drilling.Common/Station/CStationProcess.cs:3853–3853](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3853-L3853) | CountCompletedProtectWindowGlass | False |
+| [Drilling.Common/Station/CStationProcess.cs:1172–1172](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1172-L1172) | CountCompletedProtectWindowGlass | False |
+| [Drilling.Common/Station/CStationProcess.cs:3853–3853](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3853-L3853) | CountCompletedProtectWindowGlass | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17417,7 +17417,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitStageMachining` · L3796–3865
 
-[Drilling.Common/Station/CStationProcess.cs:3796–3865](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3796-L3865)
+[Drilling.Common/Station/CStationProcess.cs:3796–3865](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3796-L3865)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17437,8 +17437,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3568–3568](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3568-L3568) | WaitStageMachining | False |
-| [Drilling.Common/Station/CStationProcess.cs:3978–3978](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3978-L3978) | WaitStageMachining | False |
+| [Drilling.Common/Station/CStationProcess.cs:3568–3568](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3568-L3568) | WaitStageMachining | False |
+| [Drilling.Common/Station/CStationProcess.cs:3978–3978](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3978-L3978) | WaitStageMachining | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17642,7 +17642,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveStageProcessResults` · L3867–3892
 
-[Drilling.Common/Station/CStationProcess.cs:3867–3892](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3867-L3892)
+[Drilling.Common/Station/CStationProcess.cs:3867–3892](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3867-L3892)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17669,7 +17669,7 @@ flowchart TD
 | 3872 | GetProcessModel | resolved | Drilling.Common.Station.ST_PROCESS_MODEL Drilling.Common.Station.CStationProcess.GetProcessModel() · Drilling.Common/Station/CStationProcess.cs:2277 |
 | 3874 | _stageOwnedTasks.Values.OrderBy(head => head.HeadNo).ToArray | resolved | Drilling.Common.Station.ST_HEAD_SCRIPT_RESULT[] System.Collections.Generic.IEnumerable<Drilling.Common.Station.ST_HEAD_SCRIPT_RESULT>.ToArray<Drilling.Common.Station.ST_HEAD_SCRIPT_RESULT>() |
 | 3874 | _stageOwnedTasks.Values.OrderBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Station.ST_HEAD_SCRIPT_RESULT> System.Collections.Generic.IEnumerable<Drilling.Common.Station.ST_HEAD_SCRIPT_RESULT>.OrderBy<Drilling.Common.Station.ST_HEAD_SCRIPT_RESULT, int>(System.Func<Drilling.Common.Station.ST_HEAD_SCRIPT_RESULT, int>) |
-| 3875 | Path.Combine | candidate | OverloadResolutionFailure |
+| 3875 | Path.Combine | resolved | string System.IO.Path.Combine(string, string, string) |
 | 3875 | Path.Combine | resolved | string System.IO.Path.Combine(string, string) |
 | 3875 | now.ToString | resolved | string System.DateTimeOffset.ToString(string?, System.IFormatProvider?) |
 | 3876 | Directory.CreateDirectory | resolved | System.IO.DirectoryInfo System.IO.Directory.CreateDirectory(string) |
@@ -17766,7 +17766,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Field` · L3878–3878
 
-[Drilling.Common/Station/CStationProcess.cs:3878–3878](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3878-L3878)
+[Drilling.Common/Station/CStationProcess.cs:3878–3878](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3878-L3878)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17799,7 +17799,7 @@ flowchart TD
 
 ### MethodDeclaration `ReleaseCompletedStageTasks` · L3893–3906
 
-[Drilling.Common/Station/CStationProcess.cs:3893–3906](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3893-L3906)
+[Drilling.Common/Station/CStationProcess.cs:3893–3906](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3893-L3906)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17818,7 +17818,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3582–3582](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3582-L3582) | ReleaseCompletedStageTasks | False |
+| [Drilling.Common/Station/CStationProcess.cs:3582–3582](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3582-L3582) | ReleaseCompletedStageTasks | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17866,7 +17866,7 @@ flowchart TD
 
 ### PropertyDeclaration `StageRequests` · L3910–3910
 
-[Drilling.Common/Station/CStationProcess.cs:3910–3910](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3910-L3910)
+[Drilling.Common/Station/CStationProcess.cs:3910–3910](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3910-L3910)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17881,7 +17881,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_StageRequests` · L3910–3910
 
-[Drilling.Common/Station/CStationProcess.cs:3910–3910](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3910-L3910)
+[Drilling.Common/Station/CStationProcess.cs:3910–3910](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3910-L3910)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17896,7 +17896,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetStageRequestsAsync` · L3912–3959
 
-[Drilling.Common/Station/CStationProcess.cs:3912–3959](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3912-L3959)
+[Drilling.Common/Station/CStationProcess.cs:3912–3959](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3912-L3959)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17915,7 +17915,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L31-L31) | _processStation.ResetStageRequestsAsync | False |
+| [Drilling.Common/Station/CStationManager.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L31-L31) | _processStation.ResetStageRequestsAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18032,7 +18032,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateStageRequestSequence` · L3961–3986
 
-[Drilling.Common/Station/CStationProcess.cs:3961–3986](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3961-L3986)
+[Drilling.Common/Station/CStationProcess.cs:3961–3986](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3961-L3986)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18045,7 +18045,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:156–156](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L156-L156) | CreateStageRequestSequence | False |
+| [Drilling.Common/Station/CStationProcess.cs:156–156](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L156-L156) | CreateStageRequestSequence | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18120,7 +18120,7 @@ flowchart TD
 
 ### MethodDeclaration `DescribeSequenceSignal` · L3987–3991
 
-[Drilling.Common/Station/CStationProcess.cs:3987–3991](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3987-L3991)
+[Drilling.Common/Station/CStationProcess.cs:3987–3991](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3987-L3991)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18161,7 +18161,7 @@ flowchart TD
 
 ### MethodDeclaration `StageProcessData` · L3993–3993
 
-[Drilling.Common/Station/CStationProcess.cs:3993–3993](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3993-L3993)
+[Drilling.Common/Station/CStationProcess.cs:3993–3993](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3993-L3993)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18174,11 +18174,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3856–3856](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3856-L3856) | StageProcessData | False |
-| [Drilling.Common/Station/CStationProcess.cs:3938–3938](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3938-L3938) | StageProcessData | False |
-| [Drilling.Common/Station/CStationProcess.cs:3997–3997](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3997-L3997) | StageProcessData | False |
-| [Drilling.Common/Station/CStationProcess.cs:4017–4017](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4017-L4017) | StageProcessData | False |
-| [Drilling.Common/Station/CStationProcess.cs:4051–4051](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4051-L4051) | StageProcessData | False |
+| [Drilling.Common/Station/CStationProcess.cs:3856–3856](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3856-L3856) | StageProcessData | False |
+| [Drilling.Common/Station/CStationProcess.cs:3938–3938](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3938-L3938) | StageProcessData | False |
+| [Drilling.Common/Station/CStationProcess.cs:3997–3997](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3997-L3997) | StageProcessData | False |
+| [Drilling.Common/Station/CStationProcess.cs:4017–4017](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4017-L4017) | StageProcessData | False |
+| [Drilling.Common/Station/CStationProcess.cs:4051–4051](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4051-L4051) | StageProcessData | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18198,7 +18198,7 @@ flowchart TD
 
 ### MethodDeclaration `StageProcessSpeed` · L3994–3994
 
-[Drilling.Common/Station/CStationProcess.cs:3994–3994](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3994-L3994)
+[Drilling.Common/Station/CStationProcess.cs:3994–3994](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3994-L3994)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18211,9 +18211,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3997–3997](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3997-L3997) | StageProcessSpeed | False |
-| [Drilling.Common/Station/CStationProcess.cs:4017–4017](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4017-L4017) | StageProcessSpeed | False |
-| [Drilling.Common/Station/CStationProcess.cs:4051–4051](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4051-L4051) | StageProcessSpeed | False |
+| [Drilling.Common/Station/CStationProcess.cs:3997–3997](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3997-L3997) | StageProcessSpeed | False |
+| [Drilling.Common/Station/CStationProcess.cs:4017–4017](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4017-L4017) | StageProcessSpeed | False |
+| [Drilling.Common/Station/CStationProcess.cs:4051–4051](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4051-L4051) | StageProcessSpeed | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18233,7 +18233,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateStageProcessOptions` · L3995–3999
 
-[Drilling.Common/Station/CStationProcess.cs:3995–3999](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3995-L3999)
+[Drilling.Common/Station/CStationProcess.cs:3995–3999](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3995-L3999)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18278,7 +18278,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateProtectWindowUsageRequest` · L4001–4005
 
-[Drilling.Common/Station/CStationProcess.cs:4001–4005](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4001-L4005)
+[Drilling.Common/Station/CStationProcess.cs:4001–4005](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4001-L4005)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18297,8 +18297,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3858–3858](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3858-L3858) | UpdateProtectWindowUsageRequest | False |
-| [Drilling.Common/Station/CStationProcess.cs:3998–3998](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3998-L3998) | UpdateProtectWindowUsageRequest | False |
+| [Drilling.Common/Station/CStationProcess.cs:3858–3858](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3858-L3858) | UpdateProtectWindowUsageRequest | False |
+| [Drilling.Common/Station/CStationProcess.cs:3998–3998](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3998-L3998) | UpdateProtectWindowUsageRequest | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18321,7 +18321,7 @@ flowchart TD
 
 ### MethodDeclaration `VerifyStageReadyPosition` · L4007–4024
 
-[Drilling.Common/Station/CStationProcess.cs:4007–4024](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4007-L4024)
+[Drilling.Common/Station/CStationProcess.cs:4007–4024](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4007-L4024)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18394,7 +18394,7 @@ flowchart TD
 
 ### MethodDeclaration `StartStageRequests` · L4026–4085
 
-[Drilling.Common/Station/CStationProcess.cs:4026–4085](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4026-L4085)
+[Drilling.Common/Station/CStationProcess.cs:4026–4085](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4026-L4085)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18416,7 +18416,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L30-L30) | _processStation.StartStageRequests | False |
+| [Drilling.Common/Station/CStationManager.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L30-L30) | _processStation.StartStageRequests | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18563,7 +18563,7 @@ flowchart TD
 
 ### MethodDeclaration `RunStageTasks` · L4087–4187
 
-[Drilling.Common/Station/CStationProcess.cs:4087–4187](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4087-L4187)
+[Drilling.Common/Station/CStationProcess.cs:4087–4187](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4087-L4187)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18582,7 +18582,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3552–3552](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3552-L3552) | RunStageTasks | False |
+| [Drilling.Common/Station/CStationProcess.cs:3552–3552](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3552-L3552) | RunStageTasks | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18835,7 +18835,7 @@ flowchart TD
 
 ### MethodDeclaration `StopStageTasks` · L4189–4238
 
-[Drilling.Common/Station/CStationProcess.cs:4189–4238](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4189-L4238)
+[Drilling.Common/Station/CStationProcess.cs:4189–4238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4189-L4238)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18854,8 +18854,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3467–3467](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3467-L3467) | StopStageTasks | False |
-| [Drilling.Common/Station/CStationProcess.cs:3607–3607](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3607-L3607) | StopStageTasks | False |
+| [Drilling.Common/Station/CStationProcess.cs:3467–3467](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3467-L3467) | StopStageTasks | False |
+| [Drilling.Common/Station/CStationProcess.cs:3607–3607](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3607-L3607) | StopStageTasks | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18975,7 +18975,7 @@ flowchart TD
 
 ### MethodDeclaration `CheckStageBufferedRuns` · L4240–4261
 
-[Drilling.Common/Station/CStationProcess.cs:4240–4261](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4240-L4261)
+[Drilling.Common/Station/CStationProcess.cs:4240–4261](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4240-L4261)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18988,9 +18988,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3817–3817](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3817-L3817) | CheckStageBufferedRuns | False |
-| [Drilling.Common/Station/CStationProcess.cs:4013–4013](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4013-L4013) | CheckStageBufferedRuns | False |
-| [Drilling.Common/Station/CStationProcess.cs:4154–4154](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4154-L4154) | CheckStageBufferedRuns | False |
+| [Drilling.Common/Station/CStationProcess.cs:3817–3817](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3817-L3817) | CheckStageBufferedRuns | False |
+| [Drilling.Common/Station/CStationProcess.cs:4013–4013](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4013-L4013) | CheckStageBufferedRuns | False |
+| [Drilling.Common/Station/CStationProcess.cs:4154–4154](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4154-L4154) | CheckStageBufferedRuns | False |
 
 호출하는 대상과 해석 범위:
 
@@ -19061,7 +19061,7 @@ flowchart TD
 
 ### PropertyDeclaration `Stop` · L4265–4265
 
-[Drilling.Common/Station/CStationProcess.cs:4265–4265](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4265-L4265)
+[Drilling.Common/Station/CStationProcess.cs:4265–4265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4265-L4265)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19076,7 +19076,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Stop` · L4265–4265
 
-[Drilling.Common/Station/CStationProcess.cs:4265–4265](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4265-L4265)
+[Drilling.Common/Station/CStationProcess.cs:4265–4265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4265-L4265)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19091,7 +19091,7 @@ flowchart TD
 
 ### PropertyDeclaration `Completion` · L4266–4266
 
-[Drilling.Common/Station/CStationProcess.cs:4266–4266](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4266-L4266)
+[Drilling.Common/Station/CStationProcess.cs:4266–4266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4266-L4266)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19118,7 +19118,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Completion` · L4266–4266
 
-[Drilling.Common/Station/CStationProcess.cs:4266–4266](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4266-L4266)
+[Drilling.Common/Station/CStationProcess.cs:4266–4266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4266-L4266)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19133,7 +19133,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Completion` · L4266–4266
 
-[Drilling.Common/Station/CStationProcess.cs:4266–4266](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4266-L4266)
+[Drilling.Common/Station/CStationProcess.cs:4266–4266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4266-L4266)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19154,7 +19154,7 @@ flowchart TD
 
 ### MethodDeclaration `ZeroLineActions` · L4271–4280
 
-[Drilling.Common/Station/CStationProcess.cs:4271–4280](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4271-L4280)
+[Drilling.Common/Station/CStationProcess.cs:4271–4280](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4271-L4280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19167,7 +19167,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3982–3982](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3982-L3982) | ZeroLineActions | False |
+| [Drilling.Common/Station/CStationProcess.cs:3982–3982](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3982-L3982) | ZeroLineActions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -19196,7 +19196,7 @@ flowchart TD
 
 ### MethodDeclaration `CaptureZeroLineCycle` · L4281–4310
 
-[Drilling.Common/Station/CStationProcess.cs:4281–4310](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4281-L4310)
+[Drilling.Common/Station/CStationProcess.cs:4281–4310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4281-L4310)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19216,7 +19216,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4052–4052](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4052-L4052) | CaptureZeroLineCycle | False |
+| [Drilling.Common/Station/CStationProcess.cs:4052–4052](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4052-L4052) | CaptureZeroLineCycle | False |
 
 호출하는 대상과 해석 범위:
 
@@ -19321,7 +19321,7 @@ flowchart TD
 
 ### MethodDeclaration `CompleteZeroLineFollowUp` · L4312–4313
 
-[Drilling.Common/Station/CStationProcess.cs:4312–4313](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4312-L4313)
+[Drilling.Common/Station/CStationProcess.cs:4312–4313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4312-L4313)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19341,7 +19341,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L19-L19) | _processStation.CompleteZeroLineFollowUp | False |
+| [Drilling.Common/Station/CStationManager.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L19-L19) | _processStation.CompleteZeroLineFollowUp | False |
 
 호출하는 대상과 해석 범위:
 
@@ -19362,7 +19362,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsureZeroLineFollowUpCompleted` · L4315–4321
 
-[Drilling.Common/Station/CStationProcess.cs:4315–4321](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4315-L4321)
+[Drilling.Common/Station/CStationProcess.cs:4315–4321](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4315-L4321)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19375,8 +19375,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4044–4044](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4044-L4044) | EnsureZeroLineFollowUpCompleted | False |
-| [Drilling.Common/Station/CStationProcess.cs:4283–4283](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4283-L4283) | EnsureZeroLineFollowUpCompleted | False |
+| [Drilling.Common/Station/CStationProcess.cs:4044–4044](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4044-L4044) | EnsureZeroLineFollowUpCompleted | False |
+| [Drilling.Common/Station/CStationProcess.cs:4283–4283](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4283-L4283) | EnsureZeroLineFollowUpCompleted | False |
 
 호출하는 대상과 해석 범위:
 
@@ -19406,7 +19406,7 @@ flowchart TD
 
 ### MethodDeclaration `StartZeroLinePrewaitMonitoring` · L4325–4333
 
-[Drilling.Common/Station/CStationProcess.cs:4325–4333](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4325-L4333)
+[Drilling.Common/Station/CStationProcess.cs:4325–4333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4325-L4333)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19425,7 +19425,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L17-L17) | _processStation.StartZeroLinePrewaitMonitoring | False |
+| [Drilling.Common/Station/CStationManager.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L17-L17) | _processStation.StartZeroLinePrewaitMonitoring | False |
 
 호출하는 대상과 해석 범위:
 
@@ -19459,7 +19459,7 @@ flowchart TD
 
 ### MethodDeclaration `StopZeroLinePrewaitMonitoring` · L4335–4335
 
-[Drilling.Common/Station/CStationProcess.cs:4335–4335](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4335-L4335)
+[Drilling.Common/Station/CStationProcess.cs:4335–4335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4335-L4335)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19472,7 +19472,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationManager.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationManager.cs#L18-L18) | _processStation.StopZeroLinePrewaitMonitoring | False |
+| [Drilling.Common/Station/CStationManager.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationManager.cs#L18-L18) | _processStation.StopZeroLinePrewaitMonitoring | False |
 
 호출하는 대상과 해석 범위:
 
@@ -19490,7 +19490,7 @@ flowchart TD
 
 ### MethodDeclaration `IsTarget` · L4342–4342
 
-[Drilling.Common/Station/CStationProcess.cs:4342–4342](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4342-L4342)
+[Drilling.Common/Station/CStationProcess.cs:4342–4342](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4342-L4342)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19509,7 +19509,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4355–4355](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4355-L4355) | IsTarget | False |
+| [Drilling.Common/Station/CStationProcess.cs:4355–4355](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4355-L4355) | IsTarget | False |
 
 호출하는 대상과 해석 범위:
 
@@ -19527,7 +19527,7 @@ flowchart TD
 
 ### MethodDeclaration `Reset` · L4343–4383
 
-[Drilling.Common/Station/CStationProcess.cs:4343–4383](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4343-L4383)
+[Drilling.Common/Station/CStationProcess.cs:4343–4383](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4343-L4383)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19548,8 +19548,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3937–3937](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3937-L3937) | CHandshakeOutputReset.Reset | False |
-| [Drilling.UI/CRootView.cs:3083–3083](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3083-L3083) | CHandshakeOutputReset.Reset | False |
+| [Drilling.Common/Station/CStationProcess.cs:3937–3937](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3937-L3937) | CHandshakeOutputReset.Reset | False |
+| [Drilling.UI/CRootView.cs:3083–3083](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3083-L3083) | CHandshakeOutputReset.Reset | False |
 
 호출하는 대상과 해석 범위:
 
@@ -19660,7 +19660,7 @@ flowchart TD
 
 ### MethodDeclaration `IsOff` · L4385–4385
 
-[Drilling.Common/Station/CStationProcess.cs:4385–4385](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4385-L4385)
+[Drilling.Common/Station/CStationProcess.cs:4385–4385](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4385-L4385)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19679,7 +19679,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4372–4372](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4372-L4372) | IsOff | False |
+| [Drilling.Common/Station/CStationProcess.cs:4372–4372](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4372-L4372) | IsOff | False |
 
 호출하는 대상과 해석 범위:
 
@@ -19697,7 +19697,7 @@ flowchart TD
 
 ### FieldDeclaration `CompleteId` · L4397–4397
 
-[Drilling.Common/Station/CStationProcess.cs:4397–4397](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4397-L4397)
+[Drilling.Common/Station/CStationProcess.cs:4397–4397](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4397-L4397)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19718,7 +19718,7 @@ flowchart TD
 
 ### FieldDeclaration `HandoverCountId` · L4398–4398
 
-[Drilling.Common/Station/CStationProcess.cs:4398–4398](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4398-L4398)
+[Drilling.Common/Station/CStationProcess.cs:4398–4398](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4398-L4398)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19739,7 +19739,7 @@ flowchart TD
 
 ### FieldDeclaration `_monitorLock` · L4399–4399
 
-[Drilling.Common/Station/CStationProcess.cs:4399–4399](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4399-L4399)
+[Drilling.Common/Station/CStationProcess.cs:4399–4399](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4399-L4399)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19767,7 +19767,7 @@ flowchart TD
 
 ### FieldDeclaration `_monitorStop` · L4400–4400
 
-[Drilling.Common/Station/CStationProcess.cs:4400–4400](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4400-L4400)
+[Drilling.Common/Station/CStationProcess.cs:4400–4400](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4400-L4400)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19782,7 +19782,7 @@ flowchart TD
 
 ### FieldDeclaration `_monitor` · L4401–4401
 
-[Drilling.Common/Station/CStationProcess.cs:4401–4401](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4401-L4401)
+[Drilling.Common/Station/CStationProcess.cs:4401–4401](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4401-L4401)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19803,7 +19803,7 @@ flowchart TD
 
 ### FieldDeclaration `_pendingRecipeId` · L4402–4402
 
-[Drilling.Common/Station/CStationProcess.cs:4402–4402](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4402-L4402)
+[Drilling.Common/Station/CStationProcess.cs:4402–4402](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4402-L4402)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19818,7 +19818,7 @@ flowchart TD
 
 ### FieldDeclaration `_pendingCycle` · L4403–4403
 
-[Drilling.Common/Station/CStationProcess.cs:4403–4403](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4403-L4403)
+[Drilling.Common/Station/CStationProcess.cs:4403–4403](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4403-L4403)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19833,7 +19833,7 @@ flowchart TD
 
 ### FieldDeclaration `_currentCycle` · L4404–4404
 
-[Drilling.Common/Station/CStationProcess.cs:4404–4404](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4404-L4404)
+[Drilling.Common/Station/CStationProcess.cs:4404–4404](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4404-L4404)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19848,7 +19848,7 @@ flowchart TD
 
 ### FieldDeclaration `_acknowledgedCycle` · L4405–4405
 
-[Drilling.Common/Station/CStationProcess.cs:4405–4405](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4405-L4405)
+[Drilling.Common/Station/CStationProcess.cs:4405–4405](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4405-L4405)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19863,7 +19863,7 @@ flowchart TD
 
 ### FieldDeclaration `_completionArmed` · L4406–4406
 
-[Drilling.Common/Station/CStationProcess.cs:4406–4406](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4406-L4406)
+[Drilling.Common/Station/CStationProcess.cs:4406–4406](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4406-L4406)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19878,7 +19878,7 @@ flowchart TD
 
 ### FieldDeclaration `_committedHandoverCount` · L4407–4407
 
-[Drilling.Common/Station/CStationProcess.cs:4407–4407](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4407-L4407)
+[Drilling.Common/Station/CStationProcess.cs:4407–4407](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4407-L4407)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19893,7 +19893,7 @@ flowchart TD
 
 ### FieldDeclaration `_pendingMaximumCount` · L4408–4408
 
-[Drilling.Common/Station/CStationProcess.cs:4408–4408](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4408-L4408)
+[Drilling.Common/Station/CStationProcess.cs:4408–4408](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4408-L4408)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19908,7 +19908,7 @@ flowchart TD
 
 ### FieldDeclaration `_retryLimit` · L4409–4409
 
-[Drilling.Common/Station/CStationProcess.cs:4409–4409](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4409-L4409)
+[Drilling.Common/Station/CStationProcess.cs:4409–4409](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4409-L4409)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19923,7 +19923,7 @@ flowchart TD
 
 ### FieldDeclaration `_retryRequestsIssued` · L4410–4410
 
-[Drilling.Common/Station/CStationProcess.cs:4410–4410](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4410-L4410)
+[Drilling.Common/Station/CStationProcess.cs:4410–4410](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4410-L4410)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19938,7 +19938,7 @@ flowchart TD
 
 ### FieldDeclaration `_retryWaitingForCompleteOff` · L4411–4411
 
-[Drilling.Common/Station/CStationProcess.cs:4411–4411](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4411-L4411)
+[Drilling.Common/Station/CStationProcess.cs:4411–4411](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4411-L4411)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19953,7 +19953,7 @@ flowchart TD
 
 ### FieldDeclaration `_lastRequest` · L4412–4412
 
-[Drilling.Common/Station/CStationProcess.cs:4412–4412](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4412-L4412)
+[Drilling.Common/Station/CStationProcess.cs:4412–4412](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4412-L4412)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19968,7 +19968,7 @@ flowchart TD
 
 ### FieldDeclaration `_lastCompletion` · L4413–4413
 
-[Drilling.Common/Station/CStationProcess.cs:4413–4413](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4413-L4413)
+[Drilling.Common/Station/CStationProcess.cs:4413–4413](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4413-L4413)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19983,7 +19983,7 @@ flowchart TD
 
 ### FieldDeclaration `_lastSignalTrace` · L4414–4414
 
-[Drilling.Common/Station/CStationProcess.cs:4414–4414](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4414-L4414)
+[Drilling.Common/Station/CStationProcess.cs:4414–4414](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4414-L4414)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19998,7 +19998,7 @@ flowchart TD
 
 ### PropertyDeclaration `MonitoringError` · L4415–4415
 
-[Drilling.Common/Station/CStationProcess.cs:4415–4415](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4415-L4415)
+[Drilling.Common/Station/CStationProcess.cs:4415–4415](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4415-L4415)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20013,7 +20013,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_MonitoringError` · L4415–4415
 
-[Drilling.Common/Station/CStationProcess.cs:4415–4415](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4415-L4415)
+[Drilling.Common/Station/CStationProcess.cs:4415–4415](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4415-L4415)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20028,7 +20028,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_MonitoringError` · L4415–4415
 
-[Drilling.Common/Station/CStationProcess.cs:4415–4415](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4415-L4415)
+[Drilling.Common/Station/CStationProcess.cs:4415–4415](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4415-L4415)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20049,7 +20049,7 @@ flowchart TD
 
 ### FieldDeclaration `CountId` · L4417–4417
 
-[Drilling.Common/Station/CStationProcess.cs:4417–4417](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4417-L4417)
+[Drilling.Common/Station/CStationProcess.cs:4417–4417](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4417-L4417)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20070,7 +20070,7 @@ flowchart TD
 
 ### FieldDeclaration `RequestId` · L4418–4418
 
-[Drilling.Common/Station/CStationProcess.cs:4418–4418](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4418-L4418)
+[Drilling.Common/Station/CStationProcess.cs:4418–4418](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4418-L4418)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20091,7 +20091,7 @@ flowchart TD
 
 ### FieldDeclaration `_gate` · L4419–4419
 
-[Drilling.Common/Station/CStationProcess.cs:4419–4419](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4419-L4419)
+[Drilling.Common/Station/CStationProcess.cs:4419–4419](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4419-L4419)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20119,7 +20119,7 @@ flowchart TD
 
 ### MethodDeclaration `Update` · L4422–4467
 
-[Drilling.Common/Station/CStationProcess.cs:4422–4467](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4422-L4467)
+[Drilling.Common/Station/CStationProcess.cs:4422–4467](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4422-L4467)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20140,7 +20140,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4004–4004](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4004-L4004) | .Update | False |
+| [Drilling.Common/Station/CStationProcess.cs:4004–4004](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4004-L4004) | .Update | False |
 
 호출하는 대상과 해석 범위:
 
@@ -20260,7 +20260,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Value` · L4430–4430
 
-[Drilling.Common/Station/CStationProcess.cs:4430–4430](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4430-L4430)
+[Drilling.Common/Station/CStationProcess.cs:4430–4430](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4430-L4430)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20279,8 +20279,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4431–4431](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4431-L4431) | Value | False |
-| [Drilling.Common/Station/CStationProcess.cs:4434–4434](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4434-L4434) | Value | False |
+| [Drilling.Common/Station/CStationProcess.cs:4431–4431](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4431-L4431) | Value | False |
+| [Drilling.Common/Station/CStationProcess.cs:4434–4434](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4434-L4434) | Value | False |
 
 호출하는 대상과 해석 범위:
 
@@ -20300,7 +20300,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Count` · L4431–4431
 
-[Drilling.Common/Station/CStationProcess.cs:4431–4431](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4431-L4431)
+[Drilling.Common/Station/CStationProcess.cs:4431–4431](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4431-L4431)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20319,8 +20319,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4432–4432](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4432-L4432) | Count | False |
-| [Drilling.Common/Station/CStationProcess.cs:4433–4433](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4433-L4433) | Count | False |
+| [Drilling.Common/Station/CStationProcess.cs:4432–4432](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4432-L4432) | Count | False |
+| [Drilling.Common/Station/CStationProcess.cs:4433–4433](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4433-L4433) | Count | False |
 
 호출하는 대상과 해석 범위:
 
@@ -20340,7 +20340,7 @@ flowchart TD
 
 ### MethodDeclaration `PublishIfChanged` · L4469–4520
 
-[Drilling.Common/Station/CStationProcess.cs:4469–4520](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4469-L4520)
+[Drilling.Common/Station/CStationProcess.cs:4469–4520](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4469-L4520)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20361,11 +20361,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4436–4436](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4436-L4436) | PublishIfChanged | False |
-| [Drilling.Common/Station/CStationProcess.cs:4460–4460](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4460-L4460) | PublishIfChanged | False |
-| [Drilling.Common/Station/CStationProcess.cs:4667–4667](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4667-L4667) | PublishIfChanged | False |
-| [Drilling.Common/Station/CStationProcess.cs:4722–4722](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4722-L4722) | PublishIfChanged | False |
-| [Drilling.Common/Station/CStationProcess.cs:4723–4723](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4723-L4723) | PublishIfChanged | False |
+| [Drilling.Common/Station/CStationProcess.cs:4436–4436](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4436-L4436) | PublishIfChanged | False |
+| [Drilling.Common/Station/CStationProcess.cs:4460–4460](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4460-L4460) | PublishIfChanged | False |
+| [Drilling.Common/Station/CStationProcess.cs:4667–4667](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4667-L4667) | PublishIfChanged | False |
+| [Drilling.Common/Station/CStationProcess.cs:4722–4722](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4722-L4722) | PublishIfChanged | False |
+| [Drilling.Common/Station/CStationProcess.cs:4723–4723](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4723-L4723) | PublishIfChanged | False |
 
 호출하는 대상과 해석 범위:
 
@@ -20490,7 +20490,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteLog` · L4522–4539
 
-[Drilling.Common/Station/CStationProcess.cs:4522–4539](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4522-L4539)
+[Drilling.Common/Station/CStationProcess.cs:4522–4539](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4522-L4539)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20509,26 +20509,26 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4435–4435](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4435-L4435) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4440–4440](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4440-L4440) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4459–4459](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4459-L4459) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4475–4475](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4475-L4475) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4481–4481](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4481-L4481) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4491–4491](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4491-L4491) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4501–4501](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4501-L4501) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4512–4512](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4512-L4512) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4517–4517](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4517-L4517) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4594–4594](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4594-L4594) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4656–4656](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4656-L4656) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4672–4672](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4672-L4672) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4698–4698](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4698-L4698) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4715–4715](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4715-L4715) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4717–4717](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4717-L4717) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4719–4719](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4719-L4719) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4736–4736](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4736-L4736) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4750–4750](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4750-L4750) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4755–4755](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4755-L4755) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4795–4795](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4795-L4795) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4435–4435](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4435-L4435) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4440–4440](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4440-L4440) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4459–4459](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4459-L4459) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4475–4475](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4475-L4475) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4481–4481](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4481-L4481) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4491–4491](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4491-L4491) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4501–4501](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4501-L4501) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4512–4512](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4512-L4512) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4517–4517](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4517-L4517) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4594–4594](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4594-L4594) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4656–4656](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4656-L4656) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4672–4672](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4672-L4672) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4698–4698](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4698-L4698) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4715–4715](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4715-L4715) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4717–4717](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4717-L4717) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4719–4719](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4719-L4719) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4736–4736](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4736-L4736) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4750–4750](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4750-L4750) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4755–4755](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4755-L4755) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4795–4795](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4795-L4795) | WriteLog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -20567,7 +20567,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsureConnectedRoute` · L4541–4548
 
-[Drilling.Common/Station/CStationProcess.cs:4541–4548](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4541-L4548)
+[Drilling.Common/Station/CStationProcess.cs:4541–4548](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4541-L4548)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20587,10 +20587,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4472–4472](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4472-L4472) | EnsureConnectedRoute | False |
-| [Drilling.Common/Station/CStationProcess.cs:4497–4497](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4497-L4497) | EnsureConnectedRoute | False |
-| [Drilling.Common/Station/CStationProcess.cs:4710–4710](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4710-L4710) | EnsureConnectedRoute | False |
-| [Drilling.Common/Station/CStationProcess.cs:4711–4711](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4711-L4711) | EnsureConnectedRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:4472–4472](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4472-L4472) | EnsureConnectedRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:4497–4497](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4497-L4497) | EnsureConnectedRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:4710–4710](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4710-L4710) | EnsureConnectedRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:4711–4711](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4711-L4711) | EnsureConnectedRoute | False |
 
 호출하는 대상과 해석 범위:
 
@@ -20635,7 +20635,7 @@ flowchart TD
 
 ### MethodDeclaration `Matches` · L4550–4562
 
-[Drilling.Common/Station/CStationProcess.cs:4550–4562](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4550-L4562)
+[Drilling.Common/Station/CStationProcess.cs:4550–4562](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4550-L4562)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20655,13 +20655,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4448–4448](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4448-L4448) | Matches | False |
-| [Drilling.Common/Station/CStationProcess.cs:4456–4456](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4456-L4456) | Matches | False |
-| [Drilling.Common/Station/CStationProcess.cs:4456–4456](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4456-L4456) | Matches | False |
-| [Drilling.Common/Station/CStationProcess.cs:4473–4473](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4473-L4473) | Matches | False |
-| [Drilling.Common/Station/CStationProcess.cs:4499–4499](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4499-L4499) | Matches | False |
-| [Drilling.Common/Station/CStationProcess.cs:4645–4645](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4645-L4645) | Matches | False |
-| [Drilling.Common/Station/CStationProcess.cs:4645–4645](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4645-L4645) | Matches | False |
+| [Drilling.Common/Station/CStationProcess.cs:4448–4448](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4448-L4448) | Matches | False |
+| [Drilling.Common/Station/CStationProcess.cs:4456–4456](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4456-L4456) | Matches | False |
+| [Drilling.Common/Station/CStationProcess.cs:4456–4456](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4456-L4456) | Matches | False |
+| [Drilling.Common/Station/CStationProcess.cs:4473–4473](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4473-L4473) | Matches | False |
+| [Drilling.Common/Station/CStationProcess.cs:4499–4499](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4499-L4499) | Matches | False |
+| [Drilling.Common/Station/CStationProcess.cs:4645–4645](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4645-L4645) | Matches | False |
+| [Drilling.Common/Station/CStationProcess.cs:4645–4645](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4645-L4645) | Matches | False |
 
 호출하는 대상과 해석 범위:
 
@@ -20700,7 +20700,7 @@ flowchart TD
 
 ### MethodDeclaration `StartCompletionMonitoring` · L4566–4603
 
-[Drilling.Common/Station/CStationProcess.cs:4566–4603](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4566-L4603)
+[Drilling.Common/Station/CStationProcess.cs:4566–4603](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4566-L4603)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20719,7 +20719,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3770–3770](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3770-L3770) | .StartCompletionMonitoring | False |
+| [Drilling.Common/Station/CStationProcess.cs:3770–3770](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3770-L3770) | .StartCompletionMonitoring | False |
 
 호출하는 대상과 해석 범위:
 
@@ -20797,7 +20797,7 @@ flowchart TD
 
 ### MethodDeclaration `StopCompletionMonitoring` · L4605–4635
 
-[Drilling.Common/Station/CStationProcess.cs:4605–4635](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4605-L4635)
+[Drilling.Common/Station/CStationProcess.cs:4605–4635](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4605-L4635)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20810,7 +20810,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3771–3771](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3771-L3771) | .StopCompletionMonitoring | False |
+| [Drilling.Common/Station/CStationProcess.cs:3771–3771](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3771-L3771) | .StopCompletionMonitoring | False |
 
 호출하는 대상과 해석 범위:
 
@@ -20865,7 +20865,7 @@ flowchart TD
 
 ### MethodDeclaration `CheckCompletion` · L4638–4762
 
-[Drilling.Common/Station/CStationProcess.cs:4638–4762](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4638-L4762)
+[Drilling.Common/Station/CStationProcess.cs:4638–4762](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4638-L4762)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20891,7 +20891,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4582–4582](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4582-L4582) | CheckCompletion | False |
+| [Drilling.Common/Station/CStationProcess.cs:4582–4582](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4582-L4582) | CheckCompletion | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21118,7 +21118,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Signal` · L4645–4645
 
-[Drilling.Common/Station/CStationProcess.cs:4645–4645](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4645-L4645)
+[Drilling.Common/Station/CStationProcess.cs:4645–4645](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4645-L4645)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21137,8 +21137,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4646–4646](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4646-L4646) | Signal | False |
-| [Drilling.Common/Station/CStationProcess.cs:4647–4647](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4647-L4647) | Signal | False |
+| [Drilling.Common/Station/CStationProcess.cs:4646–4646](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4646-L4646) | Signal | False |
+| [Drilling.Common/Station/CStationProcess.cs:4647–4647](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4647-L4647) | Signal | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21164,7 +21164,7 @@ flowchart TD
 
 ### MethodDeclaration `ClearPending` · L4764–4774
 
-[Drilling.Common/Station/CStationProcess.cs:4764–4774](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4764-L4774)
+[Drilling.Common/Station/CStationProcess.cs:4764–4774](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4764-L4774)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21177,8 +21177,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4680–4680](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4680-L4680) | ClearPending | False |
-| [Drilling.Common/Station/CStationProcess.cs:4744–4744](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4744-L4744) | ClearPending | False |
+| [Drilling.Common/Station/CStationProcess.cs:4680–4680](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4680-L4680) | ClearPending | False |
+| [Drilling.Common/Station/CStationProcess.cs:4744–4744](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4744-L4744) | ClearPending | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -21197,7 +21197,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadPolicy` · L4776–4785
 
-[Drilling.Common/Station/CStationProcess.cs:4776–4785](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4776-L4785)
+[Drilling.Common/Station/CStationProcess.cs:4776–4785](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4776-L4785)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21217,7 +21217,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4692–4692](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4692-L4692) | LoadPolicy | False |
+| [Drilling.Common/Station/CStationProcess.cs:4692–4692](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4692-L4692) | LoadPolicy | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21256,7 +21256,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Value` · L4781–4781
 
-[Drilling.Common/Station/CStationProcess.cs:4781–4781](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4781-L4781)
+[Drilling.Common/Station/CStationProcess.cs:4781–4781](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4781-L4781)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21275,8 +21275,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4783–4783](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4783-L4783) | Value | False |
-| [Drilling.Common/Station/CStationProcess.cs:4784–4784](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4784-L4784) | Value | False |
+| [Drilling.Common/Station/CStationProcess.cs:4783–4783](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4783-L4783) | Value | False |
+| [Drilling.Common/Station/CStationProcess.cs:4784–4784](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4784-L4784) | Value | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21296,7 +21296,7 @@ flowchart TD
 
 ### MethodDeclaration `NotifyRetryExhausted` · L4787–4797
 
-[Drilling.Common/Station/CStationProcess.cs:4787–4797](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4787-L4797)
+[Drilling.Common/Station/CStationProcess.cs:4787–4797](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4787-L4797)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21315,7 +21315,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4751–4751](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4751-L4751) | NotifyRetryExhausted | False |
+| [Drilling.Common/Station/CStationProcess.cs:4751–4751](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4751-L4751) | NotifyRetryExhausted | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21348,7 +21348,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHandoverCount` · L4799–4821
 
-[Drilling.Common/Station/CStationProcess.cs:4799–4821](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4799-L4821)
+[Drilling.Common/Station/CStationProcess.cs:4799–4821](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4799-L4821)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21368,7 +21368,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4716–4716](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4716-L4716) | ReadHandoverCount | False |
+| [Drilling.Common/Station/CStationProcess.cs:4716–4716](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4716-L4716) | ReadHandoverCount | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21453,7 +21453,7 @@ flowchart TD
 
 ### FieldDeclaration `SpeedId` · L4828–4828
 
-[Drilling.Common/Station/CStationProcess.cs:4828–4828](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4828-L4828)
+[Drilling.Common/Station/CStationProcess.cs:4828–4828](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4828-L4828)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21474,7 +21474,7 @@ flowchart TD
 
 ### FieldDeclaration `MachiningCompleteId` · L4829–4829
 
-[Drilling.Common/Station/CStationProcess.cs:4829–4829](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4829-L4829)
+[Drilling.Common/Station/CStationProcess.cs:4829–4829](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4829-L4829)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21495,7 +21495,7 @@ flowchart TD
 
 ### MethodDeclaration `PrepareDoReady` · L4830–4835
 
-[Drilling.Common/Station/CStationProcess.cs:4830–4835](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4830-L4835)
+[Drilling.Common/Station/CStationProcess.cs:4830–4835](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4830-L4835)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21515,7 +21515,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4051–4051](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4051-L4051) | StageProcessData().PrepareDoReady | False |
+| [Drilling.Common/Station/CStationProcess.cs:4051–4051](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4051-L4051) | StageProcessData().PrepareDoReady | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21543,7 +21543,7 @@ flowchart TD
 
 ### MethodDeclaration `PublishSpeed` · L4837–4841
 
-[Drilling.Common/Station/CStationProcess.cs:4837–4841](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4837-L4841)
+[Drilling.Common/Station/CStationProcess.cs:4837–4841](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4837-L4841)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21563,9 +21563,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3997–3997](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3997-L3997) | StageProcessData().PublishSpeed | False |
-| [Drilling.Common/Station/CStationProcess.cs:4017–4017](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4017-L4017) | StageProcessData().PublishSpeed | False |
-| [Drilling.Common/Station/CStationProcess.cs:4834–4834](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4834-L4834) | PublishSpeed | False |
+| [Drilling.Common/Station/CStationProcess.cs:3997–3997](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3997-L3997) | StageProcessData().PublishSpeed | False |
+| [Drilling.Common/Station/CStationProcess.cs:4017–4017](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4017-L4017) | StageProcessData().PublishSpeed | False |
+| [Drilling.Common/Station/CStationProcess.cs:4834–4834](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4834-L4834) | PublishSpeed | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21586,7 +21586,7 @@ flowchart TD
 
 ### MethodDeclaration `PublishMachiningComplete` · L4843–4843
 
-[Drilling.Common/Station/CStationProcess.cs:4843–4843](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4843-L4843)
+[Drilling.Common/Station/CStationProcess.cs:4843–4843](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4843-L4843)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21605,7 +21605,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3856–3856](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3856-L3856) | StageProcessData().PublishMachiningComplete | False |
+| [Drilling.Common/Station/CStationProcess.cs:3856–3856](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3856-L3856) | StageProcessData().PublishMachiningComplete | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21623,7 +21623,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetMachiningComplete` · L4844–4844
 
-[Drilling.Common/Station/CStationProcess.cs:4844–4844](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4844-L4844)
+[Drilling.Common/Station/CStationProcess.cs:4844–4844](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4844-L4844)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21642,7 +21642,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3938–3938](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3938-L3938) | StageProcessData().ResetMachiningComplete | False |
+| [Drilling.Common/Station/CStationProcess.cs:3938–3938](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3938-L3938) | StageProcessData().ResetMachiningComplete | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21660,7 +21660,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateSpeed` · L4845–4849
 
-[Drilling.Common/Station/CStationProcess.cs:4845–4849](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4845-L4849)
+[Drilling.Common/Station/CStationProcess.cs:4845–4849](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4845-L4849)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21679,8 +21679,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4832–4832](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4832-L4832) | ValidateSpeed | False |
-| [Drilling.Common/Station/CStationProcess.cs:4839–4839](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4839-L4839) | ValidateSpeed | False |
+| [Drilling.Common/Station/CStationProcess.cs:4832–4832](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4832-L4832) | ValidateSpeed | False |
+| [Drilling.Common/Station/CStationProcess.cs:4839–4839](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4839-L4839) | ValidateSpeed | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21711,7 +21711,7 @@ flowchart TD
 
 ### MethodDeclaration `Publish` · L4851–4914
 
-[Drilling.Common/Station/CStationProcess.cs:4851–4914](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4851-L4914)
+[Drilling.Common/Station/CStationProcess.cs:4851–4914](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4851-L4914)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21734,10 +21734,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4833–4833](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4833-L4833) | Publish | False |
-| [Drilling.Common/Station/CStationProcess.cs:4840–4840](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4840-L4840) | Publish | False |
-| [Drilling.Common/Station/CStationProcess.cs:4843–4843](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4843-L4843) | Publish | False |
-| [Drilling.Common/Station/CStationProcess.cs:4844–4844](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4844-L4844) | Publish | False |
+| [Drilling.Common/Station/CStationProcess.cs:4833–4833](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4833-L4833) | Publish | False |
+| [Drilling.Common/Station/CStationProcess.cs:4840–4840](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4840-L4840) | Publish | False |
+| [Drilling.Common/Station/CStationProcess.cs:4843–4843](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4843-L4843) | Publish | False |
+| [Drilling.Common/Station/CStationProcess.cs:4844–4844](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4844-L4844) | Publish | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21869,7 +21869,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Route` · L4905–4913
 
-[Drilling.Common/Station/CStationProcess.cs:4905–4913](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4905-L4913)
+[Drilling.Common/Station/CStationProcess.cs:4905–4913](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4905-L4913)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21888,8 +21888,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4855–4855](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4855-L4855) | Route | False |
-| [Drilling.Common/Station/CStationProcess.cs:4883–4883](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4883-L4883) | Route | False |
+| [Drilling.Common/Station/CStationProcess.cs:4855–4855](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4855-L4855) | Route | False |
+| [Drilling.Common/Station/CStationProcess.cs:4883–4883](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4883-L4883) | Route | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21935,7 +21935,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteLog` · L4916–4932
 
-[Drilling.Common/Station/CStationProcess.cs:4916–4932](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4916-L4932)
+[Drilling.Common/Station/CStationProcess.cs:4916–4932](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4916-L4932)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21954,12 +21954,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4859–4859](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4859-L4859) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4864–4864](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4864-L4864) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4878–4878](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4878-L4878) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4887–4887](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4887-L4887) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4896–4896](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4896-L4896) | WriteLog | False |
-| [Drilling.Common/Station/CStationProcess.cs:4901–4901](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4901-L4901) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4859–4859](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4859-L4859) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4864–4864](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4864-L4864) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4878–4878](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4878-L4878) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4887–4887](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4887-L4887) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4896–4896](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4896-L4896) | WriteLog | False |
+| [Drilling.Common/Station/CStationProcess.cs:4901–4901](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4901-L4901) | WriteLog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21998,7 +21998,7 @@ flowchart TD
 
 ### MethodDeclaration `Matches` · L4934–4946
 
-[Drilling.Common/Station/CStationProcess.cs:4934–4946](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4934-L4946)
+[Drilling.Common/Station/CStationProcess.cs:4934–4946](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4934-L4946)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22019,8 +22019,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4857–4857](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4857-L4857) | Matches | False |
-| [Drilling.Common/Station/CStationProcess.cs:4885–4885](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4885-L4885) | Matches | False |
+| [Drilling.Common/Station/CStationProcess.cs:4857–4857](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4857-L4857) | Matches | False |
+| [Drilling.Common/Station/CStationProcess.cs:4885–4885](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4885-L4885) | Matches | False |
 
 호출하는 대상과 해석 범위:
 
@@ -22059,7 +22059,7 @@ flowchart TD
 
 ### FieldDeclaration `ToleranceValueMm` · L4953–4953
 
-[Drilling.Common/Station/CStationProcess.cs:4953–4953](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4953-L4953)
+[Drilling.Common/Station/CStationProcess.cs:4953–4953](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4953-L4953)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22080,7 +22080,7 @@ flowchart TD
 
 ### FieldDeclaration `ToleranceMm` · L4954–4954
 
-[Drilling.Common/Station/CStationProcess.cs:4954–4954](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4954-L4954)
+[Drilling.Common/Station/CStationProcess.cs:4954–4954](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4954-L4954)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22101,7 +22101,7 @@ flowchart TD
 
 ### FieldDeclaration `PositionId` · L4955–4955
 
-[Drilling.Common/Station/CStationProcess.cs:4955–4955](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4955-L4955)
+[Drilling.Common/Station/CStationProcess.cs:4955–4955](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4955-L4955)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22122,7 +22122,7 @@ flowchart TD
 
 ### FieldDeclaration `BusyId` · L4956–4956
 
-[Drilling.Common/Station/CStationProcess.cs:4956–4956](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4956-L4956)
+[Drilling.Common/Station/CStationProcess.cs:4956–4956](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4956-L4956)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22143,7 +22143,7 @@ flowchart TD
 
 ### MethodDeclaration `Evaluate` · L4957–4994
 
-[Drilling.Common/Station/CStationProcess.cs:4957–4994](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4957-L4994)
+[Drilling.Common/Station/CStationProcess.cs:4957–4994](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4957-L4994)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22156,7 +22156,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4014–4014](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4014-L4014) | check.Evaluate | False |
+| [Drilling.Common/Station/CStationProcess.cs:4014–4014](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4014-L4014) | check.Evaluate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -22293,7 +22293,7 @@ flowchart TD
 
 ### MethodDeclaration `IsInputRoute` · L4996–4996
 
-[Drilling.Common/Station/CStationProcess.cs:4996–4996](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4996-L4996)
+[Drilling.Common/Station/CStationProcess.cs:4996–4996](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4996-L4996)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22312,9 +22312,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4971–4971](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4971-L4971) | IsInputRoute | False |
-| [Drilling.Common/Station/CStationProcess.cs:4971–4971](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4971-L4971) | IsInputRoute | False |
-| [Drilling.Common/Station/CStationProcess.cs:5000–5000](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5000-L5000) | IsInputRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:4971–4971](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4971-L4971) | IsInputRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:4971–4971](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4971-L4971) | IsInputRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:5000–5000](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5000-L5000) | IsInputRoute | False |
 
 호출하는 대상과 해석 범위:
 
@@ -22336,7 +22336,7 @@ flowchart TD
 
 ### MethodDeclaration `TryNumber` · L4997–5016
 
-[Drilling.Common/Station/CStationProcess.cs:4997–5016](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4997-L5016)
+[Drilling.Common/Station/CStationProcess.cs:4997–5016](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4997-L5016)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22357,8 +22357,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4986–4986](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4986-L4986) | TryNumber | False |
-| [Drilling.Common/Station/CStationProcess.cs:4986–4986](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4986-L4986) | TryNumber | False |
+| [Drilling.Common/Station/CStationProcess.cs:4986–4986](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4986-L4986) | TryNumber | False |
+| [Drilling.Common/Station/CStationProcess.cs:4986–4986](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4986-L4986) | TryNumber | False |
 
 호출하는 대상과 해석 범위:
 
@@ -22408,7 +22408,7 @@ flowchart TD
 
 ### PropertyDeclaration `Scenario` · L5021–5021
 
-[Drilling.Common/Station/CStationProcess.cs:5021–5021](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5021-L5021)
+[Drilling.Common/Station/CStationProcess.cs:5021–5021](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5021-L5021)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22423,7 +22423,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Scenario` · L5021–5021
 
-[Drilling.Common/Station/CStationProcess.cs:5021–5021](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5021-L5021)
+[Drilling.Common/Station/CStationProcess.cs:5021–5021](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5021-L5021)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22438,7 +22438,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_Scenario` · L5021–5021
 
-[Drilling.Common/Station/CStationProcess.cs:5021–5021](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5021-L5021)
+[Drilling.Common/Station/CStationProcess.cs:5021–5021](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5021-L5021)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22459,7 +22459,7 @@ flowchart TD
 
 ### PropertyDeclaration `CycleId` · L5022–5022
 
-[Drilling.Common/Station/CStationProcess.cs:5022–5022](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5022-L5022)
+[Drilling.Common/Station/CStationProcess.cs:5022–5022](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5022-L5022)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22474,7 +22474,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CycleId` · L5022–5022
 
-[Drilling.Common/Station/CStationProcess.cs:5022–5022](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5022-L5022)
+[Drilling.Common/Station/CStationProcess.cs:5022–5022](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5022-L5022)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22489,7 +22489,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_CycleId` · L5022–5022
 
-[Drilling.Common/Station/CStationProcess.cs:5022–5022](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5022-L5022)
+[Drilling.Common/Station/CStationProcess.cs:5022–5022](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5022-L5022)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22510,7 +22510,7 @@ flowchart TD
 
 ### PropertyDeclaration `ConnectedSignalIds` · L5026–5026
 
-[Drilling.Common/Station/CStationProcess.cs:5026–5026](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5026-L5026)
+[Drilling.Common/Station/CStationProcess.cs:5026–5026](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5026-L5026)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22525,7 +22525,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ConnectedSignalIds` · L5026–5026
 
-[Drilling.Common/Station/CStationProcess.cs:5026–5026](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5026-L5026)
+[Drilling.Common/Station/CStationProcess.cs:5026–5026](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5026-L5026)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22540,7 +22540,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ConnectedSignalIds` · L5026–5026
 
-[Drilling.Common/Station/CStationProcess.cs:5026–5026](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5026-L5026)
+[Drilling.Common/Station/CStationProcess.cs:5026–5026](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5026-L5026)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22561,7 +22561,7 @@ flowchart TD
 
 ### FieldDeclaration `StgAble` · L5046–5046
 
-[Drilling.Common/Station/CStationProcess.cs:5046–5046](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5046-L5046)
+[Drilling.Common/Station/CStationProcess.cs:5046–5046](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5046-L5046)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22582,7 +22582,7 @@ flowchart TD
 
 ### FieldDeclaration `StgStart` · L5047–5047
 
-[Drilling.Common/Station/CStationProcess.cs:5047–5047](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5047-L5047)
+[Drilling.Common/Station/CStationProcess.cs:5047–5047](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5047-L5047)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22603,7 +22603,7 @@ flowchart TD
 
 ### FieldDeclaration `StgComplete` · L5048–5048
 
-[Drilling.Common/Station/CStationProcess.cs:5048–5048](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5048-L5048)
+[Drilling.Common/Station/CStationProcess.cs:5048–5048](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5048-L5048)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22624,7 +22624,7 @@ flowchart TD
 
 ### FieldDeclaration `PrcAble` · L5049–5049
 
-[Drilling.Common/Station/CStationProcess.cs:5049–5049](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5049-L5049)
+[Drilling.Common/Station/CStationProcess.cs:5049–5049](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5049-L5049)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22645,7 +22645,7 @@ flowchart TD
 
 ### FieldDeclaration `PrcStart` · L5050–5050
 
-[Drilling.Common/Station/CStationProcess.cs:5050–5050](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5050-L5050)
+[Drilling.Common/Station/CStationProcess.cs:5050–5050](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5050-L5050)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22666,7 +22666,7 @@ flowchart TD
 
 ### FieldDeclaration `PrcComplete` · L5051–5051
 
-[Drilling.Common/Station/CStationProcess.cs:5051–5051](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5051-L5051)
+[Drilling.Common/Station/CStationProcess.cs:5051–5051](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5051-L5051)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22687,7 +22687,7 @@ flowchart TD
 
 ### FieldDeclaration `StgProcessAble` · L5052–5052
 
-[Drilling.Common/Station/CStationProcess.cs:5052–5052](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5052-L5052)
+[Drilling.Common/Station/CStationProcess.cs:5052–5052](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5052-L5052)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22708,7 +22708,7 @@ flowchart TD
 
 ### FieldDeclaration `StgDistortionAble` · L5053–5053
 
-[Drilling.Common/Station/CStationProcess.cs:5053–5053](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5053-L5053)
+[Drilling.Common/Station/CStationProcess.cs:5053–5053](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5053-L5053)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22729,7 +22729,7 @@ flowchart TD
 
 ### FieldDeclaration `StgDistortionComplete` · L5054–5054
 
-[Drilling.Common/Station/CStationProcess.cs:5054–5054](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5054-L5054)
+[Drilling.Common/Station/CStationProcess.cs:5054–5054](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5054-L5054)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22750,7 +22750,7 @@ flowchart TD
 
 ### FieldDeclaration `PrcDistortionAble` · L5055–5055
 
-[Drilling.Common/Station/CStationProcess.cs:5055–5055](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5055-L5055)
+[Drilling.Common/Station/CStationProcess.cs:5055–5055](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5055-L5055)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22771,7 +22771,7 @@ flowchart TD
 
 ### FieldDeclaration `PrcDistortionComplete` · L5056–5056
 
-[Drilling.Common/Station/CStationProcess.cs:5056–5056](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5056-L5056)
+[Drilling.Common/Station/CStationProcess.cs:5056–5056](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5056-L5056)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22792,7 +22792,7 @@ flowchart TD
 
 ### FieldDeclaration `DistortionOutputs` · L5057–5057
 
-[Drilling.Common/Station/CStationProcess.cs:5057–5057](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5057-L5057)
+[Drilling.Common/Station/CStationProcess.cs:5057–5057](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5057-L5057)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22813,7 +22813,7 @@ flowchart TD
 
 ### FieldDeclaration `DistortionActionIds` · L5058–5058
 
-[Drilling.Common/Station/CStationProcess.cs:5058–5058](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5058-L5058)
+[Drilling.Common/Station/CStationProcess.cs:5058–5058](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5058-L5058)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22834,7 +22834,7 @@ flowchart TD
 
 ### FieldDeclaration `_sync` · L5059–5059
 
-[Drilling.Common/Station/CStationProcess.cs:5059–5059](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5059-L5059)
+[Drilling.Common/Station/CStationProcess.cs:5059–5059](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5059-L5059)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22862,7 +22862,7 @@ flowchart TD
 
 ### FieldDeclaration `_stop` · L5060–5060
 
-[Drilling.Common/Station/CStationProcess.cs:5060–5060](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5060-L5060)
+[Drilling.Common/Station/CStationProcess.cs:5060–5060](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5060-L5060)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22877,7 +22877,7 @@ flowchart TD
 
 ### FieldDeclaration `_worker` · L5061–5061
 
-[Drilling.Common/Station/CStationProcess.cs:5061–5061](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5061-L5061)
+[Drilling.Common/Station/CStationProcess.cs:5061–5061](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5061-L5061)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22892,7 +22892,7 @@ flowchart TD
 
 ### FieldDeclaration `_cleanupFailed` · L5062–5062
 
-[Drilling.Common/Station/CStationProcess.cs:5062–5062](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5062-L5062)
+[Drilling.Common/Station/CStationProcess.cs:5062–5062](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5062-L5062)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22907,7 +22907,7 @@ flowchart TD
 
 ### FieldDeclaration `_cleanupTasks` · L5063–5063
 
-[Drilling.Common/Station/CStationProcess.cs:5063–5063](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5063-L5063)
+[Drilling.Common/Station/CStationProcess.cs:5063–5063](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5063-L5063)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22922,7 +22922,7 @@ flowchart TD
 
 ### FieldDeclaration `_cleanupOutputs` · L5064–5064
 
-[Drilling.Common/Station/CStationProcess.cs:5064–5064](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5064-L5064)
+[Drilling.Common/Station/CStationProcess.cs:5064–5064](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5064-L5064)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22937,7 +22937,7 @@ flowchart TD
 
 ### FieldDeclaration `_tasksIssued` · L5065–5065
 
-[Drilling.Common/Station/CStationProcess.cs:5065–5065](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5065-L5065)
+[Drilling.Common/Station/CStationProcess.cs:5065–5065](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5065-L5065)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22952,7 +22952,7 @@ flowchart TD
 
 ### FieldDeclaration `_loadLatestScripts` · L5066–5066
 
-[Drilling.Common/Station/CStationProcess.cs:5066–5066](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5066-L5066)
+[Drilling.Common/Station/CStationProcess.cs:5066–5066](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5066-L5066)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22967,7 +22967,7 @@ flowchart TD
 
 ### FieldDeclaration `_distortionActions` · L5067–5067
 
-[Drilling.Common/Station/CStationProcess.cs:5067–5067](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5067-L5067)
+[Drilling.Common/Station/CStationProcess.cs:5067–5067](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5067-L5067)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22982,7 +22982,7 @@ flowchart TD
 
 ### FieldDeclaration `_distortionOutputsOwned` · L5068–5068
 
-[Drilling.Common/Station/CStationProcess.cs:5068–5068](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5068-L5068)
+[Drilling.Common/Station/CStationProcess.cs:5068–5068](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5068-L5068)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22997,7 +22997,7 @@ flowchart TD
 
 ### FieldDeclaration `_distortionNeedsDoReady` · L5068–5068
 
-[Drilling.Common/Station/CStationProcess.cs:5068–5068](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5068-L5068)
+[Drilling.Common/Station/CStationProcess.cs:5068–5068](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5068-L5068)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23012,7 +23012,7 @@ flowchart TD
 
 ### PropertyDeclaration `DistortionSnapshot` · L5069–5069
 
-[Drilling.Common/Station/CStationProcess.cs:5069–5069](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5069-L5069)
+[Drilling.Common/Station/CStationProcess.cs:5069–5069](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5069-L5069)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23039,7 +23039,7 @@ flowchart TD
 
 ### PropertyDeclaration `DistortionGlassId` · L5070–5070
 
-[Drilling.Common/Station/CStationProcess.cs:5070–5070](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5070-L5070)
+[Drilling.Common/Station/CStationProcess.cs:5070–5070](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5070-L5070)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23066,7 +23066,7 @@ flowchart TD
 
 ### PropertyDeclaration `NeedsCleanup` · L5071–5071
 
-[Drilling.Common/Station/CStationProcess.cs:5071–5071](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5071-L5071)
+[Drilling.Common/Station/CStationProcess.cs:5071–5071](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5071-L5071)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23093,7 +23093,7 @@ flowchart TD
 
 ### EventFieldDeclaration `Failed` · L5072–5072
 
-[Drilling.Common/Station/CStationProcess.cs:5072–5072](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5072-L5072)
+[Drilling.Common/Station/CStationProcess.cs:5072–5072](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5072-L5072)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23108,7 +23108,7 @@ flowchart TD
 
 ### FieldDeclaration `_scenario` · L5073–5073
 
-[Drilling.Common/Station/CStationProcess.cs:5073–5073](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5073-L5073)
+[Drilling.Common/Station/CStationProcess.cs:5073–5073](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5073-L5073)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23129,7 +23129,7 @@ flowchart TD
 
 ### MethodDeclaration `ReportFailure` · L5074–5074
 
-[Drilling.Common/Station/CStationProcess.cs:5074–5074](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5074-L5074)
+[Drilling.Common/Station/CStationProcess.cs:5074–5074](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5074-L5074)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23148,10 +23148,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5348–5348](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5348-L5348) | ReportFailure | False |
-| [Drilling.Common/Station/CStationProcess.cs:5374–5374](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5374-L5374) | ReportFailure | False |
-| [Drilling.Common/Station/CStationProcess.cs:5389–5389](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5389-L5389) | ReportFailure | False |
-| [Drilling.Common/Station/CStationProcess.cs:5409–5409](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5409-L5409) | ReportFailure | False |
+| [Drilling.Common/Station/CStationProcess.cs:5348–5348](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5348-L5348) | ReportFailure | False |
+| [Drilling.Common/Station/CStationProcess.cs:5374–5374](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5374-L5374) | ReportFailure | False |
+| [Drilling.Common/Station/CStationProcess.cs:5389–5389](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5389-L5389) | ReportFailure | False |
+| [Drilling.Common/Station/CStationProcess.cs:5409–5409](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5409-L5409) | ReportFailure | False |
 
 호출하는 대상과 해석 범위:
 
@@ -23169,7 +23169,7 @@ flowchart TD
 
 ### FieldDeclaration `_status` · L5076–5076
 
-[Drilling.Common/Station/CStationProcess.cs:5076–5076](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5076-L5076)
+[Drilling.Common/Station/CStationProcess.cs:5076–5076](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5076-L5076)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23197,7 +23197,7 @@ flowchart TD
 
 ### PropertyDeclaration `Status` · L5077–5077
 
-[Drilling.Common/Station/CStationProcess.cs:5077–5077](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5077-L5077)
+[Drilling.Common/Station/CStationProcess.cs:5077–5077](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5077-L5077)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23224,7 +23224,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsRunning` · L5079–5086
 
-[Drilling.Common/Station/CStationProcess.cs:5079–5086](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5079-L5086)
+[Drilling.Common/Station/CStationProcess.cs:5079–5086](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5079-L5086)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23239,7 +23239,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsRunning` · L5081–5085
 
-[Drilling.Common/Station/CStationProcess.cs:5081–5085](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5081-L5085)
+[Drilling.Common/Station/CStationProcess.cs:5081–5085](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5081-L5085)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23270,7 +23270,7 @@ flowchart TD
 
 ### MethodDeclaration `Start` · L5088–5125
 
-[Drilling.Common/Station/CStationProcess.cs:5088–5125](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5088-L5125)
+[Drilling.Common/Station/CStationProcess.cs:5088–5125](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5088-L5125)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23296,7 +23296,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4039–4083](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4039-L4083) | StageRequests.Start | False |
+| [Drilling.Common/Station/CStationProcess.cs:4039–4083](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4039-L4083) | StageRequests.Start | False |
 
 호출하는 대상과 해석 범위:
 
@@ -23368,7 +23368,7 @@ flowchart TD
 
 ### MethodDeclaration `StopAsync` · L5127–5151
 
-[Drilling.Common/Station/CStationProcess.cs:5127–5151](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5127-L5151)
+[Drilling.Common/Station/CStationProcess.cs:5127–5151](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5127-L5151)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23381,11 +23381,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:280–280](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L280-L280) | _stationManager.StageRequests.StopAsync | False |
-| [Drilling.Common/Station/CStationProcess.cs:3920–3920](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3920-L3920) | StageRequests.StopAsync | False |
-| [Drilling.UI/CRootView.cs:731–731](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L731-L731) | _stationManager.StageRequests.StopAsync | False |
-| [Drilling.UI/CRootView.cs:2077–2077](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2077-L2077) | _stationManager.StageRequests.StopAsync | False |
-| [Drilling.UI/CRootView.cs:3055–3055](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3055-L3055) | _stationManager.StageRequests.StopAsync | False |
+| [Drilling.Common/Managers/CManager.cs:280–280](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L280-L280) | _stationManager.StageRequests.StopAsync | False |
+| [Drilling.Common/Station/CStationProcess.cs:3920–3920](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3920-L3920) | StageRequests.StopAsync | False |
+| [Drilling.UI/CRootView.cs:731–731](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L731-L731) | _stationManager.StageRequests.StopAsync | False |
+| [Drilling.UI/CRootView.cs:2077–2077](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2077-L2077) | _stationManager.StageRequests.StopAsync | False |
+| [Drilling.UI/CRootView.cs:3055–3055](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3055-L3055) | _stationManager.StageRequests.StopAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -23446,7 +23446,7 @@ flowchart TD
 
 ### MethodDeclaration `Run` · L5153–5356
 
-[Drilling.Common/Station/CStationProcess.cs:5153–5356](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5153-L5356)
+[Drilling.Common/Station/CStationProcess.cs:5153–5356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5153-L5356)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23469,7 +23469,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5123–5123](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5123-L5123) | Run | False |
+| [Drilling.Common/Station/CStationProcess.cs:5123–5123](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5123-L5123) | Run | False |
 
 호출하는 대상과 해석 범위:
 
@@ -23852,7 +23852,7 @@ flowchart TD
 
 ### MethodDeclaration `Cleanup` · L5358–5418
 
-[Drilling.Common/Station/CStationProcess.cs:5358–5418](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5358-L5418)
+[Drilling.Common/Station/CStationProcess.cs:5358–5418](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5358-L5418)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23872,8 +23872,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5135–5135](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5135-L5135) | Cleanup | False |
-| [Drilling.Common/Station/CStationProcess.cs:5352–5352](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5352-L5352) | Cleanup | False |
+| [Drilling.Common/Station/CStationProcess.cs:5135–5135](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5135-L5135) | Cleanup | False |
+| [Drilling.Common/Station/CStationProcess.cs:5352–5352](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5352-L5352) | Cleanup | False |
 
 호출하는 대상과 해석 범위:
 
@@ -24012,7 +24012,7 @@ flowchart TD
 
 ### MethodDeclaration `Action` · L5420–5452
 
-[Drilling.Common/Station/CStationProcess.cs:5420–5452](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5420-L5452)
+[Drilling.Common/Station/CStationProcess.cs:5420–5452](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5420-L5452)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24035,33 +24035,33 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5247–5247](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5247-L5247) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5249–5249](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5249-L5249) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5268–5268](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5268-L5268) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5270–5270](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5270-L5270) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5276–5304](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5276-L5304) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5659–5659](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5659-L5659) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5663–5663](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5663-L5663) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5667–5667](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5667-L5667) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5671–5671](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5671-L5671) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5707–5720](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5707-L5720) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5724–5724](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5724-L5724) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5732–5758](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5732-L5758) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5785–5785](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5785-L5785) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5792–5792](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5792-L5792) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5794–5794](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5794-L5794) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5796–5796](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5796-L5796) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5800–5807](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5800-L5807) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5827–5827](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5827-L5827) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5830–5830](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5830-L5830) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5831–5831](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5831-L5831) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5835–5841](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5835-L5841) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5860–5860](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5860-L5860) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5866–5866](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5866-L5866) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5868–5868](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5868-L5868) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5876–5895](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5876-L5895) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5904–5904](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5904-L5904) | Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5912–5918](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5912-L5918) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5247–5247](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5247-L5247) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5249–5249](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5249-L5249) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5268–5268](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5268-L5268) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5270–5270](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5270-L5270) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5276–5304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5276-L5304) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5659–5659](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5659-L5659) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5663–5663](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5663-L5663) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5667–5667](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5667-L5667) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5671–5671](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5671-L5671) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5707–5720](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5707-L5720) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5724–5724](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5724-L5724) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5732–5758](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5732-L5758) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5785–5785](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5785-L5785) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5792–5792](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5792-L5792) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5794–5794](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5794-L5794) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5796–5796](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5796-L5796) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5800–5807](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5800-L5807) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5827–5827](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5827-L5827) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5830–5830](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5830-L5830) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5831–5831](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5831-L5831) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5835–5841](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5835-L5841) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5860–5860](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5860-L5860) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5866–5866](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5866-L5866) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5868–5868](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5868-L5868) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5876–5895](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5876-L5895) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5904–5904](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5904-L5904) | Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5912–5918](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5912-L5918) | Action | False |
 
 호출하는 대상과 해석 범위:
 
@@ -24151,7 +24151,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteConfirmed` · L5454–5473
 
-[Drilling.Common/Station/CStationProcess.cs:5454–5473](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5454-L5473)
+[Drilling.Common/Station/CStationProcess.cs:5454–5473](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5454-L5473)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24172,28 +24172,28 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5194–5194](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5194-L5194) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5263–5263](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5263-L5263) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5266–5266](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5266-L5266) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5272–5272](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5272-L5272) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5288–5288](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5288-L5288) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5691–5691](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5691-L5691) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5695–5695](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5695-L5695) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5700–5700](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5700-L5700) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5728–5728](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5728-L5728) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5737–5737](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5737-L5737) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5782–5782](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5782-L5782) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5788–5788](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5788-L5788) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5798–5798](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5798-L5798) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5805–5805](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5805-L5805) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5825–5825](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5825-L5825) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5828–5828](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5828-L5828) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5832–5832](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5832-L5832) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5837–5837](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5837-L5837) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5861–5861](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5861-L5861) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5864–5864](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5864-L5864) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5871–5871](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5871-L5871) | WriteConfirmed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5881–5881](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5881-L5881) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5194–5194](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5194-L5194) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5263–5263](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5263-L5263) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5266–5266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5266-L5266) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5272–5272](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5272-L5272) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5288–5288](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5288-L5288) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5691–5691](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5691-L5691) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5695–5695](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5695-L5695) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5700–5700](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5700-L5700) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5728–5728](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5728-L5728) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5737–5737](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5737-L5737) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5782–5782](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5782-L5782) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5788–5788](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5788-L5788) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5798–5798](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5798-L5798) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5805–5805](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5805-L5805) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5825–5825](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5825-L5825) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5828–5828](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5828-L5828) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5832–5832](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5832-L5832) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5837–5837](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5837-L5837) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5861–5861](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5861-L5861) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5864–5864](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5864-L5864) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5871–5871](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5871-L5871) | WriteConfirmed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5881–5881](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5881-L5881) | WriteConfirmed | False |
 
 호출하는 대상과 해석 범위:
 
@@ -24268,7 +24268,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitSignal` · L5475–5526
 
-[Drilling.Common/Station/CStationProcess.cs:5475–5526](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5475-L5526)
+[Drilling.Common/Station/CStationProcess.cs:5475–5526](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5475-L5526)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24291,24 +24291,24 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5265–5265](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5265-L5265) | WaitSignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5274–5274](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5274-L5274) | WaitSignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5300–5300](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5300-L5300) | WaitSignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5464–5464](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5464-L5464) | WaitSignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5697–5697](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5697-L5697) | WaitSignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5730–5730](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5730-L5730) | WaitSignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5750–5750](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5750-L5750) | WaitSignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5783–5783](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5783-L5783) | WaitSignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5786–5786](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5786-L5786) | WaitSignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5790–5790](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5790-L5790) | WaitSignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5803–5803](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5803-L5803) | WaitSignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5804–5804](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5804-L5804) | WaitSignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5834–5834](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5834-L5834) | WaitSignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5838–5838](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5838-L5838) | WaitSignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5839–5839](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5839-L5839) | WaitSignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5863–5863](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5863-L5863) | WaitSignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5874–5874](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5874-L5874) | WaitSignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5890–5890](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5890-L5890) | WaitSignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5265–5265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5265-L5265) | WaitSignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5274–5274](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5274-L5274) | WaitSignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5300–5300](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5300-L5300) | WaitSignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5464–5464](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5464-L5464) | WaitSignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5697–5697](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5697-L5697) | WaitSignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5730–5730](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5730-L5730) | WaitSignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5750–5750](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5750-L5750) | WaitSignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5783–5783](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5783-L5783) | WaitSignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5786–5786](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5786-L5786) | WaitSignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5790–5790](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5790-L5790) | WaitSignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5803–5803](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5803-L5803) | WaitSignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5804–5804](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5804-L5804) | WaitSignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5834–5834](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5834-L5834) | WaitSignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5838–5838](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5838-L5838) | WaitSignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5839–5839](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5839-L5839) | WaitSignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5863–5863](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5863-L5863) | WaitSignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5874–5874](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5874-L5874) | WaitSignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5890–5890](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5890-L5890) | WaitSignal | False |
 
 호출하는 대상과 해석 범위:
 
@@ -24448,7 +24448,7 @@ flowchart TD
 
 ### MethodDeclaration `CheckActiveWork` · L5528–5533
 
-[Drilling.Common/Station/CStationProcess.cs:5528–5533](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5528-L5533)
+[Drilling.Common/Station/CStationProcess.cs:5528–5533](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5528-L5533)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24461,9 +24461,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5325–5325](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5325-L5325) | CheckActiveWork | False |
-| [Drilling.Common/Station/CStationProcess.cs:5489–5489](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5489-L5489) | CheckActiveWork | False |
-| [Drilling.Common/Station/CStationProcess.cs:5681–5681](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5681-L5681) | CheckActiveWork | False |
+| [Drilling.Common/Station/CStationProcess.cs:5325–5325](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5325-L5325) | CheckActiveWork | False |
+| [Drilling.Common/Station/CStationProcess.cs:5489–5489](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5489-L5489) | CheckActiveWork | False |
+| [Drilling.Common/Station/CStationProcess.cs:5681–5681](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5681-L5681) | CheckActiveWork | False |
 
 호출하는 대상과 해석 범위:
 
@@ -24501,7 +24501,7 @@ flowchart TD
 
 ### FieldDeclaration `_initializedOutputs` · L5535–5535
 
-[Drilling.Common/Station/CStationProcess.cs:5535–5535](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5535-L5535)
+[Drilling.Common/Station/CStationProcess.cs:5535–5535](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5535-L5535)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24522,7 +24522,7 @@ flowchart TD
 
 ### FieldDeclaration `_doReadyOutputsOwned` · L5536–5536
 
-[Drilling.Common/Station/CStationProcess.cs:5536–5536](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5536-L5536)
+[Drilling.Common/Station/CStationProcess.cs:5536–5536](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5536-L5536)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24537,7 +24537,7 @@ flowchart TD
 
 ### MethodDeclaration `InputsFor` · L5537–5544
 
-[Drilling.Common/Station/CStationProcess.cs:5537–5544](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5537-L5544)
+[Drilling.Common/Station/CStationProcess.cs:5537–5544](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5537-L5544)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24556,15 +24556,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5182–5182](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5182-L5182) | InputsFor | False |
-| [Drilling.Common/Station/CStationProcess.cs:5184–5184](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5184-L5184) | InputsFor | False |
-| [Drilling.Common/Station/CStationProcess.cs:5519–5519](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5519-L5519) | InputsFor | False |
-| [Drilling.Common/Station/CStationProcess.cs:5546–5546](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5546-L5546) | InputsFor | False |
-| [Drilling.Common/Station/CStationProcess.cs:5977–5977](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5977-L5977) | InputsFor | False |
-| [Drilling.Common/Station/CStationProcess.cs:5977–5977](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5977-L5977) | InputsFor | False |
-| [Drilling.Common/Station/CStationProcess.cs:5978–5978](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5978-L5978) | InputsFor | False |
-| [Drilling.Common/Station/CStationProcess.cs:5978–5978](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5978-L5978) | InputsFor | False |
-| [Drilling.Common/Station/CStationProcess.cs:5978–5978](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5978-L5978) | InputsFor | False |
+| [Drilling.Common/Station/CStationProcess.cs:5182–5182](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5182-L5182) | InputsFor | False |
+| [Drilling.Common/Station/CStationProcess.cs:5184–5184](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5184-L5184) | InputsFor | False |
+| [Drilling.Common/Station/CStationProcess.cs:5519–5519](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5519-L5519) | InputsFor | False |
+| [Drilling.Common/Station/CStationProcess.cs:5546–5546](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5546-L5546) | InputsFor | False |
+| [Drilling.Common/Station/CStationProcess.cs:5977–5977](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5977-L5977) | InputsFor | False |
+| [Drilling.Common/Station/CStationProcess.cs:5977–5977](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5977-L5977) | InputsFor | False |
+| [Drilling.Common/Station/CStationProcess.cs:5978–5978](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5978-L5978) | InputsFor | False |
+| [Drilling.Common/Station/CStationProcess.cs:5978–5978](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5978-L5978) | InputsFor | False |
+| [Drilling.Common/Station/CStationProcess.cs:5978–5978](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5978-L5978) | InputsFor | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -24585,7 +24585,7 @@ flowchart TD
 
 ### MethodDeclaration `CurrentInputs` · L5546–5546
 
-[Drilling.Common/Station/CStationProcess.cs:5546–5546](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5546-L5546)
+[Drilling.Common/Station/CStationProcess.cs:5546–5546](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5546-L5546)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24598,8 +24598,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5579–5579](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5579-L5579) | CurrentInputs | False |
-| [Drilling.Common/Station/CStationProcess.cs:5979–5979](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5979-L5979) | CurrentInputs | False |
+| [Drilling.Common/Station/CStationProcess.cs:5579–5579](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5579-L5579) | CurrentInputs | False |
+| [Drilling.Common/Station/CStationProcess.cs:5979–5979](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5979-L5979) | CurrentInputs | False |
 
 호출하는 대상과 해석 범위:
 
@@ -24617,7 +24617,7 @@ flowchart TD
 
 ### MethodDeclaration `OutputsFor` · L5547–5554
 
-[Drilling.Common/Station/CStationProcess.cs:5547–5554](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5547-L5554)
+[Drilling.Common/Station/CStationProcess.cs:5547–5554](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5547-L5554)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24636,10 +24636,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5186–5186](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5186-L5186) | OutputsFor | False |
-| [Drilling.Common/Station/CStationProcess.cs:5189–5189](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5189-L5189) | OutputsFor | False |
-| [Drilling.Common/Station/CStationProcess.cs:5395–5395](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5395-L5395) | OutputsFor | False |
-| [Drilling.Common/Station/CStationProcess.cs:5979–5979](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5979-L5979) | OutputsFor | False |
+| [Drilling.Common/Station/CStationProcess.cs:5186–5186](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5186-L5186) | OutputsFor | False |
+| [Drilling.Common/Station/CStationProcess.cs:5189–5189](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5189-L5189) | OutputsFor | False |
+| [Drilling.Common/Station/CStationProcess.cs:5395–5395](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5395-L5395) | OutputsFor | False |
+| [Drilling.Common/Station/CStationProcess.cs:5979–5979](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5979-L5979) | OutputsFor | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -24660,7 +24660,7 @@ flowchart TD
 
 ### MethodDeclaration `SetOutputOwnership` · L5556–5566
 
-[Drilling.Common/Station/CStationProcess.cs:5556–5566](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5556-L5566)
+[Drilling.Common/Station/CStationProcess.cs:5556–5566](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5556-L5566)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24680,8 +24680,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5192–5192](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5192-L5192) | SetOutputOwnership | False |
-| [Drilling.Common/Station/CStationProcess.cs:5195–5195](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5195-L5195) | SetOutputOwnership | False |
+| [Drilling.Common/Station/CStationProcess.cs:5192–5192](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5192-L5192) | SetOutputOwnership | False |
+| [Drilling.Common/Station/CStationProcess.cs:5195–5195](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5195-L5195) | SetOutputOwnership | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -24717,7 +24717,7 @@ flowchart TD
 
 ### MethodDeclaration `DescribeSample` · L5568–5572
 
-[Drilling.Common/Station/CStationProcess.cs:5568–5572](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5568-L5572)
+[Drilling.Common/Station/CStationProcess.cs:5568–5572](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5568-L5572)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24737,11 +24737,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5498–5498](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5498-L5498) | DescribeSample | False |
-| [Drilling.Common/Station/CStationProcess.cs:5519–5519](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5519-L5519) | DescribeSample | False |
-| [Drilling.Common/Station/CStationProcess.cs:5587–5587](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5587-L5587) | DescribeSample | False |
-| [Drilling.Common/Station/CStationProcess.cs:5598–5598](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5598-L5598) | DescribeSample | False |
-| [Drilling.Common/Station/CStationProcess.cs:5608–5608](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5608-L5608) | DescribeSample | False |
+| [Drilling.Common/Station/CStationProcess.cs:5498–5498](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5498-L5498) | DescribeSample | False |
+| [Drilling.Common/Station/CStationProcess.cs:5519–5519](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5519-L5519) | DescribeSample | False |
+| [Drilling.Common/Station/CStationProcess.cs:5587–5587](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5587-L5587) | DescribeSample | False |
+| [Drilling.Common/Station/CStationProcess.cs:5598–5598](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5598-L5598) | DescribeSample | False |
+| [Drilling.Common/Station/CStationProcess.cs:5608–5608](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5608-L5608) | DescribeSample | False |
 
 호출하는 대상과 해석 범위:
 
@@ -24764,7 +24764,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadCurrentSignals` · L5574–5611
 
-[Drilling.Common/Station/CStationProcess.cs:5574–5611](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5574-L5611)
+[Drilling.Common/Station/CStationProcess.cs:5574–5611](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5574-L5611)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24784,11 +24784,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5324–5324](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5324-L5324) | ReadCurrentSignals | False |
-| [Drilling.Common/Station/CStationProcess.cs:5434–5434](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5434-L5434) | ReadCurrentSignals | False |
-| [Drilling.Common/Station/CStationProcess.cs:5460–5460](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5460-L5460) | ReadCurrentSignals | False |
-| [Drilling.Common/Station/CStationProcess.cs:5487–5487](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5487-L5487) | ReadCurrentSignals | False |
-| [Drilling.Common/Station/CStationProcess.cs:5680–5680](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5680-L5680) | ReadCurrentSignals | False |
+| [Drilling.Common/Station/CStationProcess.cs:5324–5324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5324-L5324) | ReadCurrentSignals | False |
+| [Drilling.Common/Station/CStationProcess.cs:5434–5434](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5434-L5434) | ReadCurrentSignals | False |
+| [Drilling.Common/Station/CStationProcess.cs:5460–5460](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5460-L5460) | ReadCurrentSignals | False |
+| [Drilling.Common/Station/CStationProcess.cs:5487–5487](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5487-L5487) | ReadCurrentSignals | False |
+| [Drilling.Common/Station/CStationProcess.cs:5680–5680](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5680-L5680) | ReadCurrentSignals | False |
 
 호출하는 대상과 해석 범위:
 
@@ -24917,7 +24917,7 @@ flowchart TD
 
 ### MethodDeclaration `TrySignal` · L5613–5631
 
-[Drilling.Common/Station/CStationProcess.cs:5613–5631](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5613-L5631)
+[Drilling.Common/Station/CStationProcess.cs:5613–5631](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5613-L5631)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24938,27 +24938,27 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5183–5183](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5183-L5183) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5184–5184](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5184-L5184) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5186–5186](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5186-L5186) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5218–5218](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5218-L5218) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5225–5225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5225-L5225) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5225–5225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5225-L5225) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5225–5225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5225-L5225) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5227–5227](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5227-L5227) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5228–5228](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5228-L5228) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5229–5229](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5229-L5229) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5326–5326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5326-L5326) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5490–5490](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5490-L5490) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5607–5607](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5607-L5607) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5682–5682](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5682-L5682) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5682–5682](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5682-L5682) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5682–5682](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5682-L5682) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5815–5815](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5815-L5815) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5815–5815](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5815-L5815) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5850–5850](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5850-L5850) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5850–5850](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5850-L5850) | TrySignal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5850–5850](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5850-L5850) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5183–5183](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5183-L5183) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5184–5184](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5184-L5184) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5186–5186](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5186-L5186) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5218–5218](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5218-L5218) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5225–5225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5225-L5225) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5225–5225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5225-L5225) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5225–5225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5225-L5225) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5227–5227](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5227-L5227) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5228–5228](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5228-L5228) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5229–5229](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5229-L5229) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5326–5326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5326-L5326) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5490–5490](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5490-L5490) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5607–5607](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5607-L5607) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5682–5682](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5682-L5682) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5682–5682](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5682-L5682) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5682–5682](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5682-L5682) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5815–5815](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5815-L5815) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5815–5815](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5815-L5815) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5850–5850](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5850-L5850) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5850–5850](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5850-L5850) | TrySignal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5850–5850](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5850-L5850) | TrySignal | False |
 
 호출하는 대상과 해석 범위:
 
@@ -25007,7 +25007,7 @@ flowchart TD
 
 ### MethodDeclaration `Set` · L5633–5637
 
-[Drilling.Common/Station/CStationProcess.cs:5633–5637](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5633-L5637)
+[Drilling.Common/Station/CStationProcess.cs:5633–5637](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5633-L5637)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25028,55 +25028,55 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5148–5148](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5148-L5148) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5169–5169](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5169-L5169) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5205–5205](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5205-L5205) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5214–5214](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5214-L5214) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5222–5222](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5222-L5222) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5246–5246](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5246-L5246) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5248–5248](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5248-L5248) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5264–5264](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5264-L5264) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5267–5267](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5267-L5267) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5269–5269](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5269-L5269) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5273–5273](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5273-L5273) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5275–5275](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5275-L5275) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5306–5306](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5306-L5306) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5330–5330](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5330-L5330) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5340–5340](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5340-L5340) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5347–5347](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5347-L5347) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5354–5354](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5354-L5354) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5373–5373](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5373-L5373) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5388–5388](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5388-L5388) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5408–5408](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5408-L5408) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5417–5417](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5417-L5417) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5658–5658](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5658-L5658) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5662–5662](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5662-L5662) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5666–5666](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5666-L5666) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5670–5670](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5670-L5670) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5696–5696](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5696-L5696) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5701–5701](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5701-L5701) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5706–5706](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5706-L5706) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5723–5723](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5723-L5723) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5729–5729](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5729-L5729) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5731–5731](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5731-L5731) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5760–5760](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5760-L5760) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5784–5784](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5784-L5784) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5789–5789](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5789-L5789) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5791–5791](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5791-L5791) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5793–5793](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5793-L5793) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5795–5795](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5795-L5795) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5799–5799](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5799-L5799) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5826–5826](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5826-L5826) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5829–5829](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5829-L5829) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5833–5833](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5833-L5833) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5859–5859](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5859-L5859) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5862–5862](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5862-L5862) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5865–5865](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5865-L5865) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5867–5867](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5867-L5867) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5869–5869](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5869-L5869) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5873–5873](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5873-L5873) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5875–5875](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5875-L5875) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:5897–5897](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5897-L5897) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5148–5148](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5148-L5148) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5169–5169](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5169-L5169) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5205–5205](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5205-L5205) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5214–5214](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5214-L5214) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5222–5222](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5222-L5222) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5246–5246](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5246-L5246) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5248–5248](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5248-L5248) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5264–5264](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5264-L5264) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5267–5267](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5267-L5267) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5269–5269](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5269-L5269) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5273–5273](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5273-L5273) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5275–5275](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5275-L5275) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5306–5306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5306-L5306) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5330–5330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5330-L5330) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5340–5340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5340-L5340) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5347–5347](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5347-L5347) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5354–5354](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5354-L5354) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5373–5373](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5373-L5373) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5388–5388](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5388-L5388) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5408–5408](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5408-L5408) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5417–5417](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5417-L5417) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5658–5658](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5658-L5658) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5662–5662](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5662-L5662) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5666–5666](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5666-L5666) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5670–5670](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5670-L5670) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5696–5696](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5696-L5696) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5701–5701](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5701-L5701) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5706–5706](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5706-L5706) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5723–5723](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5723-L5723) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5729–5729](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5729-L5729) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5731–5731](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5731-L5731) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5760–5760](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5760-L5760) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5784–5784](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5784-L5784) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5789–5789](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5789-L5789) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5791–5791](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5791-L5791) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5793–5793](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5793-L5793) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5795–5795](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5795-L5795) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5799–5799](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5799-L5799) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5826–5826](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5826-L5826) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5829–5829](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5829-L5829) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5833–5833](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5833-L5833) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5859–5859](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5859-L5859) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5862–5862](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5862-L5862) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5865–5865](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5865-L5865) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5867–5867](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5867-L5867) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5869–5869](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5869-L5869) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5873–5873](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5873-L5873) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5875–5875](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5875-L5875) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:5897–5897](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5897-L5897) | Set | False |
 
 호출하는 대상과 해석 범위:
 
@@ -25100,7 +25100,7 @@ flowchart TD
 
 ### FieldDeclaration `StgProcessStart` · L5639–5639
 
-[Drilling.Common/Station/CStationProcess.cs:5639–5639](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5639-L5639)
+[Drilling.Common/Station/CStationProcess.cs:5639–5639](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5639-L5639)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25121,7 +25121,7 @@ flowchart TD
 
 ### FieldDeclaration `StgProcessComplete` · L5640–5640
 
-[Drilling.Common/Station/CStationProcess.cs:5640–5640](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5640-L5640)
+[Drilling.Common/Station/CStationProcess.cs:5640–5640](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5640-L5640)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25142,7 +25142,7 @@ flowchart TD
 
 ### FieldDeclaration `PrcProcessAble` · L5641–5641
 
-[Drilling.Common/Station/CStationProcess.cs:5641–5641](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5641-L5641)
+[Drilling.Common/Station/CStationProcess.cs:5641–5641](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5641-L5641)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25163,7 +25163,7 @@ flowchart TD
 
 ### FieldDeclaration `PrcProcessStart` · L5642–5642
 
-[Drilling.Common/Station/CStationProcess.cs:5642–5642](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5642-L5642)
+[Drilling.Common/Station/CStationProcess.cs:5642–5642](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5642-L5642)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25184,7 +25184,7 @@ flowchart TD
 
 ### FieldDeclaration `PrcProcessComplete` · L5643–5643
 
-[Drilling.Common/Station/CStationProcess.cs:5643–5643](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5643-L5643)
+[Drilling.Common/Station/CStationProcess.cs:5643–5643](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5643-L5643)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25205,7 +25205,7 @@ flowchart TD
 
 ### FieldDeclaration `ProcessOutputs` · L5644–5644
 
-[Drilling.Common/Station/CStationProcess.cs:5644–5644](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5644-L5644)
+[Drilling.Common/Station/CStationProcess.cs:5644–5644](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5644-L5644)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25226,7 +25226,7 @@ flowchart TD
 
 ### FieldDeclaration `CompletedProcessActions` · L5645–5654
 
-[Drilling.Common/Station/CStationProcess.cs:5645–5654](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5645-L5654)
+[Drilling.Common/Station/CStationProcess.cs:5645–5654](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5645-L5654)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25247,7 +25247,7 @@ flowchart TD
 
 ### FieldDeclaration `_processOutputsOwned` · L5655–5655
 
-[Drilling.Common/Station/CStationProcess.cs:5655–5655](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5655-L5655)
+[Drilling.Common/Station/CStationProcess.cs:5655–5655](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5655-L5655)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25262,7 +25262,7 @@ flowchart TD
 
 ### MethodDeclaration `PrepareProcessTasks` · L5656–5672
 
-[Drilling.Common/Station/CStationProcess.cs:5656–5672](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5656-L5672)
+[Drilling.Common/Station/CStationProcess.cs:5656–5672](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5656-L5672)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25283,8 +25283,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5328–5328](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5328-L5328) | PrepareProcessTasks | False |
-| [Drilling.Common/Station/CStationProcess.cs:5694–5694](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5694-L5694) | PrepareProcessTasks | False |
+| [Drilling.Common/Station/CStationProcess.cs:5328–5328](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5328-L5328) | PrepareProcessTasks | False |
+| [Drilling.Common/Station/CStationProcess.cs:5694–5694](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5694-L5694) | PrepareProcessTasks | False |
 
 호출하는 대상과 해석 범위:
 
@@ -25341,7 +25341,7 @@ flowchart TD
 
 ### MethodDeclaration `RunProcess` · L5674–5761
 
-[Drilling.Common/Station/CStationProcess.cs:5674–5761](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5674-L5761)
+[Drilling.Common/Station/CStationProcess.cs:5674–5761](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5674-L5761)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25362,8 +25362,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5251–5251](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5251-L5251) | RunProcess | False |
-| [Drilling.Common/Station/CStationProcess.cs:5310–5310](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5310-L5310) | RunProcess | False |
+| [Drilling.Common/Station/CStationProcess.cs:5251–5251](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5251-L5251) | RunProcess | False |
+| [Drilling.Common/Station/CStationProcess.cs:5310–5310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5310-L5310) | RunProcess | False |
 
 호출하는 대상과 해석 범위:
 
@@ -25577,7 +25577,7 @@ flowchart TD
 
 ### FieldDeclaration `StgReviewAble` · L5763–5763
 
-[Drilling.Common/Station/CStationProcess.cs:5763–5763](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5763-L5763)
+[Drilling.Common/Station/CStationProcess.cs:5763–5763](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5763-L5763)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25598,7 +25598,7 @@ flowchart TD
 
 ### FieldDeclaration `StgReviewStart` · L5764–5764
 
-[Drilling.Common/Station/CStationProcess.cs:5764–5764](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5764-L5764)
+[Drilling.Common/Station/CStationProcess.cs:5764–5764](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5764-L5764)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25619,7 +25619,7 @@ flowchart TD
 
 ### FieldDeclaration `StgReviewComplete` · L5765–5765
 
-[Drilling.Common/Station/CStationProcess.cs:5765–5765](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5765-L5765)
+[Drilling.Common/Station/CStationProcess.cs:5765–5765](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5765-L5765)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25640,7 +25640,7 @@ flowchart TD
 
 ### FieldDeclaration `PrcReviewAble` · L5766–5766
 
-[Drilling.Common/Station/CStationProcess.cs:5766–5766](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5766-L5766)
+[Drilling.Common/Station/CStationProcess.cs:5766–5766](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5766-L5766)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25661,7 +25661,7 @@ flowchart TD
 
 ### FieldDeclaration `PrcReviewStart` · L5767–5767
 
-[Drilling.Common/Station/CStationProcess.cs:5767–5767](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5767-L5767)
+[Drilling.Common/Station/CStationProcess.cs:5767–5767](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5767-L5767)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25682,7 +25682,7 @@ flowchart TD
 
 ### FieldDeclaration `PrcReviewComplete` · L5768–5768
 
-[Drilling.Common/Station/CStationProcess.cs:5768–5768](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5768-L5768)
+[Drilling.Common/Station/CStationProcess.cs:5768–5768](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5768-L5768)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25703,7 +25703,7 @@ flowchart TD
 
 ### FieldDeclaration `ReviewOutputs` · L5769–5769
 
-[Drilling.Common/Station/CStationProcess.cs:5769–5769](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5769-L5769)
+[Drilling.Common/Station/CStationProcess.cs:5769–5769](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5769-L5769)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25724,7 +25724,7 @@ flowchart TD
 
 ### FieldDeclaration `StgTpmAble` · L5770–5770
 
-[Drilling.Common/Station/CStationProcess.cs:5770–5770](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5770-L5770)
+[Drilling.Common/Station/CStationProcess.cs:5770–5770](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5770-L5770)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25745,7 +25745,7 @@ flowchart TD
 
 ### FieldDeclaration `StgTpmComplete` · L5771–5771
 
-[Drilling.Common/Station/CStationProcess.cs:5771–5771](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5771-L5771)
+[Drilling.Common/Station/CStationProcess.cs:5771–5771](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5771-L5771)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25766,7 +25766,7 @@ flowchart TD
 
 ### FieldDeclaration `PrcTpmAble` · L5772–5772
 
-[Drilling.Common/Station/CStationProcess.cs:5772–5772](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5772-L5772)
+[Drilling.Common/Station/CStationProcess.cs:5772–5772](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5772-L5772)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25787,7 +25787,7 @@ flowchart TD
 
 ### FieldDeclaration `PrcTpmComplete` · L5773–5773
 
-[Drilling.Common/Station/CStationProcess.cs:5773–5773](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5773-L5773)
+[Drilling.Common/Station/CStationProcess.cs:5773–5773](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5773-L5773)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25808,7 +25808,7 @@ flowchart TD
 
 ### FieldDeclaration `TpmOutputs` · L5774–5774
 
-[Drilling.Common/Station/CStationProcess.cs:5774–5774](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5774-L5774)
+[Drilling.Common/Station/CStationProcess.cs:5774–5774](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5774-L5774)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25829,7 +25829,7 @@ flowchart TD
 
 ### MethodDeclaration `RunDistortion` · L5775–5811
 
-[Drilling.Common/Station/CStationProcess.cs:5775–5811](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5775-L5811)
+[Drilling.Common/Station/CStationProcess.cs:5775–5811](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5775-L5811)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25848,7 +25848,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5220–5220](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5220-L5220) | RunDistortion | False |
+| [Drilling.Common/Station/CStationProcess.cs:5220–5220](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5220-L5220) | RunDistortion | False |
 
 호출하는 대상과 해석 범위:
 
@@ -25982,7 +25982,7 @@ flowchart TD
 
 ### FieldDeclaration `_tpmActions` · L5813–5813
 
-[Drilling.Common/Station/CStationProcess.cs:5813–5813](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5813-L5813)
+[Drilling.Common/Station/CStationProcess.cs:5813–5813](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5813-L5813)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25997,7 +25997,7 @@ flowchart TD
 
 ### FieldDeclaration `_tpmOutputsOwned` · L5814–5814
 
-[Drilling.Common/Station/CStationProcess.cs:5814–5814](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5814-L5814)
+[Drilling.Common/Station/CStationProcess.cs:5814–5814](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5814-L5814)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26012,7 +26012,7 @@ flowchart TD
 
 ### MethodDeclaration `IsTpmReady` · L5815–5815
 
-[Drilling.Common/Station/CStationProcess.cs:5815–5815](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5815-L5815)
+[Drilling.Common/Station/CStationProcess.cs:5815–5815](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5815-L5815)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26031,7 +26031,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5201–5201](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5201-L5201) | IsTpmReady | False |
+| [Drilling.Common/Station/CStationProcess.cs:5201–5201](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5201-L5201) | IsTpmReady | False |
 
 호출하는 대상과 해석 범위:
 
@@ -26051,7 +26051,7 @@ flowchart TD
 
 ### MethodDeclaration `RunTpm` · L5816–5847
 
-[Drilling.Common/Station/CStationProcess.cs:5816–5847](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5816-L5847)
+[Drilling.Common/Station/CStationProcess.cs:5816–5847](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5816-L5847)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26070,7 +26070,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5203–5203](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5203-L5203) | RunTpm | False |
+| [Drilling.Common/Station/CStationProcess.cs:5203–5203](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5203-L5203) | RunTpm | False |
 
 호출하는 대상과 해석 범위:
 
@@ -26189,7 +26189,7 @@ flowchart TD
 
 ### FieldDeclaration `_reviewActions` · L5848–5848
 
-[Drilling.Common/Station/CStationProcess.cs:5848–5848](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5848-L5848)
+[Drilling.Common/Station/CStationProcess.cs:5848–5848](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5848-L5848)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26204,7 +26204,7 @@ flowchart TD
 
 ### FieldDeclaration `_reviewOutputsOwned` · L5849–5849
 
-[Drilling.Common/Station/CStationProcess.cs:5849–5849](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5849-L5849)
+[Drilling.Common/Station/CStationProcess.cs:5849–5849](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5849-L5849)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26219,7 +26219,7 @@ flowchart TD
 
 ### MethodDeclaration `IsReviewReady` · L5850–5850
 
-[Drilling.Common/Station/CStationProcess.cs:5850–5850](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5850-L5850)
+[Drilling.Common/Station/CStationProcess.cs:5850–5850](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5850-L5850)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26238,7 +26238,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5210–5210](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5210-L5210) | IsReviewReady | False |
+| [Drilling.Common/Station/CStationProcess.cs:5210–5210](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5210-L5210) | IsReviewReady | False |
 
 호출하는 대상과 해석 범위:
 
@@ -26260,7 +26260,7 @@ flowchart TD
 
 ### MethodDeclaration `RunReview` · L5851–5900
 
-[Drilling.Common/Station/CStationProcess.cs:5851–5900](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5851-L5900)
+[Drilling.Common/Station/CStationProcess.cs:5851–5900](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5851-L5900)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26279,7 +26279,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5212–5212](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5212-L5212) | RunReview | False |
+| [Drilling.Common/Station/CStationProcess.cs:5212–5212](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5212-L5212) | RunReview | False |
 
 호출하는 대상과 해석 범위:
 
@@ -26401,7 +26401,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitMachiningAndZeroLine` · L5902–5925
 
-[Drilling.Common/Station/CStationProcess.cs:5902–5925](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5902-L5925)
+[Drilling.Common/Station/CStationProcess.cs:5902–5925](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5902-L5925)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26420,7 +26420,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5703–5703](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5703-L5703) | WaitMachiningAndZeroLine | False |
+| [Drilling.Common/Station/CStationProcess.cs:5703–5703](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5703-L5703) | WaitMachiningAndZeroLine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -26491,7 +26491,7 @@ flowchart TD
 
 ### FieldDeclaration `_signalTraceLock` · L5927–5927
 
-[Drilling.Common/Station/CStationProcess.cs:5927–5927](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5927-L5927)
+[Drilling.Common/Station/CStationProcess.cs:5927–5927](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5927-L5927)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26519,7 +26519,7 @@ flowchart TD
 
 ### FieldDeclaration `_signalTraceValues` · L5928–5928
 
-[Drilling.Common/Station/CStationProcess.cs:5928–5928](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5928-L5928)
+[Drilling.Common/Station/CStationProcess.cs:5928–5928](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5928-L5928)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26547,7 +26547,7 @@ flowchart TD
 
 ### FieldDeclaration `_logCycleId` · L5929–5929
 
-[Drilling.Common/Station/CStationProcess.cs:5929–5929](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5929-L5929)
+[Drilling.Common/Station/CStationProcess.cs:5929–5929](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5929-L5929)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26568,7 +26568,7 @@ flowchart TD
 
 ### PropertyDeclaration `LogCycleId` · L5930–5930
 
-[Drilling.Common/Station/CStationProcess.cs:5930–5930](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5930-L5930)
+[Drilling.Common/Station/CStationProcess.cs:5930–5930](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5930-L5930)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26595,7 +26595,7 @@ flowchart TD
 
 ### MethodDeclaration `BeginLogCycle` · L5932–5936
 
-[Drilling.Common/Station/CStationProcess.cs:5932–5936](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5932-L5936)
+[Drilling.Common/Station/CStationProcess.cs:5932–5936](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5932-L5936)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26614,11 +26614,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5241–5241](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5241-L5241) | BeginLogCycle | False |
-| [Drilling.Common/Station/CStationProcess.cs:5260–5260](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5260-L5260) | BeginLogCycle | False |
-| [Drilling.Common/Station/CStationProcess.cs:5779–5779](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5779-L5779) | BeginLogCycle | False |
-| [Drilling.Common/Station/CStationProcess.cs:5820–5820](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5820-L5820) | BeginLogCycle | False |
-| [Drilling.Common/Station/CStationProcess.cs:5856–5856](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5856-L5856) | BeginLogCycle | False |
+| [Drilling.Common/Station/CStationProcess.cs:5241–5241](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5241-L5241) | BeginLogCycle | False |
+| [Drilling.Common/Station/CStationProcess.cs:5260–5260](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5260-L5260) | BeginLogCycle | False |
+| [Drilling.Common/Station/CStationProcess.cs:5779–5779](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5779-L5779) | BeginLogCycle | False |
+| [Drilling.Common/Station/CStationProcess.cs:5820–5820](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5820-L5820) | BeginLogCycle | False |
+| [Drilling.Common/Station/CStationProcess.cs:5856–5856](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5856-L5856) | BeginLogCycle | False |
 
 호출하는 대상과 해석 범위:
 
@@ -26643,7 +26643,7 @@ flowchart TD
 
 ### MethodDeclaration `LogEvent` · L5938–5954
 
-[Drilling.Common/Station/CStationProcess.cs:5938–5954](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5938-L5954)
+[Drilling.Common/Station/CStationProcess.cs:5938–5954](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5938-L5954)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26662,38 +26662,38 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5109–5109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5109-L5109) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5129–5129](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5129-L5129) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5244–5244](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5244-L5244) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5253–5253](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5253-L5253) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5261–5261](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5261-L5261) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5290–5290](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5290-L5290) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5314–5314](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5314-L5314) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5345–5345](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5345-L5345) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5360–5360](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5360-L5360) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5401–5401](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5401-L5401) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5403–5403](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5403-L5403) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5414–5414](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5414-L5414) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5423–5423](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5423-L5423) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5444–5444](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5444-L5444) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5448–5448](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5448-L5448) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5457–5457](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5457-L5457) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5463–5463](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5463-L5463) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5465–5465](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5465-L5465) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5469–5469](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5469-L5469) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5481–5481](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5481-L5481) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5503–5503](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5503-L5503) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5522–5522](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5522-L5522) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5598–5598](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5598-L5598) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5636–5636](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5636-L5636) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5717–5717](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5717-L5717) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5739–5739](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5739-L5739) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5809–5809](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5809-L5809) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5843–5843](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5843-L5843) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5872–5872](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5872-L5872) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5898–5898](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5898-L5898) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5935–5935](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5935-L5935) | LogEvent | False |
-| [Drilling.Common/Station/CStationProcess.cs:5996–5996](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5996-L5996) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5109–5109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5109-L5109) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5129–5129](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5129-L5129) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5244–5244](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5244-L5244) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5253–5253](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5253-L5253) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5261–5261](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5261-L5261) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5290–5290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5290-L5290) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5314–5314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5314-L5314) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5345–5345](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5345-L5345) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5360–5360](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5360-L5360) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5401–5401](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5401-L5401) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5403–5403](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5403-L5403) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5414–5414](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5414-L5414) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5423–5423](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5423-L5423) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5444–5444](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5444-L5444) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5448–5448](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5448-L5448) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5457–5457](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5457-L5457) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5463–5463](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5463-L5463) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5465–5465](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5465-L5465) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5469–5469](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5469-L5469) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5481–5481](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5481-L5481) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5503–5503](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5503-L5503) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5522–5522](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5522-L5522) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5598–5598](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5598-L5598) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5636–5636](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5636-L5636) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5717–5717](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5717-L5717) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5739–5739](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5739-L5739) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5809–5809](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5809-L5809) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5843–5843](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5843-L5843) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5872–5872](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5872-L5872) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5898–5898](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5898-L5898) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5935–5935](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5935-L5935) | LogEvent | False |
+| [Drilling.Common/Station/CStationProcess.cs:5996–5996](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5996-L5996) | LogEvent | False |
 
 호출하는 대상과 해석 범위:
 
@@ -26732,7 +26732,7 @@ flowchart TD
 
 ### MethodDeclaration `SignalRoute` · L5956–5966
 
-[Drilling.Common/Station/CStationProcess.cs:5956–5966](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5956-L5966)
+[Drilling.Common/Station/CStationProcess.cs:5956–5966](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5956-L5966)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26751,18 +26751,18 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5401–5401](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5401-L5401) | SignalRoute | False |
-| [Drilling.Common/Station/CStationProcess.cs:5403–5403](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5403-L5403) | SignalRoute | False |
-| [Drilling.Common/Station/CStationProcess.cs:5457–5457](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5457-L5457) | SignalRoute | False |
-| [Drilling.Common/Station/CStationProcess.cs:5463–5463](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5463-L5463) | SignalRoute | False |
-| [Drilling.Common/Station/CStationProcess.cs:5465–5465](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5465-L5465) | SignalRoute | False |
-| [Drilling.Common/Station/CStationProcess.cs:5469–5469](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5469-L5469) | SignalRoute | False |
-| [Drilling.Common/Station/CStationProcess.cs:5481–5481](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5481-L5481) | SignalRoute | False |
-| [Drilling.Common/Station/CStationProcess.cs:5503–5503](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5503-L5503) | SignalRoute | False |
-| [Drilling.Common/Station/CStationProcess.cs:5522–5522](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5522-L5522) | SignalRoute | False |
-| [Drilling.Common/Station/CStationProcess.cs:5571–5571](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5571-L5571) | SignalRoute | False |
-| [Drilling.Common/Station/CStationProcess.cs:5872–5872](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5872-L5872) | SignalRoute | False |
-| [Drilling.Common/Station/CStationProcess.cs:5996–5996](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5996-L5996) | SignalRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:5401–5401](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5401-L5401) | SignalRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:5403–5403](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5403-L5403) | SignalRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:5457–5457](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5457-L5457) | SignalRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:5463–5463](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5463-L5463) | SignalRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:5465–5465](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5465-L5465) | SignalRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:5469–5469](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5469-L5469) | SignalRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:5481–5481](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5481-L5481) | SignalRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:5503–5503](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5503-L5503) | SignalRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:5522–5522](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5522-L5522) | SignalRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:5571–5571](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5571-L5571) | SignalRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:5872–5872](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5872-L5872) | SignalRoute | False |
+| [Drilling.Common/Station/CStationProcess.cs:5996–5996](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5996-L5996) | SignalRoute | False |
 
 호출하는 대상과 해석 범위:
 
@@ -26795,7 +26795,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadSignals` · L5968–5998
 
-[Drilling.Common/Station/CStationProcess.cs:5968–5998](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5968-L5998)
+[Drilling.Common/Station/CStationProcess.cs:5968–5998](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5968-L5998)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26808,10 +26808,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5174–5174](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5174-L5174) | ReadSignals | False |
-| [Drilling.Common/Station/CStationProcess.cs:5576–5576](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5576-L5576) | ReadSignals | False |
-| [Drilling.Common/Station/CStationProcess.cs:5593–5593](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5593-L5593) | ReadSignals | False |
-| [Drilling.Common/Station/CStationProcess.cs:5598–5598](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5598-L5598) | ReadSignals | False |
+| [Drilling.Common/Station/CStationProcess.cs:5174–5174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5174-L5174) | ReadSignals | False |
+| [Drilling.Common/Station/CStationProcess.cs:5576–5576](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5576-L5576) | ReadSignals | False |
+| [Drilling.Common/Station/CStationProcess.cs:5593–5593](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5593-L5593) | ReadSignals | False |
+| [Drilling.Common/Station/CStationProcess.cs:5598–5598](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5598-L5598) | ReadSignals | False |
 
 호출하는 대상과 해석 범위:
 
@@ -26892,7 +26892,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Changed` · L5990–5997
 
-[Drilling.Common/Station/CStationProcess.cs:5990–5997](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5990-L5997)
+[Drilling.Common/Station/CStationProcess.cs:5990–5997](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5990-L5997)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26913,8 +26913,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5975–5975](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5975-L5975) | Changed | False |
-| [Drilling.Common/Station/CStationProcess.cs:5985–5985](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5985-L5985) | Changed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5975–5975](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5975-L5975) | Changed | False |
+| [Drilling.Common/Station/CStationProcess.cs:5985–5985](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5985-L5985) | Changed | False |
 
 호출하는 대상과 해석 범위:
 
@@ -26951,7 +26951,7 @@ flowchart TD
 
 ### PropertyDeclaration `GlassId` · L6003–6003
 
-[Drilling.Common/Station/CStationProcess.cs:6003–6003](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6003-L6003)
+[Drilling.Common/Station/CStationProcess.cs:6003–6003](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6003-L6003)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26966,7 +26966,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_GlassId` · L6003–6003
 
-[Drilling.Common/Station/CStationProcess.cs:6003–6003](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6003-L6003)
+[Drilling.Common/Station/CStationProcess.cs:6003–6003](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6003-L6003)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26981,7 +26981,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_GlassId` · L6003–6003
 
-[Drilling.Common/Station/CStationProcess.cs:6003–6003](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6003-L6003)
+[Drilling.Common/Station/CStationProcess.cs:6003–6003](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6003-L6003)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27002,7 +27002,7 @@ flowchart TD
 
 ### PropertyDeclaration `Snapshot` · L6004–6004
 
-[Drilling.Common/Station/CStationProcess.cs:6004–6004](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6004-L6004)
+[Drilling.Common/Station/CStationProcess.cs:6004–6004](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6004-L6004)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27017,7 +27017,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Snapshot` · L6004–6004
 
-[Drilling.Common/Station/CStationProcess.cs:6004–6004](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6004-L6004)
+[Drilling.Common/Station/CStationProcess.cs:6004–6004](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6004-L6004)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27032,7 +27032,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_Snapshot` · L6004–6004
 
-[Drilling.Common/Station/CStationProcess.cs:6004–6004](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6004-L6004)
+[Drilling.Common/Station/CStationProcess.cs:6004–6004](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6004-L6004)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27053,7 +27053,7 @@ flowchart TD
 
 ### PropertyDeclaration `ReadResults` · L6010–6010
 
-[Drilling.Common/Station/CStationProcess.cs:6010–6010](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6010-L6010)
+[Drilling.Common/Station/CStationProcess.cs:6010–6010](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6010-L6010)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27068,7 +27068,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ReadResults` · L6010–6010
 
-[Drilling.Common/Station/CStationProcess.cs:6010–6010](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6010-L6010)
+[Drilling.Common/Station/CStationProcess.cs:6010–6010](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6010-L6010)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27083,7 +27083,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ReadResults` · L6010–6010
 
-[Drilling.Common/Station/CStationProcess.cs:6010–6010](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6010-L6010)
+[Drilling.Common/Station/CStationProcess.cs:6010–6010](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6010-L6010)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27104,7 +27104,7 @@ flowchart TD
 
 ### FieldDeclaration `All` · L6016–6016
 
-[Drilling.Common/Station/CStationProcess.cs:6016–6016](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6016-L6016)
+[Drilling.Common/Station/CStationProcess.cs:6016–6016](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6016-L6016)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27125,7 +27125,7 @@ flowchart TD
 
 ### FieldDeclaration `AlignWordId` · L6031–6031
 
-[Drilling.Common/Station/CStationProcess.cs:6031–6031](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6031-L6031)
+[Drilling.Common/Station/CStationProcess.cs:6031–6031](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6031-L6031)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27146,7 +27146,7 @@ flowchart TD
 
 ### FieldDeclaration `AlignBusyMask` · L6032–6032
 
-[Drilling.Common/Station/CStationProcess.cs:6032–6032](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6032-L6032)
+[Drilling.Common/Station/CStationProcess.cs:6032–6032](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6032-L6032)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27167,7 +27167,7 @@ flowchart TD
 
 ### FieldDeclaration `_sync` · L6033–6033
 
-[Drilling.Common/Station/CStationProcess.cs:6033–6033](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6033-L6033)
+[Drilling.Common/Station/CStationProcess.cs:6033–6033](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6033-L6033)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27195,7 +27195,7 @@ flowchart TD
 
 ### FieldDeclaration `_stop` · L6034–6034
 
-[Drilling.Common/Station/CStationProcess.cs:6034–6034](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6034-L6034)
+[Drilling.Common/Station/CStationProcess.cs:6034–6034](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6034-L6034)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27210,7 +27210,7 @@ flowchart TD
 
 ### FieldDeclaration `_worker` · L6035–6035
 
-[Drilling.Common/Station/CStationProcess.cs:6035–6035](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6035-L6035)
+[Drilling.Common/Station/CStationProcess.cs:6035–6035](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6035-L6035)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27225,7 +27225,7 @@ flowchart TD
 
 ### FieldDeclaration `_status` · L6036–6036
 
-[Drilling.Common/Station/CStationProcess.cs:6036–6036](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6036-L6036)
+[Drilling.Common/Station/CStationProcess.cs:6036–6036](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6036-L6036)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27253,7 +27253,7 @@ flowchart TD
 
 ### FieldDeclaration `_completed` · L6037–6037
 
-[Drilling.Common/Station/CStationProcess.cs:6037–6037](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6037-L6037)
+[Drilling.Common/Station/CStationProcess.cs:6037–6037](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6037-L6037)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27268,7 +27268,7 @@ flowchart TD
 
 ### FieldDeclaration `_generation` · L6038–6038
 
-[Drilling.Common/Station/CStationProcess.cs:6038–6038](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6038-L6038)
+[Drilling.Common/Station/CStationProcess.cs:6038–6038](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6038-L6038)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27283,7 +27283,7 @@ flowchart TD
 
 ### FieldDeclaration `_consumed` · L6038–6038
 
-[Drilling.Common/Station/CStationProcess.cs:6038–6038](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6038-L6038)
+[Drilling.Common/Station/CStationProcess.cs:6038–6038](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6038-L6038)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27298,7 +27298,7 @@ flowchart TD
 
 ### PropertyDeclaration `Status` · L6039–6039
 
-[Drilling.Common/Station/CStationProcess.cs:6039–6039](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6039-L6039)
+[Drilling.Common/Station/CStationProcess.cs:6039–6039](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6039-L6039)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27325,7 +27325,7 @@ flowchart TD
 
 ### MethodDeclaration `DiscardCompleted` · L6041–6045
 
-[Drilling.Common/Station/CStationProcess.cs:6041–6045](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6041-L6045)
+[Drilling.Common/Station/CStationProcess.cs:6041–6045](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6041-L6045)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27338,12 +27338,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1320–1320](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1320-L1320) | .DiscardCompleted | False |
-| [Drilling.Common/Station/CStationProcess.cs:4297–4297](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4297-L4297) | .DiscardCompleted | False |
-| [Drilling.Common/Station/CStationProcess.cs:6196–6196](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6196-L6196) | DiscardCompleted | False |
-| [Drilling.Common/Station/CStationProcess.cs:6206–6206](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6206-L6206) | DiscardCompleted | False |
-| [Drilling.Common/Station/CStationProcess.cs:6248–6248](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6248-L6248) | DiscardCompleted | False |
-| [Drilling.Common/Station/CStationProcess.cs:6284–6284](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6284-L6284) | DiscardCompleted | False |
+| [Drilling.Common/Station/CStationProcess.cs:1320–1320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1320-L1320) | .DiscardCompleted | False |
+| [Drilling.Common/Station/CStationProcess.cs:4297–4297](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4297-L4297) | .DiscardCompleted | False |
+| [Drilling.Common/Station/CStationProcess.cs:6196–6196](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6196-L6196) | DiscardCompleted | False |
+| [Drilling.Common/Station/CStationProcess.cs:6206–6206](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6206-L6206) | DiscardCompleted | False |
+| [Drilling.Common/Station/CStationProcess.cs:6248–6248](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6248-L6248) | DiscardCompleted | False |
+| [Drilling.Common/Station/CStationProcess.cs:6284–6284](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6284-L6284) | DiscardCompleted | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -27365,7 +27365,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitForFirstX` · L6047–6090
 
-[Drilling.Common/Station/CStationProcess.cs:6047–6090](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6047-L6090)
+[Drilling.Common/Station/CStationProcess.cs:6047–6090](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6047-L6090)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27488,7 +27488,7 @@ flowchart TD
 
 ### MethodDeclaration `IsFirstXReady` · L6092–6117
 
-[Drilling.Common/Station/CStationProcess.cs:6092–6117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6092-L6117)
+[Drilling.Common/Station/CStationProcess.cs:6092–6117](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6092-L6117)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27507,7 +27507,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:6061–6061](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6061-L6061) | IsFirstXReady | False |
+| [Drilling.Common/Station/CStationProcess.cs:6061–6061](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6061-L6061) | IsFirstXReady | False |
 
 호출하는 대상과 해석 범위:
 
@@ -27595,7 +27595,7 @@ flowchart TD
 
 ### MethodDeclaration `Waiting` · L6119–6124
 
-[Drilling.Common/Station/CStationProcess.cs:6119–6124](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6119-L6124)
+[Drilling.Common/Station/CStationProcess.cs:6119–6124](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6119-L6124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27614,15 +27614,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:6198–6198](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6198-L6198) | Waiting | False |
-| [Drilling.Common/Station/CStationProcess.cs:6207–6207](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6207-L6207) | Waiting | False |
-| [Drilling.Common/Station/CStationProcess.cs:6217–6217](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6217-L6217) | Waiting | False |
-| [Drilling.Common/Station/CStationProcess.cs:6225–6225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6225-L6225) | Waiting | False |
-| [Drilling.Common/Station/CStationProcess.cs:6233–6233](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6233-L6233) | Waiting | False |
-| [Drilling.Common/Station/CStationProcess.cs:6239–6239](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6239-L6239) | Waiting | False |
-| [Drilling.Common/Station/CStationProcess.cs:6311–6311](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6311-L6311) | Waiting | False |
-| [Drilling.Common/Station/CStationProcess.cs:6333–6333](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6333-L6333) | Waiting | False |
-| [Drilling.Common/Station/CStationProcess.cs:6340–6340](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6340-L6340) | Waiting | False |
+| [Drilling.Common/Station/CStationProcess.cs:6198–6198](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6198-L6198) | Waiting | False |
+| [Drilling.Common/Station/CStationProcess.cs:6207–6207](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6207-L6207) | Waiting | False |
+| [Drilling.Common/Station/CStationProcess.cs:6217–6217](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6217-L6217) | Waiting | False |
+| [Drilling.Common/Station/CStationProcess.cs:6225–6225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6225-L6225) | Waiting | False |
+| [Drilling.Common/Station/CStationProcess.cs:6233–6233](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6233-L6233) | Waiting | False |
+| [Drilling.Common/Station/CStationProcess.cs:6239–6239](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6239-L6239) | Waiting | False |
+| [Drilling.Common/Station/CStationProcess.cs:6311–6311](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6311-L6311) | Waiting | False |
+| [Drilling.Common/Station/CStationProcess.cs:6333–6333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6333-L6333) | Waiting | False |
+| [Drilling.Common/Station/CStationProcess.cs:6340–6340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6340-L6340) | Waiting | False |
 
 호출하는 대상과 해석 범위:
 
@@ -27653,7 +27653,7 @@ flowchart TD
 
 ### MethodDeclaration `SetStatus` · L6126–6146
 
-[Drilling.Common/Station/CStationProcess.cs:6126–6146](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6126-L6146)
+[Drilling.Common/Station/CStationProcess.cs:6126–6146](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6126-L6146)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27672,14 +27672,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:6123–6123](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6123-L6123) | SetStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:6249–6249](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6249-L6249) | SetStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:6285–6285](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6285-L6285) | SetStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:6315–6315](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6315-L6315) | SetStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:6324–6324](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6324-L6324) | SetStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:6363–6363](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6363-L6363) | SetStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:6367–6367](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6367-L6367) | SetStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:6371–6371](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6371-L6371) | SetStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:6123–6123](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6123-L6123) | SetStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:6249–6249](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6249-L6249) | SetStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:6285–6285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6285-L6285) | SetStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:6315–6315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6315-L6315) | SetStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:6324–6324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6324-L6324) | SetStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:6363–6363](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6363-L6363) | SetStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:6367–6367](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6367-L6367) | SetStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:6371–6371](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6371-L6371) | SetStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -27726,7 +27726,7 @@ flowchart TD
 
 ### MethodDeclaration `Start` · L6148–6158
 
-[Drilling.Common/Station/CStationProcess.cs:6148–6158](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6148-L6158)
+[Drilling.Common/Station/CStationProcess.cs:6148–6158](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6148-L6158)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27739,7 +27739,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4332–4332](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4332-L4332) | _zeroLinePrewait.Start | False |
+| [Drilling.Common/Station/CStationProcess.cs:4332–4332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4332-L4332) | _zeroLinePrewait.Start | False |
 
 호출하는 대상과 해석 범위:
 
@@ -27779,7 +27779,7 @@ flowchart TD
 
 ### MethodDeclaration `Stop` · L6160–6171
 
-[Drilling.Common/Station/CStationProcess.cs:6160–6171](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6160-L6171)
+[Drilling.Common/Station/CStationProcess.cs:6160–6171](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6160-L6171)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27792,7 +27792,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4335–4335](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4335-L4335) | .Stop | False |
+| [Drilling.Common/Station/CStationProcess.cs:4335–4335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4335-L4335) | .Stop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -27828,7 +27828,7 @@ flowchart TD
 
 ### MethodDeclaration `Run` · L6173–6386
 
-[Drilling.Common/Station/CStationProcess.cs:6173–6386](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6173-L6386)
+[Drilling.Common/Station/CStationProcess.cs:6173–6386](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6173-L6386)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -27847,7 +27847,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:6156–6156](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6156-L6156) | Run | False |
+| [Drilling.Common/Station/CStationProcess.cs:6156–6156](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6156-L6156) | Run | False |
 
 호출하는 대상과 해석 범위:
 
@@ -28262,7 +28262,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Signal` · L6212–6212
 
-[Drilling.Common/Station/CStationProcess.cs:6212–6212](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6212-L6212)
+[Drilling.Common/Station/CStationProcess.cs:6212–6212](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6212-L6212)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -28282,7 +28282,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:6237–6237](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6237-L6237) | Signal | False |
+| [Drilling.Common/Station/CStationProcess.cs:6237–6237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6237-L6237) | Signal | False |
 
 호출하는 대상과 해석 범위:
 
@@ -28304,7 +28304,7 @@ flowchart TD
 
 ### LocalFunctionStatement `RequestActive` · L6295–6299
 
-[Drilling.Common/Station/CStationProcess.cs:6295–6299](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6295-L6299)
+[Drilling.Common/Station/CStationProcess.cs:6295–6299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6295-L6299)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -28317,9 +28317,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:6320–6320](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6320-L6320) | RequestActive | False |
-| [Drilling.Common/Station/CStationProcess.cs:6330–6330](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6330-L6330) | RequestActive | False |
-| [Drilling.Common/Station/CStationProcess.cs:6354–6354](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6354-L6354) | RequestActive | False |
+| [Drilling.Common/Station/CStationProcess.cs:6320–6320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6320-L6320) | RequestActive | False |
+| [Drilling.Common/Station/CStationProcess.cs:6330–6330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6330-L6330) | RequestActive | False |
+| [Drilling.Common/Station/CStationProcess.cs:6354–6354](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6354-L6354) | RequestActive | False |
 
 호출하는 대상과 해석 범위:
 
@@ -28346,7 +28346,7 @@ flowchart TD
 
 ### LocalFunctionStatement `StartSignalsOn` · L6300–6307
 
-[Drilling.Common/Station/CStationProcess.cs:6300–6307](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6300-L6307)
+[Drilling.Common/Station/CStationProcess.cs:6300–6307](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6300-L6307)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -28359,7 +28359,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:6330–6330](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6330-L6330) | StartSignalsOn | False |
+| [Drilling.Common/Station/CStationProcess.cs:6330–6330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6330-L6330) | StartSignalsOn | False |
 
 호출하는 대상과 해석 범위:
 
@@ -28394,7 +28394,7 @@ flowchart TD
 
 ### FieldDeclaration `_stage` · L6399–6399
 
-[Drilling.Common/Station/CStationProcess.cs:6399–6399](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6399-L6399)
+[Drilling.Common/Station/CStationProcess.cs:6399–6399](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6399-L6399)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -28409,7 +28409,7 @@ flowchart TD
 
 ### FieldDeclaration `_vision` · L6400–6400
 
-[Drilling.Common/Station/CStationProcess.cs:6400–6400](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6400-L6400)
+[Drilling.Common/Station/CStationProcess.cs:6400–6400](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6400-L6400)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -28424,7 +28424,7 @@ flowchart TD
 
 ### FieldDeclaration `_saved` · L6401–6401
 
-[Drilling.Common/Station/CStationProcess.cs:6401–6401](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6401-L6401)
+[Drilling.Common/Station/CStationProcess.cs:6401–6401](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6401-L6401)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -28439,7 +28439,7 @@ flowchart TD
 
 ### FieldDeclaration `_advanced` · L6401–6401
 
-[Drilling.Common/Station/CStationProcess.cs:6401–6401](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6401-L6401)
+[Drilling.Common/Station/CStationProcess.cs:6401–6401](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6401-L6401)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -28454,7 +28454,7 @@ flowchart TD
 
 ### FieldDeclaration `_followUpCleanupRequired` · L6402–6402
 
-[Drilling.Common/Station/CStationProcess.cs:6402–6402](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6402-L6402)
+[Drilling.Common/Station/CStationProcess.cs:6402–6402](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6402-L6402)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -28469,7 +28469,7 @@ flowchart TD
 
 ### FieldDeclaration `_acquisitionError` · L6403–6403
 
-[Drilling.Common/Station/CStationProcess.cs:6403–6403](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6403-L6403)
+[Drilling.Common/Station/CStationProcess.cs:6403–6403](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6403-L6403)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -28484,7 +28484,7 @@ flowchart TD
 
 ### FieldDeclaration `_status` · L6404–6407
 
-[Drilling.Common/Station/CStationProcess.cs:6404–6407](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6404-L6407)
+[Drilling.Common/Station/CStationProcess.cs:6404–6407](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6404-L6407)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -28521,7 +28521,7 @@ flowchart TD
 
 ### PropertyDeclaration `Plan` · L6408–6408
 
-[Drilling.Common/Station/CStationProcess.cs:6408–6408](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6408-L6408)
+[Drilling.Common/Station/CStationProcess.cs:6408–6408](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6408-L6408)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -28536,7 +28536,7 @@ flowchart TD
 
 ### PropertyDeclaration `Status` · L6409–6409
 
-[Drilling.Common/Station/CStationProcess.cs:6409–6409](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6409-L6409)
+[Drilling.Common/Station/CStationProcess.cs:6409–6409](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6409-L6409)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -28563,7 +28563,7 @@ flowchart TD
 
 ### PropertyDeclaration `NeedsFollowUpCleanup` · L6412–6412
 
-[Drilling.Common/Station/CStationProcess.cs:6412–6412](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6412-L6412)
+[Drilling.Common/Station/CStationProcess.cs:6412–6412](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6412-L6412)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -28590,7 +28590,7 @@ flowchart TD
 
 ### MethodDeclaration `Set` · L6414–6418
 
-[Drilling.Common/Station/CStationProcess.cs:6414–6418](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6414-L6418)
+[Drilling.Common/Station/CStationProcess.cs:6414–6418](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6414-L6418)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -28611,19 +28611,19 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:6427–6427](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6427-L6427) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:6435–6435](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6435-L6435) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:6438–6438](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6438-L6438) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:6440–6440](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6440-L6440) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:6444–6444](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6444-L6444) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:6461–6461](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6461-L6461) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:6469–6469](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6469-L6469) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:6476–6476](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6476-L6476) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:6481–6481](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6481-L6481) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:6483–6483](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6483-L6483) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:6487–6487](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6487-L6487) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:6499–6499](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6499-L6499) | Set | False |
-| [Drilling.Common/Station/CStationProcess.cs:6621–6621](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6621-L6621) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:6427–6427](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6427-L6427) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:6435–6435](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6435-L6435) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:6438–6438](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6438-L6438) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:6440–6440](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6440-L6440) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:6444–6444](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6444-L6444) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:6461–6461](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6461-L6461) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:6469–6469](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6469-L6469) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:6476–6476](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6476-L6476) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:6481–6481](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6481-L6481) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:6483–6483](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6483-L6483) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:6487–6487](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6487-L6487) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:6499–6499](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6499-L6499) | Set | False |
+| [Drilling.Common/Station/CStationProcess.cs:6621–6621](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6621-L6621) | Set | False |
 
 호출하는 대상과 해석 범위:
 
@@ -28651,7 +28651,7 @@ flowchart TD
 
 ### MethodDeclaration `Prepare` · L6420–6448
 
-[Drilling.Common/Station/CStationProcess.cs:6420–6448](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6420-L6448)
+[Drilling.Common/Station/CStationProcess.cs:6420–6448](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6420-L6448)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -28670,7 +28670,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4273–4273](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4273-L4273) | .Prepare | False |
+| [Drilling.Common/Station/CStationProcess.cs:4273–4273](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4273-L4273) | .Prepare | False |
 
 호출하는 대상과 해석 범위:
 
@@ -28769,7 +28769,7 @@ flowchart TD
 
 ### MethodDeclaration `Measure` · L6450–6463
 
-[Drilling.Common/Station/CStationProcess.cs:6450–6463](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6450-L6463)
+[Drilling.Common/Station/CStationProcess.cs:6450–6463](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6450-L6463)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -28788,7 +28788,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4274–4274](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4274-L4274) | .Measure | False |
+| [Drilling.Common/Station/CStationProcess.cs:4274–4274](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4274-L4274) | .Measure | False |
 
 호출하는 대상과 해석 범위:
 
@@ -28832,7 +28832,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadResults` · L6465–6501
 
-[Drilling.Common/Station/CStationProcess.cs:6465–6501](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6465-L6501)
+[Drilling.Common/Station/CStationProcess.cs:6465–6501](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6465-L6501)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -28851,7 +28851,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4279–4279](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4279-L4279) | .ReadResults | False |
+| [Drilling.Common/Station/CStationProcess.cs:4279–4279](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4279-L4279) | .ReadResults | False |
 
 호출하는 대상과 해석 범위:
 
@@ -28936,7 +28936,7 @@ flowchart TD
 
 ### MethodDeclaration `Save` · L6503–6547
 
-[Drilling.Common/Station/CStationProcess.cs:6503–6547](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6503-L6547)
+[Drilling.Common/Station/CStationProcess.cs:6503–6547](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6503-L6547)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -28955,7 +28955,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4275–4275](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4275-L4275) | .Save | False |
+| [Drilling.Common/Station/CStationProcess.cs:4275–4275](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4275-L4275) | .Save | False |
 
 호출하는 대상과 해석 범위:
 
@@ -29058,7 +29058,7 @@ flowchart TD
 
 ### MethodDeclaration `CompleteFollowUp` · L6549–6556
 
-[Drilling.Common/Station/CStationProcess.cs:6549–6556](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6549-L6556)
+[Drilling.Common/Station/CStationProcess.cs:6549–6556](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6549-L6556)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -29078,7 +29078,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4313–4313](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4313-L4313) | (_zeroLineCycle ?? throw new InvalidOperationException("0선 후속 검사 대상이 없습니다.")).CompleteFollowUp | False |
+| [Drilling.Common/Station/CStationProcess.cs:4313–4313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4313-L4313) | (_zeroLineCycle ?? throw new InvalidOperationException("0선 후속 검사 대상이 없습니다.")).CompleteFollowUp | False |
 
 호출하는 대상과 해석 범위:
 
@@ -29118,7 +29118,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetAfterStop` · L6558–6575
 
-[Drilling.Common/Station/CStationProcess.cs:6558–6575](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6558-L6575)
+[Drilling.Common/Station/CStationProcess.cs:6558–6575](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6558-L6575)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -29137,7 +29137,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1311–1311](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1311-L1311) | previousCycle.ResetAfterStop | False |
+| [Drilling.Common/Station/CStationProcess.cs:1311–1311](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1311-L1311) | previousCycle.ResetAfterStop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -29183,7 +29183,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveFile` · L6577–6585
 
-[Drilling.Common/Station/CStationProcess.cs:6577–6585](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6577-L6585)
+[Drilling.Common/Station/CStationProcess.cs:6577–6585](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6577-L6585)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -29202,9 +29202,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:6513–6513](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6513-L6513) | SaveFile | False |
-| [Drilling.Common/Station/CStationProcess.cs:6528–6528](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6528-L6528) | SaveFile | False |
-| [Drilling.Common/Station/CStationProcess.cs:6623–6623](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6623-L6623) | SaveFile | False |
+| [Drilling.Common/Station/CStationProcess.cs:6513–6513](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6513-L6513) | SaveFile | False |
+| [Drilling.Common/Station/CStationProcess.cs:6528–6528](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6528-L6528) | SaveFile | False |
+| [Drilling.Common/Station/CStationProcess.cs:6623–6623](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6623-L6623) | SaveFile | False |
 
 호출하는 대상과 해석 범위:
 
@@ -29245,7 +29245,7 @@ flowchart TD
 
 ### MethodDeclaration `PublishCycleFollowUp` · L6587–6594
 
-[Drilling.Common/Station/CStationProcess.cs:6587–6594](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6587-L6594)
+[Drilling.Common/Station/CStationProcess.cs:6587–6594](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6587-L6594)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -29265,10 +29265,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:6514–6514](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6514-L6514) | PublishCycleFollowUp | False |
-| [Drilling.Common/Station/CStationProcess.cs:6533–6533](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6533-L6533) | PublishCycleFollowUp | False |
-| [Drilling.Common/Station/CStationProcess.cs:6553–6553](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6553-L6553) | PublishCycleFollowUp | False |
-| [Drilling.Common/Station/CStationProcess.cs:6567–6567](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6567-L6567) | PublishCycleFollowUp | False |
+| [Drilling.Common/Station/CStationProcess.cs:6514–6514](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6514-L6514) | PublishCycleFollowUp | False |
+| [Drilling.Common/Station/CStationProcess.cs:6533–6533](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6533-L6533) | PublishCycleFollowUp | False |
+| [Drilling.Common/Station/CStationProcess.cs:6553–6553](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6553-L6553) | PublishCycleFollowUp | False |
+| [Drilling.Common/Station/CStationProcess.cs:6567–6567](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6567-L6567) | PublishCycleFollowUp | False |
 
 호출하는 대상과 해석 범위:
 
@@ -29306,7 +29306,7 @@ flowchart TD
 
 ### MethodDeclaration `PublishFollowUp` · L6596–6612
 
-[Drilling.Common/Station/CStationProcess.cs:6596–6612](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6596-L6612)
+[Drilling.Common/Station/CStationProcess.cs:6596–6612](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6596-L6612)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -29327,8 +29327,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4291–4291](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4291-L4291) | CZeroLineProcessCoordinator.PublishFollowUp | False |
-| [Drilling.Common/Station/CStationProcess.cs:6592–6592](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6592-L6592) | PublishFollowUp | False |
+| [Drilling.Common/Station/CStationProcess.cs:4291–4291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4291-L4291) | CZeroLineProcessCoordinator.PublishFollowUp | False |
+| [Drilling.Common/Station/CStationProcess.cs:6592–6592](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6592-L6592) | PublishFollowUp | False |
 
 호출하는 대상과 해석 범위:
 
@@ -29395,7 +29395,7 @@ flowchart TD
 
 ### MethodDeclaration `Release` · L6614–6633
 
-[Drilling.Common/Station/CStationProcess.cs:6614–6633](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6614-L6633)
+[Drilling.Common/Station/CStationProcess.cs:6614–6633](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6614-L6633)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -29408,9 +29408,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4276–4276](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4276-L4276) | .Release | False |
-| [Drilling.Common/Station/CStationProcess.cs:4285–4285](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4285-L4285) | _zeroLineCycle.Release | False |
-| [Drilling.Common/Station/CStationProcess.cs:6445–6445](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6445-L6445) | Release | False |
+| [Drilling.Common/Station/CStationProcess.cs:4276–4276](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4276-L4276) | .Release | False |
+| [Drilling.Common/Station/CStationProcess.cs:4285–4285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4285-L4285) | _zeroLineCycle.Release | False |
+| [Drilling.Common/Station/CStationProcess.cs:6445–6445](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6445-L6445) | Release | False |
 
 호출하는 대상과 해석 범위:
 

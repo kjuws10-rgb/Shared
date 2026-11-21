@@ -1,5 +1,10 @@
 # 코드 레퍼런스 변경 이력
 
+## 2026-11-21 · 누락 Log 구현 추적 복원
+
+원본 master `28764c91d521777b8ee068dd7aaf2d3902ce9fe2` → `334b3599651b2e8e0181fd4459bafaf3cddafff3`의1 Commit·CLogManager.cs1파일/+1,562행을반영했습니다. 기존 호출자가 참조하던 로그·PM이력·파일범위/뷰어·한국어시퀀스 설명의 원본을 추적했습니다. 가공/Review/좌표 보정 수식과 Recipe CSV diff는 없습니다. 새09로그 상세장과 영향받는 기존 상세장·그림, 전체 파일/멤버·annotation·검색 자료를 현재Commit으로 갱신했습니다. 로그 빈필드/escape 왕복·민감 Setting값·큐유실/종료·PM재시작은 별도 근거와 한계를 구분합니다. 실제 운영 로그/측정레코드는 복제하지 않습니다.
+
+
 ## 2026-11-20 · Ver11.19.0
 
 - 원본 `96e22cd0 → 28764c91`, 11.18/11.19 두 Commit·89경로를 분석했습니다. AK Margin의 공통 Setting 이전과 좌표 소비 기준, Review RUN/RESULT·직접 행 보정·EDITED/RETAINED 결과·날짜 전체의 적용 이력, 원측정 저장 정밀도, AUTO INIT·PM 수명/이력 경계를 추적했습니다.

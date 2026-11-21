@@ -1,13 +1,13 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Alarm/CAlarmManager.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Alarm/CAlarmManager.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs">Git 원본</a></p><h1>Drilling.Common/Alarm/CAlarmManager.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Alarm/CAlarmManager.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Alarm/CAlarmManager.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs">Git 원본</a></p><h1>Drilling.Common/Alarm/CAlarmManager.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>28764c91d521777b8ee068dd7aaf2d3902ce9fe2</td></tr>
+<tr><td>원본 Commit</td><td>334b3599651b2e8e0181fd4459bafaf3cddafff3</td></tr>
 <tr><td>원본 SHA256</td><td>5cbff85f66cfcf6744d14dd9955a75c2eb21a6536e0f7fd7517472b7f95fa872</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
 <tr><td>원본 크기/행</td><td>34,651 bytes / 676 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>프로그램의 시작·구성·공유 타입 또는 빌드 연결에 사용됩니다. 아래 실제 선언·참조와 원본 근거를 확인합니다.</p>
@@ -134,7 +134,7 @@
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
 <h3 id="L15">FieldDeclaration <code>InterLockAlarmRules</code> · L15–22</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L15-L22">Drilling.Common/Alarm/CAlarmManager.cs:15–22</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L15-L22">Drilling.Common/Alarm/CAlarmManager.cs:15–22</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, Drilling.Common.Alarm.CAlarmManager.ST_ALARM_RULE&gt; Drilling.Common.Alarm.CAlarmManager.InterLockAlarmRules</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
@@ -168,7 +168,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L23">FieldDeclaration <code>_definitionLock</code> · L23–23</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L23-L23">Drilling.Common/Alarm/CAlarmManager.cs:23–23</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L23-L23">Drilling.Common/Alarm/CAlarmManager.cs:23–23</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>object Drilling.Common.Alarm.CAlarmManager._definitionLock</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -187,7 +187,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L24">FieldDeclaration <code>_definitionsInitialized</code> · L24–24</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L24-L24">Drilling.Common/Alarm/CAlarmManager.cs:24–24</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L24-L24">Drilling.Common/Alarm/CAlarmManager.cs:24–24</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Alarm.CAlarmManager._definitionsInitialized</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -197,7 +197,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L25">FieldDeclaration <code>_definitionInitializationRequested</code> · L25–25</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L25-L25">Drilling.Common/Alarm/CAlarmManager.cs:25–25</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L25-L25">Drilling.Common/Alarm/CAlarmManager.cs:25–25</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Alarm.CAlarmManager._definitionInitializationRequested</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -207,7 +207,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L26">FieldDeclaration <code>_definitionRetryTask</code> · L26–26</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L26-L26">Drilling.Common/Alarm/CAlarmManager.cs:26–26</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L26-L26">Drilling.Common/Alarm/CAlarmManager.cs:26–26</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task? Drilling.Common.Alarm.CAlarmManager._definitionRetryTask</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -217,7 +217,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L27">FieldDeclaration <code>_definitionFile</code> · L27–27</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L27-L27">Drilling.Common/Alarm/CAlarmManager.cs:27–27</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L27-L27">Drilling.Common/Alarm/CAlarmManager.cs:27–27</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.CAlarmListFileBase? Drilling.Common.Alarm.CAlarmManager._definitionFile</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -227,7 +227,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L28">FieldDeclaration <code>_definitionRetriesRemaining</code> · L28–28</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L28-L28">Drilling.Common/Alarm/CAlarmManager.cs:28–28</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L28-L28">Drilling.Common/Alarm/CAlarmManager.cs:28–28</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Alarm.CAlarmManager._definitionRetriesRemaining</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -237,7 +237,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L29">FieldDeclaration <code>_nextDefinitionRetryAt</code> · L29–29</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L29-L29">Drilling.Common/Alarm/CAlarmManager.cs:29–29</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L29-L29">Drilling.Common/Alarm/CAlarmManager.cs:29–29</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>long Drilling.Common.Alarm.CAlarmManager._nextDefinitionRetryAt</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -247,7 +247,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L30">FieldDeclaration <code>_definitions</code> · L30–30</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L30-L30">Drilling.Common/Alarm/CAlarmManager.cs:30–30</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L30-L30">Drilling.Common/Alarm/CAlarmManager.cs:30–30</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.ST_ALARM_DEFINITION_SNAPSHOT Drilling.Common.Alarm.CAlarmManager._definitions</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -266,7 +266,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L31">FieldDeclaration <code>_currentLock</code> · L31–31</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L31-L31">Drilling.Common/Alarm/CAlarmManager.cs:31–31</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L31-L31">Drilling.Common/Alarm/CAlarmManager.cs:31–31</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>object Drilling.Common.Alarm.CAlarmManager._currentLock</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -285,7 +285,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L32">FieldDeclaration <code>_curAlarm</code> · L32–32</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L32-L32">Drilling.Common/Alarm/CAlarmManager.cs:32–32</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L32-L32">Drilling.Common/Alarm/CAlarmManager.cs:32–32</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.Dictionary&lt;int, Drilling.Common.Alarm.ST_ALARM_DATA&gt; Drilling.Common.Alarm.CAlarmManager._curAlarm</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -299,7 +299,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L33">FieldDeclaration <code>_history</code> · L33–33</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L33-L33">Drilling.Common/Alarm/CAlarmManager.cs:33–33</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L33-L33">Drilling.Common/Alarm/CAlarmManager.cs:33–33</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.IAlarmHistoryStore? Drilling.Common.Alarm.CAlarmManager._history</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -309,7 +309,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L34">FieldDeclaration <code>_now</code> · L34–34</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L34-L34">Drilling.Common/Alarm/CAlarmManager.cs:34–34</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L34-L34">Drilling.Common/Alarm/CAlarmManager.cs:34–34</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Func&lt;System.DateTimeOffset&gt; Drilling.Common.Alarm.CAlarmManager._now</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -319,7 +319,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L35">FieldDeclaration <code>_current</code> · L35–35</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L35-L35">Drilling.Common/Alarm/CAlarmManager.cs:35–35</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L35-L35">Drilling.Common/Alarm/CAlarmManager.cs:35–35</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.ST_CURRENT_ALARM_SNAPSHOT Drilling.Common.Alarm.CAlarmManager._current</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -338,7 +338,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L36">FieldDeclaration <code>_notificationError</code> · L36–36</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L36-L36">Drilling.Common/Alarm/CAlarmManager.cs:36–36</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L36-L36">Drilling.Common/Alarm/CAlarmManager.cs:36–36</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CAlarmManager._notificationError</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -352,7 +352,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L45">EventFieldDeclaration <code>CurrentChanged</code> · L45–45</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L45-L45">Drilling.Common/Alarm/CAlarmManager.cs:45–45</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L45-L45">Drilling.Common/Alarm/CAlarmManager.cs:45–45</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Action? Drilling.Common.Alarm.CAlarmManager.CurrentChanged</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, event</td></tr>
@@ -371,7 +371,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L46">FieldDeclaration <code>HistoryQueueCapacity</code> · L46–46</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L46-L46">Drilling.Common/Alarm/CAlarmManager.cs:46–46</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L46-L46">Drilling.Common/Alarm/CAlarmManager.cs:46–46</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Alarm.CAlarmManager.HistoryQueueCapacity</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -385,7 +385,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L47">FieldDeclaration <code>_historyQueueLock</code> · L47–47</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L47-L47">Drilling.Common/Alarm/CAlarmManager.cs:47–47</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L47-L47">Drilling.Common/Alarm/CAlarmManager.cs:47–47</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>object Drilling.Common.Alarm.CAlarmManager._historyQueueLock</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -404,7 +404,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L48">FieldDeclaration <code>_historyQueue</code> · L48–48</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L48-L48">Drilling.Common/Alarm/CAlarmManager.cs:48–48</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L48-L48">Drilling.Common/Alarm/CAlarmManager.cs:48–48</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.Queue&lt;Drilling.Common.Alarm.ST_ALARM_DATA&gt; Drilling.Common.Alarm.CAlarmManager._historyQueue</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -418,7 +418,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L49">FieldDeclaration <code>_historyTask</code> · L49–49</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L49-L49">Drilling.Common/Alarm/CAlarmManager.cs:49–49</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L49-L49">Drilling.Common/Alarm/CAlarmManager.cs:49–49</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task? Drilling.Common.Alarm.CAlarmManager._historyTask</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -428,7 +428,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L50">FieldDeclaration <code>_historyError</code> · L50–50</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L50-L50">Drilling.Common/Alarm/CAlarmManager.cs:50–50</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L50-L50">Drilling.Common/Alarm/CAlarmManager.cs:50–50</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CAlarmManager._historyError</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -442,7 +442,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L51">FieldDeclaration <code>_historyWriteStartedAt</code> · L51–51</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L51-L51">Drilling.Common/Alarm/CAlarmManager.cs:51–51</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L51-L51">Drilling.Common/Alarm/CAlarmManager.cs:51–51</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>long Drilling.Common.Alarm.CAlarmManager._historyWriteStartedAt</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -452,7 +452,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L52">FieldDeclaration <code>_monitoringLock</code> · L52–52</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L52-L52">Drilling.Common/Alarm/CAlarmManager.cs:52–52</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L52-L52">Drilling.Common/Alarm/CAlarmManager.cs:52–52</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>object Drilling.Common.Alarm.CAlarmManager._monitoringLock</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -471,7 +471,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L53">FieldDeclaration <code>_monitoringStop</code> · L53–53</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L53-L53">Drilling.Common/Alarm/CAlarmManager.cs:53–53</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L53-L53">Drilling.Common/Alarm/CAlarmManager.cs:53–53</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.CancellationTokenSource? Drilling.Common.Alarm.CAlarmManager._monitoringStop</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -481,7 +481,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L54">FieldDeclaration <code>_monitoringTask</code> · L54–54</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L54-L54">Drilling.Common/Alarm/CAlarmManager.cs:54–54</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L54-L54">Drilling.Common/Alarm/CAlarmManager.cs:54–54</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task? Drilling.Common.Alarm.CAlarmManager._monitoringTask</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -491,7 +491,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L55">FieldDeclaration <code>_monitoringError</code> · L55–55</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L55-L55">Drilling.Common/Alarm/CAlarmManager.cs:55–55</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L55-L55">Drilling.Common/Alarm/CAlarmManager.cs:55–55</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CAlarmManager._monitoringError</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -505,7 +505,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L58">ConstructorDeclaration <code>.ctor</code> · L58–62</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L58-L62">Drilling.Common/Alarm/CAlarmManager.cs:58–62</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L58-L62">Drilling.Common/Alarm/CAlarmManager.cs:58–62</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.CAlarmManager.CAlarmManager(Drilling.Common.Alarm.IAlarmHistoryStore?, System.Func&lt;System.DateTimeOffset&gt;?)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -517,7 +517,10 @@
 <tr><td>history</td><td>Drilling.Common.Alarm.IAlarmHistoryStore?</td><td>None</td><td>True / null</td></tr>
 <tr><td>now</td><td>System.Func&lt;System.DateTimeOffset&gt;?</td><td>None</td><td>True / null</td></tr>
 </tbody></table>
-<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L83-L83">Drilling.Common/Managers/CManager.cs:83–83</a></td><td>new CAlarmManager</td><td>False</td></tr>
+</tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
 <tr><td>60</td><td>assignment</td><td>값을 대상에 대입합니다: _history = history</td></tr>
@@ -525,7 +528,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L66">MethodDeclaration <code>Build</code> · L66–91</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L66-L91">Drilling.Common/Alarm/CAlarmManager.cs:66–91</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L66-L91">Drilling.Common/Alarm/CAlarmManager.cs:66–91</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Alarm.ST_ALARM_DATA&gt; Drilling.Common.Alarm.CAlarmManager.Build(Drilling.Common.Managers.ST_DEVICE_STATUS, Drilling.Common.InterLock.ST_INTERLOCK_SUMMARY)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -539,7 +542,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L425-L425">Drilling.Common/Alarm/CAlarmManager.cs:425–425</a></td><td>Build</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L425-L425">Drilling.Common/Alarm/CAlarmManager.cs:425–425</a></td><td>Build</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -587,7 +590,7 @@
  M --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L70">LocalFunctionStatement <code>IsAlarmOn</code> · L70–73</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L70-L73">Drilling.Common/Alarm/CAlarmManager.cs:70–73</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L70-L73">Drilling.Common/Alarm/CAlarmManager.cs:70–73</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool IsAlarmOn(Drilling.Common.Motion.ST_MOTOR_AXIS_STATUS)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -605,7 +608,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L93">MethodDeclaration <code>AddInterLockAlarms</code> · L93–109</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L93-L109">Drilling.Common/Alarm/CAlarmManager.cs:93–109</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L93-L109">Drilling.Common/Alarm/CAlarmManager.cs:93–109</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Alarm.CAlarmManager.AddInterLockAlarms(System.Collections.Generic.ICollection&lt;Drilling.Common.Alarm.CAlarmManager.ST_ALARM_CANDIDATE&gt;, Drilling.Common.InterLock.ST_INTERLOCK_SUMMARY)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -619,7 +622,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L69-L69">Drilling.Common/Alarm/CAlarmManager.cs:69–69</a></td><td>AddInterLockAlarms</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L69-L69">Drilling.Common/Alarm/CAlarmManager.cs:69–69</a></td><td>AddInterLockAlarms</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -647,7 +650,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L95">LocalFunctionStatement <code>ShouldIncludeItem</code> · L95–98</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L95-L98">Drilling.Common/Alarm/CAlarmManager.cs:95–98</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L95-L98">Drilling.Common/Alarm/CAlarmManager.cs:95–98</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool ShouldIncludeItem(Drilling.Common.InterLock.ST_INTERLOCK_ITEM)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -665,7 +668,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L111">MethodDeclaration <code>GetStationNameFromAxis</code> · L111–121</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L111-L121">Drilling.Common/Alarm/CAlarmManager.cs:111–121</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L111-L121">Drilling.Common/Alarm/CAlarmManager.cs:111–121</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CAlarmManager.GetStationNameFromAxis(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -678,7 +681,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L77-L77">Drilling.Common/Alarm/CAlarmManager.cs:77–77</a></td><td>GetStationNameFromAxis</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L77-L77">Drilling.Common/Alarm/CAlarmManager.cs:77–77</a></td><td>GetStationNameFromAxis</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -709,7 +712,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L125">MethodDeclaration <code>GetDefinitionsSnapshot</code> · L125–125</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L125-L125">Drilling.Common/Alarm/CAlarmManager.cs:125–125</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L125-L125">Drilling.Common/Alarm/CAlarmManager.cs:125–125</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.ST_ALARM_DEFINITION_SNAPSHOT Drilling.Common.Alarm.CAlarmManager.GetDefinitionsSnapshot()</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -718,12 +721,12 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L178-L178">Drilling.Common/Alarm/CAlarmManager.cs:178–178</a></td><td>GetDefinitionsSnapshot</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L227-L227">Drilling.Common/Alarm/CAlarmManager.cs:227–227</a></td><td>GetDefinitionsSnapshot</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L235-L235">Drilling.Common/Alarm/CAlarmManager.cs:235–235</a></td><td>GetDefinitionsSnapshot</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L241-L241">Drilling.Common/Alarm/CAlarmManager.cs:241–241</a></td><td>GetDefinitionsSnapshot</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L166-L166">Drilling.UI/Menu/Menus/CMenuAlarm.cs:166–166</a></td><td>alarmManager.GetDefinitionsSnapshot</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L534-L534">Drilling.UI/Menu/Menus/CMenuAlarm.cs:534–534</a></td><td>_alarms.GetDefinitionsSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L178-L178">Drilling.Common/Alarm/CAlarmManager.cs:178–178</a></td><td>GetDefinitionsSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L227-L227">Drilling.Common/Alarm/CAlarmManager.cs:227–227</a></td><td>GetDefinitionsSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L235-L235">Drilling.Common/Alarm/CAlarmManager.cs:235–235</a></td><td>GetDefinitionsSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L241-L241">Drilling.Common/Alarm/CAlarmManager.cs:241–241</a></td><td>GetDefinitionsSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L166-L166">Drilling.UI/Menu/Menus/CMenuAlarm.cs:166–166</a></td><td>alarmManager.GetDefinitionsSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L534-L534">Drilling.UI/Menu/Menus/CMenuAlarm.cs:534–534</a></td><td>_alarms.GetDefinitionsSnapshot</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -735,7 +738,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L126">MethodDeclaration <code>InitializeDefinitions</code> · L126–139</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L126-L139">Drilling.Common/Alarm/CAlarmManager.cs:126–139</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L126-L139">Drilling.Common/Alarm/CAlarmManager.cs:126–139</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.ST_ALARM_DEFINITION_SNAPSHOT Drilling.Common.Alarm.CAlarmManager.InitializeDefinitions(Drilling.Common.Alarm.CAlarmListFileBase)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -748,7 +751,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L89-L89">Drilling.Common/Managers/CManager.cs:89–89</a></td><td>_alarmManager.InitializeDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L89-L89">Drilling.Common/Managers/CManager.cs:89–89</a></td><td>_alarmManager.InitializeDefinitions</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -777,7 +780,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L141">MethodDeclaration <code>LoadDefinitionsLocked</code> · L141–174</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L141-L174">Drilling.Common/Alarm/CAlarmManager.cs:141–174</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L141-L174">Drilling.Common/Alarm/CAlarmManager.cs:141–174</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Alarm.CAlarmManager.LoadDefinitionsLocked(Drilling.Common.Alarm.CAlarmListFileBase)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -790,8 +793,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L136-L136">Drilling.Common/Alarm/CAlarmManager.cs:136–136</a></td><td>LoadDefinitionsLocked</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L201-L201">Drilling.Common/Alarm/CAlarmManager.cs:201–201</a></td><td>LoadDefinitionsLocked</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L136-L136">Drilling.Common/Alarm/CAlarmManager.cs:136–136</a></td><td>LoadDefinitionsLocked</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L201-L201">Drilling.Common/Alarm/CAlarmManager.cs:201–201</a></td><td>LoadDefinitionsLocked</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -877,7 +880,7 @@
  N0 --&gt;|포함| N4</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L176">MethodDeclaration <code>RetryDefinitionInitialization</code> · L176–212</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L176-L212">Drilling.Common/Alarm/CAlarmManager.cs:176–212</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L176-L212">Drilling.Common/Alarm/CAlarmManager.cs:176–212</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CAlarmManager.RetryDefinitionInitialization()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -886,7 +889,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L483-L483">Drilling.Common/Alarm/CAlarmManager.cs:483–483</a></td><td>RetryDefinitionInitialization</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L483-L483">Drilling.Common/Alarm/CAlarmManager.cs:483–483</a></td><td>RetryDefinitionInitialization</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -946,7 +949,7 @@
  N2 --&gt;|포함| N8</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L214">MethodDeclaration <code>EnsureDefinitionsRequested</code> · L214–218</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L214-L218">Drilling.Common/Alarm/CAlarmManager.cs:214–218</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L214-L218">Drilling.Common/Alarm/CAlarmManager.cs:214–218</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Alarm.CAlarmManager.EnsureDefinitionsRequested()</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal</td></tr>
@@ -955,9 +958,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L414-L414">Drilling.Common/Alarm/CAlarmManager.cs:414–414</a></td><td>EnsureDefinitionsRequested</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L435-L435">Drilling.Common/Alarm/CAlarmManager.cs:435–435</a></td><td>EnsureDefinitionsRequested</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L271-L271">Drilling.Common/Managers/CManager.cs:271–271</a></td><td>_alarmManager.EnsureDefinitionsRequested</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L414-L414">Drilling.Common/Alarm/CAlarmManager.cs:414–414</a></td><td>EnsureDefinitionsRequested</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L435-L435">Drilling.Common/Alarm/CAlarmManager.cs:435–435</a></td><td>EnsureDefinitionsRequested</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L271-L271">Drilling.Common/Managers/CManager.cs:271–271</a></td><td>_alarmManager.EnsureDefinitionsRequested</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -978,7 +981,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L220">PropertyDeclaration <code>NotificationError</code> · L220–220</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L220-L220">Drilling.Common/Alarm/CAlarmManager.cs:220–220</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L220-L220">Drilling.Common/Alarm/CAlarmManager.cs:220–220</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CAlarmManager.NotificationError</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -996,7 +999,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L221">PropertyDeclaration <code>CurAlarm</code> · L221–221</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L221-L221">Drilling.Common/Alarm/CAlarmManager.cs:221–221</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L221-L221">Drilling.Common/Alarm/CAlarmManager.cs:221–221</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Alarm.ST_ALARM_DATA&gt; Drilling.Common.Alarm.CAlarmManager.CurAlarm</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1014,7 +1017,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L223">MethodDeclaration <code>GetCurrentSnapshot</code> · L223–223</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L223-L223">Drilling.Common/Alarm/CAlarmManager.cs:223–223</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L223-L223">Drilling.Common/Alarm/CAlarmManager.cs:223–223</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.ST_CURRENT_ALARM_SNAPSHOT Drilling.Common.Alarm.CAlarmManager.GetCurrentSnapshot()</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1023,10 +1026,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L221-L221">Drilling.Common/Alarm/CAlarmManager.cs:221–221</a></td><td>GetCurrentSnapshot</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3131-L3131">Drilling.UI/CRootView.cs:3131–3131</a></td><td>_alarmManager.GetCurrentSnapshot</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L39-L39">Drilling.UI/Menu/Menus/CMenuAlarm.cs:39–39</a></td><td>alarmManager.GetCurrentSnapshot</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L93-L93">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:93–93</a></td><td>alarms.GetCurrentSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L221-L221">Drilling.Common/Alarm/CAlarmManager.cs:221–221</a></td><td>GetCurrentSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3131-L3131">Drilling.UI/CRootView.cs:3131–3131</a></td><td>_alarmManager.GetCurrentSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L39-L39">Drilling.UI/Menu/Menus/CMenuAlarm.cs:39–39</a></td><td>alarmManager.GetCurrentSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L93-L93">Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:93–93</a></td><td>alarms.GetCurrentSnapshot</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1038,7 +1041,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L224">MethodDeclaration <code>SetSequenceFailure</code> · L224–231</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L224-L231">Drilling.Common/Alarm/CAlarmManager.cs:224–231</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L224-L231">Drilling.Common/Alarm/CAlarmManager.cs:224–231</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Alarm.CAlarmManager.SetSequenceFailure(Drilling.Common.Alarm.CSequenceFailureException)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1072,7 +1075,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L233">MethodDeclaration <code>SetAlarm</code> · L233–237</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L233-L237">Drilling.Common/Alarm/CAlarmManager.cs:233–237</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L233-L237">Drilling.Common/Alarm/CAlarmManager.cs:233–237</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Alarm.CAlarmManager.SetAlarm(int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1085,7 +1088,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L607-L607">Drilling.Common/Alarm/CAlarmManager.cs:607–607</a></td><td>alarms.SetAlarm</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L607-L607">Drilling.Common/Alarm/CAlarmManager.cs:607–607</a></td><td>alarms.SetAlarm</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1109,7 +1112,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L239">MethodDeclaration <code>SetAlarm</code> · L239–243</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L239-L243">Drilling.Common/Alarm/CAlarmManager.cs:239–243</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L239-L243">Drilling.Common/Alarm/CAlarmManager.cs:239–243</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Alarm.CAlarmManager.SetAlarm(string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1122,10 +1125,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L230-L230">Drilling.Common/Alarm/CAlarmManager.cs:230–230</a></td><td>SetAlarm</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L104-L104">Drilling.Common/Managers/CManager.cs:104–104</a></td><td>_alarmManager.SetAlarm</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L150-L150">Drilling.Common/Managers/CManager.cs:150–150</a></td><td>_alarmManager.SetAlarm</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3183-L3183">Drilling.UI/CRootView.cs:3183–3183</a></td><td>_alarmManager.SetAlarm</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L230-L230">Drilling.Common/Alarm/CAlarmManager.cs:230–230</a></td><td>SetAlarm</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L104-L104">Drilling.Common/Managers/CManager.cs:104–104</a></td><td>_alarmManager.SetAlarm</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L150-L150">Drilling.Common/Managers/CManager.cs:150–150</a></td><td>_alarmManager.SetAlarm</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3183-L3183">Drilling.UI/CRootView.cs:3183–3183</a></td><td>_alarmManager.SetAlarm</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1151,7 +1154,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L245">MethodDeclaration <code>SetAlarm</code> · L245–245</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L245-L245">Drilling.Common/Alarm/CAlarmManager.cs:245–245</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L245-L245">Drilling.Common/Alarm/CAlarmManager.cs:245–245</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Alarm.CAlarmManager.SetAlarm(Drilling.Common.Alarm.ST_ALARM_DEFINITION)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1164,8 +1167,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L236-L236">Drilling.Common/Alarm/CAlarmManager.cs:236–236</a></td><td>SetAlarm</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L242-L242">Drilling.Common/Alarm/CAlarmManager.cs:242–242</a></td><td>SetAlarm</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L236-L236">Drilling.Common/Alarm/CAlarmManager.cs:236–236</a></td><td>SetAlarm</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L242-L242">Drilling.Common/Alarm/CAlarmManager.cs:242–242</a></td><td>SetAlarm</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1185,7 +1188,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L246">MethodDeclaration <code>AddCurrent</code> · L246–265</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L246-L265">Drilling.Common/Alarm/CAlarmManager.cs:246–265</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L246-L265">Drilling.Common/Alarm/CAlarmManager.cs:246–265</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Alarm.CAlarmManager.AddCurrent(Drilling.Common.Alarm.ST_ALARM_DATA)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1198,8 +1201,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L87-L87">Drilling.Common/Alarm/CAlarmManager.cs:87–87</a></td><td>AddCurrent</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L245-L245">Drilling.Common/Alarm/CAlarmManager.cs:245–245</a></td><td>AddCurrent</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L87-L87">Drilling.Common/Alarm/CAlarmManager.cs:87–87</a></td><td>AddCurrent</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L245-L245">Drilling.Common/Alarm/CAlarmManager.cs:245–245</a></td><td>AddCurrent</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1237,7 +1240,7 @@
  N0 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L267">MethodDeclaration <code>Reset</code> · L267–278</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L267-L278">Drilling.Common/Alarm/CAlarmManager.cs:267–278</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L267-L278">Drilling.Common/Alarm/CAlarmManager.cs:267–278</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Alarm.CAlarmManager.Reset()</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1246,7 +1249,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L133-L133">Drilling.UI/Menu/Menus/CMenuAlarm.cs:133–133</a></td><td>alarmManager.Reset</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L133-L133">Drilling.UI/Menu/Menus/CMenuAlarm.cs:133–133</a></td><td>alarmManager.Reset</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1272,7 +1275,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L280">MethodDeclaration <code>NotifyCurrentChanged</code> · L280–302</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L280-L302">Drilling.Common/Alarm/CAlarmManager.cs:280–302</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L280-L302">Drilling.Common/Alarm/CAlarmManager.cs:280–302</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Alarm.CAlarmManager.NotifyCurrentChanged()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1281,9 +1284,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L263-L263">Drilling.Common/Alarm/CAlarmManager.cs:263–263</a></td><td>NotifyCurrentChanged</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L277-L277">Drilling.Common/Alarm/CAlarmManager.cs:277–277</a></td><td>NotifyCurrentChanged</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L368-L368">Drilling.Common/Alarm/CAlarmManager.cs:368–368</a></td><td>NotifyCurrentChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L263-L263">Drilling.Common/Alarm/CAlarmManager.cs:263–263</a></td><td>NotifyCurrentChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L277-L277">Drilling.Common/Alarm/CAlarmManager.cs:277–277</a></td><td>NotifyCurrentChanged</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L368-L368">Drilling.Common/Alarm/CAlarmManager.cs:368–368</a></td><td>NotifyCurrentChanged</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1324,7 +1327,7 @@
  N2 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L304">MethodDeclaration <code>PublishCurrent</code> · L304–308</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L304-L308">Drilling.Common/Alarm/CAlarmManager.cs:304–308</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L304-L308">Drilling.Common/Alarm/CAlarmManager.cs:304–308</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Alarm.CAlarmManager.PublishCurrent(long, string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1338,10 +1341,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L253-L253">Drilling.Common/Alarm/CAlarmManager.cs:253–253</a></td><td>PublishCurrent</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L259-L259">Drilling.Common/Alarm/CAlarmManager.cs:259–259</a></td><td>PublishCurrent</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L274-L274">Drilling.Common/Alarm/CAlarmManager.cs:274–274</a></td><td>PublishCurrent</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L365-L365">Drilling.Common/Alarm/CAlarmManager.cs:365–365</a></td><td>PublishCurrent</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L253-L253">Drilling.Common/Alarm/CAlarmManager.cs:253–253</a></td><td>PublishCurrent</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L259-L259">Drilling.Common/Alarm/CAlarmManager.cs:259–259</a></td><td>PublishCurrent</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L274-L274">Drilling.Common/Alarm/CAlarmManager.cs:274–274</a></td><td>PublishCurrent</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L365-L365">Drilling.Common/Alarm/CAlarmManager.cs:365–365</a></td><td>PublishCurrent</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1367,7 +1370,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L310">MethodDeclaration <code>ReadHistory</code> · L310–310</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L310-L310">Drilling.Common/Alarm/CAlarmManager.cs:310–310</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L310-L310">Drilling.Common/Alarm/CAlarmManager.cs:310–310</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.ST_ALARM_HISTORY_RESULT Drilling.Common.Alarm.CAlarmManager.ReadHistory(System.DateTime, System.DateTime, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1393,7 +1396,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L311">PropertyDeclaration <code>HistoryStorageError</code> · L311–321</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L311-L321">Drilling.Common/Alarm/CAlarmManager.cs:311–321</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L311-L321">Drilling.Common/Alarm/CAlarmManager.cs:311–321</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CAlarmManager.HistoryStorageError</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1403,7 +1406,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L313">GetAccessorDeclaration <code>get_HistoryStorageError</code> · L313–320</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L313-L320">Drilling.Common/Alarm/CAlarmManager.cs:313–320</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L313-L320">Drilling.Common/Alarm/CAlarmManager.cs:313–320</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CAlarmManager.HistoryStorageError.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -1438,7 +1441,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L324">MethodDeclaration <code>QueueHistory</code> · L324–337</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L324-L337">Drilling.Common/Alarm/CAlarmManager.cs:324–337</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L324-L337">Drilling.Common/Alarm/CAlarmManager.cs:324–337</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Alarm.CAlarmManager.QueueHistory(Drilling.Common.Alarm.ST_ALARM_DATA)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1451,7 +1454,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L255-L255">Drilling.Common/Alarm/CAlarmManager.cs:255–255</a></td><td>QueueHistory</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L255-L255">Drilling.Common/Alarm/CAlarmManager.cs:255–255</a></td><td>QueueHistory</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1481,7 +1484,7 @@
  N1 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L339">MethodDeclaration <code>WriteQueuedHistory</code> · L339–376</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L339-L376">Drilling.Common/Alarm/CAlarmManager.cs:339–376</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L339-L376">Drilling.Common/Alarm/CAlarmManager.cs:339–376</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Alarm.CAlarmManager.WriteQueuedHistory()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1540,7 +1543,7 @@
  N3 --&gt;|포함| N6</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L379">MethodDeclaration <code>FlushHistoryAsync</code> · L379–385</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L379-L385">Drilling.Common/Alarm/CAlarmManager.cs:379–385</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L379-L385">Drilling.Common/Alarm/CAlarmManager.cs:379–385</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Alarm.CAlarmManager.FlushHistoryAsync(System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1555,7 +1558,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L235-L235">Drilling.Common/Managers/CManager.cs:235–235</a></td><td>_alarmManager.FlushHistoryAsync</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L235-L235">Drilling.Common/Managers/CManager.cs:235–235</a></td><td>_alarmManager.FlushHistoryAsync</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1576,7 +1579,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L389">PropertyDeclaration <code>MonitoringError</code> · L389–397</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L389-L397">Drilling.Common/Alarm/CAlarmManager.cs:389–397</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L389-L397">Drilling.Common/Alarm/CAlarmManager.cs:389–397</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CAlarmManager.MonitoringError</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1586,7 +1589,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L391">GetAccessorDeclaration <code>get_MonitoringError</code> · L391–396</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L391-L396">Drilling.Common/Alarm/CAlarmManager.cs:391–396</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L391-L396">Drilling.Common/Alarm/CAlarmManager.cs:391–396</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CAlarmManager.MonitoringError.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -1615,7 +1618,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L406">MethodDeclaration <code>StartMonitoring</code> · L406–429</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L406-L429">Drilling.Common/Alarm/CAlarmManager.cs:406–429</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L406-L429">Drilling.Common/Alarm/CAlarmManager.cs:406–429</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(Drilling.Common.Managers.CSettingManager, Drilling.Common.Automation.CAutomationManager, System.Func&lt;Drilling.Common.Managers.ST_DEVICE_STATUS&gt;, Drilling.Common.InterLock.CInterLockManager, System.Action&lt;System.Exception&gt;?)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1638,7 +1641,10 @@
 <tr><td>interLocks</td><td>Drilling.Common.InterLock.CInterLockManager</td><td>None</td><td>False /</td></tr>
 <tr><td>reportError</td><td>System.Action&lt;System.Exception&gt;?</td><td>None</td><td>True / null</td></tr>
 </tbody></table>
-<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L275-L275">Drilling.Common/Managers/CManager.cs:275–275</a></td><td>_alarmManager.StartMonitoring</td><td>False</td></tr>
+</tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
 <tr><td>414</td><td>EnsureDefinitionsRequested</td><td>resolved</td><td>void Drilling.Common.Alarm.CAlarmManager.EnsureDefinitionsRequested() · Drilling.Common/Alarm/CAlarmManager.cs:214</td></tr>
@@ -1684,7 +1690,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L432">MethodDeclaration <code>StartMonitoring</code> · L432–447</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L432-L447">Drilling.Common/Alarm/CAlarmManager.cs:432–447</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L432-L447">Drilling.Common/Alarm/CAlarmManager.cs:432–447</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(System.Action&lt;System.Threading.CancellationToken&gt;[], System.Action&lt;System.Exception&gt;?, System.TimeSpan)</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal</td></tr>
@@ -1699,7 +1705,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L417-L428">Drilling.Common/Alarm/CAlarmManager.cs:417–428</a></td><td>StartMonitoring</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L417-L428">Drilling.Common/Alarm/CAlarmManager.cs:417–428</a></td><td>StartMonitoring</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1745,7 +1751,7 @@
  N1 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L449">MethodDeclaration <code>StopMonitoringAsync</code> · L449–471</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L449-L471">Drilling.Common/Alarm/CAlarmManager.cs:449–471</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L449-L471">Drilling.Common/Alarm/CAlarmManager.cs:449–471</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Alarm.CAlarmManager.StopMonitoringAsync()</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, async</td></tr>
@@ -1754,7 +1760,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L283-L283">Drilling.Common/Managers/CManager.cs:283–283</a></td><td>_alarmManager.StopMonitoringAsync</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L283-L283">Drilling.Common/Managers/CManager.cs:283–283</a></td><td>_alarmManager.StopMonitoringAsync</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1796,7 +1802,7 @@
  N2 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L473">MethodDeclaration <code>Monitor</code> · L473–542</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L473-L542">Drilling.Common/Alarm/CAlarmManager.cs:473–542</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L473-L542">Drilling.Common/Alarm/CAlarmManager.cs:473–542</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Alarm.CAlarmManager.Monitor(System.Action&lt;System.Threading.CancellationToken&gt;[], System.Action&lt;System.Exception&gt;?, System.TimeSpan, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, async</td></tr>
@@ -1812,7 +1818,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L445-L445">Drilling.Common/Alarm/CAlarmManager.cs:445–445</a></td><td>Monitor</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L445-L445">Drilling.Common/Alarm/CAlarmManager.cs:445–445</a></td><td>Monitor</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1921,7 +1927,7 @@
  N0 --&gt;|포함| N13</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L549">MethodDeclaration <code>Load</code> · L549–549</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L549-L549">Drilling.Common/Alarm/CAlarmManager.cs:549–549</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L549-L549">Drilling.Common/Alarm/CAlarmManager.cs:549–549</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Alarm.ST_ALARM_DEFINITION&gt; Drilling.Common.Alarm.CAlarmListFileBase.Load()</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, abstract</td></tr>
@@ -1930,11 +1936,11 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L147-L147">Drilling.Common/Alarm/CAlarmManager.cs:147–147</a></td><td>file.Load</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L147-L147">Drilling.Common/Alarm/CAlarmManager.cs:147–147</a></td><td>file.Load</td><td>False</td></tr>
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L555">EnumMemberDeclaration <code>Info</code> · L555–555</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L555-L555">Drilling.Common/Alarm/CAlarmManager.cs:555–555</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L555-L555">Drilling.Common/Alarm/CAlarmManager.cs:555–555</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.EN_ALARM_LEVEL.Info</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1944,7 +1950,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L556">EnumMemberDeclaration <code>Warning</code> · L556–556</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L556-L556">Drilling.Common/Alarm/CAlarmManager.cs:556–556</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L556-L556">Drilling.Common/Alarm/CAlarmManager.cs:556–556</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.EN_ALARM_LEVEL.Warning</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1954,7 +1960,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L557">EnumMemberDeclaration <code>Critical</code> · L557–557</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L557-L557">Drilling.Common/Alarm/CAlarmManager.cs:557–557</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L557-L557">Drilling.Common/Alarm/CAlarmManager.cs:557–557</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.EN_ALARM_LEVEL.Critical</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1964,7 +1970,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L562">EnumMemberDeclaration <code>Clear</code> · L562–562</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L562-L562">Drilling.Common/Alarm/CAlarmManager.cs:562–562</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L562-L562">Drilling.Common/Alarm/CAlarmManager.cs:562–562</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.EN_ALARM_STATE.Clear</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1974,7 +1980,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L563">EnumMemberDeclaration <code>Occur</code> · L563–563</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L563-L563">Drilling.Common/Alarm/CAlarmManager.cs:563–563</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L563-L563">Drilling.Common/Alarm/CAlarmManager.cs:563–563</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.EN_ALARM_STATE.Occur</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -1984,7 +1990,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L568">PropertyDeclaration <code>Id</code> · L568–568</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L568-L568">Drilling.Common/Alarm/CAlarmManager.cs:568–568</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L568-L568">Drilling.Common/Alarm/CAlarmManager.cs:568–568</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.ST_ALARM_DATA.Id</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1994,7 +2000,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L568">GetAccessorDeclaration <code>get_Id</code> · L568–568</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L568-L568">Drilling.Common/Alarm/CAlarmManager.cs:568–568</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L568-L568">Drilling.Common/Alarm/CAlarmManager.cs:568–568</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.ST_ALARM_DATA.Id.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -2004,7 +2010,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L568">InitAccessorDeclaration <code>set_Id</code> · L568–568</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L568-L568">Drilling.Common/Alarm/CAlarmManager.cs:568–568</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L568-L568">Drilling.Common/Alarm/CAlarmManager.cs:568–568</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Alarm.ST_ALARM_DATA.Id.init</td></tr>
 <tr><td>접근/수식자</td><td>Public / init</td></tr>
@@ -2018,7 +2024,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L569">PropertyDeclaration <code>Group</code> · L569–569</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L569-L569">Drilling.Common/Alarm/CAlarmManager.cs:569–569</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L569-L569">Drilling.Common/Alarm/CAlarmManager.cs:569–569</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.ST_ALARM_DATA.Group</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2028,7 +2034,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L569">GetAccessorDeclaration <code>get_Group</code> · L569–569</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L569-L569">Drilling.Common/Alarm/CAlarmManager.cs:569–569</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L569-L569">Drilling.Common/Alarm/CAlarmManager.cs:569–569</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.ST_ALARM_DATA.Group.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -2038,7 +2044,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L569">InitAccessorDeclaration <code>set_Group</code> · L569–569</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L569-L569">Drilling.Common/Alarm/CAlarmManager.cs:569–569</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L569-L569">Drilling.Common/Alarm/CAlarmManager.cs:569–569</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Alarm.ST_ALARM_DATA.Group.init</td></tr>
 <tr><td>접근/수식자</td><td>Public / init</td></tr>
@@ -2052,7 +2058,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L570">PropertyDeclaration <code>CimAddress</code> · L570–570</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L570-L570">Drilling.Common/Alarm/CAlarmManager.cs:570–570</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L570-L570">Drilling.Common/Alarm/CAlarmManager.cs:570–570</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.ST_ALARM_DATA.CimAddress</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2062,7 +2068,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L570">GetAccessorDeclaration <code>get_CimAddress</code> · L570–570</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L570-L570">Drilling.Common/Alarm/CAlarmManager.cs:570–570</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L570-L570">Drilling.Common/Alarm/CAlarmManager.cs:570–570</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.ST_ALARM_DATA.CimAddress.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -2072,7 +2078,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L570">InitAccessorDeclaration <code>set_CimAddress</code> · L570–570</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L570-L570">Drilling.Common/Alarm/CAlarmManager.cs:570–570</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L570-L570">Drilling.Common/Alarm/CAlarmManager.cs:570–570</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Alarm.ST_ALARM_DATA.CimAddress.init</td></tr>
 <tr><td>접근/수식자</td><td>Public / init</td></tr>
@@ -2086,7 +2092,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L577">MethodDeclaration <code>Check</code> · L577–609</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L577-L609">Drilling.Common/Alarm/CAlarmManager.cs:577–609</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L577-L609">Drilling.Common/Alarm/CAlarmManager.cs:577–609</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Alarm.CScannerTemperatureAlarmMonitor.Check()</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2095,7 +2101,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L420-L420">Drilling.Common/Alarm/CAlarmManager.cs:420–420</a></td><td>temperatures.Check</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L420-L420">Drilling.Common/Alarm/CAlarmManager.cs:420–420</a></td><td>temperatures.Check</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2179,7 +2185,7 @@
  N1 --&gt;|포함| N6</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L615">FieldDeclaration <code>_reported</code> · L615–615</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L615-L615">Drilling.Common/Alarm/CAlarmManager.cs:615–615</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L615-L615">Drilling.Common/Alarm/CAlarmManager.cs:615–615</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Alarm.CSequenceFailureException._reported</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -2189,7 +2195,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L616">ConstructorDeclaration <code>.ctor</code> · L616–618</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L616-L618">Drilling.Common/Alarm/CAlarmManager.cs:616–618</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L616-L618">Drilling.Common/Alarm/CAlarmManager.cs:616–618</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.CSequenceFailureException.CSequenceFailureException(string, string, string, System.Exception)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -2205,9 +2211,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L646-L646">Drilling.Common/Alarm/CAlarmManager.cs:646–646</a></td><td>new</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L648-L648">Drilling.Common/Alarm/CAlarmManager.cs:648–648</a></td><td>new</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L649-L649">Drilling.Common/Alarm/CAlarmManager.cs:649–649</a></td><td>new</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L646-L646">Drilling.Common/Alarm/CAlarmManager.cs:646–646</a></td><td>new</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L648-L648">Drilling.Common/Alarm/CAlarmManager.cs:648–648</a></td><td>new</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L649-L649">Drilling.Common/Alarm/CAlarmManager.cs:649–649</a></td><td>new</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -2217,7 +2223,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L619">PropertyDeclaration <code>Scenario</code> · L619–619</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L619-L619">Drilling.Common/Alarm/CAlarmManager.cs:619–619</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L619-L619">Drilling.Common/Alarm/CAlarmManager.cs:619–619</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CSequenceFailureException.Scenario</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2227,7 +2233,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L619">GetAccessorDeclaration <code>get_Scenario</code> · L619–619</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L619-L619">Drilling.Common/Alarm/CAlarmManager.cs:619–619</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L619-L619">Drilling.Common/Alarm/CAlarmManager.cs:619–619</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CSequenceFailureException.Scenario.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -2237,7 +2243,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L620">PropertyDeclaration <code>Subject</code> · L620–620</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L620-L620">Drilling.Common/Alarm/CAlarmManager.cs:620–620</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L620-L620">Drilling.Common/Alarm/CAlarmManager.cs:620–620</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CSequenceFailureException.Subject</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2247,7 +2253,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L620">GetAccessorDeclaration <code>get_Subject</code> · L620–620</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L620-L620">Drilling.Common/Alarm/CAlarmManager.cs:620–620</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L620-L620">Drilling.Common/Alarm/CAlarmManager.cs:620–620</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CSequenceFailureException.Subject.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -2257,7 +2263,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L621">PropertyDeclaration <code>Kind</code> · L621–621</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L621-L621">Drilling.Common/Alarm/CAlarmManager.cs:621–621</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L621-L621">Drilling.Common/Alarm/CAlarmManager.cs:621–621</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CSequenceFailureException.Kind</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2267,7 +2273,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L621">GetAccessorDeclaration <code>get_Kind</code> · L621–621</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L621-L621">Drilling.Common/Alarm/CAlarmManager.cs:621–621</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L621-L621">Drilling.Common/Alarm/CAlarmManager.cs:621–621</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CSequenceFailureException.Kind.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -2277,7 +2283,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L622">PropertyDeclaration <code>AlarmId</code> · L622–622</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L622-L622">Drilling.Common/Alarm/CAlarmManager.cs:622–622</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L622-L622">Drilling.Common/Alarm/CAlarmManager.cs:622–622</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CSequenceFailureException.AlarmId</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2291,7 +2297,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L623">MethodDeclaration <code>ActionScenario</code> · L623–629</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L623-L629">Drilling.Common/Alarm/CAlarmManager.cs:623–629</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L623-L629">Drilling.Common/Alarm/CAlarmManager.cs:623–629</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CSequenceFailureException.ActionScenario(string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2304,7 +2310,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L646-L646">Drilling.Common/Alarm/CAlarmManager.cs:646–646</a></td><td>ActionScenario</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L646-L646">Drilling.Common/Alarm/CAlarmManager.cs:646–646</a></td><td>ActionScenario</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2335,7 +2341,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L630">MethodDeclaration <code>SignalScenario</code> · L630–641</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L630-L641">Drilling.Common/Alarm/CAlarmManager.cs:630–641</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L630-L641">Drilling.Common/Alarm/CAlarmManager.cs:630–641</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CSequenceFailureException.SignalScenario(string, string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2349,7 +2355,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L648-L648">Drilling.Common/Alarm/CAlarmManager.cs:648–648</a></td><td>SignalScenario</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L648-L648">Drilling.Common/Alarm/CAlarmManager.cs:648–648</a></td><td>SignalScenario</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2421,7 +2427,7 @@
  M --&gt;|포함| N7</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L642">MethodDeclaration <code>Existing</code> · L642–644</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L642-L644">Drilling.Common/Alarm/CAlarmManager.cs:642–644</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L642-L644">Drilling.Common/Alarm/CAlarmManager.cs:642–644</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.CSequenceFailureException? Drilling.Common.Alarm.CSequenceFailureException.Existing(System.Exception)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2434,10 +2440,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L644-L644">Drilling.Common/Alarm/CAlarmManager.cs:644–644</a></td><td>Existing</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L645-L645">Drilling.Common/Alarm/CAlarmManager.cs:645–645</a></td><td>Existing</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L647-L647">Drilling.Common/Alarm/CAlarmManager.cs:647–647</a></td><td>Existing</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L649-L649">Drilling.Common/Alarm/CAlarmManager.cs:649–649</a></td><td>Existing</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L644-L644">Drilling.Common/Alarm/CAlarmManager.cs:644–644</a></td><td>Existing</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L645-L645">Drilling.Common/Alarm/CAlarmManager.cs:645–645</a></td><td>Existing</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L647-L647">Drilling.Common/Alarm/CAlarmManager.cs:647–647</a></td><td>Existing</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L649-L649">Drilling.Common/Alarm/CAlarmManager.cs:649–649</a></td><td>Existing</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2456,7 +2462,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L645">MethodDeclaration <code>Action</code> · L645–646</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L645-L646">Drilling.Common/Alarm/CAlarmManager.cs:645–646</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L645-L646">Drilling.Common/Alarm/CAlarmManager.cs:645–646</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.CSequenceFailureException Drilling.Common.Alarm.CSequenceFailureException.Action(string, System.Exception)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2470,15 +2476,15 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L470-L470">Drilling.Common/Station/CStageReviewSequences.cs:470–470</a></td><td>CSequenceFailureException.Action</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L619-L619">Drilling.Common/Station/CStageReviewSequences.cs:619–619</a></td><td>CSequenceFailureException.Action</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L713-L713">Drilling.Common/Station/CStageReviewSequences.cs:713–713</a></td><td>CSequenceFailureException.Action</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L816-L816">Drilling.Common/Station/CStageReviewSequences.cs:816–816</a></td><td>CSequenceFailureException.Action</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5374-L5374">Drilling.Common/Station/CStationProcess.cs:5374–5374</a></td><td>CSequenceFailureException.Action</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5389-L5389">Drilling.Common/Station/CStationProcess.cs:5389–5389</a></td><td>CSequenceFailureException.Action</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5450-L5450">Drilling.Common/Station/CStationProcess.cs:5450–5450</a></td><td>CSequenceFailureException.Action</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5532-L5532">Drilling.Common/Station/CStationProcess.cs:5532–5532</a></td><td>CSequenceFailureException.Action</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6378-L6378">Drilling.Common/Station/CStationProcess.cs:6378–6378</a></td><td>CSequenceFailureException.Action</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L470-L470">Drilling.Common/Station/CStageReviewSequences.cs:470–470</a></td><td>CSequenceFailureException.Action</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L619-L619">Drilling.Common/Station/CStageReviewSequences.cs:619–619</a></td><td>CSequenceFailureException.Action</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L713-L713">Drilling.Common/Station/CStageReviewSequences.cs:713–713</a></td><td>CSequenceFailureException.Action</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L816-L816">Drilling.Common/Station/CStageReviewSequences.cs:816–816</a></td><td>CSequenceFailureException.Action</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5374-L5374">Drilling.Common/Station/CStationProcess.cs:5374–5374</a></td><td>CSequenceFailureException.Action</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5389-L5389">Drilling.Common/Station/CStationProcess.cs:5389–5389</a></td><td>CSequenceFailureException.Action</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5450-L5450">Drilling.Common/Station/CStationProcess.cs:5450–5450</a></td><td>CSequenceFailureException.Action</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5532-L5532">Drilling.Common/Station/CStationProcess.cs:5532–5532</a></td><td>CSequenceFailureException.Action</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6378-L6378">Drilling.Common/Station/CStationProcess.cs:6378–6378</a></td><td>CSequenceFailureException.Action</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2497,7 +2503,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L647">MethodDeclaration <code>Signal</code> · L647–648</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L647-L648">Drilling.Common/Alarm/CAlarmManager.cs:647–648</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L647-L648">Drilling.Common/Alarm/CAlarmManager.cs:647–648</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.CSequenceFailureException Drilling.Common.Alarm.CSequenceFailureException.Signal(string, string, bool, System.Exception)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2513,16 +2519,16 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L646-L646">Drilling.Common/Alarm/CAlarmManager.cs:646–646</a></td><td>Signal</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L358-L358">Drilling.Common/Station/CStageReviewSequences.cs:358–358</a></td><td>CSequenceFailureException.Signal</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L365-L365">Drilling.Common/Station/CStageReviewSequences.cs:365–365</a></td><td>CSequenceFailureException.Signal</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L453-L453">Drilling.Common/Station/CStageReviewSequences.cs:453–453</a></td><td>CSequenceFailureException.Signal</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5409-L5409">Drilling.Common/Station/CStationProcess.cs:5409–5409</a></td><td>CSequenceFailureException.Signal</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5439-L5439">Drilling.Common/Station/CStationProcess.cs:5439–5439</a></td><td>CSequenceFailureException.Signal</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5471-L5471">Drilling.Common/Station/CStationProcess.cs:5471–5471</a></td><td>CSequenceFailureException.Signal</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5524-L5524">Drilling.Common/Station/CStationProcess.cs:5524–5524</a></td><td>CSequenceFailureException.Signal</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6954-L6954">Drilling.UI/Menu/Menus/CMenuManual.cs:6954–6954</a></td><td>Drilling.Common.Alarm.CSequenceFailureException.Signal</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6979-L6979">Drilling.UI/Menu/Menus/CMenuManual.cs:6979–6979</a></td><td>Drilling.Common.Alarm.CSequenceFailureException.Signal</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L646-L646">Drilling.Common/Alarm/CAlarmManager.cs:646–646</a></td><td>Signal</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L358-L358">Drilling.Common/Station/CStageReviewSequences.cs:358–358</a></td><td>CSequenceFailureException.Signal</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L365-L365">Drilling.Common/Station/CStageReviewSequences.cs:365–365</a></td><td>CSequenceFailureException.Signal</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L453-L453">Drilling.Common/Station/CStageReviewSequences.cs:453–453</a></td><td>CSequenceFailureException.Signal</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5409-L5409">Drilling.Common/Station/CStationProcess.cs:5409–5409</a></td><td>CSequenceFailureException.Signal</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5439-L5439">Drilling.Common/Station/CStationProcess.cs:5439–5439</a></td><td>CSequenceFailureException.Signal</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5471-L5471">Drilling.Common/Station/CStationProcess.cs:5471–5471</a></td><td>CSequenceFailureException.Signal</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5524-L5524">Drilling.Common/Station/CStationProcess.cs:5524–5524</a></td><td>CSequenceFailureException.Signal</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6954-L6954">Drilling.UI/Menu/Menus/CMenuManual.cs:6954–6954</a></td><td>Drilling.Common.Alarm.CSequenceFailureException.Signal</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6979-L6979">Drilling.UI/Menu/Menus/CMenuManual.cs:6979–6979</a></td><td>Drilling.Common.Alarm.CSequenceFailureException.Signal</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2539,7 +2545,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L649">MethodDeclaration <code>ScenarioFailure</code> · L649–649</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L649-L649">Drilling.Common/Alarm/CAlarmManager.cs:649–649</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L649-L649">Drilling.Common/Alarm/CAlarmManager.cs:649–649</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.CSequenceFailureException Drilling.Common.Alarm.CSequenceFailureException.ScenarioFailure(string, System.Exception)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2553,7 +2559,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5346-L5346">Drilling.Common/Station/CStationProcess.cs:5346–5346</a></td><td>CSequenceFailureException.ScenarioFailure</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5346-L5346">Drilling.Common/Station/CStationProcess.cs:5346–5346</a></td><td>CSequenceFailureException.ScenarioFailure</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2567,7 +2573,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L650">MethodDeclaration <code>Publish</code> · L650–656</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L650-L656">Drilling.Common/Alarm/CAlarmManager.cs:650–656</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L650-L656">Drilling.Common/Alarm/CAlarmManager.cs:650–656</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Alarm.CSequenceFailureException.Publish(System.Action&lt;Drilling.Common.Alarm.CSequenceFailureException&gt;?)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2580,10 +2586,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L23-L23">Drilling.Common/Station/CStageReviewSequences.cs:23–23</a></td><td>failure.Publish</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5074-L5074">Drilling.Common/Station/CStationProcess.cs:5074–5074</a></td><td>failure.Publish</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6954-L6954">Drilling.UI/Menu/Menus/CMenuManual.cs:6954–6954</a></td><td>Drilling.Common.Alarm.CSequenceFailureException.Signal(&quot;DO_ALIGN&quot;, RequestId, exception is TimeoutException or OperationCanceledException, exception).Publish</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6979-L6979">Drilling.UI/Menu/Menus/CMenuManual.cs:6979–6979</a></td><td>Drilling.Common.Alarm.CSequenceFailureException.Signal(&quot;DO_ALIGN&quot;, RequestId, exception is TimeoutException or OperationCanceledException, exception).Publish</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L23-L23">Drilling.Common/Station/CStageReviewSequences.cs:23–23</a></td><td>failure.Publish</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5074-L5074">Drilling.Common/Station/CStationProcess.cs:5074–5074</a></td><td>failure.Publish</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6954-L6954">Drilling.UI/Menu/Menus/CMenuManual.cs:6954–6954</a></td><td>Drilling.Common.Alarm.CSequenceFailureException.Signal(&quot;DO_ALIGN&quot;, RequestId, exception is TimeoutException or OperationCanceledException, exception).Publish</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6979-L6979">Drilling.UI/Menu/Menus/CMenuManual.cs:6979–6979</a></td><td>Drilling.Common.Alarm.CSequenceFailureException.Signal(&quot;DO_ALIGN&quot;, RequestId, exception is TimeoutException or OperationCanceledException, exception).Publish</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2623,7 +2629,7 @@
  N2 --&gt;|포함| N5</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L663">PropertyDeclaration <code>Scenario</code> · L663–663</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L663-L663">Drilling.Common/Alarm/CAlarmManager.cs:663–663</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L663-L663">Drilling.Common/Alarm/CAlarmManager.cs:663–663</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CSequenceSignalCanceledException.Scenario</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2633,7 +2639,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L663">GetAccessorDeclaration <code>get_Scenario</code> · L663–663</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L663-L663">Drilling.Common/Alarm/CAlarmManager.cs:663–663</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L663-L663">Drilling.Common/Alarm/CAlarmManager.cs:663–663</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CSequenceSignalCanceledException.Scenario.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -2643,7 +2649,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L664">PropertyDeclaration <code>Signal</code> · L664–664</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L664-L664">Drilling.Common/Alarm/CAlarmManager.cs:664–664</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L664-L664">Drilling.Common/Alarm/CAlarmManager.cs:664–664</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CSequenceSignalCanceledException.Signal</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2653,7 +2659,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L664">GetAccessorDeclaration <code>get_Signal</code> · L664–664</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L664-L664">Drilling.Common/Alarm/CAlarmManager.cs:664–664</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L664-L664">Drilling.Common/Alarm/CAlarmManager.cs:664–664</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Alarm.CSequenceSignalCanceledException.Signal.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -2663,7 +2669,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L673">MethodDeclaration <code>Append</code> · L673–673</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L673-L673">Drilling.Common/Alarm/CAlarmManager.cs:673–673</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L673-L673">Drilling.Common/Alarm/CAlarmManager.cs:673–673</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Alarm.IAlarmHistoryStore.Append(Drilling.Common.Alarm.ST_ALARM_DATA)</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -2676,11 +2682,11 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L356-L356">Drilling.Common/Alarm/CAlarmManager.cs:356–356</a></td><td>_history!.Append</td><td>True</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L356-L356">Drilling.Common/Alarm/CAlarmManager.cs:356–356</a></td><td>_history!.Append</td><td>True</td></tr>
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L674">MethodDeclaration <code>Read</code> · L674–674</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L674-L674">Drilling.Common/Alarm/CAlarmManager.cs:674–674</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L674-L674">Drilling.Common/Alarm/CAlarmManager.cs:674–674</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Alarm.ST_ALARM_HISTORY_RESULT Drilling.Common.Alarm.IAlarmHistoryStore.Read(System.DateTime, System.DateTime, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -2695,7 +2701,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L310-L310">Drilling.Common/Alarm/CAlarmManager.cs:310–310</a></td><td>.Read</td><td>True</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L310-L310">Drilling.Common/Alarm/CAlarmManager.cs:310–310</a></td><td>.Read</td><td>True</td></tr>
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h2>구문·바인딩 한계</h2>

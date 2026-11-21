@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 806ffafa140d6f0baa1d791225aec09a033f799f8a440b1aa07effeb3602a641 |
 | 파일 분류 | code |
 | 원본 크기/행 | 24,068 bytes / 340 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -108,7 +108,7 @@
 
 ### MethodDeclaration `Parameters` · L14–20
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:14–20](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L14-L20)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:14–20](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L14-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -128,9 +128,9 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3290–3290](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3290-L3290) | CDefaultOffsetCalibration.Parameters | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3570–3570](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3570-L3570) | CDefaultOffsetCalibration.Parameters | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3935–3935](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3935-L3935) | CDefaultOffsetCalibration.Parameters | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3290–3290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3290-L3290) | CDefaultOffsetCalibration.Parameters | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3570–3570](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3570-L3570) | CDefaultOffsetCalibration.Parameters | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3935–3935](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3935-L3935) | CDefaultOffsetCalibration.Parameters | False |
 
 호출하는 대상과 해석 범위:
 
@@ -166,7 +166,7 @@ flowchart TD
 
 ### MethodDeclaration `Number` · L22–27
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L22-L27)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:22–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L22-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -186,51 +186,51 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L69-L69) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L71-L71) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L72-L72) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L72-L72) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L83-L83) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L84-L84) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L85-L85) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L97-L97) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L98-L98) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L99-L99) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L109-L109) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L111-L111) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L112-L112) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L112-L112) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L116-L116) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L116-L116) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L117-L117) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L117-L117) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L117-L117) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L117-L117) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L118-L118) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L119-L119) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L119-L119) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L150-L150) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L151-L151) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L164-L164) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L175-L175) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L250-L250) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:252–252](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L252-L252) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L253-L253) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L253-L253) | Number | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L289-L289) | Number | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3615–3615](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3615-L3615) | CDefaultOffsetCalibration.Number | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3703–3703](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3703-L3703) | CDefaultOffsetCalibration.Number | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3731–3731](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3731-L3731) | CDefaultOffsetCalibration.Number | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3751–3751](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3751-L3751) | CDefaultOffsetCalibration.Number | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3843–3843](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3843-L3843) | CDefaultOffsetCalibration.Number | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3893–3893](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3893-L3893) | CDefaultOffsetCalibration.Number | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3893–3893](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3893-L3893) | CDefaultOffsetCalibration.Number | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3893–3893](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3893-L3893) | CDefaultOffsetCalibration.Number | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3898–3898](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3898-L3898) | CDefaultOffsetCalibration.Number | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3898–3898](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3898-L3898) | CDefaultOffsetCalibration.Number | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3898–3898](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3898-L3898) | CDefaultOffsetCalibration.Number | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3898–3898](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3898-L3898) | CDefaultOffsetCalibration.Number | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3899–3899](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3899-L3899) | CDefaultOffsetCalibration.Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L69-L69) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L71-L71) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L72-L72) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L72-L72) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L83-L83) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L84-L84) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L85-L85) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L97-L97) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L98-L98) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L99-L99) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L109-L109) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L111-L111) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L112-L112) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L112-L112) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L116-L116) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L116-L116) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L117-L117) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L117-L117) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L117-L117) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L117-L117) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L118-L118) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L119-L119) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L119-L119) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L150-L150) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L151-L151) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L164-L164) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L175-L175) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L250-L250) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:252–252](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L252-L252) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L253-L253) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L253-L253) | Number | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L289-L289) | Number | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3615–3615](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3615-L3615) | CDefaultOffsetCalibration.Number | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3703–3703](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3703-L3703) | CDefaultOffsetCalibration.Number | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3731–3731](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3731-L3731) | CDefaultOffsetCalibration.Number | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3751–3751](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3751-L3751) | CDefaultOffsetCalibration.Number | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3843–3843](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3843-L3843) | CDefaultOffsetCalibration.Number | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3893–3893](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3893-L3893) | CDefaultOffsetCalibration.Number | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3893–3893](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3893-L3893) | CDefaultOffsetCalibration.Number | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3893–3893](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3893-L3893) | CDefaultOffsetCalibration.Number | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3898–3898](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3898-L3898) | CDefaultOffsetCalibration.Number | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3898–3898](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3898-L3898) | CDefaultOffsetCalibration.Number | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3898–3898](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3898-L3898) | CDefaultOffsetCalibration.Number | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3898–3898](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3898-L3898) | CDefaultOffsetCalibration.Number | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3899–3899](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3899-L3899) | CDefaultOffsetCalibration.Number | False |
 
 호출하는 대상과 해석 범위:
 
@@ -266,7 +266,7 @@ flowchart TD
 
 ### MethodDeclaration `DoeExists` · L29–41
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:29–41](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L29-L41)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:29–41](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L29-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -286,14 +286,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L47-L47) | DoeExists | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L58-L58) | DoeExists | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3303–3303](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3303-L3303) | CDefaultOffsetCalibration.DoeExists | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3744–3744](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3744-L3744) | CDefaultOffsetCalibration.DoeExists | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3904–3904](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3904-L3904) | CDefaultOffsetCalibration.DoeExists | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4590–4590](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4590-L4590) | CDefaultOffsetCalibration.DoeExists | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4781–4781](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4781-L4781) | CDefaultOffsetCalibration.DoeExists | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4857–4857](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4857-L4857) | CDefaultOffsetCalibration.DoeExists | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L47-L47) | DoeExists | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L58-L58) | DoeExists | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3303–3303](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3303-L3303) | CDefaultOffsetCalibration.DoeExists | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3744–3744](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3744-L3744) | CDefaultOffsetCalibration.DoeExists | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3904–3904](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3904-L3904) | CDefaultOffsetCalibration.DoeExists | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4590–4590](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4590-L4590) | CDefaultOffsetCalibration.DoeExists | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4781–4781](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4781-L4781) | CDefaultOffsetCalibration.DoeExists | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4857–4857](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4857-L4857) | CDefaultOffsetCalibration.DoeExists | False |
 
 호출하는 대상과 해석 범위:
 
@@ -345,7 +345,7 @@ flowchart TD
 
 ### MethodDeclaration `DefaultInspectionGridSize` · L44–48
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:44–48](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L44-L48)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:44–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L44-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -366,10 +366,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L52-L52) | DefaultInspectionGridSize | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3905–3905](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3905-L3905) | CDefaultOffsetCalibration.DefaultInspectionGridSize | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4782–4782](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4782-L4782) | CDefaultOffsetCalibration.DefaultInspectionGridSize | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4860–4860](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4860-L4860) | CDefaultOffsetCalibration.DefaultInspectionGridSize | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L52-L52) | DefaultInspectionGridSize | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3905–3905](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3905-L3905) | CDefaultOffsetCalibration.DefaultInspectionGridSize | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4782–4782](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4782-L4782) | CDefaultOffsetCalibration.DefaultInspectionGridSize | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4860–4860](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4860-L4860) | CDefaultOffsetCalibration.DefaultInspectionGridSize | False |
 
 호출하는 대상과 해석 범위:
 
@@ -391,7 +391,7 @@ flowchart TD
 
 ### MethodDeclaration `DefaultInspectionPointCount` · L50–54
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:50–54](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L50-L54)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:50–54](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L50-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -429,7 +429,7 @@ flowchart TD
 
 ### MethodDeclaration `DefaultInspectionDescription` · L56–62
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:56–62](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L56-L62)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:56–62](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L56-L62)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -450,7 +450,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3838–3838](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3838-L3838) | CDefaultOffsetCalibration.DefaultInspectionDescription | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3838–3838](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3838-L3838) | CDefaultOffsetCalibration.DefaultInspectionDescription | False |
 
 호출하는 대상과 해석 범위:
 
@@ -481,7 +481,7 @@ flowchart TD
 
 ### MethodDeclaration `Conditions` · L67–79
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:67–79](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L67-L79)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:67–79](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L67-L79)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -501,7 +501,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3459–3459](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3459-L3459) | CDefaultOffsetCalibration.Conditions | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3459–3459](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3459-L3459) | CDefaultOffsetCalibration.Conditions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -560,7 +560,7 @@ flowchart TD
 
 ### MethodDeclaration `DesignAlignKey3ReviewX` · L81–91
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:81–91](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L81-L91)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:81–91](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L81-L91)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -579,8 +579,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L70-L70) | DesignAlignKey3ReviewX | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3305–3305](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3305-L3305) | CDefaultOffsetCalibration.DesignAlignKey3ReviewX | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L70-L70) | DesignAlignKey3ReviewX | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3305–3305](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3305-L3305) | CDefaultOffsetCalibration.DesignAlignKey3ReviewX | False |
 
 호출하는 대상과 해석 범위:
 
@@ -628,7 +628,7 @@ flowchart TD
 
 ### MethodDeclaration `HeadGeometry` · L93–103
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:93–103](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L93-L103)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:93–103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L93-L103)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -648,10 +648,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L128-L128) | HeadGeometry | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3302–3302](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3302-L3302) | CDefaultOffsetCalibration.HeadGeometry | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3743–3743](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3743-L3743) | CDefaultOffsetCalibration.HeadGeometry | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3903–3903](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3903-L3903) | CDefaultOffsetCalibration.HeadGeometry | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L128-L128) | HeadGeometry | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3302–3302](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3302-L3302) | CDefaultOffsetCalibration.HeadGeometry | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3743–3743](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3743-L3743) | CDefaultOffsetCalibration.HeadGeometry | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3903–3903](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3903-L3903) | CDefaultOffsetCalibration.HeadGeometry | False |
 
 호출하는 대상과 해석 범위:
 
@@ -705,7 +705,7 @@ flowchart TD
 
 ### MethodDeclaration `PredictCenter` · L105–122
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:105–122](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L105-L122)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:105–122](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L105-L122)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -726,7 +726,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4751–4752](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4751-L4752) | CDefaultOffsetCalibration.PredictCenter | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4751–4752](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4751-L4752) | CDefaultOffsetCalibration.PredictCenter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -828,7 +828,7 @@ flowchart TD
 
 ### MethodDeclaration `FitsField` · L126–130
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:126–130](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L126-L130)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:126–130](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L126-L130)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -850,7 +850,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:157–157](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L157-L157) | FitsField | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:157–157](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L157-L157) | FitsField | False |
 
 호출하는 대상과 해석 범위:
 
@@ -879,7 +879,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateOptions` · L132–144
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:132–144](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L132-L144)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:132–144](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L132-L144)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -898,12 +898,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L46-L46) | ValidateOptions | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L149-L149) | ValidateOptions | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L243-L243) | ValidateOptions | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L273-L273) | ValidateOptions | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3590–3590](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3590-L3590) | CDefaultOffsetCalibration.ValidateOptions | False |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:190–190](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L190-L190) | CDefaultOffsetCalibration.ValidateOptions | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L46-L46) | ValidateOptions | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L149-L149) | ValidateOptions | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L243-L243) | ValidateOptions | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L273-L273) | ValidateOptions | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3590–3590](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3590-L3590) | CDefaultOffsetCalibration.ValidateOptions | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:190–190](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L190-L190) | CDefaultOffsetCalibration.ValidateOptions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -966,7 +966,7 @@ flowchart TD
 
 ### MethodDeclaration `CenterScannerTargets` · L147–160
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:147–160](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L147-L160)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:147–160](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L147-L160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -987,9 +987,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3619–3619](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3619-L3619) | CDefaultOffsetCalibration.CenterScannerTargets | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3754–3754](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3754-L3754) | CDefaultOffsetCalibration.CenterScannerTargets | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3842–3842](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3842-L3842) | CDefaultOffsetCalibration.CenterScannerTargets | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3619–3619](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3619-L3619) | CDefaultOffsetCalibration.CenterScannerTargets | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3754–3754](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3754-L3754) | CDefaultOffsetCalibration.CenterScannerTargets | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3842–3842](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3842-L3842) | CDefaultOffsetCalibration.CenterScannerTargets | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1050,7 +1050,7 @@ flowchart TD
 
 ### MethodDeclaration `BeamGridSize` · L162–168
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:162–168](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L162-L168)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:162–168](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L162-L168)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1069,8 +1069,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L77-L77) | BeamGridSize | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L172-L172) | BeamGridSize | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L77-L77) | BeamGridSize | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L172-L172) | BeamGridSize | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1106,7 +1106,7 @@ flowchart TD
 
 ### MethodDeclaration `Pitch` · L170–178
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:170–178](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L170-L178)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:170–178](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L170-L178)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1126,8 +1126,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3309–3309](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3309-L3309) | CDefaultOffsetCalibration.Pitch | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4784–4784](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4784-L4784) | CDefaultOffsetCalibration.Pitch | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3309–3309](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3309-L3309) | CDefaultOffsetCalibration.Pitch | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4784–4784](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4784-L4784) | CDefaultOffsetCalibration.Pitch | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1175,7 +1175,7 @@ flowchart TD
 
 ### MethodDeclaration `Slot` · L180–191
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:180–191](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L180-L191)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:180–191](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L180-L191)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1197,10 +1197,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3913–3913](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3913-L3913) | CDefaultOffsetCalibration.Slot | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4787–4787](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4787-L4787) | CDefaultOffsetCalibration.Slot | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4828–4828](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4828-L4828) | CDefaultOffsetCalibration.Slot | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4896–4896](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4896-L4896) | CDefaultOffsetCalibration.Slot | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3913–3913](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3913-L3913) | CDefaultOffsetCalibration.Slot | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4787–4787](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4787-L4787) | CDefaultOffsetCalibration.Slot | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4828–4828](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4828-L4828) | CDefaultOffsetCalibration.Slot | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4896–4896](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4896-L4896) | CDefaultOffsetCalibration.Slot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1254,7 +1254,7 @@ flowchart TD
 
 ### MethodDeclaration `Fit` · L193–236
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:193–236](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L193-L236)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:193–236](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L193-L236)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1277,7 +1277,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3919–3919](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3919-L3919) | CDefaultOffsetCalibration.Fit | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3919–3919](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3919-L3919) | CDefaultOffsetCalibration.Fit | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1475,7 +1475,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Coefficient` · L214–214
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L214-L214)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L214-L214)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1495,10 +1495,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L215-L215) | Coefficient | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L215-L215) | Coefficient | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L216-L216) | Coefficient | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L216-L216) | Coefficient | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L215-L215) | Coefficient | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L215-L215) | Coefficient | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L216-L216) | Coefficient | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L216-L216) | Coefficient | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1518,7 +1518,7 @@ flowchart TD
 
 ### MethodDeclaration `WithHeadReference` · L241–266
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:241–266](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L241-L266)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:241–266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L241-L266)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1539,8 +1539,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L283-L283) | WithHeadReference | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3920–3922](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3920-L3922) | CDefaultOffsetCalibration.WithHeadReference | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L283-L283) | WithHeadReference | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3920–3922](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3920-L3922) | CDefaultOffsetCalibration.WithHeadReference | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1640,7 +1640,7 @@ flowchart TD
 
 ### MethodDeclaration `ActiveHeads` · L268–269
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:268–269](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L268-L269)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:268–269](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L268-L269)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1659,11 +1659,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:274–274](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L274-L274) | ActiveHeads | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3330–3330](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3330-L3330) | CDefaultOffsetCalibration.ActiveHeads | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3349–3349](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3349-L3349) | CDefaultOffsetCalibration.ActiveHeads | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3463–3463](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3463-L3463) | CDefaultOffsetCalibration.ActiveHeads | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3942–3942](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3942-L3942) | CDefaultOffsetCalibration.ActiveHeads | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:274–274](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L274-L274) | ActiveHeads | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3330–3330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3330-L3330) | CDefaultOffsetCalibration.ActiveHeads | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3349–3349](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3349-L3349) | CDefaultOffsetCalibration.ActiveHeads | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3463–3463](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3463-L3463) | CDefaultOffsetCalibration.ActiveHeads | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3942–3942](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3942-L3942) | CDefaultOffsetCalibration.ActiveHeads | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1687,7 +1687,7 @@ flowchart TD
 
 ### MethodDeclaration `Recommend` · L271–295
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:271–295](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L271-L295)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:271–295](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L271-L295)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1709,8 +1709,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3319–3319](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3319-L3319) | CDefaultOffsetCalibration.Recommend | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3499–3499](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3499-L3499) | CDefaultOffsetCalibration.Recommend | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3319–3319](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3319-L3319) | CDefaultOffsetCalibration.Recommend | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3499–3499](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3499-L3499) | CDefaultOffsetCalibration.Recommend | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1809,7 +1809,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Shot` · L298–298
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L298-L298)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L298-L298)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1824,7 +1824,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Cross` · L298–298
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L298-L298)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L298-L298)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1839,7 +1839,7 @@ flowchart TD
 
 ### PropertyDeclaration `BoardCenterX` · L301–301
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L301-L301)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L301-L301)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1854,7 +1854,7 @@ flowchart TD
 
 ### PropertyDeclaration `MachiningMode` · L302–302
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:302–302](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L302-L302)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:302–302](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L302-L302)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1869,7 +1869,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_MachiningMode` · L302–302
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:302–302](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L302-L302)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:302–302](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L302-L302)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1884,7 +1884,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_MachiningMode` · L302–302
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:302–302](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L302-L302)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:302–302](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L302-L302)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1905,7 +1905,7 @@ flowchart TD
 
 ### PropertyDeclaration `CrossSize` · L303–303
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L303-L303)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L303-L303)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1920,7 +1920,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CrossSize` · L303–303
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L303-L303)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L303-L303)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1935,7 +1935,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_CrossSize` · L303–303
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L303-L303)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L303-L303)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1956,7 +1956,7 @@ flowchart TD
 
 ### PropertyDeclaration `DoeBeamGridSize` · L304–304
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L304-L304)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L304-L304)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1971,7 +1971,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DoeBeamGridSize` · L304–304
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L304-L304)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L304-L304)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1986,7 +1986,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_DoeBeamGridSize` · L304–304
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L304-L304)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L304-L304)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2007,7 +2007,7 @@ flowchart TD
 
 ### PropertyDeclaration `InspectionPointCount` · L307–307
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L307-L307)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L307-L307)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2022,7 +2022,7 @@ flowchart TD
 
 ### PropertyDeclaration `VisionMethod` · L312–314
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:312–314](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L312-L314)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:312–314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L312-L314)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2043,7 +2043,7 @@ flowchart TD
 
 ### PropertyDeclaration `InspectionDescription` · L315–317
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:315–317](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L315-L317)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:315–317](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L315-L317)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2064,7 +2064,7 @@ flowchart TD
 
 ### PropertyDeclaration `MachiningDescription` · L318–320
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:318–320](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L318-L320)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:318–320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L318-L320)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2092,7 +2092,7 @@ flowchart TD
 
 ### PropertyDeclaration `VisionDescription` · L321–321
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L321-L321)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L321-L321)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2113,7 +2113,7 @@ flowchart TD
 
 ### PropertyDeclaration `DoeExists` · L329–329
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L329-L329)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L329-L329)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2128,7 +2128,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DoeExists` · L329–329
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L329-L329)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L329-L329)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2143,7 +2143,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_DoeExists` · L329–329
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L329-L329)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L329-L329)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2164,7 +2164,7 @@ flowchart TD
 
 ### PropertyDeclaration `Model` · L330–330
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L330-L330)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L330-L330)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2179,7 +2179,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Model` · L330–330
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L330-L330)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L330-L330)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2194,7 +2194,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_Model` · L330–330
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L330-L330)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L330-L330)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2215,7 +2215,7 @@ flowchart TD
 
 ### PropertyDeclaration `ReferenceCell` · L331–331
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L331-L331)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L331-L331)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2230,7 +2230,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ReferenceCell` · L331–331
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L331-L331)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L331-L331)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2245,7 +2245,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ReferenceCell` · L331–331
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L331-L331)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L331-L331)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2266,7 +2266,7 @@ flowchart TD
 
 ### PropertyDeclaration `Geometry` · L332–332
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L332-L332)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L332-L332)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2281,7 +2281,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Geometry` · L332–332
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L332-L332)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L332-L332)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2296,7 +2296,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_Geometry` · L332–332
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L332-L332)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L332-L332)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2317,7 +2317,7 @@ flowchart TD
 
 ### PropertyDeclaration `TargetReviewX` · L333–333
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L333-L333)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L333-L333)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2332,7 +2332,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_TargetReviewX` · L333–333
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L333-L333)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L333-L333)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2347,7 +2347,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_TargetReviewX` · L333–333
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L333-L333)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L333-L333)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2368,7 +2368,7 @@ flowchart TD
 
 ### PropertyDeclaration `TargetStageY` · L334–334
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L334-L334)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L334-L334)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2383,7 +2383,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_TargetStageY` · L334–334
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L334-L334)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L334-L334)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2398,7 +2398,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_TargetStageY` · L334–334
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L334-L334)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L334-L334)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2419,7 +2419,7 @@ flowchart TD
 
 ### PropertyDeclaration `CenterReviewX` · L335–335
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L335-L335)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L335-L335)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2434,7 +2434,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CenterReviewX` · L335–335
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L335-L335)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L335-L335)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2449,7 +2449,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_CenterReviewX` · L335–335
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L335-L335)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L335-L335)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2470,7 +2470,7 @@ flowchart TD
 
 ### PropertyDeclaration `CenterStageY` · L336–336
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L336-L336)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L336-L336)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2485,7 +2485,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CenterStageY` · L336–336
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L336-L336)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L336-L336)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2500,7 +2500,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_CenterStageY` · L336–336
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L336-L336)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L336-L336)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2521,7 +2521,7 @@ flowchart TD
 
 ### PropertyDeclaration `CenterErrorX` · L337–337
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:337–337](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L337-L337)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:337–337](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L337-L337)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2536,7 +2536,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CenterErrorX` · L337–337
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:337–337](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L337-L337)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:337–337](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L337-L337)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2551,7 +2551,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_CenterErrorX` · L337–337
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:337–337](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L337-L337)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:337–337](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L337-L337)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2572,7 +2572,7 @@ flowchart TD
 
 ### PropertyDeclaration `CenterErrorY` · L338–338
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L338-L338)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L338-L338)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2587,7 +2587,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CenterErrorY` · L338–338
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L338-L338)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L338-L338)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2602,7 +2602,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_CenterErrorY` · L338–338
 
-[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L338-L338)
+[Drilling.Common/Correction/CDefaultOffsetCalibration.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L338-L338)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

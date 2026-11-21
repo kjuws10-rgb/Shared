@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 6ae2caa86af2587ec98e39d758af9f18225694a257933e35a8d13d069aa300ec |
 | 파일 분류 | code |
 | 원본 크기/행 | 1,171 bytes / 30 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -35,7 +35,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L11–18
 
-[Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs:11–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs#L11-L18)
+[Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs:11–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs#L11-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -55,7 +55,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1848–1851](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1848-L1851) | new CManualHomeSpeedDialog | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1848–1851](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L1848-L1851) | new CManualHomeSpeedDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -83,7 +83,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OpenHomeSpeedInput` · L20–27
 
-[Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs:20–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs#L20-L27)
+[Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs:20–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs#L20-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -138,7 +138,7 @@ flowchart TD
 
 ### MethodDeclaration `CloseClicked` · L29–29
 
-[Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs#L29-L29)
+[Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

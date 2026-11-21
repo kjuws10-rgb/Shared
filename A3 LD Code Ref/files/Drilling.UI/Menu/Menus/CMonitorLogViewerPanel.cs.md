@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 5d06e93a3ba16a27c93f45c6825f5ef8324b118a9c80bb7ef241987423a8c303 |
 | 파일 분류 | code |
 | 원본 크기/행 | 11,031 bytes / 252 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -29,7 +29,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 이름 | 종류 | 범위 | 서명 |
 | --- | --- | --- | --- |
 | _logDirectory | FieldDeclaration | L11–11 | string Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._logDirectory |
-| _fileScope | FieldDeclaration | L12–12 | CLogFileScope Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._fileScope |
+| _fileScope | FieldDeclaration | L12–12 | Drilling.Common.Log.CLogFileScope Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._fileScope |
 | _lastOpenedDirectory | FieldDeclaration | L13–13 | string? Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._lastOpenedDirectory |
 | _readCts | FieldDeclaration | L14–14 | System.Threading.CancellationTokenSource? Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._readCts |
 | _readVersion | FieldDeclaration | L15–15 | long Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._readVersion |
@@ -110,7 +110,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_logDirectory` · L11–11
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L11-L11)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -125,13 +125,13 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_fileScope` · L12–12
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L12-L12)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
-| 서명 | CLogFileScope Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._fileScope |
+| 서명 | Drilling.Common.Log.CLogFileScope Drilling.UI.Menu.Menus.CMonitorLogViewerPanel._fileScope |
 | 접근/수식자 | Private / private, readonly |
-| 반환/값 타입 | CLogFileScope |
+| 반환/값 타입 | Drilling.Common.Log.CLogFileScope |
 | 소속 타입 | NamedType:Drilling.UI.Menu.Menus.CMonitorLogViewerPanel |
 
 현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
@@ -140,7 +140,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastOpenedDirectory` · L13–13
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L13-L13)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -155,7 +155,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_readCts` · L14–14
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L14-L14)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -170,7 +170,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_readVersion` · L15–15
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L15-L15)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -185,7 +185,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_initializeTask` · L16–16
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L16-L16)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -200,7 +200,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isTreeBusy` · L17–17
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L17-L17)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -215,7 +215,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L18–29
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:18–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L18-L29)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:18–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L18-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -234,13 +234,13 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:197–197](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L197-L197) | new CMonitorLogViewerPanel | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:197–197](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L197-L197) | new CMonitorLogViewerPanel | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 20 | new CLogFileScope | unresolved | None |
+| 20 | new CLogFileScope | resolved | Drilling.Common.Log.CLogFileScope.CLogFileScope(string) · Drilling.Common/Log/CLogManager.cs:948 |
 | 22 | new CLogTreeNode | resolved | Drilling.UI.Menu.Menus.CLogTreeNode.CLogTreeNode(string, string, bool, bool) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:202 |
 | 28 | new | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
 | 28 | RefreshTreeAsync | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.RefreshTreeAsync() · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:95 |
@@ -264,7 +264,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PropertyChanged` · L31–31
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L31-L31)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -279,7 +279,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `OpenDirectory` · L32–32
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L32-L32)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L32-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -294,7 +294,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `FilePath` · L33–33
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L33-L33)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -309,7 +309,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_FilePath` · L33–33
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L33-L33)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -324,7 +324,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_FilePath` · L33–33
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L33-L33)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -345,7 +345,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `Text` · L34–34
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L34-L34)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L34-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -360,7 +360,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_Text` · L34–34
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L34-L34)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L34-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -375,7 +375,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_Text` · L34–34
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L34-L34)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L34-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -396,7 +396,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `Status` · L35–35
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L35-L35)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L35-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -411,7 +411,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_Status` · L35–35
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L35-L35)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L35-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -426,7 +426,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_Status` · L35–35
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L35-L35)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L35-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -447,7 +447,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `TreeStatus` · L36–36
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L36-L36)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L36-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -462,7 +462,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_TreeStatus` · L36–36
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L36-L36)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L36-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -477,7 +477,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_TreeStatus` · L36–36
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L36-L36)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L36-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -498,7 +498,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `TreeRoots` · L37–37
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L37-L37)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L37-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -513,7 +513,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_TreeRoots` · L37–37
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L37-L37)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L37-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -528,7 +528,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `IsTreeBusy` · L38–38
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L38-L38)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -543,7 +543,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `IsBusy` · L39–39
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L39-L39)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -558,7 +558,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_IsBusy` · L39–39
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L39-L39)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -573,7 +573,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_IsBusy` · L39–39
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L39-L39)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -594,7 +594,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `LoadProgress` · L40–40
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L40-L40)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L40-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -609,7 +609,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_LoadProgress` · L40–40
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L40-L40)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L40-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -624,7 +624,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_LoadProgress` · L40–40
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L40-L40)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L40-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -645,7 +645,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `LoadProgressText` · L41–41
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L41-L41)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L41-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -660,7 +660,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_LoadProgressText` · L41–41
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L41-L41)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L41-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -675,7 +675,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_LoadProgressText` · L41–41
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L41-L41)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L41-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -696,7 +696,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `RefreshTreeCommand` · L42–42
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L42-L42)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L42-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -711,7 +711,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_RefreshTreeCommand` · L42–42
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L42-L42)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L42-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -726,7 +726,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `InitializeAsync` · L44–44
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L44-L44)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L44-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -739,7 +739,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L13-L13) | panel.InitializeAsync | False |
+| [Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L13-L13) | panel.InitializeAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -758,7 +758,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `ExpandDirectoryAsync` · L45–45
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L45-L45)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L45-L45)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -777,8 +777,8 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L44-L44) | ExpandDirectoryAsync | False |
-| [Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L23-L23) | panel.ExpandDirectoryAsync | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L44-L44) | ExpandDirectoryAsync | False |
+| [Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L23-L23) | panel.ExpandDirectoryAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -796,7 +796,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `SelectNodeAsync` · L46–46
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L46-L46)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -815,7 +815,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L28-L28) | panel.SelectNodeAsync | False |
+| [Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L28-L28) | panel.SelectNodeAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -834,7 +834,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `EnsureDirectoryAsync` · L47–54
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:47–54](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L47-L54)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:47–54](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L47-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -854,8 +854,8 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L45-L45) | EnsureDirectoryAsync | False |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L116-L116) | EnsureDirectoryAsync | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L45-L45) | EnsureDirectoryAsync | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L116-L116) | EnsureDirectoryAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -890,7 +890,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDirectoryAsync` · L56–93
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:56–93](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L56-L93)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:56–93](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L56-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -909,36 +909,36 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L53-L53) | ReadDirectoryAsync | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L53-L53) | ReadDirectoryAsync | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 61 | Task.Run | candidate | OverloadResolutionFailure |
-| 61 | new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info => (info.Attributes & FileAttributes.ReparsePoint) == 0 && !CLogFileScope.IsAlarm(info.Name)).Where(info => info is DirectoryInfo &#124;&#124; CLogFileScope.IsLogFile(info.Name)).Select(info => (info.FullName, info.Name, IsDirectory: info is DirectoryInfo)).OrderB… | unresolved | None |
-| 61 | new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info => (info.Attributes & FileAttributes.ReparsePoint) == 0 && !CLogFileScope.IsAlarm(info.Name)).Where(info => info is DirectoryInfo &#124;&#124; CLogFileScope.IsLogFile(info.Name)).Select(info => (info.FullName, info.Name, IsDirectory: info is DirectoryInfo)).OrderB… | unresolved | None |
-| 61 | new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info => (info.Attributes & FileAttributes.ReparsePoint) == 0 && !CLogFileScope.IsAlarm(info.Name)).Where(info => info is DirectoryInfo &#124;&#124; CLogFileScope.IsLogFile(info.Name)).Select(info => (info.FullName, info.Name, IsDirectory: info is DirectoryInfo)).OrderB… | unresolved | None |
-| 61 | new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info => (info.Attributes & FileAttributes.ReparsePoint) == 0 && !CLogFileScope.IsAlarm(info.Name)).Where(info => info is DirectoryInfo &#124;&#124; CLogFileScope.IsLogFile(info.Name)).Select | unresolved | None |
-| 61 | new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info => (info.Attributes & FileAttributes.ReparsePoint) == 0 && !CLogFileScope.IsAlarm(info.Name)).Where | unresolved | None |
-| 61 | new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where | candidate | OverloadResolutionFailure |
+| 61 | Task.Run | resolved | System.Threading.Tasks.Task<(string FullName, string Name, bool IsDirectory)[]> System.Threading.Tasks.Task.Run<(string FullName, string Name, bool IsDirectory)[]>(System.Func<(string FullName, string Name, bool IsDirectory)[]>) |
+| 61 | new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info => (info.Attributes & FileAttributes.ReparsePoint) == 0 && !CLogFileScope.IsAlarm(info.Name)).Where(info => info is DirectoryInfo &#124;&#124; CLogFileScope.IsLogFile(info.Name)).Select(info => (info.FullName, info.Name, IsDirectory: info is DirectoryInfo)).OrderB… | resolved | (string FullName, string Name, bool IsDirectory)[] System.Collections.Generic.IEnumerable<(string FullName, string Name, bool IsDirectory)>.ToArray<(string FullName, string Name, bool IsDirectory)>() |
+| 61 | new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info => (info.Attributes & FileAttributes.ReparsePoint) == 0 && !CLogFileScope.IsAlarm(info.Name)).Where(info => info is DirectoryInfo &#124;&#124; CLogFileScope.IsLogFile(info.Name)).Select(info => (info.FullName, info.Name, IsDirectory: info is DirectoryInfo)).OrderB… | resolved | System.Linq.IOrderedEnumerable<(string FullName, string Name, bool IsDirectory)> System.Linq.IOrderedEnumerable<(string FullName, string Name, bool IsDirectory)>.ThenBy<(string FullName, string Name, bool IsDirectory), string>(System.Func<(string FullName, string Name, bool IsDirectory), string>, System.Collections.Generic.IComparer<string>?) |
+| 61 | new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info => (info.Attributes & FileAttributes.ReparsePoint) == 0 && !CLogFileScope.IsAlarm(info.Name)).Where(info => info is DirectoryInfo &#124;&#124; CLogFileScope.IsLogFile(info.Name)).Select(info => (info.FullName, info.Name, IsDirectory: info is DirectoryInfo)).OrderB… | resolved | System.Linq.IOrderedEnumerable<(string FullName, string Name, bool IsDirectory)> System.Collections.Generic.IEnumerable<(string FullName, string Name, bool IsDirectory)>.OrderByDescending<(string FullName, string Name, bool IsDirectory), bool>(System.Func<(string FullName, string Name, bool IsDirectory), bool>) |
+| 61 | new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info => (info.Attributes & FileAttributes.ReparsePoint) == 0 && !CLogFileScope.IsAlarm(info.Name)).Where(info => info is DirectoryInfo &#124;&#124; CLogFileScope.IsLogFile(info.Name)).Select | resolved | System.Collections.Generic.IEnumerable<(string FullName, string Name, bool IsDirectory)> System.Collections.Generic.IEnumerable<System.IO.FileSystemInfo>.Select<System.IO.FileSystemInfo, (string FullName, string Name, bool IsDirectory)>(System.Func<System.IO.FileSystemInfo, (string FullName, string Name, bool IsDirectory)>) |
+| 61 | new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where(info => (info.Attributes & FileAttributes.ReparsePoint) == 0 && !CLogFileScope.IsAlarm(info.Name)).Where | resolved | System.Collections.Generic.IEnumerable<System.IO.FileSystemInfo> System.Collections.Generic.IEnumerable<System.IO.FileSystemInfo>.Where<System.IO.FileSystemInfo>(System.Func<System.IO.FileSystemInfo, bool>) |
+| 61 | new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos().Where | resolved | System.Collections.Generic.IEnumerable<System.IO.FileSystemInfo> System.Collections.Generic.IEnumerable<System.IO.FileSystemInfo>.Where<System.IO.FileSystemInfo>(System.Func<System.IO.FileSystemInfo, bool>) |
 | 61 | new DirectoryInfo(_fileScope.ResolveDirectory(node.Path)).EnumerateFileSystemInfos | resolved | System.Collections.Generic.IEnumerable<System.IO.FileSystemInfo> System.IO.DirectoryInfo.EnumerateFileSystemInfos() |
-| 61 | new DirectoryInfo | candidate | OverloadResolutionFailure |
-| 61 | _fileScope.ResolveDirectory | unresolved | None |
-| 61 | CLogFileScope.IsAlarm | unresolved | None |
-| 61 | CLogFileScope.IsLogFile | unresolved | None |
+| 61 | new DirectoryInfo | resolved | System.IO.DirectoryInfo.DirectoryInfo(string) |
+| 61 | _fileScope.ResolveDirectory | resolved | string Drilling.Common.Log.CLogFileScope.ResolveDirectory(string) · Drilling.Common/Log/CLogManager.cs:951 |
+| 61 | CLogFileScope.IsAlarm | resolved | bool Drilling.Common.Log.CLogFileScope.IsAlarm(string) · Drilling.Common/Log/CLogManager.cs:968 |
+| 61 | CLogFileScope.IsLogFile | resolved | bool Drilling.Common.Log.CLogFileScope.IsLogFile(string) · Drilling.Common/Log/CLogManager.cs:967 |
 | 62 | node.Children.Where(child => !child.IsPlaceholder).ToDictionary | resolved | System.Collections.Generic.Dictionary<string, Drilling.UI.Menu.Menus.CLogTreeNode> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CLogTreeNode>.ToDictionary<Drilling.UI.Menu.Menus.CLogTreeNode, string>(System.Func<Drilling.UI.Menu.Menus.CLogTreeNode, string>, System.Collections.Generic.IEqualityComparer<string>?) |
 | 62 | node.Children.Where | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CLogTreeNode> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CLogTreeNode>.Where<Drilling.UI.Menu.Menus.CLogTreeNode>(System.Func<Drilling.UI.Menu.Menus.CLogTreeNode, bool>) |
-| 63 | entries.Select(entry => existing.TryGetValue(entry.FullName, out var child) && child.IsDirectory == entry.IsDirectory ? child : new CLogTreeNode(entry.FullName, entry.Name, entry.IsDirectory)).ToArray | unresolved | None |
-| 63 | entries.Select | unresolved | None |
-| 63 | existing.TryGetValue | candidate | OverloadResolutionFailure |
-| 63 | new CLogTreeNode | candidate | OverloadResolutionFailure |
+| 63 | entries.Select(entry => existing.TryGetValue(entry.FullName, out var child) && child.IsDirectory == entry.IsDirectory ? child : new CLogTreeNode(entry.FullName, entry.Name, entry.IsDirectory)).ToArray | resolved | Drilling.UI.Menu.Menus.CLogTreeNode[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CLogTreeNode>.ToArray<Drilling.UI.Menu.Menus.CLogTreeNode>() |
+| 63 | entries.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CLogTreeNode> System.Collections.Generic.IEnumerable<(string FullName, string Name, bool IsDirectory)>.Select<(string FullName, string Name, bool IsDirectory), Drilling.UI.Menu.Menus.CLogTreeNode>(System.Func<(string FullName, string Name, bool IsDirectory), Drilling.UI.Menu.Menus.CLogTreeNode>) |
+| 63 | existing.TryGetValue | resolved | bool System.Collections.Generic.Dictionary<string, Drilling.UI.Menu.Menus.CLogTreeNode>.TryGetValue(string, out Drilling.UI.Menu.Menus.CLogTreeNode) |
+| 63 | new CLogTreeNode | resolved | Drilling.UI.Menu.Menus.CLogTreeNode.CLogTreeNode(string, string, bool, bool) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:202 |
 | 64 | node.Children.ToHashSet | resolved | System.Collections.Generic.HashSet<Drilling.UI.Menu.Menus.CLogTreeNode> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CLogTreeNode>.ToHashSet<Drilling.UI.Menu.Menus.CLogTreeNode>() |
-| 68 | ReferenceEquals | candidate | OverloadResolutionFailure |
-| 70 | present.Contains | candidate | OverloadResolutionFailure |
-| 70 | node.Children.IndexOf | candidate | OverloadResolutionFailure |
+| 68 | ReferenceEquals | resolved | bool object.ReferenceEquals(object?, object?) |
+| 70 | present.Contains | resolved | bool System.Collections.Generic.HashSet<Drilling.UI.Menu.Menus.CLogTreeNode>.Contains(Drilling.UI.Menu.Menus.CLogTreeNode) |
+| 70 | node.Children.IndexOf | resolved | int System.Collections.ObjectModel.Collection<Drilling.UI.Menu.Menus.CLogTreeNode>.IndexOf(Drilling.UI.Menu.Menus.CLogTreeNode) |
 | 72 | node.Children.Move | resolved | void System.Collections.ObjectModel.ObservableCollection<Drilling.UI.Menu.Menus.CLogTreeNode>.Move(int, int) |
-| 74 | node.Children.Insert | candidate | OverloadResolutionFailure |
+| 74 | node.Children.Insert | resolved | void System.Collections.ObjectModel.Collection<Drilling.UI.Menu.Menus.CLogTreeNode>.Insert(int, Drilling.UI.Menu.Menus.CLogTreeNode) |
 | 78 | node.Children.RemoveAt | resolved | void System.Collections.ObjectModel.Collection<Drilling.UI.Menu.Menus.CLogTreeNode>.RemoveAt(int) |
 | 80 | node.SetError | resolved | void Drilling.UI.Menu.Menus.CLogTreeNode.SetError(string) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:243 |
 | 86 | node.SetError | resolved | void Drilling.UI.Menu.Menus.CLogTreeNode.SetError(string) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:243 |
@@ -1036,7 +1036,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshTreeAsync` · L95–112
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:95–112](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L95-L112)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:95–112](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L95-L112)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1049,7 +1049,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L28-L28) | RefreshTreeAsync | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L28-L28) | RefreshTreeAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1099,7 +1099,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshExpandedAsync` · L114–119
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:114–119](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L114-L119)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:114–119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L114-L119)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1118,8 +1118,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L104-L104) | RefreshExpandedAsync | False |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L118-L118) | RefreshExpandedAsync | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L104-L104) | RefreshExpandedAsync | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L118-L118) | RefreshExpandedAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1155,7 +1155,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadFileAsync` · L121–176
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:121–176](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L121-L176)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:121–176](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L121-L176)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1174,7 +1174,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L46-L46) | LoadFileAsync | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L46-L46) | LoadFileAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1189,8 +1189,8 @@ flowchart TD
 | 143 | nameof | unresolved | None |
 | 144 | Notify | resolved | void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.Notify(string?) · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:194 |
 | 144 | nameof | unresolved | None |
-| 146 | CLogTextReader.ReadAllAsync | unresolved | None |
-| 146 | _fileScope.ResolveFile | unresolved | None |
+| 146 | CLogTextReader.ReadAllAsync | resolved | System.Threading.Tasks.Task<Drilling.Common.Log.ST_LOG_TEXT_PAGE> Drilling.Common.Log.CLogTextReader.ReadAllAsync(string, System.IProgress<double>?, System.Threading.CancellationToken) · Drilling.Common/Log/CLogManager.cs:1413 |
+| 146 | _fileScope.ResolveFile | resolved | string Drilling.Common.Log.CLogFileScope.ResolveFile(string) · Drilling.Common/Log/CLogManager.cs:959 |
 | 149 | Path.GetFullPath | resolved | string System.IO.Path.GetFullPath(string) |
 | 150 | Path.GetDirectoryName | resolved | string? System.IO.Path.GetDirectoryName(string?) |
 | 172 | NotifyView | resolved | void Drilling.UI.Menu.Menus.CMonitorLogViewerPanel.NotifyView() · Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:178 |
@@ -1282,7 +1282,7 @@ flowchart TD
 
 ### MethodDeclaration `NotifyView` · L178–192
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:178–192](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L178-L192)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:178–192](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L178-L192)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1295,8 +1295,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L133-L133) | NotifyView | False |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L172-L172) | NotifyView | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L133-L133) | NotifyView | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L172-L172) | NotifyView | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1336,7 +1336,7 @@ flowchart TD
 
 ### MethodDeclaration `Notify` · L194–194
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L194-L194)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L194-L194)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1355,12 +1355,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L92-L92) | Notify | False |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L100-L100) | Notify | False |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L109-L109) | Notify | False |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L143-L143) | Notify | False |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L144-L144) | Notify | False |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L191-L191) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L92-L92) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L100-L100) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L109-L109) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L143-L143) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L144-L144) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L191-L191) | Notify | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1380,7 +1380,7 @@ flowchart TD
 
 ### FieldDeclaration `_isExpanded` · L199–199
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L199-L199)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L199-L199)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1395,7 +1395,7 @@ flowchart TD
 
 ### FieldDeclaration `_isSelected` · L200–200
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L200-L200)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L200-L200)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1410,7 +1410,7 @@ flowchart TD
 
 ### FieldDeclaration `_error` · L201–201
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L201-L201)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L201-L201)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1431,7 +1431,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L202–210
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:202–210](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L202-L210)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:202–210](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L202-L210)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1453,8 +1453,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:22–25](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L22-L25) | new CLogTreeNode | False |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L249-L249) | new | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:22–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L22-L25) | new CLogTreeNode | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L63-L63) | new CLogTreeNode | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L249-L249) | new | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1488,7 +1489,7 @@ flowchart TD
 
 ### EventFieldDeclaration `PropertyChanged` · L212–212
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L212-L212)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L212-L212)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1503,7 +1504,7 @@ flowchart TD
 
 ### PropertyDeclaration `Path` · L213–213
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:213–213](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L213-L213)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:213–213](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L213-L213)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1518,7 +1519,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Path` · L213–213
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:213–213](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L213-L213)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:213–213](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L213-L213)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1533,7 +1534,7 @@ flowchart TD
 
 ### PropertyDeclaration `Name` · L214–214
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L214-L214)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L214-L214)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1548,7 +1549,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Name` · L214–214
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L214-L214)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L214-L214)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1563,7 +1564,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsDirectory` · L215–215
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L215-L215)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L215-L215)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1578,7 +1579,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsDirectory` · L215–215
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L215-L215)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L215-L215)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1593,7 +1594,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsPlaceholder` · L216–216
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L216-L216)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L216-L216)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1608,7 +1609,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsPlaceholder` · L216–216
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L216-L216)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L216-L216)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1623,7 +1624,7 @@ flowchart TD
 
 ### PropertyDeclaration `ToolTip` · L217–217
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L217-L217)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L217-L217)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1644,7 +1645,7 @@ flowchart TD
 
 ### PropertyDeclaration `Children` · L218–218
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L218-L218)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L218-L218)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1659,7 +1660,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Children` · L218–218
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L218-L218)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L218-L218)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1674,7 +1675,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsExpanded` · L220–228
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:220–228](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L220-L228)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:220–228](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L220-L228)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1689,7 +1690,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsExpanded` · L222–222
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:222–222](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L222-L222)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:222–222](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L222-L222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1704,7 +1705,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_IsExpanded` · L223–227
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:223–227](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L223-L227)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:223–227](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L223-L227)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1738,7 +1739,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsSelected` · L230–238
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:230–238](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L230-L238)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:230–238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L230-L238)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1753,7 +1754,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsSelected` · L232–232
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L232-L232)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L232-L232)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1768,7 +1769,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_IsSelected` · L233–237
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:233–237](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L233-L237)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:233–237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L233-L237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1802,7 +1803,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsLoaded` · L240–240
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L240-L240)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L240-L240)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1817,7 +1818,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsLoaded` · L240–240
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L240-L240)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L240-L240)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1832,7 +1833,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_IsLoaded` · L240–240
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L240-L240)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L240-L240)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1853,7 +1854,7 @@ flowchart TD
 
 ### PropertyDeclaration `LoadingTask` · L241–241
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L241-L241)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L241-L241)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1868,7 +1869,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_LoadingTask` · L241–241
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L241-L241)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L241-L241)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1883,7 +1884,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_LoadingTask` · L241–241
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L241-L241)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L241-L241)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1904,7 +1905,7 @@ flowchart TD
 
 ### MethodDeclaration `SetError` · L243–247
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:243–247](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L243-L247)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:243–247](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L243-L247)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1923,8 +1924,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L80-L80) | node.SetError | False |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L86-L86) | node.SetError | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L80-L80) | node.SetError | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L86-L86) | node.SetError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1945,7 +1946,7 @@ flowchart TD
 
 ### MethodDeclaration `Placeholder` · L249–249
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L249-L249)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L249-L249)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1964,8 +1965,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L88-L88) | CLogTreeNode.Placeholder | False |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L209-L209) | Placeholder | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L88-L88) | CLogTreeNode.Placeholder | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L209-L209) | Placeholder | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1983,7 +1984,7 @@ flowchart TD
 
 ### MethodDeclaration `Notify` · L250–250
 
-[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L250-L250)
+[Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L250-L250)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2002,9 +2003,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L226-L226) | Notify | False |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L236-L236) | Notify | False |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L246-L246) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L226-L226) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L236-L236) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L246-L246) | Notify | False |
 
 호출하는 대상과 해석 범위:
 

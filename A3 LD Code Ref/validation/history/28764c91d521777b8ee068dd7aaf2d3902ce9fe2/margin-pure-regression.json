@@ -1,0 +1,183 @@
+{
+  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "passed": true,
+  "total": 34,
+  "shots": 20740,
+  "cells": 45,
+  "scope": "Actual common-margin readers/full coordinate planner executed in a separate console. Values are local safe source configuration; no credentials/operational CSV rows. No equipment solution, UI, I/F or SDK execution.",
+  "checks": [
+    {
+      "name": "current common setting margins15.5mm",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "dictionary/list readers agree",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "actual 6GH source recipe plan builds with common margins",
+      "passed": true,
+      "evidence": {
+        "shots": 20740,
+        "cells": 45
+      }
+    },
+    {
+      "name": "global margin changes shift every design shot by X1/Y2mm",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "coherent margin regeneration cancels in current scanner/encoder and head assignment",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "AK-relative review input coordinates cancel when same margins used coherently",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "stage X reference field shifts1mm separately from invariant scanner commands",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "AK_MARGIN_X rejects -1",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "planner rejects AK_MARGIN_X -1",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "AK_MARGIN_X rejects NaN",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "planner rejects AK_MARGIN_X NaN",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "AK_MARGIN_X rejects Infinity",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "planner rejects AK_MARGIN_X Infinity",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "AK_MARGIN_X rejects x",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "planner rejects AK_MARGIN_X x",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "AK_MARGIN_X rejects ",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "planner rejects AK_MARGIN_X ",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "AK_MARGIN_Y rejects -1",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "planner rejects AK_MARGIN_Y -1",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "AK_MARGIN_Y rejects NaN",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "planner rejects AK_MARGIN_Y NaN",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "AK_MARGIN_Y rejects Infinity",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "planner rejects AK_MARGIN_Y Infinity",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "AK_MARGIN_Y rejects x",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "planner rejects AK_MARGIN_Y x",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "AK_MARGIN_Y rejects ",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "planner rejects AK_MARGIN_Y ",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "missing AK_MARGIN_X rejected",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "planner missing AK_MARGIN_X rejected",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "missing AK_MARGIN_Y rejected",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "planner missing AK_MARGIN_Y rejected",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero margins accepted as declared valid setting",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "review design offset follows current flip/stage direction and applies50percent once",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "repeated coordinate builds do not compound scaled offsets",
+      "passed": true,
+      "evidence": null
+    }
+  ]
+}

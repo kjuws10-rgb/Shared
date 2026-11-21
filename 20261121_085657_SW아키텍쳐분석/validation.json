@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "a3-report-verification/1",
+  "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+  "comparisonCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "passed": true,
+  "codeReferenceCoverage": {
+    "trackedFiles": 700,
+    "filePages": 700,
+    "byKind": {
+      "build_or_reference": 10,
+      "data_schema": 335,
+      "code": 343,
+      "binary_reference": 12
+    },
+    "csharpFiles": 158,
+    "typeCount": 941,
+    "memberCount": 16511,
+    "callSites": 43446,
+    "sourceLines": 1934227,
+    "annotatedFiles": 353,
+    "ragRecords": 32191
+  },
+  "manualSourceReview": {
+    "chapters": 16,
+    "navigationGuides": 1,
+    "sourceCitationOccurrences": 869,
+    "uniqueSourceCitationRanges": 754,
+    "runtimeCertified": false
+  },
+  "normalLogRegressions": {
+    "passed": 27,
+    "total": 27
+  },
+  "knownFindingReproductions": {
+    "reproduced": 5,
+    "probes": 5,
+    "groups": 3
+  },
+  "behaviorStatus": "defects_reproduced_not_program_correctness_pass",
+  "equipmentBuild": "not_run",
+  "equipmentExecution": "not_run",
+  "originalSourceModified": false,
+  "documentationReports": [
+    "../A3 LD Code Ref/validation/static-validation.json",
+    "../A3 LD Code Ref/validation/generator-independent-validation.json",
+    "../A3 LD Code Ref/validation/browser-validation.json"
+  ]
+}

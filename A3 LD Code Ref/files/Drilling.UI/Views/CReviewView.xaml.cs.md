@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 0ab06bd9f08351e557d249886da47b070add6ee80358b08fb7ef3da76da0268d |
 | 파일 분류 | code |
 | 원본 크기/행 | 4,849 bytes / 153 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -49,7 +49,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `ReviewMenuProperty` · L12–13
 
-[Drilling.UI/Views/CReviewView.xaml.cs:12–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L12-L13)
+[Drilling.UI/Views/CReviewView.xaml.cs:12–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L12-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -79,7 +79,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `ReviewMenu` · L14–14
 
-[Drilling.UI/Views/CReviewView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L14-L14)
+[Drilling.UI/Views/CReviewView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -94,7 +94,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_ReviewMenu` · L14–14
 
-[Drilling.UI/Views/CReviewView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L14-L14)
+[Drilling.UI/Views/CReviewView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -121,7 +121,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_ReviewMenu` · L14–14
 
-[Drilling.UI/Views/CReviewView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L14-L14)
+[Drilling.UI/Views/CReviewView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -154,7 +154,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_cameraTimer` · L15–15
 
-[Drilling.UI/Views/CReviewView.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L15-L15)
+[Drilling.UI/Views/CReviewView.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -185,7 +185,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L16–23
 
-[Drilling.UI/Views/CReviewView.xaml.cs:16–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L16-L23)
+[Drilling.UI/Views/CReviewView.xaml.cs:16–23](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L16-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -237,7 +237,7 @@ flowchart TD
 
 ### MethodDeclaration `ReviewPreview_SizeChanged` · L25–25
 
-[Drilling.UI/Views/CReviewView.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L25-L25)
+[Drilling.UI/Views/CReviewView.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L25-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -271,7 +271,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshCamera` · L26–29
 
-[Drilling.UI/Views/CReviewView.xaml.cs:26–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L26-L29)
+[Drilling.UI/Views/CReviewView.xaml.cs:26–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L26-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -284,10 +284,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CReviewView.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L20-L20) | RefreshCamera | False |
-| [Drilling.UI/Views/CReviewView.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L21-L21) | RefreshCamera | False |
-| [Drilling.UI/Views/CReviewView.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L25-L25) | RefreshCamera | False |
-| [Drilling.UI/Views/CReviewView.xaml.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L66-L66) | RefreshCamera | False |
+| [Drilling.UI/Views/CReviewView.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L20-L20) | RefreshCamera | False |
+| [Drilling.UI/Views/CReviewView.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L21-L21) | RefreshCamera | False |
+| [Drilling.UI/Views/CReviewView.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L25-L25) | RefreshCamera | False |
+| [Drilling.UI/Views/CReviewView.xaml.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L66-L66) | RefreshCamera | False |
 
 호출하는 대상과 해석 범위:
 
@@ -305,7 +305,7 @@ flowchart TD
 
 ### MethodDeclaration `RunCellPreviewLabel_MouseMove` · L31–47
 
-[Drilling.UI/Views/CReviewView.xaml.cs:31–47](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L31-L47)
+[Drilling.UI/Views/CReviewView.xaml.cs:31–47](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L31-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -339,7 +339,7 @@ flowchart TD
 
 ### MethodDeclaration `RunCellPreviewLabel_MouseLeave` · L49–52
 
-[Drilling.UI/Views/CReviewView.xaml.cs:49–52](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L49-L52)
+[Drilling.UI/Views/CReviewView.xaml.cs:49–52](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L49-L52)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -373,7 +373,7 @@ flowchart TD
 
 ### MethodDeclaration `CellPreviewLabel_PreviewMouseLeftButtonDown` · L54–57
 
-[Drilling.UI/Views/CReviewView.xaml.cs:54–57](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L54-L57)
+[Drilling.UI/Views/CReviewView.xaml.cs:54–57](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L54-L57)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -407,7 +407,7 @@ flowchart TD
 
 ### MethodDeclaration `ReviewView_IsVisibleChanged` · L59–67
 
-[Drilling.UI/Views/CReviewView.xaml.cs:59–67](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L59-L67)
+[Drilling.UI/Views/CReviewView.xaml.cs:59–67](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L59-L67)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -463,7 +463,7 @@ flowchart TD
 
 ### MethodDeclaration `ShowCellPreviewHoverTip` · L69–97
 
-[Drilling.UI/Views/CReviewView.xaml.cs:69–97](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L69-L97)
+[Drilling.UI/Views/CReviewView.xaml.cs:69–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L69-L97)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -518,7 +518,7 @@ flowchart TD
 
 ### MethodDeclaration `PositionCellPreviewHoverTip` · L99–124
 
-[Drilling.UI/Views/CReviewView.xaml.cs:99–124](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L99-L124)
+[Drilling.UI/Views/CReviewView.xaml.cs:99–124](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L99-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -593,7 +593,7 @@ flowchart TD
 
 ### MethodDeclaration `HideCellPreviewHoverTip` · L126–130
 
-[Drilling.UI/Views/CReviewView.xaml.cs:126–130](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L126-L130)
+[Drilling.UI/Views/CReviewView.xaml.cs:126–130](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L126-L130)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -613,7 +613,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CReviewView.xaml.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L86-L86) | HideCellPreviewHoverTip | False |
+| [Drilling.UI/Views/CReviewView.xaml.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L86-L86) | HideCellPreviewHoverTip | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -626,7 +626,7 @@ flowchart TD
 
 ### MethodDeclaration `HideCellPreviewHoverTips` · L132–135
 
-[Drilling.UI/Views/CReviewView.xaml.cs:132–135](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L132-L135)
+[Drilling.UI/Views/CReviewView.xaml.cs:132–135](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L132-L135)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -639,8 +639,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CReviewView.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L56-L56) | HideCellPreviewHoverTips | False |
-| [Drilling.UI/Views/CReviewView.xaml.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L63-L63) | HideCellPreviewHoverTips | False |
+| [Drilling.UI/Views/CReviewView.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L56-L56) | HideCellPreviewHoverTips | False |
+| [Drilling.UI/Views/CReviewView.xaml.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L63-L63) | HideCellPreviewHoverTips | False |
 
 호출하는 대상과 해석 범위:
 
@@ -658,7 +658,7 @@ flowchart TD
 
 ### MethodDeclaration `ReviewResultDataGrid_AutoGeneratingColumn` · L137–151
 
-[Drilling.UI/Views/CReviewView.xaml.cs:137–151](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewView.xaml.cs#L137-L151)
+[Drilling.UI/Views/CReviewView.xaml.cs:137–151](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewView.xaml.cs#L137-L151)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

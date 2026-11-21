@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | a578af2d52c06c9a5318a31279edee8d52b3000efafc1e76ec12d22f5a44d37b |
 | 파일 분류 | code |
 | 원본 크기/행 | 12,959 bytes / 410 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -67,7 +67,7 @@
 
 ### FieldDeclaration `MaxAutoReconnectAttempts` · L15–15
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L15-L15)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -88,7 +88,7 @@
 
 ### FieldDeclaration `AutoReconnectInterval` · L16–16
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L16-L16)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -116,7 +116,7 @@
 
 ### FieldDeclaration `_reconnectPolicyLock` · L17–17
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L17-L17)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -144,7 +144,7 @@
 
 ### FieldDeclaration `_serialPortLifecycleLock` · L18–18
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L18-L18)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -172,7 +172,7 @@
 
 ### FieldDeclaration `_autoReconnectAttempts` · L19–19
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L19-L19)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -187,7 +187,7 @@
 
 ### FieldDeclaration `_initialConnectAttempted` · L20–20
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L20-L20)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -202,7 +202,7 @@
 
 ### FieldDeclaration `_connectInProgress` · L21–21
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L21-L21)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -217,7 +217,7 @@
 
 ### FieldDeclaration `_autoReconnectSuppressed` · L22–22
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L22-L22)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -232,7 +232,7 @@
 
 ### FieldDeclaration `_connectAttemptCompletion` · L23–23
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L23-L23)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L23-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -247,7 +247,7 @@
 
 ### FieldDeclaration `_nextAutoReconnectAt` · L24–24
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L24-L24)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L24-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -268,7 +268,7 @@
 
 ### FieldDeclaration `SerialPort` · L25–25
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L25-L25)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L25-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -283,7 +283,7 @@
 
 ### FieldDeclaration `SerialLock` · L26–26
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L26-L26)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -311,7 +311,7 @@
 
 ### MethodDeclaration `ConfigureSerialPort` · L28–30
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:28–30](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L28-L30)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:28–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L28-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -330,13 +330,13 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L72-L72) | ConfigureSerialPort | True |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L72-L72) | ConfigureSerialPort | True |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `Connect` · L32–91
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:32–91](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L32-L91)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:32–91](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L32-L91)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -355,11 +355,11 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CBeamExpander.cs#L148-L148) | Connect | True |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CConex_AGP.cs#L178-L178) | Connect | True |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CPowerMeter.cs#L45-L45) | Connect | True |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L234-L234) | Connect | True |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CTalonLaser.cs#L35-L35) | Connect | True |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CBeamExpander.cs#L148-L148) | Connect | True |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CConex_AGP.cs#L178-L178) | Connect | True |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L45-L45) | Connect | True |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L234-L234) | Connect | True |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L35-L35) | Connect | True |
 
 호출하는 대상과 해석 범위:
 
@@ -462,7 +462,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetAutoReconnectPolicy` · L93–102
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:93–102](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L93-L102)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:93–102](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L93-L102)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -496,7 +496,7 @@ flowchart TD
 
 ### MethodDeclaration `SuppressAutoReconnect` · L104–113
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:104–113](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L104-L113)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:104–113](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L104-L113)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -530,7 +530,7 @@ flowchart TD
 
 ### MethodDeclaration `TryBeginConnectAttempt` · L115–149
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:115–149](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L115-L149)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:115–149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L115-L149)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -549,7 +549,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L35-L35) | TryBeginConnectAttempt | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L35-L35) | TryBeginConnectAttempt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -603,7 +603,7 @@ flowchart TD
 
 ### MethodDeclaration `CompleteConnectAttempt` · L151–162
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:151–162](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L151-L162)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:151–162](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L151-L162)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -616,7 +616,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L88-L88) | CompleteConnectAttempt | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L88-L88) | CompleteConnectAttempt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -648,7 +648,7 @@ flowchart TD
 
 ### MethodDeclaration `RegisterConnectSuccess` · L164–171
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:164–171](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L164-L171)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:164–171](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L164-L171)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -661,8 +661,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L51-L51) | RegisterConnectSuccess | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L75-L75) | RegisterConnectSuccess | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L51-L51) | RegisterConnectSuccess | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L75-L75) | RegisterConnectSuccess | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -685,7 +685,7 @@ flowchart TD
 
 ### MethodDeclaration `RegisterConnectFailure` · L173–179
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:173–179](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L173-L179)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:173–179](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L173-L179)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -698,8 +698,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L195-L195) | RegisterConnectFailure | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L202-L202) | RegisterConnectFailure | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L195-L195) | RegisterConnectFailure | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L202-L202) | RegisterConnectFailure | False |
 
 호출하는 대상과 해석 범위:
 
@@ -728,7 +728,7 @@ flowchart TD
 
 ### MethodDeclaration `Disconnect` · L181–190
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:181–190](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L181-L190)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:181–190](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L181-L190)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -776,7 +776,7 @@ flowchart TD
 
 ### MethodDeclaration `SetError` · L192–197
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:192–197](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L192-L197)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:192–197](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L192-L197)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -795,13 +795,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CBeamExpander.cs#L172-L172) | SetError | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CConex_AGP.cs#L202-L202) | SetError | False |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CPowerMeter.cs#L95-L95) | SetError | False |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CPowerMeter.cs#L122-L122) | SetError | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L82-L82) | SetError | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L301-L301) | SetError | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CTalonLaser.cs#L80-L80) | SetError | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CBeamExpander.cs#L172-L172) | SetError | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CConex_AGP.cs#L202-L202) | SetError | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L95-L95) | SetError | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L122-L122) | SetError | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L82-L82) | SetError | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L301-L301) | SetError | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L80-L80) | SetError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -823,7 +823,7 @@ flowchart TD
 
 ### MethodDeclaration `SetError` · L199–204
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:199–204](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L199-L204)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:199–204](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L199-L204)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -842,12 +842,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CPowerMeter.cs#L74-L74) | SetError | False |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CPowerMeter.cs#L114-L114) | SetError | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L61-L61) | SetError | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:210–210](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L210-L210) | SetError | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L291-L291) | SetError | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CTalonLaser.cs#L69-L69) | SetError | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L74-L74) | SetError | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L114-L114) | SetError | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L61-L61) | SetError | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:210–210](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L210-L210) | SetError | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L291-L291) | SetError | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L69-L69) | SetError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -869,7 +869,7 @@ flowchart TD
 
 ### MethodDeclaration `SetResponseState` · L206–215
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:206–215](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L206-L215)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:206–215](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L206-L215)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -888,8 +888,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CBeamExpander.cs#L166-L166) | SetResponseState | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:196–196](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CConex_AGP.cs#L196-L196) | SetResponseState | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CBeamExpander.cs#L166-L166) | SetResponseState | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:196–196](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CConex_AGP.cs#L196-L196) | SetResponseState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -922,7 +922,7 @@ flowchart TD
 
 ### MethodDeclaration `Execute` · L217–228
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:217–228](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L217-L228)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:217–228](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L217-L228)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -976,7 +976,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteSerial` · L230–348
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:230–348](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L230-L348)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:230–348](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L230-L348)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -996,7 +996,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:222–222](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L222-L222) | ExecuteSerial | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:222–222](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L222-L222) | ExecuteSerial | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1064,7 +1064,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ifCallback` · L245–280
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:245–280](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L245-L280)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:245–280](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L245-L280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1134,7 +1134,7 @@ flowchart TD
 
 ### PropertyDeclaration `CommandNewLine` · L350–356
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:350–356](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L350-L356)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:350–356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L350-L356)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1149,7 +1149,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CommandNewLine` · L352–355
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:352–355](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L352-L355)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:352–355](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L352-L355)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1170,7 +1170,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatCommand` · L358–361
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:358–361](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L358-L361)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:358–361](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L358-L361)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1189,7 +1189,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L242-L242) | FormatCommand | True |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L242-L242) | FormatCommand | True |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1201,7 +1201,7 @@ flowchart TD
 
 ### MethodDeclaration `CloseSerialPort` · L363–382
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:363–382](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L363-L382)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:363–382](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L363-L382)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1214,18 +1214,18 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CBeamExpander.cs#L171-L171) | CloseSerialPort | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CConex_AGP.cs#L201-L201) | CloseSerialPort | False |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CPowerMeter.cs#L73-L73) | CloseSerialPort | False |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CPowerMeter.cs#L94-L94) | CloseSerialPort | False |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CPowerMeter.cs#L113-L113) | CloseSerialPort | False |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CPowerMeter.cs#L121-L121) | CloseSerialPort | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L56-L56) | CloseSerialPort | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L81-L81) | CloseSerialPort | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:186–186](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L186-L186) | CloseSerialPort | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:300–300](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L300-L300) | CloseSerialPort | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CTalonLaser.cs#L68-L68) | CloseSerialPort | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CTalonLaser.cs#L79-L79) | CloseSerialPort | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CBeamExpander.cs#L171-L171) | CloseSerialPort | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CConex_AGP.cs#L201-L201) | CloseSerialPort | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L73-L73) | CloseSerialPort | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L94-L94) | CloseSerialPort | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L113-L113) | CloseSerialPort | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L121-L121) | CloseSerialPort | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L56-L56) | CloseSerialPort | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L81-L81) | CloseSerialPort | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:186–186](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L186-L186) | CloseSerialPort | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:300–300](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L300-L300) | CloseSerialPort | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L68-L68) | CloseSerialPort | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L79-L79) | CloseSerialPort | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1266,7 +1266,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseParity` · L384–387
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:384–387](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L384-L387)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:384–387](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L384-L387)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1285,7 +1285,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L65-L65) | ParseParity | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L65-L65) | ParseParity | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1307,7 +1307,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseStopBits` · L389–392
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:389–392](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L389-L392)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:389–392](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L389-L392)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1326,7 +1326,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L65-L65) | ParseStopBits | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L65-L65) | ParseStopBits | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1348,7 +1348,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseHandshake` · L394–404
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:394–404](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L394-L404)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:394–404](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L394-L404)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1367,7 +1367,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L67-L67) | ParseHandshake | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L67-L67) | ParseHandshake | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1396,7 +1396,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeEnumValue` · L406–409
 
-[Drilling.Common/Interface/Serial/CSerialComm.cs:406–409](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L406-L409)
+[Drilling.Common/Interface/Serial/CSerialComm.cs:406–409](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L406-L409)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1415,9 +1415,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:386–386](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L386-L386) | NormalizeEnumValue | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L391-L391) | NormalizeEnumValue | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:396–396](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Serial/CSerialComm.cs#L396-L396) | NormalizeEnumValue | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:386–386](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L386-L386) | NormalizeEnumValue | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L391-L391) | NormalizeEnumValue | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:396–396](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CSerialComm.cs#L396-L396) | NormalizeEnumValue | False |
 
 호출하는 대상과 해석 범위:
 

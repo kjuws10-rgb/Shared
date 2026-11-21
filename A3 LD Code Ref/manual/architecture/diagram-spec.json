@@ -1,6 +1,6 @@
 {
   "schema": "a3-diagram-spec-v1",
-  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
   "evidenceScope": "static_source_only",
   "runtimeValidated": false,
   "diagrams": [
@@ -701,10 +701,10 @@
         },
         {
           "id": "n4",
-          "label": "PM 이력 서비스 호출 · 구현·저장형식 소스 미확인",
+          "label": "PM JSON 저장 확인 · 분석기 PM 자동수집 없음",
           "lines": [
-            "PM 이력 서비스 호출",
-            "구현·저장형식 소스 미확인"
+            "PM JSON 저장 확인",
+            "분석기 PM 자동수집 없음"
           ],
           "x": 430,
           "y": 315
@@ -745,6 +745,149 @@
           "source": "n2",
           "target": "n5",
           "label": "기존 잔건"
+        }
+      ]
+    },
+    {
+      "id": "09-log",
+      "title": "로그 생산·저장·소비와 PM/Review 경계",
+      "nodes": [
+        {
+          "id": "startup",
+          "label": "공유 CLogManager · Config 옆 Log 경로",
+          "lines": [
+            "공유 CLogManager",
+            "Config 옆 Log 경로"
+          ],
+          "x": 30,
+          "y": 95
+        },
+        {
+          "id": "producers",
+          "label": "실제 생산자 · PM · Recipe/Setting · Station/Review",
+          "lines": [
+            "실제 생산자",
+            "PM · Recipe/Setting · Station/Review"
+          ],
+          "x": 465,
+          "y": 95
+        },
+        {
+          "id": "modes",
+          "label": "저장 방식 분리 · 동기 append / Interface·Sequence 큐",
+          "lines": [
+            "저장 방식 분리",
+            "동기 append / Interface·Sequence 큐"
+          ],
+          "x": 900,
+          "y": 95
+        },
+        {
+          "id": "pm",
+          "label": "PM UTF-8 JSON · tmp → 교체 · 인스턴스 캐시",
+          "lines": [
+            "PM UTF-8 JSON",
+            "tmp → 교체 · 인스턴스 캐시"
+          ],
+          "x": 30,
+          "y": 290
+        },
+        {
+          "id": "sync",
+          "label": "동기 텍스트·Alarm · UTF-16 trace / UTF-8 JSONL",
+          "lines": [
+            "동기 텍스트·Alarm",
+            "UTF-16 trace / UTF-8 JSONL"
+          ],
+          "x": 465,
+          "y": 290
+        },
+        {
+          "id": "queues",
+          "label": "bounded worker · overflow·실패는 sticky 오류",
+          "lines": [
+            "bounded worker",
+            "overflow·실패는 sticky 오류"
+          ],
+          "x": 900,
+          "y": 290
+        },
+        {
+          "id": "pmview",
+          "label": "PM 화면 · 미해제 JSON ≠ 재시작 활성 Lock",
+          "lines": [
+            "PM 화면",
+            "미해제 JSON ≠ 재시작 활성 Lock"
+          ],
+          "x": 30,
+          "y": 485
+        },
+        {
+          "id": "readers",
+          "label": "Viewer / Alarm 분석 · BOM·선택 CTS / PM 자동수집 없음",
+          "lines": [
+            "Viewer / Alarm 분석",
+            "BOM·선택 CTS / PM 자동수집 없음"
+          ],
+          "x": 465,
+          "y": 485
+        },
+        {
+          "id": "truth",
+          "label": "가공·Review 결과 원본 · CSV·Offset·Product와 별도 대조",
+          "lines": [
+            "가공·Review 결과 원본",
+            "CSV·Offset·Product와 별도 대조"
+          ],
+          "x": 900,
+          "y": 485
+        }
+      ],
+      "edges": [
+        {
+          "label": "구성",
+          "source": "startup",
+          "target": "producers"
+        },
+        {
+          "label": "호출",
+          "source": "producers",
+          "target": "modes"
+        },
+        {
+          "label": "PM",
+          "source": "producers",
+          "target": "pm"
+        },
+        {
+          "label": "일반",
+          "source": "modes",
+          "target": "sync"
+        },
+        {
+          "label": "진단",
+          "source": "modes",
+          "target": "queues"
+        },
+        {
+          "label": "ReadPmHistory",
+          "source": "pm",
+          "target": "pmview"
+        },
+        {
+          "label": "조회",
+          "source": "sync",
+          "target": "readers"
+        },
+        {
+          "label": "기록 후 조회",
+          "source": "queues",
+          "target": "readers"
+        },
+        {
+          "label": "성공·출처 대조",
+          "source": "readers",
+          "target": "truth"
         }
       ]
     }

@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | ed18bc5081d304c3ae249f70e2c4a09d2324f90efdca71db63686116b5f4453a |
 | 파일 분류 | code |
 | 원본 크기/행 | 18,955 bytes / 603 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -74,7 +74,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_hostWindow` · L12–12
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L12-L12)
+[Drilling.UI/Views/CMonitorView.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -89,7 +89,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_rootView` · L13–13
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L13-L13)
+[Drilling.UI/Views/CMonitorView.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -104,7 +104,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_monitorMenu` · L14–14
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L14-L14)
+[Drilling.UI/Views/CMonitorView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -119,7 +119,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L16–19
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:16–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L16-L19)
+[Drilling.UI/Views/CMonitorView.xaml.cs:16–19](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L16-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -146,7 +146,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `MonitorViewLoaded` · L21–55
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:21–55](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L21-L55)
+[Drilling.UI/Views/CMonitorView.xaml.cs:21–55](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L21-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -221,7 +221,7 @@ flowchart TD
 
 ### MethodDeclaration `RootViewCurrentScreenChanged` · L57–71
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:57–71](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L57-L71)
+[Drilling.UI/Views/CMonitorView.xaml.cs:57–71](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L57-L71)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -271,7 +271,7 @@ flowchart TD
 
 ### MethodDeclaration `MonitorViewPreviewKeyDown` · L73–86
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:73–86](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L73-L86)
+[Drilling.UI/Views/CMonitorView.xaml.cs:73–86](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L73-L86)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -321,7 +321,7 @@ flowchart TD
 
 ### MethodDeclaration `MonitorViewUnloaded` · L88–104
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:88–104](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L88-L104)
+[Drilling.UI/Views/CMonitorView.xaml.cs:88–104](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L88-L104)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -373,7 +373,7 @@ flowchart TD
 
 ### MethodDeclaration `XpsMultiMoveGrid_PreviewMouseWheel` · L106–118
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:106–118](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L106-L118)
+[Drilling.UI/Views/CMonitorView.xaml.cs:106–118](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L106-L118)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -425,7 +425,7 @@ flowchart TD
 
 ### MethodDeclaration `OuterScrollViewer_PreviewMouseWheel` · L120–136
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:120–136](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L120-L136)
+[Drilling.UI/Views/CMonitorView.xaml.cs:120–136](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L120-L136)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -479,7 +479,7 @@ flowchart TD
 
 ### MethodDeclaration `CoordinateCellPreviewLabel_MouseMove` · L138–149
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:138–149](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L138-L149)
+[Drilling.UI/Views/CMonitorView.xaml.cs:138–149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L138-L149)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -530,7 +530,7 @@ flowchart TD
 
 ### MethodDeclaration `CoordinateCellPreviewLabel_MouseLeave` · L151–154
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:151–154](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L151-L154)
+[Drilling.UI/Views/CMonitorView.xaml.cs:151–154](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L151-L154)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -564,7 +564,7 @@ flowchart TD
 
 ### MethodDeclaration `CoordinateShotMap_MouseLeftButtonDown` · L156–167
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:156–167](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L156-L167)
+[Drilling.UI/Views/CMonitorView.xaml.cs:156–167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L156-L167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -617,7 +617,7 @@ flowchart TD
 
 ### MethodDeclaration `CoordinateShotCoordinateGrid_SelectionChanged` · L169–186
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:169–186](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L169-L186)
+[Drilling.UI/Views/CMonitorView.xaml.cs:169–186](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L169-L186)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -671,7 +671,7 @@ flowchart TD
 
 ### MethodDeclaration `PositionCoordinateGlassPreviewHoverTip` · L188–209
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:188–209](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L188-L209)
+[Drilling.UI/Views/CMonitorView.xaml.cs:188–209](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L188-L209)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -743,7 +743,7 @@ flowchart TD
 
 ### MethodDeclaration `HideCoordinateGlassPreviewHoverTip` · L211–215
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:211–215](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L211-L215)
+[Drilling.UI/Views/CMonitorView.xaml.cs:211–215](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L211-L215)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -756,8 +756,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L142-L142) | HideCoordinateGlassPreviewHoverTip | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L153-L153) | HideCoordinateGlassPreviewHoverTip | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L142-L142) | HideCoordinateGlassPreviewHoverTip | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L153-L153) | HideCoordinateGlassPreviewHoverTip | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -770,7 +770,7 @@ flowchart TD
 
 ### MethodDeclaration `AttenuatorScrollViewer_ScrollChanged` · L217–225
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:217–225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L217-L225)
+[Drilling.UI/Views/CMonitorView.xaml.cs:217–225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L217-L225)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -815,7 +815,7 @@ flowchart TD
 
 ### MethodDeclaration `MelsecGrid_SizeChanged` · L227–246
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:227–246](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L227-L246)
+[Drilling.UI/Views/CMonitorView.xaml.cs:227–246](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L227-L246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -874,7 +874,7 @@ flowchart TD
 
 ### MethodDeclaration `CloseOpenComboBoxes` · L248–259
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:248–259](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L248-L259)
+[Drilling.UI/Views/CMonitorView.xaml.cs:248–259](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L248-L259)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -893,7 +893,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L224-L224) | CloseOpenComboBoxes | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L224-L224) | CloseOpenComboBoxes | False |
 
 호출하는 대상과 해석 범위:
 
@@ -930,7 +930,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenPowerMeterSettingInput` · L261–283
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:261–283](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L261-L283)
+[Drilling.UI/Views/CMonitorView.xaml.cs:261–283](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L261-L283)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -997,7 +997,7 @@ flowchart TD
 
 ### MethodDeclaration `PowerMeterSettingSelection_PreviewMouseDown` · L285–292
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:285–292](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L285-L292)
+[Drilling.UI/Views/CMonitorView.xaml.cs:285–292](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L285-L292)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1046,7 +1046,7 @@ flowchart TD
 
 ### MethodDeclaration `PowerMeterSettingSelection_PreviewKeyDown` · L294–306
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:294–306](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L294-L306)
+[Drilling.UI/Views/CMonitorView.xaml.cs:294–306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L294-L306)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1101,7 +1101,7 @@ flowchart TD
 
 ### MethodDeclaration `PowerMeterSettingSelection_PreviewMouseWheel` · L308–315
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:308–315](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L308-L315)
+[Drilling.UI/Views/CMonitorView.xaml.cs:308–315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L308-L315)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1150,7 +1150,7 @@ flowchart TD
 
 ### MethodDeclaration `PowerMeterSettingSelection_DropDownOpened` · L317–326
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:317–326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L317-L326)
+[Drilling.UI/Views/CMonitorView.xaml.cs:317–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L317-L326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1200,7 +1200,7 @@ flowchart TD
 
 ### MethodDeclaration `IsPowerMeterSettingSelectionKey` · L328–344
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:328–344](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L328-L344)
+[Drilling.UI/Views/CMonitorView.xaml.cs:328–344](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L328-L344)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1247,7 +1247,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenLaserSettingInput` · L346–363
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:346–363](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L346-L363)
+[Drilling.UI/Views/CMonitorView.xaml.cs:346–363](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L346-L363)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1305,7 +1305,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenMotorOperationInput` · L365–382
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:365–382](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L365-L382)
+[Drilling.UI/Views/CMonitorView.xaml.cs:365–382](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L365-L382)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1363,7 +1363,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenXpsMultiMoveTargetInput` · L384–400
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:384–400](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L384-L400)
+[Drilling.UI/Views/CMonitorView.xaml.cs:384–400](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L384-L400)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1420,7 +1420,7 @@ flowchart TD
 
 ### MethodDeclaration `StartXpsJogNegative` · L402–406
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:402–406](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L402-L406)
+[Drilling.UI/Views/CMonitorView.xaml.cs:402–406](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L402-L406)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1456,7 +1456,7 @@ flowchart TD
 
 ### MethodDeclaration `StartXpsJogPositive` · L408–412
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:408–412](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L408-L412)
+[Drilling.UI/Views/CMonitorView.xaml.cs:408–412](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L408-L412)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1492,7 +1492,7 @@ flowchart TD
 
 ### MethodDeclaration `StopXpsJog` · L414–418
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:414–418](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L414-L418)
+[Drilling.UI/Views/CMonitorView.xaml.cs:414–418](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L414-L418)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1528,7 +1528,7 @@ flowchart TD
 
 ### MethodDeclaration `StopXpsJogOnMouseLeave` · L420–423
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:420–423](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L420-L423)
+[Drilling.UI/Views/CMonitorView.xaml.cs:420–423](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L420-L423)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1563,7 +1563,7 @@ flowchart TD
 
 ### MethodDeclaration `StopXpsJogOnLostMouseCapture` · L425–428
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:425–428](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L425-L428)
+[Drilling.UI/Views/CMonitorView.xaml.cs:425–428](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L425-L428)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1598,7 +1598,7 @@ flowchart TD
 
 ### MethodDeclaration `StopXpsJogOnLostKeyboardFocus` · L430–433
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:430–433](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L430-L433)
+[Drilling.UI/Views/CMonitorView.xaml.cs:430–433](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L430-L433)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1633,7 +1633,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteXpsJogEvent` · L435–461
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:435–461](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L435-L461)
+[Drilling.UI/Views/CMonitorView.xaml.cs:435–461](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L435-L461)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1652,12 +1652,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:405–405](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L405-L405) | ExecuteXpsJogEvent | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L411-L411) | ExecuteXpsJogEvent | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:417–417](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L417-L417) | ExecuteXpsJogEvent | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:422–422](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L422-L422) | ExecuteXpsJogEvent | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L427-L427) | ExecuteXpsJogEvent | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L432-L432) | ExecuteXpsJogEvent | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:405–405](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L405-L405) | ExecuteXpsJogEvent | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L411-L411) | ExecuteXpsJogEvent | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:417–417](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L417-L417) | ExecuteXpsJogEvent | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:422–422](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L422-L422) | ExecuteXpsJogEvent | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L427-L427) | ExecuteXpsJogEvent | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L432-L432) | ExecuteXpsJogEvent | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1709,7 +1709,7 @@ flowchart TD
 
 ### MethodDeclaration `GetMonitorMenu` · L463–466
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:463–466](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L463-L466)
+[Drilling.UI/Views/CMonitorView.xaml.cs:463–466](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L463-L466)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1722,13 +1722,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L269-L269) | GetMonitorMenu | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L287-L287) | GetMonitorMenu | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L301-L301) | GetMonitorMenu | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L310-L310) | GetMonitorMenu | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L319-L319) | GetMonitorMenu | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:437–437](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L437-L437) | GetMonitorMenu | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:587–587](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L587-L587) | GetMonitorMenu | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L269-L269) | GetMonitorMenu | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L287-L287) | GetMonitorMenu | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L301-L301) | GetMonitorMenu | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L310-L310) | GetMonitorMenu | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L319-L319) | GetMonitorMenu | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:437–437](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L437-L437) | GetMonitorMenu | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:587–587](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L587-L587) | GetMonitorMenu | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1741,7 +1741,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenAttenuatorPositionInput` · L468–487
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:468–487](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L468-L487)
+[Drilling.UI/Views/CMonitorView.xaml.cs:468–487](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L468-L487)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1806,7 +1806,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenBetTableInput` · L489–529
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:489–529](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L489-L529)
+[Drilling.UI/Views/CMonitorView.xaml.cs:489–529](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L489-L529)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1887,7 +1887,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenBetPositionInput` · L531–548
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:531–548](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L531-L548)
+[Drilling.UI/Views/CMonitorView.xaml.cs:531–548](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L531-L548)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1945,7 +1945,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenMelsecWriteInput` · L550–571
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:550–571](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L550-L571)
+[Drilling.UI/Views/CMonitorView.xaml.cs:550–571](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L550-L571)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2010,7 +2010,7 @@ flowchart TD
 
 ### MethodDeclaration `MelsecWriteSelectionPreviewInput` · L573–583
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:573–583](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L573-L583)
+[Drilling.UI/Views/CMonitorView.xaml.cs:573–583](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L573-L583)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2055,7 +2055,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsureMelsecWriteInputUnlocked` · L585–601
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:585–601](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L585-L601)
+[Drilling.UI/Views/CMonitorView.xaml.cs:585–601](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L585-L601)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2074,9 +2074,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:558–558](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L558-L558) | EnsureMelsecWriteInputUnlocked | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L567-L567) | EnsureMelsecWriteInputUnlocked | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:582–582](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMonitorView.xaml.cs#L582-L582) | EnsureMelsecWriteInputUnlocked | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:558–558](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L558-L558) | EnsureMelsecWriteInputUnlocked | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L567-L567) | EnsureMelsecWriteInputUnlocked | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:582–582](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml.cs#L582-L582) | EnsureMelsecWriteInputUnlocked | False |
 
 호출하는 대상과 해석 범위:
 

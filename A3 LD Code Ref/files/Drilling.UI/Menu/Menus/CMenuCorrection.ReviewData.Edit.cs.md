@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 2b07373e13aa12a83477f7ef7708a6a5c790b19e45ec55a0938b8701526be6b3 |
 | 파일 분류 | code |
 | 원본 크기/행 | 34,064 bytes / 727 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -184,7 +184,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `ResultEditKeyInMode` · L16–16
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L16-L16)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -205,7 +205,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `ResultEditCopyMode` · L17–17
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L17-L17)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -226,7 +226,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `ResultJudgeOptions` · L18–18
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L18-L18)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -247,7 +247,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_resultEditMode` · L19–19
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L19-L19)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -268,7 +268,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_resultEditKeyInItems` · L20–20
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L20-L20)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -289,7 +289,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedResultEditKeyInItem` · L21–21
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L21-L21)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -304,7 +304,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_resultEditCopySource` · L22–22
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L22-L22)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -319,7 +319,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_resultEditCopyTargets` · L23–23
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L23-L23)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L23-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -340,7 +340,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedResultEditCopyTarget` · L24–24
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L24-L24)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L24-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -355,7 +355,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_resultEditStatusText` · L25–25
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L25-L25)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L25-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -376,7 +376,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isResultEditSaving` · L26–26
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L26-L26)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -391,7 +391,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `IsResultEditKeyInMode` · L28–28
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L28-L28)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -406,7 +406,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `IsResultEditCopyMode` · L29–29
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L29-L29)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -421,7 +421,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `ResultEditJudgeOptions` · L30–30
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L30-L30)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -436,7 +436,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `ResultEditKeyInItems` · L31–31
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L31-L31)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -451,7 +451,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `ResultEditCopySourceRows` · L32–32
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L32-L32)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L32-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -472,7 +472,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `ResultEditCopyTargets` · L33–33
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L33-L33)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -487,7 +487,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `ResultEditSelectionSummary` · L34–34
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L34-L34)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L34-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -514,7 +514,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `ResultEditKeyInSummary` · L35–35
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L35-L35)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L35-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -529,7 +529,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `ResultEditCopySummary` · L36–36
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L36-L36)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L36-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -544,7 +544,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `ResultEditStatusText` · L37–37
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L37-L37)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L37-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -559,7 +559,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `IsResultEditSaving` · L38–38
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L38-L38)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -574,7 +574,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `CanAddResultEditKeyIn` · L39–39
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L39-L39)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -589,7 +589,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `CanAddSelectedResultEditKeyIn` · L40–40
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L40-L40)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L40-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -616,7 +616,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `CanAddNgResultEditKeyIn` · L41–41
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L41-L41)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L41-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -643,7 +643,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `CanRemoveResultEditKeyIn` · L42–42
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L42-L42)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L42-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -658,7 +658,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `CanClearResultEditKeyIn` · L43–43
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L43-L43)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L43-L43)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -673,7 +673,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `CanAddResultEditCopySource` · L44–44
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L44-L44)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L44-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -700,7 +700,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `CanAddResultEditCopyTargets` · L45–45
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L45-L45)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L45-L45)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -727,7 +727,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `CanRemoveResultEditCopyTarget` · L46–46
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L46-L46)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -742,7 +742,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `CanClearResultEditCopyTargets` · L47–47
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L47-L47)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L47-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -757,7 +757,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `CanApplyResultEditCopy` · L48–48
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L48-L48)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L48-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -772,7 +772,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `CanSaveResultEdit` · L49–53
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:49–53](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L49-L53)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:49–53](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L49-L53)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -793,7 +793,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `SelectedResultEditKeyInItem` · L55–69
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:55–69](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L55-L69)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:55–69](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L55-L69)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -808,7 +808,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_SelectedResultEditKeyInItem` · L57–57
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L57-L57)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L57-L57)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -823,7 +823,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_SelectedResultEditKeyInItem` · L58–68
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:58–68](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L58-L68)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:58–68](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L58-L68)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -874,7 +874,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedResultEditCopyTarget` · L71–85
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:71–85](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L71-L85)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:71–85](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L71-L85)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -889,7 +889,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedResultEditCopyTarget` · L73–73
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L73-L73)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L73-L73)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -904,7 +904,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_SelectedResultEditCopyTarget` · L74–84
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:74–84](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L74-L84)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:74–84](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L74-L84)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -955,7 +955,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectResultEditSubModeCommand` · L87–87
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L87-L87)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L87-L87)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -970,7 +970,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectResultEditSubModeCommand` · L87–87
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L87-L87)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L87-L87)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -985,7 +985,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_SelectResultEditSubModeCommand` · L87–87
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L87-L87)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L87-L87)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1006,7 +1006,7 @@ flowchart TD
 
 ### PropertyDeclaration `AddResultEditKeyInCommand` · L88–88
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L88-L88)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L88-L88)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1021,7 +1021,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AddResultEditKeyInCommand` · L88–88
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L88-L88)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L88-L88)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1036,7 +1036,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_AddResultEditKeyInCommand` · L88–88
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L88-L88)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L88-L88)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1057,7 +1057,7 @@ flowchart TD
 
 ### PropertyDeclaration `AddSelectedResultEditKeyInCommand` · L89–89
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L89-L89)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L89-L89)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1072,7 +1072,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AddSelectedResultEditKeyInCommand` · L89–89
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L89-L89)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L89-L89)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1087,7 +1087,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_AddSelectedResultEditKeyInCommand` · L89–89
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L89-L89)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L89-L89)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1108,7 +1108,7 @@ flowchart TD
 
 ### PropertyDeclaration `AddNgResultEditKeyInCommand` · L90–90
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L90-L90)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L90-L90)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1123,7 +1123,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AddNgResultEditKeyInCommand` · L90–90
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L90-L90)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L90-L90)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1138,7 +1138,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_AddNgResultEditKeyInCommand` · L90–90
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L90-L90)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L90-L90)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1159,7 +1159,7 @@ flowchart TD
 
 ### PropertyDeclaration `RemoveResultEditKeyInCommand` · L91–91
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L91-L91)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L91-L91)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1174,7 +1174,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_RemoveResultEditKeyInCommand` · L91–91
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L91-L91)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L91-L91)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1189,7 +1189,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_RemoveResultEditKeyInCommand` · L91–91
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L91-L91)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L91-L91)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1210,7 +1210,7 @@ flowchart TD
 
 ### PropertyDeclaration `ClearResultEditKeyInCommand` · L92–92
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L92-L92)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L92-L92)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1225,7 +1225,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ClearResultEditKeyInCommand` · L92–92
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L92-L92)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L92-L92)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1240,7 +1240,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ClearResultEditKeyInCommand` · L92–92
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L92-L92)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L92-L92)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1261,7 +1261,7 @@ flowchart TD
 
 ### PropertyDeclaration `AddResultEditCopySourceCommand` · L93–93
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L93-L93)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L93-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1276,7 +1276,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AddResultEditCopySourceCommand` · L93–93
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L93-L93)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L93-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1291,7 +1291,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_AddResultEditCopySourceCommand` · L93–93
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L93-L93)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L93-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1312,7 +1312,7 @@ flowchart TD
 
 ### PropertyDeclaration `AddResultEditCopyTargetsCommand` · L94–94
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L94-L94)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L94-L94)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1327,7 +1327,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AddResultEditCopyTargetsCommand` · L94–94
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L94-L94)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L94-L94)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1342,7 +1342,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_AddResultEditCopyTargetsCommand` · L94–94
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L94-L94)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L94-L94)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1363,7 +1363,7 @@ flowchart TD
 
 ### PropertyDeclaration `RemoveResultEditCopyTargetCommand` · L95–95
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L95-L95)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L95-L95)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1378,7 +1378,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_RemoveResultEditCopyTargetCommand` · L95–95
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L95-L95)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L95-L95)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1393,7 +1393,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_RemoveResultEditCopyTargetCommand` · L95–95
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L95-L95)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L95-L95)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1414,7 +1414,7 @@ flowchart TD
 
 ### PropertyDeclaration `ClearResultEditCopyTargetsCommand` · L96–96
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L96-L96)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L96-L96)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1429,7 +1429,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ClearResultEditCopyTargetsCommand` · L96–96
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L96-L96)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L96-L96)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1444,7 +1444,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ClearResultEditCopyTargetsCommand` · L96–96
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L96-L96)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L96-L96)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1465,7 +1465,7 @@ flowchart TD
 
 ### PropertyDeclaration `CopyResultEditXCommand` · L97–97
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L97-L97)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L97-L97)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1480,7 +1480,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CopyResultEditXCommand` · L97–97
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L97-L97)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L97-L97)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1495,7 +1495,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CopyResultEditXCommand` · L97–97
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L97-L97)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L97-L97)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1516,7 +1516,7 @@ flowchart TD
 
 ### PropertyDeclaration `CopyResultEditYCommand` · L98–98
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L98-L98)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L98-L98)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1531,7 +1531,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CopyResultEditYCommand` · L98–98
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L98-L98)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L98-L98)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1546,7 +1546,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CopyResultEditYCommand` · L98–98
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L98-L98)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L98-L98)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1567,7 +1567,7 @@ flowchart TD
 
 ### PropertyDeclaration `CopyResultEditJudgeCommand` · L99–99
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L99-L99)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L99-L99)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1582,7 +1582,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CopyResultEditJudgeCommand` · L99–99
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L99-L99)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L99-L99)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1597,7 +1597,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CopyResultEditJudgeCommand` · L99–99
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L99-L99)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L99-L99)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1618,7 +1618,7 @@ flowchart TD
 
 ### PropertyDeclaration `CopyResultEditAllCommand` · L100–100
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L100-L100)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L100-L100)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1633,7 +1633,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CopyResultEditAllCommand` · L100–100
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L100-L100)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L100-L100)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1648,7 +1648,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CopyResultEditAllCommand` · L100–100
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L100-L100)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L100-L100)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1669,7 +1669,7 @@ flowchart TD
 
 ### PropertyDeclaration `SaveResultEditCommand` · L101–101
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L101-L101)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L101-L101)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1684,7 +1684,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SaveResultEditCommand` · L101–101
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L101-L101)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L101-L101)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1699,7 +1699,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_SaveResultEditCommand` · L101–101
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L101-L101)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L101-L101)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1720,7 +1720,7 @@ flowchart TD
 
 ### MethodDeclaration `InitializeResultEditCommands` · L103–120
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:103–120](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L103-L120)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:103–120](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L103-L120)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1733,7 +1733,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L62-L62) | InitializeResultEditCommands | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L62-L62) | InitializeResultEditCommands | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1794,7 +1794,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectResultEditSubMode` · L122–133
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:122–133](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L122-L133)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:122–133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L122-L133)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1849,7 +1849,7 @@ flowchart TD
 
 ### MethodDeclaration `SetResultEditRowSelection` · L135–144
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:135–144](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L135-L144)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:135–144](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L135-L144)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1869,7 +1869,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CReviewDataView.xaml.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L323-L323) | panel.SetResultEditRowSelection | False |
+| [Drilling.UI/Views/CReviewDataView.xaml.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewDataView.xaml.cs#L323-L323) | panel.SetResultEditRowSelection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1899,7 +1899,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectCurrentShotForResultEdit` · L146–154
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:146–154](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L146-L154)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:146–154](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L146-L154)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1912,7 +1912,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CReviewDataView.xaml.cs:198–198](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L198-L198) | panel.SelectCurrentShotForResultEdit | False |
+| [Drilling.UI/Views/CReviewDataView.xaml.cs:198–198](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewDataView.xaml.cs#L198-L198) | panel.SelectCurrentShotForResultEdit | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1941,7 +1941,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectResultEditShotsInMap` · L156–179
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:156–179](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L156-L179)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:156–179](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L156-L179)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2028,7 +2028,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectResultEditShotsInScatter` · L181–194
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:181–194](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L181-L194)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:181–194](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L181-L194)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2093,7 +2093,7 @@ flowchart TD
 
 ### MethodDeclaration `ReplaceResultEditSelection` · L196–209
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:196–209](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L196-L209)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:196–209](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L196-L209)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2112,9 +2112,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L153-L153) | ReplaceResultEditSelection | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L178-L178) | ReplaceResultEditSelection | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L193-L193) | ReplaceResultEditSelection | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L153-L153) | ReplaceResultEditSelection | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L178-L178) | ReplaceResultEditSelection | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L193-L193) | ReplaceResultEditSelection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2149,7 +2149,7 @@ flowchart TD
 
 ### MethodDeclaration `ClearResultEditSelection` · L211–219
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:211–219](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L211-L219)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:211–219](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L211-L219)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2162,7 +2162,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L248-L248) | ClearResultEditSelection | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L248-L248) | ClearResultEditSelection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2191,7 +2191,7 @@ flowchart TD
 
 ### MethodDeclaration `NotifyResultEditSelectionChanged` · L221–229
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:221–229](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L221-L229)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:221–229](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L221-L229)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2204,9 +2204,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L143-L143) | NotifyResultEditSelectionChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L208-L208) | NotifyResultEditSelectionChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L218-L218) | NotifyResultEditSelectionChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L143-L143) | NotifyResultEditSelectionChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L208-L208) | NotifyResultEditSelectionChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L218-L218) | NotifyResultEditSelectionChanged | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2241,7 +2241,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveResultEditSelection` · L231–235
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:231–235](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L231-L235)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:231–235](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L231-L235)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2254,10 +2254,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L44-L44) | ResolveResultEditSelection | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L45-L45) | ResolveResultEditSelection | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L306-L306) | ResolveResultEditSelection | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L333-L333) | ResolveResultEditSelection | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L44-L44) | ResolveResultEditSelection | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L45-L45) | ResolveResultEditSelection | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L306-L306) | ResolveResultEditSelection | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L333-L333) | ResolveResultEditSelection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2282,7 +2282,7 @@ flowchart TD
 
 ### MethodDeclaration `AddResultEditKeyIn` · L237–245
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:237–245](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L237-L245)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:237–245](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L237-L245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2326,7 +2326,7 @@ flowchart TD
 
 ### MethodDeclaration `AddSelectedResultEditKeyIn` · L247–252
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:247–252](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L247-L252)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:247–252](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L247-L252)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2361,7 +2361,7 @@ flowchart TD
 
 ### MethodDeclaration `AddNgResultEditKeyIn` · L254–259
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:254–259](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L254-L259)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:254–259](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L254-L259)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2396,7 +2396,7 @@ flowchart TD
 
 ### MethodDeclaration `AddResultEditKeyInRows` · L261–280
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:261–280](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L261-L280)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:261–280](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L261-L280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2416,9 +2416,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L244-L244) | AddResultEditKeyInRows | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:249–251](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L249-L251) | AddResultEditKeyInRows | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:256–258](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L256-L258) | AddResultEditKeyInRows | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L244-L244) | AddResultEditKeyInRows | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:249–251](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L249-L251) | AddResultEditKeyInRows | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:256–258](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L256-L258) | AddResultEditKeyInRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2472,7 +2472,7 @@ flowchart TD
 
 ### MethodDeclaration `RemoveResultEditKeyIn` · L282–294
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:282–294](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L282-L294)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:282–294](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L282-L294)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2531,7 +2531,7 @@ flowchart TD
 
 ### MethodDeclaration `ClearResultEditKeyIn` · L296–302
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:296–302](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L296-L302)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:296–302](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L296-L302)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2567,7 +2567,7 @@ flowchart TD
 
 ### MethodDeclaration `AddResultEditCopySource` · L304–322
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:304–322](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L304-L322)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:304–322](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L304-L322)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2632,7 +2632,7 @@ flowchart TD
 
 ### MethodDeclaration `AddResultEditCopyTargets` · L324–347
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:324–347](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L324-L347)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:324–347](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L324-L347)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2708,7 +2708,7 @@ flowchart TD
 
 ### MethodDeclaration `RemoveResultEditCopyTarget` · L349–361
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:349–361](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L349-L361)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:349–361](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L349-L361)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2767,7 +2767,7 @@ flowchart TD
 
 ### MethodDeclaration `ClearResultEditCopyTargets` · L363–369
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:363–369](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L363-L369)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:363–369](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L363-L369)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2803,7 +2803,7 @@ flowchart TD
 
 ### MethodDeclaration `CopyResultEditX` · L371–374
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:371–374](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L371-L374)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:371–374](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L371-L374)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2836,7 +2836,7 @@ flowchart TD
 
 ### MethodDeclaration `CopyResultEditY` · L376–379
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:376–379](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L376-L379)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:376–379](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L376-L379)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2869,7 +2869,7 @@ flowchart TD
 
 ### MethodDeclaration `CopyResultEditJudge` · L381–384
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:381–384](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L381-L384)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:381–384](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L381-L384)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2902,7 +2902,7 @@ flowchart TD
 
 ### MethodDeclaration `CopyResultEditAll` · L386–389
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:386–389](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L386-L389)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:386–389](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L386-L389)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2935,7 +2935,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyResultEditCopy` · L391–418
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:391–418](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L391-L418)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:391–418](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L391-L418)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2957,10 +2957,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:373–373](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L373-L373) | ApplyResultEditCopy | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L378-L378) | ApplyResultEditCopy | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L383-L383) | ApplyResultEditCopy | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L388-L388) | ApplyResultEditCopy | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:373–373](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L373-L373) | ApplyResultEditCopy | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L378-L378) | ApplyResultEditCopy | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L383-L383) | ApplyResultEditCopy | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L388-L388) | ApplyResultEditCopy | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3005,7 +3005,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveResultEdit` · L420–526
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:420–526](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L420-L526)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:420–526](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L420-L526)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3174,7 +3174,7 @@ flowchart TD
 
 ### MethodDeclaration `TryParseResultEditValue` · L528–532
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:528–532](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L528-L532)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:528–532](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L528-L532)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3194,8 +3194,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L433-L433) | TryParseResultEditValue | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:434–434](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L434-L434) | TryParseResultEditValue | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L433-L433) | TryParseResultEditValue | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:434–434](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L434-L434) | TryParseResultEditValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3216,7 +3216,7 @@ flowchart TD
 
 ### MethodDeclaration `SetResultEditSaving` · L534–544
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:534–544](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L534-L544)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:534–544](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L534-L544)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3235,8 +3235,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:480–480](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L480-L480) | SetResultEditSaving | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:503–503](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L503-L503) | SetResultEditSaving | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:480–480](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L480-L480) | SetResultEditSaving | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:503–503](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L503-L503) | SetResultEditSaving | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3270,7 +3270,7 @@ flowchart TD
 
 ### MethodDeclaration `Renumber` · L546–555
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:546–555](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L546-L555)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:546–555](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L546-L555)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3289,10 +3289,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:276–276](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L276-L276) | Renumber | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L290-L290) | Renumber | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L343-L343) | Renumber | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L357-L357) | Renumber | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:276–276](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L276-L276) | Renumber | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L290-L290) | Renumber | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L343-L343) | Renumber | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L357-L357) | Renumber | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3325,7 +3325,7 @@ flowchart TD
 
 ### MethodDeclaration `GetResultEditSelectedShotKeys` · L557–563
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:557–563](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L557-L563)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:557–563](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L557-L563)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3344,8 +3344,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:683–683](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L683-L683) | GetResultEditSelectedShotKeys | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:962–962](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L962-L962) | GetResultEditSelectedShotKeys | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:683–683](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L683-L683) | GetResultEditSelectedShotKeys | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:962–962](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L962-L962) | GetResultEditSelectedShotKeys | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3368,7 +3368,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetResultEditState` · L565–582
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:565–582](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L565-L582)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:565–582](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L565-L582)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3381,7 +3381,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1320–1320](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1320-L1320) | ResetResultEditState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1320–1320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1320-L1320) | ResetResultEditState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3419,7 +3419,7 @@ flowchart TD
 
 ### MethodDeclaration `NotifyResultEditState` · L584–599
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:584–599](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L584-L599)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:584–599](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L584-L599)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3432,17 +3432,17 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L132-L132) | NotifyResultEditState | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:279–279](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L279-L279) | NotifyResultEditState | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L293-L293) | NotifyResultEditState | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L301-L301) | NotifyResultEditState | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L321-L321) | NotifyResultEditState | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L346-L346) | NotifyResultEditState | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:360–360](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L360-L360) | NotifyResultEditState | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:368–368](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L368-L368) | NotifyResultEditState | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:417–417](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L417-L417) | NotifyResultEditState | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:581–581](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L581-L581) | NotifyResultEditState | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs:251–251](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L251-L251) | NotifyResultEditState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L132-L132) | NotifyResultEditState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:279–279](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L279-L279) | NotifyResultEditState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L293-L293) | NotifyResultEditState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L301-L301) | NotifyResultEditState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L321-L321) | NotifyResultEditState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L346-L346) | NotifyResultEditState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:360–360](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L360-L360) | NotifyResultEditState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:368–368](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L368-L368) | NotifyResultEditState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:417–417](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L417-L417) | NotifyResultEditState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:581–581](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L581-L581) | NotifyResultEditState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs:251–251](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L251-L251) | NotifyResultEditState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3508,7 +3508,7 @@ flowchart TD
 
 ### MethodDeclaration `NotifyResultEditCommandState` · L601–628
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:601–628](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L601-L628)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:601–628](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L601-L628)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3521,13 +3521,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:638–638](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L638-L638) | NotifyResultEditCommandState | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1425–1425](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1425-L1425) | NotifyResultEditCommandState | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L67-L67) | NotifyResultEditCommandState | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L83-L83) | NotifyResultEditCommandState | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L228-L228) | NotifyResultEditCommandState | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:543–543](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L543-L543) | NotifyResultEditCommandState | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L598-L598) | NotifyResultEditCommandState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:638–638](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L638-L638) | NotifyResultEditCommandState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1425–1425](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1425-L1425) | NotifyResultEditCommandState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L67-L67) | NotifyResultEditCommandState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L83-L83) | NotifyResultEditCommandState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L228-L228) | NotifyResultEditCommandState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:543–543](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L543-L543) | NotifyResultEditCommandState | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L598-L598) | NotifyResultEditCommandState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3615,7 +3615,7 @@ flowchart TD
 
 ### FieldDeclaration `_no` · L633–633
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:633–633](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L633-L633)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:633–633](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L633-L633)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3630,7 +3630,7 @@ flowchart TD
 
 ### FieldDeclaration `_editedXText` · L634–634
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:634–634](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L634-L634)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:634–634](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L634-L634)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3645,7 +3645,7 @@ flowchart TD
 
 ### FieldDeclaration `_editedYText` · L635–635
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:635–635](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L635-L635)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:635–635](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L635-L635)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3660,7 +3660,7 @@ flowchart TD
 
 ### FieldDeclaration `_editedJudge` · L636–636
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:636–636](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L636-L636)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:636–636](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L636-L636)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3675,7 +3675,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L638–645
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:638–645](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L638-L645)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:638–645](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L638-L645)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3695,9 +3695,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L271-L271) | new ST_REVIEW_DATA_EDIT_ITEM | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L317-L317) | new ST_REVIEW_DATA_EDIT_ITEM | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L340-L340) | new ST_REVIEW_DATA_EDIT_ITEM | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L271-L271) | new ST_REVIEW_DATA_EDIT_ITEM | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L317-L317) | new ST_REVIEW_DATA_EDIT_ITEM | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L340-L340) | new ST_REVIEW_DATA_EDIT_ITEM | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3720,7 +3720,7 @@ flowchart TD
 
 ### EventFieldDeclaration `PropertyChanged` · L647–647
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:647–647](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L647-L647)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:647–647](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L647-L647)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3735,7 +3735,7 @@ flowchart TD
 
 ### PropertyDeclaration `Source` · L648–648
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:648–648](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L648-L648)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:648–648](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L648-L648)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3750,7 +3750,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Source` · L648–648
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:648–648](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L648-L648)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:648–648](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L648-L648)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3765,7 +3765,7 @@ flowchart TD
 
 ### PropertyDeclaration `No` · L649–658
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:649–658](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L649-L658)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:649–658](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L649-L658)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3780,7 +3780,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_No` · L651–651
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:651–651](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L651-L651)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:651–651](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L651-L651)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3795,7 +3795,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_No` · L652–657
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:652–657](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L652-L657)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:652–657](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L652-L657)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3840,7 +3840,7 @@ flowchart TD
 
 ### PropertyDeclaration `Identity` · L660–660
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:660–660](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L660-L660)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:660–660](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L660-L660)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3855,7 +3855,7 @@ flowchart TD
 
 ### PropertyDeclaration `Head` · L661–661
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:661–661](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L661-L661)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:661–661](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L661-L661)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3870,7 +3870,7 @@ flowchart TD
 
 ### PropertyDeclaration `Cell` · L662–662
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:662–662](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L662-L662)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:662–662](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L662-L662)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3885,7 +3885,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShotName` · L663–663
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:663–663](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L663-L663)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:663–663](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L663-L663)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3900,7 +3900,7 @@ flowchart TD
 
 ### PropertyDeclaration `Beam` · L664–664
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L664-L664)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L664-L664)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3915,7 +3915,7 @@ flowchart TD
 
 ### PropertyDeclaration `OriginalXText` · L665–665
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L665-L665)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L665-L665)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3942,7 +3942,7 @@ flowchart TD
 
 ### PropertyDeclaration `OriginalYText` · L666–666
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:666–666](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L666-L666)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:666–666](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L666-L666)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3969,7 +3969,7 @@ flowchart TD
 
 ### PropertyDeclaration `OriginalJudge` · L667–667
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:667–667](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L667-L667)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:667–667](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L667-L667)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3996,7 +3996,7 @@ flowchart TD
 
 ### PropertyDeclaration `OriginalJudgeBrush` · L668–668
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:668–668](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L668-L668)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:668–668](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L668-L668)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4023,7 +4023,7 @@ flowchart TD
 
 ### PropertyDeclaration `EditedXText` · L669–678
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:669–678](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L669-L678)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:669–678](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L669-L678)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4038,7 +4038,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_EditedXText` · L671–671
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:671–671](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L671-L671)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:671–671](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L671-L671)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4053,7 +4053,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_EditedXText` · L672–677
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:672–677](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L672-L677)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:672–677](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L672-L677)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4098,7 +4098,7 @@ flowchart TD
 
 ### PropertyDeclaration `EditedYText` · L680–689
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:680–689](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L680-L689)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:680–689](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L680-L689)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4113,7 +4113,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_EditedYText` · L682–682
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:682–682](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L682-L682)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:682–682](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L682-L682)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4128,7 +4128,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_EditedYText` · L683–688
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:683–688](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L683-L688)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:683–688](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L683-L688)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4173,7 +4173,7 @@ flowchart TD
 
 ### PropertyDeclaration `EditedJudge` · L691–702
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:691–702](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L691-L702)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:691–702](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L691-L702)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4188,7 +4188,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_EditedJudge` · L693–693
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:693–693](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L693-L693)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:693–693](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L693-L693)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4203,7 +4203,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_EditedJudge` · L694–701
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:694–701](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L694-L701)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:694–701](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L694-L701)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4256,7 +4256,7 @@ flowchart TD
 
 ### PropertyDeclaration `EditedJudgeBrush` · L704–704
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:704–704](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L704-L704)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:704–704](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L704-L704)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4283,7 +4283,7 @@ flowchart TD
 
 ### MethodDeclaration `Matches` · L706–711
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:706–711](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L706-L711)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:706–711](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L706-L711)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4302,10 +4302,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L269-L269) | item.Matches | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L318-L318) | item.Matches | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L335-L335) | _resultEditCopySource.Matches | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L335-L335) | item.Matches | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L269-L269) | item.Matches | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L318-L318) | item.Matches | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L335-L335) | _resultEditCopySource.Matches | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L335-L335) | item.Matches | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4324,7 +4324,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeJudge` · L713–719
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:713–719](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L713-L719)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:713–719](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L713-L719)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4343,9 +4343,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:644–644](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L644-L644) | NormalizeJudge | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:667–667](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L667-L667) | NormalizeJudge | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:696–696](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L696-L696) | NormalizeJudge | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:644–644](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L644-L644) | NormalizeJudge | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:667–667](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L667-L667) | NormalizeJudge | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:696–696](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L696-L696) | NormalizeJudge | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4367,7 +4367,7 @@ flowchart TD
 
 ### MethodDeclaration `OnPropertyChanged` · L721–724
 
-[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:721–724](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L721-L724)
+[Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:721–724](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L721-L724)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4386,11 +4386,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:656–656](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L656-L656) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:676–676](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L676-L676) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:687–687](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L687-L687) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:699–699](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L699-L699) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:700–700](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L700-L700) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:656–656](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L656-L656) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:676–676](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L676-L676) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:687–687](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L687-L687) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:699–699](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L699-L699) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:700–700](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L700-L700) | OnPropertyChanged | False |
 
 호출하는 대상과 해석 범위:
 

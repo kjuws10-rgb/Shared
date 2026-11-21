@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "source_commit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
   "diagrams": [
     {
       "id": "review-01",
@@ -121,7 +121,7 @@
         "기존 파일 LOAD에는 당시 Setting/Recipe hash 일치 검증이 별도로 필요합니다."
       ],
       "chapter": "01_Review_계획과_좌표계.md",
-      "source_commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+      "source_commit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,
@@ -252,7 +252,7 @@
         "점/순서/실제 촬영 Count와 요청 LINE_COUNT를 함께 확인합니다."
       ],
       "chapter": "02_Masking_Sampling_IOF.md",
-      "source_commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+      "source_commit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,
@@ -378,7 +378,7 @@
         "Number의 F3 추가 반올림은 제거됐으나 COPY F3와 최종 Offset 0.001mm는 유지됩니다."
       ],
       "chapter": "03_Vision_패킷과_단위.md",
-      "source_commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+      "source_commit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,
@@ -504,7 +504,7 @@
         "익일 동일경로는 차단합니다. 다른 경로·새 Revision의 내용 계보까지 묶지는 않습니다."
       ],
       "chapter": "04_ReviewOffset_적용과_롤백.md",
-      "source_commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+      "source_commit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,
@@ -635,7 +635,7 @@
         "결과 편집·새 Revision·보정 snapshot·Product 상태는 별도 수명입니다."
       ],
       "chapter": "05_결과_Revision_Product_연결.md",
-      "source_commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+      "source_commit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,
@@ -761,7 +761,7 @@
         "원빔은 DOE 없는 zero order 실제 출사1점입니다. 최초검색·θ보정은 새로 추가되지 않았습니다."
       ],
       "chapter": "06_DefaultOffset_ZeroOrder_FirstBeam.md",
-      "source_commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+      "source_commit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,
@@ -887,7 +887,7 @@
         "AUTO Fine의 Shift0과 보호윈도우 retry 정책은 유지됩니다."
       ],
       "chapter": "07_Align_Distortion_윈도우_복구.md",
-      "source_commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+      "source_commit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,

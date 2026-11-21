@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 24738e16d0d32d1742dd269fc659bf5a3890141c727a4f05caf060613315419e |
 | 파일 분류 | code |
 | 원본 크기/행 | 1,122 bytes / 25 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMainSequenceStatusView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMainSequenceStatusView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -36,7 +36,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L11–11
 
-[Drilling.UI/Views/CMainSequenceStatusView.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMainSequenceStatusView.xaml.cs#L11-L11)
+[Drilling.UI/Views/CMainSequenceStatusView.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMainSequenceStatusView.xaml.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -63,7 +63,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `CardClicked` · L12–12
 
-[Drilling.UI/Views/CMainSequenceStatusView.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMainSequenceStatusView.xaml.cs#L12-L12)
+[Drilling.UI/Views/CMainSequenceStatusView.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMainSequenceStatusView.xaml.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -97,7 +97,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `CardKeyUp` · L13–16
 
-[Drilling.UI/Views/CMainSequenceStatusView.xaml.cs:13–16](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMainSequenceStatusView.xaml.cs#L13-L16)
+[Drilling.UI/Views/CMainSequenceStatusView.xaml.cs:13–16](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMainSequenceStatusView.xaml.cs#L13-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -141,7 +141,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenMonitor` · L17–24
 
-[Drilling.UI/Views/CMainSequenceStatusView.xaml.cs:17–24](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMainSequenceStatusView.xaml.cs#L17-L24)
+[Drilling.UI/Views/CMainSequenceStatusView.xaml.cs:17–24](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMainSequenceStatusView.xaml.cs#L17-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -160,8 +160,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CMainSequenceStatusView.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMainSequenceStatusView.xaml.cs#L12-L12) | OpenMonitor | False |
-| [Drilling.UI/Views/CMainSequenceStatusView.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMainSequenceStatusView.xaml.cs#L15-L15) | OpenMonitor | False |
+| [Drilling.UI/Views/CMainSequenceStatusView.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMainSequenceStatusView.xaml.cs#L12-L12) | OpenMonitor | False |
+| [Drilling.UI/Views/CMainSequenceStatusView.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMainSequenceStatusView.xaml.cs#L15-L15) | OpenMonitor | False |
 
 호출하는 대상과 해석 범위:
 

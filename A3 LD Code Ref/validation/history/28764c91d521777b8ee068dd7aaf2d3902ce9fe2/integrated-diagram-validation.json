@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "a3-integrated-svg-layout-qa/1",
+  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "passed": true,
+  "textNodes": 28,
+  "outsideCanvas": [],
+  "screenshot": "qa-tool-fixture/tool-audit.integrated.png"
+}

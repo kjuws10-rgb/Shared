@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 5cbff85f66cfcf6744d14dd9955a75c2eb21a6536e0f7fd7517472b7f95fa872 |
 | 파일 분류 | code |
 | 원본 크기/행 | 34,651 bytes / 676 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -145,7 +145,7 @@
 
 ### FieldDeclaration `InterLockAlarmRules` · L15–22
 
-[Drilling.Common/Alarm/CAlarmManager.cs:15–22](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L15-L22)
+[Drilling.Common/Alarm/CAlarmManager.cs:15–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L15-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -188,7 +188,7 @@
 
 ### FieldDeclaration `_definitionLock` · L23–23
 
-[Drilling.Common/Alarm/CAlarmManager.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L23-L23)
+[Drilling.Common/Alarm/CAlarmManager.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L23-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -216,7 +216,7 @@
 
 ### FieldDeclaration `_definitionsInitialized` · L24–24
 
-[Drilling.Common/Alarm/CAlarmManager.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L24-L24)
+[Drilling.Common/Alarm/CAlarmManager.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L24-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -231,7 +231,7 @@
 
 ### FieldDeclaration `_definitionInitializationRequested` · L25–25
 
-[Drilling.Common/Alarm/CAlarmManager.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L25-L25)
+[Drilling.Common/Alarm/CAlarmManager.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L25-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -246,7 +246,7 @@
 
 ### FieldDeclaration `_definitionRetryTask` · L26–26
 
-[Drilling.Common/Alarm/CAlarmManager.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L26-L26)
+[Drilling.Common/Alarm/CAlarmManager.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -261,7 +261,7 @@
 
 ### FieldDeclaration `_definitionFile` · L27–27
 
-[Drilling.Common/Alarm/CAlarmManager.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L27-L27)
+[Drilling.Common/Alarm/CAlarmManager.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -276,7 +276,7 @@
 
 ### FieldDeclaration `_definitionRetriesRemaining` · L28–28
 
-[Drilling.Common/Alarm/CAlarmManager.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L28-L28)
+[Drilling.Common/Alarm/CAlarmManager.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -291,7 +291,7 @@
 
 ### FieldDeclaration `_nextDefinitionRetryAt` · L29–29
 
-[Drilling.Common/Alarm/CAlarmManager.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L29-L29)
+[Drilling.Common/Alarm/CAlarmManager.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -306,7 +306,7 @@
 
 ### FieldDeclaration `_definitions` · L30–30
 
-[Drilling.Common/Alarm/CAlarmManager.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L30-L30)
+[Drilling.Common/Alarm/CAlarmManager.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -334,7 +334,7 @@
 
 ### FieldDeclaration `_currentLock` · L31–31
 
-[Drilling.Common/Alarm/CAlarmManager.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L31-L31)
+[Drilling.Common/Alarm/CAlarmManager.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -362,7 +362,7 @@
 
 ### FieldDeclaration `_curAlarm` · L32–32
 
-[Drilling.Common/Alarm/CAlarmManager.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L32-L32)
+[Drilling.Common/Alarm/CAlarmManager.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L32-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -383,7 +383,7 @@
 
 ### FieldDeclaration `_history` · L33–33
 
-[Drilling.Common/Alarm/CAlarmManager.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L33-L33)
+[Drilling.Common/Alarm/CAlarmManager.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -398,7 +398,7 @@
 
 ### FieldDeclaration `_now` · L34–34
 
-[Drilling.Common/Alarm/CAlarmManager.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L34-L34)
+[Drilling.Common/Alarm/CAlarmManager.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L34-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -413,7 +413,7 @@
 
 ### FieldDeclaration `_current` · L35–35
 
-[Drilling.Common/Alarm/CAlarmManager.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L35-L35)
+[Drilling.Common/Alarm/CAlarmManager.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L35-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -441,7 +441,7 @@
 
 ### FieldDeclaration `_notificationError` · L36–36
 
-[Drilling.Common/Alarm/CAlarmManager.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L36-L36)
+[Drilling.Common/Alarm/CAlarmManager.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L36-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -462,7 +462,7 @@
 
 ### EventFieldDeclaration `CurrentChanged` · L45–45
 
-[Drilling.Common/Alarm/CAlarmManager.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L45-L45)
+[Drilling.Common/Alarm/CAlarmManager.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L45-L45)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -490,7 +490,7 @@
 
 ### FieldDeclaration `HistoryQueueCapacity` · L46–46
 
-[Drilling.Common/Alarm/CAlarmManager.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L46-L46)
+[Drilling.Common/Alarm/CAlarmManager.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -511,7 +511,7 @@
 
 ### FieldDeclaration `_historyQueueLock` · L47–47
 
-[Drilling.Common/Alarm/CAlarmManager.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L47-L47)
+[Drilling.Common/Alarm/CAlarmManager.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L47-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -539,7 +539,7 @@
 
 ### FieldDeclaration `_historyQueue` · L48–48
 
-[Drilling.Common/Alarm/CAlarmManager.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L48-L48)
+[Drilling.Common/Alarm/CAlarmManager.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L48-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -560,7 +560,7 @@
 
 ### FieldDeclaration `_historyTask` · L49–49
 
-[Drilling.Common/Alarm/CAlarmManager.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L49-L49)
+[Drilling.Common/Alarm/CAlarmManager.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L49-L49)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -575,7 +575,7 @@
 
 ### FieldDeclaration `_historyError` · L50–50
 
-[Drilling.Common/Alarm/CAlarmManager.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L50-L50)
+[Drilling.Common/Alarm/CAlarmManager.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L50-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -596,7 +596,7 @@
 
 ### FieldDeclaration `_historyWriteStartedAt` · L51–51
 
-[Drilling.Common/Alarm/CAlarmManager.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L51-L51)
+[Drilling.Common/Alarm/CAlarmManager.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L51-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -611,7 +611,7 @@
 
 ### FieldDeclaration `_monitoringLock` · L52–52
 
-[Drilling.Common/Alarm/CAlarmManager.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L52-L52)
+[Drilling.Common/Alarm/CAlarmManager.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L52-L52)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -639,7 +639,7 @@
 
 ### FieldDeclaration `_monitoringStop` · L53–53
 
-[Drilling.Common/Alarm/CAlarmManager.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L53-L53)
+[Drilling.Common/Alarm/CAlarmManager.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L53-L53)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -654,7 +654,7 @@
 
 ### FieldDeclaration `_monitoringTask` · L54–54
 
-[Drilling.Common/Alarm/CAlarmManager.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L54-L54)
+[Drilling.Common/Alarm/CAlarmManager.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L54-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -669,7 +669,7 @@
 
 ### FieldDeclaration `_monitoringError` · L55–55
 
-[Drilling.Common/Alarm/CAlarmManager.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L55-L55)
+[Drilling.Common/Alarm/CAlarmManager.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L55-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -690,7 +690,7 @@
 
 ### ConstructorDeclaration `.ctor` · L58–62
 
-[Drilling.Common/Alarm/CAlarmManager.cs:58–62](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L58-L62)
+[Drilling.Common/Alarm/CAlarmManager.cs:58–62](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L58-L62)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -706,7 +706,11 @@
 | history | Drilling.Common.Alarm.IAlarmHistoryStore? | None | True / null |
 | now | System.Func<System.DateTimeOffset>? | None | True / null |
 
-현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+정적 호출자로 확인된 위치:
+
+| 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
+| --- | --- | --- |
+| [Drilling.Common/Managers/CManager.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L83-L83) | new CAlarmManager | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -719,7 +723,7 @@
 
 ### MethodDeclaration `Build` · L66–91
 
-[Drilling.Common/Alarm/CAlarmManager.cs:66–91](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L66-L91)
+[Drilling.Common/Alarm/CAlarmManager.cs:66–91](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L66-L91)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -739,7 +743,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:425–425](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L425-L425) | Build | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:425–425](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L425-L425) | Build | False |
 
 호출하는 대상과 해석 범위:
 
@@ -797,7 +801,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsAlarmOn` · L70–73
 
-[Drilling.Common/Alarm/CAlarmManager.cs:70–73](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L70-L73)
+[Drilling.Common/Alarm/CAlarmManager.cs:70–73](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L70-L73)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -824,7 +828,7 @@ flowchart TD
 
 ### MethodDeclaration `AddInterLockAlarms` · L93–109
 
-[Drilling.Common/Alarm/CAlarmManager.cs:93–109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L93-L109)
+[Drilling.Common/Alarm/CAlarmManager.cs:93–109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L93-L109)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -844,7 +848,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L69-L69) | AddInterLockAlarms | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L69-L69) | AddInterLockAlarms | False |
 
 호출하는 대상과 해석 범위:
 
@@ -882,7 +886,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L95–98
 
-[Drilling.Common/Alarm/CAlarmManager.cs:95–98](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L95-L98)
+[Drilling.Common/Alarm/CAlarmManager.cs:95–98](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L95-L98)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -909,7 +913,7 @@ flowchart TD
 
 ### MethodDeclaration `GetStationNameFromAxis` · L111–121
 
-[Drilling.Common/Alarm/CAlarmManager.cs:111–121](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L111-L121)
+[Drilling.Common/Alarm/CAlarmManager.cs:111–121](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L111-L121)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -928,7 +932,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L77-L77) | GetStationNameFromAxis | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L77-L77) | GetStationNameFromAxis | False |
 
 호출하는 대상과 해석 범위:
 
@@ -969,7 +973,7 @@ flowchart TD
 
 ### MethodDeclaration `GetDefinitionsSnapshot` · L125–125
 
-[Drilling.Common/Alarm/CAlarmManager.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L125-L125)
+[Drilling.Common/Alarm/CAlarmManager.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L125-L125)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -982,12 +986,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L178-L178) | GetDefinitionsSnapshot | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L227-L227) | GetDefinitionsSnapshot | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L235-L235) | GetDefinitionsSnapshot | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L241-L241) | GetDefinitionsSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L166-L166) | alarmManager.GetDefinitionsSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L534-L534) | _alarms.GetDefinitionsSnapshot | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L178-L178) | GetDefinitionsSnapshot | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L227-L227) | GetDefinitionsSnapshot | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L235-L235) | GetDefinitionsSnapshot | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L241-L241) | GetDefinitionsSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L166-L166) | alarmManager.GetDefinitionsSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L534-L534) | _alarms.GetDefinitionsSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1005,7 +1009,7 @@ flowchart TD
 
 ### MethodDeclaration `InitializeDefinitions` · L126–139
 
-[Drilling.Common/Alarm/CAlarmManager.cs:126–139](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L126-L139)
+[Drilling.Common/Alarm/CAlarmManager.cs:126–139](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L126-L139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1024,7 +1028,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L89-L89) | _alarmManager.InitializeDefinitions | False |
+| [Drilling.Common/Managers/CManager.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L89-L89) | _alarmManager.InitializeDefinitions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1063,7 +1067,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadDefinitionsLocked` · L141–174
 
-[Drilling.Common/Alarm/CAlarmManager.cs:141–174](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L141-L174)
+[Drilling.Common/Alarm/CAlarmManager.cs:141–174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L141-L174)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1082,8 +1086,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L136-L136) | LoadDefinitionsLocked | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L201-L201) | LoadDefinitionsLocked | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L136-L136) | LoadDefinitionsLocked | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L201-L201) | LoadDefinitionsLocked | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1179,7 +1183,7 @@ flowchart TD
 
 ### MethodDeclaration `RetryDefinitionInitialization` · L176–212
 
-[Drilling.Common/Alarm/CAlarmManager.cs:176–212](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L176-L212)
+[Drilling.Common/Alarm/CAlarmManager.cs:176–212](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L176-L212)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1192,7 +1196,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:483–483](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L483-L483) | RetryDefinitionInitialization | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:483–483](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L483-L483) | RetryDefinitionInitialization | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1262,7 +1266,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsureDefinitionsRequested` · L214–218
 
-[Drilling.Common/Alarm/CAlarmManager.cs:214–218](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L214-L218)
+[Drilling.Common/Alarm/CAlarmManager.cs:214–218](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L214-L218)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1275,9 +1279,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:414–414](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L414-L414) | EnsureDefinitionsRequested | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:435–435](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L435-L435) | EnsureDefinitionsRequested | False |
-| [Drilling.Common/Managers/CManager.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L271-L271) | _alarmManager.EnsureDefinitionsRequested | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:414–414](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L414-L414) | EnsureDefinitionsRequested | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:435–435](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L435-L435) | EnsureDefinitionsRequested | False |
+| [Drilling.Common/Managers/CManager.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L271-L271) | _alarmManager.EnsureDefinitionsRequested | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1308,7 +1312,7 @@ flowchart TD
 
 ### PropertyDeclaration `NotificationError` · L220–220
 
-[Drilling.Common/Alarm/CAlarmManager.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L220-L220)
+[Drilling.Common/Alarm/CAlarmManager.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L220-L220)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1335,7 +1339,7 @@ flowchart TD
 
 ### PropertyDeclaration `CurAlarm` · L221–221
 
-[Drilling.Common/Alarm/CAlarmManager.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L221-L221)
+[Drilling.Common/Alarm/CAlarmManager.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L221-L221)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1362,7 +1366,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCurrentSnapshot` · L223–223
 
-[Drilling.Common/Alarm/CAlarmManager.cs:223–223](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L223-L223)
+[Drilling.Common/Alarm/CAlarmManager.cs:223–223](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L223-L223)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1375,10 +1379,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L221-L221) | GetCurrentSnapshot | False |
-| [Drilling.UI/CRootView.cs:3131–3131](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3131-L3131) | _alarmManager.GetCurrentSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L39-L39) | alarmManager.GetCurrentSnapshot | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L93-L93) | alarms.GetCurrentSnapshot | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L221-L221) | GetCurrentSnapshot | False |
+| [Drilling.UI/CRootView.cs:3131–3131](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3131-L3131) | _alarmManager.GetCurrentSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L39-L39) | alarmManager.GetCurrentSnapshot | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L93-L93) | alarms.GetCurrentSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1396,7 +1400,7 @@ flowchart TD
 
 ### MethodDeclaration `SetSequenceFailure` · L224–231
 
-[Drilling.Common/Alarm/CAlarmManager.cs:224–231](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L224-L231)
+[Drilling.Common/Alarm/CAlarmManager.cs:224–231](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L224-L231)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1441,7 +1445,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAlarm` · L233–237
 
-[Drilling.Common/Alarm/CAlarmManager.cs:233–237](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L233-L237)
+[Drilling.Common/Alarm/CAlarmManager.cs:233–237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L233-L237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1460,7 +1464,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:607–607](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L607-L607) | alarms.SetAlarm | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:607–607](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L607-L607) | alarms.SetAlarm | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1490,7 +1494,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAlarm` · L239–243
 
-[Drilling.Common/Alarm/CAlarmManager.cs:239–243](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L239-L243)
+[Drilling.Common/Alarm/CAlarmManager.cs:239–243](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L239-L243)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1509,10 +1513,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L230-L230) | SetAlarm | False |
-| [Drilling.Common/Managers/CManager.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L104-L104) | _alarmManager.SetAlarm | False |
-| [Drilling.Common/Managers/CManager.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L150-L150) | _alarmManager.SetAlarm | False |
-| [Drilling.UI/CRootView.cs:3183–3183](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3183-L3183) | _alarmManager.SetAlarm | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L230-L230) | SetAlarm | False |
+| [Drilling.Common/Managers/CManager.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L104-L104) | _alarmManager.SetAlarm | False |
+| [Drilling.Common/Managers/CManager.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L150-L150) | _alarmManager.SetAlarm | False |
+| [Drilling.UI/CRootView.cs:3183–3183](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3183-L3183) | _alarmManager.SetAlarm | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1544,7 +1548,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAlarm` · L245–245
 
-[Drilling.Common/Alarm/CAlarmManager.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L245-L245)
+[Drilling.Common/Alarm/CAlarmManager.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L245-L245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1563,8 +1567,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L236-L236) | SetAlarm | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L242-L242) | SetAlarm | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L236-L236) | SetAlarm | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L242-L242) | SetAlarm | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1590,7 +1594,7 @@ flowchart TD
 
 ### MethodDeclaration `AddCurrent` · L246–265
 
-[Drilling.Common/Alarm/CAlarmManager.cs:246–265](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L246-L265)
+[Drilling.Common/Alarm/CAlarmManager.cs:246–265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L246-L265)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1609,8 +1613,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L87-L87) | AddCurrent | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L245-L245) | AddCurrent | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L87-L87) | AddCurrent | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L245-L245) | AddCurrent | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1658,7 +1662,7 @@ flowchart TD
 
 ### MethodDeclaration `Reset` · L267–278
 
-[Drilling.Common/Alarm/CAlarmManager.cs:267–278](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L267-L278)
+[Drilling.Common/Alarm/CAlarmManager.cs:267–278](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L267-L278)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1671,7 +1675,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L133-L133) | alarmManager.Reset | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L133-L133) | alarmManager.Reset | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1707,7 +1711,7 @@ flowchart TD
 
 ### MethodDeclaration `NotifyCurrentChanged` · L280–302
 
-[Drilling.Common/Alarm/CAlarmManager.cs:280–302](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L280-L302)
+[Drilling.Common/Alarm/CAlarmManager.cs:280–302](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L280-L302)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1720,9 +1724,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L263-L263) | NotifyCurrentChanged | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L277-L277) | NotifyCurrentChanged | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:368–368](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L368-L368) | NotifyCurrentChanged | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L263-L263) | NotifyCurrentChanged | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L277-L277) | NotifyCurrentChanged | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:368–368](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L368-L368) | NotifyCurrentChanged | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1773,7 +1777,7 @@ flowchart TD
 
 ### MethodDeclaration `PublishCurrent` · L304–308
 
-[Drilling.Common/Alarm/CAlarmManager.cs:304–308](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L304-L308)
+[Drilling.Common/Alarm/CAlarmManager.cs:304–308](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L304-L308)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1793,10 +1797,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L253-L253) | PublishCurrent | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L259-L259) | PublishCurrent | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:274–274](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L274-L274) | PublishCurrent | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:365–365](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L365-L365) | PublishCurrent | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L253-L253) | PublishCurrent | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L259-L259) | PublishCurrent | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:274–274](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L274-L274) | PublishCurrent | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:365–365](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L365-L365) | PublishCurrent | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1828,7 +1832,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHistory` · L310–310
 
-[Drilling.Common/Alarm/CAlarmManager.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L310-L310)
+[Drilling.Common/Alarm/CAlarmManager.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L310-L310)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1865,7 +1869,7 @@ flowchart TD
 
 ### PropertyDeclaration `HistoryStorageError` · L311–321
 
-[Drilling.Common/Alarm/CAlarmManager.cs:311–321](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L311-L321)
+[Drilling.Common/Alarm/CAlarmManager.cs:311–321](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L311-L321)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1880,7 +1884,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_HistoryStorageError` · L313–320
 
-[Drilling.Common/Alarm/CAlarmManager.cs:313–320](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L313-L320)
+[Drilling.Common/Alarm/CAlarmManager.cs:313–320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L313-L320)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1928,7 +1932,7 @@ flowchart TD
 
 ### MethodDeclaration `QueueHistory` · L324–337
 
-[Drilling.Common/Alarm/CAlarmManager.cs:324–337](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L324-L337)
+[Drilling.Common/Alarm/CAlarmManager.cs:324–337](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L324-L337)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1947,7 +1951,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L255-L255) | QueueHistory | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L255-L255) | QueueHistory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1987,7 +1991,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteQueuedHistory` · L339–376
 
-[Drilling.Common/Alarm/CAlarmManager.cs:339–376](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L339-L376)
+[Drilling.Common/Alarm/CAlarmManager.cs:339–376](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L339-L376)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2059,7 +2063,7 @@ flowchart TD
 
 ### MethodDeclaration `FlushHistoryAsync` · L379–385
 
-[Drilling.Common/Alarm/CAlarmManager.cs:379–385](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L379-L385)
+[Drilling.Common/Alarm/CAlarmManager.cs:379–385](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L379-L385)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2084,7 +2088,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L235-L235) | _alarmManager.FlushHistoryAsync | False |
+| [Drilling.Common/Managers/CManager.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L235-L235) | _alarmManager.FlushHistoryAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2115,7 +2119,7 @@ flowchart TD
 
 ### PropertyDeclaration `MonitoringError` · L389–397
 
-[Drilling.Common/Alarm/CAlarmManager.cs:389–397](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L389-L397)
+[Drilling.Common/Alarm/CAlarmManager.cs:389–397](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L389-L397)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2130,7 +2134,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_MonitoringError` · L391–396
 
-[Drilling.Common/Alarm/CAlarmManager.cs:391–396](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L391-L396)
+[Drilling.Common/Alarm/CAlarmManager.cs:391–396](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L391-L396)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2168,7 +2172,7 @@ flowchart TD
 
 ### MethodDeclaration `StartMonitoring` · L406–429
 
-[Drilling.Common/Alarm/CAlarmManager.cs:406–429](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L406-L429)
+[Drilling.Common/Alarm/CAlarmManager.cs:406–429](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L406-L429)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2199,7 +2203,11 @@ flowchart TD
 | interLocks | Drilling.Common.InterLock.CInterLockManager | None | False /  |
 | reportError | System.Action<System.Exception>? | None | True / null |
 
-현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+정적 호출자로 확인된 위치:
+
+| 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
+| --- | --- | --- |
+| [Drilling.Common/Managers/CManager.cs:275–275](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L275-L275) | _alarmManager.StartMonitoring | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2256,7 +2264,7 @@ flowchart TD
 
 ### MethodDeclaration `StartMonitoring` · L432–447
 
-[Drilling.Common/Alarm/CAlarmManager.cs:432–447](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L432-L447)
+[Drilling.Common/Alarm/CAlarmManager.cs:432–447](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L432-L447)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2277,7 +2285,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:417–428](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L417-L428) | StartMonitoring | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:417–428](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L417-L428) | StartMonitoring | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2333,7 +2341,7 @@ flowchart TD
 
 ### MethodDeclaration `StopMonitoringAsync` · L449–471
 
-[Drilling.Common/Alarm/CAlarmManager.cs:449–471](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L449-L471)
+[Drilling.Common/Alarm/CAlarmManager.cs:449–471](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L449-L471)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2346,7 +2354,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L283-L283) | _alarmManager.StopMonitoringAsync | False |
+| [Drilling.Common/Managers/CManager.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L283-L283) | _alarmManager.StopMonitoringAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2398,7 +2406,7 @@ flowchart TD
 
 ### MethodDeclaration `Monitor` · L473–542
 
-[Drilling.Common/Alarm/CAlarmManager.cs:473–542](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L473-L542)
+[Drilling.Common/Alarm/CAlarmManager.cs:473–542](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L473-L542)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2420,7 +2428,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:445–445](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L445-L445) | Monitor | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:445–445](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L445-L445) | Monitor | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2539,7 +2547,7 @@ flowchart TD
 
 ### MethodDeclaration `Load` · L549–549
 
-[Drilling.Common/Alarm/CAlarmManager.cs:549–549](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L549-L549)
+[Drilling.Common/Alarm/CAlarmManager.cs:549–549](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L549-L549)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2552,13 +2560,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L147-L147) | file.Load | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L147-L147) | file.Load | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### EnumMemberDeclaration `Info` · L555–555
 
-[Drilling.Common/Alarm/CAlarmManager.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L555-L555)
+[Drilling.Common/Alarm/CAlarmManager.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L555-L555)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2573,7 +2581,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Warning` · L556–556
 
-[Drilling.Common/Alarm/CAlarmManager.cs:556–556](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L556-L556)
+[Drilling.Common/Alarm/CAlarmManager.cs:556–556](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L556-L556)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2588,7 +2596,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Critical` · L557–557
 
-[Drilling.Common/Alarm/CAlarmManager.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L557-L557)
+[Drilling.Common/Alarm/CAlarmManager.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L557-L557)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2603,7 +2611,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Clear` · L562–562
 
-[Drilling.Common/Alarm/CAlarmManager.cs:562–562](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L562-L562)
+[Drilling.Common/Alarm/CAlarmManager.cs:562–562](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L562-L562)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2618,7 +2626,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Occur` · L563–563
 
-[Drilling.Common/Alarm/CAlarmManager.cs:563–563](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L563-L563)
+[Drilling.Common/Alarm/CAlarmManager.cs:563–563](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L563-L563)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2633,7 +2641,7 @@ flowchart TD
 
 ### PropertyDeclaration `Id` · L568–568
 
-[Drilling.Common/Alarm/CAlarmManager.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L568-L568)
+[Drilling.Common/Alarm/CAlarmManager.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L568-L568)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2648,7 +2656,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Id` · L568–568
 
-[Drilling.Common/Alarm/CAlarmManager.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L568-L568)
+[Drilling.Common/Alarm/CAlarmManager.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L568-L568)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2663,7 +2671,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_Id` · L568–568
 
-[Drilling.Common/Alarm/CAlarmManager.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L568-L568)
+[Drilling.Common/Alarm/CAlarmManager.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L568-L568)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2684,7 +2692,7 @@ flowchart TD
 
 ### PropertyDeclaration `Group` · L569–569
 
-[Drilling.Common/Alarm/CAlarmManager.cs:569–569](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L569-L569)
+[Drilling.Common/Alarm/CAlarmManager.cs:569–569](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L569-L569)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2699,7 +2707,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Group` · L569–569
 
-[Drilling.Common/Alarm/CAlarmManager.cs:569–569](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L569-L569)
+[Drilling.Common/Alarm/CAlarmManager.cs:569–569](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L569-L569)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2714,7 +2722,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_Group` · L569–569
 
-[Drilling.Common/Alarm/CAlarmManager.cs:569–569](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L569-L569)
+[Drilling.Common/Alarm/CAlarmManager.cs:569–569](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L569-L569)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2735,7 +2743,7 @@ flowchart TD
 
 ### PropertyDeclaration `CimAddress` · L570–570
 
-[Drilling.Common/Alarm/CAlarmManager.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L570-L570)
+[Drilling.Common/Alarm/CAlarmManager.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L570-L570)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2750,7 +2758,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CimAddress` · L570–570
 
-[Drilling.Common/Alarm/CAlarmManager.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L570-L570)
+[Drilling.Common/Alarm/CAlarmManager.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L570-L570)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2765,7 +2773,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_CimAddress` · L570–570
 
-[Drilling.Common/Alarm/CAlarmManager.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L570-L570)
+[Drilling.Common/Alarm/CAlarmManager.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L570-L570)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2786,7 +2794,7 @@ flowchart TD
 
 ### MethodDeclaration `Check` · L577–609
 
-[Drilling.Common/Alarm/CAlarmManager.cs:577–609](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L577-L609)
+[Drilling.Common/Alarm/CAlarmManager.cs:577–609](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L577-L609)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2799,7 +2807,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:420–420](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L420-L420) | temperatures.Check | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:420–420](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L420-L420) | temperatures.Check | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2893,7 +2901,7 @@ flowchart TD
 
 ### FieldDeclaration `_reported` · L615–615
 
-[Drilling.Common/Alarm/CAlarmManager.cs:615–615](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L615-L615)
+[Drilling.Common/Alarm/CAlarmManager.cs:615–615](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L615-L615)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2908,7 +2916,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L616–618
 
-[Drilling.Common/Alarm/CAlarmManager.cs:616–618](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L616-L618)
+[Drilling.Common/Alarm/CAlarmManager.cs:616–618](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L616-L618)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2930,9 +2938,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L646-L646) | new | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:648–648](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L648-L648) | new | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:649–649](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L649-L649) | new | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L646-L646) | new | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:648–648](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L648-L648) | new | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:649–649](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L649-L649) | new | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2946,7 +2954,7 @@ flowchart TD
 
 ### PropertyDeclaration `Scenario` · L619–619
 
-[Drilling.Common/Alarm/CAlarmManager.cs:619–619](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L619-L619)
+[Drilling.Common/Alarm/CAlarmManager.cs:619–619](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L619-L619)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2961,7 +2969,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Scenario` · L619–619
 
-[Drilling.Common/Alarm/CAlarmManager.cs:619–619](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L619-L619)
+[Drilling.Common/Alarm/CAlarmManager.cs:619–619](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L619-L619)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2976,7 +2984,7 @@ flowchart TD
 
 ### PropertyDeclaration `Subject` · L620–620
 
-[Drilling.Common/Alarm/CAlarmManager.cs:620–620](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L620-L620)
+[Drilling.Common/Alarm/CAlarmManager.cs:620–620](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L620-L620)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2991,7 +2999,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Subject` · L620–620
 
-[Drilling.Common/Alarm/CAlarmManager.cs:620–620](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L620-L620)
+[Drilling.Common/Alarm/CAlarmManager.cs:620–620](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L620-L620)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3006,7 +3014,7 @@ flowchart TD
 
 ### PropertyDeclaration `Kind` · L621–621
 
-[Drilling.Common/Alarm/CAlarmManager.cs:621–621](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L621-L621)
+[Drilling.Common/Alarm/CAlarmManager.cs:621–621](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L621-L621)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3021,7 +3029,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Kind` · L621–621
 
-[Drilling.Common/Alarm/CAlarmManager.cs:621–621](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L621-L621)
+[Drilling.Common/Alarm/CAlarmManager.cs:621–621](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L621-L621)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3036,7 +3044,7 @@ flowchart TD
 
 ### PropertyDeclaration `AlarmId` · L622–622
 
-[Drilling.Common/Alarm/CAlarmManager.cs:622–622](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L622-L622)
+[Drilling.Common/Alarm/CAlarmManager.cs:622–622](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L622-L622)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3057,7 +3065,7 @@ flowchart TD
 
 ### MethodDeclaration `ActionScenario` · L623–629
 
-[Drilling.Common/Alarm/CAlarmManager.cs:623–629](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L623-L629)
+[Drilling.Common/Alarm/CAlarmManager.cs:623–629](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L623-L629)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3076,7 +3084,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L646-L646) | ActionScenario | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L646-L646) | ActionScenario | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3113,7 +3121,7 @@ flowchart TD
 
 ### MethodDeclaration `SignalScenario` · L630–641
 
-[Drilling.Common/Alarm/CAlarmManager.cs:630–641](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L630-L641)
+[Drilling.Common/Alarm/CAlarmManager.cs:630–641](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L630-L641)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3133,7 +3141,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:648–648](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L648-L648) | SignalScenario | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:648–648](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L648-L648) | SignalScenario | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3215,7 +3223,7 @@ flowchart TD
 
 ### MethodDeclaration `Existing` · L642–644
 
-[Drilling.Common/Alarm/CAlarmManager.cs:642–644](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L642-L644)
+[Drilling.Common/Alarm/CAlarmManager.cs:642–644](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L642-L644)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3234,10 +3242,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:644–644](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L644-L644) | Existing | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:645–645](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L645-L645) | Existing | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:647–647](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L647-L647) | Existing | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:649–649](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L649-L649) | Existing | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:644–644](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L644-L644) | Existing | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:645–645](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L645-L645) | Existing | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:647–647](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L647-L647) | Existing | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:649–649](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L649-L649) | Existing | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3262,7 +3270,7 @@ flowchart TD
 
 ### MethodDeclaration `Action` · L645–646
 
-[Drilling.Common/Alarm/CAlarmManager.cs:645–646](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L645-L646)
+[Drilling.Common/Alarm/CAlarmManager.cs:645–646](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L645-L646)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3282,15 +3290,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:470–470](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L470-L470) | CSequenceFailureException.Action | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:619–619](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L619-L619) | CSequenceFailureException.Action | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:713–713](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L713-L713) | CSequenceFailureException.Action | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:816–816](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L816-L816) | CSequenceFailureException.Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5374–5374](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5374-L5374) | CSequenceFailureException.Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5389–5389](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5389-L5389) | CSequenceFailureException.Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5450–5450](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5450-L5450) | CSequenceFailureException.Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5532–5532](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5532-L5532) | CSequenceFailureException.Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:6378–6378](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6378-L6378) | CSequenceFailureException.Action | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:470–470](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L470-L470) | CSequenceFailureException.Action | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:619–619](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L619-L619) | CSequenceFailureException.Action | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:713–713](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L713-L713) | CSequenceFailureException.Action | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:816–816](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L816-L816) | CSequenceFailureException.Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5374–5374](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5374-L5374) | CSequenceFailureException.Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5389–5389](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5389-L5389) | CSequenceFailureException.Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5450–5450](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5450-L5450) | CSequenceFailureException.Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5532–5532](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5532-L5532) | CSequenceFailureException.Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:6378–6378](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6378-L6378) | CSequenceFailureException.Action | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3315,7 +3323,7 @@ flowchart TD
 
 ### MethodDeclaration `Signal` · L647–648
 
-[Drilling.Common/Alarm/CAlarmManager.cs:647–648](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L647-L648)
+[Drilling.Common/Alarm/CAlarmManager.cs:647–648](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L647-L648)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3337,16 +3345,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L646-L646) | Signal | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L358-L358) | CSequenceFailureException.Signal | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:365–365](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L365-L365) | CSequenceFailureException.Signal | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:453–453](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L453-L453) | CSequenceFailureException.Signal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5409–5409](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5409-L5409) | CSequenceFailureException.Signal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5439–5439](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5439-L5439) | CSequenceFailureException.Signal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5471–5471](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5471-L5471) | CSequenceFailureException.Signal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5524–5524](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5524-L5524) | CSequenceFailureException.Signal | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6954–6954](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6954-L6954) | Drilling.Common.Alarm.CSequenceFailureException.Signal | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6979–6979](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6979-L6979) | Drilling.Common.Alarm.CSequenceFailureException.Signal | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L646-L646) | Signal | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L358-L358) | CSequenceFailureException.Signal | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:365–365](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L365-L365) | CSequenceFailureException.Signal | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:453–453](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L453-L453) | CSequenceFailureException.Signal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5409–5409](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5409-L5409) | CSequenceFailureException.Signal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5439–5439](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5439-L5439) | CSequenceFailureException.Signal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5471–5471](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5471-L5471) | CSequenceFailureException.Signal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5524–5524](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5524-L5524) | CSequenceFailureException.Signal | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6954–6954](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6954-L6954) | Drilling.Common.Alarm.CSequenceFailureException.Signal | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6979–6979](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6979-L6979) | Drilling.Common.Alarm.CSequenceFailureException.Signal | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3369,7 +3377,7 @@ flowchart TD
 
 ### MethodDeclaration `ScenarioFailure` · L649–649
 
-[Drilling.Common/Alarm/CAlarmManager.cs:649–649](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L649-L649)
+[Drilling.Common/Alarm/CAlarmManager.cs:649–649](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L649-L649)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3389,7 +3397,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5346–5346](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5346-L5346) | CSequenceFailureException.ScenarioFailure | False |
+| [Drilling.Common/Station/CStationProcess.cs:5346–5346](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5346-L5346) | CSequenceFailureException.ScenarioFailure | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3409,7 +3417,7 @@ flowchart TD
 
 ### MethodDeclaration `Publish` · L650–656
 
-[Drilling.Common/Alarm/CAlarmManager.cs:650–656](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L650-L656)
+[Drilling.Common/Alarm/CAlarmManager.cs:650–656](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L650-L656)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3428,10 +3436,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L23-L23) | failure.Publish | False |
-| [Drilling.Common/Station/CStationProcess.cs:5074–5074](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5074-L5074) | failure.Publish | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6954–6954](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6954-L6954) | Drilling.Common.Alarm.CSequenceFailureException.Signal("DO_ALIGN", RequestId, exception is TimeoutException or OperationCanceledException, exception).Publish | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6979–6979](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6979-L6979) | Drilling.Common.Alarm.CSequenceFailureException.Signal("DO_ALIGN", RequestId, exception is TimeoutException or OperationCanceledException, exception).Publish | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L23-L23) | failure.Publish | False |
+| [Drilling.Common/Station/CStationProcess.cs:5074–5074](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L5074-L5074) | failure.Publish | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6954–6954](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6954-L6954) | Drilling.Common.Alarm.CSequenceFailureException.Signal("DO_ALIGN", RequestId, exception is TimeoutException or OperationCanceledException, exception).Publish | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6979–6979](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6979-L6979) | Drilling.Common.Alarm.CSequenceFailureException.Signal("DO_ALIGN", RequestId, exception is TimeoutException or OperationCanceledException, exception).Publish | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3481,7 +3489,7 @@ flowchart TD
 
 ### PropertyDeclaration `Scenario` · L663–663
 
-[Drilling.Common/Alarm/CAlarmManager.cs:663–663](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L663-L663)
+[Drilling.Common/Alarm/CAlarmManager.cs:663–663](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L663-L663)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3496,7 +3504,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Scenario` · L663–663
 
-[Drilling.Common/Alarm/CAlarmManager.cs:663–663](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L663-L663)
+[Drilling.Common/Alarm/CAlarmManager.cs:663–663](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L663-L663)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3511,7 +3519,7 @@ flowchart TD
 
 ### PropertyDeclaration `Signal` · L664–664
 
-[Drilling.Common/Alarm/CAlarmManager.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L664-L664)
+[Drilling.Common/Alarm/CAlarmManager.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L664-L664)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3526,7 +3534,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Signal` · L664–664
 
-[Drilling.Common/Alarm/CAlarmManager.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L664-L664)
+[Drilling.Common/Alarm/CAlarmManager.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L664-L664)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3541,7 +3549,7 @@ flowchart TD
 
 ### MethodDeclaration `Append` · L673–673
 
-[Drilling.Common/Alarm/CAlarmManager.cs:673–673](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L673-L673)
+[Drilling.Common/Alarm/CAlarmManager.cs:673–673](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L673-L673)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3560,13 +3568,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L356-L356) | _history!.Append | True |
+| [Drilling.Common/Alarm/CAlarmManager.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L356-L356) | _history!.Append | True |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `Read` · L674–674
 
-[Drilling.Common/Alarm/CAlarmManager.cs:674–674](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L674-L674)
+[Drilling.Common/Alarm/CAlarmManager.cs:674–674](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L674-L674)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3587,7 +3595,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L310-L310) | .Read | True |
+| [Drilling.Common/Alarm/CAlarmManager.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Alarm/CAlarmManager.cs#L310-L310) | .Read | True |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 

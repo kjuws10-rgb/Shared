@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 1d5a5568cadfa7d9c22efe92232696811c540a7535f971bc50cdeb845f216f37 |
 | 파일 분류 | code |
 | 원본 크기/행 | 2,098 bytes / 53 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CAlignKeyMarginSettings.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -42,7 +42,7 @@
 
 ### FieldDeclaration `MarginXKey` · L10–10
 
-[Drilling.Common/Managers/CAlignKeyMarginSettings.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L10-L10)
+[Drilling.Common/Managers/CAlignKeyMarginSettings.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -63,7 +63,7 @@
 
 ### FieldDeclaration `MarginYKey` · L11–11
 
-[Drilling.Common/Managers/CAlignKeyMarginSettings.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L11-L11)
+[Drilling.Common/Managers/CAlignKeyMarginSettings.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -84,7 +84,7 @@
 
 ### FieldDeclaration `DefaultMarginX` · L12–12
 
-[Drilling.Common/Managers/CAlignKeyMarginSettings.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L12-L12)
+[Drilling.Common/Managers/CAlignKeyMarginSettings.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -105,7 +105,7 @@
 
 ### FieldDeclaration `DefaultMarginY` · L13–13
 
-[Drilling.Common/Managers/CAlignKeyMarginSettings.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L13-L13)
+[Drilling.Common/Managers/CAlignKeyMarginSettings.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -126,7 +126,7 @@
 
 ### MethodDeclaration `Read` · L15–19
 
-[Drilling.Common/Managers/CAlignKeyMarginSettings.cs:15–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L15-L19)
+[Drilling.Common/Managers/CAlignKeyMarginSettings.cs:15–19](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L15-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -145,13 +145,13 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CAlignInterpolation.cs#L284-L284) | CAlignKeyMarginSettings.Read | False |
-| [Drilling.Common/Managers/CSettingManager.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CSettingManager.cs#L117-L117) | CAlignKeyMarginSettings.Read | False |
-| [Drilling.Common/Managers/CSettingManager.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CSettingManager.cs#L142-L142) | CAlignKeyMarginSettings.Read | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L30-L30) | CAlignKeyMarginSettings.Read | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6222–6222](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6222-L6222) | CAlignKeyMarginSettings.Read | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:574–574](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L574-L574) | CAlignKeyMarginSettings.Read | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L93-L93) | CAlignKeyMarginSettings.Read | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L284-L284) | CAlignKeyMarginSettings.Read | False |
+| [Drilling.Common/Managers/CSettingManager.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CSettingManager.cs#L117-L117) | CAlignKeyMarginSettings.Read | False |
+| [Drilling.Common/Managers/CSettingManager.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CSettingManager.cs#L142-L142) | CAlignKeyMarginSettings.Read | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L30-L30) | CAlignKeyMarginSettings.Read | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6222–6222](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6222-L6222) | CAlignKeyMarginSettings.Read | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:574–574](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L574-L574) | CAlignKeyMarginSettings.Read | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L93-L93) | CAlignKeyMarginSettings.Read | False |
 
 호출하는 대상과 해석 범위:
 
@@ -176,7 +176,7 @@
 
 ### MethodDeclaration `Read` · L21–25
 
-[Drilling.Common/Managers/CAlignKeyMarginSettings.cs:21–25](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L21-L25)
+[Drilling.Common/Managers/CAlignKeyMarginSettings.cs:21–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L21-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -195,14 +195,14 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L15-L15) | CAlignKeyMarginSettings.Read | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L225-L225) | CAlignKeyMarginSettings.Read | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L226-L226) | CAlignKeyMarginSettings.Read | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:398–398](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L398-L398) | CAlignKeyMarginSettings.Read | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1047–1047](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1047-L1047) | CAlignKeyMarginSettings.Read | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1131–1131](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1131-L1131) | CAlignKeyMarginSettings.Read | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7410–7410](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7410-L7410) | CAlignKeyMarginSettings.Read | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:6047–6047](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuReview.cs#L6047-L6047) | CAlignKeyMarginSettings.Read | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L15-L15) | CAlignKeyMarginSettings.Read | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L225-L225) | CAlignKeyMarginSettings.Read | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L226-L226) | CAlignKeyMarginSettings.Read | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:398–398](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L398-L398) | CAlignKeyMarginSettings.Read | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1047–1047](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1047-L1047) | CAlignKeyMarginSettings.Read | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1131–1131](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1131-L1131) | CAlignKeyMarginSettings.Read | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7410–7410](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7410-L7410) | CAlignKeyMarginSettings.Read | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:6047–6047](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L6047-L6047) | CAlignKeyMarginSettings.Read | False |
 
 호출하는 대상과 해석 범위:
 
@@ -227,7 +227,7 @@
 
 ### MethodDeclaration `Read` · L27–33
 
-[Drilling.Common/Managers/CAlignKeyMarginSettings.cs:27–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L27-L33)
+[Drilling.Common/Managers/CAlignKeyMarginSettings.cs:27–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L27-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -247,8 +247,8 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CAlignKeyMarginSettings.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L18-L18) | Read | False |
-| [Drilling.Common/Managers/CAlignKeyMarginSettings.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L18-L18) | Read | False |
+| [Drilling.Common/Managers/CAlignKeyMarginSettings.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L18-L18) | Read | False |
+| [Drilling.Common/Managers/CAlignKeyMarginSettings.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L18-L18) | Read | False |
 
 호출하는 대상과 해석 범위:
 
@@ -275,7 +275,7 @@
 
 ### MethodDeclaration `Read` · L35–39
 
-[Drilling.Common/Managers/CAlignKeyMarginSettings.cs:35–39](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L35-L39)
+[Drilling.Common/Managers/CAlignKeyMarginSettings.cs:35–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L35-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -295,8 +295,8 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CAlignKeyMarginSettings.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L24-L24) | Read | False |
-| [Drilling.Common/Managers/CAlignKeyMarginSettings.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L24-L24) | Read | False |
+| [Drilling.Common/Managers/CAlignKeyMarginSettings.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L24-L24) | Read | False |
+| [Drilling.Common/Managers/CAlignKeyMarginSettings.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L24-L24) | Read | False |
 
 호출하는 대상과 해석 범위:
 
@@ -321,7 +321,7 @@
 
 ### MethodDeclaration `Parse` · L41–51
 
-[Drilling.Common/Managers/CAlignKeyMarginSettings.cs:41–51](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L41-L51)
+[Drilling.Common/Managers/CAlignKeyMarginSettings.cs:41–51](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L41-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -341,8 +341,8 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CAlignKeyMarginSettings.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L32-L32) | Parse | False |
-| [Drilling.Common/Managers/CAlignKeyMarginSettings.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L38-L38) | Parse | False |
+| [Drilling.Common/Managers/CAlignKeyMarginSettings.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L32-L32) | Parse | False |
+| [Drilling.Common/Managers/CAlignKeyMarginSettings.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L38-L38) | Parse | False |
 
 호출하는 대상과 해석 범위:
 

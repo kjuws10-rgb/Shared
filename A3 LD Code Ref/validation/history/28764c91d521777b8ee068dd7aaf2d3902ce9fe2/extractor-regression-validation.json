@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "a3-tool-selftest/1",
+  "command": [
+    "<private-local-artifact>",
+    "run",
+    "--project",
+    "<private-run>\\qa-tool-fixture\\tools\\SymbolExtractor",
+    "-c",
+    "Release",
+    "--",
+    "--self-test"
+  ],
+  "exitCode": 0,
+  "passedAssertions": 18,
+  "passed": true,
+  "scope": "Isolated metadata-extractor synthetic fixture; no equipment source build or execution and no vendor DLL load."
+}

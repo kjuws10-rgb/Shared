@@ -1,13 +1,13 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs">Git 원본</a></p><h1>Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs">Git 원본</a></p><h1>Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>28764c91d521777b8ee068dd7aaf2d3902ce9fe2</td></tr>
+<tr><td>원본 Commit</td><td>334b3599651b2e8e0181fd4459bafaf3cddafff3</td></tr>
 <tr><td>원본 SHA256</td><td>d3b041057f97f293e1e40e189c5e655ae966c8c8430c73148b6cb20c0fedc931</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
 <tr><td>원본 크기/행</td><td>9,912 bytes / 230 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
@@ -37,7 +37,7 @@
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
 <h3 id="L8">FieldDeclaration <code>LandscapeWidth</code> · L8–8</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L8-L8">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:8–8</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L8-L8">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:8–8</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.LandscapeWidth</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -51,7 +51,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L9">FieldDeclaration <code>LandscapeHeight</code> · L9–9</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L9-L9">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:9–9</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L9-L9">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:9–9</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.LandscapeHeight</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -65,7 +65,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L10">FieldDeclaration <code>PortraitWidth</code> · L10–10</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L10-L10">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:10–10</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L10-L10">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:10–10</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.PortraitWidth</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -79,7 +79,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L11">FieldDeclaration <code>PortraitHeight</code> · L11–11</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L11-L11">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:11–11</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L11-L11">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:11–11</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.PortraitHeight</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -93,7 +93,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L12">FieldDeclaration <code>MapMargin</code> · L12–12</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L12-L12">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:12–12</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L12-L12">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:12–12</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.MapMargin</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -107,7 +107,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L14">MethodDeclaration <code>Create</code> · L14–114</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L14-L114">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:14–114</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L14-L114">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:14–114</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_RENDER Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.Create(System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_POINT&gt;, string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -121,7 +121,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3712-L3712">Drilling.UI/Menu/Menus/CMenuMonitor.cs:3712–3712</a></td><td>CCoordinateShotMapPreviewDrawing.Create</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3712-L3712">Drilling.UI/Menu/Menus/CMenuMonitor.cs:3712–3712</a></td><td>CCoordinateShotMapPreviewDrawing.Create</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -357,7 +357,7 @@
  N2 --&gt;|포함| N14</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L116">MethodDeclaration <code>TryResolveShot</code> · L116–140</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L116-L140">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:116–140</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L116-L140">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:116–140</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.TryResolveShot(double, double, int, int, out int, out int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -375,7 +375,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2805-L2805">Drilling.UI/Menu/Menus/CMenuMonitor.cs:2805–2805</a></td><td>CCoordinateShotMapPreviewDrawing.TryResolveShot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2805-L2805">Drilling.UI/Menu/Menus/CMenuMonitor.cs:2805–2805</a></td><td>CCoordinateShotMapPreviewDrawing.TryResolveShot</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -413,7 +413,7 @@
  M --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L142">MethodDeclaration <code>GetSurfaceSize</code> · L142–147</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L142-L147">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:142–147</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L142-L147">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:142–147</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Size Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.GetSurfaceSize(int, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -427,8 +427,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L29-L29">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:29–29</a></td><td>GetSurfaceSize</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L151-L151">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:151–151</a></td><td>GetSurfaceSize</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L29-L29">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:29–29</a></td><td>GetSurfaceSize</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L151-L151">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:151–151</a></td><td>GetSurfaceSize</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -444,7 +444,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L149">MethodDeclaration <code>GetMapRect</code> · L149–153</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L149-L153">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:149–153</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L149-L153">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:149–153</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Rect Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.GetMapRect(int, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -458,8 +458,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L30-L30">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:30–30</a></td><td>GetMapRect</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L131-L131">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:131–131</a></td><td>GetMapRect</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L30-L30">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:30–30</a></td><td>GetMapRect</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L131-L131">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:131–131</a></td><td>GetMapRect</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -476,7 +476,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L155">MethodDeclaration <code>DrawGrid</code> · L155–172</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L155-L172">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:155–172</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L155-L172">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:155–172</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.DrawGrid(DrawingContext, Rect, int, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -548,7 +548,7 @@
  M --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L174">MethodDeclaration <code>DrawSelectedShot</code> · L174–195</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L174-L195">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:174–195</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L174-L195">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:174–195</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.DrawSelectedShot(DrawingContext, Rect, double, double, Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_POINT)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -618,7 +618,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L197">MethodDeclaration <code>AddRectangle</code> · L197–203</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L197-L203">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:197–203</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L197-L203">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:197–203</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.AddRectangle(StreamGeometryContext, Rect)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -647,7 +647,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L205">MethodDeclaration <code>AddMaskCross</code> · L205–211</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L205-L211">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:205–211</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L205-L211">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:205–211</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.AddMaskCross(StreamGeometryContext, double, double, double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -686,7 +686,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L213">MethodDeclaration <code>CreateBrush</code> · L213–218</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L213-L218">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:213–218</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L213-L218">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:213–218</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.CreateBrush(byte, byte, byte)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -701,10 +701,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L79-L79">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:79–79</a></td><td>CreateBrush</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L80-L80">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:80–80</a></td><td>CreateBrush</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L105-L105">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:105–105</a></td><td>CreateBrush</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L188-L188">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:188–188</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L79-L79">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:79–79</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L80-L80">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:80–80</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L105-L105">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:105–105</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L188-L188">Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:188–188</a></td><td>CreateBrush</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>

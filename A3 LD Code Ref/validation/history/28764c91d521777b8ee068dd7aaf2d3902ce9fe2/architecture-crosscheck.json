@@ -1,0 +1,170 @@
+{
+  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "status": "passed_no_mandatory_correction",
+  "reviewedDocuments": [
+    {
+      "path": "manual/review/01_Review_계획과_좌표계.md",
+      "sha256": "80c75f2d101c6f43fa988a8f04cba5f6ba9f216a303c037e73b6bf0a5eb666d0",
+      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
+    },
+    {
+      "path": "manual/review/02_Masking_Sampling_IOF.md",
+      "sha256": "52027b8d063f11d7eee5d3f6bcdacb267d0ae7d0c64b5f47c1b21db703a9663f",
+      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
+    },
+    {
+      "path": "manual/review/03_Vision_패킷과_단위.md",
+      "sha256": "71e56b1e8f69ca1e0a8257c595d8ffcc3ee7cf3303771950f4ec62302fb9ccb0",
+      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
+    },
+    {
+      "path": "manual/review/04_ReviewOffset_적용과_롤백.md",
+      "sha256": "9cca44b67da7c3f7a82e23d5813238d498953c816594136adb2df514b0d1d7ba",
+      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
+    },
+    {
+      "path": "manual/review/05_결과_Revision_Product_연결.md",
+      "sha256": "9356941839f561c82ead8b9d7104c2ff69568374fef8df4c65c888b9a1311187",
+      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
+    },
+    {
+      "path": "manual/review/06_DefaultOffset_ZeroOrder_FirstBeam.md",
+      "sha256": "89697106e4c14a7ebeb5bd94ce549dae95847a75ff220be22e3607f346c62a9a",
+      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
+    },
+    {
+      "path": "manual/review/07_Align_Distortion_윈도우_복구.md",
+      "sha256": "dcb7a940bbe7a0487e4b48ac14f1c0f837fecce049acd600394f7597bbb6c2ad",
+      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
+    }
+  ],
+  "reviewedAnalysis": [
+    "analysis-parts/review-analysis.md",
+    "analysis-parts/review-analysis.json"
+  ],
+  "readSourceRanges": [
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "startLine": 153,
+      "endLine": 196,
+      "selectedSourceSha256": "45c5984ac9020707236e29f8642a5722be8da48415420598d0bd373f5f77808a"
+    },
+    {
+      "path": "Drilling.Common/Correction/CAlignInterpolation.cs",
+      "startLine": 276,
+      "endLine": 308,
+      "selectedSourceSha256": "5f13d33e6e0302d0e5901ea04c4093c1a7170feb1bba8dd0b23464ab87deedae"
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+      "startLine": 264,
+      "endLine": 302,
+      "selectedSourceSha256": "a16baf2122424d603411ad5fb27e13cffb55352d12cc09d43846f5d380cf3322"
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+      "startLine": 385,
+      "endLine": 480,
+      "selectedSourceSha256": "546814c29f9c4b7e152c2c464225906b2c78d57e20184b18909a0cad47c64024"
+    },
+    {
+      "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+      "startLine": 412,
+      "endLine": 472,
+      "selectedSourceSha256": "fce579fcd722290e08645c066045287ba9c84d5c869815be13ee1c7a080489eb"
+    },
+    {
+      "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+      "startLine": 719,
+      "endLine": 722,
+      "selectedSourceSha256": "38e8206b6c7cc028f6dca5783411275c0124889227afd2e83ffbe769bf1b6e2d"
+    },
+    {
+      "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+      "startLine": 1327,
+      "endLine": 1328,
+      "selectedSourceSha256": "7c25e0f49ec79924de9c15657b8545594252824fce453357b0e9a5741a53fa99"
+    },
+    {
+      "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+      "startLine": 29,
+      "endLine": 62,
+      "selectedSourceSha256": "ea988b0b93429a12d7cd628c35a36bc685279673f78c4bed3ff2c501dd7f2765"
+    },
+    {
+      "path": "Drilling.UI/Views/CReviewShotMapControl.cs",
+      "startLine": 282,
+      "endLine": 299,
+      "selectedSourceSha256": "d860d16ef72bada3d845adb2ebd65a2444ec164a7e2921f49875b9df4052e791"
+    }
+  ],
+  "results": [
+    {
+      "id": "XC-01",
+      "status": "consistent",
+      "topic": "공통 Margin과 Recipe 카메라 AK 위치는 별도",
+      "detail": "Review의 Design−Margin 상쇄 조건을 함께 명시함. 모든 물리목표 이동 단정 없음."
+    },
+    {
+      "id": "XC-02",
+      "status": "consistent",
+      "topic": "RETAINED·EDITED 적용 후보와 기존 Fine 보간",
+      "detail": "새 후보 필터와 이전 Lagrange/Use/계보 잔건을 구분. Direct/Rough OK선택·Fine 비OK전체차단과 일치."
+    },
+    {
+      "id": "XC-03",
+      "status": "consistent",
+      "topic": "전일자 적용 이력과 경로/계보 한계",
+      "detail": "날짜 전체 cache 개선과 외부writer/다른경로/Revision 한계가 분리됨."
+    },
+    {
+      "id": "XC-04",
+      "status": "consistent",
+      "topic": "SIMPLE0/INSPECTION1·RUN/RESULT·별도 panel",
+      "detail": "현재 구성과 모드별 결과필터·BEAM_INSPECTION Offset금지를 구분함."
+    },
+    {
+      "id": "XC-05",
+      "status": "consistent",
+      "topic": "Level과 JUDGE/미측정 색상",
+      "detail": "Live/최근MANUAL LOAD/REVIEW DATA의 각 표시 경로를 구분. 낮은 Level이 실측OK를 입증하지 않음."
+    },
+    {
+      "id": "XC-06",
+      "status": "consistent",
+      "topic": "Default DOE 혼합과 현재 source 한계",
+      "detail": "DOE ON1/16·OFF1·일반 Review 선택Beam·Default Setting후Recipe덮기 예외를 유지."
+    },
+    {
+      "id": "XC-07",
+      "status": "consistent",
+      "topic": "23회귀와 장비 정식 빌드",
+      "detail": "별도 원문 복사회귀23개는 파일/순수계산 반례 검사. WPF/실기/장비정식빌드 통과로 확대하지 않음."
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "XC-MARGIN",
+      "status": "resolved_by_review_agent",
+      "detail": "같은Margin으로설계점재생성시상쇄문장Review01추가"
+    },
+    {
+      "id": "XC-DEFAULT",
+      "status": "resolved_by_review_agent",
+      "detail": "Default의Setting→Recipe덮기예외Review06추가"
+    }
+  ],
+  "scope": {
+    "sourceReadOnly": true,
+    "sourceModified": false,
+    "otherManualEdited": false,
+    "equipmentBuildRun": false,
+    "equipmentExecution": false,
+    "vendorExecution": false,
+    "productionRowsCopied": false
+  },
+  "limitations": [
+    "Review7장 변경절·관련기존설명과 분석 md/json을 교차검토. 모든 소스원문의 새 전체 정독/장비 실행은 아님",
+    "SVG 시각 QA는 Root 최종후보 담당"
+  ]
+}

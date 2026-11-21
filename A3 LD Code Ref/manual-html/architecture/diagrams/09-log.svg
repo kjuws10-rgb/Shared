@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="690" viewBox="0 0 1300 690" role="img" aria-labelledby="title desc">
+<title id="title">로그 생산·저장·소비와 PM/Review 경계</title>
+<desc id="desc">정적 소스 추적. PM JSON, 동기 trace, bounded Interface와 Sequence queue를 나누며 결과 원본은 별도로 대조한다.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#52748e"/></marker></defs>
+<rect width="1300" height="690" fill="#f7fafc"/>
+<g font-family="Malgun Gothic,Segoe UI,sans-serif">
+<text x="30" y="34" font-size="25" font-weight="bold" fill="#12344c">로그 생산·저장·소비와 PM / Review 경계</text>
+<text x="30" y="61" font-size="13" fill="#52748e">기준 334b359 · 정적 소스 추적 · 장비/SDK 실행 없음</text>
+<rect x="30" y="95" width="370" height="105" rx="9" fill="white" stroke="#9eb5c9"/>
+<text x="46" y="131" font-size="19" font-weight="bold" fill="#12344c">공유 CLogManager</text>
+<text x="46" y="165" font-size="14" fill="#345a75">Config 옆 Log 경로</text>
+<rect x="465" y="95" width="370" height="105" rx="9" fill="white" stroke="#9eb5c9"/>
+<text x="481" y="131" font-size="19" font-weight="bold" fill="#12344c">실제 생산자</text>
+<text x="481" y="165" font-size="14" fill="#345a75">PM · Recipe/Setting · Station/Review</text>
+<rect x="900" y="95" width="370" height="105" rx="9" fill="white" stroke="#9eb5c9"/>
+<text x="916" y="131" font-size="19" font-weight="bold" fill="#12344c">저장 방식 분리</text>
+<text x="916" y="165" font-size="14" fill="#345a75">동기 append / Interface·Sequence 큐</text>
+<rect x="30" y="290" width="370" height="105" rx="9" fill="white" stroke="#9eb5c9"/>
+<text x="46" y="326" font-size="19" font-weight="bold" fill="#12344c">PM UTF-8 JSON</text>
+<text x="46" y="360" font-size="14" fill="#345a75">tmp → 교체 · 인스턴스 캐시</text>
+<rect x="465" y="290" width="370" height="105" rx="9" fill="white" stroke="#9eb5c9"/>
+<text x="481" y="326" font-size="19" font-weight="bold" fill="#12344c">동기 텍스트·Alarm</text>
+<text x="481" y="360" font-size="14" fill="#345a75">UTF-16 trace / UTF-8 JSONL</text>
+<rect x="900" y="290" width="370" height="105" rx="9" fill="white" stroke="#9eb5c9"/>
+<text x="916" y="326" font-size="19" font-weight="bold" fill="#12344c">bounded worker</text>
+<text x="916" y="360" font-size="14" fill="#345a75">overflow·실패는 sticky 오류</text>
+<rect x="30" y="485" width="370" height="105" rx="9" fill="white" stroke="#9eb5c9"/>
+<text x="46" y="521" font-size="19" font-weight="bold" fill="#12344c">PM 화면</text>
+<text x="46" y="555" font-size="14" fill="#345a75">미해제 JSON ≠ 재시작 활성 Lock</text>
+<rect x="465" y="485" width="370" height="105" rx="9" fill="white" stroke="#9eb5c9"/>
+<text x="481" y="521" font-size="19" font-weight="bold" fill="#12344c">Viewer / Alarm 분석</text>
+<text x="481" y="555" font-size="14" fill="#345a75">BOM·선택 CTS / PM 자동수집 없음</text>
+<rect x="900" y="485" width="370" height="105" rx="9" fill="white" stroke="#9eb5c9"/>
+<text x="916" y="521" font-size="19" font-weight="bold" fill="#12344c">가공·Review 결과 원본</text>
+<text x="916" y="555" font-size="14" fill="#345a75">CSV·Offset·Product와 별도 대조</text>
+<path d="M400 147 L465 147" stroke="#52748e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M835 147 L900 147" stroke="#52748e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M215 200 L215 290" stroke="#52748e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<text x="225" y="245.0" font-size="12" fill="#426080">PM</text>
+<path d="M650 200 L650 290" stroke="#52748e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<text x="660" y="245.0" font-size="12" fill="#426080">동기</text>
+<path d="M1085 200 L1085 290" stroke="#52748e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<text x="1095" y="245.0" font-size="12" fill="#426080">큐</text>
+<path d="M215 395 L215 485" stroke="#52748e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<text x="225" y="440.0" font-size="12" fill="#426080">JSON</text>
+<path d="M650 395 L650 485" stroke="#52748e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<text x="660" y="440.0" font-size="12" fill="#426080">조회</text>
+<path d="M1085 395 L1085 485" stroke="#52748e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<text x="1095" y="440.0" font-size="12" fill="#426080">원본 대조</text>
+<text x="30" y="639" font-size="13" fill="#52748e">잠금·파일·큐·취소·실패 정책은 서로 다릅니다. 진단 로그의 부재가 미실행을, 한 줄의 성공 문구가 물리 성공을 뜻하지 않습니다.</text>
+</g></svg>

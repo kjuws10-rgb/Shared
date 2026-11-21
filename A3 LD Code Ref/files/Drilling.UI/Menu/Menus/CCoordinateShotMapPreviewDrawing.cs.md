@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | d3b041057f97f293e1e40e189c5e655ae966c8c8430c73148b6cb20c0fedc931 |
 | 파일 분류 | code |
 | 원본 크기/행 | 9,912 bytes / 230 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -48,7 +48,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `LandscapeWidth` · L8–8
 
-[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L8-L8)
+[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L8-L8)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -69,7 +69,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `LandscapeHeight` · L9–9
 
-[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L9-L9)
+[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L9-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -90,7 +90,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `PortraitWidth` · L10–10
 
-[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L10-L10)
+[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -111,7 +111,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `PortraitHeight` · L11–11
 
-[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L11-L11)
+[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -132,7 +132,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `MapMargin` · L12–12
 
-[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L12-L12)
+[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -153,7 +153,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `Create` · L14–114
 
-[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:14–114](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L14-L114)
+[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:14–114](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L14-L114)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -173,7 +173,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3712–3712](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3712-L3712) | CCoordinateShotMapPreviewDrawing.Create | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3712–3712](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3712-L3712) | CCoordinateShotMapPreviewDrawing.Create | False |
 
 호출하는 대상과 해석 범위:
 
@@ -419,7 +419,7 @@ flowchart TD
 
 ### MethodDeclaration `TryResolveShot` · L116–140
 
-[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:116–140](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L116-L140)
+[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:116–140](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L116-L140)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -443,7 +443,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:2805–2805](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2805-L2805) | CCoordinateShotMapPreviewDrawing.TryResolveShot | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:2805–2805](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2805-L2805) | CCoordinateShotMapPreviewDrawing.TryResolveShot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -491,7 +491,7 @@ flowchart TD
 
 ### MethodDeclaration `GetSurfaceSize` · L142–147
 
-[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:142–147](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L142-L147)
+[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:142–147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L142-L147)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -511,8 +511,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L29-L29) | GetSurfaceSize | False |
-| [Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L151-L151) | GetSurfaceSize | False |
+| [Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L29-L29) | GetSurfaceSize | False |
+| [Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L151-L151) | GetSurfaceSize | False |
 
 호출하는 대상과 해석 범위:
 
@@ -534,7 +534,7 @@ flowchart TD
 
 ### MethodDeclaration `GetMapRect` · L149–153
 
-[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:149–153](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L149-L153)
+[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:149–153](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L149-L153)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -554,8 +554,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L30-L30) | GetMapRect | False |
-| [Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L131-L131) | GetMapRect | False |
+| [Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L30-L30) | GetMapRect | False |
+| [Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L131-L131) | GetMapRect | False |
 
 호출하는 대상과 해석 범위:
 
@@ -578,7 +578,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawGrid` · L155–172
 
-[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:155–172](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L155-L172)
+[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:155–172](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L155-L172)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -665,7 +665,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawSelectedShot` · L174–195
 
-[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:174–195](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L174-L195)
+[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:174–195](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L174-L195)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -746,7 +746,7 @@ flowchart TD
 
 ### MethodDeclaration `AddRectangle` · L197–203
 
-[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:197–203](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L197-L203)
+[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:197–203](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L197-L203)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -786,7 +786,7 @@ flowchart TD
 
 ### MethodDeclaration `AddMaskCross` · L205–211
 
-[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:205–211](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L205-L211)
+[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:205–211](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L205-L211)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -836,7 +836,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateBrush` · L213–218
 
-[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:213–218](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L213-L218)
+[Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:213–218](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L213-L218)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -857,10 +857,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L79-L79) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L80-L80) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L105-L105) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L188-L188) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L79-L79) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L80-L80) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L105-L105) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs#L188-L188) | CreateBrush | False |
 
 호출하는 대상과 해석 범위:
 

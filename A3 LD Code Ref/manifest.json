@@ -3,24 +3,24 @@
   "generatorVersion": "1.1.4",
   "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
   "sourceBranch": "master",
-  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
-  "generatedAt": "2026-11-20T00:23:11.122008+00:00",
+  "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+  "generatedAt": "2026-11-21T00:12:29.217360+00:00",
   "coverage": {
-    "trackedFiles": 699,
-    "filePages": 699,
+    "trackedFiles": 700,
+    "filePages": 700,
     "byKind": {
       "build_or_reference": 10,
       "data_schema": 335,
-      "code": 342,
+      "code": 343,
       "binary_reference": 12
     },
-    "csharpFiles": 157,
-    "typeCount": 931,
-    "memberCount": 16360,
-    "callSites": 42608,
-    "sourceLines": 1932665,
-    "annotatedFiles": 352,
-    "ragRecords": 32001
+    "csharpFiles": 158,
+    "typeCount": 941,
+    "memberCount": 16511,
+    "callSites": 43446,
+    "sourceLines": 1934227,
+    "annotatedFiles": 353,
+    "ragRecords": 32191
   },
   "semanticScope": {
     "syntax": "All Git-tracked C# files parsed with Roslyn; inactive conditional-compilation branches are reported separately as disabled text.",
@@ -47,43 +47,43 @@
     "projectBoundaries": "Source declarations are combined into one compilation. Project-reference accessibility and exact target-framework overload selection are not build-verified."
   },
   "syntaxSummary": {
-    "trackedFiles": 699,
-    "csharpFiles": 157,
-    "sourceLines": 122835,
-    "types": 931,
-    "members": 16360,
-    "calls": 42608,
-    "operations": 96335,
+    "trackedFiles": 700,
+    "csharpFiles": 158,
+    "sourceLines": 124398,
+    "types": 941,
+    "members": 16511,
+    "calls": 43446,
+    "operations": 98088,
     "callResolution": {
-      "resolved": 38122,
-      "unresolved": 3766,
-      "candidate": 720
+      "resolved": 39074,
+      "unresolved": 3675,
+      "candidate": 697
     },
     "compilationDiagnostics": {
-      "Error": 4413,
-      "Hidden": 444,
+      "Error": 4348,
+      "Hidden": 431,
       "Warning": 3
     },
     "diagnosticCodes": [
       {
         "code": "CS0246",
-        "count": 2381
+        "count": 2357
       },
       {
         "code": "CS0103",
-        "count": 1551
+        "count": 1536
       },
       {
         "code": "CS8019",
-        "count": 423
+        "count": 410
       },
       {
         "code": "CS1061",
-        "count": 210
+        "count": 200
       },
       {
         "code": "CS0234",
-        "count": 167
+        "count": 151
       },
       {
         "code": "CS0117",
@@ -114,11 +114,11 @@
         "count": 3
       },
       {
-        "code": "CS7036",
+        "code": "CS0029",
         "count": 1
       },
       {
-        "code": "CS0029",
+        "code": "CS7036",
         "count": 1
       },
       {
@@ -158,43 +158,47 @@
   "memberScope": "Explicit C# source declarations; compiler-synthesized record/primary-constructor members and WPF-generated fields are not counted. Static XAML named elements/events/bindings are recorded separately in metadata/xaml.",
   "validation": {
     "status": "passed",
+    "scope": "Documentation coverage/provenance/navigation validation; known behavior defects are reported separately, not a program correctness pass",
     "staticReport": "validation/static-validation.json",
     "browserReport": "validation/browser-validation.json",
+    "independentReport": "validation/generator-independent-validation.json",
+    "sourceModelReport": "validation/source-model-validation.json",
+    "sourceModelExtractionReport": "validation/source-model-extraction.json",
     "crosscheckReports": [
       "validation/architecture-crosscheck.json",
-      "validation/review-crosscheck.json"
+      "validation/log-manual-crosscheck.json"
     ],
     "extractorReport": "validation/extractor-regression-validation.json",
     "pythonRegressionReport": "validation/python-regression-validation.json",
-    "independentReport": "validation/generator-independent-validation.json",
-    "sourceModelReport": "validation/source-model-validation.json",
-    "xamlReport": "validation/xaml-independent-validation.json",
-    "sensitiveSettingsReport": "validation/sensitive-settings-validation.json",
-    "manualDerivedReport": "validation/manual-derived-validation.json",
-    "htmlFenceRegressionReport": "validation/html-fence-fix-validation.json",
-    "htmlFenceBrowserReport": "validation/html-fence-browser-validation.json",
     "sourcePreservationReport": "validation/source-preservation.json",
-    "behaviorReports": [
-      "validation/margin-pure-regression.json",
-      "validation/review-pure-regression.json"
-    ],
+    "behaviorReport": "validation/log-pure-regression.json",
+    "positiveLogRegressions": {
+      "passed": 27,
+      "total": 27
+    },
+    "logDefectReproductions": {
+      "reproduced": 5,
+      "probes": 5,
+      "distinctFindingGroups": 3
+    },
+    "behaviorStatus": "defects_reproduced_not_program_correctness_pass",
     "equipmentBuild": "not_run",
     "equipmentExecution": "not_run",
-    "modelInferenceAccuracy": "not_tested_in_this_documentation_task",
     "modelWeightTraining": "not_run",
+    "modelInferenceAccuracy": "not_tested",
     "gitDiffCheck": "passed"
   },
   "manualSourceReview": {
-    "chapters": 15,
+    "chapters": 16,
     "navigationGuides": 1,
-    "sourceCitationOccurrences": 707,
-    "uniqueSourceCitationRanges": 611,
+    "sourceCitationOccurrences": 869,
+    "uniqueSourceCitationRanges": 754,
     "runtimeCertified": false
   },
   "architectureBaseline": {
-    "sharedPath": "20261120_090030_SW아키텍쳐분석/README.md",
-    "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
-    "comparisonBaseCommit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+    "sharedPath": "20261121_085657_SW아키텍쳐분석/README.md",
+    "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+    "comparisonBaseCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2"
   },
   "recurringUpdate": {
     "automationId": "a3",
@@ -202,15 +206,5 @@
     "schedule": "Daily09:00; changed source or incomplete reference only",
     "independentReferenceBaseline": true
   },
-  "documentNormalization": "UTF-8/LF; original source trailing whitespace preserved before EOL markers. Historical validation is preserved as prior Git blob bytes.",
-  "documentationPipeline": {
-    "baseGenerationVersion": "1.1.3",
-    "finalGeneratorVersion": "1.1.4",
-    "validatorVersion": "1.1.3",
-    "change": "PasswordChanged event coverage and tilde fence HTML rendering",
-    "htmlPagesRegeneratedAfterBase": 1,
-    "protectedManualAndRagFiles": 77,
-    "protectedBytesUnchanged": true,
-    "fullPublishedSnapshotValidation": "validation/static-validation.json"
-  }
+  "documentNormalization": "UTF-8/LF; source lines preserved with EOL markers; previous validation retained as exact canonical Git bytes under history."
 }

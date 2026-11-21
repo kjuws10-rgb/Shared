@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 2e2d5efacbed39982d3eb49b8137ee70d1a18546f11dae358822584ee0e95c39 |
 | 파일 분류 | code |
 | 원본 크기/행 | 6,044 bytes / 175 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -63,7 +63,7 @@
 
 ### EnumMemberDeclaration `Level1` · L8–8
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L8-L8)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L8-L8)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -78,7 +78,7 @@
 
 ### EnumMemberDeclaration `Level2` · L9–9
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L9-L9)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L9-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -93,7 +93,7 @@
 
 ### EnumMemberDeclaration `Level3` · L10–10
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L10-L10)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -108,7 +108,7 @@
 
 ### EnumMemberDeclaration `Level4` · L11–11
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L11-L11)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -123,7 +123,7 @@
 
 ### MethodDeclaration `Resolve` · L23–44
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:23–44](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L23-L44)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:23–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L23-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -143,9 +143,9 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L284-L284) | levelSettings.Resolve | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:2436–2436](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L2436-L2436) | settings.Resolve | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5007–5007](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuReview.cs#L5007-L5007) | _reviewLevelSettings.Resolve | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L284-L284) | levelSettings.Resolve | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:2436–2436](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L2436-L2436) | settings.Resolve | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5007–5007](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5007-L5007) | _reviewLevelSettings.Resolve | False |
 
 호출하는 대상과 해석 범위:
 
@@ -192,7 +192,7 @@ flowchart TD
 
 ### MethodDeclaration `ColorFor` · L46–55
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:46–55](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L46-L55)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:46–55](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L46-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -211,9 +211,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:300–300](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L300-L300) | levelSettings.ColorFor | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1083–1083](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1083-L1083) | levelSettings!.ColorFor | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:2437–2437](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L2437-L2437) | settings.ColorFor | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:300–300](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L300-L300) | levelSettings.ColorFor | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1083–1083](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1083-L1083) | levelSettings!.ColorFor | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:2437–2437](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L2437-L2437) | settings.ColorFor | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -235,7 +235,7 @@ flowchart TD
 
 ### FieldDeclaration `Level1MaximumKey` · L60–60
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L60-L60)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L60-L60)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -256,7 +256,7 @@ flowchart TD
 
 ### FieldDeclaration `Level2MaximumKey` · L61–61
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L61-L61)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L61-L61)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -277,7 +277,7 @@ flowchart TD
 
 ### FieldDeclaration `Level3MaximumKey` · L62–62
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L62-L62)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L62-L62)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -298,7 +298,7 @@ flowchart TD
 
 ### FieldDeclaration `Level1ColorKey` · L63–63
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L63-L63)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L63-L63)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -319,7 +319,7 @@ flowchart TD
 
 ### FieldDeclaration `Level2ColorKey` · L64–64
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L64-L64)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L64-L64)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -340,7 +340,7 @@ flowchart TD
 
 ### FieldDeclaration `Level3ColorKey` · L65–65
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L65-L65)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L65-L65)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -361,7 +361,7 @@ flowchart TD
 
 ### FieldDeclaration `Level4ColorKey` · L66–66
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L66-L66)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L66-L66)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -382,7 +382,7 @@ flowchart TD
 
 ### FieldDeclaration `DefaultLevel1Maximum` · L68–68
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L68-L68)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L68-L68)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -403,7 +403,7 @@ flowchart TD
 
 ### FieldDeclaration `DefaultLevel2Maximum` · L69–69
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L69-L69)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L69-L69)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -424,7 +424,7 @@ flowchart TD
 
 ### FieldDeclaration `DefaultLevel3Maximum` · L70–70
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L70-L70)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L70-L70)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -445,7 +445,7 @@ flowchart TD
 
 ### FieldDeclaration `DefaultLevel1Color` · L71–71
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L71-L71)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L71-L71)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -466,7 +466,7 @@ flowchart TD
 
 ### FieldDeclaration `DefaultLevel2Color` · L72–72
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L72-L72)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L72-L72)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -487,7 +487,7 @@ flowchart TD
 
 ### FieldDeclaration `DefaultLevel3Color` · L73–73
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L73-L73)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L73-L73)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -508,7 +508,7 @@ flowchart TD
 
 ### FieldDeclaration `DefaultLevel4Color` · L74–74
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L74-L74)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L74-L74)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -529,7 +529,7 @@ flowchart TD
 
 ### FieldDeclaration `ColorKeys` · L76–78
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:76–78](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L76-L78)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:76–78](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L76-L78)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -557,7 +557,7 @@ flowchart TD
 
 ### PropertyDeclaration `Default` · L80–87
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:80–87](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L80-L87)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:80–87](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L80-L87)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -584,7 +584,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Default` · L80–80
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L80-L80)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L80-L80)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -599,7 +599,7 @@ flowchart TD
 
 ### MethodDeclaration `IsColorKey` · L89–92
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:89–92](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L89-L92)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:89–92](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L89-L92)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -618,7 +618,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1180–1180](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1180-L1180) | CReviewResultLevelSettings.IsColorKey | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1180–1180](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1180-L1180) | CReviewResultLevelSettings.IsColorKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -639,7 +639,7 @@ flowchart TD
 
 ### MethodDeclaration `Read` · L94–112
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:94–112](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L94-L112)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:94–112](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L94-L112)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -658,10 +658,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CSettingManager.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CSettingManager.cs#L143-L143) | CReviewResultLevelSettings.Read | False |
-| [Drilling.File/JHMI/CSettingFile.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L450-L450) | CReviewResultLevelSettings.Read | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:2366–2366](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L2366-L2366) | CReviewResultLevelSettings.Read | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4754–4754](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuReview.cs#L4754-L4754) | CReviewResultLevelSettings.Read | False |
+| [Drilling.Common/Managers/CSettingManager.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CSettingManager.cs#L143-L143) | CReviewResultLevelSettings.Read | False |
+| [Drilling.File/JHMI/CSettingFile.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CSettingFile.cs#L450-L450) | CReviewResultLevelSettings.Read | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:2366–2366](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L2366-L2366) | CReviewResultLevelSettings.Read | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4754–4754](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4754-L4754) | CReviewResultLevelSettings.Read | False |
 
 호출하는 대상과 해석 범위:
 
@@ -709,7 +709,7 @@ flowchart TD
 
 ### MethodDeclaration `Read` · L114–134
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:114–134](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L114-L134)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:114–134](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L114-L134)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -728,8 +728,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewResultLevelSettings.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L111-L111) | Read | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:252–252](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L252-L252) | CReviewResultLevelSettings.Read | False |
+| [Drilling.Common/Review/CReviewResultLevelSettings.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L111-L111) | Read | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:252–252](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L252-L252) | CReviewResultLevelSettings.Read | False |
 
 호출하는 대상과 해석 범위:
 
@@ -783,7 +783,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeColor` · L136–150
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:136–150](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L136-L150)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:136–150](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L136-L150)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -802,12 +802,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewResultLevelSettings.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L173-L173) | NormalizeColor | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:936–936](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L936-L936) | CReviewResultLevelSettings.NormalizeColor | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:2443–2443](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L2443-L2443) | CReviewResultLevelSettings.NormalizeColor | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4782–4782](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuReview.cs#L4782-L4782) | CReviewResultLevelSettings.NormalizeColor | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1193–1193](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1193-L1193) | CReviewResultLevelSettings.NormalizeColor | False |
-| [Drilling.UI/Popup/CColorPickerDialog.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CColorPickerDialog.xaml.cs#L15-L15) | CReviewResultLevelSettings.NormalizeColor | False |
+| [Drilling.Common/Review/CReviewResultLevelSettings.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L173-L173) | NormalizeColor | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:936–936](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L936-L936) | CReviewResultLevelSettings.NormalizeColor | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:2443–2443](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L2443-L2443) | CReviewResultLevelSettings.NormalizeColor | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4782–4782](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4782-L4782) | CReviewResultLevelSettings.NormalizeColor | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1193–1193](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1193-L1193) | CReviewResultLevelSettings.NormalizeColor | False |
+| [Drilling.UI/Popup/CColorPickerDialog.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CColorPickerDialog.xaml.cs#L15-L15) | CReviewResultLevelSettings.NormalizeColor | False |
 
 호출하는 대상과 해석 범위:
 
@@ -853,7 +853,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadMaximum` · L152–166
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:152–166](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L152-L166)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:152–166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L152-L166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -874,9 +874,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewResultLevelSettings.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L117-L117) | ReadMaximum | False |
-| [Drilling.Common/Review/CReviewResultLevelSettings.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L118-L118) | ReadMaximum | False |
-| [Drilling.Common/Review/CReviewResultLevelSettings.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L119-L119) | ReadMaximum | False |
+| [Drilling.Common/Review/CReviewResultLevelSettings.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L117-L117) | ReadMaximum | False |
+| [Drilling.Common/Review/CReviewResultLevelSettings.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L118-L118) | ReadMaximum | False |
+| [Drilling.Common/Review/CReviewResultLevelSettings.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L119-L119) | ReadMaximum | False |
 
 호출하는 대상과 해석 범위:
 
@@ -917,7 +917,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadColor` · L168–174
 
-[Drilling.Common/Review/CReviewResultLevelSettings.cs:168–174](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L168-L174)
+[Drilling.Common/Review/CReviewResultLevelSettings.cs:168–174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L168-L174)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -938,10 +938,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewResultLevelSettings.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L130-L130) | ReadColor | False |
-| [Drilling.Common/Review/CReviewResultLevelSettings.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L131-L131) | ReadColor | False |
-| [Drilling.Common/Review/CReviewResultLevelSettings.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L132-L132) | ReadColor | False |
-| [Drilling.Common/Review/CReviewResultLevelSettings.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L133-L133) | ReadColor | False |
+| [Drilling.Common/Review/CReviewResultLevelSettings.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L130-L130) | ReadColor | False |
+| [Drilling.Common/Review/CReviewResultLevelSettings.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L131-L131) | ReadColor | False |
+| [Drilling.Common/Review/CReviewResultLevelSettings.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L132-L132) | ReadColor | False |
+| [Drilling.Common/Review/CReviewResultLevelSettings.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewResultLevelSettings.cs#L133-L133) | ReadColor | False |
 
 호출하는 대상과 해석 범위:
 

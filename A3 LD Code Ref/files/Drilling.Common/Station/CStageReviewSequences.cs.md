@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 6b514f35c8c764d7eeee10a1930cfc7948d52ff079e9e0c17c320dbdf12d3e5d |
 | 파일 분류 | code |
 | 원본 크기/행 | 58,958 bytes / 942 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -146,7 +146,7 @@
 
 ### FieldDeclaration `MoveAble` · L13–13
 
-[Drilling.Common/Station/CStageReviewSequences.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L13-L13)
+[Drilling.Common/Station/CStageReviewSequences.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -167,7 +167,7 @@
 
 ### FieldDeclaration `MoveComplete` · L13–13
 
-[Drilling.Common/Station/CStageReviewSequences.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L13-L13)
+[Drilling.Common/Station/CStageReviewSequences.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -188,7 +188,7 @@
 
 ### FieldDeclaration `MoveStart` · L14–14
 
-[Drilling.Common/Station/CStageReviewSequences.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L14-L14)
+[Drilling.Common/Station/CStageReviewSequences.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -209,7 +209,7 @@
 
 ### FieldDeclaration `MoveAck` · L14–14
 
-[Drilling.Common/Station/CStageReviewSequences.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L14-L14)
+[Drilling.Common/Station/CStageReviewSequences.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -230,7 +230,7 @@
 
 ### FieldDeclaration `MoveStop` · L15–15
 
-[Drilling.Common/Station/CStageReviewSequences.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L15-L15)
+[Drilling.Common/Station/CStageReviewSequences.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -251,7 +251,7 @@
 
 ### FieldDeclaration `PermitX` · L16–16
 
-[Drilling.Common/Station/CStageReviewSequences.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L16-L16)
+[Drilling.Common/Station/CStageReviewSequences.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -272,7 +272,7 @@
 
 ### FieldDeclaration `PermitY` · L16–16
 
-[Drilling.Common/Station/CStageReviewSequences.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L16-L16)
+[Drilling.Common/Station/CStageReviewSequences.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -293,7 +293,7 @@
 
 ### FieldDeclaration `IofStart` · L17–17
 
-[Drilling.Common/Station/CStageReviewSequences.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L17-L17)
+[Drilling.Common/Station/CStageReviewSequences.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -314,7 +314,7 @@
 
 ### FieldDeclaration `IofComplete` · L17–17
 
-[Drilling.Common/Station/CStageReviewSequences.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L17-L17)
+[Drilling.Common/Station/CStageReviewSequences.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -335,7 +335,7 @@
 
 ### FieldDeclaration `IofAck` · L18–18
 
-[Drilling.Common/Station/CStageReviewSequences.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L18-L18)
+[Drilling.Common/Station/CStageReviewSequences.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -356,7 +356,7 @@
 
 ### FieldDeclaration `IofRead` · L18–18
 
-[Drilling.Common/Station/CStageReviewSequences.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L18-L18)
+[Drilling.Common/Station/CStageReviewSequences.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -377,7 +377,7 @@
 
 ### FieldDeclaration `IofRun` · L18–18
 
-[Drilling.Common/Station/CStageReviewSequences.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L18-L18)
+[Drilling.Common/Station/CStageReviewSequences.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -398,7 +398,7 @@
 
 ### FieldDeclaration `MoveActions` · L19–19
 
-[Drilling.Common/Station/CStageReviewSequences.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L19-L19)
+[Drilling.Common/Station/CStageReviewSequences.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -419,7 +419,7 @@
 
 ### FieldDeclaration `IofActions` · L20–20
 
-[Drilling.Common/Station/CStageReviewSequences.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L20-L20)
+[Drilling.Common/Station/CStageReviewSequences.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -440,7 +440,7 @@
 
 ### PropertyDeclaration `Actions` · L21–21
 
-[Drilling.Common/Station/CStageReviewSequences.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L21-L21)
+[Drilling.Common/Station/CStageReviewSequences.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -467,7 +467,7 @@
 
 ### GetAccessorDeclaration `get_Actions` · L21–21
 
-[Drilling.Common/Station/CStageReviewSequences.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L21-L21)
+[Drilling.Common/Station/CStageReviewSequences.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -482,7 +482,7 @@
 
 ### EventFieldDeclaration `Failed` · L22–22
 
-[Drilling.Common/Station/CStageReviewSequences.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L22-L22)
+[Drilling.Common/Station/CStageReviewSequences.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -497,7 +497,7 @@
 
 ### MethodDeclaration `ReportFailure` · L23–23
 
-[Drilling.Common/Station/CStageReviewSequences.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L23-L23)
+[Drilling.Common/Station/CStageReviewSequences.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L23-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -516,11 +516,11 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:471–471](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L471-L471) | _owner.ReportFailure | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:620–620](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L620-L620) | _owner.ReportFailure | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:713–713](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L713-L713) | _owner.ReportFailure | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:817–817](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L817-L817) | _owner.ReportFailure | False |
-| [Drilling.Common/Station/CStationProcess.cs:6378–6378](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6378-L6378) | interfaces.StageReviewSequences.ReportFailure | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:471–471](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L471-L471) | _owner.ReportFailure | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:620–620](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L620-L620) | _owner.ReportFailure | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:713–713](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L713-L713) | _owner.ReportFailure | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:817–817](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L817-L817) | _owner.ReportFailure | False |
+| [Drilling.Common/Station/CStationProcess.cs:6378–6378](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6378-L6378) | interfaces.StageReviewSequences.ReportFailure | False |
 
 호출하는 대상과 해석 범위:
 
@@ -538,7 +538,7 @@
 
 ### FieldDeclaration `_owners` · L25–25
 
-[Drilling.Common/Station/CStageReviewSequences.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L25-L25)
+[Drilling.Common/Station/CStageReviewSequences.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L25-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -566,7 +566,7 @@
 
 ### FieldDeclaration `_cleanupFailures` · L26–26
 
-[Drilling.Common/Station/CStageReviewSequences.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L26-L26)
+[Drilling.Common/Station/CStageReviewSequences.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -594,7 +594,7 @@
 
 ### FieldDeclaration `_failedSessions` · L27–27
 
-[Drilling.Common/Station/CStageReviewSequences.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L27-L27)
+[Drilling.Common/Station/CStageReviewSequences.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -622,7 +622,7 @@
 
 ### FieldDeclaration `_recovery` · L28–28
 
-[Drilling.Common/Station/CStageReviewSequences.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L28-L28)
+[Drilling.Common/Station/CStageReviewSequences.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -650,7 +650,7 @@
 
 ### FieldDeclaration `_moveStops` · L29–29
 
-[Drilling.Common/Station/CStageReviewSequences.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L29-L29)
+[Drilling.Common/Station/CStageReviewSequences.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -678,7 +678,7 @@
 
 ### FieldDeclaration `_automaticReplies` · L30–30
 
-[Drilling.Common/Station/CStageReviewSequences.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L30-L30)
+[Drilling.Common/Station/CStageReviewSequences.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -699,7 +699,7 @@
 
 ### FieldDeclaration `_event` · L31–31
 
-[Drilling.Common/Station/CStageReviewSequences.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L31-L31)
+[Drilling.Common/Station/CStageReviewSequences.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -714,7 +714,7 @@
 
 ### FieldDeclaration `_lastPlan` · L32–32
 
-[Drilling.Common/Station/CStageReviewSequences.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L32-L32)
+[Drilling.Common/Station/CStageReviewSequences.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L32-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -729,7 +729,7 @@
 
 ### FieldDeclaration `_zeroSegments` · L33–33
 
-[Drilling.Common/Station/CStageReviewSequences.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L33-L33)
+[Drilling.Common/Station/CStageReviewSequences.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -744,7 +744,7 @@
 
 ### PropertyDeclaration `SimulatedZeroLineCompletedSegments` · L34–34
 
-[Drilling.Common/Station/CStageReviewSequences.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L34-L34)
+[Drilling.Common/Station/CStageReviewSequences.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L34-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -771,7 +771,7 @@
 
 ### MethodDeclaration `SetSimulatedZeroLineCompletedSegments` · L36–47
 
-[Drilling.Common/Station/CStageReviewSequences.cs:36–47](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L36-L47)
+[Drilling.Common/Station/CStageReviewSequences.cs:36–47](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L36-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -790,7 +790,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L109-L109) | interfaces.StageReviewSequences.SetSimulatedZeroLineCompletedSegments | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L109-L109) | interfaces.StageReviewSequences.SetSimulatedZeroLineCompletedSegments | False |
 
 호출하는 대상과 해석 범위:
 
@@ -841,7 +841,7 @@ flowchart TD
 
 ### MethodDeclaration `ClearZeroLineSimulation` · L49–56
 
-[Drilling.Common/Station/CStageReviewSequences.cs:49–56](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L49-L56)
+[Drilling.Common/Station/CStageReviewSequences.cs:49–56](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L49-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -854,7 +854,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4299–4299](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4299-L4299) | _interfaceManager.StageReviewSequences.ClearZeroLineSimulation | False |
+| [Drilling.Common/Station/CStationProcess.cs:4299–4299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4299-L4299) | _interfaceManager.StageReviewSequences.ClearZeroLineSimulation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -890,7 +890,7 @@ flowchart TD
 
 ### EventFieldDeclaration `Trace` · L58–58
 
-[Drilling.Common/Station/CStageReviewSequences.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L58-L58)
+[Drilling.Common/Station/CStageReviewSequences.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L58-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -905,7 +905,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsActive` · L59–59
 
-[Drilling.Common/Station/CStageReviewSequences.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L59-L59)
+[Drilling.Common/Station/CStageReviewSequences.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L59-L59)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -920,7 +920,7 @@ flowchart TD
 
 ### MethodDeclaration `HasActiveMove` · L60–60
 
-[Drilling.Common/Station/CStageReviewSequences.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L60-L60)
+[Drilling.Common/Station/CStageReviewSequences.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L60-L60)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -939,8 +939,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L71-L71) | HasActiveMove | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3279–3279](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3279-L3279) | _manager.Interface().StageReviewSequences.HasActiveMove | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L71-L71) | HasActiveMove | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3279–3279](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L3279-L3279) | _manager.Interface().StageReviewSequences.HasActiveMove | False |
 
 호출하는 대상과 해석 범위:
 
@@ -958,7 +958,7 @@ flowchart TD
 
 ### PropertyDeclaration `HasRunningSession` · L61–61
 
-[Drilling.Common/Station/CStageReviewSequences.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L61-L61)
+[Drilling.Common/Station/CStageReviewSequences.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L61-L61)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -987,7 +987,7 @@ flowchart TD
 
 ### MethodDeclaration `RecoverIdleCleanup` · L64–94
 
-[Drilling.Common/Station/CStageReviewSequences.cs:64–94](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L64-L94)
+[Drilling.Common/Station/CStageReviewSequences.cs:64–94](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L64-L94)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1012,8 +1012,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3936–3936](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3936-L3936) | _interfaceManager.StageReviewSequences.RecoverIdleCleanup | False |
-| [Drilling.UI/CRootView.cs:3082–3082](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3082-L3082) | _interfaceManager.StageReviewSequences.RecoverIdleCleanup | False |
+| [Drilling.Common/Station/CStationProcess.cs:3936–3936](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3936-L3936) | _interfaceManager.StageReviewSequences.RecoverIdleCleanup | False |
+| [Drilling.UI/CRootView.cs:3082–3082](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3082-L3082) | _interfaceManager.StageReviewSequences.RecoverIdleCleanup | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1112,7 +1112,7 @@ flowchart TD
 
 ### MethodDeclaration `RequestMoveStop` · L97–102
 
-[Drilling.Common/Station/CStageReviewSequences.cs:97–102](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L97-L102)
+[Drilling.Common/Station/CStageReviewSequences.cs:97–102](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L97-L102)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1137,7 +1137,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3278–3278](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3278-L3278) | _manager.Interface().StageReviewSequences.RequestMoveStop | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3278–3278](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L3278-L3278) | _manager.Interface().StageReviewSequences.RequestMoveStop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1173,7 +1173,7 @@ flowchart TD
 
 ### PropertyDeclaration `AutomaticSimulationReplies` · L104–113
 
-[Drilling.Common/Station/CStageReviewSequences.cs:104–113](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L104-L113)
+[Drilling.Common/Station/CStageReviewSequences.cs:104–113](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L104-L113)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1188,7 +1188,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AutomaticSimulationReplies` · L106–106
 
-[Drilling.Common/Station/CStageReviewSequences.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L106-L106)
+[Drilling.Common/Station/CStageReviewSequences.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L106-L106)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1215,7 +1215,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_AutomaticSimulationReplies` · L107–112
 
-[Drilling.Common/Station/CStageReviewSequences.cs:107–112](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L107-L112)
+[Drilling.Common/Station/CStageReviewSequences.cs:107–112](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L107-L112)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1262,7 +1262,7 @@ flowchart TD
 
 ### PropertyDeclaration `LastIofPlan` · L115–115
 
-[Drilling.Common/Station/CStageReviewSequences.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L115-L115)
+[Drilling.Common/Station/CStageReviewSequences.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L115-L115)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1289,7 +1289,7 @@ flowchart TD
 
 ### FieldDeclaration `_signalTimeout` · L117–117
 
-[Drilling.Common/Station/CStageReviewSequences.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L117-L117)
+[Drilling.Common/Station/CStageReviewSequences.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L117-L117)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1317,7 +1317,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateMoveReadiness` · L118–140
 
-[Drilling.Common/Station/CStageReviewSequences.cs:118–140](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L118-L140)
+[Drilling.Common/Station/CStageReviewSequences.cs:118–140](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L118-L140)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1336,13 +1336,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2567–2567](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2567-L2567) | interfaceManager.StageReviewSequences.ValidateMoveReadiness | False |
-| [Drilling.Common/Review/CReviewManager.cs:2675–2675](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2675-L2675) | interfaceManager.StageReviewSequences.ValidateMoveReadiness | False |
-| [Drilling.Common/Review/CReviewManager.cs:3165–3165](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L3165-L3165) | interfaceManager.StageReviewSequences.ValidateMoveReadiness | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L171-L171) | ValidateMoveReadiness | False |
-| [Drilling.Common/Station/CStationProcess.cs:3687–3687](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3687-L3687) | _interfaceManager.StageReviewSequences.ValidateMoveReadiness | False |
-| [Drilling.Common/Station/CStationProcess.cs:6426–6426](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6426-L6426) | interfaces.StageReviewSequences.ValidateMoveReadiness | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3629–3629](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3629-L3629) | manager.Interface().StageReviewSequences.ValidateMoveReadiness | False |
+| [Drilling.Common/Review/CReviewManager.cs:2567–2567](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2567-L2567) | interfaceManager.StageReviewSequences.ValidateMoveReadiness | False |
+| [Drilling.Common/Review/CReviewManager.cs:2675–2675](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2675-L2675) | interfaceManager.StageReviewSequences.ValidateMoveReadiness | False |
+| [Drilling.Common/Review/CReviewManager.cs:3165–3165](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3165-L3165) | interfaceManager.StageReviewSequences.ValidateMoveReadiness | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L171-L171) | ValidateMoveReadiness | False |
+| [Drilling.Common/Station/CStationProcess.cs:3687–3687](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3687-L3687) | _interfaceManager.StageReviewSequences.ValidateMoveReadiness | False |
+| [Drilling.Common/Station/CStationProcess.cs:6426–6426](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6426-L6426) | interfaces.StageReviewSequences.ValidateMoveReadiness | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3629–3629](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3629-L3629) | manager.Interface().StageReviewSequences.ValidateMoveReadiness | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1423,7 +1423,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateIofReadiness` · L142–164
 
-[Drilling.Common/Station/CStageReviewSequences.cs:142–164](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L142-L164)
+[Drilling.Common/Station/CStageReviewSequences.cs:142–164](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L142-L164)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1443,9 +1443,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2551–2551](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2551-L2551) | interfaceManager.StageReviewSequences.ValidateIofReadiness | False |
-| [Drilling.Common/Review/CReviewManager.cs:2674–2674](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2674-L2674) | interfaceManager.StageReviewSequences.ValidateIofReadiness | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:753–753](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L753-L753) | _owner.ValidateIofReadiness | False |
+| [Drilling.Common/Review/CReviewManager.cs:2551–2551](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2551-L2551) | interfaceManager.StageReviewSequences.ValidateIofReadiness | False |
+| [Drilling.Common/Review/CReviewManager.cs:2674–2674](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2674-L2674) | interfaceManager.StageReviewSequences.ValidateIofReadiness | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:753–753](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L753-L753) | _owner.ValidateIofReadiness | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1522,7 +1522,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveManualAxis` · L167–174
 
-[Drilling.Common/Station/CStageReviewSequences.cs:167–174](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L167-L174)
+[Drilling.Common/Station/CStageReviewSequences.cs:167–174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L167-L174)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1552,7 +1552,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3276–3276](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3276-L3276) | interfaces.StageReviewSequences.MoveManualAxis | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3276–3276](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L3276-L3276) | interfaces.StageReviewSequences.MoveManualAxis | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1598,7 +1598,7 @@ flowchart TD
 
 ### MethodDeclaration `Open` · L176–193
 
-[Drilling.Common/Station/CStageReviewSequences.cs:176–193](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L176-L193)
+[Drilling.Common/Station/CStageReviewSequences.cs:176–193](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L176-L193)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1620,15 +1620,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CPowerMeasureRun.cs#L277-L277) | Interfaces.StageReviewSequences.Open | False |
-| [Drilling.Common/Review/CReviewManager.cs:2570–2570](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2570-L2570) | interfaceManager.StageReviewSequences.Open | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L83-L83) | Open | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L172-L172) | Open | False |
-| [Drilling.Common/Station/CStationProcess.cs:3688–3688](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3688-L3688) | _interfaceManager.StageReviewSequences.Open | False |
-| [Drilling.Common/Station/CStationProcess.cs:6320–6320](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6320-L6320) | interfaces.StageReviewSequences.Open | False |
-| [Drilling.Common/Station/CStationProcess.cs:6429–6429](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6429-L6429) | interfaces.StageReviewSequences.Open | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3630–3630](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3630-L3630) | manager.Interface().StageReviewSequences.Open | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3765–3765](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3765-L3765) | manager.Interface().StageReviewSequences.Open | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L277-L277) | Interfaces.StageReviewSequences.Open | False |
+| [Drilling.Common/Review/CReviewManager.cs:2570–2570](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2570-L2570) | interfaceManager.StageReviewSequences.Open | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L83-L83) | Open | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L172-L172) | Open | False |
+| [Drilling.Common/Station/CStationProcess.cs:3688–3688](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3688-L3688) | _interfaceManager.StageReviewSequences.Open | False |
+| [Drilling.Common/Station/CStationProcess.cs:6320–6320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6320-L6320) | interfaces.StageReviewSequences.Open | False |
+| [Drilling.Common/Station/CStationProcess.cs:6429–6429](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6429-L6429) | interfaces.StageReviewSequences.Open | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3630–3630](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3630-L3630) | manager.Interface().StageReviewSequences.Open | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3765–3765](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3765-L3765) | manager.Interface().StageReviewSequences.Open | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1679,7 +1679,7 @@ flowchart TD
 
 ### MethodDeclaration `Publish` · L195–216
 
-[Drilling.Common/Station/CStageReviewSequences.cs:195–216](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L195-L216)
+[Drilling.Common/Station/CStageReviewSequences.cs:195–216](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L195-L216)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1701,8 +1701,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L236-L236) | _owner.Publish | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:790–790](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L790-L790) | _owner.Publish | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L236-L236) | _owner.Publish | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:790–790](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L790-L790) | _owner.Publish | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1755,7 +1755,7 @@ flowchart TD
 
 ### FieldDeclaration `_owner` · L220–220
 
-[Drilling.Common/Station/CStageReviewSequences.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L220-L220)
+[Drilling.Common/Station/CStageReviewSequences.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L220-L220)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1770,7 +1770,7 @@ flowchart TD
 
 ### FieldDeclaration `_interfaces` · L221–221
 
-[Drilling.Common/Station/CStageReviewSequences.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L221-L221)
+[Drilling.Common/Station/CStageReviewSequences.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L221-L221)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1785,7 +1785,7 @@ flowchart TD
 
 ### FieldDeclaration `_device` · L222–222
 
-[Drilling.Common/Station/CStageReviewSequences.cs:222–222](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L222-L222)
+[Drilling.Common/Station/CStageReviewSequences.cs:222–222](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L222-L222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1800,7 +1800,7 @@ flowchart TD
 
 ### FieldDeclaration `_stopRequested` · L223–223
 
-[Drilling.Common/Station/CStageReviewSequences.cs:223–223](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L223-L223)
+[Drilling.Common/Station/CStageReviewSequences.cs:223–223](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L223-L223)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1815,7 +1815,7 @@ flowchart TD
 
 ### FieldDeclaration `_simulation` · L224–224
 
-[Drilling.Common/Station/CStageReviewSequences.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L224-L224)
+[Drilling.Common/Station/CStageReviewSequences.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L224-L224)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1830,7 +1830,7 @@ flowchart TD
 
 ### FieldDeclaration `_automatic` · L224–224
 
-[Drilling.Common/Station/CStageReviewSequences.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L224-L224)
+[Drilling.Common/Station/CStageReviewSequences.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L224-L224)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1845,7 +1845,7 @@ flowchart TD
 
 ### FieldDeclaration `_reviewXOnly` · L224–224
 
-[Drilling.Common/Station/CStageReviewSequences.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L224-L224)
+[Drilling.Common/Station/CStageReviewSequences.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L224-L224)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1860,7 +1860,7 @@ flowchart TD
 
 ### FieldDeclaration `_stageBufferOwner` · L224–224
 
-[Drilling.Common/Station/CStageReviewSequences.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L224-L224)
+[Drilling.Common/Station/CStageReviewSequences.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L224-L224)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1875,7 +1875,7 @@ flowchart TD
 
 ### FieldDeclaration `_motion` · L225–225
 
-[Drilling.Common/Station/CStageReviewSequences.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L225-L225)
+[Drilling.Common/Station/CStageReviewSequences.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L225-L225)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1890,7 +1890,7 @@ flowchart TD
 
 ### FieldDeclaration `_lease` · L226–226
 
-[Drilling.Common/Station/CStageReviewSequences.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L226-L226)
+[Drilling.Common/Station/CStageReviewSequences.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L226-L226)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1905,7 +1905,7 @@ flowchart TD
 
 ### FieldDeclaration `_operation` · L227–227
 
-[Drilling.Common/Station/CStageReviewSequences.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L227-L227)
+[Drilling.Common/Station/CStageReviewSequences.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L227-L227)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1933,7 +1933,7 @@ flowchart TD
 
 ### FieldDeclaration `_disposed` · L228–228
 
-[Drilling.Common/Station/CStageReviewSequences.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L228-L228)
+[Drilling.Common/Station/CStageReviewSequences.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L228-L228)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1948,7 +1948,7 @@ flowchart TD
 
 ### FieldDeclaration `_moveOwned` · L229–229
 
-[Drilling.Common/Station/CStageReviewSequences.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L229-L229)
+[Drilling.Common/Station/CStageReviewSequences.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L229-L229)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1963,7 +1963,7 @@ flowchart TD
 
 ### FieldDeclaration `_iofOwned` · L229–229
 
-[Drilling.Common/Station/CStageReviewSequences.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L229-L229)
+[Drilling.Common/Station/CStageReviewSequences.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L229-L229)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1978,7 +1978,7 @@ flowchart TD
 
 ### FieldDeclaration `_moveMode` · L230–230
 
-[Drilling.Common/Station/CStageReviewSequences.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L230-L230)
+[Drilling.Common/Station/CStageReviewSequences.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L230-L230)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1993,7 +1993,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsDisposed` · L231–231
 
-[Drilling.Common/Station/CStageReviewSequences.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L231-L231)
+[Drilling.Common/Station/CStageReviewSequences.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L231-L231)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2008,7 +2008,7 @@ flowchart TD
 
 ### FieldDeclaration `_iofPlanId` · L232–232
 
-[Drilling.Common/Station/CStageReviewSequences.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L232-L232)
+[Drilling.Common/Station/CStageReviewSequences.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L232-L232)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2023,7 +2023,7 @@ flowchart TD
 
 ### FieldDeclaration `_iofStartConfirmed` · L233–233
 
-[Drilling.Common/Station/CStageReviewSequences.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L233-L233)
+[Drilling.Common/Station/CStageReviewSequences.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L233-L233)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2038,7 +2038,7 @@ flowchart TD
 
 ### FieldDeclaration `_iofAckConfirmed` · L233–233
 
-[Drilling.Common/Station/CStageReviewSequences.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L233-L233)
+[Drilling.Common/Station/CStageReviewSequences.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L233-L233)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2053,7 +2053,7 @@ flowchart TD
 
 ### FieldDeclaration `_scenario` · L234–234
 
-[Drilling.Common/Station/CStageReviewSequences.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L234-L234)
+[Drilling.Common/Station/CStageReviewSequences.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L234-L234)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2074,7 +2074,7 @@ flowchart TD
 
 ### FieldDeclaration `_traceSession` · L235–235
 
-[Drilling.Common/Station/CStageReviewSequences.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L235-L235)
+[Drilling.Common/Station/CStageReviewSequences.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L235-L235)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2104,7 +2104,7 @@ flowchart TD
 
 ### MethodDeclaration `Record` · L236–236
 
-[Drilling.Common/Station/CStageReviewSequences.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L236-L236)
+[Drilling.Common/Station/CStageReviewSequences.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L236-L236)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2125,34 +2125,34 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L313-L313) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L334-L334) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L348-L348) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:352–352](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L352-L352) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L356-L356) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L363-L363) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:377–377](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L377-L377) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:398–398](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L398-L398) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:402–402](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L402-L402) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:413–413](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L413-L413) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:424–424](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L424-L424) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L432-L432) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L451-L451) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L460-L460) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:464–464](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L464-L464) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:468–468](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L468-L468) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L489-L489) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:564–564](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L564-L564) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:602–602](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L602-L602) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:682–682](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L682-L682) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:695–695](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L695-L695) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:714–714](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L714-L714) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:729–729](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L729-L729) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:762–762](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L762-L762) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:873–873](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L873-L873) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:891–891](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L891-L891) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:900–900](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L900-L900) | Record | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:905–905](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L905-L905) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L313-L313) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L334-L334) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L348-L348) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:352–352](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L352-L352) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L356-L356) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L363-L363) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:377–377](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L377-L377) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:398–398](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L398-L398) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:402–402](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L402-L402) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:413–413](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L413-L413) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:424–424](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L424-L424) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L432-L432) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L451-L451) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L460-L460) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:464–464](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L464-L464) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:468–468](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L468-L468) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L489-L489) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:564–564](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L564-L564) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:602–602](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L602-L602) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:682–682](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L682-L682) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:695–695](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L695-L695) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:714–714](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L714-L714) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:729–729](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L729-L729) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:762–762](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L762-L762) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:873–873](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L873-L873) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:891–891](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L891-L891) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:900–900](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L900-L900) | Record | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:905–905](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L905-L905) | Record | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2170,7 +2170,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsSimulation` · L237–237
 
-[Drilling.Common/Station/CStageReviewSequences.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L237-L237)
+[Drilling.Common/Station/CStageReviewSequences.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L237-L237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2185,7 +2185,7 @@ flowchart TD
 
 ### PropertyDeclaration `CurrentX` · L238–238
 
-[Drilling.Common/Station/CStageReviewSequences.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L238-L238)
+[Drilling.Common/Station/CStageReviewSequences.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L238-L238)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2212,7 +2212,7 @@ flowchart TD
 
 ### PropertyDeclaration `CurrentY` · L239–239
 
-[Drilling.Common/Station/CStageReviewSequences.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L239-L239)
+[Drilling.Common/Station/CStageReviewSequences.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L239-L239)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2239,7 +2239,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L241–260
 
-[Drilling.Common/Station/CStageReviewSequences.cs:241–260](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L241-L260)
+[Drilling.Common/Station/CStageReviewSequences.cs:241–260](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L241-L260)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2264,8 +2264,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L73-L73) | new Session | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:186–186](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L186-L186) | new | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L73-L73) | new Session | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:186–186](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L186-L186) | new | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2317,7 +2317,7 @@ flowchart TD
 
 ### MethodDeclaration `Check` · L262–271
 
-[Drilling.Common/Station/CStageReviewSequences.cs:262–271](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L262-L271)
+[Drilling.Common/Station/CStageReviewSequences.cs:262–271](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L262-L271)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2337,18 +2337,18 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L306-L306) | Check | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L317-L317) | Check | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L330-L330) | Check | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:419–419](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L419-L419) | Check | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:486–486](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L486-L486) | Check | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:562–562](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L562-L562) | Check | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:642–642](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L642-L642) | Check | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L664-L664) | Check | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:757–757](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L757-L757) | Check | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:842–842](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L842-L842) | Check | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:878–878](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L878-L878) | Check | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:884–884](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L884-L884) | Check | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L306-L306) | Check | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L317-L317) | Check | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L330-L330) | Check | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:419–419](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L419-L419) | Check | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:486–486](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L486-L486) | Check | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:562–562](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L562-L562) | Check | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:642–642](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L642-L642) | Check | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L664-L664) | Check | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:757–757](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L757-L757) | Check | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:842–842](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L842-L842) | Check | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:878–878](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L878-L878) | Check | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:884–884](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L884-L884) | Check | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2395,7 +2395,7 @@ flowchart TD
 
 ### MethodDeclaration `Route` · L273–279
 
-[Drilling.Common/Station/CStageReviewSequences.cs:273–279](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L273-L279)
+[Drilling.Common/Station/CStageReviewSequences.cs:273–279](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L273-L279)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2414,16 +2414,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L283-L283) | Route | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L297-L297) | Route | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L307-L307) | Route | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L331-L331) | Route | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:374–374](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L374-L374) | Route | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:424–424](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L424-L424) | Route | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:487–487](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L487-L487) | Route | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L489-L489) | Route | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:778–778](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L778-L778) | Route | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:914–914](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L914-L914) | Route | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L283-L283) | Route | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L297-L297) | Route | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L307-L307) | Route | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L331-L331) | Route | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:374–374](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L374-L374) | Route | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:424–424](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L424-L424) | Route | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:487–487](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L487-L487) | Route | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L489-L489) | Route | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:778–778](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L778-L778) | Route | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:914–914](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L914-L914) | Route | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2457,7 +2457,7 @@ flowchart TD
 
 ### MethodDeclaration `Value` · L281–291
 
-[Drilling.Common/Station/CStageReviewSequences.cs:281–291](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L281-L291)
+[Drilling.Common/Station/CStageReviewSequences.cs:281–291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L281-L291)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2476,14 +2476,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L293-L293) | Value | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L318-L318) | Value | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:421–421](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L421-L421) | Value | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L570-L570) | Value | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L570-L570) | Value | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:735–735](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L735-L735) | Value | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:767–767](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L767-L767) | Value | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:767–767](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L767-L767) | Value | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L293-L293) | Value | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L318-L318) | Value | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:421–421](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L421-L421) | Value | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L570-L570) | Value | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L570-L570) | Value | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:735–735](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L735-L735) | Value | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:767–767](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L767-L767) | Value | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:767–767](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L767-L767) | Value | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2533,7 +2533,7 @@ flowchart TD
 
 ### MethodDeclaration `Feedback` · L293–293
 
-[Drilling.Common/Station/CStageReviewSequences.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L293-L293)
+[Drilling.Common/Station/CStageReviewSequences.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L293-L293)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2552,9 +2552,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L238-L238) | Feedback | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L239-L239) | Feedback | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:913–913](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L913-L913) | Feedback | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L238-L238) | Feedback | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L239-L239) | Feedback | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:913–913](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L913-L913) | Feedback | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2575,7 +2575,7 @@ flowchart TD
 
 ### MethodDeclaration `Describe` · L295–300
 
-[Drilling.Common/Station/CStageReviewSequences.cs:295–300](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L295-L300)
+[Drilling.Common/Station/CStageReviewSequences.cs:295–300](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L295-L300)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2594,15 +2594,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L286-L286) | Describe | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:311–311](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L311-L311) | Describe | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L313-L313) | Describe | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L323-L323) | Describe | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L324-L324) | Describe | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:449–449](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L449-L449) | Describe | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L451-L451) | Describe | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:870–870](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L870-L870) | Describe | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:919–919](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L919-L919) | Describe | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L286-L286) | Describe | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:311–311](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L311-L311) | Describe | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L313-L313) | Describe | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L323-L323) | Describe | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L324-L324) | Describe | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:449–449](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L449-L449) | Describe | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L451-L451) | Describe | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:870–870](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L870-L870) | Describe | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:919–919](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L919-L919) | Describe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2630,7 +2630,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshInputs` · L302–327
 
-[Drilling.Common/Station/CStageReviewSequences.cs:302–327](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L302-L327)
+[Drilling.Common/Station/CStageReviewSequences.cs:302–327](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L302-L327)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2651,10 +2651,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:420–420](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L420-L420) | RefreshInputs | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:643–643](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L643-L643) | RefreshInputs | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L665-L665) | RefreshInputs | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:883–883](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L883-L883) | RefreshInputs | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:420–420](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L420-L420) | RefreshInputs | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:643–643](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L643-L643) | RefreshInputs | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L665-L665) | RefreshInputs | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:883–883](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L883-L883) | RefreshInputs | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2738,7 +2738,7 @@ flowchart TD
 
 ### MethodDeclaration `Write` · L328–368
 
-[Drilling.Common/Station/CStageReviewSequences.cs:328–368](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L328-L368)
+[Drilling.Common/Station/CStageReviewSequences.cs:328–368](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L328-L368)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2760,33 +2760,33 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:574–574](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L574-L574) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:575–575](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L575-L575) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:576–576](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L576-L576) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:577–577](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L577-L577) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:578–578](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L578-L578) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:579–579](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L579-L579) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:587–587](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L587-L587) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L606-L606) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:607–607](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L607-L607) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:610–610](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L610-L610) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:689–689](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L689-L689) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:690–690](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L690-L690) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:691–691](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L691-L691) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:696–696](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L696-L696) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:702–702](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L702-L702) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:703–703](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L703-L703) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:723–723](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L723-L723) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:724–724](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L724-L724) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:725–725](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L725-L725) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:726–726](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L726-L726) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:728–728](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L728-L728) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:773–773](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L773-L773) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:774–774](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L774-L774) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:792–792](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L792-L792) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:802–802](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L802-L802) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:803–803](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L803-L803) | Write | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:807–807](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L807-L807) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:574–574](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L574-L574) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:575–575](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L575-L575) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:576–576](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L576-L576) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:577–577](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L577-L577) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:578–578](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L578-L578) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:579–579](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L579-L579) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:587–587](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L587-L587) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L606-L606) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:607–607](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L607-L607) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:610–610](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L610-L610) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:689–689](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L689-L689) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:690–690](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L690-L690) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:691–691](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L691-L691) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:696–696](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L696-L696) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:702–702](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L702-L702) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:703–703](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L703-L703) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:723–723](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L723-L723) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:724–724](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L724-L724) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:725–725](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L725-L725) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:726–726](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L726-L726) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:728–728](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L728-L728) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:773–773](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L773-L773) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:774–774](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L774-L774) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:792–792](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L792-L792) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:802–802](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L802-L802) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:803–803](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L803-L803) | Write | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:807–807](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L807-L807) | Write | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2912,7 +2912,7 @@ flowchart TD
 
 ### MethodDeclaration `Stage` · L370–378
 
-[Drilling.Common/Station/CStageReviewSequences.cs:370–378](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L370-L378)
+[Drilling.Common/Station/CStageReviewSequences.cs:370–378](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L370-L378)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2933,19 +2933,19 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:572–572](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L572-L572) | Stage | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:583–583](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L583-L583) | Stage | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:596–596](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L596-L596) | Stage | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L608-L608) | Stage | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:692–692](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L692-L692) | Stage | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:704–704](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L704-L704) | Stage | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:769–769](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L769-L769) | Stage | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:770–770](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L770-L770) | Stage | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:771–771](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L771-L771) | Stage | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:794–794](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L794-L794) | Stage | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:795–795](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L795-L795) | Stage | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:796–796](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L796-L796) | Stage | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:805–805](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L805-L805) | Stage | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:572–572](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L572-L572) | Stage | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:583–583](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L583-L583) | Stage | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:596–596](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L596-L596) | Stage | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L608-L608) | Stage | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:692–692](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L692-L692) | Stage | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:704–704](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L704-L704) | Stage | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:769–769](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L769-L769) | Stage | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:770–770](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L770-L770) | Stage | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:771–771](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L771-L771) | Stage | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:794–794](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L794-L794) | Stage | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:795–795](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L795-L795) | Stage | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:796–796](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L796-L796) | Stage | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:805–805](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L805-L805) | Stage | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2983,7 +2983,7 @@ flowchart TD
 
 ### MethodDeclaration `RecordIofSnapshot` · L381–404
 
-[Drilling.Common/Station/CStageReviewSequences.cs:381–404](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L381-L404)
+[Drilling.Common/Station/CStageReviewSequences.cs:381–404](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L381-L404)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3003,9 +3003,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:414–414](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L414-L414) | RecordIofSnapshot | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:440–440](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L440-L440) | RecordIofSnapshot | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L450-L450) | RecordIofSnapshot | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:414–414](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L414-L414) | RecordIofSnapshot | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:440–440](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L440-L440) | RecordIofSnapshot | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L450-L450) | RecordIofSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3073,7 +3073,7 @@ flowchart TD
 
 ### MethodDeclaration `Wait` · L406–455
 
-[Drilling.Common/Station/CStageReviewSequences.cs:406–455](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L406-L455)
+[Drilling.Common/Station/CStageReviewSequences.cs:406–455](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L406-L455)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3096,13 +3096,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:573–573](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L573-L573) | Wait | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:585–585](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L585-L585) | Wait | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:599–599](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L599-L599) | Wait | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:609–609](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L609-L609) | Wait | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:772–772](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L772-L772) | Wait | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:797–797](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L797-L797) | Wait | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:806–806](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L806-L806) | Wait | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:573–573](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L573-L573) | Wait | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:585–585](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L585-L585) | Wait | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:599–599](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L599-L599) | Wait | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:609–609](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L609-L609) | Wait | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:772–772](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L772-L772) | Wait | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:797–797](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L797-L797) | Wait | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:806–806](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L806-L806) | Wait | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3234,7 +3234,7 @@ flowchart TD
 
 ### MethodDeclaration `Step` · L457–474
 
-[Drilling.Common/Station/CStageReviewSequences.cs:457–474](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L457-L474)
+[Drilling.Common/Station/CStageReviewSequences.cs:457–474](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L457-L474)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3254,12 +3254,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:565–580](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L565-L580) | Step | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:581–603](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L581-L603) | Step | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:604–612](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L604-L612) | Step | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:613–613](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L613-L613) | Step | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:763–798](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L763-L798) | Step | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:799–809](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L799-L809) | Step | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:565–580](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L565-L580) | Step | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:581–603](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L581-L603) | Step | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:604–612](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L604-L612) | Step | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:613–613](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L613-L613) | Step | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:763–798](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L763-L798) | Step | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:799–809](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L799-L809) | Step | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3315,7 +3315,7 @@ flowchart TD
 
 ### MethodDeclaration `InitialRead` · L476–493
 
-[Drilling.Common/Station/CStageReviewSequences.cs:476–493](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L476-L493)
+[Drilling.Common/Station/CStageReviewSequences.cs:476–493](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L476-L493)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3335,13 +3335,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:516–516](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L516-L516) | InitialRead | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:519–519](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L519-L519) | InitialRead | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L534-L534) | InitialRead | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:536–536](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L536-L536) | InitialRead | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L567-L567) | InitialRead | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:734–734](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L734-L734) | InitialRead | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:765–765](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L765-L765) | InitialRead | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:516–516](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L516-L516) | InitialRead | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:519–519](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L519-L519) | InitialRead | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L534-L534) | InitialRead | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:536–536](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L536-L536) | InitialRead | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L567-L567) | InitialRead | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:734–734](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L734-L734) | InitialRead | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:765–765](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L765-L765) | InitialRead | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3412,7 +3412,7 @@ flowchart TD
 
 ### MethodDeclaration `Stop` · L495–500
 
-[Drilling.Common/Station/CStageReviewSequences.cs:495–500](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L495-L500)
+[Drilling.Common/Station/CStageReviewSequences.cs:495–500](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L495-L500)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3425,9 +3425,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2603–2603](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2603-L2603) | _session.Stop | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:506–506](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L506-L506) | Stop | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:683–683](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L683-L683) | Stop | False |
+| [Drilling.Common/Review/CReviewManager.cs:2603–2603](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2603-L2603) | _session.Stop | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:506–506](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L506-L506) | Stop | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:683–683](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L683-L683) | Stop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3457,7 +3457,7 @@ flowchart TD
 
 ### MethodDeclaration `Dispose` · L502–511
 
-[Drilling.Common/Station/CStageReviewSequences.cs:502–511](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L502-L511)
+[Drilling.Common/Station/CStageReviewSequences.cs:502–511](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L502-L511)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3470,11 +3470,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:416–416](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CPowerMeasureRun.cs#L416-L416) | .Dispose | False |
-| [Drilling.Common/Review/CReviewManager.cs:2604–2604](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2604-L2604) | _session.Dispose | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L75-L75) | session.Dispose | False |
-| [Drilling.Common/Station/CStationProcess.cs:3621–3621](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3621-L3621) | .Dispose | False |
-| [Drilling.Common/Station/CStationProcess.cs:6630–6630](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6630-L6630) | .Dispose | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:416–416](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L416-L416) | .Dispose | False |
+| [Drilling.Common/Review/CReviewManager.cs:2604–2604](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2604-L2604) | _session.Dispose | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L75-L75) | session.Dispose | False |
+| [Drilling.Common/Station/CStationProcess.cs:3621–3621](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3621-L3621) | .Dispose | False |
+| [Drilling.Common/Station/CStationProcess.cs:6630–6630](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6630-L6630) | .Dispose | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3513,7 +3513,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveAxis` · L513–526
 
-[Drilling.Common/Station/CStageReviewSequences.cs:513–526](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L513-L526)
+[Drilling.Common/Station/CStageReviewSequences.cs:513–526](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L513-L526)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3536,7 +3536,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L173-L173) | session.MoveAxis | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L173-L173) | session.MoveAxis | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3587,7 +3587,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadStationaryPosition` · L528–538
 
-[Drilling.Common/Station/CStageReviewSequences.cs:528–538](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L528-L538)
+[Drilling.Common/Station/CStageReviewSequences.cs:528–538](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L528-L538)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3607,10 +3607,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2597–2597](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2597-L2597) | _session.ReadStationaryPosition | False |
-| [Drilling.Common/Station/CStationProcess.cs:3519–3519](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3519-L3519) | stage.ReadStationaryPosition | False |
-| [Drilling.Common/Station/CStationProcess.cs:3556–3556](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3556-L3556) | stage!.ReadStationaryPosition | False |
-| [Drilling.Common/Station/CStationProcess.cs:6329–6329](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6329-L6329) | session.ReadStationaryPosition | False |
+| [Drilling.Common/Review/CReviewManager.cs:2597–2597](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2597-L2597) | _session.ReadStationaryPosition | False |
+| [Drilling.Common/Station/CStationProcess.cs:3519–3519](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3519-L3519) | stage.ReadStationaryPosition | False |
+| [Drilling.Common/Station/CStationProcess.cs:3556–3556](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3556-L3556) | stage!.ReadStationaryPosition | False |
+| [Drilling.Common/Station/CStationProcess.cs:6329–6329](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6329-L6329) | session.ReadStationaryPosition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3669,7 +3669,7 @@ flowchart TD
 
 ### MethodDeclaration `Move` · L540–628
 
-[Drilling.Common/Station/CStageReviewSequences.cs:540–628](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L540-L628)
+[Drilling.Common/Station/CStageReviewSequences.cs:540–628](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L540-L628)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3689,12 +3689,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2592–2592](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2592-L2592) | _session.Move | False |
-| [Drilling.Common/Review/CReviewManager.cs:2599–2599](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2599-L2599) | _session.Move | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:523–525](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L523-L525) | Move | False |
-| [Drilling.Common/Station/CStationProcess.cs:3695–3696](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3695-L3696) | stage.Move | False |
-| [Drilling.Common/Station/CStationProcess.cs:6350–6350](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6350-L6350) | session.Move | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3768–3768](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3768-L3768) | stage.Move | False |
+| [Drilling.Common/Review/CReviewManager.cs:2592–2592](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2592-L2592) | _session.Move | False |
+| [Drilling.Common/Review/CReviewManager.cs:2599–2599](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2599-L2599) | _session.Move | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:523–525](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L523-L525) | Move | False |
+| [Drilling.Common/Station/CStationProcess.cs:3695–3696](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3695-L3696) | stage.Move | False |
+| [Drilling.Common/Station/CStationProcess.cs:6350–6350](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6350-L6350) | session.Move | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3768–3768](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3768-L3768) | stage.Move | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3944,7 +3944,7 @@ flowchart TD
 
 ### MethodDeclaration `FeedbackIds` · L630–632
 
-[Drilling.Common/Station/CStageReviewSequences.cs:630–632](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L630-L632)
+[Drilling.Common/Station/CStageReviewSequences.cs:630–632](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L630-L632)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3964,10 +3964,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:643–643](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L643-L643) | FeedbackIds | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:644–644](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L644-L644) | FeedbackIds | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L665-L665) | FeedbackIds | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:666–666](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L666-L666) | FeedbackIds | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:643–643](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L643-L643) | FeedbackIds | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:644–644](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L644-L644) | FeedbackIds | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L665-L665) | FeedbackIds | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:666–666](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L666-L666) | FeedbackIds | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3999,7 +3999,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitStopped` · L634–651
 
-[Drilling.Common/Station/CStageReviewSequences.cs:634–651](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L634-L651)
+[Drilling.Common/Station/CStageReviewSequences.cs:634–651](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L634-L651)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4020,12 +4020,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:517–517](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L517-L517) | WaitStopped | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:535–535](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L535-L535) | WaitStopped | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L568-L568) | WaitStopped | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:694–694](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L694-L694) | WaitStopped | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:727–727](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L727-L727) | WaitStopped | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:766–766](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L766-L766) | WaitStopped | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:517–517](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L517-L517) | WaitStopped | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:535–535](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L535-L535) | WaitStopped | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L568-L568) | WaitStopped | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:694–694](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L694-L694) | WaitStopped | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:727–727](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L727-L727) | WaitStopped | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:766–766](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L766-L766) | WaitStopped | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4099,7 +4099,7 @@ flowchart TD
 
 ### MethodDeclaration `VerifyArrival` · L653–653
 
-[Drilling.Common/Station/CStageReviewSequences.cs:653–653](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L653-L653)
+[Drilling.Common/Station/CStageReviewSequences.cs:653–653](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L653-L653)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4119,7 +4119,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2600–2600](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2600-L2600) | _session.VerifyArrival | False |
+| [Drilling.Common/Review/CReviewManager.cs:2600–2600](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2600-L2600) | _session.VerifyArrival | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4137,7 +4137,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitArrival` · L655–678
 
-[Drilling.Common/Station/CStageReviewSequences.cs:655–678](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L655-L678)
+[Drilling.Common/Station/CStageReviewSequences.cs:655–678](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L655-L678)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4157,9 +4157,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:595–595](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L595-L595) | WaitArrival | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:600–600](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L600-L600) | WaitArrival | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:653–653](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L653-L653) | WaitArrival | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:595–595](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L595-L595) | WaitArrival | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:600–600](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L600-L600) | WaitArrival | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:653–653](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L653-L653) | WaitArrival | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4243,7 +4243,7 @@ flowchart TD
 
 ### MethodDeclaration `Abort` · L680–717
 
-[Drilling.Common/Station/CStageReviewSequences.cs:680–717](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L680-L717)
+[Drilling.Common/Station/CStageReviewSequences.cs:680–717](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L680-L717)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4262,8 +4262,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:617–617](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L617-L617) | Abort | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:814–814](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L814-L814) | Abort | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:617–617](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L617-L617) | Abort | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:814–814](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L814-L814) | Abort | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4375,7 +4375,7 @@ flowchart TD
 
 ### MethodDeclaration `RecoverStoppedOutputs` · L719–730
 
-[Drilling.Common/Station/CStageReviewSequences.cs:719–730](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L719-L730)
+[Drilling.Common/Station/CStageReviewSequences.cs:719–730](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L719-L730)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4394,8 +4394,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L74-L74) | session.RecoverStoppedOutputs | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:737–737](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L737-L737) | RecoverStoppedOutputs | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L74-L74) | session.RecoverStoppedOutputs | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:737–737](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L737-L737) | RecoverStoppedOutputs | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4451,7 +4451,7 @@ flowchart TD
 
 ### MethodDeclaration `RecoverRetainedStop` · L732–738
 
-[Drilling.Common/Station/CStageReviewSequences.cs:732–738](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L732-L738)
+[Drilling.Common/Station/CStageReviewSequences.cs:732–738](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L732-L738)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4470,7 +4470,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L84-L84) | session.RecoverRetainedStop | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L84-L84) | session.RecoverRetainedStop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4516,7 +4516,7 @@ flowchart TD
 
 ### MethodDeclaration `PrepareIof` · L740–824
 
-[Drilling.Common/Station/CStageReviewSequences.cs:740–824](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L740-L824)
+[Drilling.Common/Station/CStageReviewSequences.cs:740–824](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L740-L824)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4537,8 +4537,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2602–2602](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2602-L2602) | _session.PrepareIof | False |
-| [Drilling.Common/Station/CStationProcess.cs:6436–6436](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6436-L6436) | _stage.PrepareIof | False |
+| [Drilling.Common/Review/CReviewManager.cs:2602–2602](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2602-L2602) | _session.PrepareIof | False |
+| [Drilling.Common/Station/CStationProcess.cs:6436–6436](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6436-L6436) | _stage.PrepareIof | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4827,7 +4827,7 @@ flowchart TD
 
 ### MethodDeclaration `InitializeZeroLineReadyY` · L826–831
 
-[Drilling.Common/Station/CStageReviewSequences.cs:826–831](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L826-L831)
+[Drilling.Common/Station/CStageReviewSequences.cs:826–831](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L826-L831)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4846,7 +4846,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:6434–6434](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6434-L6434) | _stage.InitializeZeroLineReadyY | False |
+| [Drilling.Common/Station/CStationProcess.cs:6434–6434](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6434-L6434) | _stage.InitializeZeroLineReadyY | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4877,7 +4877,7 @@ flowchart TD
 
 ### MethodDeclaration `BeginZeroLineSimulation` · L838–850
 
-[Drilling.Common/Station/CStageReviewSequences.cs:838–850](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L838-L850)
+[Drilling.Common/Station/CStageReviewSequences.cs:838–850](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L838-L850)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4907,7 +4907,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:6455–6455](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6455-L6455) | _stage.BeginZeroLineSimulation | False |
+| [Drilling.Common/Station/CStationProcess.cs:6455–6455](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6455-L6455) | _stage.BeginZeroLineSimulation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4945,7 +4945,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitZeroLineEndPosition` · L853–908
 
-[Drilling.Common/Station/CStageReviewSequences.cs:853–908](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L853-L908)
+[Drilling.Common/Station/CStageReviewSequences.cs:853–908](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L853-L908)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4971,7 +4971,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:6472–6472](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6472-L6472) | _stage.WaitZeroLineEndPosition | False |
+| [Drilling.Common/Station/CStationProcess.cs:6472–6472](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6472-L6472) | _stage.WaitZeroLineEndPosition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5104,7 +5104,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Evidence` · L867–872
 
-[Drilling.Common/Station/CStageReviewSequences.cs:867–872](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L867-L872)
+[Drilling.Common/Station/CStageReviewSequences.cs:867–872](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L867-L872)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5117,8 +5117,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:899–899](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L899-L899) | Evidence | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:905–905](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L905-L905) | Evidence | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:899–899](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L899-L899) | Evidence | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:905–905](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L905-L905) | Evidence | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5157,7 +5157,7 @@ flowchart TD
 
 ### MethodDeclaration `ZeroLineFeedback` · L910–924
 
-[Drilling.Common/Station/CStageReviewSequences.cs:910–924](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L910-L924)
+[Drilling.Common/Station/CStageReviewSequences.cs:910–924](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L910-L924)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5177,8 +5177,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:886–886](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L886-L886) | ZeroLineFeedback | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:887–887](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L887-L887) | ZeroLineFeedback | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:886–886](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L886-L886) | ZeroLineFeedback | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:887–887](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L887-L887) | ZeroLineFeedback | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5245,7 +5245,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `XY` · L931–931
 
-[Drilling.Common/Station/CStageReviewSequences.cs:931–931](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L931-L931)
+[Drilling.Common/Station/CStageReviewSequences.cs:931–931](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L931-L931)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5260,7 +5260,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `ReviewX` · L932–932
 
-[Drilling.Common/Station/CStageReviewSequences.cs:932–932](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L932-L932)
+[Drilling.Common/Station/CStageReviewSequences.cs:932–932](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L932-L932)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5275,7 +5275,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `StageY` · L933–933
 
-[Drilling.Common/Station/CStageReviewSequences.cs:933–933](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L933-L933)
+[Drilling.Common/Station/CStageReviewSequences.cs:933–933](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L933-L933)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5290,7 +5290,7 @@ flowchart TD
 
 ### PropertyDeclaration `Detail` · L941–941
 
-[Drilling.Common/Station/CStageReviewSequences.cs:941–941](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L941-L941)
+[Drilling.Common/Station/CStageReviewSequences.cs:941–941](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L941-L941)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5305,7 +5305,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Detail` · L941–941
 
-[Drilling.Common/Station/CStageReviewSequences.cs:941–941](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L941-L941)
+[Drilling.Common/Station/CStageReviewSequences.cs:941–941](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L941-L941)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5320,7 +5320,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_Detail` · L941–941
 
-[Drilling.Common/Station/CStageReviewSequences.cs:941–941](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L941-L941)
+[Drilling.Common/Station/CStageReviewSequences.cs:941–941](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L941-L941)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

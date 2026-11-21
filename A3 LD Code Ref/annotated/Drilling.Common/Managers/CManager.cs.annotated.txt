@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.Common/Managers/CManager.cs
-Commit: 28764c91d521777b8ee068dd7aaf2d3902ce9fe2
+Commit: 334b3599651b2e8e0181fd4459bafaf3cddafff3
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Log;
@@ -55,7 +55,7 @@ L000025 |     private readonly CProductFileBase _productFile; ⟦EOL⟧
 L000026 |     private readonly CReviewResultFileBase _reviewResultFile; ⟦EOL⟧
 // 해설 L27: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.CReviewOffsetFileBase Drilling.Common.Managers.CManager._reviewOffsetFile
 L000027 |     private readonly CReviewOffsetFileBase _reviewOffsetFile; ⟦EOL⟧
-// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · CLogManager Drilling.Common.Managers.CManager._logManager
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Log.CLogManager Drilling.Common.Managers.CManager._logManager
 L000028 |     private readonly CLogManager _logManager; ⟦EOL⟧
 // 해설 L29: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Station.CAutomationScriptFileBase Drilling.Common.Managers.CManager._automationScriptFile
 L000029 |     private readonly CAutomationScriptFileBase _automationScriptFile; ⟦EOL⟧
@@ -742,7 +742,7 @@ L000385 |         return _interLockManager; ⟦EOL⟧
 // 해설 L386: 구문 블록 경계입니다 · 소속 InterLock.
 L000386 |     } ⟦EOL⟧
 L000387 |  ⟦EOL⟧
-// 해설 L388: 선언·서명/매개변수·접근 조건입니다 · CLogManager Drilling.Common.Managers.CManager.Log()
+// 해설 L388: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Log.CLogManager Drilling.Common.Managers.CManager.Log()
 L000388 |     public CLogManager Log() ⟦EOL⟧
 // 해설 L389: 구문 블록 경계입니다 · 소속 Log.
 L000389 |     { ⟦EOL⟧

@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 09f2e5df917b40012488baaad112bcba54488350e86e3bdc181cffa5ffeee8ab |
 | 파일 분류 | code |
 | 원본 크기/행 | 144,797 bytes / 3,356 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -115,7 +115,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | _lastMainLiveStatusError | FieldDeclaration | L125–125 | string Drilling.UI.CRootView._lastMainLiveStatusError |
 | _lastClockTickError | FieldDeclaration | L126–126 | string Drilling.UI.CRootView._lastClockTickError |
 | _pmLockStatus | FieldDeclaration | L127–127 | Drilling.Common.Managers.ST_PM_LOCK_STATUS Drilling.UI.CRootView._pmLockStatus |
-| _activePmSession | FieldDeclaration | L128–128 | ST_PM_HISTORY_ENTRY? Drilling.UI.CRootView._activePmSession |
+| _activePmSession | FieldDeclaration | L128–128 | Drilling.Common.Log.ST_PM_HISTORY_ENTRY? Drilling.UI.CRootView._activePmSession |
 | _isPmUnlocking | FieldDeclaration | L129–129 | bool Drilling.UI.CRootView._isPmUnlocking |
 | _isPmNavigationUnlockPromptOpen | FieldDeclaration | L130–130 | bool Drilling.UI.CRootView._isPmNavigationUnlockPromptOpen |
 | AutoCycleStopTimeout | FieldDeclaration | L131–131 | System.TimeSpan Drilling.UI.CRootView.AutoCycleStopTimeout |
@@ -400,7 +400,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `SoftwareVersion` · L26–26
 
-[Drilling.UI/CRootView.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L26-L26)
+[Drilling.UI/CRootView.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -427,7 +427,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_alarmDispatcher` · L29–29
 
-[Drilling.UI/CRootView.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L29-L29)
+[Drilling.UI/CRootView.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -448,7 +448,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_alarmNavigation` · L30–30
 
-[Drilling.UI/CRootView.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L30-L30)
+[Drilling.UI/CRootView.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -476,7 +476,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_heavyOccurrences` · L31–31
 
-[Drilling.UI/CRootView.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L31-L31)
+[Drilling.UI/CRootView.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -497,7 +497,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_alarmRefreshQueued` · L32–32
 
-[Drilling.UI/CRootView.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L32-L32)
+[Drilling.UI/CRootView.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L32-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -512,7 +512,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isAlarmNavigation` · L33–33
 
-[Drilling.UI/CRootView.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L33-L33)
+[Drilling.UI/CRootView.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -533,7 +533,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isHeaderAlarmResetRunning` · L34–34
 
-[Drilling.UI/CRootView.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L34-L34)
+[Drilling.UI/CRootView.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L34-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -548,7 +548,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_heavyRecoveryBlocked` · L35–35
 
-[Drilling.UI/CRootView.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L35-L35)
+[Drilling.UI/CRootView.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L35-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -563,7 +563,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_heavyAlarmRecoveryTask` · L36–36
 
-[Drilling.UI/CRootView.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L36-L36)
+[Drilling.UI/CRootView.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L36-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -578,7 +578,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_alarmRecoveryStatus` · L37–37
 
-[Drilling.UI/CRootView.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L37-L37)
+[Drilling.UI/CRootView.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L37-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -599,7 +599,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_alarmPopup` · L38–38
 
-[Drilling.UI/CRootView.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L38-L38)
+[Drilling.UI/CRootView.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -614,7 +614,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_headerAlarmResetCommand` · L39–39
 
-[Drilling.UI/CRootView.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L39-L39)
+[Drilling.UI/CRootView.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -629,7 +629,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `MainLiveStatusRefreshInterval` · L40–40
 
-[Drilling.UI/CRootView.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L40-L40)
+[Drilling.UI/CRootView.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L40-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -657,7 +657,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `MainLiveStatusTimeout` · L41–41
 
-[Drilling.UI/CRootView.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L41-L41)
+[Drilling.UI/CRootView.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L41-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -685,7 +685,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `MonitorDefaultRefreshInterval` · L42–42
 
-[Drilling.UI/CRootView.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L42-L42)
+[Drilling.UI/CRootView.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L42-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -713,7 +713,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `MonitorShellStatusRefreshInterval` · L43–43
 
-[Drilling.UI/CRootView.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L43-L43)
+[Drilling.UI/CRootView.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L43-L43)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -741,7 +741,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `PmLifeStatusRefreshInterval` · L44–44
 
-[Drilling.UI/CRootView.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L44-L44)
+[Drilling.UI/CRootView.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L44-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -769,7 +769,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `ErrorReportInterval` · L45–45
 
-[Drilling.UI/CRootView.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L45-L45)
+[Drilling.UI/CRootView.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L45-L45)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -797,7 +797,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `SelectRecipeSettingKey` · L46–46
 
-[Drilling.UI/CRootView.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L46-L46)
+[Drilling.UI/CRootView.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -818,7 +818,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `DefaultRecipeId` · L47–47
 
-[Drilling.UI/CRootView.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L47-L47)
+[Drilling.UI/CRootView.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L47-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -839,7 +839,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `ShiftOffsetXKey` · L48–48
 
-[Drilling.UI/CRootView.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L48-L48)
+[Drilling.UI/CRootView.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L48-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -860,7 +860,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `ShiftOffsetYKey` · L49–49
 
-[Drilling.UI/CRootView.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L49-L49)
+[Drilling.UI/CRootView.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L49-L49)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -881,7 +881,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `PmUnlockPasswordKey` · L50–50
 
-[Drilling.UI/CRootView.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L50-L50)
+[Drilling.UI/CRootView.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L50-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -902,7 +902,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `OperatorMenus` · L51–51
 
-[Drilling.UI/CRootView.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L51-L51)
+[Drilling.UI/CRootView.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L51-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -923,7 +923,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `AutoModeMenus` · L52–58
 
-[Drilling.UI/CRootView.cs:52–58](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L52-L58)
+[Drilling.UI/CRootView.cs:52–58](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L52-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -951,7 +951,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `HeaderModules` · L59–69
 
-[Drilling.UI/CRootView.cs:59–69](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L59-L69)
+[Drilling.UI/CRootView.cs:59–69](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L59-L69)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -972,7 +972,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_stationManager` · L70–70
 
-[Drilling.UI/CRootView.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L70-L70)
+[Drilling.UI/CRootView.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L70-L70)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -987,7 +987,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_manager` · L71–71
 
-[Drilling.UI/CRootView.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L71-L71)
+[Drilling.UI/CRootView.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L71-L71)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1002,7 +1002,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_interfaceManager` · L72–72
 
-[Drilling.UI/CRootView.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L72-L72)
+[Drilling.UI/CRootView.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L72-L72)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1017,7 +1017,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_motionManager` · L73–73
 
-[Drilling.UI/CRootView.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L73-L73)
+[Drilling.UI/CRootView.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L73-L73)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1032,7 +1032,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_alarmManager` · L74–74
 
-[Drilling.UI/CRootView.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L74-L74)
+[Drilling.UI/CRootView.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L74-L74)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1047,7 +1047,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_interLockManager` · L75–75
 
-[Drilling.UI/CRootView.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L75-L75)
+[Drilling.UI/CRootView.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L75-L75)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1062,7 +1062,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_recipeManager` · L76–76
 
-[Drilling.UI/CRootView.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L76-L76)
+[Drilling.UI/CRootView.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L76-L76)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1077,7 +1077,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_productManager` · L77–77
 
-[Drilling.UI/CRootView.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L77-L77)
+[Drilling.UI/CRootView.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L77-L77)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1092,7 +1092,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_reviewManager` · L78–78
 
-[Drilling.UI/CRootView.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L78-L78)
+[Drilling.UI/CRootView.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L78-L78)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1107,7 +1107,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_menus` · L79–79
 
-[Drilling.UI/CRootView.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L79-L79)
+[Drilling.UI/CRootView.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L79-L79)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1122,7 +1122,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedHeaderModuleIndexes` · L80–80
 
-[Drilling.UI/CRootView.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L80-L80)
+[Drilling.UI/CRootView.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L80-L80)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1150,7 +1150,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_screenCache` · L81–81
 
-[Drilling.UI/CRootView.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L81-L81)
+[Drilling.UI/CRootView.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L81-L81)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1178,7 +1178,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_screenBuildSync` · L82–82
 
-[Drilling.UI/CRootView.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L82-L82)
+[Drilling.UI/CRootView.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L82-L82)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1206,7 +1206,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_processPreparationGate` · L83–83
 
-[Drilling.UI/CRootView.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L83-L83)
+[Drilling.UI/CRootView.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L83-L83)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1234,7 +1234,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_initialProcessModelCts` · L84–84
 
-[Drilling.UI/CRootView.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L84-L84)
+[Drilling.UI/CRootView.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L84-L84)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1262,7 +1262,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_initialProcessModelTask` · L85–85
 
-[Drilling.UI/CRootView.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L85-L85)
+[Drilling.UI/CRootView.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L85-L85)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1277,7 +1277,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedMenu` · L86–86
 
-[Drilling.UI/CRootView.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L86-L86)
+[Drilling.UI/CRootView.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L86-L86)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1292,7 +1292,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_navigationSelectedMenu` · L87–87
 
-[Drilling.UI/CRootView.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L87-L87)
+[Drilling.UI/CRootView.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L87-L87)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1307,7 +1307,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_currentScreen` · L88–88
 
-[Drilling.UI/CRootView.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L88-L88)
+[Drilling.UI/CRootView.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L88-L88)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1322,7 +1322,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_systemStatus` · L89–89
 
-[Drilling.UI/CRootView.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L89-L89)
+[Drilling.UI/CRootView.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L89-L89)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1350,7 +1350,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_interfaceCommStatuses` · L90–90
 
-[Drilling.UI/CRootView.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L90-L90)
+[Drilling.UI/CRootView.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L90-L90)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1371,7 +1371,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_statusMessage` · L91–91
 
-[Drilling.UI/CRootView.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L91-L91)
+[Drilling.UI/CRootView.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L91-L91)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1392,7 +1392,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_currentDateText` · L92–92
 
-[Drilling.UI/CRootView.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L92-L92)
+[Drilling.UI/CRootView.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L92-L92)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1420,7 +1420,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_currentTimeText` · L93–93
 
-[Drilling.UI/CRootView.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L93-L93)
+[Drilling.UI/CRootView.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L93-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1448,7 +1448,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedHeadNo` · L94–94
 
-[Drilling.UI/CRootView.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L94-L94)
+[Drilling.UI/CRootView.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L94-L94)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1469,7 +1469,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedManualSettingName` · L95–95
 
-[Drilling.UI/CRootView.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L95-L95)
+[Drilling.UI/CRootView.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L95-L95)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1490,7 +1490,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedRecipeId` · L96–96
 
-[Drilling.UI/CRootView.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L96-L96)
+[Drilling.UI/CRootView.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L96-L96)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1511,7 +1511,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_viewRecipeId` · L97–97
 
-[Drilling.UI/CRootView.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L97-L97)
+[Drilling.UI/CRootView.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L97-L97)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1532,7 +1532,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedRecipeCategory` · L98–98
 
-[Drilling.UI/CRootView.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L98-L98)
+[Drilling.UI/CRootView.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L98-L98)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1553,7 +1553,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedSettingTab` · L99–99
 
-[Drilling.UI/CRootView.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L99-L99)
+[Drilling.UI/CRootView.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L99-L99)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1574,7 +1574,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedSettingGroup` · L100–100
 
-[Drilling.UI/CRootView.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L100-L100)
+[Drilling.UI/CRootView.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L100-L100)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1595,7 +1595,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedMonitorTab` · L101–101
 
-[Drilling.UI/CRootView.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L101-L101)
+[Drilling.UI/CRootView.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L101-L101)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1616,7 +1616,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_shiftOffsetX` · L102–102
 
-[Drilling.UI/CRootView.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L102-L102)
+[Drilling.UI/CRootView.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L102-L102)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1637,7 +1637,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_shiftOffsetY` · L103–103
 
-[Drilling.UI/CRootView.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L103-L103)
+[Drilling.UI/CRootView.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L103-L103)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1658,7 +1658,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_operationMode` · L104–104
 
-[Drilling.UI/CRootView.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L104-L104)
+[Drilling.UI/CRootView.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L104-L104)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1679,7 +1679,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_autoCycleState` · L105–105
 
-[Drilling.UI/CRootView.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L105-L105)
+[Drilling.UI/CRootView.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L105-L105)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1700,7 +1700,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isAutoSequenceInitializing` · L106–106
 
-[Drilling.UI/CRootView.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L106-L106)
+[Drilling.UI/CRootView.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L106-L106)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1715,7 +1715,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_autoCycleCts` · L107–107
 
-[Drilling.UI/CRootView.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L107-L107)
+[Drilling.UI/CRootView.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L107-L107)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1730,7 +1730,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_autoCycleCompletion` · L108–108
 
-[Drilling.UI/CRootView.cs:108–108](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L108-L108)
+[Drilling.UI/CRootView.cs:108–108](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L108-L108)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1745,7 +1745,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_currentTheme` · L109–109
 
-[Drilling.UI/CRootView.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L109-L109)
+[Drilling.UI/CRootView.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L109-L109)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1766,7 +1766,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_statusRefreshRunning` · L110–110
 
-[Drilling.UI/CRootView.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L110-L110)
+[Drilling.UI/CRootView.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L110-L110)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1781,7 +1781,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_screenRefreshRunning` · L111–111
 
-[Drilling.UI/CRootView.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L111-L111)
+[Drilling.UI/CRootView.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L111-L111)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1796,7 +1796,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_screenRefreshPending` · L112–112
 
-[Drilling.UI/CRootView.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L112-L112)
+[Drilling.UI/CRootView.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L112-L112)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1811,7 +1811,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_screenBuildCts` · L113–113
 
-[Drilling.UI/CRootView.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L113-L113)
+[Drilling.UI/CRootView.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L113-L113)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1839,7 +1839,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_monitorLiveRefreshRunning` · L114–114
 
-[Drilling.UI/CRootView.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L114-L114)
+[Drilling.UI/CRootView.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L114-L114)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1854,7 +1854,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_manualScannerStatusRefreshRunning` · L115–115
 
-[Drilling.UI/CRootView.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L115-L115)
+[Drilling.UI/CRootView.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L115-L115)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1869,7 +1869,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_mainLiveRefreshRunning` · L116–116
 
-[Drilling.UI/CRootView.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L116-L116)
+[Drilling.UI/CRootView.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L116-L116)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1884,7 +1884,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_mainLiveStatusErrorActive` · L117–117
 
-[Drilling.UI/CRootView.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L117-L117)
+[Drilling.UI/CRootView.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L117-L117)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1899,7 +1899,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_mainLiveStatusRefreshCts` · L118–118
 
-[Drilling.UI/CRootView.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L118-L118)
+[Drilling.UI/CRootView.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L118-L118)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1914,7 +1914,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastMonitorScreenRefreshTimestamp` · L119–119
 
-[Drilling.UI/CRootView.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L119-L119)
+[Drilling.UI/CRootView.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L119-L119)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1929,7 +1929,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastMonitorShellStatusRefreshTimestamp` · L120–120
 
-[Drilling.UI/CRootView.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L120-L120)
+[Drilling.UI/CRootView.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L120-L120)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1944,7 +1944,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastMainLiveStatusRefreshTimestamp` · L121–121
 
-[Drilling.UI/CRootView.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L121-L121)
+[Drilling.UI/CRootView.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L121-L121)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1959,7 +1959,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastPmLifeStatusRefreshTimestamp` · L122–122
 
-[Drilling.UI/CRootView.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L122-L122)
+[Drilling.UI/CRootView.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L122-L122)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1974,7 +1974,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastMainLiveStatusErrorReportTimestamp` · L123–123
 
-[Drilling.UI/CRootView.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L123-L123)
+[Drilling.UI/CRootView.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L123-L123)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1989,7 +1989,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastClockTickErrorReportTimestamp` · L124–124
 
-[Drilling.UI/CRootView.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L124-L124)
+[Drilling.UI/CRootView.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L124-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2004,7 +2004,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastMainLiveStatusError` · L125–125
 
-[Drilling.UI/CRootView.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L125-L125)
+[Drilling.UI/CRootView.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L125-L125)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2025,7 +2025,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastClockTickError` · L126–126
 
-[Drilling.UI/CRootView.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L126-L126)
+[Drilling.UI/CRootView.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L126-L126)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2046,7 +2046,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_pmLockStatus` · L127–127
 
-[Drilling.UI/CRootView.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L127-L127)
+[Drilling.UI/CRootView.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L127-L127)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2074,13 +2074,13 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_activePmSession` · L128–128
 
-[Drilling.UI/CRootView.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L128-L128)
+[Drilling.UI/CRootView.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L128-L128)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
-| 서명 | ST_PM_HISTORY_ENTRY? Drilling.UI.CRootView._activePmSession |
+| 서명 | Drilling.Common.Log.ST_PM_HISTORY_ENTRY? Drilling.UI.CRootView._activePmSession |
 | 접근/수식자 | Private / private |
-| 반환/값 타입 | ST_PM_HISTORY_ENTRY? |
+| 반환/값 타입 | Drilling.Common.Log.ST_PM_HISTORY_ENTRY? |
 | 소속 타입 | NamedType:Drilling.UI.CRootView |
 
 현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
@@ -2089,7 +2089,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isPmUnlocking` · L129–129
 
-[Drilling.UI/CRootView.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L129-L129)
+[Drilling.UI/CRootView.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L129-L129)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2104,7 +2104,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isPmNavigationUnlockPromptOpen` · L130–130
 
-[Drilling.UI/CRootView.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L130-L130)
+[Drilling.UI/CRootView.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L130-L130)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2119,7 +2119,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `AutoCycleStopTimeout` · L131–131
 
-[Drilling.UI/CRootView.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L131-L131)
+[Drilling.UI/CRootView.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L131-L131)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2147,7 +2147,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_protectWindowNotice` · L132–132
 
-[Drilling.UI/CRootView.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L132-L132)
+[Drilling.UI/CRootView.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L132-L132)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2162,7 +2162,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_autoFineReview` · L133–133
 
-[Drilling.UI/CRootView.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L133-L133)
+[Drilling.UI/CRootView.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L133-L133)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2177,7 +2177,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_autoDistortion` · L134–134
 
-[Drilling.UI/CRootView.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L134-L134)
+[Drilling.UI/CRootView.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L134-L134)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2192,7 +2192,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_stageSimulationDialog` · L135–135
 
-[Drilling.UI/CRootView.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L135-L135)
+[Drilling.UI/CRootView.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L135-L135)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2207,7 +2207,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MelsecSimulatorVisibilityChanged` · L136–136
 
-[Drilling.UI/CRootView.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L136-L136)
+[Drilling.UI/CRootView.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L136-L136)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2222,7 +2222,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastSimulatorVisibility` · L137–137
 
-[Drilling.UI/CRootView.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L137-L137)
+[Drilling.UI/CRootView.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L137-L137)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2237,7 +2237,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L140–262
 
-[Drilling.UI/CRootView.cs:140–262](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L140-L262)
+[Drilling.UI/CRootView.cs:140–262](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L140-L262)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2267,7 +2267,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CAppStartup.cs:53–66](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CAppStartup.cs#L53-L66) | new CRootView | False |
+| [Drilling.UI/CAppStartup.cs:53–66](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CAppStartup.cs#L53-L66) | new CRootView | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2381,7 +2381,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildCMenuItem` · L172–175
 
-[Drilling.UI/CRootView.cs:172–175](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L172-L175)
+[Drilling.UI/CRootView.cs:172–175](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L172-L175)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2417,7 +2417,7 @@ flowchart TD
 
 ### LocalFunctionStatement `StartCallback` · L186–189
 
-[Drilling.UI/CRootView.cs:186–189](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L186-L189)
+[Drilling.UI/CRootView.cs:186–189](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L186-L189)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2451,7 +2451,7 @@ flowchart TD
 
 ### LocalFunctionStatement `CanExecuteStartCommand` · L191–194
 
-[Drilling.UI/CRootView.cs:191–194](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L191-L194)
+[Drilling.UI/CRootView.cs:191–194](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L191-L194)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2485,7 +2485,7 @@ flowchart TD
 
 ### LocalFunctionStatement `StopCallback` · L197–200
 
-[Drilling.UI/CRootView.cs:197–200](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L197-L200)
+[Drilling.UI/CRootView.cs:197–200](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L197-L200)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2519,7 +2519,7 @@ flowchart TD
 
 ### LocalFunctionStatement `CanExecuteStopCommand` · L202–205
 
-[Drilling.UI/CRootView.cs:202–205](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L202-L205)
+[Drilling.UI/CRootView.cs:202–205](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L202-L205)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2553,7 +2553,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectHeadCallback` · L208–211
 
-[Drilling.UI/CRootView.cs:208–211](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L208-L211)
+[Drilling.UI/CRootView.cs:208–211](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L208-L211)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2587,7 +2587,7 @@ flowchart TD
 
 ### LocalFunctionStatement `CanExecuteSelectHeadCommand` · L213–216
 
-[Drilling.UI/CRootView.cs:213–216](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L213-L216)
+[Drilling.UI/CRootView.cs:213–216](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L213-L216)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2621,7 +2621,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ToggleThemeCallback` · L219–222
 
-[Drilling.UI/CRootView.cs:219–222](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L219-L222)
+[Drilling.UI/CRootView.cs:219–222](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L219-L222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2655,7 +2655,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ToggleOperationModeCallback` · L226–229
 
-[Drilling.UI/CRootView.cs:226–229](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L226-L229)
+[Drilling.UI/CRootView.cs:226–229](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L226-L229)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2689,7 +2689,7 @@ flowchart TD
 
 ### LocalFunctionStatement `CanExecuteToggleOperationModeCommand` · L231–234
 
-[Drilling.UI/CRootView.cs:231–234](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L231-L234)
+[Drilling.UI/CRootView.cs:231–234](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L231-L234)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2716,7 +2716,7 @@ flowchart TD
 
 ### LocalFunctionStatement `InitializeAutoSequenceCallback` · L237–240
 
-[Drilling.UI/CRootView.cs:237–240](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L237-L240)
+[Drilling.UI/CRootView.cs:237–240](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L237-L240)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2750,7 +2750,7 @@ flowchart TD
 
 ### LocalFunctionStatement `CanExecuteInitializeAutoSequenceCommand` · L242–247
 
-[Drilling.UI/CRootView.cs:242–247](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L242-L247)
+[Drilling.UI/CRootView.cs:242–247](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L242-L247)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2777,7 +2777,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Ready` · L268–268
 
-[Drilling.UI/CRootView.cs:268–268](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L268-L268)
+[Drilling.UI/CRootView.cs:268–268](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L268-L268)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2792,7 +2792,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Preparing` · L269–269
 
-[Drilling.UI/CRootView.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L269-L269)
+[Drilling.UI/CRootView.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L269-L269)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2807,7 +2807,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Running` · L270–270
 
-[Drilling.UI/CRootView.cs:270–270](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L270-L270)
+[Drilling.UI/CRootView.cs:270–270](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L270-L270)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2822,7 +2822,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Stopping` · L271–271
 
-[Drilling.UI/CRootView.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L271-L271)
+[Drilling.UI/CRootView.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L271-L271)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2837,7 +2837,7 @@ flowchart TD
 
 ### MethodDeclaration `StopAutomationStatusAcquisition` · L274–285
 
-[Drilling.UI/CRootView.cs:274–285](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L274-L285)
+[Drilling.UI/CRootView.cs:274–285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L274-L285)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2850,7 +2850,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CApp.xaml.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CApp.xaml.cs#L49-L49) | .StopAutomationStatusAcquisition | False |
+| [Drilling.UI/CApp.xaml.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L49-L49) | .StopAutomationStatusAcquisition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2891,7 +2891,7 @@ flowchart TD
 
 ### PropertyDeclaration `Menus` · L287–287
 
-[Drilling.UI/CRootView.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L287-L287)
+[Drilling.UI/CRootView.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L287-L287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2906,7 +2906,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Menus` · L287–287
 
-[Drilling.UI/CRootView.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L287-L287)
+[Drilling.UI/CRootView.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L287-L287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2921,7 +2921,7 @@ flowchart TD
 
 ### PropertyDeclaration `HeaderStatusItems` · L288–288
 
-[Drilling.UI/CRootView.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L288-L288)
+[Drilling.UI/CRootView.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L288-L288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2936,7 +2936,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_HeaderStatusItems` · L288–288
 
-[Drilling.UI/CRootView.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L288-L288)
+[Drilling.UI/CRootView.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L288-L288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2951,7 +2951,7 @@ flowchart TD
 
 ### PropertyDeclaration `HeaderContextStatusItems` · L289–289
 
-[Drilling.UI/CRootView.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L289-L289)
+[Drilling.UI/CRootView.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L289-L289)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2966,7 +2966,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_HeaderContextStatusItems` · L289–289
 
-[Drilling.UI/CRootView.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L289-L289)
+[Drilling.UI/CRootView.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L289-L289)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2981,7 +2981,7 @@ flowchart TD
 
 ### PropertyDeclaration `HeaderCommunicationStatusItems` · L290–290
 
-[Drilling.UI/CRootView.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L290-L290)
+[Drilling.UI/CRootView.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L290-L290)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2996,7 +2996,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_HeaderCommunicationStatusItems` · L290–290
 
-[Drilling.UI/CRootView.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L290-L290)
+[Drilling.UI/CRootView.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L290-L290)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3011,7 +3011,7 @@ flowchart TD
 
 ### PropertyDeclaration `FooterStatusItems` · L291–291
 
-[Drilling.UI/CRootView.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L291-L291)
+[Drilling.UI/CRootView.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L291-L291)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3026,7 +3026,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_FooterStatusItems` · L291–291
 
-[Drilling.UI/CRootView.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L291-L291)
+[Drilling.UI/CRootView.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L291-L291)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3041,7 +3041,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedMenu` · L293–382
 
-[Drilling.UI/CRootView.cs:293–382](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L293-L382)
+[Drilling.UI/CRootView.cs:293–382](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L293-L382)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3056,7 +3056,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedMenu` · L295–298
 
-[Drilling.UI/CRootView.cs:295–298](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L295-L298)
+[Drilling.UI/CRootView.cs:295–298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L295-L298)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3077,7 +3077,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_SelectedMenu` · L300–381
 
-[Drilling.UI/CRootView.cs:300–381](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L300-L381)
+[Drilling.UI/CRootView.cs:300–381](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L300-L381)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3224,7 +3224,7 @@ flowchart TD
 
 ### PropertyDeclaration `NavigationSelectedMenu` · L384–400
 
-[Drilling.UI/CRootView.cs:384–400](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L384-L400)
+[Drilling.UI/CRootView.cs:384–400](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L384-L400)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3239,7 +3239,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_NavigationSelectedMenu` · L386–389
 
-[Drilling.UI/CRootView.cs:386–389](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L386-L389)
+[Drilling.UI/CRootView.cs:386–389](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L386-L389)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3260,7 +3260,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_NavigationSelectedMenu` · L391–399
 
-[Drilling.UI/CRootView.cs:391–399](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L391-L399)
+[Drilling.UI/CRootView.cs:391–399](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L391-L399)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3312,7 +3312,7 @@ flowchart TD
 
 ### PropertyDeclaration `CurrentScreen` · L402–413
 
-[Drilling.UI/CRootView.cs:402–413](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L402-L413)
+[Drilling.UI/CRootView.cs:402–413](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L402-L413)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3327,7 +3327,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CurrentScreen` · L404–407
 
-[Drilling.UI/CRootView.cs:404–407](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L404-L407)
+[Drilling.UI/CRootView.cs:404–407](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L404-L407)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3348,7 +3348,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CurrentScreen` · L409–412
 
-[Drilling.UI/CRootView.cs:409–412](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L409-L412)
+[Drilling.UI/CRootView.cs:409–412](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L409-L412)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3381,7 +3381,7 @@ flowchart TD
 
 ### PropertyDeclaration `StatusMessage` · L415–426
 
-[Drilling.UI/CRootView.cs:415–426](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L415-L426)
+[Drilling.UI/CRootView.cs:415–426](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L415-L426)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3396,7 +3396,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_StatusMessage` · L417–420
 
-[Drilling.UI/CRootView.cs:417–420](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L417-L420)
+[Drilling.UI/CRootView.cs:417–420](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L417-L420)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3417,7 +3417,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_StatusMessage` · L422–425
 
-[Drilling.UI/CRootView.cs:422–425](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L422-L425)
+[Drilling.UI/CRootView.cs:422–425](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L422-L425)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3450,7 +3450,7 @@ flowchart TD
 
 ### PropertyDeclaration `CurrentDateText` · L428–439
 
-[Drilling.UI/CRootView.cs:428–439](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L428-L439)
+[Drilling.UI/CRootView.cs:428–439](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L428-L439)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3465,7 +3465,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CurrentDateText` · L430–433
 
-[Drilling.UI/CRootView.cs:430–433](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L430-L433)
+[Drilling.UI/CRootView.cs:430–433](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L430-L433)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3486,7 +3486,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CurrentDateText` · L435–438
 
-[Drilling.UI/CRootView.cs:435–438](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L435-L438)
+[Drilling.UI/CRootView.cs:435–438](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L435-L438)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3519,7 +3519,7 @@ flowchart TD
 
 ### PropertyDeclaration `CurrentTimeText` · L441–452
 
-[Drilling.UI/CRootView.cs:441–452](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L441-L452)
+[Drilling.UI/CRootView.cs:441–452](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L441-L452)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3534,7 +3534,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CurrentTimeText` · L443–446
 
-[Drilling.UI/CRootView.cs:443–446](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L443-L446)
+[Drilling.UI/CRootView.cs:443–446](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L443-L446)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3555,7 +3555,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CurrentTimeText` · L448–451
 
-[Drilling.UI/CRootView.cs:448–451](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L448-L451)
+[Drilling.UI/CRootView.cs:448–451](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L448-L451)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3588,7 +3588,7 @@ flowchart TD
 
 ### PropertyDeclaration `CurrentUserText` · L454–460
 
-[Drilling.UI/CRootView.cs:454–460](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L454-L460)
+[Drilling.UI/CRootView.cs:454–460](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L454-L460)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3603,7 +3603,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CurrentUserText` · L456–459
 
-[Drilling.UI/CRootView.cs:456–459](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L456-L459)
+[Drilling.UI/CRootView.cs:456–459](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L456-L459)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3625,7 +3625,7 @@ flowchart TD
 
 ### PropertyDeclaration `ThemeToggleText` · L462–468
 
-[Drilling.UI/CRootView.cs:462–468](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L462-L468)
+[Drilling.UI/CRootView.cs:462–468](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L462-L468)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3640,7 +3640,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ThemeToggleText` · L464–467
 
-[Drilling.UI/CRootView.cs:464–467](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L464-L467)
+[Drilling.UI/CRootView.cs:464–467](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L464-L467)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3662,7 +3662,7 @@ flowchart TD
 
 ### PropertyDeclaration `ThemeModeText` · L470–476
 
-[Drilling.UI/CRootView.cs:470–476](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L470-L476)
+[Drilling.UI/CRootView.cs:470–476](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L470-L476)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3677,7 +3677,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ThemeModeText` · L472–475
 
-[Drilling.UI/CRootView.cs:472–475](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L472-L475)
+[Drilling.UI/CRootView.cs:472–475](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L472-L475)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3699,7 +3699,7 @@ flowchart TD
 
 ### PropertyDeclaration `StartCommand` · L478–478
 
-[Drilling.UI/CRootView.cs:478–478](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L478-L478)
+[Drilling.UI/CRootView.cs:478–478](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L478-L478)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3714,7 +3714,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_StartCommand` · L478–478
 
-[Drilling.UI/CRootView.cs:478–478](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L478-L478)
+[Drilling.UI/CRootView.cs:478–478](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L478-L478)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3729,7 +3729,7 @@ flowchart TD
 
 ### PropertyDeclaration `StopCommand` · L479–479
 
-[Drilling.UI/CRootView.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L479-L479)
+[Drilling.UI/CRootView.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L479-L479)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3744,7 +3744,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_StopCommand` · L479–479
 
-[Drilling.UI/CRootView.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L479-L479)
+[Drilling.UI/CRootView.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L479-L479)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3759,7 +3759,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectHeadCommand` · L480–480
 
-[Drilling.UI/CRootView.cs:480–480](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L480-L480)
+[Drilling.UI/CRootView.cs:480–480](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L480-L480)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3774,7 +3774,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectHeadCommand` · L480–480
 
-[Drilling.UI/CRootView.cs:480–480](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L480-L480)
+[Drilling.UI/CRootView.cs:480–480](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L480-L480)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3789,7 +3789,7 @@ flowchart TD
 
 ### PropertyDeclaration `ToggleThemeCommand` · L481–481
 
-[Drilling.UI/CRootView.cs:481–481](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L481-L481)
+[Drilling.UI/CRootView.cs:481–481](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L481-L481)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3804,7 +3804,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ToggleThemeCommand` · L481–481
 
-[Drilling.UI/CRootView.cs:481–481](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L481-L481)
+[Drilling.UI/CRootView.cs:481–481](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L481-L481)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3819,7 +3819,7 @@ flowchart TD
 
 ### PropertyDeclaration `ToggleOperationModeCommand` · L482–482
 
-[Drilling.UI/CRootView.cs:482–482](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L482-L482)
+[Drilling.UI/CRootView.cs:482–482](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L482-L482)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3834,7 +3834,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ToggleOperationModeCommand` · L482–482
 
-[Drilling.UI/CRootView.cs:482–482](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L482-L482)
+[Drilling.UI/CRootView.cs:482–482](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L482-L482)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3849,7 +3849,7 @@ flowchart TD
 
 ### PropertyDeclaration `InitializeAutoSequenceCommand` · L483–483
 
-[Drilling.UI/CRootView.cs:483–483](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L483-L483)
+[Drilling.UI/CRootView.cs:483–483](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L483-L483)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3864,7 +3864,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_InitializeAutoSequenceCommand` · L483–483
 
-[Drilling.UI/CRootView.cs:483–483](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L483-L483)
+[Drilling.UI/CRootView.cs:483–483](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L483-L483)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3879,7 +3879,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShiftOffsetX` · L485–496
 
-[Drilling.UI/CRootView.cs:485–496](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L485-L496)
+[Drilling.UI/CRootView.cs:485–496](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L485-L496)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3894,7 +3894,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ShiftOffsetX` · L487–490
 
-[Drilling.UI/CRootView.cs:487–490](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L487-L490)
+[Drilling.UI/CRootView.cs:487–490](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L487-L490)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3915,7 +3915,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ShiftOffsetX` · L492–495
 
-[Drilling.UI/CRootView.cs:492–495](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L492-L495)
+[Drilling.UI/CRootView.cs:492–495](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L492-L495)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3950,7 +3950,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShiftOffsetY` · L498–509
 
-[Drilling.UI/CRootView.cs:498–509](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L498-L509)
+[Drilling.UI/CRootView.cs:498–509](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L498-L509)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3965,7 +3965,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ShiftOffsetY` · L500–503
 
-[Drilling.UI/CRootView.cs:500–503](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L500-L503)
+[Drilling.UI/CRootView.cs:500–503](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L500-L503)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3986,7 +3986,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ShiftOffsetY` · L505–508
 
-[Drilling.UI/CRootView.cs:505–508](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L505-L508)
+[Drilling.UI/CRootView.cs:505–508](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L505-L508)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4021,7 +4021,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsManualShiftOffsetVisible` · L511–517
 
-[Drilling.UI/CRootView.cs:511–517](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L511-L517)
+[Drilling.UI/CRootView.cs:511–517](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L511-L517)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4036,7 +4036,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsManualShiftOffsetVisible` · L513–516
 
-[Drilling.UI/CRootView.cs:513–516](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L513-L516)
+[Drilling.UI/CRootView.cs:513–516](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L513-L516)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4057,7 +4057,7 @@ flowchart TD
 
 ### PropertyDeclaration `CanSelectHead` · L519–525
 
-[Drilling.UI/CRootView.cs:519–525](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L519-L525)
+[Drilling.UI/CRootView.cs:519–525](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L519-L525)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4072,7 +4072,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CanSelectHead` · L521–524
 
-[Drilling.UI/CRootView.cs:521–524](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L521-L524)
+[Drilling.UI/CRootView.cs:521–524](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L521-L524)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4093,7 +4093,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsSimulationEnvironment` · L527–533
 
-[Drilling.UI/CRootView.cs:527–533](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L527-L533)
+[Drilling.UI/CRootView.cs:527–533](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L527-L533)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4108,7 +4108,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsSimulationEnvironment` · L529–532
 
-[Drilling.UI/CRootView.cs:529–532](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L529-L532)
+[Drilling.UI/CRootView.cs:529–532](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L529-L532)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4129,7 +4129,7 @@ flowchart TD
 
 ### MethodDeclaration `CanStartAutoCycle` · L535–538
 
-[Drilling.UI/CRootView.cs:535–538](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L535-L538)
+[Drilling.UI/CRootView.cs:535–538](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L535-L538)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4142,7 +4142,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L193-L193) | CanStartAutoCycle | False |
+| [Drilling.UI/CRootView.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L193-L193) | CanStartAutoCycle | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4161,7 +4161,7 @@ flowchart TD
 
 ### MethodDeclaration `CanStopAutoCycle` · L540–545
 
-[Drilling.UI/CRootView.cs:540–545](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L540-L545)
+[Drilling.UI/CRootView.cs:540–545](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L540-L545)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4174,8 +4174,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:204–204](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L204-L204) | CanStopAutoCycle | False |
-| [Drilling.UI/CRootView.cs:2083–2083](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2083-L2083) | CanStopAutoCycle | False |
+| [Drilling.UI/CRootView.cs:204–204](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L204-L204) | CanStopAutoCycle | False |
+| [Drilling.UI/CRootView.cs:2083–2083](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2083-L2083) | CanStopAutoCycle | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -4187,7 +4187,7 @@ flowchart TD
 
 ### MethodDeclaration `IsManualStartEligible` · L547–550
 
-[Drilling.UI/CRootView.cs:547–550](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L547-L550)
+[Drilling.UI/CRootView.cs:547–550](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L547-L550)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4200,11 +4200,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:537–537](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L537-L537) | IsManualStartEligible | False |
-| [Drilling.UI/CRootView.cs:1649–1649](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1649-L1649) | IsManualStartEligible | False |
-| [Drilling.UI/CRootView.cs:1977–1977](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1977-L1977) | IsManualStartEligible | False |
-| [Drilling.UI/CRootView.cs:1992–1992](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1992-L1992) | IsManualStartEligible | False |
-| [Drilling.UI/CRootView.cs:2008–2008](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2008-L2008) | IsManualStartEligible | False |
+| [Drilling.UI/CRootView.cs:537–537](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L537-L537) | IsManualStartEligible | False |
+| [Drilling.UI/CRootView.cs:1649–1649](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1649-L1649) | IsManualStartEligible | False |
+| [Drilling.UI/CRootView.cs:1977–1977](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1977-L1977) | IsManualStartEligible | False |
+| [Drilling.UI/CRootView.cs:1992–1992](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1992-L1992) | IsManualStartEligible | False |
+| [Drilling.UI/CRootView.cs:2008–2008](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2008-L2008) | IsManualStartEligible | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -4216,7 +4216,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshCurrentScreen` · L552–625
 
-[Drilling.UI/CRootView.cs:552–625](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L552-L625)
+[Drilling.UI/CRootView.cs:552–625](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L552-L625)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4229,21 +4229,21 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:380–380](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L380-L380) | RefreshCurrentScreen | False |
-| [Drilling.UI/CRootView.cs:622–622](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L622-L622) | RefreshCurrentScreen | False |
-| [Drilling.UI/CRootView.cs:693–693](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L693-L693) | RefreshCurrentScreen | False |
-| [Drilling.UI/CRootView.cs:755–755](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L755-L755) | RefreshCurrentScreen | False |
-| [Drilling.UI/CRootView.cs:1482–1482](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1482-L1482) | RefreshCurrentScreen | False |
-| [Drilling.UI/CRootView.cs:1654–1654](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1654-L1654) | RefreshCurrentScreen | False |
-| [Drilling.UI/CRootView.cs:2040–2040](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2040-L2040) | RefreshCurrentScreen | False |
-| [Drilling.UI/CRootView.cs:2079–2079](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2079-L2079) | RefreshCurrentScreen | False |
-| [Drilling.UI/CRootView.cs:2128–2128](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2128-L2128) | RefreshCurrentScreen | False |
-| [Drilling.UI/CRootView.cs:2162–2162](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2162-L2162) | RefreshCurrentScreen | False |
-| [Drilling.UI/CRootView.cs:2252–2252](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2252-L2252) | RefreshCurrentScreen | False |
-| [Drilling.UI/CRootView.cs:2259–2259](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2259-L2259) | RefreshCurrentScreen | False |
-| [Drilling.UI/CRootView.cs:2342–2342](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2342-L2342) | RefreshCurrentScreen | False |
-| [Drilling.UI/CRootView.cs:2522–2522](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2522-L2522) | RefreshCurrentScreen | False |
-| [Drilling.UI/CRootView.cs:3149–3149](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3149-L3149) | RefreshCurrentScreen | False |
+| [Drilling.UI/CRootView.cs:380–380](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L380-L380) | RefreshCurrentScreen | False |
+| [Drilling.UI/CRootView.cs:622–622](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L622-L622) | RefreshCurrentScreen | False |
+| [Drilling.UI/CRootView.cs:693–693](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L693-L693) | RefreshCurrentScreen | False |
+| [Drilling.UI/CRootView.cs:755–755](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L755-L755) | RefreshCurrentScreen | False |
+| [Drilling.UI/CRootView.cs:1482–1482](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1482-L1482) | RefreshCurrentScreen | False |
+| [Drilling.UI/CRootView.cs:1654–1654](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1654-L1654) | RefreshCurrentScreen | False |
+| [Drilling.UI/CRootView.cs:2040–2040](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2040-L2040) | RefreshCurrentScreen | False |
+| [Drilling.UI/CRootView.cs:2079–2079](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2079-L2079) | RefreshCurrentScreen | False |
+| [Drilling.UI/CRootView.cs:2128–2128](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2128-L2128) | RefreshCurrentScreen | False |
+| [Drilling.UI/CRootView.cs:2162–2162](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2162-L2162) | RefreshCurrentScreen | False |
+| [Drilling.UI/CRootView.cs:2252–2252](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2252-L2252) | RefreshCurrentScreen | False |
+| [Drilling.UI/CRootView.cs:2259–2259](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2259-L2259) | RefreshCurrentScreen | False |
+| [Drilling.UI/CRootView.cs:2342–2342](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2342-L2342) | RefreshCurrentScreen | False |
+| [Drilling.UI/CRootView.cs:2522–2522](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2522-L2522) | RefreshCurrentScreen | False |
+| [Drilling.UI/CRootView.cs:3149–3149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3149-L3149) | RefreshCurrentScreen | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4357,7 +4357,7 @@ flowchart TD
 
 ### MethodDeclaration `ShowCachedScreenOrLoading` · L627–632
 
-[Drilling.UI/CRootView.cs:627–632](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L627-L632)
+[Drilling.UI/CRootView.cs:627–632](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L627-L632)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4376,7 +4376,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:345–345](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L345-L345) | ShowCachedScreenOrLoading | False |
+| [Drilling.UI/CRootView.cs:345–345](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L345-L345) | ShowCachedScreenOrLoading | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4398,7 +4398,7 @@ flowchart TD
 
 ### MethodDeclaration `RestartScreenBuild` · L634–645
 
-[Drilling.UI/CRootView.cs:634–645](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L634-L645)
+[Drilling.UI/CRootView.cs:634–645](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L634-L645)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4411,7 +4411,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L344-L344) | RestartScreenBuild | False |
+| [Drilling.UI/CRootView.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L344-L344) | RestartScreenBuild | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4446,7 +4446,7 @@ flowchart TD
 
 ### MethodDeclaration `GetScreenBuildToken` · L647–653
 
-[Drilling.UI/CRootView.cs:647–653](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L647-L653)
+[Drilling.UI/CRootView.cs:647–653](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L647-L653)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4459,8 +4459,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L567-L567) | GetScreenBuildToken | False |
-| [Drilling.UI/CRootView.cs:612–612](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L612-L612) | GetScreenBuildToken | False |
+| [Drilling.UI/CRootView.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L567-L567) | GetScreenBuildToken | False |
+| [Drilling.UI/CRootView.cs:612–612](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L612-L612) | GetScreenBuildToken | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -4482,7 +4482,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetMenuStateOnOpen` · L655–666
 
-[Drilling.UI/CRootView.cs:655–666](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L655-L666)
+[Drilling.UI/CRootView.cs:655–666](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L655-L666)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4502,7 +4502,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:369–369](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L369-L369) | ResetMenuStateOnOpen | False |
+| [Drilling.UI/CRootView.cs:369–369](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L369-L369) | ResetMenuStateOnOpen | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4537,7 +4537,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetSelectedManualHead` · L668–685
 
-[Drilling.UI/CRootView.cs:668–685](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L668-L685)
+[Drilling.UI/CRootView.cs:668–685](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L668-L685)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4550,7 +4550,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:659–659](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L659-L659) | ResetSelectedManualHead | False |
+| [Drilling.UI/CRootView.cs:659–659](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L659-L659) | ResetSelectedManualHead | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4597,7 +4597,7 @@ flowchart TD
 
 ### MethodDeclaration `ToggleTheme` · L687–695
 
-[Drilling.UI/CRootView.cs:687–695](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L687-L695)
+[Drilling.UI/CRootView.cs:687–695](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L687-L695)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4610,7 +4610,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L221-L221) | ToggleTheme | False |
+| [Drilling.UI/CRootView.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L221-L221) | ToggleTheme | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4643,7 +4643,7 @@ flowchart TD
 
 ### MethodDeclaration `ToggleOperationMode` · L697–756
 
-[Drilling.UI/CRootView.cs:697–756](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L697-L756)
+[Drilling.UI/CRootView.cs:697–756](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L697-L756)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4663,7 +4663,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L228-L228) | ToggleOperationMode | False |
+| [Drilling.UI/CRootView.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L228-L228) | ToggleOperationMode | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4792,7 +4792,7 @@ flowchart TD
 
 ### MethodDeclaration `InitializeAutoSequence` · L758–798
 
-[Drilling.UI/CRootView.cs:758–798](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L758-L798)
+[Drilling.UI/CRootView.cs:758–798](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L758-L798)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4805,7 +4805,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L239-L239) | InitializeAutoSequence | False |
+| [Drilling.UI/CRootView.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L239-L239) | InitializeAutoSequence | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4883,7 +4883,7 @@ flowchart TD
 
 ### MethodDeclaration `CheckAutoModeInterlocks` · L800–826
 
-[Drilling.UI/CRootView.cs:800–826](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L800-L826)
+[Drilling.UI/CRootView.cs:800–826](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L800-L826)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4902,9 +4902,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:709–709](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L709-L709) | CheckAutoModeInterlocks | False |
-| [Drilling.UI/CRootView.cs:718–718](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L718-L718) | CheckAutoModeInterlocks | False |
-| [Drilling.UI/CRootView.cs:727–727](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L727-L727) | CheckAutoModeInterlocks | False |
+| [Drilling.UI/CRootView.cs:709–709](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L709-L709) | CheckAutoModeInterlocks | False |
+| [Drilling.UI/CRootView.cs:718–718](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L718-L718) | CheckAutoModeInterlocks | False |
+| [Drilling.UI/CRootView.cs:727–727](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L727-L727) | CheckAutoModeInterlocks | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4968,7 +4968,7 @@ flowchart TD
 
 ### MethodDeclaration `CheckStageMotionOwnership` · L828–837
 
-[Drilling.UI/CRootView.cs:828–837](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L828-L837)
+[Drilling.UI/CRootView.cs:828–837](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L828-L837)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4988,11 +4988,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:809–809](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L809-L809) | CheckStageMotionOwnership | False |
-| [Drilling.UI/CRootView.cs:816–816](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L816-L816) | CheckStageMotionOwnership | False |
-| [Drilling.UI/CRootView.cs:1974–1974](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1974-L1974) | CheckStageMotionOwnership | False |
-| [Drilling.UI/CRootView.cs:1983–1983](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1983-L1983) | CheckStageMotionOwnership | False |
-| [Drilling.UI/CRootView.cs:2013–2013](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2013-L2013) | CheckStageMotionOwnership | False |
+| [Drilling.UI/CRootView.cs:809–809](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L809-L809) | CheckStageMotionOwnership | False |
+| [Drilling.UI/CRootView.cs:816–816](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L816-L816) | CheckStageMotionOwnership | False |
+| [Drilling.UI/CRootView.cs:1974–1974](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1974-L1974) | CheckStageMotionOwnership | False |
+| [Drilling.UI/CRootView.cs:1983–1983](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1983-L1983) | CheckStageMotionOwnership | False |
+| [Drilling.UI/CRootView.cs:2013–2013](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2013-L2013) | CheckStageMotionOwnership | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5028,7 +5028,7 @@ flowchart TD
 
 ### MethodDeclaration `CanAccessMenu` · L839–849
 
-[Drilling.UI/CRootView.cs:839–849](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L839-L849)
+[Drilling.UI/CRootView.cs:839–849](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L839-L849)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5047,9 +5047,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L326-L326) | CanAccessMenu | False |
-| [Drilling.UI/CRootView.cs:875–875](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L875-L875) | CanAccessMenu | False |
-| [Drilling.UI/CRootView.cs:886–886](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L886-L886) | CanAccessMenu | False |
+| [Drilling.UI/CRootView.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L326-L326) | CanAccessMenu | False |
+| [Drilling.UI/CRootView.cs:875–875](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L875-L875) | CanAccessMenu | False |
+| [Drilling.UI/CRootView.cs:886–886](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L886-L886) | CanAccessMenu | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5083,7 +5083,7 @@ flowchart TD
 
 ### MethodDeclaration `IsReviewNavigationLocked` · L851–865
 
-[Drilling.UI/CRootView.cs:851–865](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L851-L865)
+[Drilling.UI/CRootView.cs:851–865](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L851-L865)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5102,7 +5102,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L318-L318) | IsReviewNavigationLocked | False |
+| [Drilling.UI/CRootView.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L318-L318) | IsReviewNavigationLocked | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5135,7 +5135,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyMenuAccessForOperationMode` · L867–877
 
-[Drilling.UI/CRootView.cs:867–877](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L867-L877)
+[Drilling.UI/CRootView.cs:867–877](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L867-L877)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5148,9 +5148,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:180–180](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L180-L180) | ApplyMenuAccessForOperationMode | False |
-| [Drilling.UI/CRootView.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L378-L378) | ApplyMenuAccessForOperationMode | False |
-| [Drilling.UI/CRootView.cs:891–891](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L891-L891) | ApplyMenuAccessForOperationMode | False |
+| [Drilling.UI/CRootView.cs:180–180](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L180-L180) | ApplyMenuAccessForOperationMode | False |
+| [Drilling.UI/CRootView.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L378-L378) | ApplyMenuAccessForOperationMode | False |
+| [Drilling.UI/CRootView.cs:891–891](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L891-L891) | ApplyMenuAccessForOperationMode | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5180,7 +5180,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshOperationModeAccess` · L879–897
 
-[Drilling.UI/CRootView.cs:879–897](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L879-L897)
+[Drilling.UI/CRootView.cs:879–897](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L879-L897)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5193,12 +5193,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:746–746](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L746-L746) | RefreshOperationModeAccess | False |
-| [Drilling.UI/CRootView.cs:1232–1232](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1232-L1232) | RefreshOperationModeAccess | False |
-| [Drilling.UI/CRootView.cs:1261–1261](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1261-L1261) | RefreshOperationModeAccess | False |
-| [Drilling.UI/CRootView.cs:1478–1478](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1478-L1478) | RefreshOperationModeAccess | False |
-| [Drilling.UI/CRootView.cs:2222–2222](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2222-L2222) | RefreshOperationModeAccess | False |
-| [Drilling.UI/CRootView.cs:3117–3117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3117-L3117) | RefreshOperationModeAccess | False |
+| [Drilling.UI/CRootView.cs:746–746](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L746-L746) | RefreshOperationModeAccess | False |
+| [Drilling.UI/CRootView.cs:1232–1232](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1232-L1232) | RefreshOperationModeAccess | False |
+| [Drilling.UI/CRootView.cs:1261–1261](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1261-L1261) | RefreshOperationModeAccess | False |
+| [Drilling.UI/CRootView.cs:1478–1478](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1478-L1478) | RefreshOperationModeAccess | False |
+| [Drilling.UI/CRootView.cs:2222–2222](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2222-L2222) | RefreshOperationModeAccess | False |
+| [Drilling.UI/CRootView.cs:3117–3117](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3117-L3117) | RefreshOperationModeAccess | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5243,7 +5243,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L881–884
 
-[Drilling.UI/CRootView.cs:881–884](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L881-L884)
+[Drilling.UI/CRootView.cs:881–884](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L881-L884)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5270,7 +5270,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshShellStatusItems` · L899–910
 
-[Drilling.UI/CRootView.cs:899–910](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L899-L910)
+[Drilling.UI/CRootView.cs:899–910](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L899-L910)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5283,17 +5283,17 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L255-L255) | RefreshShellStatusItems | False |
-| [Drilling.UI/CRootView.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L379-L379) | RefreshShellStatusItems | False |
-| [Drilling.UI/CRootView.cs:692–692](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L692-L692) | RefreshShellStatusItems | False |
-| [Drilling.UI/CRootView.cs:753–753](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L753-L753) | RefreshShellStatusItems | False |
-| [Drilling.UI/CRootView.cs:1233–1233](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1233-L1233) | RefreshShellStatusItems | False |
-| [Drilling.UI/CRootView.cs:1264–1264](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1264-L1264) | RefreshShellStatusItems | False |
-| [Drilling.UI/CRootView.cs:2251–2251](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2251-L2251) | RefreshShellStatusItems | False |
-| [Drilling.UI/CRootView.cs:2258–2258](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2258-L2258) | RefreshShellStatusItems | False |
-| [Drilling.UI/CRootView.cs:2864–2864](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2864-L2864) | RefreshShellStatusItems | False |
-| [Drilling.UI/CRootView.cs:3119–3119](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3119-L3119) | RefreshShellStatusItems | False |
-| [Drilling.UI/CRootView.cs:3136–3136](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3136-L3136) | RefreshShellStatusItems | False |
+| [Drilling.UI/CRootView.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L255-L255) | RefreshShellStatusItems | False |
+| [Drilling.UI/CRootView.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L379-L379) | RefreshShellStatusItems | False |
+| [Drilling.UI/CRootView.cs:692–692](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L692-L692) | RefreshShellStatusItems | False |
+| [Drilling.UI/CRootView.cs:753–753](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L753-L753) | RefreshShellStatusItems | False |
+| [Drilling.UI/CRootView.cs:1233–1233](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1233-L1233) | RefreshShellStatusItems | False |
+| [Drilling.UI/CRootView.cs:1264–1264](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1264-L1264) | RefreshShellStatusItems | False |
+| [Drilling.UI/CRootView.cs:2251–2251](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2251-L2251) | RefreshShellStatusItems | False |
+| [Drilling.UI/CRootView.cs:2258–2258](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2258-L2258) | RefreshShellStatusItems | False |
+| [Drilling.UI/CRootView.cs:2864–2864](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2864-L2864) | RefreshShellStatusItems | False |
+| [Drilling.UI/CRootView.cs:3119–3119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3119-L3119) | RefreshShellStatusItems | False |
+| [Drilling.UI/CRootView.cs:3136–3136](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3136-L3136) | RefreshShellStatusItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5347,7 +5347,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshSystemStatus` · L912–932
 
-[Drilling.UI/CRootView.cs:912–932](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L912-L932)
+[Drilling.UI/CRootView.cs:912–932](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L912-L932)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5360,9 +5360,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2327–2327](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2327-L2327) | RefreshSystemStatus | False |
-| [Drilling.UI/CRootView.cs:2335–2335](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2335-L2335) | RefreshSystemStatus | False |
-| [Drilling.UI/CRootView.cs:2346–2346](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2346-L2346) | RefreshSystemStatus | False |
+| [Drilling.UI/CRootView.cs:2327–2327](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2327-L2327) | RefreshSystemStatus | False |
+| [Drilling.UI/CRootView.cs:2335–2335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2335-L2335) | RefreshSystemStatus | False |
+| [Drilling.UI/CRootView.cs:2346–2346](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2346-L2346) | RefreshSystemStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5405,7 +5405,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitForInitialProcessModelPreparation` · L934–948
 
-[Drilling.UI/CRootView.cs:934–948](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L934-L948)
+[Drilling.UI/CRootView.cs:934–948](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L934-L948)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5424,8 +5424,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:726–726](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L726-L726) | WaitForInitialProcessModelPreparation | False |
-| [Drilling.UI/CRootView.cs:2006–2006](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2006-L2006) | WaitForInitialProcessModelPreparation | False |
+| [Drilling.UI/CRootView.cs:726–726](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L726-L726) | WaitForInitialProcessModelPreparation | False |
+| [Drilling.UI/CRootView.cs:2006–2006](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2006-L2006) | WaitForInitialProcessModelPreparation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5463,7 +5463,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshMonitorLiveData` · L950–980
 
-[Drilling.UI/CRootView.cs:950–980](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L950-L980)
+[Drilling.UI/CRootView.cs:950–980](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L950-L980)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5476,7 +5476,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2320–2320](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2320-L2320) | RefreshMonitorLiveData | False |
+| [Drilling.UI/CRootView.cs:2320–2320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2320-L2320) | RefreshMonitorLiveData | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5535,7 +5535,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshMainLiveStatus` · L982–1034
 
-[Drilling.UI/CRootView.cs:982–1034](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L982-L1034)
+[Drilling.UI/CRootView.cs:982–1034](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L982-L1034)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5548,7 +5548,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2334–2334](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2334-L2334) | RefreshMainLiveStatus | False |
+| [Drilling.UI/CRootView.cs:2334–2334](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2334-L2334) | RefreshMainLiveStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5635,7 +5635,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshManualScannerStatus` · L1036–1062
 
-[Drilling.UI/CRootView.cs:1036–1062](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1036-L1062)
+[Drilling.UI/CRootView.cs:1036–1062](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1036-L1062)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5648,7 +5648,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2326–2326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2326-L2326) | RefreshManualScannerStatus | False |
+| [Drilling.UI/CRootView.cs:2326–2326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2326-L2326) | RefreshManualScannerStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5694,7 +5694,7 @@ flowchart TD
 
 ### MethodDeclaration `CancelMainLiveStatusRefresh` · L1064–1074
 
-[Drilling.UI/CRootView.cs:1064–1074](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1064-L1074)
+[Drilling.UI/CRootView.cs:1064–1074](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1064-L1074)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5707,7 +5707,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L350-L350) | CancelMainLiveStatusRefresh | False |
+| [Drilling.UI/CRootView.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L350-L350) | CancelMainLiveStatusRefresh | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5738,7 +5738,7 @@ flowchart TD
 
 ### MethodDeclaration `StopMainScannerStatusPolling` · L1076–1084
 
-[Drilling.UI/CRootView.cs:1076–1084](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1076-L1084)
+[Drilling.UI/CRootView.cs:1076–1084](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1076-L1084)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5751,7 +5751,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1092–1092](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1092-L1092) | StopMainScannerStatusPolling | False |
+| [Drilling.UI/CRootView.cs:1092–1092](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1092-L1092) | StopMainScannerStatusPolling | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5782,7 +5782,7 @@ flowchart TD
 
 ### MethodDeclaration `QueueMainScannerStatusPollingStop` · L1086–1101
 
-[Drilling.UI/CRootView.cs:1086–1101](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1086-L1101)
+[Drilling.UI/CRootView.cs:1086–1101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1086-L1101)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5795,7 +5795,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L351-L351) | QueueMainScannerStatusPollingStop | False |
+| [Drilling.UI/CRootView.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L351-L351) | QueueMainScannerStatusPollingStop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5814,7 +5814,7 @@ flowchart TD
 
 ### LocalFunctionStatement `StopPolling` · L1088–1098
 
-[Drilling.UI/CRootView.cs:1088–1098](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1088-L1098)
+[Drilling.UI/CRootView.cs:1088–1098](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1088-L1098)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5856,7 +5856,7 @@ flowchart TD
 
 ### MethodDeclaration `StopManualScannerStatusPolling` · L1103–1111
 
-[Drilling.UI/CRootView.cs:1103–1111](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1103-L1111)
+[Drilling.UI/CRootView.cs:1103–1111](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1103-L1111)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5869,7 +5869,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1119–1119](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1119-L1119) | StopManualScannerStatusPolling | False |
+| [Drilling.UI/CRootView.cs:1119–1119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1119-L1119) | StopManualScannerStatusPolling | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5900,7 +5900,7 @@ flowchart TD
 
 ### MethodDeclaration `QueueManualScannerStatusPollingStop` · L1113–1128
 
-[Drilling.UI/CRootView.cs:1113–1128](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1113-L1128)
+[Drilling.UI/CRootView.cs:1113–1128](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1113-L1128)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5913,7 +5913,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L356-L356) | QueueManualScannerStatusPollingStop | False |
+| [Drilling.UI/CRootView.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L356-L356) | QueueManualScannerStatusPollingStop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5932,7 +5932,7 @@ flowchart TD
 
 ### LocalFunctionStatement `StopPolling` · L1115–1125
 
-[Drilling.UI/CRootView.cs:1115–1125](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1115-L1125)
+[Drilling.UI/CRootView.cs:1115–1125](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1115-L1125)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5974,7 +5974,7 @@ flowchart TD
 
 ### MethodDeclaration `IsMainLiveStatusTargetCurrent` · L1130–1133
 
-[Drilling.UI/CRootView.cs:1130–1133](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1130-L1133)
+[Drilling.UI/CRootView.cs:1130–1133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1130-L1133)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5994,9 +5994,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1003–1003](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1003-L1003) | IsMainLiveStatusTargetCurrent | False |
-| [Drilling.UI/CRootView.cs:1008–1008](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1008-L1008) | IsMainLiveStatusTargetCurrent | False |
-| [Drilling.UI/CRootView.cs:1012–1012](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1012-L1012) | IsMainLiveStatusTargetCurrent | False |
+| [Drilling.UI/CRootView.cs:1003–1003](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1003-L1003) | IsMainLiveStatusTargetCurrent | False |
+| [Drilling.UI/CRootView.cs:1008–1008](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1008-L1008) | IsMainLiveStatusTargetCurrent | False |
+| [Drilling.UI/CRootView.cs:1012–1012](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1012-L1012) | IsMainLiveStatusTargetCurrent | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6017,7 +6017,7 @@ flowchart TD
 
 ### MethodDeclaration `ReportMainLiveStatusError` · L1135–1150
 
-[Drilling.UI/CRootView.cs:1135–1150](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1135-L1150)
+[Drilling.UI/CRootView.cs:1135–1150](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1135-L1150)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6036,7 +6036,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1014–1014](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1014-L1014) | ReportMainLiveStatusError | False |
+| [Drilling.UI/CRootView.cs:1014–1014](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1014-L1014) | ReportMainLiveStatusError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6083,7 +6083,7 @@ flowchart TD
 
 ### MethodDeclaration `ReportStaleMainLiveStatusError` · L1152–1161
 
-[Drilling.UI/CRootView.cs:1152–1161](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1152-L1161)
+[Drilling.UI/CRootView.cs:1152–1161](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1152-L1161)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6102,7 +6102,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1018–1018](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1018-L1018) | ReportStaleMainLiveStatusError | False |
+| [Drilling.UI/CRootView.cs:1018–1018](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1018-L1018) | ReportStaleMainLiveStatusError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6135,7 +6135,7 @@ flowchart TD
 
 ### MethodDeclaration `ReportMainLiveStatusRestored` · L1163–1174
 
-[Drilling.UI/CRootView.cs:1163–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1163-L1174)
+[Drilling.UI/CRootView.cs:1163–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1163-L1174)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6148,7 +6148,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1005–1005](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1005-L1005) | ReportMainLiveStatusRestored | False |
+| [Drilling.UI/CRootView.cs:1005–1005](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1005-L1005) | ReportMainLiveStatusRestored | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6180,7 +6180,7 @@ flowchart TD
 
 ### MethodDeclaration `ReportClockTickError` · L1176–1190
 
-[Drilling.UI/CRootView.cs:1176–1190](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1176-L1190)
+[Drilling.UI/CRootView.cs:1176–1190](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1176-L1190)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6199,7 +6199,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2350–2350](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2350-L2350) | ReportClockTickError | False |
+| [Drilling.UI/CRootView.cs:2350–2350](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2350-L2350) | ReportClockTickError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6245,7 +6245,7 @@ flowchart TD
 
 ### MethodDeclaration `QueueStationStateLog` · L1192–1208
 
-[Drilling.UI/CRootView.cs:1192–1208](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1192-L1208)
+[Drilling.UI/CRootView.cs:1192–1208](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1192-L1208)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6266,16 +6266,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1149–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1149-L1149) | QueueStationStateLog | False |
-| [Drilling.UI/CRootView.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1160-L1160) | QueueStationStateLog | False |
-| [Drilling.UI/CRootView.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1173-L1173) | QueueStationStateLog | False |
-| [Drilling.UI/CRootView.cs:1189–1189](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1189-L1189) | QueueStationStateLog | False |
+| [Drilling.UI/CRootView.cs:1149–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1149-L1149) | QueueStationStateLog | False |
+| [Drilling.UI/CRootView.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1160-L1160) | QueueStationStateLog | False |
+| [Drilling.UI/CRootView.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1173-L1173) | QueueStationStateLog | False |
+| [Drilling.UI/CRootView.cs:1189–1189](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1189-L1189) | QueueStationStateLog | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1194 | _manager.Log | resolved | CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
+| 1194 | _manager.Log | resolved | Drilling.Common.Log.CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
 | 1207 | Task.Run | resolved | System.Threading.Tasks.Task System.Threading.Tasks.Task.Run(System.Action) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -6292,7 +6292,7 @@ flowchart TD
 
 ### LocalFunctionStatement `WriteStationStateLog` · L1195–1205
 
-[Drilling.UI/CRootView.cs:1195–1205](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1195-L1205)
+[Drilling.UI/CRootView.cs:1195–1205](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1195-L1205)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6307,7 +6307,7 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1199 | logManager.WriteStationState | unresolved | None |
+| 1199 | logManager.WriteStationState | resolved | void Drilling.Common.Log.CLogManager.WriteStationState(string, string, string, string) · Drilling.Common/Log/CLogManager.cs:175 |
 | 1203 | Debug.WriteLine | resolved | void System.Diagnostics.Debug.WriteLine(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -6334,7 +6334,7 @@ flowchart TD
 
 ### MethodDeclaration `HasElapsed` · L1210–1220
 
-[Drilling.UI/CRootView.cs:1210–1220](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1210-L1220)
+[Drilling.UI/CRootView.cs:1210–1220](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1210-L1220)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6355,12 +6355,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:966–966](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L966-L966) | HasElapsed | False |
-| [Drilling.UI/CRootView.cs:1139–1139](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1139-L1139) | HasElapsed | False |
-| [Drilling.UI/CRootView.cs:1180–1180](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1180-L1180) | HasElapsed | False |
-| [Drilling.UI/CRootView.cs:2313–2313](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2313-L2313) | HasElapsed | False |
-| [Drilling.UI/CRootView.cs:2315–2315](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2315-L2315) | HasElapsed | False |
-| [Drilling.UI/CRootView.cs:2316–2316](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2316-L2316) | HasElapsed | False |
+| [Drilling.UI/CRootView.cs:966–966](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L966-L966) | HasElapsed | False |
+| [Drilling.UI/CRootView.cs:1139–1139](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1139-L1139) | HasElapsed | False |
+| [Drilling.UI/CRootView.cs:1180–1180](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1180-L1180) | HasElapsed | False |
+| [Drilling.UI/CRootView.cs:2313–2313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2313-L2313) | HasElapsed | False |
+| [Drilling.UI/CRootView.cs:2315–2315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2315-L2315) | HasElapsed | False |
+| [Drilling.UI/CRootView.cs:2316–2316](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2316-L2316) | HasElapsed | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -6387,7 +6387,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshShellCommunicationStatus` · L1222–1235
 
-[Drilling.UI/CRootView.cs:1222–1235](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1222-L1235)
+[Drilling.UI/CRootView.cs:1222–1235](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1222-L1235)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6406,7 +6406,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:969–969](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L969-L969) | RefreshShellCommunicationStatus | False |
+| [Drilling.UI/CRootView.cs:969–969](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L969-L969) | RefreshShellCommunicationStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6443,7 +6443,7 @@ flowchart TD
 
 ### MethodDeclaration `GetSystemStatusSnapshot` · L1237–1253
 
-[Drilling.UI/CRootView.cs:1237–1253](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1237-L1253)
+[Drilling.UI/CRootView.cs:1237–1253](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1237-L1253)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6462,8 +6462,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L603-L603) | GetSystemStatusSnapshot | False |
-| [Drilling.UI/CRootView.cs:922–922](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L922-L922) | GetSystemStatusSnapshot | False |
+| [Drilling.UI/CRootView.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L603-L603) | GetSystemStatusSnapshot | False |
+| [Drilling.UI/CRootView.cs:922–922](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L922-L922) | GetSystemStatusSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6504,7 +6504,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ReadSystemStatusSource` · L1242–1247
 
-[Drilling.UI/CRootView.cs:1242–1247](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1242-L1247)
+[Drilling.UI/CRootView.cs:1242–1247](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1242-L1247)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6542,7 +6542,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplySystemStatusSnapshot` · L1255–1265
 
-[Drilling.UI/CRootView.cs:1255–1265](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1255-L1265)
+[Drilling.UI/CRootView.cs:1255–1265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1255-L1265)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6562,8 +6562,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L603-L603) | ApplySystemStatusSnapshot | False |
-| [Drilling.UI/CRootView.cs:922–922](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L922-L922) | ApplySystemStatusSnapshot | False |
+| [Drilling.UI/CRootView.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L603-L603) | ApplySystemStatusSnapshot | False |
+| [Drilling.UI/CRootView.cs:922–922](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L922-L922) | ApplySystemStatusSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6595,7 +6595,7 @@ flowchart TD
 
 ### MethodDeclaration `GetPMLockStatus` · L1267–1270
 
-[Drilling.UI/CRootView.cs:1267–1270](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1267-L1270)
+[Drilling.UI/CRootView.cs:1267–1270](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1267-L1270)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6616,7 +6616,7 @@ flowchart TD
 
 ### MethodDeclaration `TryEnterPmLock` · L1272–1322
 
-[Drilling.UI/CRootView.cs:1272–1322](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1272-L1322)
+[Drilling.UI/CRootView.cs:1272–1322](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1272-L1322)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6629,7 +6629,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L312-L312) | TryEnterPmLock | False |
+| [Drilling.UI/CRootView.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L312-L312) | TryEnterPmLock | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6642,9 +6642,9 @@ flowchart TD
 | 1296 | dialog.ShowDialog | unresolved | None |
 | 1300 | TryGetManualOperationBlocker | resolved | bool Drilling.UI.CRootView.TryGetManualOperationBlocker(out string) · Drilling.UI/CRootView.cs:1324 |
 | 1303 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
-| 1309 | _manager.Log().StartPmSession | unresolved | None |
-| 1309 | _manager.Log | resolved | CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
-| 1310 | new ST_PM_LOCK_STATUS | candidate | OverloadResolutionFailure |
+| 1309 | _manager.Log().StartPmSession | resolved | Drilling.Common.Log.ST_PM_HISTORY_ENTRY Drilling.Common.Log.CLogManager.StartPmSession(string, string) · Drilling.Common/Log/CLogManager.cs:72 |
+| 1309 | _manager.Log | resolved | Drilling.Common.Log.CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
+| 1310 | new ST_PM_LOCK_STATUS | resolved | Drilling.Common.Managers.ST_PM_LOCK_STATUS.ST_PM_LOCK_STATUS(bool, System.DateTimeOffset?) · Drilling.Common/Managers/CManager.cs:762 |
 | 1319 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -6711,7 +6711,7 @@ flowchart TD
 
 ### MethodDeclaration `TryGetManualOperationBlocker` · L1324–1377
 
-[Drilling.UI/CRootView.cs:1324–1377](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1324-L1377)
+[Drilling.UI/CRootView.cs:1324–1377](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1324-L1377)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6730,8 +6730,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1281–1281](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1281-L1281) | TryGetManualOperationBlocker | False |
-| [Drilling.UI/CRootView.cs:1300–1300](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1300-L1300) | TryGetManualOperationBlocker | False |
+| [Drilling.UI/CRootView.cs:1281–1281](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1281-L1281) | TryGetManualOperationBlocker | False |
+| [Drilling.UI/CRootView.cs:1300–1300](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1300-L1300) | TryGetManualOperationBlocker | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6809,7 +6809,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidatePmReason` · L1379–1386
 
-[Drilling.UI/CRootView.cs:1379–1386](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1379-L1386)
+[Drilling.UI/CRootView.cs:1379–1386](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1379-L1386)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6861,7 +6861,7 @@ flowchart TD
 
 ### MethodDeclaration `RequestPmUnlockForNavigation` · L1388–1412
 
-[Drilling.UI/CRootView.cs:1388–1412](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1388-L1412)
+[Drilling.UI/CRootView.cs:1388–1412](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1388-L1412)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6880,7 +6880,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L304-L304) | RequestPmUnlockForNavigation | False |
+| [Drilling.UI/CRootView.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L304-L304) | RequestPmUnlockForNavigation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6930,7 +6930,7 @@ flowchart TD
 
 ### MethodDeclaration `QueueNavigationMenuSelectionSync` · L1414–1435
 
-[Drilling.UI/CRootView.cs:1414–1435](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1414-L1435)
+[Drilling.UI/CRootView.cs:1414–1435](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1414-L1435)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6943,7 +6943,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:398–398](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L398-L398) | QueueNavigationMenuSelectionSync | False |
+| [Drilling.UI/CRootView.cs:398–398](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L398-L398) | QueueNavigationMenuSelectionSync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6989,7 +6989,7 @@ flowchart TD
 
 ### MethodDeclaration `SyncNavigationMenuSelection` · L1437–1443
 
-[Drilling.UI/CRootView.cs:1437–1443](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1437-L1443)
+[Drilling.UI/CRootView.cs:1437–1443](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1437-L1443)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7002,8 +7002,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L343-L343) | SyncNavigationMenuSelection | False |
-| [Drilling.UI/CRootView.cs:1419–1419](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1419-L1419) | SyncNavigationMenuSelection | False |
+| [Drilling.UI/CRootView.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L343-L343) | SyncNavigationMenuSelection | False |
+| [Drilling.UI/CRootView.cs:1419–1419](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1419-L1419) | SyncNavigationMenuSelection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7023,7 +7023,7 @@ flowchart TD
 
 ### MethodDeclaration `UnlockPm` · L1445–1495
 
-[Drilling.UI/CRootView.cs:1445–1495](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1445-L1495)
+[Drilling.UI/CRootView.cs:1445–1495](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1445-L1495)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7043,7 +7043,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1406–1406](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1406-L1406) | UnlockPm | False |
+| [Drilling.UI/CRootView.cs:1406–1406](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1406-L1406) | UnlockPm | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7056,8 +7056,8 @@ flowchart TD
 | 1461 | string.Equals | resolved | bool string.Equals(string?, string?, System.StringComparison) |
 | 1464 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
 | 1469 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
-| 1473 | _manager.Log().CompletePmSession | unresolved | None |
-| 1473 | _manager.Log | resolved | CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
+| 1473 | _manager.Log().CompletePmSession | resolved | Drilling.Common.Log.ST_PM_HISTORY_ENTRY Drilling.Common.Log.CLogManager.CompletePmSession(Drilling.Common.Log.ST_PM_HISTORY_ENTRY) · Drilling.Common/Log/CLogManager.cs:92 |
+| 1473 | _manager.Log | resolved | Drilling.Common.Log.CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
 | 1474 | new ST_PM_LOCK_STATUS | resolved | Drilling.Common.Managers.ST_PM_LOCK_STATUS.ST_PM_LOCK_STATUS(bool, System.DateTimeOffset?) · Drilling.Common/Managers/CManager.cs:762 |
 | 1478 | RefreshOperationModeAccess | resolved | void Drilling.UI.CRootView.RefreshOperationModeAccess() · Drilling.UI/CRootView.cs:879 |
 | 1479 | Menus.Contains | resolved | bool System.Collections.ObjectModel.Collection<Drilling.UI.Menu.Menus.CMenuItem>.Contains(Drilling.UI.Menu.Menus.CMenuItem) |
@@ -7142,7 +7142,7 @@ flowchart TD
 
 ### MethodDeclaration `Replace` · L1497–1510
 
-[Drilling.UI/CRootView.cs:1497–1510](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1497-L1510)
+[Drilling.UI/CRootView.cs:1497–1510](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1497-L1510)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7162,10 +7162,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:905–905](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L905-L905) | Replace | False |
-| [Drilling.UI/CRootView.cs:906–906](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L906-L906) | Replace | False |
-| [Drilling.UI/CRootView.cs:907–907](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L907-L907) | Replace | False |
-| [Drilling.UI/CRootView.cs:908–908](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L908-L908) | Replace | False |
+| [Drilling.UI/CRootView.cs:905–905](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L905-L905) | Replace | False |
+| [Drilling.UI/CRootView.cs:906–906](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L906-L906) | Replace | False |
+| [Drilling.UI/CRootView.cs:907–907](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L907-L907) | Replace | False |
+| [Drilling.UI/CRootView.cs:908–908](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L908-L908) | Replace | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7205,7 +7205,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateHeaderStatusItems` · L1512–1529
 
-[Drilling.UI/CRootView.cs:1512–1529](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1512-L1529)
+[Drilling.UI/CRootView.cs:1512–1529](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1512-L1529)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7218,7 +7218,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:904–904](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L904-L904) | CreateHeaderStatusItems | False |
+| [Drilling.UI/CRootView.cs:904–904](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L904-L904) | CreateHeaderStatusItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7264,7 +7264,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L1521–1524
 
-[Drilling.UI/CRootView.cs:1521–1524](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1521-L1524)
+[Drilling.UI/CRootView.cs:1521–1524](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1521-L1524)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7298,7 +7298,7 @@ flowchart TD
 
 ### MethodDeclaration `IsHeaderContextStatusItem` · L1531–1534
 
-[Drilling.UI/CRootView.cs:1531–1534](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1531-L1534)
+[Drilling.UI/CRootView.cs:1531–1534](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1531-L1534)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7317,7 +7317,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:907–907](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L907-L907) | IsHeaderContextStatusItem | False |
+| [Drilling.UI/CRootView.cs:907–907](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L907-L907) | IsHeaderContextStatusItem | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7338,7 +7338,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateFooterStatusItems` · L1536–1607
 
-[Drilling.UI/CRootView.cs:1536–1607](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1536-L1607)
+[Drilling.UI/CRootView.cs:1536–1607](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1536-L1607)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7357,7 +7357,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:908–908](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L908-L908) | CreateFooterStatusItems | False |
+| [Drilling.UI/CRootView.cs:908–908](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L908-L908) | CreateFooterStatusItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7491,7 +7491,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsIsEdited` · L1549–1552
 
-[Drilling.UI/CRootView.cs:1549–1552](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1549-L1552)
+[Drilling.UI/CRootView.cs:1549–1552](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1549-L1552)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7518,7 +7518,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsIsModified` · L1564–1567
 
-[Drilling.UI/CRootView.cs:1564–1567](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1564-L1567)
+[Drilling.UI/CRootView.cs:1564–1567](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1564-L1567)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7545,7 +7545,7 @@ flowchart TD
 
 ### MethodDeclaration `InitializeProcessModel` · L1609–1625
 
-[Drilling.UI/CRootView.cs:1609–1625](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1609-L1625)
+[Drilling.UI/CRootView.cs:1609–1625](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1609-L1625)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7564,7 +7564,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L261-L261) | InitializeProcessModel | False |
+| [Drilling.UI/CRootView.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L261-L261) | InitializeProcessModel | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7610,7 +7610,7 @@ flowchart TD
 
 ### MethodDeclaration `PrepareInitialProcess` · L1627–1661
 
-[Drilling.UI/CRootView.cs:1627–1661](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1627-L1661)
+[Drilling.UI/CRootView.cs:1627–1661](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1627-L1661)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7630,8 +7630,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1613–1613](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1613-L1613) | PrepareInitialProcess | False |
-| [Drilling.UI/CRootView.cs:2007–2007](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2007-L2007) | PrepareInitialProcess | False |
+| [Drilling.UI/CRootView.cs:1613–1613](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1613-L1613) | PrepareInitialProcess | False |
+| [Drilling.UI/CRootView.cs:2007–2007](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2007-L2007) | PrepareInitialProcess | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7733,7 +7733,7 @@ flowchart TD
 
 ### MethodDeclaration `FindSelectedRecipe` · L1663–1690
 
-[Drilling.UI/CRootView.cs:1663–1690](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1663-L1690)
+[Drilling.UI/CRootView.cs:1663–1690](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1663-L1690)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7752,8 +7752,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1634–1634](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1634-L1634) | FindSelectedRecipe | False |
-| [Drilling.UI/CRootView.cs:1734–1734](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1734-L1734) | FindSelectedRecipe | False |
+| [Drilling.UI/CRootView.cs:1634–1634](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1634-L1634) | FindSelectedRecipe | False |
+| [Drilling.UI/CRootView.cs:1734–1734](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1734-L1734) | FindSelectedRecipe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7796,7 +7796,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L1670–1673
 
-[Drilling.UI/CRootView.cs:1670–1673](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1670-L1673)
+[Drilling.UI/CRootView.cs:1670–1673](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1670-L1673)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7830,7 +7830,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem2` · L1684–1687
 
-[Drilling.UI/CRootView.cs:1684–1687](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1684-L1687)
+[Drilling.UI/CRootView.cs:1684–1687](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1684-L1687)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7864,7 +7864,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateProcessParameters` · L1692–1722
 
-[Drilling.UI/CRootView.cs:1692–1722](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1692-L1722)
+[Drilling.UI/CRootView.cs:1692–1722](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1692-L1722)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7887,9 +7887,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1650–1650](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1650-L1650) | CreateProcessParameters | False |
-| [Drilling.UI/CRootView.cs:3276–3276](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3276-L3276) | CreateProcessParameters | False |
-| [Drilling.UI/CRootView.cs:3291–3291](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3291-L3291) | CreateProcessParameters | False |
+| [Drilling.UI/CRootView.cs:1650–1650](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1650-L1650) | CreateProcessParameters | False |
+| [Drilling.UI/CRootView.cs:3276–3276](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3276-L3276) | CreateProcessParameters | False |
+| [Drilling.UI/CRootView.cs:3291–3291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3291-L3291) | CreateProcessParameters | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7928,7 +7928,7 @@ flowchart TD
 
 ### LocalFunctionStatement `HasRecipeParameterKey` · L1694–1697
 
-[Drilling.UI/CRootView.cs:1694–1697](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1694-L1697)
+[Drilling.UI/CRootView.cs:1694–1697](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1694-L1697)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7962,7 +7962,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectKey` · L1699–1702
 
-[Drilling.UI/CRootView.cs:1699–1702](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1699-L1702)
+[Drilling.UI/CRootView.cs:1699–1702](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1699-L1702)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7989,7 +7989,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectRecipeParameterGroupKey` · L1704–1707
 
-[Drilling.UI/CRootView.cs:1704–1707](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1704-L1707)
+[Drilling.UI/CRootView.cs:1704–1707](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1704-L1707)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8016,7 +8016,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L1709–1712
 
-[Drilling.UI/CRootView.cs:1709–1712](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1709-L1712)
+[Drilling.UI/CRootView.cs:1709–1712](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1709-L1712)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8050,7 +8050,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadShiftOffset` · L1724–1727
 
-[Drilling.UI/CRootView.cs:1724–1727](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1724-L1727)
+[Drilling.UI/CRootView.cs:1724–1727](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1724-L1727)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8063,8 +8063,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1649–1649](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1649-L1649) | ReadShiftOffset | False |
-| [Drilling.UI/CRootView.cs:1977–1977](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1977-L1977) | ReadShiftOffset | False |
+| [Drilling.UI/CRootView.cs:1649–1649](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1649-L1649) | ReadShiftOffset | False |
+| [Drilling.UI/CRootView.cs:1977–1977](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1977-L1977) | ReadShiftOffset | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8085,7 +8085,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenShiftOffsetDialog` · L1729–1762
 
-[Drilling.UI/CRootView.cs:1729–1762](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1729-L1762)
+[Drilling.UI/CRootView.cs:1729–1762](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1729-L1762)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8157,7 +8157,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildRows` · L1736–1739
 
-[Drilling.UI/CRootView.cs:1736–1739](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1736-L1739)
+[Drilling.UI/CRootView.cs:1736–1739](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1736-L1739)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8192,7 +8192,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ValidateApply` · L1741–1744
 
-[Drilling.UI/CRootView.cs:1741–1744](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1741-L1744)
+[Drilling.UI/CRootView.cs:1741–1744](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1741-L1744)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8227,7 +8227,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateShiftOffsetPreviewParameters` · L1764–1796
 
-[Drilling.UI/CRootView.cs:1764–1796](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1764-L1796)
+[Drilling.UI/CRootView.cs:1764–1796](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1764-L1796)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8246,7 +8246,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1735–1735](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1735-L1735) | CreateShiftOffsetPreviewParameters | False |
+| [Drilling.UI/CRootView.cs:1735–1735](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1735-L1735) | CreateShiftOffsetPreviewParameters | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8314,7 +8314,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildShiftOffsetHeadRows` · L1798–1814
 
-[Drilling.UI/CRootView.cs:1798–1814](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1798-L1814)
+[Drilling.UI/CRootView.cs:1798–1814](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1798-L1814)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8335,7 +8335,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1738–1738](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1738-L1738) | BuildShiftOffsetHeadRows | False |
+| [Drilling.UI/CRootView.cs:1738–1738](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1738-L1738) | BuildShiftOffsetHeadRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8385,7 +8385,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateShiftOffsetParameters` · L1816–1823
 
-[Drilling.UI/CRootView.cs:1816–1823](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1816-L1823)
+[Drilling.UI/CRootView.cs:1816–1823](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1816-L1823)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8406,7 +8406,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1829–1829](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1829-L1829) | CreateShiftOffsetParameters | False |
+| [Drilling.UI/CRootView.cs:1829–1829](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1829-L1829) | CreateShiftOffsetParameters | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8431,7 +8431,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateShiftOffsetApply` · L1825–1876
 
-[Drilling.UI/CRootView.cs:1825–1876](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1825-L1876)
+[Drilling.UI/CRootView.cs:1825–1876](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1825-L1876)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8452,7 +8452,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1743–1743](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1743-L1743) | ValidateShiftOffsetApply | False |
+| [Drilling.UI/CRootView.cs:1743–1743](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1743-L1743) | ValidateShiftOffsetApply | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8568,7 +8568,7 @@ flowchart TD
 
 ### MethodDeclaration `AddShiftOffsetIssue` · L1878–1884
 
-[Drilling.UI/CRootView.cs:1878–1884](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1878-L1884)
+[Drilling.UI/CRootView.cs:1878–1884](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1878-L1884)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8588,8 +8588,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1849–1849](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1849-L1849) | AddShiftOffsetIssue | False |
-| [Drilling.UI/CRootView.cs:1859–1859](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1859-L1859) | AddShiftOffsetIssue | False |
+| [Drilling.UI/CRootView.cs:1849–1849](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1849-L1849) | AddShiftOffsetIssue | False |
+| [Drilling.UI/CRootView.cs:1859–1859](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1859-L1859) | AddShiftOffsetIssue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8617,7 +8617,7 @@ flowchart TD
 
 ### MethodDeclaration `IsOutsideRange` · L1886–1889
 
-[Drilling.UI/CRootView.cs:1886–1889](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1886-L1889)
+[Drilling.UI/CRootView.cs:1886–1889](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1886-L1889)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8639,9 +8639,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1846–1846](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1846-L1846) | IsOutsideRange | False |
-| [Drilling.UI/CRootView.cs:1846–1846](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1846-L1846) | IsOutsideRange | False |
-| [Drilling.UI/CRootView.cs:1856–1856](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1856-L1856) | IsOutsideRange | False |
+| [Drilling.UI/CRootView.cs:1846–1846](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1846-L1846) | IsOutsideRange | False |
+| [Drilling.UI/CRootView.cs:1846–1846](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1846-L1846) | IsOutsideRange | False |
+| [Drilling.UI/CRootView.cs:1856–1856](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1856-L1856) | IsOutsideRange | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -8653,7 +8653,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatShiftOffsetShot` · L1891–1894
 
-[Drilling.UI/CRootView.cs:1891–1894](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1891-L1894)
+[Drilling.UI/CRootView.cs:1891–1894](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1891-L1894)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8672,8 +8672,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1849–1849](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1849-L1849) | FormatShiftOffsetShot | False |
-| [Drilling.UI/CRootView.cs:1859–1859](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1859-L1859) | FormatShiftOffsetShot | False |
+| [Drilling.UI/CRootView.cs:1849–1849](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1849-L1849) | FormatShiftOffsetShot | False |
+| [Drilling.UI/CRootView.cs:1859–1859](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1859-L1859) | FormatShiftOffsetShot | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -8685,7 +8685,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadShiftOffsetHeadCenterX` · L1896–1904
 
-[Drilling.UI/CRootView.cs:1896–1904](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1896-L1904)
+[Drilling.UI/CRootView.cs:1896–1904](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1896-L1904)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8705,7 +8705,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1853–1853](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1853-L1853) | ReadShiftOffsetHeadCenterX | False |
+| [Drilling.UI/CRootView.cs:1853–1853](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1853-L1853) | ReadShiftOffsetHeadCenterX | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8738,7 +8738,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadShiftOffsetHeadScanFieldHalfWidth` · L1906–1915
 
-[Drilling.UI/CRootView.cs:1906–1915](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1906-L1915)
+[Drilling.UI/CRootView.cs:1906–1915](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1906-L1915)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8758,7 +8758,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1854–1854](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1854-L1854) | ReadShiftOffsetHeadScanFieldHalfWidth | False |
+| [Drilling.UI/CRootView.cs:1854–1854](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1854-L1854) | ReadShiftOffsetHeadScanFieldHalfWidth | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8792,7 +8792,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadShiftOffsetScannerReferenceOffsetX` · L1917–1922
 
-[Drilling.UI/CRootView.cs:1917–1922](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1917-L1922)
+[Drilling.UI/CRootView.cs:1917–1922](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1917-L1922)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8811,7 +8811,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1834–1834](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1834-L1834) | ReadShiftOffsetScannerReferenceOffsetX | False |
+| [Drilling.UI/CRootView.cs:1834–1834](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1834-L1834) | ReadShiftOffsetScannerReferenceOffsetX | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8836,7 +8836,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadShiftOffsetPreviewInt` · L1924–1935
 
-[Drilling.UI/CRootView.cs:1924–1935](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1924-L1935)
+[Drilling.UI/CRootView.cs:1924–1935](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1924-L1935)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8857,7 +8857,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1800–1800](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1800-L1800) | ReadShiftOffsetPreviewInt | False |
+| [Drilling.UI/CRootView.cs:1800–1800](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1800-L1800) | ReadShiftOffsetPreviewInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8892,7 +8892,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadShiftOffsetPreviewDouble` · L1937–1948
 
-[Drilling.UI/CRootView.cs:1937–1948](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1937-L1948)
+[Drilling.UI/CRootView.cs:1937–1948](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1937-L1948)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8913,12 +8913,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1900–1900](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1900-L1900) | ReadShiftOffsetPreviewDouble | False |
-| [Drilling.UI/CRootView.cs:1901–1901](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1901-L1901) | ReadShiftOffsetPreviewDouble | False |
-| [Drilling.UI/CRootView.cs:1902–1902](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1902-L1902) | ReadShiftOffsetPreviewDouble | False |
-| [Drilling.UI/CRootView.cs:1908–1908](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1908-L1908) | ReadShiftOffsetPreviewDouble | False |
-| [Drilling.UI/CRootView.cs:1919–1919](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1919-L1919) | ReadShiftOffsetPreviewDouble | False |
-| [Drilling.UI/CRootView.cs:1920–1920](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1920-L1920) | ReadShiftOffsetPreviewDouble | False |
+| [Drilling.UI/CRootView.cs:1900–1900](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1900-L1900) | ReadShiftOffsetPreviewDouble | False |
+| [Drilling.UI/CRootView.cs:1901–1901](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1901-L1901) | ReadShiftOffsetPreviewDouble | False |
+| [Drilling.UI/CRootView.cs:1902–1902](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1902-L1902) | ReadShiftOffsetPreviewDouble | False |
+| [Drilling.UI/CRootView.cs:1908–1908](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1908-L1908) | ReadShiftOffsetPreviewDouble | False |
+| [Drilling.UI/CRootView.cs:1919–1919](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1919-L1919) | ReadShiftOffsetPreviewDouble | False |
+| [Drilling.UI/CRootView.cs:1920–1920](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1920-L1920) | ReadShiftOffsetPreviewDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8953,7 +8953,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatShiftOffsetPreviewValue` · L1950–1953
 
-[Drilling.UI/CRootView.cs:1950–1953](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1950-L1953)
+[Drilling.UI/CRootView.cs:1950–1953](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1950-L1953)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8972,11 +8972,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1809–1809](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1809-L1809) | FormatShiftOffsetPreviewValue | False |
-| [Drilling.UI/CRootView.cs:1810–1810](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1810-L1810) | FormatShiftOffsetPreviewValue | False |
-| [Drilling.UI/CRootView.cs:1849–1849](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1849-L1849) | FormatShiftOffsetPreviewValue | False |
-| [Drilling.UI/CRootView.cs:1849–1849](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1849-L1849) | FormatShiftOffsetPreviewValue | False |
-| [Drilling.UI/CRootView.cs:1859–1859](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1859-L1859) | FormatShiftOffsetPreviewValue | False |
+| [Drilling.UI/CRootView.cs:1809–1809](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1809-L1809) | FormatShiftOffsetPreviewValue | False |
+| [Drilling.UI/CRootView.cs:1810–1810](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1810-L1810) | FormatShiftOffsetPreviewValue | False |
+| [Drilling.UI/CRootView.cs:1849–1849](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1849-L1849) | FormatShiftOffsetPreviewValue | False |
+| [Drilling.UI/CRootView.cs:1849–1849](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1849-L1849) | FormatShiftOffsetPreviewValue | False |
+| [Drilling.UI/CRootView.cs:1859–1859](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1859-L1859) | FormatShiftOffsetPreviewValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8995,7 +8995,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadShiftOffsetValue` · L1955–1958
 
-[Drilling.UI/CRootView.cs:1955–1958](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1955-L1958)
+[Drilling.UI/CRootView.cs:1955–1958](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1955-L1958)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9014,8 +9014,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1726–1726](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1726-L1726) | ReadShiftOffsetValue | False |
-| [Drilling.UI/CRootView.cs:1726–1726](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1726-L1726) | ReadShiftOffsetValue | False |
+| [Drilling.UI/CRootView.cs:1726–1726](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1726-L1726) | ReadShiftOffsetValue | False |
+| [Drilling.UI/CRootView.cs:1726–1726](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1726-L1726) | ReadShiftOffsetValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9035,7 +9035,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeShiftOffsetText` · L1960–1968
 
-[Drilling.UI/CRootView.cs:1960–1968](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1960-L1968)
+[Drilling.UI/CRootView.cs:1960–1968](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1960-L1968)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9054,8 +9054,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:494–494](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L494-L494) | NormalizeShiftOffsetText | False |
-| [Drilling.UI/CRootView.cs:507–507](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L507-L507) | NormalizeShiftOffsetText | False |
+| [Drilling.UI/CRootView.cs:494–494](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L494-L494) | NormalizeShiftOffsetText | False |
+| [Drilling.UI/CRootView.cs:507–507](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L507-L507) | NormalizeShiftOffsetText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9094,7 +9094,7 @@ flowchart TD
 
 ### MethodDeclaration `StartCycle` · L1970–2071
 
-[Drilling.UI/CRootView.cs:1970–2071](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1970-L2071)
+[Drilling.UI/CRootView.cs:1970–2071](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1970-L2071)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9107,7 +9107,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L188-L188) | StartCycle | False |
+| [Drilling.UI/CRootView.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L188-L188) | StartCycle | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9301,7 +9301,7 @@ flowchart TD
 
 ### MethodDeclaration `StopCycle` · L2073–2138
 
-[Drilling.UI/CRootView.cs:2073–2138](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2073-L2138)
+[Drilling.UI/CRootView.cs:2073–2138](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2073-L2138)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9314,7 +9314,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L199-L199) | StopCycle | False |
+| [Drilling.UI/CRootView.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L199-L199) | StopCycle | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9421,7 +9421,7 @@ flowchart TD
 
 ### MethodDeclaration `CompleteStopAfterTimeout` · L2140–2169
 
-[Drilling.UI/CRootView.cs:2140–2169](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2140-L2169)
+[Drilling.UI/CRootView.cs:2140–2169](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2140-L2169)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9440,7 +9440,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2115–2115](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2115-L2115) | CompleteStopAfterTimeout | False |
+| [Drilling.UI/CRootView.cs:2115–2115](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2115-L2115) | CompleteStopAfterTimeout | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9495,7 +9495,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitForStationCycleFinished` · L2171–2182
 
-[Drilling.UI/CRootView.cs:2171–2182](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2171-L2182)
+[Drilling.UI/CRootView.cs:2171–2182](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2171-L2182)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9514,7 +9514,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2102–2102](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2102-L2102) | WaitForStationCycleFinished | False |
+| [Drilling.UI/CRootView.cs:2102–2102](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2102-L2102) | WaitForStationCycleFinished | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9554,7 +9554,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitForStationCycleFinished` · L2184–2197
 
-[Drilling.UI/CRootView.cs:2184–2197](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2184-L2197)
+[Drilling.UI/CRootView.cs:2184–2197](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2184-L2197)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9573,9 +9573,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2019–2019](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2019-L2019) | WaitForStationCycleFinished | False |
-| [Drilling.UI/CRootView.cs:2144–2144](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2144-L2144) | WaitForStationCycleFinished | False |
-| [Drilling.UI/CRootView.cs:2176–2176](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2176-L2176) | WaitForStationCycleFinished | False |
+| [Drilling.UI/CRootView.cs:2019–2019](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2019-L2019) | WaitForStationCycleFinished | False |
+| [Drilling.UI/CRootView.cs:2144–2144](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2144-L2144) | WaitForStationCycleFinished | False |
+| [Drilling.UI/CRootView.cs:2176–2176](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2176-L2176) | WaitForStationCycleFinished | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9618,7 +9618,7 @@ flowchart TD
 
 ### MethodDeclaration `IsStationCycleFinished` · L2199–2212
 
-[Drilling.UI/CRootView.cs:2199–2212](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2199-L2212)
+[Drilling.UI/CRootView.cs:2199–2212](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2199-L2212)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9637,7 +9637,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2190–2190](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2190-L2190) | IsStationCycleFinished | False |
+| [Drilling.UI/CRootView.cs:2190–2190](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2190-L2190) | IsStationCycleFinished | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -9664,7 +9664,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAutoCycleState` · L2214–2224
 
-[Drilling.UI/CRootView.cs:2214–2224](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2214-L2224)
+[Drilling.UI/CRootView.cs:2214–2224](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2214-L2224)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9683,17 +9683,17 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2003–2003](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2003-L2003) | SetAutoCycleState | False |
-| [Drilling.UI/CRootView.cs:2017–2017](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2017-L2017) | SetAutoCycleState | False |
-| [Drilling.UI/CRootView.cs:2039–2039](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2039-L2039) | SetAutoCycleState | False |
-| [Drilling.UI/CRootView.cs:2062–2062](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2062-L2062) | SetAutoCycleState | False |
-| [Drilling.UI/CRootView.cs:2088–2088](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2088-L2088) | SetAutoCycleState | False |
-| [Drilling.UI/CRootView.cs:2109–2109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2109-L2109) | SetAutoCycleState | False |
-| [Drilling.UI/CRootView.cs:2114–2114](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2114-L2114) | SetAutoCycleState | False |
-| [Drilling.UI/CRootView.cs:2119–2119](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2119-L2119) | SetAutoCycleState | False |
-| [Drilling.UI/CRootView.cs:2151–2151](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2151-L2151) | SetAutoCycleState | False |
-| [Drilling.UI/CRootView.cs:2155–2155](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2155-L2155) | SetAutoCycleState | False |
-| [Drilling.UI/CRootView.cs:3116–3116](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3116-L3116) | SetAutoCycleState | False |
+| [Drilling.UI/CRootView.cs:2003–2003](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2003-L2003) | SetAutoCycleState | False |
+| [Drilling.UI/CRootView.cs:2017–2017](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2017-L2017) | SetAutoCycleState | False |
+| [Drilling.UI/CRootView.cs:2039–2039](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2039-L2039) | SetAutoCycleState | False |
+| [Drilling.UI/CRootView.cs:2062–2062](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2062-L2062) | SetAutoCycleState | False |
+| [Drilling.UI/CRootView.cs:2088–2088](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2088-L2088) | SetAutoCycleState | False |
+| [Drilling.UI/CRootView.cs:2109–2109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2109-L2109) | SetAutoCycleState | False |
+| [Drilling.UI/CRootView.cs:2114–2114](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2114-L2114) | SetAutoCycleState | False |
+| [Drilling.UI/CRootView.cs:2119–2119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2119-L2119) | SetAutoCycleState | False |
+| [Drilling.UI/CRootView.cs:2151–2151](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2151-L2151) | SetAutoCycleState | False |
+| [Drilling.UI/CRootView.cs:2155–2155](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2155-L2155) | SetAutoCycleState | False |
+| [Drilling.UI/CRootView.cs:3116–3116](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3116-L3116) | SetAutoCycleState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9725,7 +9725,7 @@ flowchart TD
 
 ### MethodDeclaration `NotifyOperationCommandStates` · L2226–2232
 
-[Drilling.UI/CRootView.cs:2226–2232](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2226-L2232)
+[Drilling.UI/CRootView.cs:2226–2232](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2226-L2232)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9738,9 +9738,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:777–777](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L777-L777) | NotifyOperationCommandStates | False |
-| [Drilling.UI/CRootView.cs:796–796](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L796-L796) | NotifyOperationCommandStates | False |
-| [Drilling.UI/CRootView.cs:2223–2223](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2223-L2223) | NotifyOperationCommandStates | False |
+| [Drilling.UI/CRootView.cs:777–777](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L777-L777) | NotifyOperationCommandStates | False |
+| [Drilling.UI/CRootView.cs:796–796](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L796-L796) | NotifyOperationCommandStates | False |
+| [Drilling.UI/CRootView.cs:2223–2223](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2223-L2223) | NotifyOperationCommandStates | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9764,7 +9764,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectHead` · L2234–2260
 
-[Drilling.UI/CRootView.cs:2234–2260](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2234-L2260)
+[Drilling.UI/CRootView.cs:2234–2260](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2234-L2260)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9783,7 +9783,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:210–210](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L210-L210) | SelectHead | False |
+| [Drilling.UI/CRootView.cs:210–210](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L210-L210) | SelectHead | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9836,7 +9836,7 @@ flowchart TD
 
 ### MethodDeclaration `CanSelectHeadParameter` · L2262–2272
 
-[Drilling.UI/CRootView.cs:2262–2272](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2262-L2272)
+[Drilling.UI/CRootView.cs:2262–2272](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2262-L2272)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9855,7 +9855,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L215-L215) | CanSelectHeadParameter | False |
+| [Drilling.UI/CRootView.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L215-L215) | CanSelectHeadParameter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9888,7 +9888,7 @@ flowchart TD
 
 ### MethodDeclaration `IsHeadEnabled` · L2274–2290
 
-[Drilling.UI/CRootView.cs:2274–2290](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2274-L2290)
+[Drilling.UI/CRootView.cs:2274–2290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2274-L2290)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9907,8 +9907,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2248–2248](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2248-L2248) | IsHeadEnabled | False |
-| [Drilling.UI/CRootView.cs:2271–2271](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2271-L2271) | IsHeadEnabled | False |
+| [Drilling.UI/CRootView.cs:2248–2248](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2248-L2248) | IsHeadEnabled | False |
+| [Drilling.UI/CRootView.cs:2271–2271](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2271-L2271) | IsHeadEnabled | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9951,7 +9951,7 @@ flowchart TD
 
 ### MethodDeclaration `StartClock` · L2292–2354
 
-[Drilling.UI/CRootView.cs:2292–2354](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2292-L2354)
+[Drilling.UI/CRootView.cs:2292–2354](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2292-L2354)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9964,7 +9964,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:260–260](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L260-L260) | StartClock | False |
+| [Drilling.UI/CRootView.cs:260–260](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L260-L260) | StartClock | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10078,7 +10078,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateMenus` · L2356–2650
 
-[Drilling.UI/CRootView.cs:2356–2650](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2356-L2650)
+[Drilling.UI/CRootView.cs:2356–2650](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2356-L2650)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10107,7 +10107,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L256-L256) | CreateMenus | False |
+| [Drilling.UI/CRootView.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L256-L256) | CreateMenus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10127,13 +10127,13 @@ flowchart TD
 | 2576 | new CMenuManual | resolved | Drilling.UI.Menu.Menus.CMenuManual.CMenuManual(Drilling.Common.Managers.CManager, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Station.CAutomationScriptFileBase, System.Func<int>, System.Func<string>, System.Func<string>, System.Action<string>, Drilling.UI.Menu.CButtonCommand, System.Action<string>, System.Action, System.Func<System.Threading.Tasks.Task>, System.Func<(double X, double Y)>?) · Drilling.UI/Menu/Menus/CMenuManual.cs:172 |
 | 2590 | new CMenuRecipe | resolved | Drilling.UI.Menu.Menus.CMenuRecipe.CMenuRecipe(Drilling.Common.Managers.CRecipeManager, Drilling.Common.Managers.CSettingManager, System.Func<string>, System.Action<string>, System.Func<string>, System.Action<string>, System.Func<string>, System.Action<string>, System.Func<Drilling.UI.Menu.Menus.CMenuRecipe?>, System.Action<string>, System.Action<Drilling.UI.Menu.Menus.EN_MENU, string>, System.Action, System.Func<System.Threading.Tasks.Task>) · Drilling.UI/Menu/Menus/CMenuRecipe.cs:71 |
 | 2605 | new CMenuSetting | resolved | Drilling.UI.Menu.Menus.CMenuSetting.CMenuSetting(Drilling.Common.Managers.CSettingManager, System.Func<string>, System.Action<string>, System.Func<string>, System.Action<string>, System.Func<Drilling.UI.Menu.Menus.CMenuSetting?>, System.Action<string>, System.Action<Drilling.UI.Menu.Menus.EN_MENU, string>, System.Action, System.Func<System.Threading.Tasks.Task>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:30 |
-| 2617 | new CMenuAlarm | candidate | OverloadResolutionFailure |
-| 2617 | _manager.Log | resolved | CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
-| 2618 | new CMenuMonitor | candidate | OverloadResolutionFailure |
+| 2617 | new CMenuAlarm | resolved | Drilling.UI.Menu.Menus.CMenuAlarm.CMenuAlarm(Drilling.Common.Alarm.CAlarmManager, Drilling.Common.Station.CStationManager, System.Action<string>, System.Action, System.Func<System.Threading.Tasks.Task>, string) · Drilling.UI/Menu/Menus/CMenuAlarm.cs:17 |
+| 2617 | _manager.Log | resolved | Drilling.Common.Log.CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
+| 2618 | new CMenuMonitor | resolved | Drilling.UI.Menu.Menus.CMenuMonitor.CMenuMonitor(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Product.CProductManager, Drilling.Common.Managers.CRecipeManager, Drilling.Common.Managers.CSettingManager, Drilling.Common.Review.CReviewOffsetFileBase, System.Func<string>, System.Func<string>, System.Action<string>, System.Action<string>, System.Action, System.Func<System.Threading.Tasks.Task>, System.Func<bool>, string?) · Drilling.UI/Menu/Menus/CMenuMonitor.cs:179 |
 | 2625 | _manager.ReviewOffsetFile | resolved | Drilling.Common.Review.CReviewOffsetFileBase Drilling.Common.Managers.CManager.ReviewOffsetFile() · Drilling.Common/Managers/CManager.cs:438 |
-| 2633 | _manager.Log | resolved | CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
-| 2636 | new CMenuPm | resolved | Drilling.UI.Menu.Menus.CMenuPm.CMenuPm(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Managers.CRecipeManager, Drilling.Common.Managers.CSettingManager, CLogManager, System.Func<string>, System.Func<Drilling.Common.Managers.ST_PM_LOCK_STATUS>) · Drilling.UI/Menu/Menus/CMenuPm.cs:9 |
-| 2636 | _manager.Log | resolved | CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
+| 2633 | _manager.Log | resolved | Drilling.Common.Log.CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
+| 2636 | new CMenuPm | resolved | Drilling.UI.Menu.Menus.CMenuPm.CMenuPm(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Managers.CRecipeManager, Drilling.Common.Managers.CSettingManager, Drilling.Common.Log.CLogManager, System.Func<string>, System.Func<Drilling.Common.Managers.ST_PM_LOCK_STATUS>) · Drilling.UI/Menu/Menus/CMenuPm.cs:9 |
+| 2636 | _manager.Log | resolved | Drilling.Common.Log.CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
 | 2643 | correctionMenu.ConfigureReview | resolved | void Drilling.UI.Menu.Menus.CMenuCorrection.ConfigureReview(Drilling.UI.Menu.Menus.CMenuReview) · Drilling.UI/Menu/Menus/CMenuCorrection.cs:403 |
 | 2647 | menus.OfType<CMenuMain>().Single | resolved | Drilling.UI.Menu.Menus.CMenuMain System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuMain>.Single<Drilling.UI.Menu.Menus.CMenuMain>() |
 | 2647 | menus.OfType<CMenuMain> | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuMain> System.Collections.IEnumerable.OfType<Drilling.UI.Menu.Menus.CMenuMain>() |
@@ -10200,7 +10200,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSelectedRecipeId` · L2370–2373
 
-[Drilling.UI/CRootView.cs:2370–2373](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2370-L2373)
+[Drilling.UI/CRootView.cs:2370–2373](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2370-L2373)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10221,7 +10221,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SetMainStatusMessage` · L2375–2378
 
-[Drilling.UI/CRootView.cs:2375–2378](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2375-L2378)
+[Drilling.UI/CRootView.cs:2375–2378](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2375-L2378)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10248,7 +10248,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSelectedHeadNo` · L2380–2383
 
-[Drilling.UI/CRootView.cs:2380–2383](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2380-L2383)
+[Drilling.UI/CRootView.cs:2380–2383](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2380-L2383)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10269,7 +10269,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSelectedManualSettingName` · L2385–2388
 
-[Drilling.UI/CRootView.cs:2385–2388](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2385-L2388)
+[Drilling.UI/CRootView.cs:2385–2388](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2385-L2388)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10290,7 +10290,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SetSelectedManualSettingName` · L2390–2393
 
-[Drilling.UI/CRootView.cs:2390–2393](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2390-L2393)
+[Drilling.UI/CRootView.cs:2390–2393](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2390-L2393)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10317,7 +10317,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SetManualStatusMessage` · L2395–2398
 
-[Drilling.UI/CRootView.cs:2395–2398](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2395-L2398)
+[Drilling.UI/CRootView.cs:2395–2398](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2395-L2398)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10344,7 +10344,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSelectedRecipeId2` · L2400–2403
 
-[Drilling.UI/CRootView.cs:2400–2403](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2400-L2403)
+[Drilling.UI/CRootView.cs:2400–2403](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2400-L2403)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10365,7 +10365,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SetSelectedRecipeId` · L2405–2408
 
-[Drilling.UI/CRootView.cs:2405–2408](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2405-L2408)
+[Drilling.UI/CRootView.cs:2405–2408](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2405-L2408)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10399,7 +10399,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectViewRecipeId` · L2410–2413
 
-[Drilling.UI/CRootView.cs:2410–2413](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2410-L2413)
+[Drilling.UI/CRootView.cs:2410–2413](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2410-L2413)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10420,7 +10420,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SetViewRecipeId` · L2415–2418
 
-[Drilling.UI/CRootView.cs:2415–2418](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2415-L2418)
+[Drilling.UI/CRootView.cs:2415–2418](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2415-L2418)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10454,7 +10454,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectRecipe` · L2420–2423
 
-[Drilling.UI/CRootView.cs:2420–2423](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2420-L2423)
+[Drilling.UI/CRootView.cs:2420–2423](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2420-L2423)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10475,7 +10475,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSelectedRecipeCategory` · L2425–2428
 
-[Drilling.UI/CRootView.cs:2425–2428](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2425-L2428)
+[Drilling.UI/CRootView.cs:2425–2428](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2425-L2428)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10496,7 +10496,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SetSelectedRecipeCategory` · L2430–2433
 
-[Drilling.UI/CRootView.cs:2430–2433](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2430-L2433)
+[Drilling.UI/CRootView.cs:2430–2433](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2430-L2433)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10523,7 +10523,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SetRecipeStatusMessage` · L2435–2438
 
-[Drilling.UI/CRootView.cs:2435–2438](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2435-L2438)
+[Drilling.UI/CRootView.cs:2435–2438](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2435-L2438)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10550,7 +10550,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShowRecipeLoadingScreen` · L2440–2443
 
-[Drilling.UI/CRootView.cs:2440–2443](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2440-L2443)
+[Drilling.UI/CRootView.cs:2440–2443](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2440-L2443)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10585,7 +10585,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSelectedSettingTab` · L2445–2448
 
-[Drilling.UI/CRootView.cs:2445–2448](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2445-L2448)
+[Drilling.UI/CRootView.cs:2445–2448](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2445-L2448)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10606,7 +10606,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SetSelectedSettingTab` · L2450–2453
 
-[Drilling.UI/CRootView.cs:2450–2453](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2450-L2453)
+[Drilling.UI/CRootView.cs:2450–2453](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2450-L2453)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10633,7 +10633,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSelectedSettingGroup` · L2455–2458
 
-[Drilling.UI/CRootView.cs:2455–2458](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2455-L2458)
+[Drilling.UI/CRootView.cs:2455–2458](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2455-L2458)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10654,7 +10654,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SetSelectedSettingGroup` · L2460–2463
 
-[Drilling.UI/CRootView.cs:2460–2463](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2460-L2463)
+[Drilling.UI/CRootView.cs:2460–2463](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2460-L2463)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10681,7 +10681,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSetting` · L2465–2468
 
-[Drilling.UI/CRootView.cs:2465–2468](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2465-L2468)
+[Drilling.UI/CRootView.cs:2465–2468](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2465-L2468)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10702,7 +10702,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SetSettingStatusMessage` · L2470–2473
 
-[Drilling.UI/CRootView.cs:2470–2473](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2470-L2473)
+[Drilling.UI/CRootView.cs:2470–2473](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2470-L2473)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10729,7 +10729,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShowSettingLoadingScreen` · L2475–2478
 
-[Drilling.UI/CRootView.cs:2475–2478](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2475-L2478)
+[Drilling.UI/CRootView.cs:2475–2478](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2475-L2478)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10764,7 +10764,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SetAlarmStatusMessage` · L2480–2483
 
-[Drilling.UI/CRootView.cs:2480–2483](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2480-L2483)
+[Drilling.UI/CRootView.cs:2480–2483](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2480-L2483)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10791,7 +10791,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSelectedRecipeId3` · L2485–2488
 
-[Drilling.UI/CRootView.cs:2485–2488](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2485-L2488)
+[Drilling.UI/CRootView.cs:2485–2488](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2485-L2488)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10812,7 +10812,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSelectedMonitorTab` · L2490–2493
 
-[Drilling.UI/CRootView.cs:2490–2493](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2490-L2493)
+[Drilling.UI/CRootView.cs:2490–2493](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2490-L2493)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10833,7 +10833,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SetSelectedMonitorTab` · L2495–2498
 
-[Drilling.UI/CRootView.cs:2495–2498](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2495-L2498)
+[Drilling.UI/CRootView.cs:2495–2498](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2495-L2498)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10867,7 +10867,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SetMonitorStatusMessage` · L2500–2503
 
-[Drilling.UI/CRootView.cs:2500–2503](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2500-L2503)
+[Drilling.UI/CRootView.cs:2500–2503](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2500-L2503)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10894,7 +10894,7 @@ flowchart TD
 
 ### LocalFunctionStatement `CanExecuteMonitorWriteCommand` · L2505–2508
 
-[Drilling.UI/CRootView.cs:2505–2508](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2505-L2508)
+[Drilling.UI/CRootView.cs:2505–2508](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2505-L2508)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10915,7 +10915,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSelectedRecipeId4` · L2510–2513
 
-[Drilling.UI/CRootView.cs:2510–2513](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2510-L2513)
+[Drilling.UI/CRootView.cs:2510–2513](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2510-L2513)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10936,7 +10936,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SetReviewStatusMessage` · L2515–2518
 
-[Drilling.UI/CRootView.cs:2515–2518](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2515-L2518)
+[Drilling.UI/CRootView.cs:2515–2518](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2515-L2518)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10963,7 +10963,7 @@ flowchart TD
 
 ### LocalFunctionStatement `RefreshMenuAccessAfterReview` · L2520–2523
 
-[Drilling.UI/CRootView.cs:2520–2523](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2520-L2523)
+[Drilling.UI/CRootView.cs:2520–2523](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2520-L2523)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10991,7 +10991,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSelectedRecipeId5` · L2525–2528
 
-[Drilling.UI/CRootView.cs:2525–2528](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2525-L2528)
+[Drilling.UI/CRootView.cs:2525–2528](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2525-L2528)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11012,7 +11012,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SetCorrectionStatusMessage` · L2530–2533
 
-[Drilling.UI/CRootView.cs:2530–2533](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2530-L2533)
+[Drilling.UI/CRootView.cs:2530–2533](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2530-L2533)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11039,7 +11039,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsCorrectionMenuItem` · L2549–2552
 
-[Drilling.UI/CRootView.cs:2549–2552](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2549-L2552)
+[Drilling.UI/CRootView.cs:2549–2552](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2549-L2552)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11066,7 +11066,7 @@ flowchart TD
 
 ### LocalFunctionStatement `OpenCorrectionReview` · L2554–2559
 
-[Drilling.UI/CRootView.cs:2554–2559](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2554-L2559)
+[Drilling.UI/CRootView.cs:2554–2559](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2554-L2559)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11106,7 +11106,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectMenu` · L2638–2641
 
-[Drilling.UI/CRootView.cs:2638–2641](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2638-L2641)
+[Drilling.UI/CRootView.cs:2638–2641](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2638-L2641)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11133,7 +11133,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateLoadingScreen` · L2652–2655
 
-[Drilling.UI/CRootView.cs:2652–2655](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2652-L2655)
+[Drilling.UI/CRootView.cs:2652–2655](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2652-L2655)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11153,11 +11153,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:185–185](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L185-L185) | CreateLoadingScreen | False |
-| [Drilling.UI/CRootView.cs:572–572](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L572-L572) | CreateLoadingScreen | False |
-| [Drilling.UI/CRootView.cs:631–631](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L631-L631) | CreateLoadingScreen | False |
-| [Drilling.UI/CRootView.cs:2442–2442](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2442-L2442) | CreateLoadingScreen | False |
-| [Drilling.UI/CRootView.cs:2477–2477](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2477-L2477) | CreateLoadingScreen | False |
+| [Drilling.UI/CRootView.cs:185–185](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L185-L185) | CreateLoadingScreen | False |
+| [Drilling.UI/CRootView.cs:572–572](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L572-L572) | CreateLoadingScreen | False |
+| [Drilling.UI/CRootView.cs:631–631](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L631-L631) | CreateLoadingScreen | False |
+| [Drilling.UI/CRootView.cs:2442–2442](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2442-L2442) | CreateLoadingScreen | False |
+| [Drilling.UI/CRootView.cs:2477–2477](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2477-L2477) | CreateLoadingScreen | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11176,7 +11176,7 @@ flowchart TD
 
 ### MethodDeclaration `GetHeaderRecipeId` · L2657–2660
 
-[Drilling.UI/CRootView.cs:2657–2660](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2657-L2660)
+[Drilling.UI/CRootView.cs:2657–2660](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2657-L2660)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11195,7 +11195,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1519–1519](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1519-L1519) | GetHeaderRecipeId | False |
+| [Drilling.UI/CRootView.cs:1519–1519](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1519-L1519) | GetHeaderRecipeId | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11215,7 +11215,7 @@ flowchart TD
 
 ### MethodDeclaration `SyncSelectedManualSettingFromScreen` · L2662–2669
 
-[Drilling.UI/CRootView.cs:2662–2669](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2662-L2669)
+[Drilling.UI/CRootView.cs:2662–2669](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2662-L2669)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11228,7 +11228,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:595–595](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L595-L595) | SyncSelectedManualSettingFromScreen | False |
+| [Drilling.UI/CRootView.cs:595–595](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L595-L595) | SyncSelectedManualSettingFromScreen | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11261,7 +11261,7 @@ flowchart TD
 
 ### MethodDeclaration `SyncSelectedSettingSelectionFromScreen` · L2671–2680
 
-[Drilling.UI/CRootView.cs:2671–2680](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2671-L2680)
+[Drilling.UI/CRootView.cs:2671–2680](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2671-L2680)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11274,7 +11274,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:600–600](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L600-L600) | SyncSelectedSettingSelectionFromScreen | False |
+| [Drilling.UI/CRootView.cs:600–600](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L600-L600) | SyncSelectedSettingSelectionFromScreen | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -11298,7 +11298,7 @@ flowchart TD
 
 ### MethodDeclaration `GetSelectedRecipeFileText` · L2682–2690
 
-[Drilling.UI/CRootView.cs:2682–2690](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2682-L2690)
+[Drilling.UI/CRootView.cs:2682–2690](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2682-L2690)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11311,8 +11311,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1559–1559](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1559-L1559) | GetSelectedRecipeFileText | False |
-| [Drilling.UI/CRootView.cs:1976–1976](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1976-L1976) | GetSelectedRecipeFileText | False |
+| [Drilling.UI/CRootView.cs:1559–1559](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1559-L1559) | GetSelectedRecipeFileText | False |
+| [Drilling.UI/CRootView.cs:1976–1976](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1976-L1976) | GetSelectedRecipeFileText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11343,7 +11343,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeRecipeId` · L2692–2695
 
-[Drilling.UI/CRootView.cs:2692–2695](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2692-L2695)
+[Drilling.UI/CRootView.cs:2692–2695](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2692-L2695)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11362,9 +11362,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L164-L164) | NormalizeRecipeId | False |
-| [Drilling.UI/CRootView.cs:2407–2407](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2407-L2407) | NormalizeRecipeId | False |
-| [Drilling.UI/CRootView.cs:2417–2417](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2417-L2417) | NormalizeRecipeId | False |
+| [Drilling.UI/CRootView.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L164-L164) | NormalizeRecipeId | False |
+| [Drilling.UI/CRootView.cs:2407–2407](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2407-L2407) | NormalizeRecipeId | False |
+| [Drilling.UI/CRootView.cs:2417–2417](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2417-L2417) | NormalizeRecipeId | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11385,7 +11385,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateMonitorFooterStatusItems` · L2697–2712
 
-[Drilling.UI/CRootView.cs:2697–2712](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2697-L2712)
+[Drilling.UI/CRootView.cs:2697–2712](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2697-L2712)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11398,7 +11398,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1587–1587](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1587-L1587) | CreateMonitorFooterStatusItems | False |
+| [Drilling.UI/CRootView.cs:1587–1587](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1587-L1587) | CreateMonitorFooterStatusItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11485,7 +11485,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeMonitorTab` · L2714–2727
 
-[Drilling.UI/CRootView.cs:2714–2727](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2714-L2727)
+[Drilling.UI/CRootView.cs:2714–2727](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2714-L2727)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11504,7 +11504,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2497–2497](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2497-L2497) | NormalizeMonitorTab | False |
+| [Drilling.UI/CRootView.cs:2497–2497](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2497-L2497) | NormalizeMonitorTab | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11540,7 +11540,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateFallbackST_SYSTEM_STATUS` · L2729–2746
 
-[Drilling.UI/CRootView.cs:2729–2746](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2729-L2746)
+[Drilling.UI/CRootView.cs:2729–2746](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2729-L2746)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11553,7 +11553,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L89-L89) | CreateFallbackST_SYSTEM_STATUS | False |
+| [Drilling.UI/CRootView.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L89-L89) | CreateFallbackST_SYSTEM_STATUS | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11586,7 +11586,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeCommunicationStatuses` · L2748–2761
 
-[Drilling.UI/CRootView.cs:2748–2761](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2748-L2761)
+[Drilling.UI/CRootView.cs:2748–2761](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2748-L2761)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11605,8 +11605,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1230–1230](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1230-L1230) | NormalizeCommunicationStatuses | False |
-| [Drilling.UI/CRootView.cs:1246–1246](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1246-L1246) | NormalizeCommunicationStatuses | False |
+| [Drilling.UI/CRootView.cs:1230–1230](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1230-L1230) | NormalizeCommunicationStatuses | False |
+| [Drilling.UI/CRootView.cs:1246–1246](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1246-L1246) | NormalizeCommunicationStatuses | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11629,7 +11629,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L2750–2758
 
-[Drilling.UI/CRootView.cs:2750–2758](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2750-L2758)
+[Drilling.UI/CRootView.cs:2750–2758](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2750-L2758)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11665,7 +11665,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L2752–2755
 
-[Drilling.UI/CRootView.cs:2752–2755](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2752-L2755)
+[Drilling.UI/CRootView.cs:2752–2755](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2752-L2755)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11692,7 +11692,7 @@ flowchart TD
 
 ### MethodDeclaration `ModuleHeader` · L2763–2805
 
-[Drilling.UI/CRootView.cs:2763–2805](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2763-L2805)
+[Drilling.UI/CRootView.cs:2763–2805](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2763-L2805)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11712,7 +11712,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1523–1523](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1523-L1523) | ModuleHeader | False |
+| [Drilling.UI/CRootView.cs:1523–1523](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1523-L1523) | ModuleHeader | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11786,7 +11786,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectPreviousModuleStatusCallback` · L2780–2783
 
-[Drilling.UI/CRootView.cs:2780–2783](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2780-L2783)
+[Drilling.UI/CRootView.cs:2780–2783](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2780-L2783)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11819,7 +11819,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectNextModuleStatusCallback` · L2785–2788
 
-[Drilling.UI/CRootView.cs:2785–2788](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2785-L2788)
+[Drilling.UI/CRootView.cs:2785–2788](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2785-L2788)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11852,7 +11852,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShowModuleStatusPopupCallback` · L2790–2793
 
-[Drilling.UI/CRootView.cs:2790–2793](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2790-L2793)
+[Drilling.UI/CRootView.cs:2790–2793](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2790-L2793)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11885,7 +11885,7 @@ flowchart TD
 
 ### MethodDeclaration `GetModuleCommunicationStatuses` · L2807–2825
 
-[Drilling.UI/CRootView.cs:2807–2825](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2807-L2825)
+[Drilling.UI/CRootView.cs:2807–2825](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2807-L2825)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11904,9 +11904,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2765–2765](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2765-L2765) | GetModuleCommunicationStatuses | False |
-| [Drilling.UI/CRootView.cs:2856–2856](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2856-L2856) | GetModuleCommunicationStatuses | False |
-| [Drilling.UI/CRootView.cs:2869–2869](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2869-L2869) | GetModuleCommunicationStatuses | False |
+| [Drilling.UI/CRootView.cs:2765–2765](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2765-L2765) | GetModuleCommunicationStatuses | False |
+| [Drilling.UI/CRootView.cs:2856–2856](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2856-L2856) | GetModuleCommunicationStatuses | False |
+| [Drilling.UI/CRootView.cs:2869–2869](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2869-L2869) | GetModuleCommunicationStatuses | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11931,7 +11931,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L2809–2812
 
-[Drilling.UI/CRootView.cs:2809–2812](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2809-L2812)
+[Drilling.UI/CRootView.cs:2809–2812](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2809-L2812)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11958,7 +11958,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectNumber` · L2814–2817
 
-[Drilling.UI/CRootView.cs:2814–2817](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2814-L2817)
+[Drilling.UI/CRootView.cs:2814–2817](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2814-L2817)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11985,7 +11985,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectNickName` · L2819–2822
 
-[Drilling.UI/CRootView.cs:2819–2822](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2819-L2822)
+[Drilling.UI/CRootView.cs:2819–2822](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2819-L2822)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12012,7 +12012,7 @@ flowchart TD
 
 ### MethodDeclaration `GetSelectedModuleIndex` · L2827–2842
 
-[Drilling.UI/CRootView.cs:2827–2842](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2827-L2842)
+[Drilling.UI/CRootView.cs:2827–2842](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2827-L2842)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12032,8 +12032,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2773–2773](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2773-L2773) | GetSelectedModuleIndex | False |
-| [Drilling.UI/CRootView.cs:2862–2862](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2862-L2862) | GetSelectedModuleIndex | False |
+| [Drilling.UI/CRootView.cs:2773–2773](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2773-L2773) | GetSelectedModuleIndex | False |
+| [Drilling.UI/CRootView.cs:2862–2862](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2862-L2862) | GetSelectedModuleIndex | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12071,7 +12071,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectPreviousModuleStatus` · L2844–2847
 
-[Drilling.UI/CRootView.cs:2844–2847](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2844-L2847)
+[Drilling.UI/CRootView.cs:2844–2847](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2844-L2847)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12090,7 +12090,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2782–2782](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2782-L2782) | SelectPreviousModuleStatus | False |
+| [Drilling.UI/CRootView.cs:2782–2782](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2782-L2782) | SelectPreviousModuleStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12108,7 +12108,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectNextModuleStatus` · L2849–2852
 
-[Drilling.UI/CRootView.cs:2849–2852](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2849-L2852)
+[Drilling.UI/CRootView.cs:2849–2852](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2849-L2852)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12127,7 +12127,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2787–2787](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2787-L2787) | SelectNextModuleStatus | False |
+| [Drilling.UI/CRootView.cs:2787–2787](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2787-L2787) | SelectNextModuleStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12145,7 +12145,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectModuleStatus` · L2854–2865
 
-[Drilling.UI/CRootView.cs:2854–2865](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2854-L2865)
+[Drilling.UI/CRootView.cs:2854–2865](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2854-L2865)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12165,8 +12165,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2846–2846](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2846-L2846) | SelectModuleStatus | False |
-| [Drilling.UI/CRootView.cs:2851–2851](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2851-L2851) | SelectModuleStatus | False |
+| [Drilling.UI/CRootView.cs:2846–2846](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2846-L2846) | SelectModuleStatus | False |
+| [Drilling.UI/CRootView.cs:2851–2851](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2851-L2851) | SelectModuleStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12204,7 +12204,7 @@ flowchart TD
 
 ### MethodDeclaration `ShowModuleStatusPopup` · L2867–2883
 
-[Drilling.UI/CRootView.cs:2867–2883](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2867-L2883)
+[Drilling.UI/CRootView.cs:2867–2883](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2867-L2883)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12223,7 +12223,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2792–2792](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2792-L2792) | ShowModuleStatusPopup | False |
+| [Drilling.UI/CRootView.cs:2792–2792](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2792-L2792) | ShowModuleStatusPopup | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12274,7 +12274,7 @@ flowchart TD
 
 ### MethodDeclaration `ModuleDisplayName` · L2885–2900
 
-[Drilling.UI/CRootView.cs:2885–2900](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2885-L2900)
+[Drilling.UI/CRootView.cs:2885–2900](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2885-L2900)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12293,9 +12293,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2770–2770](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2770-L2770) | ModuleDisplayName | False |
-| [Drilling.UI/CRootView.cs:2796–2796](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2796-L2796) | ModuleDisplayName | False |
-| [Drilling.UI/CRootView.cs:2875–2875](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2875-L2875) | ModuleDisplayName | False |
+| [Drilling.UI/CRootView.cs:2770–2770](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2770-L2770) | ModuleDisplayName | False |
+| [Drilling.UI/CRootView.cs:2796–2796](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2796-L2796) | ModuleDisplayName | False |
+| [Drilling.UI/CRootView.cs:2875–2875](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2875-L2875) | ModuleDisplayName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12326,7 +12326,7 @@ flowchart TD
 
 ### MethodDeclaration `ConnectionStateValue` · L2902–2910
 
-[Drilling.UI/CRootView.cs:2902–2910](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2902-L2910)
+[Drilling.UI/CRootView.cs:2902–2910](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2902-L2910)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12345,8 +12345,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2769–2769](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2769-L2769) | ConnectionStateValue | False |
-| [Drilling.UI/CRootView.cs:2776–2776](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2776-L2776) | ConnectionStateValue | False |
+| [Drilling.UI/CRootView.cs:2769–2769](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2769-L2769) | ConnectionStateValue | False |
+| [Drilling.UI/CRootView.cs:2776–2776](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2776-L2776) | ConnectionStateValue | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -12368,7 +12368,7 @@ flowchart TD
 
 ### MethodDeclaration `OperationModeValue` · L2912–2920
 
-[Drilling.UI/CRootView.cs:2912–2920](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2912-L2920)
+[Drilling.UI/CRootView.cs:2912–2920](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2912-L2920)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12387,8 +12387,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:711–711](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L711-L711) | OperationModeValue | False |
-| [Drilling.UI/CRootView.cs:2924–2924](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2924-L2924) | OperationModeValue | False |
+| [Drilling.UI/CRootView.cs:711–711](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L711-L711) | OperationModeValue | False |
+| [Drilling.UI/CRootView.cs:2924–2924](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2924-L2924) | OperationModeValue | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -12410,7 +12410,7 @@ flowchart TD
 
 ### MethodDeclaration `OperationModeHeaderValue` · L2922–2926
 
-[Drilling.UI/CRootView.cs:2922–2926](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2922-L2926)
+[Drilling.UI/CRootView.cs:2922–2926](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2922-L2926)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12430,7 +12430,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1518–1518](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1518-L1518) | OperationModeHeaderValue | False |
+| [Drilling.UI/CRootView.cs:1518–1518](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1518-L1518) | OperationModeHeaderValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12452,7 +12452,7 @@ flowchart TD
 
 ### MethodDeclaration `OperationModeState` · L2928–2931
 
-[Drilling.UI/CRootView.cs:2928–2931](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2928-L2931)
+[Drilling.UI/CRootView.cs:2928–2931](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2928-L2931)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12471,7 +12471,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1518–1518](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1518-L1518) | OperationModeState | False |
+| [Drilling.UI/CRootView.cs:1518–1518](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1518-L1518) | OperationModeState | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -12484,7 +12484,7 @@ flowchart TD
 
 ### MethodDeclaration `AlarmStateValue` · L2933–2936
 
-[Drilling.UI/CRootView.cs:2933–2936](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2933-L2936)
+[Drilling.UI/CRootView.cs:2933–2936](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2933-L2936)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12503,8 +12503,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1515–1515](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1515-L1515) | AlarmStateValue | False |
-| [Drilling.UI/CRootView.cs:1581–1581](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1581-L1581) | AlarmStateValue | False |
+| [Drilling.UI/CRootView.cs:1515–1515](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1515-L1515) | AlarmStateValue | False |
+| [Drilling.UI/CRootView.cs:1581–1581](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1581-L1581) | AlarmStateValue | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -12517,7 +12517,7 @@ flowchart TD
 
 ### MethodDeclaration `GetMenuDisplayName` · L2938–2953
 
-[Drilling.UI/CRootView.cs:2938–2953](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2938-L2953)
+[Drilling.UI/CRootView.cs:2938–2953](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2938-L2953)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12536,7 +12536,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L174-L174) | GetMenuDisplayName | False |
+| [Drilling.UI/CRootView.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L174-L174) | GetMenuDisplayName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12565,7 +12565,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsureHeavyAlarmRecovery` · L2957–2957
 
-[Drilling.UI/CRootView.cs:2957–2957](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2957-L2957)
+[Drilling.UI/CRootView.cs:2957–2957](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2957-L2957)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12578,8 +12578,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:3008–3008](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3008-L3008) | EnsureHeavyAlarmRecovery | False |
-| [Drilling.UI/CRootView.cs:3147–3147](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3147-L3147) | EnsureHeavyAlarmRecovery | False |
+| [Drilling.UI/CRootView.cs:3008–3008](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3008-L3008) | EnsureHeavyAlarmRecovery | False |
+| [Drilling.UI/CRootView.cs:3147–3147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3147-L3147) | EnsureHeavyAlarmRecovery | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12599,7 +12599,7 @@ flowchart TD
 
 ### PropertyDeclaration `HeaderAlarmResetCommand` · L2958–2958
 
-[Drilling.UI/CRootView.cs:2958–2958](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2958-L2958)
+[Drilling.UI/CRootView.cs:2958–2958](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2958-L2958)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12629,7 +12629,7 @@ flowchart TD
 
 ### MethodDeclaration `CheckHeavyAlarmForOperation` · L2960–2973
 
-[Drilling.UI/CRootView.cs:2960–2973](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2960-L2973)
+[Drilling.UI/CRootView.cs:2960–2973](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2960-L2973)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12648,8 +12648,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:807–807](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L807-L807) | CheckHeavyAlarmForOperation | False |
-| [Drilling.UI/CRootView.cs:1972–1972](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1972-L1972) | CheckHeavyAlarmForOperation | False |
+| [Drilling.UI/CRootView.cs:807–807](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L807-L807) | CheckHeavyAlarmForOperation | False |
+| [Drilling.UI/CRootView.cs:1972–1972](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1972-L1972) | CheckHeavyAlarmForOperation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12689,7 +12689,7 @@ flowchart TD
 
 ### MethodDeclaration `ShowAlarmPopup` · L2975–2994
 
-[Drilling.UI/CRootView.cs:2975–2994](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2975-L2994)
+[Drilling.UI/CRootView.cs:2975–2994](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2975-L2994)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12702,9 +12702,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2958–2958](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2958-L2958) | ShowAlarmPopup | False |
-| [Drilling.UI/CRootView.cs:2971–2971](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2971-L2971) | ShowAlarmPopup | False |
-| [Drilling.UI/CRootView.cs:3145–3145](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3145-L3145) | ShowAlarmPopup | False |
+| [Drilling.UI/CRootView.cs:2958–2958](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2958-L2958) | ShowAlarmPopup | False |
+| [Drilling.UI/CRootView.cs:2971–2971](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2971-L2971) | ShowAlarmPopup | False |
+| [Drilling.UI/CRootView.cs:3145–3145](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3145-L3145) | ShowAlarmPopup | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12758,7 +12758,7 @@ flowchart TD
 
 ### MethodDeclaration `ConfirmHeaderAlarmReset` · L2996–3018
 
-[Drilling.UI/CRootView.cs:2996–3018](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2996-L3018)
+[Drilling.UI/CRootView.cs:2996–3018](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2996-L3018)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12827,7 +12827,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAlarmRecoveryStatus` · L3020–3024
 
-[Drilling.UI/CRootView.cs:3020–3024](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3020-L3024)
+[Drilling.UI/CRootView.cs:3020–3024](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3020-L3024)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12846,9 +12846,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:3034–3034](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3034-L3034) | SetAlarmRecoveryStatus | False |
-| [Drilling.UI/CRootView.cs:3095–3095](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3095-L3095) | SetAlarmRecoveryStatus | False |
-| [Drilling.UI/CRootView.cs:3099–3099](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3099-L3099) | SetAlarmRecoveryStatus | False |
+| [Drilling.UI/CRootView.cs:3034–3034](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3034-L3034) | SetAlarmRecoveryStatus | False |
+| [Drilling.UI/CRootView.cs:3095–3095](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3095-L3095) | SetAlarmRecoveryStatus | False |
+| [Drilling.UI/CRootView.cs:3099–3099](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3099-L3099) | SetAlarmRecoveryStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12867,7 +12867,7 @@ flowchart TD
 
 ### MethodDeclaration `RecoverHeavyAlarm` · L3026–3122
 
-[Drilling.UI/CRootView.cs:3026–3122](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3026-L3122)
+[Drilling.UI/CRootView.cs:3026–3122](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3026-L3122)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12880,7 +12880,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2957–2957](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2957-L2957) | RecoverHeavyAlarm | False |
+| [Drilling.UI/CRootView.cs:2957–2957](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2957-L2957) | RecoverHeavyAlarm | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12920,8 +12920,8 @@ flowchart TD
 | 3092 | Task.Delay | resolved | System.Threading.Tasks.Task System.Threading.Tasks.Task.Delay(int) |
 | 3095 | SetAlarmRecoveryStatus | resolved | void Drilling.UI.CRootView.SetAlarmRecoveryStatus(string) · Drilling.UI/CRootView.cs:3020 |
 | 3099 | SetAlarmRecoveryStatus | resolved | void Drilling.UI.CRootView.SetAlarmRecoveryStatus(string) · Drilling.UI/CRootView.cs:3020 |
-| 3102 | _manager.Log().WriteStationState | unresolved | None |
-| 3102 | _manager.Log | resolved | CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
+| 3102 | _manager.Log().WriteStationState | resolved | void Drilling.Common.Log.CLogManager.WriteStationState(string, string, string, string) · Drilling.Common/Log/CLogManager.cs:175 |
+| 3102 | _manager.Log | resolved | Drilling.Common.Log.CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
 | 3106 | System.Diagnostics.Trace.TraceError | resolved | void System.Diagnostics.Trace.TraceError(string?) |
 | 3106 | logError.ToString | resolved · 동적 구현 선택 가능 | string System.Exception.ToString() |
 | 3116 | SetAutoCycleState | resolved | void Drilling.UI.CRootView.SetAutoCycleState(Drilling.UI.CRootView.EN_AUTO_CYCLE_STATE) · Drilling.UI/CRootView.cs:2214 |
@@ -13067,7 +13067,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Stop` · L3039–3049
 
-[Drilling.UI/CRootView.cs:3039–3049](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3039-L3049)
+[Drilling.UI/CRootView.cs:3039–3049](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3039-L3049)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13086,11 +13086,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:3053–3057](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3053-L3057) | Stop | False |
-| [Drilling.UI/CRootView.cs:3059–3059](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3059-L3059) | Stop | False |
-| [Drilling.UI/CRootView.cs:3063–3067](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3063-L3067) | Stop | False |
-| [Drilling.UI/CRootView.cs:3068–3068](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3068-L3068) | Stop | False |
-| [Drilling.UI/CRootView.cs:3070–3079](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3070-L3079) | Stop | False |
+| [Drilling.UI/CRootView.cs:3053–3057](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3053-L3057) | Stop | False |
+| [Drilling.UI/CRootView.cs:3059–3059](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3059-L3059) | Stop | False |
+| [Drilling.UI/CRootView.cs:3063–3067](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3063-L3067) | Stop | False |
+| [Drilling.UI/CRootView.cs:3068–3068](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3068-L3068) | Stop | False |
+| [Drilling.UI/CRootView.cs:3070–3079](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3070-L3079) | Stop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13124,7 +13124,7 @@ flowchart TD
 
 ### MethodDeclaration `OnCurrentAlarmsChanged` · L3124–3151
 
-[Drilling.UI/CRootView.cs:3124–3151](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3124-L3151)
+[Drilling.UI/CRootView.cs:3124–3151](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3124-L3151)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13137,7 +13137,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L259-L259) | OnCurrentAlarmsChanged | False |
+| [Drilling.UI/CRootView.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L259-L259) | OnCurrentAlarmsChanged | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13223,7 +13223,7 @@ flowchart TD
 
 ### MethodDeclaration `StartProtectWindowRequestNotice` · L3155–3160
 
-[Drilling.UI/CRootView.cs:3155–3160](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3155-L3160)
+[Drilling.UI/CRootView.cs:3155–3160](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3155-L3160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13242,7 +13242,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CApp.xaml.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CApp.xaml.cs#L36-L36) | _rootView.StartProtectWindowRequestNotice | False |
+| [Drilling.UI/CApp.xaml.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L36-L36) | _rootView.StartProtectWindowRequestNotice | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13265,7 +13265,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateAutoPowerActions` · L3164–3176
 
-[Drilling.UI/CRootView.cs:3164–3176](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3164-L3176)
+[Drilling.UI/CRootView.cs:3164–3176](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3164-L3176)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13278,8 +13278,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:729–729](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L729-L729) | CreateAutoPowerActions | False |
-| [Drilling.UI/CRootView.cs:785–785](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L785-L785) | CreateAutoPowerActions | False |
+| [Drilling.UI/CRootView.cs:729–729](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L729-L729) | CreateAutoPowerActions | False |
+| [Drilling.UI/CRootView.cs:785–785](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L785-L785) | CreateAutoPowerActions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13355,7 +13355,7 @@ flowchart TD
 
 ### FieldDeclaration `_autoReviewZeroLineRunId` · L3178–3178
 
-[Drilling.UI/CRootView.cs:3178–3178](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3178-L3178)
+[Drilling.UI/CRootView.cs:3178–3178](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3178-L3178)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13370,7 +13370,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateAutoReviewActions` · L3179–3220
 
-[Drilling.UI/CRootView.cs:3179–3220](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3179-L3220)
+[Drilling.UI/CRootView.cs:3179–3220](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3179-L3220)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13383,8 +13383,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:729–729](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L729-L729) | CreateAutoReviewActions | False |
-| [Drilling.UI/CRootView.cs:785–785](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L785-L785) | CreateAutoReviewActions | False |
+| [Drilling.UI/CRootView.cs:729–729](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L729-L729) | CreateAutoReviewActions | False |
+| [Drilling.UI/CRootView.cs:785–785](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L785-L785) | CreateAutoReviewActions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13447,7 +13447,7 @@ flowchart TD
 
 ### LocalFunctionStatement `RaiseDuplicateSourceAlarm` · L3181–3189
 
-[Drilling.UI/CRootView.cs:3181–3189](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3181-L3189)
+[Drilling.UI/CRootView.cs:3181–3189](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3181-L3189)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13469,8 +13469,8 @@ flowchart TD
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 3183 | _alarmManager.SetAlarm | resolved | bool Drilling.Common.Alarm.CAlarmManager.SetAlarm(string) · Drilling.Common/Alarm/CAlarmManager.cs:239 |
-| 3184 | _manager.Log().WriteStationState | unresolved | None |
-| 3184 | _manager.Log | resolved | CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
+| 3184 | _manager.Log().WriteStationState | resolved | void Drilling.Common.Log.CLogManager.WriteStationState(string, string, string, string) · Drilling.Common/Log/CLogManager.cs:175 |
+| 3184 | _manager.Log | resolved | Drilling.Common.Log.CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -13484,7 +13484,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateStageReviewInput` · L3222–3258
 
-[Drilling.UI/CRootView.cs:3222–3258](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3222-L3258)
+[Drilling.UI/CRootView.cs:3222–3258](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3222-L3258)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13606,7 +13606,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateAutoDistortionActions` · L3260–3268
 
-[Drilling.UI/CRootView.cs:3260–3268](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3260-L3268)
+[Drilling.UI/CRootView.cs:3260–3268](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3260-L3268)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13619,8 +13619,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:729–729](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L729-L729) | CreateAutoDistortionActions | False |
-| [Drilling.UI/CRootView.cs:785–785](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L785-L785) | CreateAutoDistortionActions | False |
+| [Drilling.UI/CRootView.cs:729–729](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L729-L729) | CreateAutoDistortionActions | False |
+| [Drilling.UI/CRootView.cs:785–785](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L785-L785) | CreateAutoDistortionActions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13629,8 +13629,8 @@ flowchart TD
 | 3262 | new | resolved | Drilling.Common.Correction.CAlignDistortionCycle.CAlignDistortionCycle(Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Managers.CSettingManager, Drilling.Common.Managers.CRecipeManager, Drilling.Common.Correction.CAlignOffsetLogFileBase, System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<Drilling.Common.Station.ST_STAGE_PROCESS_REQUEST>>, System.Action<string>?) · Drilling.Common/Correction/CAlignInterpolation.cs:227 |
 | 3262 | _manager.Setting | resolved | Drilling.Common.Managers.CSettingManager Drilling.Common.Managers.CManager.Setting() · Drilling.Common/Managers/CManager.cs:340 |
 | 3263 | new Drilling.File.Correction.CAlignOffsetLogFile | resolved | Drilling.File.Correction.CAlignOffsetLogFile.CAlignOffsetLogFile(string) · Drilling.File/Correction/CAlignOffsetLogFile.cs:40 |
-| 3264 | _manager.Log().WriteSequence | unresolved | None |
-| 3264 | _manager.Log | resolved | CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
+| 3264 | _manager.Log().WriteSequence | resolved | void Drilling.Common.Log.CLogManager.WriteSequence(string, string, string, string) · Drilling.Common/Log/CLogManager.cs:805 |
+| 3264 | _manager.Log | resolved | Drilling.Common.Log.CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
 | 3266 | new | resolved | Drilling.Common.Station.ST_STAGE_DISTORTION_ACTIONS.ST_STAGE_DISTORTION_ACTIONS(System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task>, System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task>, System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task>, System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task>) · Drilling.Common/Station/CStationProcess.cs:6001 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -13652,7 +13652,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateStageProcessRequest` · L3271–3277
 
-[Drilling.UI/CRootView.cs:3271–3277](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3271-L3277)
+[Drilling.UI/CRootView.cs:3271–3277](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3271-L3277)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13718,7 +13718,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateStageProcessRequestCore` · L3280–3294
 
-[Drilling.UI/CRootView.cs:3280–3294](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3280-L3294)
+[Drilling.UI/CRootView.cs:3280–3294](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3280-L3294)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13737,8 +13737,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:3238–3238](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3238-L3238) | CreateStageProcessRequestCore | False |
-| [Drilling.UI/CRootView.cs:3274–3274](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3274-L3274) | CreateStageProcessRequestCore | False |
+| [Drilling.UI/CRootView.cs:3238–3238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3238-L3238) | CreateStageProcessRequestCore | False |
+| [Drilling.UI/CRootView.cs:3274–3274](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3274-L3274) | CreateStageProcessRequestCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13806,7 +13806,7 @@ flowchart TD
 
 ### PropertyDeclaration `OpenMelsecStageSimulationCommand` · L3298–3298
 
-[Drilling.UI/CRootView.cs:3298–3298](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3298-L3298)
+[Drilling.UI/CRootView.cs:3298–3298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3298-L3298)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13821,7 +13821,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_OpenMelsecStageSimulationCommand` · L3298–3298
 
-[Drilling.UI/CRootView.cs:3298–3298](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3298-L3298)
+[Drilling.UI/CRootView.cs:3298–3298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3298-L3298)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13836,7 +13836,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshMelsecSimulatorVisibility` · L3300–3307
 
-[Drilling.UI/CRootView.cs:3300–3307](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3300-L3307)
+[Drilling.UI/CRootView.cs:3300–3307](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3300-L3307)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13849,7 +13849,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:901–901](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L901-L901) | RefreshMelsecSimulatorVisibility | False |
+| [Drilling.UI/CRootView.cs:901–901](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L901-L901) | RefreshMelsecSimulatorVisibility | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13881,7 +13881,7 @@ flowchart TD
 
 ### PropertyDeclaration `MelsecSimulatorVisibility` · L3309–3309
 
-[Drilling.UI/CRootView.cs:3309–3309](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3309-L3309)
+[Drilling.UI/CRootView.cs:3309–3309](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3309-L3309)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13911,7 +13911,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenMelsecStageSimulation` · L3311–3330
 
-[Drilling.UI/CRootView.cs:3311–3330](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3311-L3330)
+[Drilling.UI/CRootView.cs:3311–3330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3311-L3330)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13924,7 +13924,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L225-L225) | OpenMelsecStageSimulation | False |
+| [Drilling.UI/CRootView.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L225-L225) | OpenMelsecStageSimulation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13973,7 +13973,7 @@ flowchart TD
 
 ### FieldDeclaration `_handledOccurrence` · L3337–3337
 
-[Drilling.UI/CRootView.cs:3337–3337](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3337-L3337)
+[Drilling.UI/CRootView.cs:3337–3337](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3337-L3337)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13988,7 +13988,7 @@ flowchart TD
 
 ### MethodDeclaration `ShouldNavigate` · L3338–3344
 
-[Drilling.UI/CRootView.cs:3338–3344](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3338-L3344)
+[Drilling.UI/CRootView.cs:3338–3344](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3338-L3344)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14007,7 +14007,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:3144–3144](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3144-L3144) | _alarmNavigation.ShouldNavigate | False |
+| [Drilling.UI/CRootView.cs:3144–3144](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3144-L3144) | _alarmNavigation.ShouldNavigate | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 

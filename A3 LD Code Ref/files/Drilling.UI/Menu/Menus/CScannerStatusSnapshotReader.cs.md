@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
 | 원본 SHA256 | 973c837fe9fa3cc3b209e09522b760012ec8382b04a71f7cd158aa566e86bb30 |
 | 파일 분류 | code |
 | 원본 크기/행 | 9,527 bytes / 238 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -60,7 +60,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_snapshotLock` · L9–9
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L9-L9)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L9-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -88,7 +88,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_snapshot` · L10–10
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L10-L10)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -109,7 +109,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_axisDefinitions` · L11–11
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L11-L11)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -130,7 +130,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedHeadNo` · L12–12
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L12-L12)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -151,7 +151,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `SelectHead` · L13–27
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:13–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L13-L27)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:13–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L13-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -170,9 +170,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:961–961](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L961-L961) | _scannerStatusSnapshotReader.SelectHead | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1006–1006](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L1006-L1006) | _scannerStatusSnapshotReader.SelectHead | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1018–1018](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L1018-L1018) | _scannerStatusSnapshotReader.SelectHead | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:961–961](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L961-L961) | _scannerStatusSnapshotReader.SelectHead | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1006–1006](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L1006-L1006) | _scannerStatusSnapshotReader.SelectHead | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1018–1018](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L1018-L1018) | _scannerStatusSnapshotReader.SelectHead | False |
 
 호출하는 대상과 해석 범위:
 
@@ -209,7 +209,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectHead` · L29–44
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:29–44](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L29-L44)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:29–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L29-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -229,8 +229,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:714–714](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L714-L714) | _scannerStatusSnapshotReader.SelectHead | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:836–836](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L836-L836) | _scannerStatusSnapshotReader.SelectHead | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:714–714](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L714-L714) | _scannerStatusSnapshotReader.SelectHead | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:836–836](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L836-L836) | _scannerStatusSnapshotReader.SelectHead | False |
 
 호출하는 대상과 해석 범위:
 
@@ -273,7 +273,7 @@ flowchart TD
 
 ### MethodDeclaration `GetSnapshot` · L46–50
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:46–50](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L46-L50)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:46–50](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L46-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -286,8 +286,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:717–717](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L717-L717) | _scannerStatusSnapshotReader.GetSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:837–837](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L837-L837) | _scannerStatusSnapshotReader.GetSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:717–717](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L717-L717) | _scannerStatusSnapshotReader.GetSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:837–837](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L837-L837) | _scannerStatusSnapshotReader.GetSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -316,7 +316,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshSnapshot` · L52–70
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:52–70](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L52-L70)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:52–70](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L52-L70)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -335,7 +335,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L48-L48) | RefreshSnapshot | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L48-L48) | RefreshSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -387,7 +387,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildScannerAxisStatusItem` · L72–118
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:72–118](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L72-L118)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:72–118](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L72-L118)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -407,7 +407,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L61-L61) | BuildScannerAxisStatusItem | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L61-L61) | BuildScannerAxisStatusItem | False |
 
 호출하는 대상과 해석 범위:
 
@@ -505,7 +505,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildAxisDefinitions` · L120–121
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:120–121](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L120-L121)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:120–121](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L120-L121)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -525,22 +525,22 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1793–1793](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1793-L1793) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1874–1874](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1874-L1874) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1885–1885](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1885-L1885) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1919–1919](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1919-L1919) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1940–1940](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1940-L1940) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2503–2503](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2503-L2503) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3097–3097](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3097-L3097) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3247–3247](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3247-L3247) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3469–3469](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3469-L3469) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3610–3610](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3610-L3610) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4225–4225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4225-L4225) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4446–4446](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4446-L4446) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5367–5367](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L5367-L5367) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6774–6774](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6774-L6774) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7614–7614](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L7614-L7614) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7643–7643](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L7643-L7643) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1793–1793](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L1793-L1793) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1874–1874](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L1874-L1874) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1885–1885](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L1885-L1885) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1919–1919](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L1919-L1919) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1940–1940](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L1940-L1940) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2503–2503](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L2503-L2503) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3097–3097](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L3097-L3097) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3247–3247](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L3247-L3247) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3469–3469](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L3469-L3469) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3610–3610](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L3610-L3610) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4225–4225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L4225-L4225) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4446–4446](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L4446-L4446) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5367–5367](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L5367-L5367) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6774–6774](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6774-L6774) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7614–7614](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L7614-L7614) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7643–7643](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L7643-L7643) | CScannerStatusSnapshotReader.BuildAxisDefinitions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -558,7 +558,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildAxisDefinitions` · L123–124
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:123–124](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L123-L124)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:123–124](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L123-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -578,7 +578,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L32-L32) | BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L32-L32) | BuildAxisDefinitions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -596,7 +596,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildEnabledHeadNumbers` · L126–127
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:126–127](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L126-L127)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:126–127](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L126-L127)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -616,19 +616,19 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:673–673](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L673-L673) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1449–1449](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1449-L1449) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1748–1748](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1748-L1748) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1919–1919](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1919-L1919) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1938–1938](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1938-L1938) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2537–2537](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2537-L2537) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3467–3467](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3467-L3467) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3609–3609](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3609-L3609) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4434–4434](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4434-L4434) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4844–4844](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4844-L4844) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6731–6731](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6731-L6731) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6744–6744](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6744-L6744) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:2373–2373](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2373-L2373) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
+| [Drilling.UI/CRootView.cs:673–673](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L673-L673) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1449–1449](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L1449-L1449) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1748–1748](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L1748-L1748) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1919–1919](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L1919-L1919) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1938–1938](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L1938-L1938) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2537–2537](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L2537-L2537) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3467–3467](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L3467-L3467) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3609–3609](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L3609-L3609) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4434–4434](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L4434-L4434) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4844–4844](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L4844-L4844) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6731–6731](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6731-L6731) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6744–6744](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6744-L6744) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:2373–2373](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2373-L2373) | CScannerStatusSnapshotReader.BuildEnabledHeadNumbers | False |
 
 호출하는 대상과 해석 범위:
 
@@ -646,7 +646,7 @@ flowchart TD
 
 ### MethodDeclaration `IsHeadEnabled` · L129–130
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:129–130](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L129-L130)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:129–130](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L129-L130)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -666,7 +666,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2284–2284](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L2284-L2284) | CScannerStatusSnapshotReader.IsHeadEnabled | False |
+| [Drilling.UI/CRootView.cs:2284–2284](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2284-L2284) | CScannerStatusSnapshotReader.IsHeadEnabled | False |
 
 호출하는 대상과 해석 범위:
 
@@ -684,7 +684,7 @@ flowchart TD
 
 ### MethodDeclaration `IsHeadEnabled` · L132–133
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:132–133](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L132-L133)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:132–133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L132-L133)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -718,7 +718,7 @@ flowchart TD
 
 ### MethodDeclaration `CreatePollingErrorSnapshot` · L135–138
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:135–138](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L135-L138)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:135–138](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L135-L138)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -737,7 +737,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L68-L68) | CreatePollingErrorSnapshot | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L68-L68) | CreatePollingErrorSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -759,7 +759,7 @@ flowchart TD
 
 ### MethodDeclaration `SetSnapshot` · L140–146
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:140–146](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L140-L146)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:140–146](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L140-L146)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -796,7 +796,7 @@ flowchart TD
 
 ### MethodDeclaration `SetSnapshot` · L148–159
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:148–159](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L148-L159)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:148–159](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L148-L159)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -816,8 +816,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L64-L64) | SetSnapshot | False |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L68-L68) | SetSnapshot | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L64-L64) | SetSnapshot | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L68-L68) | SetSnapshot | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -843,7 +843,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadPollingContext` · L161–167
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:161–167](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L161-L167)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:161–167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L161-L167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -856,7 +856,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L54-L54) | ReadPollingContext | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L54-L54) | ReadPollingContext | False |
 
 호출하는 대상과 해석 범위:
 
@@ -885,7 +885,7 @@ flowchart TD
 
 ### MethodDeclaration `IsSameAxisDefinitions` · L169–185
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:169–185](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L169-L185)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:169–185](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L169-L185)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -905,7 +905,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L35-L35) | IsSameAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L35-L35) | IsSameAxisDefinitions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -943,7 +943,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeHeadNo` · L187–190
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:187–190](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L187-L190)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:187–190](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L187-L190)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -962,8 +962,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L15-L15) | NormalizeHeadNo | False |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L31-L31) | NormalizeHeadNo | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L15-L15) | NormalizeHeadNo | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L31-L31) | NormalizeHeadNo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -982,7 +982,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatScannerPosition` · L192–200
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:192–200](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L192-L200)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:192–200](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L192-L200)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1001,8 +1001,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L103-L103) | FormatScannerPosition | False |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:204–204](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L204-L204) | FormatScannerPosition | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L103-L103) | FormatScannerPosition | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:204–204](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L204-L204) | FormatScannerPosition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1034,7 +1034,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatExtendedScannerPosition` · L202–205
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:202–205](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L202-L205)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:202–205](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L202-L205)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1054,7 +1054,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L104-L104) | FormatExtendedScannerPosition | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L104-L104) | FormatExtendedScannerPosition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1074,7 +1074,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatScannerValue` · L207–215
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:207–215](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L207-L215)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:207–215](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L207-L215)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1093,7 +1093,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L219-L219) | FormatScannerValue | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L219-L219) | FormatScannerValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1125,7 +1125,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatExtendedScannerValue` · L217–220
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:217–220](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L217-L220)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:217–220](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L217-L220)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1145,8 +1145,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L105-L105) | FormatExtendedScannerValue | False |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L106-L106) | FormatExtendedScannerValue | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L105-L105) | FormatExtendedScannerValue | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L106-L106) | FormatExtendedScannerValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1166,7 +1166,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatScannerTemperature` · L222–225
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:222–225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L222-L225)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:222–225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L222-L225)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1185,7 +1185,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L229-L229) | FormatScannerTemperature | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L229-L229) | FormatScannerTemperature | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1204,7 +1204,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatExtendedScannerTemperature` · L227–230
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:227–230](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L227-L230)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:227–230](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L227-L230)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1224,7 +1224,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L107-L107) | FormatExtendedScannerTemperature | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L107-L107) | FormatExtendedScannerTemperature | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1244,7 +1244,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatFault` · L232–235
 
-[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:232–235](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L232-L235)
+[Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:232–235](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L232-L235)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1263,7 +1263,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L109-L109) | FormatFault | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L109-L109) | FormatFault | False |
 
 호출하는 대상과 해석 범위:
 
