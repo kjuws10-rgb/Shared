@@ -1,0 +1,38 @@
+{
+  "version": "11.25.2",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "sourceBranch": "master",
+  "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
+  "pages": 2,
+  "sourceCodeModified": false,
+  "operationalRecordsPublished": false,
+  "pdf": "A3_레시피_좌표_Masking_체스가공_11.25.2.pdf",
+  "pdfType": "image-based high resolution",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 26,
+      "sha256": "9618185d97a7b73972851bc179ac276080c298f79adbc1847951e647f4254c27"
+    },
+    {
+      "path": "A3_레시피_좌표_Masking_체스가공_11.25.2.pdf",
+      "bytes": 355526,
+      "sha256": "ac86b0c7c1b8c82391798646d248fb36d1045087653408aab13a307aa989abcb"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1960,
+      "sha256": "30257eb0b8cf73a52c52121572d0963ac29162f4cb1addcea6719185c33147ee"
+    },
+    {
+      "path": "slide-1.png",
+      "bytes": 261411,
+      "sha256": "489dfb980cc8d468a9dd2db32871d2a76b0f35d829f9baa1b5cc431a058b5f72"
+    },
+    {
+      "path": "slide-2.png",
+      "bytes": 206948,
+      "sha256": "5c80f75c658eaec417db3d0ac70bd9acdc718842e1a5d99979dec1fdeb3b9b1c"
+    }
+  ]
+}
