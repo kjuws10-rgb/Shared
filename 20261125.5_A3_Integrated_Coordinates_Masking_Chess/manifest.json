@@ -1,0 +1,55 @@
+{
+  "version": "11.25.5",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "sourceBranch": "master",
+  "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
+  "pdfPages": 2,
+  "completeRequestedScope": [
+    "Recipe inputs",
+    "Design coordinate",
+    "Scanner coordinate",
+    "Review coordinate",
+    "Mask comparison",
+    "Laser On-Off gate",
+    "Chess2 TYPE1/0",
+    "Chess3 TYPE1/0"
+  ],
+  "virtualNumbers": true,
+  "equipmentExecuted": false,
+  "sourceModified": false,
+  "scannerGXGY_mm": [
+    -0.97,
+    21.75
+  ],
+  "reviewXStageY_mm": [
+    108.9,
+    179.2
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 40,
+      "sha256": "e20976e4ca02d655e2b23e5d2326c025472009bb7d290768eb450ba2617b88ae"
+    },
+    {
+      "path": "A3_통합_레시피_좌표_Masking_체스2_3_11.25.5.pdf",
+      "bytes": 457541,
+      "sha256": "24f5e1a4ebb1f92bfa4c4963aeee222944554bb9998a76b979728e9bebfaaf7d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3847,
+      "sha256": "afc0cb7f641dfd1f12c2f84c20f89d63670bb71d4a75fbce410835a1813e71ac"
+    },
+    {
+      "path": "slide-1.png",
+      "bytes": 369522,
+      "sha256": "f46123a6dc1c702abf40552709eea18db9b3eec6d483591878296ce2b96caa48"
+    },
+    {
+      "path": "slide-2.png",
+      "bytes": 252049,
+      "sha256": "ebf3d94ed1caa11078ab98a0b2c83afc638daf3ba1912155ef09423b62e5abed"
+    }
+  ]
+}
