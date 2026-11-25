@@ -1,13 +1,13 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs">Git 원본</a></p><h1>Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs">Git 원본</a></p><h1>Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>334b3599651b2e8e0181fd4459bafaf3cddafff3</td></tr>
+<tr><td>원본 Commit</td><td>0219666f9053b907d96d7e0aa7d0c6c1be3a73d4</td></tr>
 <tr><td>원본 SHA256</td><td>141e3b12b439092785cb9f41f3565aa688d69bac23e5bd4bb884893d9c6b4992</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
 <tr><td>원본 크기/행</td><td>66,669 bytes / 1,873 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
@@ -77,7 +77,7 @@
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
 <h3 id="L14">FieldDeclaration <code>CanvasWidth</code> · L14–14</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L14-L14">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:14–14</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L14-L14">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:14–14</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.CanvasWidth</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -91,7 +91,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L15">FieldDeclaration <code>CanvasHeight</code> · L15–15</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L15-L15">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:15–15</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L15-L15">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:15–15</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.CanvasHeight</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -105,7 +105,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L16">FieldDeclaration <code>FrameLeft</code> · L16–16</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L16-L16">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:16–16</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L16-L16">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:16–16</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.FrameLeft</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -119,7 +119,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L17">FieldDeclaration <code>FrameTop</code> · L17–17</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L17-L17">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:17–17</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L17-L17">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:17–17</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.FrameTop</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -133,7 +133,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L18">FieldDeclaration <code>FrameMaxWidth</code> · L18–18</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L18-L18">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:18–18</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L18-L18">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:18–18</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.FrameMaxWidth</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -147,7 +147,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L19">FieldDeclaration <code>FrameMaxHeight</code> · L19–19</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L19-L19">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:19–19</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L19-L19">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:19–19</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.FrameMaxHeight</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -161,7 +161,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L23">FieldDeclaration <code>MinimumLayoutPatternWidth</code> · L23–23</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L23-L23">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:23–23</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L23-L23">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:23–23</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.MinimumLayoutPatternWidth</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -175,7 +175,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L24">FieldDeclaration <code>MinimumLayoutPatternHeight</code> · L24–24</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L24-L24">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:24–24</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L24-L24">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:24–24</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.MinimumLayoutPatternHeight</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -189,7 +189,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L25">FieldDeclaration <code>RecipeParameterIndexes</code> · L25–27</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L25-L27">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:25–27</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L25-L27">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:25–27</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Runtime.CompilerServices.ConditionalWeakTable&lt;Drilling.Common.Managers.ST_RECIPE_DEFINITION, System.Collections.Generic.Dictionary&lt;string, string&gt;&gt; Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.RecipeParameterIndexes</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
@@ -208,7 +208,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L31">MethodDeclaration <code>Build</code> · L31–881</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L31-L881">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:31–881</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L31-L881">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:31–881</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.ST_REVIEW_GLASS_PREVIEW Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.Build(Drilling.Common.Managers.ST_RECIPE_DEFINITION, int, int, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;?, bool, System.Collections.Generic.IReadOnlySet&lt;int&gt;?, Drilling.UI.Menu.Menus.ST_REVIEW_GLASS_AXIS_INDICATOR?, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_REVIEW_GLASS_AXIS_INDICATOR&gt;?, Drilling.Common.Review.EN_REVIEW_POINT_STATE, System.Collections.Generic.IReadOnlySet&lt;string&gt;?, bool, bool, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;?, Drilling.Common.Review.EN_REVIEW_CORRECTION_RULE?, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_REVIEW_SCOPE_TARGET&gt;?, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;?, int, int, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_HEAD_SCOPE&gt;?, Drilling.Common.Review.ST_REVIEW_PLAN_POINT?, bool, bool, System.Collections.Generic.IReadOnlySet&lt;int&gt;?, System.Collections.Generic.IReadOnlySet&lt;int&gt;?, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;?)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -245,11 +245,11 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1285-L1302">Drilling.UI/Menu/Menus/CMenuReview.cs:1285–1302</a></td><td>CReviewGlassPreviewBuilder.Build</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3448-L3457">Drilling.UI/Menu/Menus/CMenuReview.cs:3448–3457</a></td><td>CReviewGlassPreviewBuilder.Build</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4114-L4126">Drilling.UI/Menu/Menus/CMenuReview.cs:4114–4126</a></td><td>CReviewGlassPreviewBuilder.Build</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4611-L4628">Drilling.UI/Menu/Menus/CMenuReview.cs:4611–4628</a></td><td>CReviewGlassPreviewBuilder.Build</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4632-L4649">Drilling.UI/Menu/Menus/CMenuReview.cs:4632–4649</a></td><td>CReviewGlassPreviewBuilder.Build</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1285-L1302">Drilling.UI/Menu/Menus/CMenuReview.cs:1285–1302</a></td><td>CReviewGlassPreviewBuilder.Build</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3448-L3457">Drilling.UI/Menu/Menus/CMenuReview.cs:3448–3457</a></td><td>CReviewGlassPreviewBuilder.Build</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4114-L4126">Drilling.UI/Menu/Menus/CMenuReview.cs:4114–4126</a></td><td>CReviewGlassPreviewBuilder.Build</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4611-L4628">Drilling.UI/Menu/Menus/CMenuReview.cs:4611–4628</a></td><td>CReviewGlassPreviewBuilder.Build</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4632-L4649">Drilling.UI/Menu/Menus/CMenuReview.cs:4632–4649</a></td><td>CReviewGlassPreviewBuilder.Build</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1150,7 +1150,7 @@
  N60 --&gt;|포함| N61</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L503">LocalFunctionStatement <code>AddPreviewShot</code> · L503–556</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L503-L556">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:503–556</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L503-L556">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:503–556</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void AddPreviewShot(Drilling.Common.Recipe.ST_SHOT_GROUP_CENTER)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -1163,7 +1163,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L499-L499">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:499–499</a></td><td>AddPreviewShot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L499-L499">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:499–499</a></td><td>AddPreviewShot</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1224,7 +1224,7 @@
  M --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L883">MethodDeclaration <code>DrawInspectionPoints</code> · L883–941</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L883-L941">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:883–941</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L883-L941">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:883–941</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.DrawInspectionPoints(DrawingContext, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;, Drilling.Common.Review.EN_REVIEW_CORRECTION_RULE?, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, System.Collections.Generic.IReadOnlyDictionary&lt;int, Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.ST_REVIEW_CELL_DISPLAY&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1295,7 +1295,7 @@
  N4 --&gt;|포함| N5</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L943">MethodDeclaration <code>DrawEdgeInspectionAreas</code> · L943–1000</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L943-L1000">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:943–1000</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L943-L1000">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:943–1000</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.DrawEdgeInspectionAreas(DrawingContext, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, System.Collections.Generic.IReadOnlyDictionary&lt;int, Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.ST_REVIEW_CELL_DISPLAY&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1312,7 +1312,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L906-L906">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:906–906</a></td><td>DrawEdgeInspectionAreas</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L906-L906">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:906–906</a></td><td>DrawEdgeInspectionAreas</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1396,7 +1396,7 @@
  N0 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1002">MethodDeclaration <code>DrawFineInspectionLines</code> · L1002–1049</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1002-L1049">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1002–1049</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1002-L1049">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1002–1049</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.DrawFineInspectionLines(DrawingContext, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1412,7 +1412,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L900-L900">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:900–900</a></td><td>DrawFineInspectionLines</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L900-L900">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:900–900</a></td><td>DrawFineInspectionLines</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1491,7 +1491,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1051">MethodDeclaration <code>TryProjectCellPoint</code> · L1051–1082</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1051-L1082">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1051–1082</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1051-L1082">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1051–1082</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.TryProjectCellPoint(Drilling.Common.Review.ST_REVIEW_PLAN_POINT, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, out Point)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1507,9 +1507,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L922-L926">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:922–926</a></td><td>TryProjectCellPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L973-L977">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:973–977</a></td><td>TryProjectCellPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1024-L1028">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1024–1028</a></td><td>TryProjectCellPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L922-L926">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:922–926</a></td><td>TryProjectCellPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L973-L977">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:973–977</a></td><td>TryProjectCellPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1024-L1028">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1024–1028</a></td><td>TryProjectCellPoint</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1533,7 +1533,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1084">MethodDeclaration <code>TryGetHeadScopeBounds</code> · L1084–1117</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1084-L1117">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1084–1117</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1084-L1117">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1084–1117</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.TryGetHeadScopeBounds(System.Collections.Generic.IReadOnlyDictionary&lt;(int CellNo, int HeadNo), (int FirstColumn, int LastColumn)&gt;, int, int, int, Rect, out Rect)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1580,7 +1580,7 @@
  M --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1119">MethodDeclaration <code>BuildHeadScopeColumnIndex</code> · L1119–1154</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1119-L1154">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1119–1154</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1119-L1154">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1119–1154</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;(int CellNo, int HeadNo), (int FirstColumn, int LastColumn)&gt; Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.BuildHeadScopeColumnIndex(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1593,7 +1593,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L270-L270">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:270–270</a></td><td>BuildHeadScopeColumnIndex</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L270-L270">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:270–270</a></td><td>BuildHeadScopeColumnIndex</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1641,7 +1641,7 @@
  N3 --&gt;|포함| N4</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1156">MethodDeclaration <code>AddScopeCorners</code> · L1156–1167</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1156-L1167">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1156–1167</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1156-L1167">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1156–1167</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.AddScopeCorners(System.Collections.Generic.ICollection&lt;Point&gt;, Rect)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1655,8 +1655,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L403-L403">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:403–403</a></td><td>AddScopeCorners</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L459-L459">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:459–459</a></td><td>AddScopeCorners</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L403-L403">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:403–403</a></td><td>AddScopeCorners</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L459-L459">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:459–459</a></td><td>AddScopeCorners</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1681,7 +1681,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1169">MethodDeclaration <code>DrawHeadScope</code> · L1169–1186</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1169-L1186">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1169–1186</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1169-L1186">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1169–1186</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.DrawHeadScope(DrawingContext, int, Rect)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1696,7 +1696,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1291-L1294">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1291–1294</a></td><td>DrawHeadScope</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1291-L1294">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1291–1294</a></td><td>DrawHeadScope</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1728,7 +1728,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1188">MethodDeclaration <code>DrawHeadCellScope</code> · L1188–1201</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1188-L1201">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1188–1201</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1188-L1201">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1188–1201</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.DrawHeadCellScope(DrawingContext, int, Geometry)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1743,7 +1743,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1316-L1316">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1316–1316</a></td><td>DrawHeadCellScope</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1316-L1316">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1316–1316</a></td><td>DrawHeadCellScope</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1770,7 +1770,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1203">MethodDeclaration <code>DrawCurrentCellOutline</code> · L1203–1220</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1203-L1220">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1203–1220</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1203-L1220">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1203–1220</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.DrawCurrentCellOutline(DrawingContext, Geometry)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1809,7 +1809,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1222">MethodDeclaration <code>DrawGlobalHeadScope</code> · L1222–1245</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1222-L1245">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1222–1245</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1222-L1245">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1222–1245</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.DrawGlobalHeadScope(DrawingContext, int, System.Collections.Generic.IReadOnlyCollection&lt;Point&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1879,7 +1879,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1247">MethodDeclaration <code>DrawPhysicalHeadScope</code> · L1247–1317</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1247-L1317">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1247–1317</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1247-L1317">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1247–1317</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.DrawPhysicalHeadScope(DrawingContext, int, Drilling.Common.Review.ST_REVIEW_HEAD_SCOPE, System.Collections.Generic.IReadOnlyDictionary&lt;int, Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.ST_REVIEW_CELL_DISPLAY&gt;, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, double, double, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1972,7 +1972,7 @@
  M --&gt;|포함| N5</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1319">MethodDeclaration <code>TryBuildRecipeCellBoundary</code> · L1319–1398</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1319-L1398">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1319–1398</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1319-L1398">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1319–1398</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.TryBuildRecipeCellBoundary(Drilling.Common.Recipe.ST_CELL_PATTERN_DEFINITION, double, int, int, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, out StreamGeometry)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1991,7 +1991,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L335-L350">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:335–350</a></td><td>TryBuildRecipeCellBoundary</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L335-L350">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:335–350</a></td><td>TryBuildRecipeCellBoundary</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2083,7 +2083,7 @@
  M --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1400">MethodDeclaration <code>ShouldUseExpandedPreviewBounds</code> · L1400–1405</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1400-L1405">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1400–1405</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1400-L1405">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1400–1405</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.ShouldUseExpandedPreviewBounds(Rect, Rect)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2108,7 +2108,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1407">MethodDeclaration <code>ExpandPreviewBounds</code> · L1407–1422</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1407-L1422">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1407–1422</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1407-L1422">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1407–1422</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Rect Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.ExpandPreviewBounds(Rect, double, double, Rect)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2158,7 +2158,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1426">MethodDeclaration <code>TryProjectReviewPreviewPixel</code> · L1426–1474</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1426-L1474">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1426–1474</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1426-L1474">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1426–1474</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.TryProjectReviewPreviewPixel(double, double, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, double, out double, out double, out int, out int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2178,8 +2178,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L508-L525">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:508–525</a></td><td>TryProjectReviewPreviewPixel</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1058-L1075">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1058–1075</a></td><td>TryProjectReviewPreviewPixel</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L508-L525">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:508–525</a></td><td>TryProjectReviewPreviewPixel</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1058-L1075">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1058–1075</a></td><td>TryProjectReviewPreviewPixel</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2229,7 +2229,7 @@
  M --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1476">MethodDeclaration <code>CreateErrorPreview</code> · L1476–1483</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1476-L1483">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1476–1483</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1476-L1483">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1476–1483</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.ST_REVIEW_GLASS_PREVIEW Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.CreateErrorPreview(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2242,16 +2242,16 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L87-L87">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:87–87</a></td><td>CreateErrorPreview</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L97-L97">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:97–97</a></td><td>CreateErrorPreview</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L113-L115">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:113–115</a></td><td>CreateErrorPreview</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L120-L121">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:120–121</a></td><td>CreateErrorPreview</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L126-L127">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:126–127</a></td><td>CreateErrorPreview</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L143-L143">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:143–143</a></td><td>CreateErrorPreview</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L193-L194">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:193–194</a></td><td>CreateErrorPreview</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L326-L326">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:326–326</a></td><td>CreateErrorPreview</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L352-L352">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:352–352</a></td><td>CreateErrorPreview</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L472-L474">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:472–474</a></td><td>CreateErrorPreview</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L87-L87">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:87–87</a></td><td>CreateErrorPreview</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L97-L97">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:97–97</a></td><td>CreateErrorPreview</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L113-L115">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:113–115</a></td><td>CreateErrorPreview</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L120-L121">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:120–121</a></td><td>CreateErrorPreview</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L126-L127">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:126–127</a></td><td>CreateErrorPreview</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L143-L143">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:143–143</a></td><td>CreateErrorPreview</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L193-L194">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:193–194</a></td><td>CreateErrorPreview</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L326-L326">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:326–326</a></td><td>CreateErrorPreview</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L352-L352">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:352–352</a></td><td>CreateErrorPreview</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L472-L474">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:472–474</a></td><td>CreateErrorPreview</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2264,7 +2264,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1485">MethodDeclaration <code>AddCircle</code> · L1485–1518</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1485-L1518">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1485–1518</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1485-L1518">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1485–1518</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.AddCircle(StreamGeometryContext, double, double, double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2327,7 +2327,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1520">MethodDeclaration <code>DrawPreviewAxisIndicator</code> · L1520–1596</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1520-L1596">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1520–1596</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1520-L1596">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1520–1596</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.DrawPreviewAxisIndicator(DrawingContext, Rect, Rect, Drilling.UI.Menu.Menus.ST_REVIEW_GLASS_AXIS_INDICATOR)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2440,7 +2440,7 @@
  M --&gt;|포함| N4</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1598">MethodDeclaration <code>GetPreviewAxisTitlePoint</code> · L1598–1621</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1598-L1621">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1598–1621</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1598-L1621">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1598–1621</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Point Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.GetPreviewAxisTitlePoint(Drilling.UI.Menu.Menus.ST_REVIEW_GLASS_AXIS_INDICATOR, Point, Rect)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2455,7 +2455,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1592-L1592">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1592–1592</a></td><td>GetPreviewAxisTitlePoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1592-L1592">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1592–1592</a></td><td>GetPreviewAxisTitlePoint</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2496,7 +2496,7 @@
  N0 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1623">MethodDeclaration <code>GetPreviewAxisOrigin</code> · L1623–1677</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1623-L1677">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1623–1677</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1623-L1677">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1623–1677</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Point Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.GetPreviewAxisOrigin(Rect, Rect, Drilling.UI.Menu.Menus.ST_REVIEW_GLASS_AXIS_INDICATOR)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2511,7 +2511,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1535-L1535">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1535–1535</a></td><td>GetPreviewAxisOrigin</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1535-L1535">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1535–1535</a></td><td>GetPreviewAxisOrigin</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2589,7 +2589,7 @@
  M --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1679">MethodDeclaration <code>ClampPreviewAxisCoordinate</code> · L1679–1686</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1679-L1686">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1679–1686</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1679-L1686">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1679–1686</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.ClampPreviewAxisCoordinate(double, double, double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2618,7 +2618,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1688">MethodDeclaration <code>DrawHorizontalArrowHead</code> · L1688–1697</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1688-L1697">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1688–1697</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1688-L1697">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1688–1697</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.DrawHorizontalArrowHead(DrawingContext, Pen, Point, bool)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2634,7 +2634,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1546-L1546">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1546–1546</a></td><td>DrawHorizontalArrowHead</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1546-L1546">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1546–1546</a></td><td>DrawHorizontalArrowHead</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2655,7 +2655,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1699">MethodDeclaration <code>DrawVerticalArrowHead</code> · L1699–1708</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1699-L1708">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1699–1708</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1699-L1708">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1699–1708</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.DrawVerticalArrowHead(DrawingContext, Pen, Point, bool)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2671,7 +2671,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1552-L1552">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1552–1552</a></td><td>DrawVerticalArrowHead</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1552-L1552">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1552–1552</a></td><td>DrawVerticalArrowHead</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2692,7 +2692,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1710">MethodDeclaration <code>DrawPreviewAxisText</code> · L1710–1735</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1710-L1735">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1710–1735</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1710-L1735">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1710–1735</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.DrawPreviewAxisText(DrawingContext, string, Point, Brush, double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2724,7 +2724,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1737">MethodDeclaration <code>ReadInt</code> · L1737–1751</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1737-L1751">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1737–1751</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1737-L1751">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1737–1751</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.ReadInt(Drilling.Common.Managers.ST_RECIPE_DEFINITION, int, params string[])</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2739,7 +2739,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L157-L157">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:157–157</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L157-L157">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:157–157</a></td><td>ReadInt</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2768,7 +2768,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1753">MethodDeclaration <code>CreateParameterMap</code> · L1753–1758</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1753-L1758">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1753–1758</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1753-L1758">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1753–1758</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.CreateParameterMap(Drilling.Common.Managers.ST_RECIPE_DEFINITION)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2781,7 +2781,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L158-L158">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:158–158</a></td><td>CreateParameterMap</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L158-L158">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:158–158</a></td><td>CreateParameterMap</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2798,7 +2798,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1760">MethodDeclaration <code>ReadDouble</code> · L1760–1770</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1760-L1770">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1760–1770</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1760-L1770">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1760–1770</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.ReadDouble(Drilling.Common.Managers.ST_RECIPE_DEFINITION, double, params string[])</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2813,14 +2813,14 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L83-L83">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:83–83</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L84-L84">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:84–84</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L106-L106">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:106–106</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L107-L107">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:107–107</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L156-L156">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:156–156</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L285-L288">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:285–288</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L289-L292">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:289–292</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L293-L296">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:293–296</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L83-L83">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:83–83</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L84-L84">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:84–84</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L106-L106">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:106–106</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L107-L107">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:107–107</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L156-L156">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:156–156</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L285-L288">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:285–288</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L289-L292">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:289–292</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L293-L296">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:293–296</a></td><td>ReadDouble</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2838,7 +2838,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1772">MethodDeclaration <code>ReadNullableDouble</code> · L1772–1781</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1772-L1781">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1772–1781</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1772-L1781">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1772–1781</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double? Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.ReadNullableDouble(Drilling.Common.Managers.ST_RECIPE_DEFINITION, string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2867,7 +2867,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1783">MethodDeclaration <code>ReadText</code> · L1783–1797</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1783-L1797">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1783–1797</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1783-L1797">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1783–1797</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.ReadText(Drilling.Common.Managers.ST_RECIPE_DEFINITION, params string[])</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2881,9 +2881,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1742-L1742">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1742–1742</a></td><td>ReadText</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1765-L1765">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1765–1765</a></td><td>ReadText</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1776-L1776">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1776–1776</a></td><td>ReadText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1742-L1742">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1742–1742</a></td><td>ReadText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1765-L1765">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1765–1765</a></td><td>ReadText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1776-L1776">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1776–1776</a></td><td>ReadText</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2908,7 +2908,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1799">MethodDeclaration <code>TryReadParameterText</code> · L1799–1808</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1799-L1808">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1799–1808</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1799-L1808">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1799–1808</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.TryReadParameterText(Drilling.Common.Managers.ST_RECIPE_DEFINITION, string, out string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2923,7 +2923,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1789-L1789">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1789–1789</a></td><td>TryReadParameterText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1789-L1789">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1789–1789</a></td><td>TryReadParameterText</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2942,7 +2942,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1810">MethodDeclaration <code>CreateRecipeParameterIndex</code> · L1810–1829</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1810-L1829">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1810–1829</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1810-L1829">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1810–1829</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.Dictionary&lt;string, string&gt; Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.CreateRecipeParameterIndex(Drilling.Common.Managers.ST_RECIPE_DEFINITION)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -2955,7 +2955,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1806-L1806">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1806–1806</a></td><td>CreateRecipeParameterIndex</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1806-L1806">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1806–1806</a></td><td>CreateRecipeParameterIndex</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2994,7 +2994,7 @@
  N0 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1831">MethodDeclaration <code>FindParameter</code> · L1831–1838</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1831-L1838">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1831–1838</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1831-L1838">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1831–1838</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Managers.ST_RECIPE_PARAMETER? Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.FindParameter(Drilling.Common.Managers.ST_RECIPE_DEFINITION, string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -3008,7 +3008,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L130-L130">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:130–130</a></td><td>FindParameter</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L130-L130">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:130–130</a></td><td>FindParameter</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -3025,7 +3025,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1840">MethodDeclaration <code>GetParameterMinimum</code> · L1840–1845</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1840-L1845">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1840–1845</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1840-L1845">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1840–1845</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.GetParameterMinimum(Drilling.Common.Managers.ST_RECIPE_PARAMETER?)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -3038,7 +3038,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L134-L134">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:134–134</a></td><td>GetParameterMinimum</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L134-L134">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:134–134</a></td><td>GetParameterMinimum</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -3054,7 +3054,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1847">MethodDeclaration <code>GetParameterMaximum</code> · L1847–1852</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1847-L1852">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1847–1852</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1847-L1852">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1847–1852</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int? Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.GetParameterMaximum(Drilling.Common.Managers.ST_RECIPE_PARAMETER?, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -3068,7 +3068,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L135-L135">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:135–135</a></td><td>GetParameterMaximum</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L135-L135">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:135–135</a></td><td>GetParameterMaximum</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -3082,7 +3082,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1861">PropertyDeclaration <code>GlassBounds</code> · L1861–1861</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1861-L1861">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1861–1861</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1861-L1861">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1861–1861</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Rect Drilling.UI.Menu.Menus.ST_REVIEW_GLASS_PREVIEW.GlassBounds</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -3092,7 +3092,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1861">GetAccessorDeclaration <code>get_GlassBounds</code> · L1861–1861</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1861-L1861">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1861–1861</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1861-L1861">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1861–1861</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Rect Drilling.UI.Menu.Menus.ST_REVIEW_GLASS_PREVIEW.GlassBounds.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -3102,7 +3102,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1861">InitAccessorDeclaration <code>set_GlassBounds</code> · L1861–1861</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1861-L1861">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1861–1861</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1861-L1861">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1861–1861</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.ST_REVIEW_GLASS_PREVIEW.GlassBounds.init</td></tr>
 <tr><td>접근/수식자</td><td>Public / init</td></tr>
@@ -3116,7 +3116,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1862">PropertyDeclaration <code>CanvasSize</code> · L1862–1862</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1862-L1862">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1862–1862</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1862-L1862">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1862–1862</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Size Drilling.UI.Menu.Menus.ST_REVIEW_GLASS_PREVIEW.CanvasSize</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -3126,7 +3126,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1862">GetAccessorDeclaration <code>get_CanvasSize</code> · L1862–1862</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1862-L1862">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1862–1862</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1862-L1862">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1862–1862</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Size Drilling.UI.Menu.Menus.ST_REVIEW_GLASS_PREVIEW.CanvasSize.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -3136,7 +3136,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L1862">InitAccessorDeclaration <code>set_CanvasSize</code> · L1862–1862</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1862-L1862">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1862–1862</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1862-L1862">Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1862–1862</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.ST_REVIEW_GLASS_PREVIEW.CanvasSize.init</td></tr>
 <tr><td>접근/수식자</td><td>Public / init</td></tr>

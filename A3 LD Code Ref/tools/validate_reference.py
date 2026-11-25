@@ -4,7 +4,15 @@ import html
 from urllib.parse import unquote,urlsplit
 import argparse,collections,hashlib,json,re,subprocess,xml.etree.ElementTree as ET
 
-VERSION='1.1.3'
+VERSION='1.1.4'
+
+class SchemaLineBounds:
+    """Retain range checks without retaining non-published operational record bodies."""
+    def __init__(self,count):self.count=count
+    def __len__(self):return self.count
+    def __getitem__(self,index):
+        if not 0<=index<self.count:raise IndexError(index)
+        return None
 
 # Independent validation snapshot: do not import the generator event whitelist.
 # A missing new event is also surfaced from code-behind EventArgs method signatures.
@@ -59,7 +67,7 @@ def validate(source,output):
     for item in inventory:
         rel=item['path'];p=source/rel;hashes[rel]=sha(p)
         check(item['sha256']==hashes[rel],rel+' SHA mismatch')
-        lines=[] if item['kind']=='binary_reference' else text(p).splitlines();sources[rel]=lines
+        lines=[] if item['kind']=='binary_reference' else text(p).splitlines();sources[rel]=SchemaLineBounds(len(lines)) if item['kind']=='data_schema' else lines
         bad=sum(l.count('\ufffd') for l in lines)
         if bad:inherited_bad.append({'sourcePath':rel,'lines':[n for n,l in enumerate(lines,1) if '\ufffd' in l],'replacementCharacters':bad})
         for k in ['document','html','diagram']:
@@ -129,25 +137,34 @@ def validate(source,output):
     index=json.loads((output/'metadata/symbol-index.json').read_text(encoding='utf-8'))
     check({s['id'] for s in index['symbols']}==set(symbol_ids),'symbol index missing/extra IDs')
     counts['symbol_ids']=len(symbol_ids)
-    ragids=set();rag_covered={r:bytearray(len(ls)) for r,ls in sources.items()};rag_routes={'primary':collections.Counter(),'optional':collections.Counter()}
+    ragids=set();rag_covered={r:bytearray(len(ls)) for r,ls in sources.items()};rag_routes={'primary':collections.Counter(),'optional':collections.Counter()};rag_bad={}
     for p in sorted((output/'offline-studio').glob('reference-*.jsonl')):
         for line in p.read_text(encoding='utf-8').splitlines():
             rec=json.loads(line);r=rec['source_path'];a,b=rec['source_start_line'],rec['source_end_line']
             rag_routes['optional' if r.startswith('Data/') else 'primary'][r]+=1
             bad=rec['text'].count('\ufffd');expected_bad[str(p.relative_to(output)).replace('\\','/')]+=bad
-            expected_bad['offline-studio/'+('A3_LD_Generated_Output_Optional.md' if r.startswith('Data/') else 'A3_LD_Code_Ref_OfflineStudio.md')]+=bad
+            rag_bad[(r,a,b,rec['evidence_kind'])]=bad
             check(rec['source_commit']==head and rec['source_sha256']==hashes[r],r+' RAG provenance mismatch')
             check(1<=a<=b<=max(1,len(sources[r])),r+' RAG range mismatch')
             check(rec['id'] not in ragids,'duplicate RAG ID: '+rec['id']);ragids.add(rec['id'])
-            if Path(r).suffix.lower() in ['.csv','.bak']:
-                check(rec['evidence_kind']=='schema_inventory' and not re.search(r'^L\d+ \| ',rec['text'],re.M),r+' operational CSV raw records in RAG')
+            if Path(r).suffix.lower() in ['.csv','.bak'] or (r.startswith('Data/') and Path(r).suffix.lower()=='.json'):
+                check(rec['evidence_kind']=='schema_inventory' and not re.search(r'^L\d+ \| ',rec['text'],re.M),r+' operational records in RAG')
+                check(next(item for item in inventory if item['path']==r)['annotation'] is None,r+' operational records must not have raw annotations')
             for n,value in re.findall(r'^L(\d+) \| (.*) ⟦EOL⟧$',rec['text'],re.M):
                 n=int(n);check(a<=n<=b and value==sources[r][n-1],r+' RAG source line mismatch '+str(n));counts['rag_source_lines']+=1;rag_covered[r][n-1]=1
             counts['rag_records']+=1
     check(counts['rag_records']==manifest['coverage']['ragRecords'],'RAG coverage mismatch')
     for route,filename in [('primary','A3_LD_Code_Ref_OfflineStudio.md'),('optional','A3_LD_Generated_Output_Optional.md')]:
-        body=(output/'offline-studio'/filename).read_text(encoding='utf-8')
-        actual=collections.Counter(re.findall(r'^source_path: (.+)$',body,re.M))
+        document_paths=[output/'offline-studio'/filename]
+        if route=='optional':document_paths+=sorted((output/'offline-studio').glob('A3_LD_Generated_Output_Optional-part-*.md'))
+        actual=collections.Counter()
+        for document in document_paths:
+            body=document.read_text(encoding='utf-8')
+            actual.update(re.findall(r'^source_path: (.+)$',body,re.M))
+            records=re.findall(r'^source_path: (.+)\nsource_sha256: [a-f0-9]+\nsource_lines: (\d+)–(\d+)\nevidence_kind: (.+)$',body,re.M)
+            for rel,a,b,kind in records:
+                check((rel,int(a),int(b),kind) in rag_bad,'combined Markdown provenance not present in JSONL: '+rel)
+                expected_bad[document.relative_to(output).as_posix()]+=rag_bad.get((rel,int(a),int(b),kind),0)
         check(actual==rag_routes[route],route+' combined RAG source routing/count mismatch')
         counts['rag_'+route+'_records']=sum(actual.values())
     for item in inventory:

@@ -1,0 +1,581 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs">Git 원본</a></p><h1>Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>0219666f9053b907d96d7e0aa7d0c6c1be3a73d4</td></tr>
+<tr><td>원본 SHA256</td><td>ae42e0681f9e8510476ad367eb29714feae95abc2dc1b4fb9e1af2129fc01eb3</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>7,456 bytes / 157 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>외부 통신과 장치 인터페이스를 연결합니다. 요청 생성·전송·수신·장치 실행을 같은 의미로 합치지 않습니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/889015880e25f365972b.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>ST_STAGE_GLASS_DATA_MAP_FIELD</td><td>RecordDeclaration</td><td>5–15</td><td>ST_STAGE_GLASS_DATA_MAP_FIELD</td></tr>
+<tr><td>ST_STAGE_GLASS_DATA_SNAPSHOT</td><td>RecordDeclaration</td><td>17–24</td><td>ST_STAGE_GLASS_DATA_SNAPSHOT</td></tr>
+<tr><td>CStageGlassDataMap</td><td>ClassDeclaration</td><td>27–157</td><td>CStageGlassDataMap</td></tr>
+<tr><td>ST_FIELD_SPEC</td><td>RecordDeclaration</td><td>32–32</td><td>ST_FIELD_SPEC</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>Address</td><td>PropertyDeclaration</td><td>L14–14</td><td>string Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD.Address</td></tr>
+<tr><td>GlassId</td><td>PropertyDeclaration</td><td>L21–21</td><td>string Drilling.Common.Interface.ST_STAGE_GLASS_DATA_SNAPSHOT.GlassId</td></tr>
+<tr><td>LotId</td><td>PropertyDeclaration</td><td>L22–22</td><td>string Drilling.Common.Interface.ST_STAGE_GLASS_DATA_SNAPSHOT.LotId</td></tr>
+<tr><td>Ppid</td><td>PropertyDeclaration</td><td>L23–23</td><td>string Drilling.Common.Interface.ST_STAGE_GLASS_DATA_SNAPSHOT.Ppid</td></tr>
+<tr><td>BaseWordAddress</td><td>FieldDeclaration</td><td>L29–29</td><td>int Drilling.Common.Interface.CStageGlassDataMap.BaseWordAddress</td></tr>
+<tr><td>MapIdPrefix</td><td>FieldDeclaration</td><td>L30–30</td><td>string Drilling.Common.Interface.CStageGlassDataMap.MapIdPrefix</td></tr>
+<tr><td>Specs</td><td>FieldDeclaration</td><td>L34–79</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC&gt; Drilling.Common.Interface.CStageGlassDataMap.Specs</td></tr>
+<tr><td>ProductFieldNames</td><td>PropertyDeclaration</td><td>L81–81</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.Common.Interface.CStageGlassDataMap.ProductFieldNames</td></tr>
+<tr><td>get_ProductFieldNames</td><td>GetAccessorDeclaration</td><td>L81–81</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.Common.Interface.CStageGlassDataMap.ProductFieldNames.get</td></tr>
+<tr><td>Fields</td><td>PropertyDeclaration</td><td>L82–82</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt; Drilling.Common.Interface.CStageGlassDataMap.Fields</td></tr>
+<tr><td>get_Fields</td><td>GetAccessorDeclaration</td><td>L82–82</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt; Drilling.Common.Interface.CStageGlassDataMap.Fields.get</td></tr>
+<tr><td>MapIds</td><td>PropertyDeclaration</td><td>L83–83</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.Common.Interface.CStageGlassDataMap.MapIds</td></tr>
+<tr><td>get_MapIds</td><td>GetAccessorDeclaration</td><td>L83–83</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.Common.Interface.CStageGlassDataMap.MapIds.get</td></tr>
+<tr><td>IsMapRow</td><td>MethodDeclaration</td><td>L85–85</td><td>bool Drilling.Common.Interface.CStageGlassDataMap.IsMapRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA)</td></tr>
+<tr><td>ReadAsync</td><td>MethodDeclaration</td><td>L87–123</td><td>System.Threading.Tasks.Task&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_SNAPSHOT&gt; Drilling.Common.Interface.CStageGlassDataMap.ReadAsync(Drilling.Common.Interface.CMelsec, System.Threading.CancellationToken)</td></tr>
+<tr><td>CreateFields</td><td>MethodDeclaration</td><td>L125–148</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt; Drilling.Common.Interface.CStageGlassDataMap.CreateFields()</td></tr>
+<tr><td>FormatValue</td><td>MethodDeclaration</td><td>L150–156</td><td>string Drilling.Common.Interface.CStageGlassDataMap.FormatValue(object?)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L14">PropertyDeclaration <code>Address</code> · L14–14</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L14-L14">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:14–14</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD.Address</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>14</td><td>WordAddress.ToString</td><td>resolved</td><td>string int.ToString(string?, System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>14</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: WordAddress.ToString(&quot;X&quot;, CultureInfo.InvariantCulture)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L21">PropertyDeclaration <code>GlassId</code> · L21–21</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L21-L21">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:21–21</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.ST_STAGE_GLASS_DATA_SNAPSHOT.GlassId</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_STAGE_GLASS_DATA_SNAPSHOT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>21</td><td>Values.GetValueOrDefault</td><td>resolved</td><td>string System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.GetValueOrDefault&lt;string, string&gt;(string, string)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>21</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Values.GetValueOrDefault(&quot;H_GLASSID&quot;, &quot;&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L22">PropertyDeclaration <code>LotId</code> · L22–22</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L22-L22">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:22–22</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.ST_STAGE_GLASS_DATA_SNAPSHOT.LotId</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_STAGE_GLASS_DATA_SNAPSHOT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>22</td><td>Values.GetValueOrDefault</td><td>resolved</td><td>string System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.GetValueOrDefault&lt;string, string&gt;(string, string)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>22</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Values.GetValueOrDefault(&quot;LOTID&quot;, &quot;&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L23">PropertyDeclaration <code>Ppid</code> · L23–23</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L23-L23">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:23–23</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.ST_STAGE_GLASS_DATA_SNAPSHOT.Ppid</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.ST_STAGE_GLASS_DATA_SNAPSHOT</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>23</td><td>Values.GetValueOrDefault</td><td>resolved</td><td>string System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.GetValueOrDefault&lt;string, string&gt;(string, string)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>23</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Values.GetValueOrDefault(&quot;PPID&quot;, &quot;&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L29">FieldDeclaration <code>BaseWordAddress</code> · L29–29</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L29-L29">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:29–29</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.Common.Interface.CStageGlassDataMap.BaseWordAddress</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, const</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CStageGlassDataMap</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>29</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: BaseWordAddress = 0xF600</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L30">FieldDeclaration <code>MapIdPrefix</code> · L30–30</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L30-L30">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:30–30</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CStageGlassDataMap.MapIdPrefix</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CStageGlassDataMap</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>30</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: MapIdPrefix = &quot;STAGE_GLASS_&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L34">FieldDeclaration <code>Specs</code> · L34–79</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L34-L79">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:34–79</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC&gt; Drilling.Common.Interface.CStageGlassDataMap.Specs</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CStageGlassDataMap</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>36</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>37</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>38</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>39</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>40</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>41</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>42</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>43</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>44</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>45</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>46</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>47</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>48</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>49</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>50</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>51</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>52</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>53</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>54</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>55</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>56</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>57</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>58</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>59</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>60</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>61</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>62</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>63</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>64</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>65</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>66</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>67</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>68</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>69</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>70</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>71</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>72</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>73</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>74</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>75</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>76</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>77</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+<tr><td>78</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC.ST_FIELD_SPEC(string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, bool) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:32</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>34</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: Specs = [ new(&quot;H_GLASSID&quot;, EN_MELSEC_DATA_TYPE.String, 8), new(&quot;E_GLASSID&quot;, EN_MELSEC_DATA_TYPE.String, 8), new(&quot;LOTID&quot;, EN_MELSEC_DATA_TYPE.String, 8), new(&quot;BATCHID&quot;, EN_MELSEC_DATA_TYPE.String, 8), new(&quot;JOBID&quot;, EN_MELSEC_DATA_TY</td></tr>
+<tr><td>36</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;H_GLASSID&quot;, EN_MELSEC_DATA_TYPE.String, 8)</td></tr>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;E_GLASSID&quot;, EN_MELSEC_DATA_TYPE.String, 8)</td></tr>
+<tr><td>38</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;LOTID&quot;, EN_MELSEC_DATA_TYPE.String, 8)</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;BATCHID&quot;, EN_MELSEC_DATA_TYPE.String, 8)</td></tr>
+<tr><td>40</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;JOBID&quot;, EN_MELSEC_DATA_TYPE.String, 8)</td></tr>
+<tr><td>41</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;PORTID&quot;, EN_MELSEC_DATA_TYPE.String, 2)</td></tr>
+<tr><td>42</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;SLOTNO&quot;, EN_MELSEC_DATA_TYPE.String, 1)</td></tr>
+<tr><td>43</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;PRODUCT_TYPE&quot;, EN_MELSEC_DATA_TYPE.String, 2)</td></tr>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;PRODUCT_KIND&quot;, EN_MELSEC_DATA_TYPE.String, 2)</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;PRODUCTID&quot;, EN_MELSEC_DATA_TYPE.String, 8)</td></tr>
+<tr><td>46</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;RUNSPECID&quot;, EN_MELSEC_DATA_TYPE.String, 8)</td></tr>
+<tr><td>47</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;LAYERID&quot;, EN_MELSEC_DATA_TYPE.String, 4)</td></tr>
+<tr><td>48</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;STEPID&quot;, EN_MELSEC_DATA_TYPE.String, 4)</td></tr>
+<tr><td>49</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;PPID&quot;, EN_MELSEC_DATA_TYPE.String, 10)</td></tr>
+<tr><td>50</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;FLOWID&quot;, EN_MELSEC_DATA_TYPE.String, 10)</td></tr>
+<tr><td>51</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;GLASS_SIZE&quot;, EN_MELSEC_DATA_TYPE.Word, 2, SplitWords: true)</td></tr>
+<tr><td>52</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;GLASS_THICKNESS&quot;, EN_MELSEC_DATA_TYPE.Word, 1)</td></tr>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;GLASS_STATE&quot;, EN_MELSEC_DATA_TYPE.Word, 1)</td></tr>
+<tr><td>54</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;GLASS_ORDER&quot;, EN_MELSEC_DATA_TYPE.String, 2)</td></tr>
+<tr><td>55</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;COMMENT&quot;, EN_MELSEC_DATA_TYPE.String, 8)</td></tr>
+<tr><td>56</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;USE_COUNT&quot;, EN_MELSEC_DATA_TYPE.String, 2)</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;JUDGEMENT&quot;, EN_MELSEC_DATA_TYPE.String, 2)</td></tr>
+<tr><td>58</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;REASON_CODE&quot;, EN_MELSEC_DATA_TYPE.String, 2)</td></tr>
+<tr><td>59</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;INS_FLAG&quot;, EN_MELSEC_DATA_TYPE.String, 1)</td></tr>
+<tr><td>60</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;ENC_FLAG&quot;, EN_MELSEC_DATA_TYPE.String, 1)</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;PRERUN_FLAG&quot;, EN_MELSEC_DATA_TYPE.String, 1)</td></tr>
+<tr><td>62</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;TURN_DIR&quot;, EN_MELSEC_DATA_TYPE.String, 1)</td></tr>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;FLIP_STATE&quot;, EN_MELSEC_DATA_TYPE.String, 1)</td></tr>
+<tr><td>64</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;WORK_STATE&quot;, EN_MELSEC_DATA_TYPE.String, 2)</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;MULTI_USE&quot;, EN_MELSEC_DATA_TYPE.String, 8)</td></tr>
+<tr><td>66</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;PAIR_GLASSID&quot;, EN_MELSEC_DATA_TYPE.String, 8)</td></tr>
+<tr><td>67</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;PAIR_PPID&quot;, EN_MELSEC_DATA_TYPE.String, 10)</td></tr>
+<tr><td>68</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;OPTIONNAME1&quot;, EN_MELSEC_DATA_TYPE.String, 20)</td></tr>
+<tr><td>69</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;OPTIONVALUE1&quot;, EN_MELSEC_DATA_TYPE.String, 20)</td></tr>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;OPTIONNAME2&quot;, EN_MELSEC_DATA_TYPE.String, 20)</td></tr>
+<tr><td>71</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;OPTIONVALUE2&quot;, EN_MELSEC_DATA_TYPE.String, 20)</td></tr>
+<tr><td>72</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;OPTIONNAME3&quot;, EN_MELSEC_DATA_TYPE.String, 20)</td></tr>
+<tr><td>73</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;OPTIONVALUE3&quot;, EN_MELSEC_DATA_TYPE.String, 20)</td></tr>
+<tr><td>74</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;OPTIONNAME4&quot;, EN_MELSEC_DATA_TYPE.String, 20)</td></tr>
+<tr><td>75</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;OPTIONVALUE4&quot;, EN_MELSEC_DATA_TYPE.String, 20)</td></tr>
+<tr><td>76</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;OPTIONNAME5&quot;, EN_MELSEC_DATA_TYPE.String, 20)</td></tr>
+<tr><td>77</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;OPTIONVALUE5&quot;, EN_MELSEC_DATA_TYPE.String, 20)</td></tr>
+<tr><td>78</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;ETC&quot;, EN_MELSEC_DATA_TYPE.String, 16)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L81">PropertyDeclaration <code>ProductFieldNames</code> · L81–81</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L81-L81">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:81–81</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.Common.Interface.CStageGlassDataMap.ProductFieldNames</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CStageGlassDataMap</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>81</td><td>Array.AsReadOnly</td><td>resolved</td><td>System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; System.Array.AsReadOnly&lt;string&gt;(string[])</td></tr>
+<tr><td>81</td><td>Specs.Select(field =&gt; field.Name).ToArray</td><td>resolved</td><td>string[] System.Collections.Generic.IEnumerable&lt;string&gt;.ToArray&lt;string&gt;()</td></tr>
+<tr><td>81</td><td>Specs.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC&gt;.Select&lt;Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC, string&gt;(System.Func&lt;Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC, string&gt;)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(Specs.Select(field =&gt; field.Name).ToArray())</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Specs.Select(field =&gt; field.Name).ToArray()</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Specs.Select(field =&gt; field.Name)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L81">GetAccessorDeclaration <code>get_ProductFieldNames</code> · L81–81</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L81-L81">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:81–81</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.Common.Interface.CStageGlassDataMap.ProductFieldNames.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CStageGlassDataMap</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L82">PropertyDeclaration <code>Fields</code> · L82–82</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L82-L82">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:82–82</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt; Drilling.Common.Interface.CStageGlassDataMap.Fields</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CStageGlassDataMap</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>82</td><td>CreateFields</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt; Drilling.Common.Interface.CStageGlassDataMap.CreateFields() · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:125</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>82</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateFields()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L82">GetAccessorDeclaration <code>get_Fields</code> · L82–82</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L82-L82">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:82–82</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt; Drilling.Common.Interface.CStageGlassDataMap.Fields.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CStageGlassDataMap</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L83">PropertyDeclaration <code>MapIds</code> · L83–83</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L83-L83">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:83–83</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.Common.Interface.CStageGlassDataMap.MapIds</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CStageGlassDataMap</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>83</td><td>Array.AsReadOnly</td><td>resolved</td><td>System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; System.Array.AsReadOnly&lt;string&gt;(string[])</td></tr>
+<tr><td>83</td><td>Fields.Select(field =&gt; field.Id).ToArray</td><td>resolved</td><td>string[] System.Collections.Generic.IEnumerable&lt;string&gt;.ToArray&lt;string&gt;()</td></tr>
+<tr><td>83</td><td>Fields.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt;.Select&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD, string&gt;(System.Func&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD, string&gt;)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>83</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(Fields.Select(field =&gt; field.Id).ToArray())</td></tr>
+<tr><td>83</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Fields.Select(field =&gt; field.Id).ToArray()</td></tr>
+<tr><td>83</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Fields.Select(field =&gt; field.Id)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L83">GetAccessorDeclaration <code>get_MapIds</code> · L83–83</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L83-L83">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:83–83</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.Common.Interface.CStageGlassDataMap.MapIds.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CStageGlassDataMap</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L85">MethodDeclaration <code>IsMapRow</code> · L85–85</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L85-L85">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:85–85</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.Common.Interface.CStageGlassDataMap.IsMapRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CStageGlassDataMap</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>row</td><td>Drilling.Common.Interface.ST_MELSEC_MAP_DATA</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CMelsec.cs#L3061-L3061">Drilling.Common/Interface/Melsec/CMelsec.cs:3061–3061</a></td><td>CStageGlassDataMap.IsMapRow</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>85</td><td>row.Id.StartsWith</td><td>resolved</td><td>bool string.StartsWith(string, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>85</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: row.Id.StartsWith(MapIdPrefix, StringComparison.OrdinalIgnoreCase)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L87">MethodDeclaration <code>ReadAsync</code> · L87–123</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L87-L123">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:87–123</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_SNAPSHOT&gt; Drilling.Common.Interface.CStageGlassDataMap.ReadAsync(Drilling.Common.Interface.CMelsec, System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_SNAPSHOT&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CStageGlassDataMap</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>melsec</td><td>Drilling.Common.Interface.CMelsec</td><td>None</td><td>False /</td></tr>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>True / null</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4462-L4462">Drilling.UI/Menu/Menus/CMenuMonitor.cs:4462–4462</a></td><td>CStageGlassDataMap.ReadAsync</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>89</td><td>ArgumentNullException.ThrowIfNull</td><td>resolved</td><td>void System.ArgumentNullException.ThrowIfNull(object?, string?)</td></tr>
+<tr><td>90</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>93</td><td>melsec.RefreshCachedValueAsync(Fields[0].Id, cancellationToken).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable&lt;Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE&gt; System.Threading.Tasks.Task&lt;Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE&gt;.ConfigureAwait(bool)</td></tr>
+<tr><td>93</td><td>melsec.RefreshCachedValueAsync</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE&gt; Drilling.Common.Interface.CMelsec.RefreshCachedValueAsync(string, System.Threading.CancellationToken) · Drilling.Common/Interface/Melsec/CMelsec.cs:2578</td></tr>
+<tr><td>94</td><td>melsec.GetCachedSnapshot</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE&gt; Drilling.Common.Interface.CMelsec.GetCachedSnapshot(System.Collections.Generic.IEnumerable&lt;string&gt;, out System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt;) · Drilling.Common/Interface/Melsec/CMelsec.cs:2551</td></tr>
+<tr><td>95</td><td>new List&lt;string&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;string&gt;.List()</td></tr>
+<tr><td>98</td><td>samples.TryGetValue</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Collections.Generic.IReadOnlyDictionary&lt;string, Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE&gt;.TryGetValue(string, out Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE)</td></tr>
+<tr><td>101</td><td>errors.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;string&gt;.Add(string)</td></tr>
+<tr><td>101</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>106</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>106</td><td>string.Join</td><td>resolved</td><td>string string.Join(string?, System.Collections.Generic.IEnumerable&lt;string?&gt;)</td></tr>
+<tr><td>106</td><td>errors.Take</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; System.Collections.Generic.IEnumerable&lt;string&gt;.Take&lt;string&gt;(int)</td></tr>
+<tr><td>108</td><td>new Dictionary&lt;string, string&gt;</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;string, string&gt;.Dictionary(System.Collections.Generic.IEqualityComparer&lt;string&gt;?)</td></tr>
+<tr><td>111</td><td>Fields.Where(field =&gt; field.ProductField.Equals(spec.Name, StringComparison.OrdinalIgnoreCase)) .OrderBy(field =&gt; field.ComponentIndex).ToArray</td><td>resolved</td><td>Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD[] System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt;.ToArray&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt;()</td></tr>
+<tr><td>111</td><td>Fields.Where(field =&gt; field.ProductField.Equals(spec.Name, StringComparison.OrdinalIgnoreCase)) .OrderBy</td><td>resolved</td><td>System.Linq.IOrderedEnumerable&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt;.OrderBy&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD, int&gt;(System.Func&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD, int&gt;)</td></tr>
+<tr><td>111</td><td>Fields.Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt;.Where&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt;(System.Func&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD, bool&gt;)</td></tr>
+<tr><td>111</td><td>field.ProductField.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>113</td><td>string.Join</td><td>resolved</td><td>string string.Join(string?, System.Collections.Generic.IEnumerable&lt;string?&gt;)</td></tr>
+<tr><td>113</td><td>fields.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt;.Select&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD, string&gt;(System.Func&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD, string&gt;)</td></tr>
+<tr><td>113</td><td>FormatValue</td><td>resolved</td><td>string Drilling.Common.Interface.CStageGlassDataMap.FormatValue(object?) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:150</td></tr>
+<tr><td>116</td><td>values[&quot;H_GLASSID&quot;].Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>117</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>118</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
+<tr><td>120</td><td>Fields.Select(field =&gt; samples[field.Id].UpdatedAt).Where(value =&gt; value.HasValue) .Select(value =&gt; value!.Value).DefaultIfEmpty(DateTimeOffset.UtcNow).Max</td><td>resolved</td><td>System.DateTimeOffset System.Collections.Generic.IEnumerable&lt;System.DateTimeOffset&gt;.Max&lt;System.DateTimeOffset&gt;()</td></tr>
+<tr><td>120</td><td>Fields.Select(field =&gt; samples[field.Id].UpdatedAt).Where(value =&gt; value.HasValue) .Select(value =&gt; value!.Value).DefaultIfEmpty</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;System.DateTimeOffset&gt; System.Collections.Generic.IEnumerable&lt;System.DateTimeOffset&gt;.DefaultIfEmpty&lt;System.DateTimeOffset&gt;(System.DateTimeOffset)</td></tr>
+<tr><td>120</td><td>Fields.Select(field =&gt; samples[field.Id].UpdatedAt).Where(value =&gt; value.HasValue) .Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;System.DateTimeOffset&gt; System.Collections.Generic.IEnumerable&lt;System.DateTimeOffset?&gt;.Select&lt;System.DateTimeOffset?, System.DateTimeOffset&gt;(System.Func&lt;System.DateTimeOffset?, System.DateTimeOffset&gt;)</td></tr>
+<tr><td>120</td><td>Fields.Select(field =&gt; samples[field.Id].UpdatedAt).Where</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;System.DateTimeOffset?&gt; System.Collections.Generic.IEnumerable&lt;System.DateTimeOffset?&gt;.Where&lt;System.DateTimeOffset?&gt;(System.Func&lt;System.DateTimeOffset?, bool&gt;)</td></tr>
+<tr><td>120</td><td>Fields.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;System.DateTimeOffset?&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt;.Select&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD, System.DateTimeOffset?&gt;(System.Func&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD, System.DateTimeOffset?&gt;)</td></tr>
+<tr><td>122</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_STAGE_GLASS_DATA_SNAPSHOT.ST_STAGE_GLASS_DATA_SNAPSHOT(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, System.DateTimeOffset) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:17</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>89</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(melsec)</td></tr>
+<tr><td>90</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>93</td><td>await</td><td>비동기 완료를 기다립니다: await melsec.RefreshCachedValueAsync(Fields[0].Id, cancellationToken).ConfigureAwait(false)</td></tr>
+<tr><td>93</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: melsec.RefreshCachedValueAsync(Fields[0].Id, cancellationToken).ConfigureAwait(false)</td></tr>
+<tr><td>93</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: melsec.RefreshCachedValueAsync(Fields[0].Id, cancellationToken)</td></tr>
+<tr><td>94</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: melsec.GetCachedSnapshot(MapIds, out _)</td></tr>
+<tr><td>94</td><td>local-declaration</td><td>지역 변수를 선언합니다: var samples = melsec.GetCachedSnapshot(MapIds, out _);</td></tr>
+<tr><td>94</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: samples = melsec.GetCachedSnapshot(MapIds, out _)</td></tr>
+<tr><td>95</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;string&gt;()</td></tr>
+<tr><td>95</td><td>local-declaration</td><td>지역 변수를 선언합니다: var errors = new List&lt;string&gt;();</td></tr>
+<tr><td>95</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: errors = new List&lt;string&gt;()</td></tr>
+<tr><td>96</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var field in Fields)</td></tr>
+<tr><td>98</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: samples.TryGetValue(field.Id, out var sample)</td></tr>
+<tr><td>98</td><td>if</td><td>조건에 따라 분기합니다: if (!samples.TryGetValue(field.Id, out var sample) || !sample.IsValid || sample.Value is null)</td></tr>
+<tr><td>100</td><td>local-declaration</td><td>지역 변수를 선언합니다: var reason = sample?.ErrorMessage;</td></tr>
+<tr><td>100</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: reason = sample?.ErrorMessage</td></tr>
+<tr><td>101</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Add(field.Name + (string.IsNullOrWhiteSpace(reason) ? &quot; 데이터 없음&quot; : $&quot; · {reason}&quot;))</td></tr>
+<tr><td>101</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(reason)</td></tr>
+<tr><td>101</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(reason) ? &quot; 데이터 없음&quot; : $&quot; · {reason}&quot;</td></tr>
+<tr><td>105</td><td>if</td><td>조건에 따라 분기합니다: if (errors.Count &gt; 0)</td></tr>
+<tr><td>106</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;STAGE PC Glass Data를 읽지 못했습니다.\n&quot; + string.Join(&quot;\n&quot;, errors.Take(5)))</td></tr>
+<tr><td>106</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(&quot;\n&quot;, errors.Take(5))</td></tr>
+<tr><td>106</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Take(5)</td></tr>
+<tr><td>106</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;STAGE PC Glass Data를 읽지 못했습니다.\n&quot; + string.Join(&quot;\n&quot;, errors.Take(5)));</td></tr>
+<tr><td>108</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary&lt;string, string&gt;(StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>108</td><td>local-declaration</td><td>지역 변수를 선언합니다: var values = new Dictionary&lt;string, string&gt;(StringComparer.OrdinalIgnoreCase);</td></tr>
+<tr><td>108</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: values = new Dictionary&lt;string, string&gt;(StringComparer.OrdinalIgnoreCase)</td></tr>
+<tr><td>109</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var spec in Specs)</td></tr>
+<tr><td>111</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Fields.Where(field =&gt; field.ProductField.Equals(spec.Name, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>111</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: field.ProductField.Equals(spec.Name, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>111</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Fields.Where(field =&gt; field.ProductField.Equals(spec.Name, StringComparison.OrdinalIgnoreCase)) .OrderBy(field =&gt; field.ComponentIndex).ToArray()</td></tr>
+<tr><td>111</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Fields.Where(field =&gt; field.ProductField.Equals(spec.Name, StringComparison.OrdinalIgnoreCase)) .OrderBy(field =&gt; field.ComponentIndex)</td></tr>
+<tr><td>111</td><td>local-declaration</td><td>지역 변수를 선언합니다: var fields = Fields.Where(field =&gt; field.ProductField.Equals(spec.Name, StringComparison.OrdinalIgnoreCase)) .OrderBy(field =&gt; field.ComponentIndex).ToArray();</td></tr>
+<tr><td>111</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: fields = Fields.Where(field =&gt; field.ProductField.Equals(spec.Name, StringComparison.OrdinalIgnoreCase)) .OrderBy(field =&gt; field.ComponentIndex).ToArray()</td></tr>
+<tr><td>113</td><td>assignment</td><td>값을 대상에 대입합니다: values[spec.Name] = string.Join(&quot;,&quot;, fields.Select(field =&gt; FormatValue(samples[field.Id].Value)))</td></tr>
+<tr><td>113</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(&quot;,&quot;, fields.Select(field =&gt; FormatValue(samples[field.Id].Value)))</td></tr>
+<tr><td>113</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: fields.Select(field =&gt; FormatValue(samples[field.Id].Value))</td></tr>
+<tr><td>113</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValue(samples[field.Id].Value)</td></tr>
+<tr><td>116</td><td>assignment</td><td>값을 대상에 대입합니다: values[&quot;H_GLASSID&quot;] = values[&quot;H_GLASSID&quot;].Trim()</td></tr>
+<tr><td>116</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: values[&quot;H_GLASSID&quot;].Trim()</td></tr>
+<tr><td>117</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(values[&quot;H_GLASSID&quot;])</td></tr>
+<tr><td>117</td><td>if</td><td>조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(values[&quot;H_GLASSID&quot;]))</td></tr>
+<tr><td>118</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException(&quot;STAGE PC Glass Data의 H_GLASSID가 비어 있습니다.&quot;)</td></tr>
+<tr><td>118</td><td>throw</td><td>예외를 발생/전달합니다: throw new InvalidOperationException(&quot;STAGE PC Glass Data의 H_GLASSID가 비어 있습니다.&quot;);</td></tr>
+<tr><td>120</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Fields.Select(field =&gt; samples[field.Id].UpdatedAt).Where(value =&gt; value.HasValue)</td></tr>
+<tr><td>120</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Fields.Select(field =&gt; samples[field.Id].UpdatedAt)</td></tr>
+<tr><td>120</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Fields.Select(field =&gt; samples[field.Id].UpdatedAt).Where(value =&gt; value.HasValue) .Select(value =&gt; value!.Value).DefaultIfEmpty(DateTimeOffset.UtcNow).Max()</td></tr>
+<tr><td>120</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Fields.Select(field =&gt; samples[field.Id].UpdatedAt).Where(value =&gt; value.HasValue) .Select(value =&gt; value!.Value).DefaultIfEmpty(DateTimeOffset.UtcNow)</td></tr>
+<tr><td>120</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Fields.Select(field =&gt; samples[field.Id].UpdatedAt).Where(value =&gt; value.HasValue) .Select(value =&gt; value!.Value)</td></tr>
+<tr><td>120</td><td>local-declaration</td><td>지역 변수를 선언합니다: var readAt = Fields.Select(field =&gt; samples[field.Id].UpdatedAt).Where(value =&gt; value.HasValue) .Select(value =&gt; value!.Value).DefaultIfEmpty(DateTimeOffset.UtcNow).Max();</td></tr>
+<tr><td>120</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: readAt = Fields.Select(field =&gt; samples[field.Id].UpdatedAt).Where(value =&gt; value.HasValue) .Select(value =&gt; value!.Value).DefaultIfEmpty(DateTimeOffset.UtcNow).Max()</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(values, readAt)</td></tr>
+<tr><td>122</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new(values, readAt);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ReadAsync&quot;]
+ N0[&quot;L96 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L98 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L105 if&quot;]
+ M --&gt;|포함| N2
+ N3[&quot;L109 foreach&quot;]
+ M --&gt;|포함| N3
+ N4[&quot;L117 if&quot;]
+ M --&gt;|포함| N4</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L125">MethodDeclaration <code>CreateFields</code> · L125–148</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L125-L148">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:125–148</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt; Drilling.Common.Interface.CStageGlassDataMap.CreateFields()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CStageGlassDataMap</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L82-L82">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:82–82</a></td><td>CreateFields</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>127</td><td>new List&lt;ST_STAGE_GLASS_DATA_MAP_FIELD&gt;</td><td>resolved</td><td>System.Collections.Generic.List&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt;.List()</td></tr>
+<tr><td>135</td><td>result.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt;.Add(Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD)</td></tr>
+<tr><td>135</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD.ST_STAGE_GLASS_DATA_MAP_FIELD(string, string, string, int, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, int) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:5</td></tr>
+<tr><td>141</td><td>result.Add</td><td>resolved</td><td>void System.Collections.Generic.List&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt;.Add(Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD)</td></tr>
+<tr><td>141</td><td>new</td><td>resolved</td><td>Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD.ST_STAGE_GLASS_DATA_MAP_FIELD(string, string, string, int, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, int, int) · Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:5</td></tr>
+<tr><td>147</td><td>Array.AsReadOnly</td><td>resolved</td><td>System.Collections.ObjectModel.ReadOnlyCollection&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt; System.Array.AsReadOnly&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt;(Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD[])</td></tr>
+<tr><td>147</td><td>result.ToArray</td><td>resolved</td><td>Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD[] System.Collections.Generic.List&lt;Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD&gt;.ToArray()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>127</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new List&lt;ST_STAGE_GLASS_DATA_MAP_FIELD&gt;()</td></tr>
+<tr><td>127</td><td>local-declaration</td><td>지역 변수를 선언합니다: var result = new List&lt;ST_STAGE_GLASS_DATA_MAP_FIELD&gt;();</td></tr>
+<tr><td>127</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: result = new List&lt;ST_STAGE_GLASS_DATA_MAP_FIELD&gt;()</td></tr>
+<tr><td>128</td><td>local-declaration</td><td>지역 변수를 선언합니다: var address = BaseWordAddress;</td></tr>
+<tr><td>128</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: address = BaseWordAddress</td></tr>
+<tr><td>129</td><td>foreach</td><td>컬렉션 요소를 순회합니다: foreach (var spec in Specs)</td></tr>
+<tr><td>131</td><td>if</td><td>조건에 따라 분기합니다: if (spec.SplitWords)</td></tr>
+<tr><td>133</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: index = 0</td></tr>
+<tr><td>133</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var index = 0; index &lt; spec.WordLength; index++)</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.Add(new(spec.Name, $&quot;{MapIdPrefix}{spec.Name}_{index + 1}&quot;, $&quot;{spec.Name}[{index + 1}]&quot;, address + index, EN_MELSEC_DATA_TYPE.Word, 1, index))</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(spec.Name, $&quot;{MapIdPrefix}{spec.Name}_{index + 1}&quot;, $&quot;{spec.Name}[{index + 1}]&quot;, address + index, EN_MELSEC_DATA_TYPE.Word, 1, index)</td></tr>
+<tr><td>139</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>141</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.Add(new(spec.Name, MapIdPrefix + spec.Name, spec.Name, address, spec.DataType, spec.WordLength))</td></tr>
+<tr><td>141</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(spec.Name, MapIdPrefix + spec.Name, spec.Name, address, spec.DataType, spec.WordLength)</td></tr>
+<tr><td>144</td><td>compound-assignment-or-event-subscription</td><td>복합 대입 또는 이벤트 구독/해지 표현입니다: address += spec.WordLength</td></tr>
+<tr><td>147</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(result.ToArray())</td></tr>
+<tr><td>147</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: result.ToArray()</td></tr>
+<tr><td>147</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Array.AsReadOnly(result.ToArray());</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CreateFields&quot;]
+ N0[&quot;L129 foreach&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L131 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L133 for&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L139 else&quot;]
+ N1 --&gt;|포함| N3</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L150">MethodDeclaration <code>FormatValue</code> · L150–156</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L150-L156">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:150–156</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.Common.Interface.CStageGlassDataMap.FormatValue(object?)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.Common.Interface.CStageGlassDataMap</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>object?</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L113-L113">Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs:113–113</a></td><td>FormatValue</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>153</td><td>text.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>154</td><td>formattable.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string System.IFormattable.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>155</td><td>value.ToString</td><td>resolved · 동적 구현 선택 가능</td><td>string? object.ToString()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>150</td><td>switch-expression</td><td>값별 결과식을 선택합니다: value switch { null =&gt; &quot;&quot;, string text =&gt; text.Trim(), IFormattable formattable =&gt; formattable.ToString(null, CultureInfo.InvariantCulture), _ =&gt; value.ToString() ?? &quot;&quot; }</td></tr>
+<tr><td>153</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: text.Trim()</td></tr>
+<tr><td>154</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: formattable.ToString(null, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>155</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString()</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;FormatValue&quot;]
+ N0[&quot;L150 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

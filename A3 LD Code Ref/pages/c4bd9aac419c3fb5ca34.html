@@ -1,13 +1,13 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs">Git 원본</a></p><h1>Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs">Git 원본</a></p><h1>Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>334b3599651b2e8e0181fd4459bafaf3cddafff3</td></tr>
+<tr><td>원본 Commit</td><td>0219666f9053b907d96d7e0aa7d0c6c1be3a73d4</td></tr>
 <tr><td>원본 SHA256</td><td>7d6454fd95114d882d16a1e517b791bf2abb8cc8f7d0469db433271f4127246b</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
 <tr><td>원본 크기/행</td><td>19,471 bytes / 334 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
@@ -161,7 +161,7 @@
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
 <h3 id="L13">FieldDeclaration <code>_service</code> · L13–13</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L13-L13">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:13–13</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L13-L13">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:13–13</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.CPowerMeasureService Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._service</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -171,7 +171,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L14">FieldDeclaration <code>_getPowerMeters</code> · L14–14</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L14-L14">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:14–14</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L14-L14">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:14–14</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt;&gt; Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._getPowerMeters</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -181,7 +181,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L15">FieldDeclaration <code>_runMeasurement</code> · L15–15</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L15-L15">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:15–15</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L15-L15">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:15–15</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;, System.Threading.CancellationToken, System.Threading.Tasks.Task&gt;? Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._runMeasurement</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -191,7 +191,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L16">FieldDeclaration <code>_runCancellation</code> · L16–16</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L16-L16">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:16–16</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L16-L16">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:16–16</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.CancellationTokenSource? Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._runCancellation</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -201,7 +201,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L17">FieldDeclaration <code>_warn</code> · L17–17</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L17-L17">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:17–17</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L17-L17">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:17–17</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Action&lt;string&gt; Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._warn</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -211,7 +211,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L18">FieldDeclaration <code>_confirm</code> · L18–18</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L18-L18">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:18–18</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L18-L18">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:18–18</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Func&lt;string, bool&gt; Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._confirm</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -221,7 +221,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L19">FieldDeclaration <code>_rows</code> · L19–19</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L19-L19">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:19–19</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L19-L19">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:19–19</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.Dictionary&lt;int, Drilling.UI.Menu.Menus.CPowerMeasureRow&gt; Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._rows</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -235,7 +235,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L20">FieldDeclaration <code>_selectedHead</code> · L20–20</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L20-L20">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:20–20</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L20-L20">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:20–20</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.CPowerMeasureRow? Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._selectedHead</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -245,7 +245,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L21">FieldDeclaration <code>_busy</code> · L21–21</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L21-L21">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:21–21</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L21-L21">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:21–21</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._busy</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -255,7 +255,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L22">FieldDeclaration <code>_stopping</code> · L22–22</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L22-L22">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:22–22</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L22-L22">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:22–22</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._stopping</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -265,7 +265,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L23">FieldDeclaration <code>_isGraphView</code> · L23–23</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L23-L23">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:23–23</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L23-L23">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:23–23</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._isGraphView</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -275,7 +275,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L24">FieldDeclaration <code>_mode</code> · L24–24</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L24-L24">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:24–24</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L24-L24">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:24–24</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerMeasurePanel._mode</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -289,7 +289,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L25">EventFieldDeclaration <code>PropertyChanged</code> · L25–25</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L25-L25">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:25–25</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L25-L25">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:25–25</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.PropertyChanged</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, event</td></tr>
@@ -299,7 +299,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L26">EventFieldDeclaration <code>RunningChanged</code> · L26–26</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L26-L26">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:26–26</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L26-L26">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:26–26</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Action? Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.RunningChanged</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, event</td></tr>
@@ -309,7 +309,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L27">PropertyDeclaration <code>Heads</code> · L27–27</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L27-L27">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:27–27</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L27-L27">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:27–27</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.CPowerMeasureRow&gt; Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Heads</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -319,7 +319,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L27">GetAccessorDeclaration <code>get_Heads</code> · L27–27</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L27-L27">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:27–27</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L27-L27">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:27–27</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.CPowerMeasureRow&gt; Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Heads.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -329,7 +329,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L27">SetAccessorDeclaration <code>set_Heads</code> · L27–27</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L27-L27">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:27–27</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L27-L27">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:27–27</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Heads.set</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, set</td></tr>
@@ -343,7 +343,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L28">PropertyDeclaration <code>Modes</code> · L28–28</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L28-L28">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:28–28</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L28-L28">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:28–28</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Modes</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -353,7 +353,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L28">GetAccessorDeclaration <code>get_Modes</code> · L28–28</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L28-L28">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:28–28</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L28-L28">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:28–28</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Modes.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -363,7 +363,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L29">PropertyDeclaration <code>Mode</code> · L29–29</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Mode</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -373,7 +373,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L29">GetAccessorDeclaration <code>get_Mode</code> · L29–29</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Mode.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -383,7 +383,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L29">SetAccessorDeclaration <code>set_Mode</code> · L29–29</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Mode.set</td></tr>
 <tr><td>접근/수식자</td><td>Public / set</td></tr>
@@ -412,7 +412,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L30">PropertyDeclaration <code>ToleranceText</code> · L30–32</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L30-L32">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:30–32</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L30-L32">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:30–32</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.ToleranceText</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -439,7 +439,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L33">PropertyDeclaration <code>IsRunning</code> · L33–33</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L33-L33">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:33–33</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L33-L33">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:33–33</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.IsRunning</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -449,7 +449,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L34">PropertyDeclaration <code>StartAllowed</code> · L34–34</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L34-L34">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:34–34</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L34-L34">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:34–34</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Func&lt;bool&gt;? Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.StartAllowed</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -459,7 +459,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L34">GetAccessorDeclaration <code>get_StartAllowed</code> · L34–34</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L34-L34">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:34–34</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L34-L34">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:34–34</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Func&lt;bool&gt;? Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.StartAllowed.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -469,7 +469,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L34">SetAccessorDeclaration <code>set_StartAllowed</code> · L34–34</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L34-L34">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:34–34</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L34-L34">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:34–34</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.StartAllowed.set</td></tr>
 <tr><td>접근/수식자</td><td>Public / set</td></tr>
@@ -483,7 +483,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L35">PropertyDeclaration <code>IsReadOnly</code> · L35–35</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L35-L35">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:35–35</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L35-L35">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:35–35</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.IsReadOnly</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -493,7 +493,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L35">GetAccessorDeclaration <code>get_IsReadOnly</code> · L35–35</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L35-L35">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:35–35</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L35-L35">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:35–35</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.IsReadOnly.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -503,7 +503,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L36">PropertyDeclaration <code>CanEdit</code> · L36–36</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L36-L36">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:36–36</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L36-L36">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:36–36</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.CanEdit</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -513,7 +513,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L37">PropertyDeclaration <code>RunControlsVisibility</code> · L37–37</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L37-L37">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:37–37</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L37-L37">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:37–37</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Visibility Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.RunControlsVisibility</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -527,7 +527,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L38">PropertyDeclaration <code>AutoSettingsVisibility</code> · L38–38</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L38-L38">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:38–38</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L38-L38">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:38–38</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Visibility Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.AutoSettingsVisibility</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -541,7 +541,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L39">PropertyDeclaration <code>HasHeads</code> · L39–39</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L39-L39">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:39–39</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L39-L39">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:39–39</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.HasHeads</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -551,7 +551,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L40">PropertyDeclaration <code>GraphViewVisibility</code> · L40–40</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L40-L40">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:40–40</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L40-L40">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:40–40</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Visibility Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.GraphViewVisibility</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -565,7 +565,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L41">PropertyDeclaration <code>GridViewVisibility</code> · L41–41</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L41-L41">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:41–41</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L41-L41">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:41–41</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Visibility Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.GridViewVisibility</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -579,7 +579,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L42">PropertyDeclaration <code>ViewToggleText</code> · L42–42</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L42-L42">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:42–42</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L42-L42">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:42–42</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.ViewToggleText</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -593,7 +593,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L43">PropertyDeclaration <code>GraphColumns</code> · L43–43</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L43-L43">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:43–43</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L43-L43">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:43–43</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.GraphColumns</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -608,7 +608,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L44">PropertyDeclaration <code>Summary</code> · L44–44</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L44-L44">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:44–44</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L44-L44">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:44–44</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Summary</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -618,7 +618,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L44">GetAccessorDeclaration <code>get_Summary</code> · L44–44</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L44-L44">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:44–44</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L44-L44">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:44–44</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Summary.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -628,7 +628,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L44">SetAccessorDeclaration <code>set_Summary</code> · L44–44</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L44-L44">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:44–44</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L44-L44">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:44–44</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Summary.set</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, set</td></tr>
@@ -642,7 +642,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L45">PropertyDeclaration <code>QueueText</code> · L45–45</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L45-L45">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:45–45</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L45-L45">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:45–45</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.QueueText</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -652,7 +652,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L45">GetAccessorDeclaration <code>get_QueueText</code> · L45–45</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L45-L45">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:45–45</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L45-L45">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:45–45</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.QueueText.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -662,7 +662,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L45">SetAccessorDeclaration <code>set_QueueText</code> · L45–45</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L45-L45">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:45–45</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L45-L45">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:45–45</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.QueueText.set</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, set</td></tr>
@@ -676,7 +676,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L46">PropertyDeclaration <code>StageText</code> · L46–46</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L46-L46">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:46–46</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L46-L46">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:46–46</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.StageText</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -686,7 +686,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L46">GetAccessorDeclaration <code>get_StageText</code> · L46–46</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L46-L46">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:46–46</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L46-L46">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:46–46</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.StageText.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -696,7 +696,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L46">SetAccessorDeclaration <code>set_StageText</code> · L46–46</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L46-L46">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:46–46</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L46-L46">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:46–46</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.StageText.set</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, set</td></tr>
@@ -710,7 +710,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L47">PropertyDeclaration <code>Graph</code> · L47–47</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L47-L47">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:47–47</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L47-L47">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:47–47</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.CPowerMeasureGraph Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Graph</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -720,7 +720,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L48">PropertyDeclaration <code>GraphPoints</code> · L48–48</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L48-L48">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:48–48</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L48-L48">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:48–48</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>PointCollection Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.GraphPoints</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -730,7 +730,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L49">PropertyDeclaration <code>DetailTitle</code> · L49–49</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L49-L49">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:49–49</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L49-L49">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:49–49</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.DetailTitle</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -744,7 +744,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L50">PropertyDeclaration <code>Samples</code> · L50–50</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L50-L50">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:50–50</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L50-L50">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:50–50</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt; Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Samples</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -754,7 +754,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L51">PropertyDeclaration <code>DetailMessage</code> · L51–52</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L51-L52">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:51–52</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L51-L52">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:51–52</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.DetailMessage</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -768,7 +768,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L53">PropertyDeclaration <code>SelectedHead</code> · L53–64</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L53-L64">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:53–64</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L53-L64">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:53–64</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.CPowerMeasureRow? Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.SelectedHead</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -778,7 +778,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L55">GetAccessorDeclaration <code>get_SelectedHead</code> · L55–55</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L55-L55">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:55–55</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L55-L55">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:55–55</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.CPowerMeasureRow? Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.SelectedHead.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -788,7 +788,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L56">SetAccessorDeclaration <code>set_SelectedHead</code> · L56–63</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L56-L63">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:56–63</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L56-L63">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:56–63</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.SelectedHead.set</td></tr>
 <tr><td>접근/수식자</td><td>Public / set</td></tr>
@@ -826,7 +826,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L65">PropertyDeclaration <code>StartCommand</code> · L65–65</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L65-L65">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:65–65</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L65-L65">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:65–65</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.StartCommand</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -836,7 +836,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L65">GetAccessorDeclaration <code>get_StartCommand</code> · L65–65</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L65-L65">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:65–65</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L65-L65">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:65–65</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.StartCommand.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -846,7 +846,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L66">PropertyDeclaration <code>StopCommand</code> · L66–66</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L66-L66">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:66–66</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L66-L66">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:66–66</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.StopCommand</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -856,7 +856,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L66">GetAccessorDeclaration <code>get_StopCommand</code> · L66–66</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L66-L66">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:66–66</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L66-L66">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:66–66</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.StopCommand.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -866,7 +866,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L67">PropertyDeclaration <code>ToggleViewCommand</code> · L67–67</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L67-L67">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:67–67</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L67-L67">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:67–67</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.ToggleViewCommand</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -876,7 +876,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L67">GetAccessorDeclaration <code>get_ToggleViewCommand</code> · L67–67</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L67-L67">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:67–67</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L67-L67">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:67–67</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.ToggleViewCommand.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -886,7 +886,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L68">PropertyDeclaration <code>SelectGraphHeadCommand</code> · L68–68</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L68-L68">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:68–68</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L68-L68">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:68–68</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.SelectGraphHeadCommand</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -896,7 +896,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L68">GetAccessorDeclaration <code>get_SelectGraphHeadCommand</code> · L68–68</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L68-L68">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:68–68</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L68-L68">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:68–68</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.SelectGraphHeadCommand.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -906,7 +906,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L69">PropertyDeclaration <code>StageMotion</code> · L69–69</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L69-L69">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:69–69</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L69-L69">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:69–69</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.CManualPowerStagePanel Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.StageMotion</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -916,7 +916,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L69">GetAccessorDeclaration <code>get_StageMotion</code> · L69–69</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L69-L69">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:69–69</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L69-L69">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:69–69</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.CManualPowerStagePanel Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.StageMotion.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -926,7 +926,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L71">ConstructorDeclaration <code>.ctor</code> · L71–101</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L71-L101">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:71–101</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L71-L101">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:71–101</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.CManualPowerMeasurePanel(Drilling.Common.Interface.CPowerMeasureService, System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt;&gt;, Drilling.Common.Interface.IPowerMeasureTable?, System.Action&lt;string&gt;, System.Func&lt;string, bool&gt;, System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_MOTOR_STATUS_ITEM&gt;&gt;?, System.Func&lt;Drilling.Common.Interface.EN_COMM_STATE&gt;?, Drilling.Common.Motion.CManualStageMotionSimulation?, Drilling.UI.Menu.Menus.CManualStageMoveOperation?, System.Func&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt;, System.Threading.CancellationToken, System.Threading.Tasks.Task&gt;?, bool)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -949,8 +949,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L2303-L2305">Drilling.UI/Menu/Menus/CMenuMain.cs:2303–2305</a></td><td>new CManualPowerMeasurePanel</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6290-L6305">Drilling.UI/Menu/Menus/CMenuManual.cs:6290–6305</a></td><td>new</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L2303-L2305">Drilling.UI/Menu/Menus/CMenuMain.cs:2303–2305</a></td><td>new CManualPowerMeasurePanel</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6290-L6305">Drilling.UI/Menu/Menus/CMenuManual.cs:6290–6305</a></td><td>new</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1009,7 +1009,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L103">MethodDeclaration <code>UpdateHeads</code> · L103–125</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L103-L125">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:103–125</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L103-L125">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:103–125</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.UpdateHeads(System.Collections.Generic.IReadOnlyList&lt;int&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1022,10 +1022,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L2306-L2306">Drilling.UI/Menu/Menus/CMenuMain.cs:2306–2306</a></td><td>panel.UpdateHeads</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6216-L6216">Drilling.UI/Menu/Menus/CMenuManual.cs:6216–6216</a></td><td>PowerMeasurePanel.UpdateHeads</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6321-L6321">Drilling.UI/Menu/Menus/CMenuManual.cs:6321–6321</a></td><td>_powerMeasurePanel.UpdateHeads</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6326-L6326">Drilling.UI/Menu/Menus/CMenuManual.cs:6326–6326</a></td><td>.UpdateHeads</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L2306-L2306">Drilling.UI/Menu/Menus/CMenuMain.cs:2306–2306</a></td><td>panel.UpdateHeads</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6216-L6216">Drilling.UI/Menu/Menus/CMenuManual.cs:6216–6216</a></td><td>PowerMeasurePanel.UpdateHeads</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6321-L6321">Drilling.UI/Menu/Menus/CMenuManual.cs:6321–6321</a></td><td>_powerMeasurePanel.UpdateHeads</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6326-L6326">Drilling.UI/Menu/Menus/CMenuManual.cs:6326–6326</a></td><td>.UpdateHeads</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1101,7 +1101,7 @@
  N2 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L127">MethodDeclaration <code>GetPowerMeterOptions</code> · L127–131</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L127-L131">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:127–131</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L127-L131">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:127–131</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_MANUAL_POWER_METER_OPTION&gt; Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.GetPowerMeterOptions()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1110,8 +1110,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L106-L106">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:106–106</a></td><td>GetPowerMeterOptions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L163-L163">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:163–163</a></td><td>GetPowerMeterOptions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L106-L106">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:106–106</a></td><td>GetPowerMeterOptions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L163-L163">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:163–163</a></td><td>GetPowerMeterOptions</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1138,7 +1138,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L133">MethodDeclaration <code>ApplySnapshot</code> · L133–155</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L133-L155">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:133–155</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L133-L155">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:133–155</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.ApplySnapshot()</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1147,14 +1147,14 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29</a></td><td>ApplySnapshot</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L105-L105">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:105–105</a></td><td>ApplySnapshot</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L123-L123">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:123–123</a></td><td>ApplySnapshot</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L187-L187">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:187–187</a></td><td>ApplySnapshot</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L194-L194">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:194–194</a></td><td>ApplySnapshot</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L200-L200">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:200–200</a></td><td>ApplySnapshot</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L202-L202">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:202–202</a></td><td>ApplySnapshot</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L2313-L2313">Drilling.UI/Menu/Menus/CMenuMain.cs:2313–2313</a></td><td>panel.ApplySnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29</a></td><td>ApplySnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L105-L105">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:105–105</a></td><td>ApplySnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L123-L123">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:123–123</a></td><td>ApplySnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L187-L187">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:187–187</a></td><td>ApplySnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L194-L194">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:194–194</a></td><td>ApplySnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L200-L200">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:200–200</a></td><td>ApplySnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L202-L202">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:202–202</a></td><td>ApplySnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L2313-L2313">Drilling.UI/Menu/Menus/CMenuMain.cs:2313–2313</a></td><td>panel.ApplySnapshot</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1237,7 +1237,7 @@
  M --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L157">MethodDeclaration <code>Start</code> · L157–195</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L157-L195">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:157–195</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L157-L195">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:157–195</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Start()</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, async</td></tr>
@@ -1246,7 +1246,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L90-L90">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:90–90</a></td><td>Start</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L90-L90">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:90–90</a></td><td>Start</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1381,7 +1381,7 @@
  N2 --&gt;|포함| N11</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L197">MethodDeclaration <code>Stop</code> · L197–203</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L197-L203">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:197–203</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L197-L203">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:197–203</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Stop()</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, async</td></tr>
@@ -1390,7 +1390,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L91-L91">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:91–91</a></td><td>Stop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L91-L91">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:91–91</a></td><td>Stop</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1428,7 +1428,7 @@
  N1 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L205">MethodDeclaration <code>ParsePower</code> · L205–206</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L205-L206">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:205–206</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L205-L206">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:205–206</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.ParsePower(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1441,7 +1441,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L173-L173">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:173–173</a></td><td>ParsePower</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L173-L173">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:173–173</a></td><td>ParsePower</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1459,7 +1459,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L207">MethodDeclaration <code>ParseInt</code> · L207–208</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L207-L208">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:207–208</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L207-L208">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:207–208</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.ParseInt(string, int, int, string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1475,9 +1475,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L175-L175">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:175–175</a></td><td>ParseInt</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L176-L176">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:176–176</a></td><td>ParseInt</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L176-L176">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:176–176</a></td><td>ParseInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L175-L175">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:175–175</a></td><td>ParseInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L176-L176">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:176–176</a></td><td>ParseInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L176-L176">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:176–176</a></td><td>ParseInt</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1493,7 +1493,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L209">MethodDeclaration <code>SetBusy</code> · L209–213</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L209-L213">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:209–213</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L209-L213">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:209–213</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.SetBusy(bool)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1506,8 +1506,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L184-L184">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:184–184</a></td><td>SetBusy</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L194-L194">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:194–194</a></td><td>SetBusy</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L184-L184">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:184–184</a></td><td>SetBusy</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L194-L194">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:194–194</a></td><td>SetBusy</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1532,7 +1532,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L214">MethodDeclaration <code>NotifyCommands</code> · L214–214</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L214-L214">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:214–214</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L214-L214">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:214–214</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.NotifyCommands()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1541,10 +1541,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L124-L124">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:124–124</a></td><td>NotifyCommands</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L200-L200">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:200–200</a></td><td>NotifyCommands</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L202-L202">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:202–202</a></td><td>NotifyCommands</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L212-L212">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:212–212</a></td><td>NotifyCommands</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L124-L124">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:124–124</a></td><td>NotifyCommands</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L200-L200">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:200–200</a></td><td>NotifyCommands</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L202-L202">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:202–202</a></td><td>NotifyCommands</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L212-L212">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:212–212</a></td><td>NotifyCommands</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1558,7 +1558,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L215">MethodDeclaration <code>RefreshDetail</code> · L215–218</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L215-L218">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:215–218</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L215-L218">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:215–218</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.RefreshDetail()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1567,8 +1567,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L62-L62">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:62–62</a></td><td>RefreshDetail</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L154-L154">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:154–154</a></td><td>RefreshDetail</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L62-L62">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:62–62</a></td><td>RefreshDetail</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L154-L154">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:154–154</a></td><td>RefreshDetail</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1596,7 +1596,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L219">MethodDeclaration <code>Notify</code> · L219–219</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L219-L219">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:219–219</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L219-L219">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:219–219</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CManualPowerMeasurePanel.Notify(string?)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1609,19 +1609,19 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29</a></td><td>Notify</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29</a></td><td>Notify</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L62-L62">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:62–62</a></td><td>Notify</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L95-L95">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:95–95</a></td><td>Notify</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L95-L95">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:95–95</a></td><td>Notify</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L95-L95">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:95–95</a></td><td>Notify</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L120-L120">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:120–120</a></td><td>Notify</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L120-L120">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:120–120</a></td><td>Notify</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L120-L120">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:120–120</a></td><td>Notify</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L153-L153">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:153–153</a></td><td>Notify</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L212-L212">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:212–212</a></td><td>Notify</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L212-L212">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:212–212</a></td><td>Notify</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L217-L217">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:217–217</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L62-L62">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:62–62</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L95-L95">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:95–95</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L95-L95">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:95–95</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L95-L95">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:95–95</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L120-L120">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:120–120</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L120-L120">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:120–120</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L120-L120">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:120–120</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L153-L153">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:153–153</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L212-L212">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:212–212</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L212-L212">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:212–212</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L217-L217">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:217–217</a></td><td>Notify</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1635,7 +1635,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L224">FieldDeclaration <code>_target</code> · L224–224</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L224-L224">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:224–224</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L224-L224">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:224–224</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow._target</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1649,7 +1649,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L224">FieldDeclaration <code>_settleTime</code> · L224–224</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L224-L224">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:224–224</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L224-L224">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:224–224</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow._settleTime</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1663,7 +1663,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L224">FieldDeclaration <code>_measureCount</code> · L224–224</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L224-L224">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:224–224</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L224-L224">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:224–224</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow._measureCount</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1677,7 +1677,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L224">FieldDeclaration <code>_measureInterval</code> · L224–224</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L224-L224">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:224–224</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L224-L224">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:224–224</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow._measureInterval</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1691,7 +1691,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L225">FieldDeclaration <code>_selectedPowerMeter</code> · L225–225</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L225-L225">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:225–225</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L225-L225">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:225–225</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.ST_MANUAL_POWER_METER_OPTION? Drilling.UI.Menu.Menus.CPowerMeasureRow._selectedPowerMeter</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1701,7 +1701,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L226">FieldDeclaration <code>_metersInitialized</code> · L226–226</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L226-L226">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:226–226</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L226-L226">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:226–226</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CPowerMeasureRow._metersInitialized</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1711,7 +1711,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L227">FieldDeclaration <code>_updatingPowerMeters</code> · L227–227</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L227-L227">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:227–227</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L227-L227">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:227–227</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CPowerMeasureRow._updatingPowerMeters</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1721,7 +1721,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L228">FieldDeclaration <code>_isGraphSelected</code> · L228–228</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L228-L228">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:228–228</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L228-L228">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:228–228</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CPowerMeasureRow._isGraphSelected</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1731,7 +1731,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L229">EventFieldDeclaration <code>PropertyChanged</code> · L229–229</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L229-L229">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:229–229</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L229-L229">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:229–229</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CPowerMeasureRow.PropertyChanged</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, event</td></tr>
@@ -1741,7 +1741,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L230">EventFieldDeclaration <code>InputChanged</code> · L230–230</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L230-L230">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:230–230</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L230-L230">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:230–230</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Action? Drilling.UI.Menu.Menus.CPowerMeasureRow.InputChanged</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, event</td></tr>
@@ -1751,7 +1751,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L231">PropertyDeclaration <code>HeadNo</code> · L231–231</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L231-L231">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:231–231</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L231-L231">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:231–231</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.UI.Menu.Menus.CPowerMeasureRow.HeadNo</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1761,7 +1761,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L231">GetAccessorDeclaration <code>get_HeadNo</code> · L231–231</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L231-L231">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:231–231</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L231-L231">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:231–231</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.UI.Menu.Menus.CPowerMeasureRow.HeadNo.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -1771,7 +1771,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L232">PropertyDeclaration <code>HeadName</code> · L232–232</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L232-L232">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:232–232</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L232-L232">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:232–232</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow.HeadName</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1781,7 +1781,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L233">PropertyDeclaration <code>IsGraphSelected</code> · L233–233</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L233-L233">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:233–233</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L233-L233">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:233–233</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CPowerMeasureRow.IsGraphSelected</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1791,7 +1791,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L234">PropertyDeclaration <code>Graph</code> · L234–234</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L234-L234">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:234–234</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L234-L234">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:234–234</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.CPowerMeasureGraph Drilling.UI.Menu.Menus.CPowerMeasureRow.Graph</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1801,7 +1801,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L234">GetAccessorDeclaration <code>get_Graph</code> · L234–234</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L234-L234">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:234–234</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L234-L234">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:234–234</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.CPowerMeasureGraph Drilling.UI.Menu.Menus.CPowerMeasureRow.Graph.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -1811,7 +1811,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L234">SetAccessorDeclaration <code>set_Graph</code> · L234–234</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L234-L234">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:234–234</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L234-L234">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:234–234</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CPowerMeasureRow.Graph.set</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, set</td></tr>
@@ -1825,7 +1825,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L235">MethodDeclaration <code>SetGraphSelected</code> · L235–239</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L235-L239">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:235–239</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L235-L239">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:235–239</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CPowerMeasureRow.SetGraphSelected(bool)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1838,8 +1838,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L59-L59">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:59–59</a></td><td>.SetGraphSelected</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L61-L61">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:61–61</a></td><td>.SetGraphSelected</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L59-L59">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:59–59</a></td><td>.SetGraphSelected</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L61-L61">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:61–61</a></td><td>.SetGraphSelected</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1861,7 +1861,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L240">PropertyDeclaration <code>PowerMeters</code> · L240–240</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L240-L240">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:240–240</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L240-L240">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:240–240</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_MANUAL_POWER_METER_OPTION&gt; Drilling.UI.Menu.Menus.CPowerMeasureRow.PowerMeters</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1871,7 +1871,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L240">GetAccessorDeclaration <code>get_PowerMeters</code> · L240–240</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L240-L240">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:240–240</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L240-L240">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:240–240</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_MANUAL_POWER_METER_OPTION&gt; Drilling.UI.Menu.Menus.CPowerMeasureRow.PowerMeters.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -1881,7 +1881,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L240">SetAccessorDeclaration <code>set_PowerMeters</code> · L240–240</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L240-L240">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:240–240</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L240-L240">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:240–240</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CPowerMeasureRow.PowerMeters.set</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, set</td></tr>
@@ -1895,7 +1895,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L241">PropertyDeclaration <code>SelectedPowerMeter</code> · L241–245</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L241-L245">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:241–245</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L241-L245">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:241–245</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.ST_MANUAL_POWER_METER_OPTION? Drilling.UI.Menu.Menus.CPowerMeasureRow.SelectedPowerMeter</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1905,7 +1905,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L243">GetAccessorDeclaration <code>get_SelectedPowerMeter</code> · L243–243</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L243-L243">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:243–243</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L243-L243">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:243–243</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.ST_MANUAL_POWER_METER_OPTION? Drilling.UI.Menu.Menus.CPowerMeasureRow.SelectedPowerMeter.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -1915,7 +1915,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L244">SetAccessorDeclaration <code>set_SelectedPowerMeter</code> · L244–244</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L244-L244">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:244–244</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L244-L244">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:244–244</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CPowerMeasureRow.SelectedPowerMeter.set</td></tr>
 <tr><td>접근/수식자</td><td>Public / set</td></tr>
@@ -1947,7 +1947,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L246">PropertyDeclaration <code>Target</code> · L246–246</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L246-L246">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:246–246</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L246-L246">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:246–246</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow.Target</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1957,7 +1957,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L246">GetAccessorDeclaration <code>get_Target</code> · L246–246</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L246-L246">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:246–246</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L246-L246">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:246–246</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow.Target.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -1967,7 +1967,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L246">SetAccessorDeclaration <code>set_Target</code> · L246–246</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L246-L246">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:246–246</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L246-L246">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:246–246</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CPowerMeasureRow.Target.set</td></tr>
 <tr><td>접근/수식자</td><td>Public / set</td></tr>
@@ -1989,7 +1989,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L247">PropertyDeclaration <code>SettleTime</code> · L247–247</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L247-L247">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:247–247</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L247-L247">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:247–247</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow.SettleTime</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1999,7 +1999,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L247">GetAccessorDeclaration <code>get_SettleTime</code> · L247–247</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L247-L247">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:247–247</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L247-L247">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:247–247</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow.SettleTime.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -2009,7 +2009,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L247">SetAccessorDeclaration <code>set_SettleTime</code> · L247–247</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L247-L247">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:247–247</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L247-L247">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:247–247</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CPowerMeasureRow.SettleTime.set</td></tr>
 <tr><td>접근/수식자</td><td>Public / set</td></tr>
@@ -2031,7 +2031,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L248">PropertyDeclaration <code>MeasureCount</code> · L248–248</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L248-L248">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:248–248</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L248-L248">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:248–248</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow.MeasureCount</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2041,7 +2041,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L248">GetAccessorDeclaration <code>get_MeasureCount</code> · L248–248</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L248-L248">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:248–248</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L248-L248">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:248–248</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow.MeasureCount.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -2051,7 +2051,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L248">SetAccessorDeclaration <code>set_MeasureCount</code> · L248–248</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L248-L248">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:248–248</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L248-L248">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:248–248</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CPowerMeasureRow.MeasureCount.set</td></tr>
 <tr><td>접근/수식자</td><td>Public / set</td></tr>
@@ -2073,7 +2073,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L249">PropertyDeclaration <code>MeasureInterval</code> · L249–249</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L249-L249">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:249–249</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L249-L249">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:249–249</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow.MeasureInterval</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2083,7 +2083,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L249">GetAccessorDeclaration <code>get_MeasureInterval</code> · L249–249</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L249-L249">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:249–249</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L249-L249">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:249–249</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow.MeasureInterval.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -2093,7 +2093,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L249">SetAccessorDeclaration <code>set_MeasureInterval</code> · L249–249</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L249-L249">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:249–249</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L249-L249">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:249–249</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CPowerMeasureRow.MeasureInterval.set</td></tr>
 <tr><td>접근/수식자</td><td>Public / set</td></tr>
@@ -2115,7 +2115,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L250">MethodDeclaration <code>UpdatePowerMeters</code> · L250–265</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L250-L265">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:250–265</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L250-L265">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:250–265</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CPowerMeasureRow.UpdatePowerMeters(System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_MANUAL_POWER_METER_OPTION&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2128,7 +2128,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L114-L114">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:114–114</a></td><td>row.UpdatePowerMeters</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L114-L114">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:114–114</a></td><td>row.UpdatePowerMeters</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2170,7 +2170,7 @@
  N1 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L266">MethodDeclaration <code>ApplyTarget</code> · L266–274</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L266-L274">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:266–274</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L266-L274">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:266–274</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CPowerMeasureRow.ApplyTarget(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2183,7 +2183,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L141-L141">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:141–141</a></td><td>row.ApplyTarget</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L141-L141">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:141–141</a></td><td>row.ApplyTarget</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2227,7 +2227,7 @@
  M --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L275">MethodDeclaration <code>Matches</code> · L275–280</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L275-L280">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:275–280</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L275-L280">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:275–280</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CPowerMeasureRow.Matches(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2241,7 +2241,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L142-L142">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:142–142</a></td><td>row.Matches</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L142-L142">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:142–142</a></td><td>row.Matches</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2259,7 +2259,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L281">MethodDeclaration <code>SetInput</code> · L281–285</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L281-L285">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:281–285</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L281-L285">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:281–285</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CPowerMeasureRow.SetInput(ref string, string, string?)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -2274,10 +2274,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L246-L246">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:246–246</a></td><td>SetInput</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L247-L247">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:247–247</a></td><td>SetInput</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L248-L248">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:248–248</a></td><td>SetInput</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L249-L249">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:249–249</a></td><td>SetInput</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L246-L246">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:246–246</a></td><td>SetInput</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L247-L247">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:247–247</a></td><td>SetInput</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L248-L248">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:248–248</a></td><td>SetInput</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L249-L249">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:249–249</a></td><td>SetInput</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2301,7 +2301,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L286">MethodDeclaration <code>Notify</code> · L286–286</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L286-L286">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:286–286</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L286-L286">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:286–286</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CPowerMeasureRow.Notify(string?)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -2314,13 +2314,13 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L238-L238">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:238–238</a></td><td>Notify</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L244-L244">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:244–244</a></td><td>Notify</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L260-L260">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:260–260</a></td><td>Notify</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L262-L262">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:262–262</a></td><td>Notify</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L273-L273">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:273–273</a></td><td>Notify</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L284-L284">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:284–284</a></td><td>Notify</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L313-L313">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:313–313</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L238-L238">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:238–238</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L244-L244">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:244–244</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L260-L260">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:260–260</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L262-L262">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:262–262</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L273-L273">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:273–273</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L284-L284">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:284–284</a></td><td>Notify</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L313-L313">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:313–313</a></td><td>Notify</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2334,7 +2334,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L287">PropertyDeclaration <code>Snapshot</code> · L287–287</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L287-L287">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:287–287</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L287-L287">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:287–287</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_HEAD? Drilling.UI.Menu.Menus.CPowerMeasureRow.Snapshot</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2344,7 +2344,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L287">GetAccessorDeclaration <code>get_Snapshot</code> · L287–287</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L287-L287">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:287–287</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L287-L287">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:287–287</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_HEAD? Drilling.UI.Menu.Menus.CPowerMeasureRow.Snapshot.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -2354,7 +2354,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L287">SetAccessorDeclaration <code>set_Snapshot</code> · L287–287</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L287-L287">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:287–287</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L287-L287">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:287–287</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CPowerMeasureRow.Snapshot.set</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, set</td></tr>
@@ -2368,7 +2368,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L288">PropertyDeclaration <code>Measured</code> · L288–288</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L288-L288">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:288–288</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L288-L288">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:288–288</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow.Measured</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2386,7 +2386,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L289">PropertyDeclaration <code>Error</code> · L289–289</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L289-L289">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:289–289</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L289-L289">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:289–289</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow.Error</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2405,7 +2405,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L290">PropertyDeclaration <code>Angle</code> · L290–290</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L290-L290">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:290–290</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L290-L290">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:290–290</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow.Angle</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2423,7 +2423,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L291">PropertyDeclaration <code>Tolerance</code> · L291–291</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L291-L291">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:291–291</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L291-L291">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:291–291</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow.Tolerance</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2442,7 +2442,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L292">PropertyDeclaration <code>AttemptProgress</code> · L292–292</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L292-L292">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:292–292</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L292-L292">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:292–292</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow.AttemptProgress</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2456,7 +2456,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L293">PropertyDeclaration <code>GraphSummary</code> · L293–293</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L293-L293">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:293–293</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L293-L293">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:293–293</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow.GraphSummary</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2470,7 +2470,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L294">PropertyDeclaration <code>State</code> · L294–294</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L294-L294">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:294–294</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L294-L294">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:294–294</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CPowerMeasureRow.State</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2480,7 +2480,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L295">PropertyDeclaration <code>StateBackground</code> · L295–300</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L295-L300">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:295–300</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L295-L300">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:295–300</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Brush Drilling.UI.Menu.Menus.CPowerMeasureRow.StateBackground</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2499,7 +2499,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L301">MethodDeclaration <code>Apply</code> · L301–307</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L301-L307">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:301–307</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L301-L307">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:301–307</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CPowerMeasureRow.Apply(Drilling.Common.Interface.ST_POWER_MEASURE_HEAD?)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2512,7 +2512,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L143-L143">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:143–143</a></td><td>row.Apply</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L143-L143">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:143–143</a></td><td>row.Apply</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2559,7 +2559,7 @@
  M --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L308">MethodDeclaration <code>RefreshGraph</code> · L308–314</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L308-L314">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:308–314</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L308-L314">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:308–314</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CPowerMeasureRow.RefreshGraph()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -2568,8 +2568,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L284-L284">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:284–284</a></td><td>RefreshGraph</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L305-L305">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:305–305</a></td><td>RefreshGraph</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L284-L284">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:284–284</a></td><td>RefreshGraph</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L305-L305">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:305–305</a></td><td>RefreshGraph</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2593,7 +2593,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L319">PropertyDeclaration <code>Empty</code> · L319–319</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L319-L319">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:319–319</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L319-L319">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:319–319</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.CPowerMeasureGraph Drilling.UI.Menu.Menus.CPowerMeasureGraph.Empty</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2611,7 +2611,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L319">GetAccessorDeclaration <code>get_Empty</code> · L319–319</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L319-L319">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:319–319</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L319-L319">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:319–319</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.CPowerMeasureGraph Drilling.UI.Menu.Menus.CPowerMeasureGraph.Empty.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -2621,7 +2621,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L320">PropertyDeclaration <code>LastPointVisibility</code> · L320–320</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L320-L320">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:320–320</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L320-L320">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:320–320</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Visibility Drilling.UI.Menu.Menus.CPowerMeasureGraph.LastPointVisibility</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2635,7 +2635,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L321">PropertyDeclaration <code>LastPointLeft</code> · L321–321</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L321-L321">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:321–321</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L321-L321">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:321–321</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CPowerMeasureGraph.LastPointLeft</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2649,7 +2649,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L322">PropertyDeclaration <code>LastPointTop</code> · L322–322</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L322-L322">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:322–322</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L322-L322">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:322–322</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CPowerMeasureGraph.LastPointTop</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -2663,7 +2663,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L323">MethodDeclaration <code>Create</code> · L323–331</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L323-L331">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:323–331</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L323-L331">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:323–331</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.CPowerMeasureGraph Drilling.UI.Menu.Menus.CPowerMeasureGraph.Create(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_POWER_MEASURE_SAMPLE&gt;, double)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2677,8 +2677,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L312-L312">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:312–312</a></td><td>CPowerMeasureGraph.Create</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L319-L319">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:319–319</a></td><td>Create</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L312-L312">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:312–312</a></td><td>CPowerMeasureGraph.Create</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L319-L319">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:319–319</a></td><td>Create</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2719,7 +2719,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L326">LocalFunctionStatement <code>Y</code> · L326–326</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L326-L326">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:326–326</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L326-L326">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:326–326</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Y(double)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -2732,8 +2732,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L328-L328">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:328–328</a></td><td>Y</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L330-L330">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:330–330</a></td><td>Y</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L328-L328">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:328–328</a></td><td>Y</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L330-L330">Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:330–330</a></td><td>Y</td><td>False</td></tr>
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h2>구문·바인딩 한계</h2>

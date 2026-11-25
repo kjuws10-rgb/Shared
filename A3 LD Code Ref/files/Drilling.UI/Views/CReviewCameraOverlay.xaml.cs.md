@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | fdcc6ef6ce98cd9baef58348be383b0567a0bb398d911cc4383f342184ac7c26 |
 | 파일 분류 | code |
 | 원본 크기/행 | 2,676 bytes / 60 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -42,7 +42,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_camera` · L13–13
 
-[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L13-L13)
+[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -57,7 +57,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_projectionVersion` · L14–14
 
-[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L14-L14)
+[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -78,7 +78,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_wasVisible` · L15–15
 
-[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L15-L15)
+[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -93,7 +93,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L16–22
 
-[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:16–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L16-L22)
+[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:16–22](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L16-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -134,7 +134,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `Subscribe` · L24–32
 
-[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:24–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L24-L32)
+[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:24–32](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L24-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -147,8 +147,8 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L19-L19) | Subscribe | False |
-| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L20-L20) | Subscribe | False |
+| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L19-L19) | Subscribe | False |
+| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L20-L20) | Subscribe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -185,7 +185,7 @@ flowchart TD
 
 ### MethodDeclaration `Unsubscribe` · L33–37
 
-[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:33–37](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L33-L37)
+[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:33–37](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L33-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -198,8 +198,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L21-L21) | Unsubscribe | False |
-| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L28-L28) | Unsubscribe | False |
+| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L21-L21) | Unsubscribe | False |
+| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L28-L28) | Unsubscribe | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -222,7 +222,7 @@ flowchart TD
 
 ### MethodDeclaration `CameraChanged` · L38–38
 
-[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L38-L38)
+[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -256,7 +256,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateMarker` · L40–56
 
-[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:40–56](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L40-L56)
+[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:40–56](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L40-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -275,9 +275,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L20-L20) | UpdateMarker | False |
-| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L31-L31) | UpdateMarker | False |
-| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L38-L38) | UpdateMarker | False |
+| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L20-L20) | UpdateMarker | False |
+| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L31-L31) | UpdateMarker | False |
+| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L38-L38) | UpdateMarker | False |
 
 호출하는 대상과 해석 범위:
 
@@ -335,7 +335,7 @@ flowchart TD
 
 ### MethodDeclaration `StopAnimations` · L57–58
 
-[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:57–58](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L57-L58)
+[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:57–58](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L57-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -348,9 +348,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L21-L21) | StopAnimations | False |
-| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L43-L43) | StopAnimations | False |
-| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L53-L53) | StopAnimations | False |
+| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L21-L21) | StopAnimations | False |
+| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L43-L43) | StopAnimations | False |
+| [Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L53-L53) | StopAnimations | False |
 
 호출하는 대상과 해석 범위:
 
@@ -370,7 +370,7 @@ flowchart TD
 
 ### MethodDeclaration `Animation` · L59–59
 
-[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L59-L59)
+[Drilling.UI/Views/CReviewCameraOverlay.xaml.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CReviewCameraOverlay.xaml.cs#L59-L59)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

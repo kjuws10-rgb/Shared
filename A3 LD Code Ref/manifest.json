@@ -1,26 +1,26 @@
 {
   "schemaVersion": "a3-code-reference/1",
-  "generatorVersion": "1.1.4",
+  "generatorVersion": "1.1.5",
   "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
   "sourceBranch": "master",
-  "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
-  "generatedAt": "2026-11-21T00:12:29.217360+00:00",
+  "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
+  "generatedAt": "2026-11-25T00:53:36.898115+00:00",
   "coverage": {
-    "trackedFiles": 700,
-    "filePages": 700,
+    "trackedFiles": 2289,
+    "filePages": 2289,
     "byKind": {
-      "build_or_reference": 10,
-      "data_schema": 335,
-      "code": 343,
+      "build_or_reference": 124,
+      "data_schema": 898,
+      "code": 1255,
       "binary_reference": 12
     },
-    "csharpFiles": 158,
-    "typeCount": 941,
-    "memberCount": 16511,
-    "callSites": 43446,
-    "sourceLines": 1934227,
-    "annotatedFiles": 353,
-    "ragRecords": 32191
+    "csharpFiles": 159,
+    "typeCount": 946,
+    "memberCount": 16543,
+    "callSites": 43603,
+    "sourceLines": 26471124,
+    "annotatedFiles": 1379,
+    "ragRecords": 373996
   },
   "semanticScope": {
     "syntax": "All Git-tracked C# files parsed with Roslyn; inactive conditional-compilation branches are reported separately as disabled text.",
@@ -47,31 +47,31 @@
     "projectBoundaries": "Source declarations are combined into one compilation. Project-reference accessibility and exact target-framework overload selection are not build-verified."
   },
   "syntaxSummary": {
-    "trackedFiles": 700,
-    "csharpFiles": 158,
-    "sourceLines": 124398,
-    "types": 941,
-    "members": 16511,
-    "calls": 43446,
-    "operations": 98088,
+    "trackedFiles": 2289,
+    "csharpFiles": 159,
+    "sourceLines": 124666,
+    "types": 946,
+    "members": 16543,
+    "calls": 43603,
+    "operations": 98387,
     "callResolution": {
-      "resolved": 39074,
-      "unresolved": 3675,
+      "resolved": 39226,
+      "unresolved": 3680,
       "candidate": 697
     },
     "compilationDiagnostics": {
-      "Error": 4348,
+      "Error": 4361,
       "Hidden": 431,
       "Warning": 3
     },
     "diagnosticCodes": [
       {
         "code": "CS0246",
-        "count": 2357
+        "count": 2359
       },
       {
         "code": "CS0103",
-        "count": 1536
+        "count": 1540
       },
       {
         "code": "CS8019",
@@ -79,7 +79,7 @@
       },
       {
         "code": "CS1061",
-        "count": 200
+        "count": 206
       },
       {
         "code": "CS0234",
@@ -87,7 +87,7 @@
       },
       {
         "code": "CS0117",
-        "count": 63
+        "count": 64
       },
       {
         "code": "CS1503",
@@ -122,15 +122,15 @@
         "count": 1
       },
       {
-        "code": "CS8506",
-        "count": 1
-      },
-      {
         "code": "CS0019",
         "count": 1
       },
       {
         "code": "CS8619",
+        "count": 1
+      },
+      {
+        "code": "CS8506",
         "count": 1
       },
       {
@@ -146,19 +146,19 @@
   "originalSourceModified": false,
   "detailedReview": "Agent-authored and cross-checked static tracing chapters cover selected critical domains; generated per-file/member/line explanations are structural analysis, not human semantic certification",
   "build": "Equipment project not built/executed by documentation generator",
-  "operationalRecords": "CSV record bodies omitted; schema and definitions only",
+  "operationalRecords": "CSV and Data JSON runtime record bodies omitted; schema and definitions only",
   "binaryPolicy": "names/path/size/SHA only; no code load or decompilation",
   "extractorVersion": "1.0.3",
   "xamlCoverage": {
     "files": 58,
     "namedElements": 385,
     "events": 308,
-    "bindings": 2956
+    "bindings": 2960
   },
   "memberScope": "Explicit C# source declarations; compiler-synthesized record/primary-constructor members and WPF-generated fields are not counted. Static XAML named elements/events/bindings are recorded separately in metadata/xaml.",
   "validation": {
     "status": "passed",
-    "scope": "Documentation coverage/provenance/navigation validation; known behavior defects are reported separately, not a program correctness pass",
+    "scope": "Documentation coverage/provenance/navigation validation; static code findings remain open, not a program correctness pass",
     "staticReport": "validation/static-validation.json",
     "browserReport": "validation/browser-validation.json",
     "independentReport": "validation/generator-independent-validation.json",
@@ -166,45 +166,164 @@
     "sourceModelExtractionReport": "validation/source-model-extraction.json",
     "crosscheckReports": [
       "validation/architecture-crosscheck.json",
-      "validation/log-manual-crosscheck.json"
+      "validation/manual-crosscheck.json",
+      "validation/manual-independent-content-review.json"
     ],
+    "stageDefinitionReport": "validation/stage-layout-static.json",
+    "transportPipelineReport": "validation/generator-transport-pipeline-validation.json",
     "extractorReport": "validation/extractor-regression-validation.json",
     "pythonRegressionReport": "validation/python-regression-validation.json",
     "sourcePreservationReport": "validation/source-preservation.json",
-    "behaviorReport": "validation/log-pure-regression.json",
-    "positiveLogRegressions": {
-      "passed": 27,
-      "total": 27
-    },
-    "logDefectReproductions": {
-      "reproduced": 5,
-      "probes": 5,
-      "distinctFindingGroups": 3
-    },
-    "behaviorStatus": "defects_reproduced_not_program_correctness_pass",
     "equipmentBuild": "not_run",
     "equipmentExecution": "not_run",
+    "stageCommunicationExecution": "not_run",
     "modelWeightTraining": "not_run",
     "modelInferenceAccuracy": "not_tested",
-    "gitDiffCheck": "passed"
+    "gitDiffCheck": "passed",
+    "previousBehaviorEvidence": "Prior Log tests retained verbatim under validation/history; not re-run or summed as current tests",
+    "diagramReport": "validation/diagram-browser-validation.json",
+    "manualUpdateReport": "validation/manual-refresh-validation.json",
+    "postManualIndependentReport": "validation/post-manual-independent-validation.json",
+    "postManualBrowserReport": "validation/post-manual-browser-validation.json",
+    "staticReportScope": "Full source/annotation/RAG baseline plus targeted final manual-prefix/HTML revalidation. No source/RAG-body changes after full audit.",
+    "evidenceSerialization": {
+      "method": "JSON reserialization as UTF-8/LF and removal of private local paths only. SHA fields inside reports identify the original evidence bytes, unless explicitly named publishedRedactedSha256. They must not be interpreted as SHA of the redacted public copy. Prior history remains exact Git blob bytes.",
+      "reports": [
+        {
+          "report": "validation/architecture-crosscheck.json",
+          "originalEvidenceSha256": "d0d6bb14490aae3b0c0f59b661bdb7935bb344692a91bd9bb8a01c09de3e6634",
+          "publishedRedactedSha256": "d0d6bb14490aae3b0c0f59b661bdb7935bb344692a91bd9bb8a01c09de3e6634",
+          "semanticComparison": "exact after declared private-path redaction"
+        },
+        {
+          "report": "validation/browser-validation.json",
+          "originalEvidenceSha256": "202ef375f8edead43b8ef0774e7335689df3a099ee9fe306a4304dafe2873634",
+          "publishedRedactedSha256": "830fcecab43fe1fce30ef03d014435b039f8d11a7d680cbc5e579496bab41d05",
+          "semanticComparison": "exact after declared private-path redaction"
+        },
+        {
+          "report": "validation/diagram-browser-validation.json",
+          "originalEvidenceSha256": "5b7ed6031321e6473894a31b6a9ca1ede80c43230fc156a03b16c1535bb72011",
+          "publishedRedactedSha256": "9d87a04216b80c915994e4c332e3968e6141e424cf0ee6ccb01bbbe88032f97d",
+          "semanticComparison": "exact after declared private-path redaction"
+        },
+        {
+          "report": "validation/extractor-regression-validation.json",
+          "originalEvidenceSha256": "141ebb0b7aa1e0e26a54df8c791548b57f5e30061db30af61e286b16518293bd",
+          "publishedRedactedSha256": "02daa0286aac094fb670534980e1e6ce8f0cf392810a9dc290903a4f73e0463a",
+          "semanticComparison": "exact after declared private-path redaction"
+        },
+        {
+          "report": "validation/generator-independent-validation.json",
+          "originalEvidenceSha256": "101f8ef228f0c25bde4b2fc074bbb9b8a05395c87c1b190e956a1dee8cbfef59",
+          "publishedRedactedSha256": "bbcb9ef7d596b0d60104cd0a64a5d57eb3540f7868a80585e8b2ef20e9960757",
+          "semanticComparison": "exact after declared private-path redaction"
+        },
+        {
+          "report": "validation/generator-transport-pipeline-validation.json",
+          "originalEvidenceSha256": "eabc6b2fa73298ab99c0c92f4f5339e60284a1dad322e1ac255371f991d24c04",
+          "publishedRedactedSha256": "04ea2f900f10bdff729da25ac38ec2884ac8e55c62a1b1c92b5c0f547251f4a8",
+          "semanticComparison": "exact after declared private-path redaction"
+        },
+        {
+          "report": "validation/independent-baseline.json",
+          "originalEvidenceSha256": "f4810bd33f0e7d0d711c65e1e0150456c9b62792d45a1f74f616379b9f6d8f00",
+          "publishedRedactedSha256": "1f12f145122c78d34ef03150b1d04e7c5181b2b020397465b3205664e7a5842f",
+          "semanticComparison": "exact after declared private-path redaction"
+        },
+        {
+          "report": "validation/manual-crosscheck.json",
+          "originalEvidenceSha256": "a698042cefe27a4974b1201bc9e03073a18c95e1cf556f9c6ad8e799b6679d39",
+          "publishedRedactedSha256": "2999728c20a15c8a619526b45636c9c23c275eeb55dd6e63f95009811dbe209d",
+          "semanticComparison": "exact after declared private-path redaction"
+        },
+        {
+          "report": "validation/manual-independent-content-review.json",
+          "originalEvidenceSha256": "8ab51ef3e42284755be0671a8b967d54d670783aeb07097231cab9042a335b01",
+          "publishedRedactedSha256": "8ab51ef3e42284755be0671a8b967d54d670783aeb07097231cab9042a335b01",
+          "semanticComparison": "exact after declared private-path redaction"
+        },
+        {
+          "report": "validation/manual-refresh-initial-validation.json",
+          "originalEvidenceSha256": "cbb970793f83bc0afe78de916c2d12212d3190470ad2d36ae9c4b0d5272e7c4a",
+          "publishedRedactedSha256": "141b76fefa274e8ced452e122765963821d153739ceca3b5a45c888f2e6d90ec",
+          "semanticComparison": "exact after declared private-path redaction"
+        },
+        {
+          "report": "validation/manual-refresh-validation.json",
+          "originalEvidenceSha256": "a9c0fa8858c19a65f6ccfb450d1aafa705436eafd416117d2a4e2423700be91d",
+          "publishedRedactedSha256": "a9c0fa8858c19a65f6ccfb450d1aafa705436eafd416117d2a4e2423700be91d",
+          "semanticComparison": "exact after declared private-path redaction"
+        },
+        {
+          "report": "validation/post-manual-browser-validation.json",
+          "originalEvidenceSha256": "a6c2b7a0e1453307e6a2ae62d770a336fe185095e29883971e12b1fd97ad0b22",
+          "publishedRedactedSha256": "4b483e3dc6ffa7040fcada74b0acf6c0d5c1384f3a33aafaa96e76fa20ee7598",
+          "semanticComparison": "exact after declared private-path redaction"
+        },
+        {
+          "report": "validation/post-manual-independent-validation.json",
+          "originalEvidenceSha256": "e655fe3f320648bc8df67fe4d4d94c545318d4db8caa50829a563cc6b5673f66",
+          "publishedRedactedSha256": "0a2f21cd345287ff53561bebe9c068e4fc64fd8aea82cac51489939adc4f25e9",
+          "semanticComparison": "exact after declared private-path redaction"
+        },
+        {
+          "report": "validation/python-regression-validation.json",
+          "originalEvidenceSha256": "81ac2c282b5bfb0eaa0f2c1a943bd19a5b18e056b5888cc71493bdbf72a267c1",
+          "publishedRedactedSha256": "e82a83611ed74fc7f1569a2a716cc819e5a11e283b8338b5803680e9df4cce49",
+          "semanticComparison": "exact after declared private-path redaction"
+        },
+        {
+          "report": "validation/source-model-extraction.json",
+          "originalEvidenceSha256": "974fd3bcb27a189ceb4a2828a858137e8a70d5f8fa8faccf411505562d612f21",
+          "publishedRedactedSha256": "a372eba6b4839ee3e0ab6056d4efeb2e615ce272ee65832b4033c674f376a6ec",
+          "semanticComparison": "exact after declared private-path redaction"
+        },
+        {
+          "report": "validation/source-model-validation.json",
+          "originalEvidenceSha256": "e5493a2f1dca55e14ce01b879af8c7d7f4e92c1c9aa70a9307d17e4a255bfd5a",
+          "publishedRedactedSha256": "aec3eac81b4ade741c6e71dcd08a943922b97182e903b4163c80ff0d6af130d6",
+          "semanticComparison": "exact after declared private-path redaction"
+        },
+        {
+          "report": "validation/stage-layout-static.json",
+          "originalEvidenceSha256": "ada8938d544540d990f91d6c4cdd787932afca05b34d8da5ac57ce2b836f2c18",
+          "publishedRedactedSha256": "ada8938d544540d990f91d6c4cdd787932afca05b34d8da5ac57ce2b836f2c18",
+          "semanticComparison": "exact after declared private-path redaction"
+        },
+        {
+          "report": "validation/static-validation.json",
+          "originalEvidenceSha256": "cd2db0ef78d858edd110370a4d128f6d00609276835b9e86ef2557eb1f41ee64",
+          "publishedRedactedSha256": "b6dfc1685657965bb9e3bd7fbda03d8cae128c7da69852961e2e3694b445892b",
+          "semanticComparison": "exact after declared private-path redaction"
+        }
+      ]
+    }
+  },
+  "offlineTransport": {
+    "optionalMarkdownParts": 138,
+    "recordBodiesTruncated": false,
+    "splitAtRecordBoundaries": true,
+    "approximatePartBytes": 8000000,
+    "runtimeJsonPolicy": "schema_only"
   },
   "manualSourceReview": {
-    "chapters": 16,
+    "chapters": 17,
     "navigationGuides": 1,
-    "sourceCitationOccurrences": 869,
-    "uniqueSourceCitationRanges": 754,
+    "sourceCitationOccurrences": 911,
+    "uniqueSourceCitationRanges": 783,
     "runtimeCertified": false
   },
   "architectureBaseline": {
-    "sharedPath": "20261121_085657_SW아키텍쳐분석/README.md",
-    "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
-    "comparisonBaseCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2"
+    "sharedPath": "20261125_093610_SW아키텍쳐분석/README.md",
+    "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
+    "comparisonBaseCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3"
   },
   "recurringUpdate": {
     "automationId": "a3",
     "timezone": "Asia/Seoul",
-    "schedule": "Daily09:00; changed source or incomplete reference only",
+    "schedule": "Existing daily schedule unchanged",
     "independentReferenceBaseline": true
   },
-  "documentNormalization": "UTF-8/LF; source lines preserved with EOL markers; previous validation retained as exact canonical Git bytes under history."
+  "documentNormalization": "UTF-8/LF; original source rows retained with EOL markers. Old validation archived as original canonical Git bytes."
 }

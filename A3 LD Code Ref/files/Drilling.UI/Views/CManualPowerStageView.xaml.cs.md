@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 9e448e7e3ffacf4ad1ef776fae61f375601b38828f1c4e59694386aa0aa2e452 |
 | 파일 분류 | code |
 | 원본 크기/행 | 4,272 bytes / 95 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -49,7 +49,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_window` · L12–12
 
-[Drilling.UI/Views/CManualPowerStageView.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L12-L12)
+[Drilling.UI/Views/CManualPowerStageView.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -64,7 +64,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_heldJog` · L13–13
 
-[Drilling.UI/Views/CManualPowerStageView.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L13-L13)
+[Drilling.UI/Views/CManualPowerStageView.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -79,7 +79,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `Panel` · L14–14
 
-[Drilling.UI/Views/CManualPowerStageView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L14-L14)
+[Drilling.UI/Views/CManualPowerStageView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -94,7 +94,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L15–15
 
-[Drilling.UI/Views/CManualPowerStageView.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L15-L15)
+[Drilling.UI/Views/CManualPowerStageView.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -121,7 +121,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `ViewLoaded` · L17–22
 
-[Drilling.UI/Views/CManualPowerStageView.xaml.cs:17–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L17-L22)
+[Drilling.UI/Views/CManualPowerStageView.xaml.cs:17–22](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L17-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -169,7 +169,7 @@ flowchart TD
 
 ### MethodDeclaration `ViewUnloaded` · L23–30
 
-[Drilling.UI/Views/CManualPowerStageView.xaml.cs:23–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L23-L30)
+[Drilling.UI/Views/CManualPowerStageView.xaml.cs:23–30](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L23-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -217,7 +217,7 @@ flowchart TD
 
 ### MethodDeclaration `ViewVisibilityChanged` · L31–35
 
-[Drilling.UI/Views/CManualPowerStageView.xaml.cs:31–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L31-L35)
+[Drilling.UI/Views/CManualPowerStageView.xaml.cs:31–35](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L31-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -263,7 +263,7 @@ flowchart TD
 
 ### MethodDeclaration `ViewDataContextChanged` · L36–41
 
-[Drilling.UI/Views/CManualPowerStageView.xaml.cs:36–41](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L36-L41)
+[Drilling.UI/Views/CManualPowerStageView.xaml.cs:36–41](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L36-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -301,7 +301,7 @@ flowchart TD
 
 ### MethodDeclaration `WindowDeactivated` · L42–42
 
-[Drilling.UI/Views/CManualPowerStageView.xaml.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L42-L42)
+[Drilling.UI/Views/CManualPowerStageView.xaml.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L42-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -335,7 +335,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenPositionInput` · L44–60
 
-[Drilling.UI/Views/CManualPowerStageView.xaml.cs:44–60](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L44-L60)
+[Drilling.UI/Views/CManualPowerStageView.xaml.cs:44–60](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L44-L60)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -429,7 +429,7 @@ flowchart TD
 
 ### MethodDeclaration `JogMouseDown` · L62–70
 
-[Drilling.UI/Views/CManualPowerStageView.xaml.cs:62–70](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L62-L70)
+[Drilling.UI/Views/CManualPowerStageView.xaml.cs:62–70](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L62-L70)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -491,7 +491,7 @@ flowchart TD
 
 ### MethodDeclaration `JogMouseUp` · L71–71
 
-[Drilling.UI/Views/CManualPowerStageView.xaml.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L71-L71)
+[Drilling.UI/Views/CManualPowerStageView.xaml.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L71-L71)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -526,7 +526,7 @@ flowchart TD
 
 ### MethodDeclaration `JogLostCapture` · L72–72
 
-[Drilling.UI/Views/CManualPowerStageView.xaml.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L72-L72)
+[Drilling.UI/Views/CManualPowerStageView.xaml.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L72-L72)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -560,7 +560,7 @@ flowchart TD
 
 ### MethodDeclaration `JogKeyDown` · L73–80
 
-[Drilling.UI/Views/CManualPowerStageView.xaml.cs:73–80](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L73-L80)
+[Drilling.UI/Views/CManualPowerStageView.xaml.cs:73–80](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L73-L80)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -618,7 +618,7 @@ flowchart TD
 
 ### MethodDeclaration `JogKeyUp` · L81–85
 
-[Drilling.UI/Views/CManualPowerStageView.xaml.cs:81–85](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L81-L85)
+[Drilling.UI/Views/CManualPowerStageView.xaml.cs:81–85](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L81-L85)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -664,7 +664,7 @@ flowchart TD
 
 ### MethodDeclaration `JogLostKeyboardFocus` · L86–86
 
-[Drilling.UI/Views/CManualPowerStageView.xaml.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L86-L86)
+[Drilling.UI/Views/CManualPowerStageView.xaml.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L86-L86)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -698,7 +698,7 @@ flowchart TD
 
 ### MethodDeclaration `ReleaseJog` · L87–94
 
-[Drilling.UI/Views/CManualPowerStageView.xaml.cs:87–94](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L87-L94)
+[Drilling.UI/Views/CManualPowerStageView.xaml.cs:87–94](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L87-L94)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -711,16 +711,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L27-L27) | ReleaseJog | False |
-| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L33-L33) | ReleaseJog | False |
-| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L38-L38) | ReleaseJog | False |
-| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L42-L42) | ReleaseJog | False |
-| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L69-L69) | ReleaseJog | False |
-| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L71-L71) | ReleaseJog | False |
-| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L72-L72) | ReleaseJog | False |
-| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L79-L79) | ReleaseJog | False |
-| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L84-L84) | ReleaseJog | False |
-| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L86-L86) | ReleaseJog | False |
+| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L27-L27) | ReleaseJog | False |
+| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L33-L33) | ReleaseJog | False |
+| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L38-L38) | ReleaseJog | False |
+| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L42-L42) | ReleaseJog | False |
+| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L69-L69) | ReleaseJog | False |
+| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L71-L71) | ReleaseJog | False |
+| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L72-L72) | ReleaseJog | False |
+| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L79-L79) | ReleaseJog | False |
+| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L84-L84) | ReleaseJog | False |
+| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L86-L86) | ReleaseJog | False |
 
 호출하는 대상과 해석 범위:
 

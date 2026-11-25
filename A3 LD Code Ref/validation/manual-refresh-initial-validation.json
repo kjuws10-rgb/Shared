@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "a3-manual-refresh-validation/1",
+  "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
+  "passed": true,
+  "changeReason": "Additional independent source tracing identified a preexisting ProcessId/Product lifecycle linkage gap. Two explanatory notes were added after the full source/annotation/RAG audit.",
+  "fullStaticBaselineReport": "static-validation.json",
+  "fullIndependentBaselineReport": "generator-independent-validation.json",
+  "changedOutputs": {
+    "manual/architecture/04-product-and-station-lifecycle.md": {
+      "beforeSha256": "8a275b331ce37cd1b7318473770b181b666534b09e7caf80065482912e0da479",
+      "afterSha256": "f2ecf3a1acfcddd739eea70a6c399c8bb12300ed94dca7ecdeb7ce27805d3348"
+    },
+    "manual-html/architecture/04-product-and-station-lifecycle.md.html": {
+      "beforeSha256": "a9741c9cb041f0304ad48ba97795ad7afd403578cdadff649c09e58b50a1311d",
+      "afterSha256": "6b805240a344d072830a62e00fe92a3309e44cb6bc02e3bc5c50525cb9330210"
+    },
+    "manual/architecture/10-stage-glass-data-and-product-fields.md": {
+      "beforeSha256": "eecf63a2be405656e0ddb02103e82763c6967ba2362ba92cb8a8b61098ed8e0f",
+      "afterSha256": "8a16d93afa5b74a8c5f4859a59640852ee8e4f5dad3370b0cac77ec726013c1a"
+    },
+    "manual-html/architecture/10-stage-glass-data-and-product-fields.md.html": {
+      "beforeSha256": "4adbdf89657860d68b7b08177a645f290c0df63dca13c336ac758eb10aefb736",
+      "afterSha256": "4ae5aa66bd1f38bd91278a549b5aa6be83764c112e8dc3df750bb8626daeb84d"
+    },
+    "offline-studio/A3_LD_Code_Ref_OfflineStudio.md": {
+      "beforeSha256": "a4bad2266a0e2a60fc4fc25d78f4f8c9d2db9bb0e109b2b9912bdbce3234ee6e",
+      "afterSha256": "9b58616e7d19a0a23d4d67dc1ca4db1cfa075742b845a2290dca335be40b528b"
+    }
+  },
+  "onlyTwoManualsTwoHtmlAndPrimaryPrefixChanged": true,
+  "allOtherOutputFileNamesSizesAndTimestampsUnchanged": true,
+  "primaryAutomaticRagSuffixSha256Before": "390a0d34f82a8294d7b7605d417a01d930054ec89d958cbd091ee65eda91021b",
+  "primaryAutomaticRagSuffixSha256After": "390a0d34f82a8294d7b7605d417a01d930054ec89d958cbd091ee65eda91021b",
+  "primaryAutomaticSourceRecordsUnchanged": 21988,
+  "jsonlOptionalAnnotationAndMetadataNotWritten": true,
+  "newManualNoteHeadingsIncluded": true,
+  "documentationLocalLinksChecked": 212,
+  "documentationSourceRangesChecked": 693,
+  "syntaxAndSourceModelUnchanged": true,
+  "originalSourceModified": false,
+  "equipmentExecution": "not_run",
+  "equipmentBuild": "not_run",
+  "scope": "Targeted revalidation of all modified explanatory artifacts; full source/RAG/annotation evidence reused for unchanged artifacts, not re-run.",
+  "changeBoundaryStatCheckScope": "Before and immediately after the five-file explanatory refresh. A following manual input freeze check re-copied SVG/JSON assets with identical canonical bytes; asset timestamps are not source-content evidence.",
+  "followingAssetFreezeVerification": {
+    "all37ManualInputsMatchCanonicalOutput": true,
+    "svgAndDiagramSpecContentChanges": false,
+    "reference": "manual-ready.json"
+  }
+}

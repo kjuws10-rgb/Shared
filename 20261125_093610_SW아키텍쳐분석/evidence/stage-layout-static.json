@@ -1,0 +1,244 @@
+{
+  "schemaVersion": "a3-stage-layout-static/1",
+  "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
+  "passed": true,
+  "checks": [
+    {
+      "name": "43 distinct Host product fields",
+      "passed": true
+    },
+    {
+      "name": "44 readable map IDs with split GLASS_SIZE",
+      "passed": true
+    },
+    {
+      "name": "360 contiguous WORDs WF600..WF767",
+      "passed": true
+    },
+    {
+      "name": "current CSV Stage row inventory equals source field list",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_H_GLASSID definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_E_GLASSID definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_LOTID definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_BATCHID definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_JOBID definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_PORTID definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_SLOTNO definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_PRODUCT_TYPE definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_PRODUCT_KIND definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_PRODUCTID definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_RUNSPECID definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_LAYERID definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_STEPID definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_PPID definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_FLOWID definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_GLASS_SIZE_1 definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_GLASS_SIZE_2 definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_GLASS_THICKNESS definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_GLASS_STATE definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_GLASS_ORDER definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_COMMENT definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_USE_COUNT definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_JUDGEMENT definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_REASON_CODE definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_INS_FLAG definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_ENC_FLAG definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_PRERUN_FLAG definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_TURN_DIR definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_FLIP_STATE definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_WORK_STATE definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_MULTI_USE definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_PAIR_GLASSID definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_PAIR_PPID definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_OPTIONNAME1 definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_OPTIONVALUE1 definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_OPTIONNAME2 definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_OPTIONVALUE2 definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_OPTIONNAME3 definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_OPTIONVALUE3 definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_OPTIONNAME4 definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_OPTIONVALUE4 definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_OPTIONNAME5 definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_OPTIONVALUE5 definition contract",
+      "passed": true
+    },
+    {
+      "name": "STAGE_GLASS_ETC definition contract",
+      "passed": true
+    },
+    {
+      "name": "whole current Stage map shares polling period and device",
+      "passed": true
+    },
+    {
+      "name": "Stage map source validates every cached field",
+      "passed": true
+    },
+    {
+      "name": "Stage map source rejects empty H_GLASSID",
+      "passed": true
+    },
+    {
+      "name": "Stage map source checks cancellation before refresh",
+      "passed": true
+    },
+    {
+      "name": "Host fields and Recipe parameters are separately passed",
+      "passed": true
+    },
+    {
+      "name": "runtime state result writes PRODUCT_RESULT",
+      "passed": true
+    },
+    {
+      "name": "old JUDGEMENT result fallback is explicit",
+      "passed": true
+    },
+    {
+      "name": "Monitor chooses source explicitly",
+      "passed": true
+    },
+    {
+      "name": "Monitor Stage read has 10 second outer cancellation",
+      "passed": true
+    },
+    {
+      "name": "Monitor lists Host field set and separate product result",
+      "passed": true
+    }
+  ],
+  "total": 58,
+  "sourceSha256": "ae42e0681f9e8510476ad367eb29714feae95abc2dc1b4fb9e1af2129fc01eb3",
+  "scope": "Static source/CSV definition consistency only. Regex extraction and explicit contracts, not runtime parser, physical transfer atomicity, customer spec certification, equipment build or execution. No operational CSV record bodies copied.",
+  "equipmentBuild": "not_run",
+  "equipmentExecution": "not_run"
+}

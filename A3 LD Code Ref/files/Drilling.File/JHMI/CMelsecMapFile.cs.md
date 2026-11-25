@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
-| 원본 SHA256 | 863b88795376e9f8437929d4a2ce99c68bb76d990d0e087d3962b3057c6ffe5a |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
+| 원본 SHA256 | af5bdafc70abcd66e7a8b1490a535eab6d841bcc487154c1efb4292773fd9e56 |
 | 파일 분류 | code |
-| 원본 크기/행 | 69,515 bytes / 1,693 physical lines |
+| 원본 크기/행 | 70,446 bytes / 1,714 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -21,7 +21,7 @@
 
 | 타입 | 구분 | 원본 범위 | 선언/상속 |
 | --- | --- | --- | --- |
-| CMelsecMapFile | ClassDeclaration | 7–1692 | CMelsecMapFile: CMelsecMapFileBase |
+| CMelsecMapFile | ClassDeclaration | 7–1713 | CMelsecMapFile: CMelsecMapFileBase |
 
 ## 멤버 빠른 목록
 
@@ -56,19 +56,20 @@
 | NormalizeText | MethodDeclaration | L274–277 | string Drilling.File.JHMI.CMelsecMapFile.NormalizeText(string) |
 | CreateUnassignedLegacyRows | MethodDeclaration | L282–320 | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateUnassignedLegacyRows() |
 | Unassigned | MethodDeclaration | L321–321 | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Unassigned(string, string, string, string, string, string, string, string, string) |
-| CreateMotorStatusRows | MethodDeclaration | L325–423 | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateMotorStatusRows() |
-| CreateHandshakeRows | MethodDeclaration | L428–909 | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateHandshakeRows() |
-| CreateLatestScenarioRows | MethodDeclaration | L913–1635 | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateLatestScenarioRows() |
-| CreateVisionSpecRows | MethodDeclaration | L1638–1646 | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateVisionSpecRows() |
-| CreateAlignDistortionRows | MethodDeclaration | L1648–1682 | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateAlignDistortionRows() |
-| Value | LocalFunctionStatement | L1650–1652 | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) |
-| CreateIofPositionRows | MethodDeclaration | L1684–1690 | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateIofPositionRows() |
+| CreateStageGlassDataRows | MethodDeclaration | L322–342 | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateStageGlassDataRows() |
+| CreateMotorStatusRows | MethodDeclaration | L346–444 | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateMotorStatusRows() |
+| CreateHandshakeRows | MethodDeclaration | L449–930 | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateHandshakeRows() |
+| CreateLatestScenarioRows | MethodDeclaration | L934–1656 | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateLatestScenarioRows() |
+| CreateVisionSpecRows | MethodDeclaration | L1659–1667 | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateVisionSpecRows() |
+| CreateAlignDistortionRows | MethodDeclaration | L1669–1703 | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateAlignDistortionRows() |
+| Value | LocalFunctionStatement | L1671–1673 | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) |
+| CreateIofPositionRows | MethodDeclaration | L1705–1711 | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateIofPositionRows() |
 
 ## 멤버별 상세 계약·호출·처리 해설
 
 ### FieldDeclaration `TableName` · L10–10
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L10-L10)
+[Drilling.File/JHMI/CMelsecMapFile.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -89,7 +90,7 @@
 
 ### FieldDeclaration `Headers` · L11–11
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L11-L11)
+[Drilling.File/JHMI/CMelsecMapFile.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -110,7 +111,7 @@
 
 ### FieldDeclaration `RequiredHeaderGroups` · L13–27
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:13–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L13-L27)
+[Drilling.File/JHMI/CMelsecMapFile.cs:13–27](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L13-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -131,7 +132,7 @@
 
 ### MethodDeclaration `LoadAll` · L30–63
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:30–63](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L30-L63)
+[Drilling.File/JHMI/CMelsecMapFile.cs:30–63](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L30-L63)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -191,7 +192,7 @@
 
 ### LocalFunctionStatement `SelectValue` · L35–38
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:35–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L35-L38)
+[Drilling.File/JHMI/CMelsecMapFile.cs:35–38](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L35-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -226,7 +227,7 @@
 
 ### LocalFunctionStatement `HasId` · L40–43
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:40–43](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L40-L43)
+[Drilling.File/JHMI/CMelsecMapFile.cs:40–43](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L40-L43)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -260,7 +261,7 @@
 
 ### LocalFunctionStatement `SelectGroup` · L45–48
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:45–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L45-L48)
+[Drilling.File/JHMI/CMelsecMapFile.cs:45–48](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L45-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -287,7 +288,7 @@
 
 ### LocalFunctionStatement `SelectDeviceNo` · L50–53
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:50–53](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L50-L53)
+[Drilling.File/JHMI/CMelsecMapFile.cs:50–53](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L50-L53)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -314,7 +315,7 @@
 
 ### LocalFunctionStatement `SelectId` · L55–58
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:55–58](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L55-L58)
+[Drilling.File/JHMI/CMelsecMapFile.cs:55–58](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L55-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -341,7 +342,7 @@
 
 ### MethodDeclaration `Parse` · L65–100
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:65–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L65-L100)
+[Drilling.File/JHMI/CMelsecMapFile.cs:65–100](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L65-L100)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -361,7 +362,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L37-L37) | Parse | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L37-L37) | Parse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -379,7 +380,7 @@
 | 82 | double.IsFinite | resolved | bool double.IsFinite(double) |
 | 82 | double.IsFinite | resolved | bool double.IsFinite(double) |
 | 83 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
-| 84 | new ST_MELSEC_MAP_DATA | resolved | Drilling.Common.Interface.ST_MELSEC_MAP_DATA.ST_MELSEC_MAP_DATA(string, bool, string, string, int, string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, Drilling.Common.Interface.EN_MELSEC_DIRECTION, Drilling.Common.Interface.EN_MELSEC_ACCESS, double, double, int, int, string) · Drilling.Common/Interface/Melsec/CMelsec.cs:3241 |
+| 84 | new ST_MELSEC_MAP_DATA | resolved | Drilling.Common.Interface.ST_MELSEC_MAP_DATA.ST_MELSEC_MAP_DATA(string, bool, string, string, int, string, Drilling.Common.Interface.EN_MELSEC_DATA_TYPE, Drilling.Common.Interface.EN_MELSEC_DIRECTION, Drilling.Common.Interface.EN_MELSEC_ACCESS, double, double, int, int, string) · Drilling.Common/Interface/Melsec/CMelsec.cs:3278 |
 | 85 | NormalizeId | resolved | string Drilling.File.JHMI.CMelsecMapFile.NormalizeId(string) · Drilling.File/JHMI/CMelsecMapFile.cs:259 |
 | 85 | RequireText | resolved | string Drilling.File.JHMI.CMelsecMapFile.RequireText(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, params string[]) · Drilling.File/JHMI/CMelsecMapFile.cs:234 |
 | 86 | ReadBool | resolved | bool Drilling.File.JHMI.CMelsecMapFile.ReadBool(string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:244 |
@@ -474,7 +475,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsureFile` · L102–111
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:102–111](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L102-L111)
+[Drilling.File/JHMI/CMelsecMapFile.cs:102–111](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L102-L111)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -487,7 +488,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L33-L33) | EnsureFile | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L33-L33) | EnsureFile | False |
 
 호출하는 대상과 해석 범위:
 
@@ -496,17 +497,19 @@ flowchart TD
 | 104 | GetMapPath | resolved | string Drilling.File.JHMI.CMelsecMapFile.GetMapPath() · Drilling.File/JHMI/CMelsecMapFile.cs:113 |
 | 105 | System.IO.File.Exists | resolved | bool System.IO.File.Exists(string?) |
 | 110 | CCsvParser.Write | resolved | void Drilling.File.Parser.CCsvParser.Write(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>) · Drilling.File/Parser/CCsvParser.cs:58 |
-| 110 | CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat(CreateVisionSpecRows()).Concat(CreateAlignDistortionRows()).Concat(CreateUnassignedLegacyRows()).ToArray | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string>[] System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.ToArray<System.Collections.Generic.IReadOnlyDictionary<string, string>>() |
-| 110 | CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat(CreateVisionSpecRows()).Concat(CreateAlignDistortionRows()).Concat | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Concat<System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
-| 110 | CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat(CreateVisionSpecRows()).Concat | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Concat<System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
+| 110 | CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat(CreateStageGlassDataRows()).Concat(CreateVisionSpecRows()).Concat(CreateAlignDistortionRows()).Concat(CreateUnassignedLegacyRows()).ToArray | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string>[] System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.ToArray<System.Collections.Generic.IReadOnlyDictionary<string, string>>() |
+| 110 | CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat(CreateStageGlassDataRows()).Concat(CreateVisionSpecRows()).Concat(CreateAlignDistortionRows()).Concat | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Concat<System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
+| 110 | CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat(CreateStageGlassDataRows()).Concat(CreateVisionSpecRows()).Concat | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Concat<System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
+| 110 | CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat(CreateStageGlassDataRows()).Concat | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Concat<System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
 | 110 | CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Concat<System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
 | 110 | CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Concat<System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
 | 110 | CreateHandshakeRows().Concat | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Concat<System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
-| 110 | CreateHandshakeRows | resolved | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateHandshakeRows() · Drilling.File/JHMI/CMelsecMapFile.cs:428 |
-| 110 | CreateMotorStatusRows | resolved | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateMotorStatusRows() · Drilling.File/JHMI/CMelsecMapFile.cs:325 |
-| 110 | CreateLatestScenarioRows | resolved | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateLatestScenarioRows() · Drilling.File/JHMI/CMelsecMapFile.cs:913 |
-| 110 | CreateVisionSpecRows | resolved | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateVisionSpecRows() · Drilling.File/JHMI/CMelsecMapFile.cs:1638 |
-| 110 | CreateAlignDistortionRows | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateAlignDistortionRows() · Drilling.File/JHMI/CMelsecMapFile.cs:1648 |
+| 110 | CreateHandshakeRows | resolved | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateHandshakeRows() · Drilling.File/JHMI/CMelsecMapFile.cs:449 |
+| 110 | CreateMotorStatusRows | resolved | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateMotorStatusRows() · Drilling.File/JHMI/CMelsecMapFile.cs:346 |
+| 110 | CreateLatestScenarioRows | resolved | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateLatestScenarioRows() · Drilling.File/JHMI/CMelsecMapFile.cs:934 |
+| 110 | CreateStageGlassDataRows | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateStageGlassDataRows() · Drilling.File/JHMI/CMelsecMapFile.cs:322 |
+| 110 | CreateVisionSpecRows | resolved | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateVisionSpecRows() · Drilling.File/JHMI/CMelsecMapFile.cs:1659 |
+| 110 | CreateAlignDistortionRows | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateAlignDistortionRows() · Drilling.File/JHMI/CMelsecMapFile.cs:1669 |
 | 110 | CreateUnassignedLegacyRows | resolved | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateUnassignedLegacyRows() · Drilling.File/JHMI/CMelsecMapFile.cs:282 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -519,16 +522,18 @@ flowchart TD
 | 105 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) |
 | 105 | if | 조건에 따라 분기합니다: if (System.IO.File.Exists(path)) |
 | 107 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write(path, Headers, CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat(CreateVisionSpecRows()).Concat(CreateAlignDistortionRows()).Concat(CreateUnassignedLegacyRow… |
-| 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat(CreateVisionSpecRows()).Concat(CreateAlignDistortionRows()).Concat(CreateUnassignedLegacyRows()).ToArray() |
-| 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat(CreateVisionSpecRows()).Concat(CreateAlignDistortionRows()).Concat(CreateUnassignedLegacyRows()) |
-| 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat(CreateVisionSpecRows()).Concat(CreateAlignDistortionRows()) |
-| 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat(CreateVisionSpecRows()) |
+| 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write(path, Headers, CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat(CreateStageGlassDataRows()).Concat(CreateVisionSpecRows()).Concat(CreateAlignDistortionRows(… |
+| 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat(CreateStageGlassDataRows()).Concat(CreateVisionSpecRows()).Concat(CreateAlignDistortionRows()).Concat(CreateUnassignedLegacy… |
+| 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat(CreateStageGlassDataRows()).Concat(CreateVisionSpecRows()).Concat(CreateAlignDistortionRows()).Concat(CreateUnassignedLegacy… |
+| 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat(CreateStageGlassDataRows()).Concat(CreateVisionSpecRows()).Concat(CreateAlignDistortionRows()) |
+| 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat(CreateStageGlassDataRows()).Concat(CreateVisionSpecRows()) |
+| 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()).Concat(CreateStageGlassDataRows()) |
 | 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateHandshakeRows().Concat(CreateMotorStatusRows()).Concat(CreateLatestScenarioRows()) |
 | 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateHandshakeRows().Concat(CreateMotorStatusRows()) |
 | 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateHandshakeRows() |
 | 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateMotorStatusRows() |
 | 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateLatestScenarioRows() |
+| 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateStageGlassDataRows() |
 | 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateVisionSpecRows() |
 | 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateAlignDistortionRows() |
 | 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateUnassignedLegacyRows() |
@@ -546,7 +551,7 @@ flowchart TD
 
 ### MethodDeclaration `GetMapPath` · L113–116
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:113–116](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L113-L116)
+[Drilling.File/JHMI/CMelsecMapFile.cs:113–116](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L113-L116)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -559,9 +564,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L34-L34) | GetMapPath | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L60-L60) | GetMapPath | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L104-L104) | GetMapPath | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L34-L34) | GetMapPath | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L60-L60) | GetMapPath | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L104-L104) | GetMapPath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -580,7 +585,7 @@ flowchart TD
 
 ### MethodDeclaration `Validate` · L118–163
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:118–163](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L118-L163)
+[Drilling.File/JHMI/CMelsecMapFile.cs:118–163](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L118-L163)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -599,7 +604,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L61-L61) | Validate | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L61-L61) | Validate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -679,7 +684,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsUse` · L121–124
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:121–124](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L121-L124)
+[Drilling.File/JHMI/CMelsecMapFile.cs:121–124](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L121-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -706,7 +711,7 @@ flowchart TD
 
 ### MethodDeclaration `Row` · L165–199
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:165–199](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L165-L199)
+[Drilling.File/JHMI/CMelsecMapFile.cs:165–199](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L165-L199)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -738,110 +743,111 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L303-L303) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L304-L304) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L321-L321) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:326–340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L326-L340) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:341–355](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L341-L355) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L356-L356) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L357-L357) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L358-L358) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L359-L359) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:360–374](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L360-L374) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:375–389](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L375-L389) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:390–390](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L390-L390) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L391-L391) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:392–406](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L392-L406) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:407–421](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L407-L421) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:422–422](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L422-L422) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:429–443](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L429-L443) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:444–458](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L444-L458) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:459–473](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L459-L473) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:474–488](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L474-L488) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:489–503](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L489-L503) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:504–518](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L504-L518) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:519–533](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L519-L533) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:534–548](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L534-L548) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:549–563](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L549-L563) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:564–578](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L564-L578) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:579–593](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L579-L593) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:594–608](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L594-L608) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:609–623](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L609-L623) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:624–638](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L624-L638) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:639–653](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L639-L653) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:654–668](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L654-L668) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:669–683](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L669-L683) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:684–698](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L684-L698) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:699–713](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L699-L713) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:714–728](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L714-L728) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:729–743](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L729-L743) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:744–758](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L744-L758) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:759–773](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L759-L773) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:774–788](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L774-L788) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:789–803](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L789-L803) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:804–818](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L804-L818) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:819–833](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L819-L833) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:834–848](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L834-L848) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:849–863](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L849-L863) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:864–878](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L864-L878) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:879–893](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L879-L893) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:894–908](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L894-L908) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:914–929](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L914-L929) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:930–945](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L930-L945) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:946–961](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L946-L961) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:962–977](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L962-L977) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:978–993](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L978-L993) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:994–1009](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L994-L1009) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1010–1025](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1010-L1025) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1026–1041](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1026-L1041) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1042–1057](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1042-L1057) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1058–1073](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1058-L1073) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1074–1089](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1074-L1089) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1090–1105](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1090-L1105) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1106–1121](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1106-L1121) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1122–1137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1122-L1137) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1138–1153](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1138-L1153) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1154–1169](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1154-L1169) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1170–1185](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1170-L1185) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1186–1201](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1186-L1201) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1202–1217](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1202-L1217) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1219–1234](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1219-L1234) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1235–1250](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1235-L1250) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1251–1266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1251-L1266) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1267–1282](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1267-L1282) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1283–1298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1283-L1298) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1299–1314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1299-L1314) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1315–1330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1315-L1330) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1331–1346](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1331-L1346) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1347–1362](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1347-L1362) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1363–1378](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1363-L1378) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1379–1394](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1379-L1394) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1395–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1395-L1410) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1411–1426](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1411-L1426) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1427–1442](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1427-L1442) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1443–1458](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1443-L1458) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1459–1474](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1459-L1474) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1475–1490](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1475-L1490) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1491–1506](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1491-L1506) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1507–1522](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1507-L1522) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1523–1538](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1523-L1538) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1539–1554](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1539-L1554) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1555–1570](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1555-L1570) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1571–1586](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1571-L1586) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1587–1602](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1587-L1602) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1603–1618](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1603-L1618) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1619–1634](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1619-L1634) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1639–1639](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1639-L1639) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1640–1640](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1640-L1640) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1641–1641](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1641-L1641) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1642–1642](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1642-L1642) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1643–1643](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1643-L1643) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1644–1644](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1644-L1644) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1645–1645](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1645-L1645) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1651–1652](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1651-L1652) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1662–1662](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1662-L1662) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1665–1665](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1665-L1665) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1687–1689](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1687-L1689) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L303-L303) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L304-L304) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L321-L321) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:327–340](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L327-L340) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:347–361](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L347-L361) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:362–376](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L362-L376) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:377–377](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L377-L377) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L378-L378) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L379-L379) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:380–380](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L380-L380) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:381–395](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L381-L395) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:396–410](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L396-L410) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L411-L411) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:412–412](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L412-L412) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:413–427](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L413-L427) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:428–442](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L428-L442) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:443–443](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L443-L443) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:450–464](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L450-L464) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:465–479](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L465-L479) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:480–494](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L480-L494) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:495–509](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L495-L509) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:510–524](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L510-L524) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:525–539](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L525-L539) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:540–554](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L540-L554) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:555–569](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L555-L569) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:570–584](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L570-L584) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:585–599](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L585-L599) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:600–614](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L600-L614) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:615–629](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L615-L629) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:630–644](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L630-L644) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:645–659](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L645-L659) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:660–674](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L660-L674) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:675–689](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L675-L689) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:690–704](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L690-L704) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:705–719](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L705-L719) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:720–734](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L720-L734) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:735–749](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L735-L749) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:750–764](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L750-L764) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:765–779](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L765-L779) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:780–794](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L780-L794) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:795–809](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L795-L809) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:810–824](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L810-L824) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:825–839](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L825-L839) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:840–854](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L840-L854) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:855–869](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L855-L869) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:870–884](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L870-L884) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:885–899](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L885-L899) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:900–914](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L900-L914) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:915–929](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L915-L929) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:935–950](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L935-L950) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:951–966](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L951-L966) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:967–982](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L967-L982) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:983–998](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L983-L998) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:999–1014](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L999-L1014) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1015–1030](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1015-L1030) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1031–1046](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1031-L1046) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1047–1062](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1047-L1062) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1063–1078](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1063-L1078) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1079–1094](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1079-L1094) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1095–1110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1095-L1110) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1111–1126](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1111-L1126) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1127–1142](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1127-L1142) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1143–1158](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1143-L1158) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1159–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1159-L1174) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1175–1190](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1175-L1190) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1191–1206](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1191-L1206) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1207–1222](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1207-L1222) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1223–1238](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1223-L1238) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1240–1255](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1240-L1255) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1256–1271](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1256-L1271) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1272–1287](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1272-L1287) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1288–1303](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1288-L1303) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1304–1319](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1304-L1319) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1320–1335](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1320-L1335) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1336–1351](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1336-L1351) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1352–1367](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1352-L1367) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1368–1383](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1368-L1383) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1384–1399](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1384-L1399) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1400–1415](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1400-L1415) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1416–1431](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1416-L1431) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1432–1447](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1432-L1447) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1448–1463](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1448-L1463) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1464–1479](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1464-L1479) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1480–1495](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1480-L1495) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1496–1511](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1496-L1511) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1512–1527](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1512-L1527) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1528–1543](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1528-L1543) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1544–1559](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1544-L1559) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1560–1575](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1560-L1575) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1576–1591](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1576-L1591) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1592–1607](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1592-L1607) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1608–1623](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1608-L1623) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1624–1639](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1624-L1639) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1640–1655](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1640-L1655) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1660–1660](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1660-L1660) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1661–1661](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1661-L1661) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1662–1662](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1662-L1662) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1663–1663](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1663-L1663) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1664–1664](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1664-L1664) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1665–1665](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1665-L1665) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1666–1666](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1666-L1666) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1672–1673](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1672-L1673) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1683–1683](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1683-L1683) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1686–1686](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1686-L1686) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1708–1710](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1708-L1710) | Row | False |
 
 호출하는 대상과 해석 범위:
 
@@ -877,7 +883,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDataType` · L201–212
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:201–212](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L201-L212)
+[Drilling.File/JHMI/CMelsecMapFile.cs:201–212](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L201-L212)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -897,7 +903,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L91-L91) | ReadDataType | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L91-L91) | ReadDataType | False |
 
 호출하는 대상과 해석 범위:
 
@@ -929,7 +935,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDirection` · L214–222
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:214–222](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L214-L222)
+[Drilling.File/JHMI/CMelsecMapFile.cs:214–222](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L214-L222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -949,7 +955,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L92-L92) | ReadDirection | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L92-L92) | ReadDirection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -981,7 +987,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAccess` · L224–232
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:224–232](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L224-L232)
+[Drilling.File/JHMI/CMelsecMapFile.cs:224–232](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L224-L232)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1001,7 +1007,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L93-L93) | ReadAccess | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L93-L93) | ReadAccess | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1033,7 +1039,7 @@ flowchart TD
 
 ### MethodDeclaration `RequireText` · L234–237
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:234–237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L234-L237)
+[Drilling.File/JHMI/CMelsecMapFile.cs:234–237](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L234-L237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1054,14 +1060,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L70-L70) | RequireText | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L71-L71) | RequireText | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L85-L85) | RequireText | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L87-L87) | RequireText | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L90-L90) | RequireText | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L91-L91) | RequireText | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L92-L92) | RequireText | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L93-L93) | RequireText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L70-L70) | RequireText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L71-L71) | RequireText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L85-L85) | RequireText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L87-L87) | RequireText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L90-L90) | RequireText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L91-L91) | RequireText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L92-L92) | RequireText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L93-L93) | RequireText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1080,7 +1086,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadFirst` · L239–242
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:239–242](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L239-L242)
+[Drilling.File/JHMI/CMelsecMapFile.cs:239–242](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L239-L242)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1100,13 +1106,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L76-L76) | ReadFirst | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L86-L86) | ReadFirst | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L88-L88) | ReadFirst | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L89-L89) | ReadFirst | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L96-L96) | ReadFirst | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L97-L97) | ReadFirst | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L98-L98) | ReadFirst | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L76-L76) | ReadFirst | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L86-L86) | ReadFirst | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L88-L88) | ReadFirst | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L89-L89) | ReadFirst | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L96-L96) | ReadFirst | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L97-L97) | ReadFirst | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L98-L98) | ReadFirst | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1125,7 +1131,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadBool` · L244–247
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:244–247](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L244-L247)
+[Drilling.File/JHMI/CMelsecMapFile.cs:244–247](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L244-L247)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1145,7 +1151,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L86-L86) | ReadBool | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L86-L86) | ReadBool | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1164,7 +1170,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadInt` · L249–252
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:249–252](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L249-L252)
+[Drilling.File/JHMI/CMelsecMapFile.cs:249–252](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L249-L252)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1186,9 +1192,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L89-L89) | ReadInt | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L96-L96) | ReadInt | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L97-L97) | ReadInt | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L89-L89) | ReadInt | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L96-L96) | ReadInt | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L97-L97) | ReadInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1207,7 +1213,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDouble` · L254–257
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:254–257](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L254-L257)
+[Drilling.File/JHMI/CMelsecMapFile.cs:254–257](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L254-L257)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1229,9 +1235,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L70-L70) | ReadDouble | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L71-L71) | ReadDouble | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L76-L76) | ReadDouble | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L70-L70) | ReadDouble | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L71-L71) | ReadDouble | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L76-L76) | ReadDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1250,7 +1256,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeId` · L259–262
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:259–262](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L259-L262)
+[Drilling.File/JHMI/CMelsecMapFile.cs:259–262](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L259-L262)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1269,7 +1275,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L85-L85) | NormalizeId | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L85-L85) | NormalizeId | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1290,7 +1296,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeGroup` · L264–267
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:264–267](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L264-L267)
+[Drilling.File/JHMI/CMelsecMapFile.cs:264–267](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L264-L267)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1309,7 +1315,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L87-L87) | NormalizeGroup | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L87-L87) | NormalizeGroup | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1330,7 +1336,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeAddress` · L269–272
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:269–272](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L269-L272)
+[Drilling.File/JHMI/CMelsecMapFile.cs:269–272](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L269-L272)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1349,7 +1355,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L90-L90) | NormalizeAddress | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L90-L90) | NormalizeAddress | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1370,7 +1376,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeText` · L274–277
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:274–277](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L274-L277)
+[Drilling.File/JHMI/CMelsecMapFile.cs:274–277](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L274-L277)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1389,9 +1395,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L203-L203) | NormalizeText | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L216-L216) | NormalizeText | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L226-L226) | NormalizeText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L203-L203) | NormalizeText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L216-L216) | NormalizeText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L226-L226) | NormalizeText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1416,7 +1422,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateUnassignedLegacyRows` · L282–320
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:282–320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L282-L320)
+[Drilling.File/JHMI/CMelsecMapFile.cs:282–320](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L282-L320)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1429,7 +1435,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateUnassignedLegacyRows | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateUnassignedLegacyRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1519,7 +1525,7 @@ flowchart TD
 
 ### MethodDeclaration `Unassigned` · L321–321
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L321-L321)
+[Drilling.File/JHMI/CMelsecMapFile.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L321-L321)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1546,41 +1552,41 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L283-L283) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L284-L284) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:285–285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L285-L285) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L286-L286) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L287-L287) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L288-L288) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L289-L289) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L290-L290) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L291-L291) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L292-L292) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L293-L293) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L294-L294) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:295–295](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L295-L295) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:296–296](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L296-L296) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L297-L297) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L298-L298) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:299–299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L299-L299) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:300–300](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L300-L300) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L301-L301) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:302–302](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L302-L302) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L305-L305) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L306-L306) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L307-L307) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L308-L308) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:309–309](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L309-L309) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L310-L310) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:311–311](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L311-L311) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L312-L312) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L313-L313) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L314-L314) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L315-L315) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L316-L316) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L317-L317) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L318-L318) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L319-L319) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L283-L283) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L284-L284) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:285–285](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L285-L285) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L286-L286) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L287-L287) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L288-L288) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L289-L289) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L290-L290) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L291-L291) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L292-L292) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L293-L293) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L294-L294) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:295–295](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L295-L295) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:296–296](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L296-L296) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L297-L297) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L298-L298) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:299–299](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L299-L299) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:300–300](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L300-L300) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L301-L301) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:302–302](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L302-L302) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L305-L305) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L306-L306) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L307-L307) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L308-L308) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:309–309](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L309-L309) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L310-L310) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:311–311](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L311-L311) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L312-L312) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L313-L313) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L314-L314) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L315-L315) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L316-L316) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L317-L317) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L318-L318) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L319-L319) | Unassigned | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1596,9 +1602,56 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CreateMotorStatusRows` · L325–423
+### MethodDeclaration `CreateStageGlassDataRows` · L322–342
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:325–423](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L325-L423)
+[Drilling.File/JHMI/CMelsecMapFile.cs:322–342](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L322-L342)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateStageGlassDataRows() |
+| 접근/수식자 | Private / private, static |
+| 반환/값 타입 | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> |
+| 소속 타입 | NamedType:Drilling.File.JHMI.CMelsecMapFile |
+
+정적 호출자로 확인된 위치:
+
+| 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
+| --- | --- | --- |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateStageGlassDataRows | False |
+
+호출하는 대상과 해석 범위:
+
+| 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
+| --- | --- | --- | --- |
+| 327 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 338 | field.WordLength.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+
+본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
+
+| 원본 행 | 종류 | 주석 해설 |
+| --- | --- | --- |
+| 324 | foreach | 컬렉션 요소를 순회합니다: foreach (var field in CStageGlassDataMap.Fields) |
+| 326 | conditional-expression | 조건에 따라 결과식을 선택합니다: field.DataType == EN_MELSEC_DATA_TYPE.String ? "STRING" : "WORD" |
+| 326 | local-declaration | 지역 변수를 선언합니다: var dataType = field.DataType == EN_MELSEC_DATA_TYPE.String ? "STRING" : "WORD"; |
+| 326 | variable-initializer | 변수의 초기값을 지정합니다: dataType = field.DataType == EN_MELSEC_DATA_TYPE.String ? "STRING" : "WORD" |
+| 327 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( field.Id, "STAGE_GLASS_DATA", field.Name, 0, field.Address, dataType, "IN", "R", "1", "1", field.WordLength.ToString(CultureInfo.InvariantCulture), "1000", $"Spec 0.13 Config_Map Word Detail(물류) 5.4.14 EQ Stage Edit… |
+| 327 | yield | 열거값/종료를 전달합니다: yield return Row( field.Id, "STAGE_GLASS_DATA", field.Name, 0, field.Address, dataType, "IN", "R", "1", "1", field.WordLength.ToString(CultureInfo.InvariantCulture), "1000", $"Spec 0.13 Config_Map Word Detail(물류) 5.4.14 EQ Stage E |
+| 338 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: field.WordLength.ToString(CultureInfo.InvariantCulture) |
+
+제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
+
+```mermaid
+flowchart TD
+ M["CreateStageGlassDataRows"]
+ N0["L324 foreach"]
+ M -->|포함| N0
+```
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### MethodDeclaration `CreateMotorStatusRows` · L346–444
+
+[Drilling.File/JHMI/CMelsecMapFile.cs:346–444](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L346-L444)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1611,49 +1664,49 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateMotorStatusRows | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateMotorStatusRows | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 326 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 341 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 356 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 357 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 358 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 359 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 360 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 375 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 390 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 391 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 392 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 407 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 422 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 347 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 362 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 377 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 378 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 379 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 380 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 381 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 396 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 411 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 412 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 413 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 428 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 443 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 326 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "MOTOR_STAGE_Y_CUR_POS", "MOTOR", "Stage Y1 Current Position", 0, "WC182", "DOUBLE", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 물류 D349:G349 Stage_Y#1 Current Position; READ_SCALE=0.0001; WRITE_SCALE=1000… |
-| 341 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "MOTOR_STAGE_Y_CUR_SPEED", "MOTOR", "Stage Y1 Current Speed", 0, "WC188", "DOUBLE", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 물류 D352:G352 Stage_Y#1 Current Speed; READ_SCALE=0.0001; WRITE_SCALE=10000" ) |
-| 356 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("MOTOR_STAGE_Y_CUR_ACC", "MOTOR", "STAGE_Y Current ACC", 0, "UNASSIGNED", "DOUBLE", "IN", "R", "1", "1", "2", "0", "미사용: 현재 가속도 표시 제외; Spec 0.10 대응 신호 미확인", use: false) |
-| 357 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("MOTOR_STAGE_Y_BUSY", "MOTOR", "Stage Y1 Busy", 0, "WC180", "DWORD", "IN", "R", "1", "1", "2", "1000", "Spec 0.10 물류 D348:G348 Stage_Y#1 Busy; 0=OFF 1=ON") |
-| 358 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("MOTOR_STAGE_Y_SERVO_ALARM_CODE", "MOTOR", "Stage Y1 Servo Alarm Code", 0, "WC18E", "DWORD", "IN", "R", "1", "1", "2", "1000", "Spec 0.10 물류 D355:G355 Stage_Y#1 Servo Alarm Code; raw code") |
-| 359 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("MOTOR_STAGE_Y_SERVO_WARNING_CODE", "MOTOR", "Stage Y1 Servo Warning Code", 0, "WC190", "DWORD", "IN", "R", "1", "1", "2", "1000", "Spec 0.10 물류 D356:G356 Stage_Y#1 Servo Warning Code; raw code") |
-| 360 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "MOTOR_CAMERA_X_CUR_POS", "MOTOR", "Review X1 Current Position", 0, "WC212", "DOUBLE", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 물류 D421:G421 Review Axis Current Position; READ_SCALE=0.0001; WRITE_SCALE=… |
-| 375 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "MOTOR_CAMERA_X_CUR_SPEED", "MOTOR", "Review X1 Current Speed", 0, "WC218", "DOUBLE", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 물류 D424:G424 Review Axis Current Speed; READ_SCALE=0.0001; WRITE_SCALE=1000… |
-| 390 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("MOTOR_CAMERA_X_BUSY", "MOTOR", "Review X1 Busy", 0, "WC210", "DWORD", "IN", "R", "1", "1", "2", "1000", "Spec 0.10 물류 D420:G420 Review Axis Busy; raw 0=OFF nonzero=BUSY") |
-| 391 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("MOTOR_CAMERA_X_CUR_ACC", "MOTOR", "REVIEW_X Current ACC", 0, "UNASSIGNED", "DOUBLE", "IN", "R", "1", "1", "2", "0", "미사용: 현재 가속도 표시 제외; Spec 0.10 대응 신호 미확인", use: false) |
-| 392 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "MOTOR_WINDOW_Y_CUR_POS", "MOTOR", "Window Moving Y1 Current Position", 0, "W1B02", "DOUBLE", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 PLC Axis27 M302:N302 + 공통 Current Position offset 2; READ_SCALE=0.0… |
-| 407 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "MOTOR_WINDOW_Y_CUR_SPEED", "MOTOR", "Window Moving Y1 Current Speed", 0, "W1B08", "DOUBLE", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 PLC Axis27 M302:N302 + 공통 Current Speed offset 8; READ_SCALE=0.0001;… |
-| 422 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("MOTOR_WINDOW_Y_CUR_ACC", "MOTOR", "WINDOW_Y Current ACC", 0, "UNASSIGNED", "DOUBLE", "IN", "R", "1", "1", "2", "0", "미사용: 현재 가속도 표시 제외; Spec 0.10 대응 신호 미확인", use: false) |
+| 347 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "MOTOR_STAGE_Y_CUR_POS", "MOTOR", "Stage Y1 Current Position", 0, "WC182", "DOUBLE", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 물류 D349:G349 Stage_Y#1 Current Position; READ_SCALE=0.0001; WRITE_SCALE=1000… |
+| 362 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "MOTOR_STAGE_Y_CUR_SPEED", "MOTOR", "Stage Y1 Current Speed", 0, "WC188", "DOUBLE", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 물류 D352:G352 Stage_Y#1 Current Speed; READ_SCALE=0.0001; WRITE_SCALE=10000" ) |
+| 377 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("MOTOR_STAGE_Y_CUR_ACC", "MOTOR", "STAGE_Y Current ACC", 0, "UNASSIGNED", "DOUBLE", "IN", "R", "1", "1", "2", "0", "미사용: 현재 가속도 표시 제외; Spec 0.10 대응 신호 미확인", use: false) |
+| 378 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("MOTOR_STAGE_Y_BUSY", "MOTOR", "Stage Y1 Busy", 0, "WC180", "DWORD", "IN", "R", "1", "1", "2", "1000", "Spec 0.10 물류 D348:G348 Stage_Y#1 Busy; 0=OFF 1=ON") |
+| 379 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("MOTOR_STAGE_Y_SERVO_ALARM_CODE", "MOTOR", "Stage Y1 Servo Alarm Code", 0, "WC18E", "DWORD", "IN", "R", "1", "1", "2", "1000", "Spec 0.10 물류 D355:G355 Stage_Y#1 Servo Alarm Code; raw code") |
+| 380 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("MOTOR_STAGE_Y_SERVO_WARNING_CODE", "MOTOR", "Stage Y1 Servo Warning Code", 0, "WC190", "DWORD", "IN", "R", "1", "1", "2", "1000", "Spec 0.10 물류 D356:G356 Stage_Y#1 Servo Warning Code; raw code") |
+| 381 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "MOTOR_CAMERA_X_CUR_POS", "MOTOR", "Review X1 Current Position", 0, "WC212", "DOUBLE", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 물류 D421:G421 Review Axis Current Position; READ_SCALE=0.0001; WRITE_SCALE=… |
+| 396 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "MOTOR_CAMERA_X_CUR_SPEED", "MOTOR", "Review X1 Current Speed", 0, "WC218", "DOUBLE", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 물류 D424:G424 Review Axis Current Speed; READ_SCALE=0.0001; WRITE_SCALE=1000… |
+| 411 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("MOTOR_CAMERA_X_BUSY", "MOTOR", "Review X1 Busy", 0, "WC210", "DWORD", "IN", "R", "1", "1", "2", "1000", "Spec 0.10 물류 D420:G420 Review Axis Busy; raw 0=OFF nonzero=BUSY") |
+| 412 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("MOTOR_CAMERA_X_CUR_ACC", "MOTOR", "REVIEW_X Current ACC", 0, "UNASSIGNED", "DOUBLE", "IN", "R", "1", "1", "2", "0", "미사용: 현재 가속도 표시 제외; Spec 0.10 대응 신호 미확인", use: false) |
+| 413 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "MOTOR_WINDOW_Y_CUR_POS", "MOTOR", "Window Moving Y1 Current Position", 0, "W1B02", "DOUBLE", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 PLC Axis27 M302:N302 + 공통 Current Position offset 2; READ_SCALE=0.0… |
+| 428 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "MOTOR_WINDOW_Y_CUR_SPEED", "MOTOR", "Window Moving Y1 Current Speed", 0, "W1B08", "DOUBLE", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 PLC Axis27 M302:N302 + 공통 Current Speed offset 8; READ_SCALE=0.0001;… |
+| 443 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("MOTOR_WINDOW_Y_CUR_ACC", "MOTOR", "WINDOW_Y Current ACC", 0, "UNASSIGNED", "DOUBLE", "IN", "R", "1", "1", "2", "0", "미사용: 현재 가속도 표시 제외; Spec 0.10 대응 신호 미확인", use: false) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CreateHandshakeRows` · L428–909
+### MethodDeclaration `CreateHandshakeRows` · L449–930
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:428–909](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L428-L909)
+[Drilling.File/JHMI/CMelsecMapFile.cs:449–930](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L449-L930)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1666,87 +1719,87 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateHandshakeRows | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateHandshakeRows | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 429 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 444 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 459 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 474 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 489 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 504 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 519 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 534 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 549 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 564 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 579 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 594 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 609 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 624 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 639 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 654 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 669 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 684 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 699 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 714 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 729 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 744 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 759 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 774 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 789 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 804 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 819 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 834 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 849 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 864 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 879 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 894 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 450 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 465 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 480 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 495 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 510 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 525 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 540 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 555 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 570 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 585 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 600 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 615 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 630 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 645 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 660 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 675 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 690 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 705 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 720 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 735 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 750 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 765 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 780 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 795 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 810 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 825 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 840 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 855 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 870 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 885 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 900 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 915 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 429 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_DO_ALIGN", "IF_ALIGN", "Process DO ALIGN", 0, "W8111", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "100", "Spec 0.10 PROCESS_DO_ALIGN; Stage Align request; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ… |
-| 444 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "SDC_DO_ALIGN_STATUS", "IF_ALIGN", "Stage Align Available", 0, "WC300", "WORD", "IN", "R", "0.0001", "10000", "1", "100", "Spec 0.10 SDC_DO_Align_Status; raw 10000 x READ_SCALE 0.0001 = 1 means Available; all other … |
-| 459 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "SDC_DO_ALIGN_COMPLETE", "IF_ALIGN", "Stage Align Complete", 0, "WC302", "WORD", "IN", "R", "0.0001", "10000", "1", "100", "Spec 0.10 SDC_DO_Align_Complete; raw 10000 x READ_SCALE 0.0001 = 1 means Complete; all othe… |
-| 474 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_DOREADY_ABLE", "IF_DOREADY", "Stg DoReady ABLE", 0, "WC102", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_DoReady_Able; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE" ) |
-| 489 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_DOREADY_START", "IF_DOREADY", "Stg DoReady START", 0, "WC104", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_DoReady_Start; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE"… |
-| 504 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_DOREADY_COMPLETE", "IF_DOREADY", "Stg DoReady COMPLETE", 0, "WC106", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_DoReady_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 after RE… |
-| 519 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_DOREADY_ABLE", "IF_DOREADY", "Prc DoReady ABLE", 0, "W8200", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_READY_ABLE; Int32 raw 0=OFF 10000=ON; logical 0/1 after R… |
-| 534 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_DOREADY_START", "IF_DOREADY", "Prc DoReady START", 0, "W8202", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_READY_START; Int32 raw 0=OFF 10000=ON; logical 0/1 afte… |
-| 549 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_DOREADY_COMPLETE", "IF_DOREADY", "Prc DoReady COMPLETE", 0, "W8204", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_READY_COMPLETE; Int32 raw 0=OFF 10000=ON; logical… |
-| 564 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_PROCESS_ABLE", "IF_PROCESS", "Stg Process ABLE", 0, "WC10A", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_Process_Able; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE" ) |
-| 579 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_PROCESS_START", "IF_PROCESS", "Stg Process START", 0, "WC10C", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_Process_Start; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE"… |
-| 594 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_PROCESS_COMPLETE", "IF_PROCESS", "Stg Process COMPLETE", 0, "WC10E", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_Process_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 after RE… |
-| 609 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_PROCESS_ABLE", "IF_PROCESS", "Prc Process ABLE", 0, "W8208", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_PROCESS_ABLE; Int32 raw 0=OFF 10000=ON; logical 0/1 after… |
-| 624 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_PROCESS_START", "IF_PROCESS", "Prc Process START", 0, "W820A", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_PROCESS_START; Int32 raw 0=OFF 10000=ON; logical 0/1 af… |
-| 639 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_PROCESS_COMPLETE", "IF_PROCESS", "Prc Process COMPLETE", 0, "W820C", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_PROCESS_COMPLETE; Int32 raw 0=OFF 10000=ON; logic… |
-| 654 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_REVIEW_ABLE", "IF_REVIEW", "Stg Review ABLE", 0, "WC112", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_Review_Able; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE" ) |
-| 669 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_REVIEW_START", "IF_REVIEW", "Stg Review START", 0, "WC114", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_Review_Start; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE" ) |
-| 684 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_REVIEW_COMPLETE", "IF_REVIEW", "Stg Review COMPLETE", 0, "WC116", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_Review_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_S… |
-| 699 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_REVIEW_ABLE", "IF_REVIEW", "Prc Review ABLE", 0, "W8210", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_REVIEW_ABLE; Int32 raw 0=OFF 10000=ON; logical 0/1 after REA… |
-| 714 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_REVIEW_START", "IF_REVIEW", "Prc Review START", 0, "W8212", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_REVIEW_START; Int32 raw 0=OFF 10000=ON; logical 0/1 after … |
-| 729 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_REVIEW_COMPLETE", "IF_REVIEW", "Prc Review COMPLETE", 0, "W8214", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_REVIEW_COMPLETE; Int32 raw 0=OFF 10000=ON; logical 0… |
-| 744 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_REVIEW_ABLE_SDC", "IF_PROCESS_MOVE", "Stg_ReviewAbleSDC", 0, "WC124", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_ReviewAbleSDC; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ… |
-| 759 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_REVIEW_COMPLETE_SDC", "IF_PROCESS_MOVE", "Stg_ReviewCompleteSDC", 0, "WC128", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_ReviewCompleteSDC; Int32 raw 0=OFF 10000=ON; logical 0/… |
-| 774 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_REVIEW_GENERAL_RUNNING", "IF_PROCESS_MOVE", "Prc_ReviewGeneralRunning", 0, "W8021", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_REVIEW_GENERAL_RUNNING; Int32 raw 0=OFF 100… |
-| 789 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_REVIEW_MOVE_START", "IF_PROCESS_MOVE", "Prc_Review_Move_Start", 0, "W8029", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_REVIEW_MOVE_START; Int32 raw 0=OFF 10000=ON; logica… |
-| 804 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_IOF_COMPLETE", "IF_IOF", "Stg_IOF_Complete", 0, "WC13C", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_IOF_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE" ) |
-| 819 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_IOF_START_REQUEST", "IF_IOF", "Prc_IOF_StartRequest", 0, "W8238", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 IOF_START_REQUEST; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_S… |
-| 834 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_IOF_COMPLETE_RESPONSE", "IF_IOF", "Prc_IOF_CompleteReponse", 0, "W823A", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 IOF_COMPLETE_RESPONSE; Int32 raw 0=OFF 10000=ON; logical 0/1 a… |
-| 849 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_TOP_POWERMETER_ABLE", "IF_TOP_POWERMETER", "Stg TPM ABLE", 0, "WC118", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_TPM_Able; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCA… |
-| 864 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_TOP_POWERMETER_COMPLETE", "IF_TOP_POWERMETER", "Stg TPM COMPLETE", 0, "WC11A", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_TPM_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 af… |
-| 879 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_TOP_POWERMETER_ABLE", "IF_TOP_POWERMETER", "Prc TPM ABLE", 0, "W804A", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_TPD_ABLE; Int32 raw 0=OFF 10000=ON; logical 0/1… |
-| 894 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_TOP_POWERMETER_COMPLETE", "IF_TOP_POWERMETER", "Prc TPM COMPLETE", 0, "W804C", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_TPD_COMPLETE; Int32 raw 0=OFF 10000=ON;… |
+| 450 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_DO_ALIGN", "IF_ALIGN", "Process DO ALIGN", 0, "W8111", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "100", "Spec 0.10 PROCESS_DO_ALIGN; Stage Align request; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ… |
+| 465 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "SDC_DO_ALIGN_STATUS", "IF_ALIGN", "Stage Align Available", 0, "WC300", "WORD", "IN", "R", "0.0001", "10000", "1", "100", "Spec 0.10 SDC_DO_Align_Status; raw 10000 x READ_SCALE 0.0001 = 1 means Available; all other … |
+| 480 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "SDC_DO_ALIGN_COMPLETE", "IF_ALIGN", "Stage Align Complete", 0, "WC302", "WORD", "IN", "R", "0.0001", "10000", "1", "100", "Spec 0.10 SDC_DO_Align_Complete; raw 10000 x READ_SCALE 0.0001 = 1 means Complete; all othe… |
+| 495 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_DOREADY_ABLE", "IF_DOREADY", "Stg DoReady ABLE", 0, "WC102", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_DoReady_Able; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE" ) |
+| 510 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_DOREADY_START", "IF_DOREADY", "Stg DoReady START", 0, "WC104", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_DoReady_Start; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE"… |
+| 525 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_DOREADY_COMPLETE", "IF_DOREADY", "Stg DoReady COMPLETE", 0, "WC106", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_DoReady_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 after RE… |
+| 540 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_DOREADY_ABLE", "IF_DOREADY", "Prc DoReady ABLE", 0, "W8200", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_READY_ABLE; Int32 raw 0=OFF 10000=ON; logical 0/1 after R… |
+| 555 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_DOREADY_START", "IF_DOREADY", "Prc DoReady START", 0, "W8202", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_READY_START; Int32 raw 0=OFF 10000=ON; logical 0/1 afte… |
+| 570 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_DOREADY_COMPLETE", "IF_DOREADY", "Prc DoReady COMPLETE", 0, "W8204", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_READY_COMPLETE; Int32 raw 0=OFF 10000=ON; logical… |
+| 585 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_PROCESS_ABLE", "IF_PROCESS", "Stg Process ABLE", 0, "WC10A", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_Process_Able; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE" ) |
+| 600 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_PROCESS_START", "IF_PROCESS", "Stg Process START", 0, "WC10C", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_Process_Start; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE"… |
+| 615 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_PROCESS_COMPLETE", "IF_PROCESS", "Stg Process COMPLETE", 0, "WC10E", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_Process_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 after RE… |
+| 630 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_PROCESS_ABLE", "IF_PROCESS", "Prc Process ABLE", 0, "W8208", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_PROCESS_ABLE; Int32 raw 0=OFF 10000=ON; logical 0/1 after… |
+| 645 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_PROCESS_START", "IF_PROCESS", "Prc Process START", 0, "W820A", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_PROCESS_START; Int32 raw 0=OFF 10000=ON; logical 0/1 af… |
+| 660 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_PROCESS_COMPLETE", "IF_PROCESS", "Prc Process COMPLETE", 0, "W820C", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_PROCESS_COMPLETE; Int32 raw 0=OFF 10000=ON; logic… |
+| 675 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_REVIEW_ABLE", "IF_REVIEW", "Stg Review ABLE", 0, "WC112", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_Review_Able; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE" ) |
+| 690 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_REVIEW_START", "IF_REVIEW", "Stg Review START", 0, "WC114", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_Review_Start; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE" ) |
+| 705 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_REVIEW_COMPLETE", "IF_REVIEW", "Stg Review COMPLETE", 0, "WC116", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_Review_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_S… |
+| 720 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_REVIEW_ABLE", "IF_REVIEW", "Prc Review ABLE", 0, "W8210", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_REVIEW_ABLE; Int32 raw 0=OFF 10000=ON; logical 0/1 after REA… |
+| 735 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_REVIEW_START", "IF_REVIEW", "Prc Review START", 0, "W8212", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_REVIEW_START; Int32 raw 0=OFF 10000=ON; logical 0/1 after … |
+| 750 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_REVIEW_COMPLETE", "IF_REVIEW", "Prc Review COMPLETE", 0, "W8214", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_REVIEW_COMPLETE; Int32 raw 0=OFF 10000=ON; logical 0… |
+| 765 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_REVIEW_ABLE_SDC", "IF_PROCESS_MOVE", "Stg_ReviewAbleSDC", 0, "WC124", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_ReviewAbleSDC; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ… |
+| 780 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_REVIEW_COMPLETE_SDC", "IF_PROCESS_MOVE", "Stg_ReviewCompleteSDC", 0, "WC128", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_ReviewCompleteSDC; Int32 raw 0=OFF 10000=ON; logical 0/… |
+| 795 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_REVIEW_GENERAL_RUNNING", "IF_PROCESS_MOVE", "Prc_ReviewGeneralRunning", 0, "W8021", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_REVIEW_GENERAL_RUNNING; Int32 raw 0=OFF 100… |
+| 810 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_REVIEW_MOVE_START", "IF_PROCESS_MOVE", "Prc_Review_Move_Start", 0, "W8029", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_REVIEW_MOVE_START; Int32 raw 0=OFF 10000=ON; logica… |
+| 825 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_IOF_COMPLETE", "IF_IOF", "Stg_IOF_Complete", 0, "WC13C", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_IOF_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCALE" ) |
+| 840 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_IOF_START_REQUEST", "IF_IOF", "Prc_IOF_StartRequest", 0, "W8238", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 IOF_START_REQUEST; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_S… |
+| 855 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_IOF_COMPLETE_RESPONSE", "IF_IOF", "Prc_IOF_CompleteReponse", 0, "W823A", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 IOF_COMPLETE_RESPONSE; Int32 raw 0=OFF 10000=ON; logical 0/1 a… |
+| 870 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_TOP_POWERMETER_ABLE", "IF_TOP_POWERMETER", "Stg TPM ABLE", 0, "WC118", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_TPM_Able; Int32 raw 0=OFF 10000=ON; logical 0/1 after READ_SCA… |
+| 885 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_STG_TOP_POWERMETER_COMPLETE", "IF_TOP_POWERMETER", "Stg TPM COMPLETE", 0, "WC11A", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 IPS_TPM_Complete; Int32 raw 0=OFF 10000=ON; logical 0/1 af… |
+| 900 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_TOP_POWERMETER_ABLE", "IF_TOP_POWERMETER", "Prc TPM ABLE", 0, "W804A", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_TPD_ABLE; Int32 raw 0=OFF 10000=ON; logical 0/1… |
+| 915 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "HANDSHAKE_PRC_TOP_POWERMETER_COMPLETE", "IF_TOP_POWERMETER", "Prc TPM COMPLETE", 0, "W804C", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 PROCESS_SEQUENCE_TPD_COMPLETE; Int32 raw 0=OFF 10000=ON;… |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CreateLatestScenarioRows` · L913–1635
+### MethodDeclaration `CreateLatestScenarioRows` · L934–1656
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:913–1635](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L913-L1635)
+[Drilling.File/JHMI/CMelsecMapFile.cs:934–1656](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L934-L1656)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1759,115 +1812,115 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateLatestScenarioRows | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateLatestScenarioRows | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 914 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 930 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 946 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 962 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 978 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 994 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1010 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1026 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1042 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1058 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1074 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1090 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1106 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1122 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1138 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1154 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1170 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1186 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1202 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1218 | CreateIofPositionRows | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateIofPositionRows() · Drilling.File/JHMI/CMelsecMapFile.cs:1684 |
-| 1219 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1235 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1251 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1267 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1283 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1299 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1315 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1331 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1347 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1363 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1379 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1395 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1411 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1427 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1443 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1459 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1475 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1491 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1507 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1523 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1539 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1555 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1571 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1587 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1603 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1619 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 935 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 951 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 967 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 983 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 999 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1015 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1031 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1047 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1063 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1079 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1095 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1111 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1127 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1143 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1159 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1175 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1191 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1207 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1223 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1239 | CreateIofPositionRows | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateIofPositionRows() · Drilling.File/JHMI/CMelsecMapFile.cs:1705 |
+| 1240 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1256 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1272 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1288 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1304 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1320 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1336 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1352 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1368 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1384 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1400 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1416 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1432 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1448 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1464 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1480 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1496 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1512 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1528 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1544 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1560 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1576 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1592 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1608 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1624 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1640 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 914 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_LASER_ON", "IF_PROCESS_DATA", "Process Actual Laser Emission", 0, "W8005", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(가공) D175:G175 PROCESS_LASER_ON; 주소 정의만 등록; 시퀀스… |
-| 930 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_REVIEW_COMMAND_POSITION_X", "IF_PROCESS_MOVE", "Review COMMAND POSITION X", 0, "W8011", "DOUBLE", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D181:G181 PROCESS_REVIEW_… |
-| 946 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_REVIEW_COMMAND_POSITION_Y", "IF_PROCESS_MOVE", "Review COMMAND POSITION Y", 0, "W8013", "DOUBLE", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D182:G182 PROCESS_REVIEW_… |
-| 962 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_REVIEW_COMMAND_SPEED_X", "IF_PROCESS_MOVE", "Review COMMAND SPEED X", 0, "W8015", "DOUBLE", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D183:G183 PROCESS_REVIEW_COMMAN… |
-| 978 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_REVIEW_COMMAND_SPEED_Y", "IF_PROCESS_MOVE", "Review COMMAND SPEED Y", 0, "W8017", "DOUBLE", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D184:G184 PROCESS_REVIEW_COMMAN… |
-| 994 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_REVIEW_CONTROL_MODE", "IF_PROCESS_MOVE", "Review CONTROL MODE", 0, "W801B", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D186:G186 PROCESS_REVIEW_CONTROL_MODE;… |
-| 1010 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_REVIEW_STOP_SIGNAL", "IF_PROCESS_MOVE", "Review STOP SIGNAL", 0, "W802F", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D196:G196 PROCESS_REVIEW_STOP_SIGNAL; 공통… |
-| 1026 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_STAGE_SPEED", "IF_PROCESS_DATA", "Process Stage Speed", 0, "W8032", "DOUBLE", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 가공 D198:I198 PROCESS_STAGE_SPEED; Recipe STAGE_SPEED mm/sec; DoReady 준비/… |
-| 1042 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_PROCESS_COMPLETE", "IF_PROCESS_DATA", "Actual Machining Complete", 0, "W8034", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 가공 D199:I199 PROCESS_PROCESS_COMPLETE; 실제 전체 Task/큐 정상 완료시 1 게… |
-| 1058 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_ZERO_DEFENCE_OPT", "IF_ZERO_DEFENCE", "Stage Zero Defence Option", 0, "WC11C", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.10 물류 D292:I292 IPS_ZeroDefenceOpt; Stage 0선방어 사용 여부; READ_SCALE 적용 논리값 0/… |
-| 1074 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_REVIEW_MODE", "IF_ZERO_DEFENCE", "Stage Review Mode", 0, "WC11E", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.10 물류 D293:I293 IPS_Review_Mode; raw 0=1줄 / 10000=3줄; READ_SCALE 적용 후 0=1줄 / 1=3줄; Main… |
-| 1090 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_REVIEW_CONTROL_MODE_Y", "IF_PROCESS_MOVE", "Stage Review Control Mode Y", 0, "WC120", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 물류 D294:I294 IPS_ReviewControlModeY; 해당 축의 Process 구동 허가; SDC… |
-| 1106 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_REVIEW_CONTROL_MODE_X", "IF_PROCESS_MOVE", "Stage Review Control Mode X", 0, "WC122", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 물류 D295:I295 IPS_ReviewControlModeX; 해당 축의 Process 구동 허가; SDC… |
-| 1122 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_REVIEW_POSITION_X_MOVING_SDC", "IF_PROCESS_MOVE_DATA", "Stage Review X Moving SDC", 0, "WC12C", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(물류) D300:G300 IPS_ReviewPositio… |
-| 1138 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_REVIEW_POSITION_Y_MOVING_SDC", "IF_PROCESS_MOVE_DATA", "Stage Review Y Moving SDC", 0, "WC12E", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(물류) D301:G301 IPS_ReviewPositio… |
-| 1154 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "SDC_REVIEW_RETRY_REQUEST", "IF_ZERO_DEFENCE", "Zero Defence Follow-up Review Request", 0, "W8218", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 W8218; 0선 NG & 후속 옵션 ON이면 logical 1/raw10000; Proc… |
-| 1170 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IOF_SETTING", "IF_IOF", "IOF Setting", 0, "W8230", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D454:G454 IOF_SETTING; 공통 Process Move/IOF 시퀀스에 연결; 논리값 0=일반 X; 1=0선 Y;… |
-| 1186 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IOF_TRIGGER_POINT_COUNT", "IF_IOF", "General IOF Point Count", 0, "W8234", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D456:G456 IOF_TRIGGER_POINT_COUNT; 일반 IOF Revie… |
-| 1202 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IOF_TRIGGER_ZERO_POINT_COUNT", "IF_IOF", "Zero Defence IOF Point Count", 0, "W8236", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D457:G457 IOF_TRIGGER_ZERO_POINT_COUN… |
-| 1218 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateIofPositionRows() |
-| 1219 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_IOF_READ_COMPLETE", "IF_IOF", "Stage IOF Read Complete", 0, "WC138", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(물류) D306:G306 IPS_IOF_ReadComplete; 공통 Process Move/IOF… |
-| 1235 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_IOF_BUFFER_RUN_COMPLETE", "IF_IOF", "Stage IOF Buffer Run Complete", 0, "WC13A", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(물류) D307:G307 IPS_IOF_BufferRunComplete; 공통… |
-| 1251 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_SEQUENCE_TPD_PTW_EXCHANGE_FLAG", "IF_PTW", "Protect Window Exchange Request", 0, "W804E", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D212:G212 PR0CESS_SEQUEN… |
-| 1267 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_SEQUENCE_TPD_PTW_MEASURE_FLAG", "IF_PTW", "Protect Window TPM Remeasure Request", 0, "W8050", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(가공) D213:G213 PROCESS_SEQUE… |
-| 1283 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_SEQUENCE_PTW_PROCESS_COUNT", "IF_PTW", "Protect Window Process Count", 0, "W8052", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D214:G214 PROCESS_SEQUENCE_PTW_… |
-| 1299 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_SEQUENCE_PTW_COMPLETE_FLAG", "IF_PTW", "Protect Window Process Complete Flag", 0, "W8054", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(가공) D215:I215; 문서상 미사용; USE=0 … |
-| 1315 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_PTW_CHANGED", "IF_PTW", "Stage Protect Window Auto Manual Mode", 0, "WC12A", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.10 물류 D299:I299 IPS_PTW_Changed; PTW 동작 모드 raw 0=Auto / 10000=Manual; 물리 교체완… |
-| 1331 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_CASSETTE_MOVE_BUSY", "IF_PTW", "Stage Cassette Move Busy", 0, "WC140", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(물류) D310:G310 IPS_CassetteMoveBusy; 주소 정의만 등록; 시퀀스 연결 전 … |
-| 1347 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_PTW_EXCHANGE_BUSY", "IF_PTW", "Stage Protect Window Exchange Busy", 0, "WC142", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(물류) D311:G311 IPS_PTWExchangeBusy; 주소 정의만 등록; 시… |
-| 1363 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_PTW_MAPPING_BUSY", "IF_PTW", "Stage Protect Window Mapping Busy", 0, "WC144", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(물류) D312:G312 IPS_PTWMappingBusy; 주소 정의만 등록; 시퀀스 … |
-| 1379 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PTW_MOVING_FLAG", "IF_PTW", "Stage Protect Window Moving Flag", 0, "WC2A0", "WORD", "IN", "R", "0.0001", "10000", "1", "0", "Spec 0.10 Config_Map Word Detail(물류) D488:G488 PTW_MOVING_FLAG; 주소 정의만 등록; 시퀀스 연결 전 USE=0… |
-| 1395 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PTW_TRAY_COUNT", "IF_PTW", "Stage Protect Window Tray Count", 0, "WC2B0", "WORD", "IN", "R", "1", "1", "1", "1000", "Spec 0.10 Config_Map Word Detail(물류) D504:G504 PTW_TRAY_COUNT; Stage Tray Count; 1 Word 원시 Count;… |
-| 1411 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PTW_EXCHANGE_SEQ_COMPLETE", "IF_PTW", "Stage Protect Window Section Complete", 0, "WF150", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.08 legacy; Spec 0.10에서는 해당 주소가 Spare; 대체 완료 주소 미확정으로 기존 경로 유지; … |
-| 1427 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PTW_EXCHANGE_COMPLETE", "IF_PTW", "Stage Protect Window Exchange Result", 0, "WF152", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.08 legacy; Spec 0.10에서는 해당 주소가 Spare; 대체 완료 주소 미확정으로 기존 경로 유지; Stage 확인… |
-| 1443 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PTW_EXCHANGE_FLATNESS_COMPLETE", "IF_PTW", "Stage Protect Window Flatness Complete", 0, "WF154", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.08 legacy; Spec 0.10에서는 해당 주소가 Spare; 대체 완료 주소 미확정으로 기존 경로 유… |
-| 1459 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "EQ_STAGE_HOME_FLAG", "IF_STAGE_STATE", "Stage Home Flag", 0, "WC012", "WORD", "IN", "R", "1", "1", "1", "0", "Spec 0.10 Config_Map Word Detail(물류) D26:G26 EQ_Stage_HomeFlag; 주소 정의만 등록; 시퀀스 연결 전 USE=0; 명시된 raw 1=ON;… |
-| 1475 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "STAGE_DRYRUN_USE", "IF_STAGE_STATE", "Stage Dry Run Use", 0, "WC288", "WORD", "IN", "R", "1", "1", "1", "0", "Spec 0.10 Config_Map Word Detail(물류) D464:G464 STAGE_DRYRUN_USE; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Word 상태; 값 e… |
-| 1491 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "SDC_DRYRUN_USE", "IF_STAGE_STATE", "SDC Dry Run Use", 0, "WC289", "WORD", "IN", "R", "1", "1", "1", "0", "Spec 0.10 Config_Map Word Detail(물류) D465:G465 SDC_DRYRUN_USE; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Word 상태; 값 enum/배율… |
-| 1507 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "MOTOR_STAGE_Y_ENCODER_POS", "MOTOR", "Stage Y1 Encoder Position", 0, "WC236", "DOUBLE", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(물류) D439:G439 StageY1_EncoderPosition; 주소 정의만 등록; 시퀀… |
-| 1523 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_LDPRO_ALARM", "IF_PROCESS_DATA", "Process Alarm Status", 0, "W8003", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(가공) D174:I174 PROCESS_LDPRO_ALARM; ; raw 0/10000; lo… |
-| 1539 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_LDPRO_ALIVE", "IF_PROCESS_DATA", "Process Alive", 0, "W8007", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(가공) D176:I176 PROCESS_LDPRO_ALIVE; 1초마다 On Off 점멸; raw 0/10… |
-| 1555 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_LDPRO_AUTO", "IF_PROCESS_DATA", "Process Auto Mode", 0, "W8009", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(가공) D177:I177 PROCESS_LDPRO_AUTO; Auto / Manual 전환 여부; r… |
-| 1571 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_LDPRO_MANUAL", "IF_PROCESS_DATA", "Process Manual Mode", 0, "W800B", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(가공) D178:I178 PROCESS_LDPRO_MANUAL; ; raw 0/10000; l… |
-| 1587 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_ICR_FLAG", "IF_PROCESS_DATA", "Process APC ICR Glass", 0, "W8036", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(가공) D200:I200 PROCESS_ICR_FLAG; Glass Data정보에 ICR Flag… |
-| 1603 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_SEQUENCE_TPM_LASER_ON", "IF_PROCESS_DATA", "TPM Actual Laser Emission", 0, "W8042", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(가공) D206:I206 PROCESS_SEQUENCE_TPM_LA… |
-| 1619 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "STAGE_MCC_BUSY_FLAGS", "IF_ALIGN", "MCC Busy Word (bit1 Align)", 0, "WFAB3", "WORD", "IN", "R", "1", "1", "1", "100", "FAB3 ALIGN_BUSY 원시 Word; bit 1 (mask 2)=MCC_ALIGN_BUSY; AUTO 및 ReviewAble ON일 때 첫 Review X 선이동 … |
+| 935 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_LASER_ON", "IF_PROCESS_DATA", "Process Actual Laser Emission", 0, "W8005", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(가공) D175:G175 PROCESS_LASER_ON; 주소 정의만 등록; 시퀀스… |
+| 951 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_REVIEW_COMMAND_POSITION_X", "IF_PROCESS_MOVE", "Review COMMAND POSITION X", 0, "W8011", "DOUBLE", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D181:G181 PROCESS_REVIEW_… |
+| 967 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_REVIEW_COMMAND_POSITION_Y", "IF_PROCESS_MOVE", "Review COMMAND POSITION Y", 0, "W8013", "DOUBLE", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D182:G182 PROCESS_REVIEW_… |
+| 983 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_REVIEW_COMMAND_SPEED_X", "IF_PROCESS_MOVE", "Review COMMAND SPEED X", 0, "W8015", "DOUBLE", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D183:G183 PROCESS_REVIEW_COMMAN… |
+| 999 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_REVIEW_COMMAND_SPEED_Y", "IF_PROCESS_MOVE", "Review COMMAND SPEED Y", 0, "W8017", "DOUBLE", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D184:G184 PROCESS_REVIEW_COMMAN… |
+| 1015 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_REVIEW_CONTROL_MODE", "IF_PROCESS_MOVE", "Review CONTROL MODE", 0, "W801B", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D186:G186 PROCESS_REVIEW_CONTROL_MODE;… |
+| 1031 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_REVIEW_STOP_SIGNAL", "IF_PROCESS_MOVE", "Review STOP SIGNAL", 0, "W802F", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D196:G196 PROCESS_REVIEW_STOP_SIGNAL; 공통… |
+| 1047 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_STAGE_SPEED", "IF_PROCESS_DATA", "Process Stage Speed", 0, "W8032", "DOUBLE", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 가공 D198:I198 PROCESS_STAGE_SPEED; Recipe STAGE_SPEED mm/sec; DoReady 준비/… |
+| 1063 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_PROCESS_COMPLETE", "IF_PROCESS_DATA", "Actual Machining Complete", 0, "W8034", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 가공 D199:I199 PROCESS_PROCESS_COMPLETE; 실제 전체 Task/큐 정상 완료시 1 게… |
+| 1079 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_ZERO_DEFENCE_OPT", "IF_ZERO_DEFENCE", "Stage Zero Defence Option", 0, "WC11C", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.10 물류 D292:I292 IPS_ZeroDefenceOpt; Stage 0선방어 사용 여부; READ_SCALE 적용 논리값 0/… |
+| 1095 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_REVIEW_MODE", "IF_ZERO_DEFENCE", "Stage Review Mode", 0, "WC11E", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.10 물류 D293:I293 IPS_Review_Mode; raw 0=1줄 / 10000=3줄; READ_SCALE 적용 후 0=1줄 / 1=3줄; Main… |
+| 1111 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_REVIEW_CONTROL_MODE_Y", "IF_PROCESS_MOVE", "Stage Review Control Mode Y", 0, "WC120", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 물류 D294:I294 IPS_ReviewControlModeY; 해당 축의 Process 구동 허가; SDC… |
+| 1127 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_REVIEW_CONTROL_MODE_X", "IF_PROCESS_MOVE", "Stage Review Control Mode X", 0, "WC122", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 물류 D295:I295 IPS_ReviewControlModeX; 해당 축의 Process 구동 허가; SDC… |
+| 1143 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_REVIEW_POSITION_X_MOVING_SDC", "IF_PROCESS_MOVE_DATA", "Stage Review X Moving SDC", 0, "WC12C", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(물류) D300:G300 IPS_ReviewPositio… |
+| 1159 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_REVIEW_POSITION_Y_MOVING_SDC", "IF_PROCESS_MOVE_DATA", "Stage Review Y Moving SDC", 0, "WC12E", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(물류) D301:G301 IPS_ReviewPositio… |
+| 1175 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "SDC_REVIEW_RETRY_REQUEST", "IF_ZERO_DEFENCE", "Zero Defence Follow-up Review Request", 0, "W8218", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 W8218; 0선 NG & 후속 옵션 ON이면 logical 1/raw10000; Proc… |
+| 1191 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IOF_SETTING", "IF_IOF", "IOF Setting", 0, "W8230", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D454:G454 IOF_SETTING; 공통 Process Move/IOF 시퀀스에 연결; 논리값 0=일반 X; 1=0선 Y;… |
+| 1207 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IOF_TRIGGER_POINT_COUNT", "IF_IOF", "General IOF Point Count", 0, "W8234", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D456:G456 IOF_TRIGGER_POINT_COUNT; 일반 IOF Revie… |
+| 1223 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IOF_TRIGGER_ZERO_POINT_COUNT", "IF_IOF", "Zero Defence IOF Point Count", 0, "W8236", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D457:G457 IOF_TRIGGER_ZERO_POINT_COUN… |
+| 1239 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateIofPositionRows() |
+| 1240 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_IOF_READ_COMPLETE", "IF_IOF", "Stage IOF Read Complete", 0, "WC138", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(물류) D306:G306 IPS_IOF_ReadComplete; 공통 Process Move/IOF… |
+| 1256 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_IOF_BUFFER_RUN_COMPLETE", "IF_IOF", "Stage IOF Buffer Run Complete", 0, "WC13A", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(물류) D307:G307 IPS_IOF_BufferRunComplete; 공통… |
+| 1272 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_SEQUENCE_TPD_PTW_EXCHANGE_FLAG", "IF_PTW", "Protect Window Exchange Request", 0, "W804E", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D212:G212 PR0CESS_SEQUEN… |
+| 1288 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_SEQUENCE_TPD_PTW_MEASURE_FLAG", "IF_PTW", "Protect Window TPM Remeasure Request", 0, "W8050", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(가공) D213:G213 PROCESS_SEQUE… |
+| 1304 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_SEQUENCE_PTW_PROCESS_COUNT", "IF_PTW", "Protect Window Process Count", 0, "W8052", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "1000", "Spec 0.10 Config_Map Word Detail(가공) D214:G214 PROCESS_SEQUENCE_PTW_… |
+| 1320 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_SEQUENCE_PTW_COMPLETE_FLAG", "IF_PTW", "Protect Window Process Complete Flag", 0, "W8054", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(가공) D215:I215; 문서상 미사용; USE=0 … |
+| 1336 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_PTW_CHANGED", "IF_PTW", "Stage Protect Window Auto Manual Mode", 0, "WC12A", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.10 물류 D299:I299 IPS_PTW_Changed; PTW 동작 모드 raw 0=Auto / 10000=Manual; 물리 교체완… |
+| 1352 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_CASSETTE_MOVE_BUSY", "IF_PTW", "Stage Cassette Move Busy", 0, "WC140", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(물류) D310:G310 IPS_CassetteMoveBusy; 주소 정의만 등록; 시퀀스 연결 전 … |
+| 1368 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_PTW_EXCHANGE_BUSY", "IF_PTW", "Stage Protect Window Exchange Busy", 0, "WC142", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(물류) D311:G311 IPS_PTWExchangeBusy; 주소 정의만 등록; 시… |
+| 1384 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "IPS_PTW_MAPPING_BUSY", "IF_PTW", "Stage Protect Window Mapping Busy", 0, "WC144", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(물류) D312:G312 IPS_PTWMappingBusy; 주소 정의만 등록; 시퀀스 … |
+| 1400 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PTW_MOVING_FLAG", "IF_PTW", "Stage Protect Window Moving Flag", 0, "WC2A0", "WORD", "IN", "R", "0.0001", "10000", "1", "0", "Spec 0.10 Config_Map Word Detail(물류) D488:G488 PTW_MOVING_FLAG; 주소 정의만 등록; 시퀀스 연결 전 USE=0… |
+| 1416 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PTW_TRAY_COUNT", "IF_PTW", "Stage Protect Window Tray Count", 0, "WC2B0", "WORD", "IN", "R", "1", "1", "1", "1000", "Spec 0.10 Config_Map Word Detail(물류) D504:G504 PTW_TRAY_COUNT; Stage Tray Count; 1 Word 원시 Count;… |
+| 1432 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PTW_EXCHANGE_SEQ_COMPLETE", "IF_PTW", "Stage Protect Window Section Complete", 0, "WF150", "DWORD", "IN", "R", "0.0001", "10000", "2", "1000", "Spec 0.08 legacy; Spec 0.10에서는 해당 주소가 Spare; 대체 완료 주소 미확정으로 기존 경로 유지; … |
+| 1448 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PTW_EXCHANGE_COMPLETE", "IF_PTW", "Stage Protect Window Exchange Result", 0, "WF152", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.08 legacy; Spec 0.10에서는 해당 주소가 Spare; 대체 완료 주소 미확정으로 기존 경로 유지; Stage 확인… |
+| 1464 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PTW_EXCHANGE_FLATNESS_COMPLETE", "IF_PTW", "Stage Protect Window Flatness Complete", 0, "WF154", "DWORD", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.08 legacy; Spec 0.10에서는 해당 주소가 Spare; 대체 완료 주소 미확정으로 기존 경로 유… |
+| 1480 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "EQ_STAGE_HOME_FLAG", "IF_STAGE_STATE", "Stage Home Flag", 0, "WC012", "WORD", "IN", "R", "1", "1", "1", "0", "Spec 0.10 Config_Map Word Detail(물류) D26:G26 EQ_Stage_HomeFlag; 주소 정의만 등록; 시퀀스 연결 전 USE=0; 명시된 raw 1=ON;… |
+| 1496 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "STAGE_DRYRUN_USE", "IF_STAGE_STATE", "Stage Dry Run Use", 0, "WC288", "WORD", "IN", "R", "1", "1", "1", "0", "Spec 0.10 Config_Map Word Detail(물류) D464:G464 STAGE_DRYRUN_USE; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Word 상태; 값 e… |
+| 1512 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "SDC_DRYRUN_USE", "IF_STAGE_STATE", "SDC Dry Run Use", 0, "WC289", "WORD", "IN", "R", "1", "1", "1", "0", "Spec 0.10 Config_Map Word Detail(물류) D465:G465 SDC_DRYRUN_USE; 주소 정의만 등록; 시퀀스 연결 전 USE=0; Word 상태; 값 enum/배율… |
+| 1528 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "MOTOR_STAGE_Y_ENCODER_POS", "MOTOR", "Stage Y1 Encoder Position", 0, "WC236", "DOUBLE", "IN", "R", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(물류) D439:G439 StageY1_EncoderPosition; 주소 정의만 등록; 시퀀… |
+| 1544 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_LDPRO_ALARM", "IF_PROCESS_DATA", "Process Alarm Status", 0, "W8003", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(가공) D174:I174 PROCESS_LDPRO_ALARM; ; raw 0/10000; lo… |
+| 1560 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_LDPRO_ALIVE", "IF_PROCESS_DATA", "Process Alive", 0, "W8007", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(가공) D176:I176 PROCESS_LDPRO_ALIVE; 1초마다 On Off 점멸; raw 0/10… |
+| 1576 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_LDPRO_AUTO", "IF_PROCESS_DATA", "Process Auto Mode", 0, "W8009", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(가공) D177:I177 PROCESS_LDPRO_AUTO; Auto / Manual 전환 여부; r… |
+| 1592 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_LDPRO_MANUAL", "IF_PROCESS_DATA", "Process Manual Mode", 0, "W800B", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(가공) D178:I178 PROCESS_LDPRO_MANUAL; ; raw 0/10000; l… |
+| 1608 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_ICR_FLAG", "IF_PROCESS_DATA", "Process APC ICR Glass", 0, "W8036", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(가공) D200:I200 PROCESS_ICR_FLAG; Glass Data정보에 ICR Flag… |
+| 1624 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "PROCESS_SEQUENCE_TPM_LASER_ON", "IF_PROCESS_DATA", "TPM Actual Laser Emission", 0, "W8042", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "0", "Spec 0.10 Config_Map Word Detail(가공) D206:I206 PROCESS_SEQUENCE_TPM_LA… |
+| 1640 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row( "STAGE_MCC_BUSY_FLAGS", "IF_ALIGN", "MCC Busy Word (bit1 Align)", 0, "WFAB3", "WORD", "IN", "R", "1", "1", "1", "100", "FAB3 ALIGN_BUSY 원시 Word; bit 1 (mask 2)=MCC_ALIGN_BUSY; AUTO 및 ReviewAble ON일 때 첫 Review X 선이동 … |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CreateVisionSpecRows` · L1638–1646
+### MethodDeclaration `CreateVisionSpecRows` · L1659–1667
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:1638–1646](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1638-L1646)
+[Drilling.File/JHMI/CMelsecMapFile.cs:1659–1667](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1659-L1667)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1880,37 +1933,37 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateVisionSpecRows | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateVisionSpecRows | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1639 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1640 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1641 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1642 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1643 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1644 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1645 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1660 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1661 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1662 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1663 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1664 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1665 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1666 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1639 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("DISTORTION_INSP_BUSY", "VISION_DISTORTION", "DISTORTION_INSP_BUSY", 0, "W10098", "WORD", "IN", "R", "1", "1", "1", "0", "Spec 0.10 비전 D71:G71; 1 Word 원시 상태; 자동 연결 전 USE=0", use: false) |
-| 1640 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("DISTORTION_INSP_RESULT_OK", "VISION_DISTORTION", "DISTORTION_INSP_RESULT_OK", 0, "W10099", "WORD", "IN", "R", "1", "1", "1", "0", "Spec 0.10 비전 D72:G72; 1 Word 원시 상태; 자동 연결 전 USE=0", use: false) |
-| 1641 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("DISTORTION_INSP_RESULT_NG", "VISION_DISTORTION", "DISTORTION_INSP_RESULT_NG", 0, "W1009A", "WORD", "IN", "R", "1", "1", "1", "0", "Spec 0.10 비전 D73:G73; 1 Word 원시 상태; 자동 연결 전 USE=0", use: false) |
-| 1642 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("STAGE_DISTORTION_INSP_REQ", "VISION_DISTORTION", "DISTORTION_INSP_REQ", 0, "WC0CB", "WORD", "IN", "R", "1", "1", "1", "0", "Spec 0.10 물류 D219:H219; On 1 , Off 0; 1 Word 원시값; 자동 연결 전 USE=0", use: false) |
-| 1643 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("STAGE_DISTORTION_INSP_STEP", "VISION_DISTORTION", "DISTORTION_INSP_STEP", 0, "WC0CC", "WORD", "IN", "R", "1", "1", "1", "0", "Spec 0.10 물류 D220:H220; 1, 2, 3 , 4 position; 1 Word 원시값; 자동 연결 전 USE=0", use: false) |
-| 1644 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("STAGE_DISTORTION_INSP_DIR", "VISION_DISTORTION", "DISTORTION_INSP_DIR", 0, "WC0CD", "WORD", "IN", "R", "1", "1", "1", "0", "Spec 0.10 물류 D221:H221; Moveprocess 1 , review 2; 1 Word 원시값; 자동 연결 전 USE=0", use: false) |
-| 1645 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("IOF_POS_ARRAY_X_1", "IF_IOF_DATA", "IOF X Array (Unused)", 0, "W8900", "DOUBLE", "OUT", "RW", "0.0001", "10000", "1000", "0", "Spec 0.10 가공 D1326:G1825; W8900~W8CE7; 좌표 500개/1000 Word; 문서에서 사용안함으로 명시; USE=0 유지; 일반 X… |
+| 1660 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("DISTORTION_INSP_BUSY", "VISION_DISTORTION", "DISTORTION_INSP_BUSY", 0, "W10098", "WORD", "IN", "R", "1", "1", "1", "0", "Spec 0.10 비전 D71:G71; 1 Word 원시 상태; 자동 연결 전 USE=0", use: false) |
+| 1661 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("DISTORTION_INSP_RESULT_OK", "VISION_DISTORTION", "DISTORTION_INSP_RESULT_OK", 0, "W10099", "WORD", "IN", "R", "1", "1", "1", "0", "Spec 0.10 비전 D72:G72; 1 Word 원시 상태; 자동 연결 전 USE=0", use: false) |
+| 1662 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("DISTORTION_INSP_RESULT_NG", "VISION_DISTORTION", "DISTORTION_INSP_RESULT_NG", 0, "W1009A", "WORD", "IN", "R", "1", "1", "1", "0", "Spec 0.10 비전 D73:G73; 1 Word 원시 상태; 자동 연결 전 USE=0", use: false) |
+| 1663 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("STAGE_DISTORTION_INSP_REQ", "VISION_DISTORTION", "DISTORTION_INSP_REQ", 0, "WC0CB", "WORD", "IN", "R", "1", "1", "1", "0", "Spec 0.10 물류 D219:H219; On 1 , Off 0; 1 Word 원시값; 자동 연결 전 USE=0", use: false) |
+| 1664 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("STAGE_DISTORTION_INSP_STEP", "VISION_DISTORTION", "DISTORTION_INSP_STEP", 0, "WC0CC", "WORD", "IN", "R", "1", "1", "1", "0", "Spec 0.10 물류 D220:H220; 1, 2, 3 , 4 position; 1 Word 원시값; 자동 연결 전 USE=0", use: false) |
+| 1665 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("STAGE_DISTORTION_INSP_DIR", "VISION_DISTORTION", "DISTORTION_INSP_DIR", 0, "WC0CD", "WORD", "IN", "R", "1", "1", "1", "0", "Spec 0.10 물류 D221:H221; Moveprocess 1 , review 2; 1 Word 원시값; 자동 연결 전 USE=0", use: false) |
+| 1666 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("IOF_POS_ARRAY_X_1", "IF_IOF_DATA", "IOF X Array (Unused)", 0, "W8900", "DOUBLE", "OUT", "RW", "0.0001", "10000", "1000", "0", "Spec 0.10 가공 D1326:G1825; W8900~W8CE7; 좌표 500개/1000 Word; 문서에서 사용안함으로 명시; USE=0 유지; 일반 X… |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CreateAlignDistortionRows` · L1648–1682
+### MethodDeclaration `CreateAlignDistortionRows` · L1669–1703
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:1648–1682](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1648-L1682)
+[Drilling.File/JHMI/CMelsecMapFile.cs:1669–1703](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1669-L1703)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1923,98 +1976,98 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateAlignDistortionRows | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateAlignDistortionRows | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1653 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1650 |
-| 1656 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1650 |
-| 1657 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1650 |
-| 1662 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1665 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1672 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1650 |
-| 1678 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1650 |
-| 1679 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1650 |
-| 1680 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1650 |
+| 1674 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1671 |
+| 1677 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1671 |
+| 1678 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1671 |
+| 1683 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1686 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1693 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1671 |
+| 1699 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1671 |
+| 1700 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1671 |
+| 1701 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1671 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1653 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value("PROCESS_DISTORTION_COUNT", 0x80C0, "DISTORTION", description: "DK Group 수 0~3; AK 제외") |
-| 1653 | yield | 열거값/종료를 전달합니다: yield return Value("PROCESS_DISTORTION_COUNT", 0x80C0, "DISTORTION", description: "DK Group 수 0~3; AK 제외"); |
-| 1654 | variable-initializer | 변수의 초기값을 지정합니다: group = 0 |
-| 1654 | for | 초기화·조건·증감이 있는 반복입니다: for (var group = 0; group < 3; group++) |
-| 1656 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"PROCESS_DISTORTION_INDEX_{group}", 0x80C2 + group * 2, "DISTORTION", description: "Group 사용 logical 0/1") |
-| 1656 | yield | 열거값/종료를 전달합니다: yield return Value($"PROCESS_DISTORTION_INDEX_{group}", 0x80C2 + group * 2, "DISTORTION", description: "Group 사용 logical 0/1"); |
-| 1657 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"PROCESS_DISTORTION_INDEX_{group}_POSITION", 0x80C8 + group * 2, "DISTORTION", description: "Setting Motor ALIGN Stage Y (mm)") |
-| 1657 | yield | 열거값/종료를 전달합니다: yield return Value($"PROCESS_DISTORTION_INDEX_{group}_POSITION", 0x80C8 + group * 2, "DISTORTION", description: "Setting Motor ALIGN Stage Y (mm)"); |
-| 1659 | foreach | 컬렉션 요소를 순회합니다: foreach (var signal in new[] { "ABLE", "COMPLETE" }) |
-| 1661 | local-declaration | 지역 변수를 선언합니다: var id = "HANDSHAKE_PRC_DISTORTION_" + signal; |
-| 1661 | variable-initializer | 변수의 초기값을 지정합니다: id = "HANDSHAKE_PRC_DISTORTION_" + signal |
-| 1662 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row(id, "DISTORTION", id, 0, signal == "ABLE" ? "W8056" : "W8058", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "100", "Spec 0.12; Stage ABLE/COMPLETE OFF 확인 후 우리 신호 OFF") |
-| 1662 | conditional-expression | 조건에 따라 결과식을 선택합니다: signal == "ABLE" ? "W8056" : "W8058" |
-| 1662 | yield | 열거값/종료를 전달합니다: yield return Row(id, "DISTORTION", id, 0, signal == "ABLE" ? "W8056" : "W8058", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "100", "Spec 0.12; Stage ABLE/COMPLETE OFF 확인 후 우리 신호 OFF"); |
-| 1663 | assignment | 값을 대상에 대입합니다: id = "HANDSHAKE_STG_DISTORTION_" + signal |
-| 1664 | conditional-expression | 조건에 따라 결과식을 선택합니다: signal == "ABLE" ? "WC0DB" : "WC0DD" |
-| 1664 | local-declaration | 지역 변수를 선언합니다: var address = signal == "ABLE" ? "WC0DB" : "WC0DD"; |
-| 1664 | variable-initializer | 변수의 초기값을 지정합니다: address = signal == "ABLE" ? "WC0DB" : "WC0DD" |
-| 1665 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row(id, "DISTORTION", id, 0, address, "DWORD", "IN", "R", "0.0001", "10000", "2", "100", $"Spec 0.13; IPS_DISTORTION_{signal}; Int32 raw 0/10000; logical 0/1") |
-| 1665 | yield | 열거값/종료를 전달합니다: yield return Row(id, "DISTORTION", id, 0, address, "DWORD", "IN", "R", "0.0001", "10000", "2", "100", $"Spec 0.13; IPS_DISTORTION_{signal}; Int32 raw 0/10000; logical 0/1"); |
-| 1667 | variable-initializer | 변수의 초기값을 지정합니다: position = 0 |
-| 1667 | for | 초기화·조건·증감이 있는 반복입니다: for (var position = 0; position <= 3; position++) |
-| 1668 | conditional-expression | 조건에 따라 결과식을 선택합니다: position == 0 ? new[] { 1, 2, 3, 4 } : new[] { 2, 4 } |
-| 1668 | foreach | 컬렉션 요소를 순회합니다: foreach (var camera in position == 0 ? new[] { 1, 2, 3, 4 } : new[] { 2, 4 }) |
-| 1669 | foreach | 컬렉션 요소를 순회합니다: foreach (var axis in new[] { "X", "Y" }) |
-| 1671 | conditional-expression | 조건에 따라 결과식을 선택합니다: position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0) |
-| 1671 | conditional-expression | 조건에 따라 결과식을 선택합니다: camera == 4 ? 4 : 0 |
-| 1671 | local-declaration | 지역 변수를 선언합니다: var address = position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0); |
-| 1671 | variable-initializer | 변수의 초기값을 지정합니다: address = position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0) |
-| 1672 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"DISTORTION_POS{position}_CAM{camera}{axis}", address + (axis == "Y" ? 2 : 0), "VISION_DISTORTION_DATA", "IN", "AK / DK LastLoad (mm); POS는 Group 고정; 추가 변환 없음") |
-| 1672 | conditional-expression | 조건에 따라 결과식을 선택합니다: axis == "Y" ? 2 : 0 |
-| 1672 | yield | 열거값/종료를 전달합니다: yield return Value($"DISTORTION_POS{position}_CAM{camera}{axis}", address + (axis == "Y" ? 2 : 0), "VISION_DISTORTION_DATA", "IN", "AK / DK LastLoad (mm); POS는 Group 고정; 추가 변환 없음"); |
-| 1674 | foreach | 컬렉션 요소를 순회합니다: foreach (var axis in new[] { "X", "Y" }) |
-| 1675 | variable-initializer | 변수의 초기값을 지정합니다: camera = 1 |
-| 1675 | for | 초기화·조건·증감이 있는 반복입니다: for (var camera = 1; camera <= 4; camera++) |
-| 1677 | conditional-expression | 조건에 따라 결과식을 선택합니다: axis == "X" ? 0 : 4 |
-| 1677 | local-declaration | 지역 변수를 선언합니다: var index = (axis == "X" ? 0 : 4) + camera - 1; |
-| 1677 | variable-initializer | 변수의 초기값을 지정합니다: index = (axis == "X" ? 0 : 4) + camera - 1 |
-| 1678 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"SVID_FINEALN_CAM{camera}_GLS_RESULT_{axis}", 0x11A30 + (camera - 1) * 12 + (axis == "Y" ? 2 : 0), "WAPAGE", "IN", "Vision 원본; 단위 변환 없이 Wapage로 복사") |
-| 1678 | conditional-expression | 조건에 따라 결과식을 선택합니다: axis == "Y" ? 2 : 0 |
-| 1678 | yield | 열거값/종료를 전달합니다: yield return Value($"SVID_FINEALN_CAM{camera}_GLS_RESULT_{axis}", 0x11A30 + (camera - 1) * 12 + (axis == "Y" ? 2 : 0), "WAPAGE", "IN", "Vision 원본; 단위 변환 없이 Wapage로 복사"); |
-| 1679 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"PROCESS_WAPAGE_ALIGNBASE_{axis}{camera}", 0x8080 + index * 2, "WAPAGE", description: "CAM1~4 X 다음 CAM1~4 Y 순서") |
-| 1679 | yield | 열거값/종료를 전달합니다: yield return Value($"PROCESS_WAPAGE_ALIGNBASE_{axis}{camera}", 0x8080 + index * 2, "WAPAGE", description: "CAM1~4 X 다음 CAM1~4 Y 순서"); |
-| 1680 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"PROCESS_WAPAGE_ALIGNBASE_RAGNE_{axis}{camera}", 0x80A0 + index * 2, "WAPAGE", description: "허용범위 mm / Align Camera Resolution = pixel") |
-| 1680 | yield | 열거값/종료를 전달합니다: yield return Value($"PROCESS_WAPAGE_ALIGNBASE_RAGNE_{axis}{camera}", 0x80A0 + index * 2, "WAPAGE", description: "허용범위 mm / Align Camera Resolution = pixel"); |
+| 1674 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value("PROCESS_DISTORTION_COUNT", 0x80C0, "DISTORTION", description: "DK Group 수 0~3; AK 제외") |
+| 1674 | yield | 열거값/종료를 전달합니다: yield return Value("PROCESS_DISTORTION_COUNT", 0x80C0, "DISTORTION", description: "DK Group 수 0~3; AK 제외"); |
+| 1675 | variable-initializer | 변수의 초기값을 지정합니다: group = 0 |
+| 1675 | for | 초기화·조건·증감이 있는 반복입니다: for (var group = 0; group < 3; group++) |
+| 1677 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"PROCESS_DISTORTION_INDEX_{group}", 0x80C2 + group * 2, "DISTORTION", description: "Group 사용 logical 0/1") |
+| 1677 | yield | 열거값/종료를 전달합니다: yield return Value($"PROCESS_DISTORTION_INDEX_{group}", 0x80C2 + group * 2, "DISTORTION", description: "Group 사용 logical 0/1"); |
+| 1678 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"PROCESS_DISTORTION_INDEX_{group}_POSITION", 0x80C8 + group * 2, "DISTORTION", description: "Setting Motor ALIGN Stage Y (mm)") |
+| 1678 | yield | 열거값/종료를 전달합니다: yield return Value($"PROCESS_DISTORTION_INDEX_{group}_POSITION", 0x80C8 + group * 2, "DISTORTION", description: "Setting Motor ALIGN Stage Y (mm)"); |
+| 1680 | foreach | 컬렉션 요소를 순회합니다: foreach (var signal in new[] { "ABLE", "COMPLETE" }) |
+| 1682 | local-declaration | 지역 변수를 선언합니다: var id = "HANDSHAKE_PRC_DISTORTION_" + signal; |
+| 1682 | variable-initializer | 변수의 초기값을 지정합니다: id = "HANDSHAKE_PRC_DISTORTION_" + signal |
+| 1683 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row(id, "DISTORTION", id, 0, signal == "ABLE" ? "W8056" : "W8058", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "100", "Spec 0.12; Stage ABLE/COMPLETE OFF 확인 후 우리 신호 OFF") |
+| 1683 | conditional-expression | 조건에 따라 결과식을 선택합니다: signal == "ABLE" ? "W8056" : "W8058" |
+| 1683 | yield | 열거값/종료를 전달합니다: yield return Row(id, "DISTORTION", id, 0, signal == "ABLE" ? "W8056" : "W8058", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "100", "Spec 0.12; Stage ABLE/COMPLETE OFF 확인 후 우리 신호 OFF"); |
+| 1684 | assignment | 값을 대상에 대입합니다: id = "HANDSHAKE_STG_DISTORTION_" + signal |
+| 1685 | conditional-expression | 조건에 따라 결과식을 선택합니다: signal == "ABLE" ? "WC0DB" : "WC0DD" |
+| 1685 | local-declaration | 지역 변수를 선언합니다: var address = signal == "ABLE" ? "WC0DB" : "WC0DD"; |
+| 1685 | variable-initializer | 변수의 초기값을 지정합니다: address = signal == "ABLE" ? "WC0DB" : "WC0DD" |
+| 1686 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row(id, "DISTORTION", id, 0, address, "DWORD", "IN", "R", "0.0001", "10000", "2", "100", $"Spec 0.13; IPS_DISTORTION_{signal}; Int32 raw 0/10000; logical 0/1") |
+| 1686 | yield | 열거값/종료를 전달합니다: yield return Row(id, "DISTORTION", id, 0, address, "DWORD", "IN", "R", "0.0001", "10000", "2", "100", $"Spec 0.13; IPS_DISTORTION_{signal}; Int32 raw 0/10000; logical 0/1"); |
+| 1688 | variable-initializer | 변수의 초기값을 지정합니다: position = 0 |
+| 1688 | for | 초기화·조건·증감이 있는 반복입니다: for (var position = 0; position <= 3; position++) |
+| 1689 | conditional-expression | 조건에 따라 결과식을 선택합니다: position == 0 ? new[] { 1, 2, 3, 4 } : new[] { 2, 4 } |
+| 1689 | foreach | 컬렉션 요소를 순회합니다: foreach (var camera in position == 0 ? new[] { 1, 2, 3, 4 } : new[] { 2, 4 }) |
+| 1690 | foreach | 컬렉션 요소를 순회합니다: foreach (var axis in new[] { "X", "Y" }) |
+| 1692 | conditional-expression | 조건에 따라 결과식을 선택합니다: position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0) |
+| 1692 | conditional-expression | 조건에 따라 결과식을 선택합니다: camera == 4 ? 4 : 0 |
+| 1692 | local-declaration | 지역 변수를 선언합니다: var address = position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0); |
+| 1692 | variable-initializer | 변수의 초기값을 지정합니다: address = position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0) |
+| 1693 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"DISTORTION_POS{position}_CAM{camera}{axis}", address + (axis == "Y" ? 2 : 0), "VISION_DISTORTION_DATA", "IN", "AK / DK LastLoad (mm); POS는 Group 고정; 추가 변환 없음") |
+| 1693 | conditional-expression | 조건에 따라 결과식을 선택합니다: axis == "Y" ? 2 : 0 |
+| 1693 | yield | 열거값/종료를 전달합니다: yield return Value($"DISTORTION_POS{position}_CAM{camera}{axis}", address + (axis == "Y" ? 2 : 0), "VISION_DISTORTION_DATA", "IN", "AK / DK LastLoad (mm); POS는 Group 고정; 추가 변환 없음"); |
+| 1695 | foreach | 컬렉션 요소를 순회합니다: foreach (var axis in new[] { "X", "Y" }) |
+| 1696 | variable-initializer | 변수의 초기값을 지정합니다: camera = 1 |
+| 1696 | for | 초기화·조건·증감이 있는 반복입니다: for (var camera = 1; camera <= 4; camera++) |
+| 1698 | conditional-expression | 조건에 따라 결과식을 선택합니다: axis == "X" ? 0 : 4 |
+| 1698 | local-declaration | 지역 변수를 선언합니다: var index = (axis == "X" ? 0 : 4) + camera - 1; |
+| 1698 | variable-initializer | 변수의 초기값을 지정합니다: index = (axis == "X" ? 0 : 4) + camera - 1 |
+| 1699 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"SVID_FINEALN_CAM{camera}_GLS_RESULT_{axis}", 0x11A30 + (camera - 1) * 12 + (axis == "Y" ? 2 : 0), "WAPAGE", "IN", "Vision 원본; 단위 변환 없이 Wapage로 복사") |
+| 1699 | conditional-expression | 조건에 따라 결과식을 선택합니다: axis == "Y" ? 2 : 0 |
+| 1699 | yield | 열거값/종료를 전달합니다: yield return Value($"SVID_FINEALN_CAM{camera}_GLS_RESULT_{axis}", 0x11A30 + (camera - 1) * 12 + (axis == "Y" ? 2 : 0), "WAPAGE", "IN", "Vision 원본; 단위 변환 없이 Wapage로 복사"); |
+| 1700 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"PROCESS_WAPAGE_ALIGNBASE_{axis}{camera}", 0x8080 + index * 2, "WAPAGE", description: "CAM1~4 X 다음 CAM1~4 Y 순서") |
+| 1700 | yield | 열거값/종료를 전달합니다: yield return Value($"PROCESS_WAPAGE_ALIGNBASE_{axis}{camera}", 0x8080 + index * 2, "WAPAGE", description: "CAM1~4 X 다음 CAM1~4 Y 순서"); |
+| 1701 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"PROCESS_WAPAGE_ALIGNBASE_RAGNE_{axis}{camera}", 0x80A0 + index * 2, "WAPAGE", description: "허용범위 mm / Align Camera Resolution = pixel") |
+| 1701 | yield | 열거값/종료를 전달합니다: yield return Value($"PROCESS_WAPAGE_ALIGNBASE_RAGNE_{axis}{camera}", 0x80A0 + index * 2, "WAPAGE", description: "허용범위 mm / Align Camera Resolution = pixel"); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["CreateAlignDistortionRows"]
- N0["L1654 for"]
+ N0["L1675 for"]
  M -->|포함| N0
- N1["L1659 foreach"]
+ N1["L1680 foreach"]
  M -->|포함| N1
- N2["L1667 for"]
+ N2["L1688 for"]
  M -->|포함| N2
- N3["L1668 foreach"]
+ N3["L1689 foreach"]
  N2 -->|포함| N3
- N4["L1669 foreach"]
+ N4["L1690 foreach"]
  N3 -->|포함| N4
- N5["L1674 foreach"]
+ N5["L1695 foreach"]
  M -->|포함| N5
- N6["L1675 for"]
+ N6["L1696 for"]
  N5 -->|포함| N6
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `Value` · L1650–1652
+### LocalFunctionStatement `Value` · L1671–1673
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:1650–1652](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1650-L1652)
+[Drilling.File/JHMI/CMelsecMapFile.cs:1671–1673](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1671-L1673)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2037,34 +2090,34 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1653–1653](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1653-L1653) | Value | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1656–1656](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1656-L1656) | Value | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1657–1657](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1657-L1657) | Value | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1672–1672](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1672-L1672) | Value | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1678–1678](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1678-L1678) | Value | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1679–1679](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1679-L1679) | Value | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1680–1680](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1680-L1680) | Value | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1674–1674](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1674-L1674) | Value | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1677–1677](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1677-L1677) | Value | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1678–1678](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1678-L1678) | Value | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1693–1693](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1693-L1693) | Value | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1699–1699](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1699-L1699) | Value | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1700–1700](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1700-L1700) | Value | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1701–1701](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1701-L1701) | Value | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1651 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1651 | address.ToString | resolved | string int.ToString(string?, System.IFormatProvider?) |
+| 1672 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1672 | address.ToString | resolved | string int.ToString(string?, System.IFormatProvider?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1651 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: address.ToString("X", CultureInfo.InvariantCulture) |
-| 1651 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row(id, group, id, 0, "W" + address.ToString("X", CultureInfo.InvariantCulture), "DOUBLE", direction, direction == "OUT" ? "RW" : "R", "0.0001", "10000", "2", "0", "Spec 0.12; " + description + "; 일회 읽기/쓰기; 자동 폴링 없음") |
-| 1652 | conditional-expression | 조건에 따라 결과식을 선택합니다: direction == "OUT" ? "RW" : "R" |
+| 1672 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: address.ToString("X", CultureInfo.InvariantCulture) |
+| 1672 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row(id, group, id, 0, "W" + address.ToString("X", CultureInfo.InvariantCulture), "DOUBLE", direction, direction == "OUT" ? "RW" : "R", "0.0001", "10000", "2", "0", "Spec 0.12; " + description + "; 일회 읽기/쓰기; 자동 폴링 없음") |
+| 1673 | conditional-expression | 조건에 따라 결과식을 선택합니다: direction == "OUT" ? "RW" : "R" |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CreateIofPositionRows` · L1684–1690
+### MethodDeclaration `CreateIofPositionRows` · L1705–1711
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:1684–1690](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1684-L1690)
+[Drilling.File/JHMI/CMelsecMapFile.cs:1705–1711](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1705-L1711)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2077,35 +2130,35 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1218–1218](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1218-L1218) | CreateIofPositionRows | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1239–1239](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1239-L1239) | CreateIofPositionRows | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1687 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1687 | index.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 1687 | index.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 1688 | (0x8300 + (index - 1) * 2).ToString | resolved | string int.ToString(string?, System.IFormatProvider?) |
+| 1708 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1708 | index.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 1708 | index.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 1709 | (0x8300 + (index - 1) * 2).ToString | resolved | string int.ToString(string?, System.IFormatProvider?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1686 | variable-initializer | 변수의 초기값을 지정합니다: index = 1 |
-| 1686 | for | 초기화·조건·증감이 있는 반복입니다: for (var index = 1; index <= 500; index++) |
-| 1687 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: index.ToString(CultureInfo.InvariantCulture) |
-| 1687 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: index.ToString(CultureInfo.InvariantCulture) |
-| 1687 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("IOF_POS_ARRAY_" + index.ToString(CultureInfo.InvariantCulture), "IF_IOF_DATA", "IOF Position " + index.ToString(CultureInfo.InvariantCulture), 0, "W" + (0x8300 + (index - 1) * 2).ToString("X", CultureInfo.InvariantC… |
-| 1687 | yield | 열거값/종료를 전달합니다: yield return Row("IOF_POS_ARRAY_" + index.ToString(CultureInfo.InvariantCulture), "IF_IOF_DATA", "IOF Position " + index.ToString(CultureInfo.InvariantCulture), 0, "W" + (0x8300 + (index - 1) * 2).ToString("X", CultureInfo.Invaria |
-| 1688 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: (0x8300 + (index - 1) * 2).ToString("X", CultureInfo.InvariantCulture) |
+| 1707 | variable-initializer | 변수의 초기값을 지정합니다: index = 1 |
+| 1707 | for | 초기화·조건·증감이 있는 반복입니다: for (var index = 1; index <= 500; index++) |
+| 1708 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: index.ToString(CultureInfo.InvariantCulture) |
+| 1708 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: index.ToString(CultureInfo.InvariantCulture) |
+| 1708 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("IOF_POS_ARRAY_" + index.ToString(CultureInfo.InvariantCulture), "IF_IOF_DATA", "IOF Position " + index.ToString(CultureInfo.InvariantCulture), 0, "W" + (0x8300 + (index - 1) * 2).ToString("X", CultureInfo.InvariantC… |
+| 1708 | yield | 열거값/종료를 전달합니다: yield return Row("IOF_POS_ARRAY_" + index.ToString(CultureInfo.InvariantCulture), "IF_IOF_DATA", "IOF Position " + index.ToString(CultureInfo.InvariantCulture), 0, "W" + (0x8300 + (index - 1) * 2).ToString("X", CultureInfo.Invaria |
+| 1709 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: (0x8300 + (index - 1) * 2).ToString("X", CultureInfo.InvariantCulture) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["CreateIofPositionRows"]
- N0["L1686 for"]
+ N0["L1707 for"]
  M -->|포함| N0
 ```
 

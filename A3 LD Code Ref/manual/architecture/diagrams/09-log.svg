@@ -5,7 +5,7 @@
 <rect width="1300" height="690" fill="#f7fafc"/>
 <g font-family="Malgun Gothic,Segoe UI,sans-serif">
 <text x="30" y="34" font-size="25" font-weight="bold" fill="#12344c">로그 생산·저장·소비와 PM / Review 경계</text>
-<text x="30" y="61" font-size="13" fill="#52748e">기준 334b359 · 정적 소스 추적 · 장비/SDK 실행 없음</text>
+<text x="30" y="61" font-size="13" fill="#52748e">기준 0219666 · 정적 소스 추적 · 장비/SDK 실행 없음</text>
 <rect x="30" y="95" width="370" height="105" rx="9" fill="white" stroke="#9eb5c9"/>
 <text x="46" y="131" font-size="19" font-weight="bold" fill="#12344c">공유 CLogManager</text>
 <text x="46" y="165" font-size="14" fill="#345a75">Config 옆 Log 경로</text>

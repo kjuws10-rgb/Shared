@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "a3-manual-tilde-repair/1",
+  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "manualRendererVersion": "1.1.4",
+  "changedStagingFiles": [
+    "manual-html/review/06_DefaultOffset_ZeroOrder_FirstBeam.md.html"
+  ],
+  "expectedOnlyOneHtml": true,
+  "protectedManualAndRagFiles": 77,
+  "protectedBytesUnchanged": true,
+  "oldHtmlSha256": "28dff5d18fdc95929f7d8d086175f092b71f28a80c87e61e883d99523ccab172",
+  "newHtmlSha256": "ed53049f6f4b977137d136fb8a0dfa2950ade99833929940daa1f2bdcd933ec8",
+  "passed": true,
+  "scope": "Parent-authorized HTML-only derivative repair; frozen Markdown, RAG, SVG and source code unchanged."
+}

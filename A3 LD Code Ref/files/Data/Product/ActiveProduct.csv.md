@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
-| 원본 SHA256 | a33471df805f59c52d806b3dde0bf3b84c901aa0609e690943c2047c264582b4 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
+| 원본 SHA256 | e75cc43e8f6a7dda94da14275cf30ade56542452013d75ab08a6113247abd1b7 |
 | 파일 분류 | data_schema |
-| 원본 크기/행 | 1,276 bytes / 58 physical lines |
+| 원본 크기/행 | 1,540 bytes / 70 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Data/Product/ActiveProduct.csv) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Data/Product/ActiveProduct.csv) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -23,7 +23,7 @@
 
 | 항목 | 값 |
 | --- | --- |
-| 레코드 수 | 58 |
+| 레코드 수 | 70 |
 | 첫 행 필드 개수 | 3 |
 | 첫 행 컬럼 후보 | TYPE / NAME / VALUE |
 

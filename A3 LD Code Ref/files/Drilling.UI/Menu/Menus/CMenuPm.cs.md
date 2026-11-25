@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 1393394dca1a9500052acf8e9238a1ce0db7006515a36cc5c68d3d88fccb3258 |
 | 파일 분류 | code |
 | 원본 크기/행 | 8,226 bytes / 190 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -71,7 +71,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `LaserThgHourLimitKey` · L17–17
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L17-L17)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -92,7 +92,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `Menu` · L19–25
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:19–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L19-L25)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:19–25](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L19-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -107,7 +107,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_Menu` · L21–24
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:21–24](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L21-L24)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:21–24](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L21-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -128,7 +128,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `IsLocked` · L27–27
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L27-L27)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -143,7 +143,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_IsLocked` · L27–27
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L27-L27)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -158,7 +158,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_IsLocked` · L27–27
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L27-L27)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -179,7 +179,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `StartTime` · L28–28
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L28-L28)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -194,7 +194,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_StartTime` · L28–28
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L28-L28)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -209,7 +209,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_StartTime` · L28–28
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L28-L28)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -230,7 +230,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `LockItems` · L29–29
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L29-L29)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -245,7 +245,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_LockItems` · L29–29
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L29-L29)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -260,7 +260,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_LockItems` · L29–29
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L29-L29)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -281,7 +281,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `BlockedItems` · L30–30
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L30-L30)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -296,7 +296,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_BlockedItems` · L30–30
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L30-L30)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -311,7 +311,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_BlockedItems` · L30–30
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L30-L30)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -332,7 +332,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `PartLifeRows` · L31–31
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L31-L31)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -359,7 +359,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_PartLifeRows` · L31–31
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L31-L31)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -374,7 +374,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_PartLifeRows` · L31–31
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L31-L31)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -395,7 +395,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `ProtectWindowItems` · L32–32
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L32-L32)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L32-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -422,7 +422,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_ProtectWindowItems` · L32–32
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L32-L32)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L32-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -437,7 +437,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_ProtectWindowItems` · L32–32
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L32-L32)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L32-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -458,7 +458,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `HistoryRows` · L33–33
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L33-L33)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -473,7 +473,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_HistoryRows` · L33–33
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L33-L33)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -488,7 +488,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_HistoryRows` · L33–33
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L33-L33)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -509,7 +509,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `Build` · L35–60
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:35–60](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L35-L60)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:35–60](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L35-L60)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -600,7 +600,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `Apply` · L62–78
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:62–78](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L62-L78)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:62–78](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L62-L78)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -625,7 +625,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuPm.cs:44–51](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L44-L51) | Apply | False |
+| [Drilling.UI/Menu/Menus/CMenuPm.cs:44–51](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L44-L51) | Apply | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -643,7 +643,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `CreatePartLifeRows` · L80–91
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:80–91](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L80-L91)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:80–91](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L80-L91)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -662,7 +662,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuPm.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L39-L39) | CreatePartLifeRows | False |
+| [Drilling.UI/Menu/Menus/CMenuPm.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L39-L39) | CreatePartLifeRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -701,7 +701,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `CreatePartLifeRow` · L93–109
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:93–109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L93-L109)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:93–109](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L93-L109)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -722,7 +722,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuPm.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L89-L89) | CreatePartLifeRow | False |
+| [Drilling.UI/Menu/Menus/CMenuPm.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L89-L89) | CreatePartLifeRow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -785,7 +785,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadCrystalLimit` · L111–119
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:111–119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L111-L119)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:111–119](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L111-L119)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -804,7 +804,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuPm.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L83-L83) | ReadCrystalLimit | False |
+| [Drilling.UI/Menu/Menus/CMenuPm.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L83-L83) | ReadCrystalLimit | False |
 
 호출하는 대상과 해석 범위:
 
@@ -830,7 +830,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateProtectWindowItems` · L121–135
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:121–135](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L121-L135)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:121–135](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L121-L135)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -849,7 +849,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuPm.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L40-L40) | CreateProtectWindowItems | False |
+| [Drilling.UI/Menu/Menus/CMenuPm.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L40-L40) | CreateProtectWindowItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -897,7 +897,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ReadRecipeValue` · L126–128
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:126–128](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L126-L128)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:126–128](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L126-L128)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -916,8 +916,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuPm.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L132-L132) | ReadRecipeValue | False |
-| [Drilling.UI/Menu/Menus/CMenuPm.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L133-L133) | ReadRecipeValue | False |
+| [Drilling.UI/Menu/Menus/CMenuPm.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L132-L132) | ReadRecipeValue | False |
+| [Drilling.UI/Menu/Menus/CMenuPm.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L133-L133) | ReadRecipeValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -939,7 +939,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatRecipeCount` · L137–147
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:137–147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L137-L147)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:137–147](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L137-L147)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -959,8 +959,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuPm.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L132-L132) | FormatRecipeCount | False |
-| [Drilling.UI/Menu/Menus/CMenuPm.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L133-L133) | FormatRecipeCount | False |
+| [Drilling.UI/Menu/Menus/CMenuPm.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L132-L132) | FormatRecipeCount | False |
+| [Drilling.UI/Menu/Menus/CMenuPm.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L133-L133) | FormatRecipeCount | False |
 
 호출하는 대상과 해석 범위:
 
@@ -995,7 +995,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeSnapshotState` · L149–156
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:149–156](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L149-L156)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:149–156](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L149-L156)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1014,7 +1014,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuPm.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L102-L102) | NormalizeSnapshotState | False |
+| [Drilling.UI/Menu/Menus/CMenuPm.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L102-L102) | NormalizeSnapshotState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1042,7 +1042,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateEmptyPartLifeRows` · L158–160
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:158–160](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L158-L160)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:158–160](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L158-L160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1055,7 +1055,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuPm.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L31-L31) | CreateEmptyPartLifeRows | False |
+| [Drilling.UI/Menu/Menus/CMenuPm.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L31-L31) | CreateEmptyPartLifeRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1079,7 +1079,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateEmptyProtectWindowItems` · L162–166
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:162–166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L162-L166)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:162–166](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L162-L166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1092,7 +1092,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuPm.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L32-L32) | CreateEmptyProtectWindowItems | False |
+| [Drilling.UI/Menu/Menus/CMenuPm.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L32-L32) | CreateEmptyProtectWindowItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1112,7 +1112,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateHistoryRows` · L168–174
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:168–174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L168-L174)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:168–174](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L168-L174)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1131,7 +1131,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuPm.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L41-L41) | CreateHistoryRows | False |
+| [Drilling.UI/Menu/Menus/CMenuPm.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L41-L41) | CreateHistoryRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1160,7 +1160,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatDuration` · L176–178
 
-[Drilling.UI/Menu/Menus/CMenuPm.cs:176–178](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L176-L178)
+[Drilling.UI/Menu/Menus/CMenuPm.cs:176–178](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L176-L178)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1179,7 +1179,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuPm.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L172-L172) | FormatDuration | False |
+| [Drilling.UI/Menu/Menus/CMenuPm.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L172-L172) | FormatDuration | False |
 
 호출하는 대상과 해석 범위:
 

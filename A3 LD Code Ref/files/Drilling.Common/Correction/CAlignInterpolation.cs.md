@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 52be19d632488f70435f9c08a0b0ae82c36635c914161a731333839df3aaa94b |
 | 파일 분류 | code |
 | 원본 크기/행 | 36,208 bytes / 499 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -136,7 +136,7 @@
 
 ### FieldDeclaration `AlgorithmName` · L13–13
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L13-L13)
+[Drilling.Common/Correction/CAlignInterpolation.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -157,7 +157,7 @@
 
 ### FieldDeclaration `_normalizedY` · L14–14
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L14-L14)
+[Drilling.Common/Correction/CAlignInterpolation.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -172,7 +172,7 @@
 
 ### FieldDeclaration `_weights` · L15–15
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L15-L15)
+[Drilling.Common/Correction/CAlignInterpolation.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -187,7 +187,7 @@
 
 ### PropertyDeclaration `Rows` · L16–16
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L16-L16)
+[Drilling.Common/Correction/CAlignInterpolation.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -202,7 +202,7 @@
 
 ### GetAccessorDeclaration `get_Rows` · L16–16
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L16-L16)
+[Drilling.Common/Correction/CAlignInterpolation.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -217,7 +217,7 @@
 
 ### ConstructorDeclaration `.ctor` · L18–53
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:18–53](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L18-L53)
+[Drilling.Common/Correction/CAlignInterpolation.cs:18–53](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L18-L53)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -237,9 +237,9 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L294-L294) | new CAlignInterpolation | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L338-L338) | new | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5422–5422](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5422-L5422) | new CAlignInterpolation | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L294-L294) | new CAlignInterpolation | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L338-L338) | new | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5422–5422](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5422-L5422) | new CAlignInterpolation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -378,7 +378,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Find` · L21–21
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L21-L21)
+[Drilling.Common/Correction/CAlignInterpolation.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -397,10 +397,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L22-L22) | Find | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L22-L22) | Find | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L23-L23) | Find | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L23-L23) | Find | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L22-L22) | Find | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L22-L22) | Find | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L23-L23) | Find | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L23-L23) | Find | False |
 
 호출하는 대상과 해석 범위:
 
@@ -422,7 +422,7 @@ flowchart TD
 
 ### MethodDeclaration `Contains` · L55–63
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:55–63](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L55-L63)
+[Drilling.Common/Correction/CAlignInterpolation.cs:55–63](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L55-L63)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -442,9 +442,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L76-L76) | Contains | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:697–697](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L697-L697) | model.Contains | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2952–2952](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2952-L2952) | model!.Contains | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L76-L76) | Contains | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:697–697](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L697-L697) | model.Contains | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2952–2952](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2952-L2952) | model!.Contains | False |
 
 호출하는 대상과 해석 범위:
 
@@ -483,7 +483,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateMeasurements` · L65–72
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:65–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L65-L72)
+[Drilling.Common/Correction/CAlignInterpolation.cs:65–72](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L65-L72)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -496,9 +496,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L78-L78) | ValidateMeasurements | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:687–687](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L687-L687) | model.ValidateMeasurements | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5440–5440](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5440-L5440) | model.ValidateMeasurements | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L78-L78) | ValidateMeasurements | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:687–687](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L687-L687) | model.ValidateMeasurements | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5440–5440](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5440-L5440) | model.ValidateMeasurements | False |
 
 호출하는 대상과 해석 범위:
 
@@ -528,7 +528,7 @@ flowchart TD
 
 ### MethodDeclaration `Evaluate` · L74–94
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:74–94](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L74-L94)
+[Drilling.Common/Correction/CAlignInterpolation.cs:74–94](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L74-L94)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -548,8 +548,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:699–699](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L699-L699) | model.Evaluate | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2952–2952](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2952-L2952) | model.Evaluate | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:699–699](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L699-L699) | model.Evaluate | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2952–2952](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2952-L2952) | model.Evaluate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -616,7 +616,7 @@ flowchart TD
 
 ### MethodDeclaration `FindInterval` · L96–102
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:96–102](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L96-L102)
+[Drilling.Common/Correction/CAlignInterpolation.cs:96–102](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L96-L102)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -635,7 +635,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L59-L59) | FindInterval | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L59-L59) | FindInterval | False |
 
 호출하는 대상과 해석 범위:
 
@@ -669,7 +669,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateRow` · L104–108
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:104–108](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L104-L108)
+[Drilling.Common/Correction/CAlignInterpolation.cs:104–108](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L104-L108)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -688,9 +688,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L24-L24) | ValidateRow | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L25-L25) | ValidateRow | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L39-L39) | ValidateRow | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L24-L24) | ValidateRow | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L25-L25) | ValidateRow | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L39-L39) | ValidateRow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -727,7 +727,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadCorrection` · L110–110
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L110-L110)
+[Drilling.Common/Correction/CAlignInterpolation.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L110-L110)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -746,10 +746,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L69-L69) | ReadCorrection | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L70-L70) | ReadCorrection | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L111-L111) | ReadCorrection | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L111-L111) | ReadCorrection | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L69-L69) | ReadCorrection | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L70-L70) | ReadCorrection | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L111-L111) | ReadCorrection | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L111-L111) | ReadCorrection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -775,7 +775,7 @@ flowchart TD
 
 ### MethodDeclaration `EvaluateRow` · L111–111
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L111-L111)
+[Drilling.Common/Correction/CAlignInterpolation.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L111-L111)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -795,8 +795,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L81-L81) | EvaluateRow | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L87-L87) | EvaluateRow | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L81-L81) | EvaluateRow | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L87-L87) | EvaluateRow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -818,7 +818,7 @@ flowchart TD
 
 ### MethodDeclaration `Blend` · L112–112
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L112-L112)
+[Drilling.Common/Correction/CAlignInterpolation.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L112-L112)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -839,7 +839,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L111-L111) | Blend | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L111-L111) | Blend | False |
 
 호출하는 대상과 해석 범위:
 
@@ -859,7 +859,7 @@ flowchart TD
 
 ### MethodDeclaration `Finite` · L113–113
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L113-L113)
+[Drilling.Common/Correction/CAlignInterpolation.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L113-L113)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -878,8 +878,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L93-L93) | Finite | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L112-L112) | Finite | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L93-L93) | Finite | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L112-L112) | Finite | False |
 
 호출하는 대상과 해석 범위:
 
@@ -903,7 +903,7 @@ flowchart TD
 
 ### PropertyDeclaration `Y` · L119–119
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L119-L119)
+[Drilling.Common/Correction/CAlignInterpolation.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L119-L119)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -918,7 +918,7 @@ flowchart TD
 
 ### PropertyDeclaration `Tolerance` · L146–146
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L146-L146)
+[Drilling.Common/Correction/CAlignInterpolation.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L146-L146)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -933,7 +933,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Tolerance` · L146–146
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L146-L146)
+[Drilling.Common/Correction/CAlignInterpolation.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L146-L146)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -948,7 +948,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_Tolerance` · L146–146
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L146-L146)
+[Drilling.Common/Correction/CAlignInterpolation.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L146-L146)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -969,7 +969,7 @@ flowchart TD
 
 ### PropertyDeclaration `CalculatedOffsets` · L147–147
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L147-L147)
+[Drilling.Common/Correction/CAlignInterpolation.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L147-L147)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -984,7 +984,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CalculatedOffsets` · L147–147
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L147-L147)
+[Drilling.Common/Correction/CAlignInterpolation.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L147-L147)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -999,7 +999,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_CalculatedOffsets` · L147–147
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L147-L147)
+[Drilling.Common/Correction/CAlignInterpolation.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L147-L147)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1020,7 +1020,7 @@ flowchart TD
 
 ### PropertyDeclaration `ExcludedOffsets` · L148–148
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L148-L148)
+[Drilling.Common/Correction/CAlignInterpolation.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L148-L148)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1035,7 +1035,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ExcludedOffsets` · L148–148
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L148-L148)
+[Drilling.Common/Correction/CAlignInterpolation.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L148-L148)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1050,7 +1050,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ExcludedOffsets` · L148–148
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L148-L148)
+[Drilling.Common/Correction/CAlignInterpolation.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L148-L148)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1071,7 +1071,7 @@ flowchart TD
 
 ### MethodDeclaration `Save` · L153–153
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L153-L153)
+[Drilling.Common/Correction/CAlignInterpolation.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L153-L153)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1091,14 +1091,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L364-L364) | audit.Save | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2972–2972](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2972-L2972) | logFile.Save | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L364-L364) | audit.Save | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2972–2972](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2972-L2972) | logFile.Save | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### PropertyDeclaration `ApplyCount` · L158–158
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:158–158](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L158-L158)
+[Drilling.Common/Correction/CAlignInterpolation.cs:158–158](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L158-L158)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1113,7 +1113,7 @@ flowchart TD
 
 ### PropertyDeclaration `CanApplyRemaining` · L159–159
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L159-L159)
+[Drilling.Common/Correction/CAlignInterpolation.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L159-L159)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1128,7 +1128,7 @@ flowchart TD
 
 ### PropertyDeclaration `Summary` · L160–160
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L160-L160)
+[Drilling.Common/Correction/CAlignInterpolation.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L160-L160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1155,7 +1155,7 @@ flowchart TD
 
 ### FieldDeclaration `SettingKey` · L165–165
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:165–165](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L165-L165)
+[Drilling.Common/Correction/CAlignInterpolation.cs:165–165](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L165-L165)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1176,7 +1176,7 @@ flowchart TD
 
 ### FieldDeclaration `DefaultValue` · L166–166
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L166-L166)
+[Drilling.Common/Correction/CAlignInterpolation.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L166-L166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1197,7 +1197,7 @@ flowchart TD
 
 ### MethodDeclaration `Parse` · L167–172
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:167–172](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L167-L172)
+[Drilling.Common/Correction/CAlignInterpolation.cs:167–172](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L167-L172)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1216,8 +1216,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L288-L288) | CAlignOffsetTolerance.Parse | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2999–2999](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2999-L2999) | CAlignOffsetTolerance.Parse | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L288-L288) | CAlignOffsetTolerance.Parse | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2999–2999](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2999-L2999) | CAlignOffsetTolerance.Parse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1253,7 +1253,7 @@ flowchart TD
 
 ### MethodDeclaration `Exceeds` · L175–175
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L175-L175)
+[Drilling.Common/Correction/CAlignInterpolation.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L175-L175)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1273,8 +1273,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L176-L176) | Exceeds | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2938–2938](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2938-L2938) | CAlignOffsetTolerance.Exceeds | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L176-L176) | Exceeds | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2938–2938](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2938-L2938) | CAlignOffsetTolerance.Exceeds | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1294,7 +1294,7 @@ flowchart TD
 
 ### MethodDeclaration `Check` · L176–176
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L176-L176)
+[Drilling.Common/Correction/CAlignInterpolation.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L176-L176)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1314,8 +1314,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:341–341](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L341-L341) | CAlignOffsetTolerance.Check | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2928–2928](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2928-L2928) | CAlignOffsetTolerance.Check | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:341–341](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L341-L341) | CAlignOffsetTolerance.Check | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2928–2928](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2928-L2928) | CAlignOffsetTolerance.Check | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1339,7 +1339,7 @@ flowchart TD
 
 ### MethodDeclaration `StagePositionKey` · L182–182
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:182–182](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L182-L182)
+[Drilling.Common/Correction/CAlignInterpolation.cs:182–182](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L182-L182)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1358,8 +1358,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:186–186](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L186-L186) | StagePositionKey | False |
-| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L67-L67) | Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:186–186](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L186-L186) | StagePositionKey | False |
+| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L67-L67) | Drilling.Common.Correction.CAlignKeyGeometry.StagePositionKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1381,7 +1381,7 @@ flowchart TD
 
 ### MethodDeclaration `DesignY` · L183–183
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:183–183](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L183-L183)
+[Drilling.Common/Correction/CAlignInterpolation.cs:183–183](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L183-L183)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1402,9 +1402,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L208-L208) | DesignY | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L209-L209) | DesignY | False |
-| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L69-L69) | Drilling.Common.Correction.CAlignKeyGeometry.DesignY | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L208-L208) | DesignY | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L209-L209) | DesignY | False |
+| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L69-L69) | Drilling.Common.Correction.CAlignKeyGeometry.DesignY | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1422,7 +1422,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadStagePositions` · L184–190
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:184–190](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L184-L190)
+[Drilling.Common/Correction/CAlignInterpolation.cs:184–190](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L184-L190)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1441,8 +1441,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:285–285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L285-L285) | CAlignKeyGeometry.ReadStagePositions | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2991–2991](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2991-L2991) | CAlignKeyGeometry.ReadStagePositions | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:285–285](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L285-L285) | CAlignKeyGeometry.ReadStagePositions | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2991–2991](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2991-L2991) | CAlignKeyGeometry.ReadStagePositions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1483,7 +1483,7 @@ flowchart TD
 
 ### MethodDeclaration `Create` · L191–211
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:191–211](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L191-L211)
+[Drilling.Common/Correction/CAlignInterpolation.cs:191–211](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L191-L211)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1504,8 +1504,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L273-L273) | CAlignKeyGeometry.Create | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5196–5196](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5196-L5196) | CAlignKeyGeometry.Create | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L273-L273) | CAlignKeyGeometry.Create | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5196–5196](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5196-L5196) | CAlignKeyGeometry.Create | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1585,7 +1585,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Read` · L197–198
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:197–198](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L197-L198)
+[Drilling.Common/Correction/CAlignInterpolation.cs:197–198](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L197-L198)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1604,8 +1604,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L199-L199) | Read | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L199-L199) | Read | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L199-L199) | Read | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L199-L199) | Read | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1631,7 +1631,7 @@ flowchart TD
 
 ### PropertyDeclaration `StageYPositions` · L220–220
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L220-L220)
+[Drilling.Common/Correction/CAlignInterpolation.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L220-L220)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1646,7 +1646,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_StageYPositions` · L220–220
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L220-L220)
+[Drilling.Common/Correction/CAlignInterpolation.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L220-L220)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1661,7 +1661,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_StageYPositions` · L220–220
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L220-L220)
+[Drilling.Common/Correction/CAlignInterpolation.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L220-L220)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1682,7 +1682,7 @@ flowchart TD
 
 ### PropertyDeclaration `AlignKeyMargins` · L221–223
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:221–223](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L221-L223)
+[Drilling.Common/Correction/CAlignInterpolation.cs:221–223](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L221-L223)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1709,7 +1709,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AlignKeyMargins` · L221–221
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L221-L221)
+[Drilling.Common/Correction/CAlignInterpolation.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L221-L221)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1724,7 +1724,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_AlignKeyMargins` · L221–221
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L221-L221)
+[Drilling.Common/Correction/CAlignInterpolation.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L221-L221)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1745,7 +1745,7 @@ flowchart TD
 
 ### FieldDeclaration `_io` · L230–230
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L230-L230)
+[Drilling.Common/Correction/CAlignInterpolation.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L230-L230)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1773,7 +1773,7 @@ flowchart TD
 
 ### FieldDeclaration `_input` · L231–231
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L231-L231)
+[Drilling.Common/Correction/CAlignInterpolation.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L231-L231)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1788,7 +1788,7 @@ flowchart TD
 
 ### FieldDeclaration `_pending` · L231–231
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L231-L231)
+[Drilling.Common/Correction/CAlignInterpolation.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L231-L231)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1803,7 +1803,7 @@ flowchart TD
 
 ### FieldDeclaration `_recipe` · L232–232
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L232-L232)
+[Drilling.Common/Correction/CAlignInterpolation.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L232-L232)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1818,7 +1818,7 @@ flowchart TD
 
 ### FieldDeclaration `_groups` · L233–233
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L233-L233)
+[Drilling.Common/Correction/CAlignInterpolation.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L233-L233)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1839,7 +1839,7 @@ flowchart TD
 
 ### FieldDeclaration `_stageYPositions` · L234–234
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L234-L234)
+[Drilling.Common/Correction/CAlignInterpolation.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L234-L234)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1860,7 +1860,7 @@ flowchart TD
 
 ### FieldDeclaration `_alignKeyMargins` · L235–237
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:235–237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L235-L237)
+[Drilling.Common/Correction/CAlignInterpolation.cs:235–237](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L235-L237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1888,7 +1888,7 @@ flowchart TD
 
 ### FieldDeclaration `_tolerance` · L238–238
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L238-L238)
+[Drilling.Common/Correction/CAlignInterpolation.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L238-L238)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1903,7 +1903,7 @@ flowchart TD
 
 ### FieldDeclaration `_results` · L239–239
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L239-L239)
+[Drilling.Common/Correction/CAlignInterpolation.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L239-L239)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1918,7 +1918,7 @@ flowchart TD
 
 ### FieldDeclaration `_model` · L240–240
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L240-L240)
+[Drilling.Common/Correction/CAlignInterpolation.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L240-L240)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1933,7 +1933,7 @@ flowchart TD
 
 ### FieldDeclaration `_offsets` · L241–241
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L241-L241)
+[Drilling.Common/Correction/CAlignInterpolation.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L241-L241)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1948,7 +1948,7 @@ flowchart TD
 
 ### FieldDeclaration `_loadedAt` · L242–242
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L242-L242)
+[Drilling.Common/Correction/CAlignInterpolation.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L242-L242)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1963,7 +1963,7 @@ flowchart TD
 
 ### FieldDeclaration `_saved` · L243–243
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L243-L243)
+[Drilling.Common/Correction/CAlignInterpolation.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L243-L243)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1978,7 +1978,7 @@ flowchart TD
 
 ### FieldDeclaration `_snapshot` · L244–244
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L244-L244)
+[Drilling.Common/Correction/CAlignInterpolation.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L244-L244)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1993,7 +1993,7 @@ flowchart TD
 
 ### PropertyDeclaration `Snapshot` · L245–245
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L245-L245)
+[Drilling.Common/Correction/CAlignInterpolation.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L245-L245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2020,7 +2020,7 @@ flowchart TD
 
 ### PropertyDeclaration `GlassId` · L246–246
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L246-L246)
+[Drilling.Common/Correction/CAlignInterpolation.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L246-L246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2035,7 +2035,7 @@ flowchart TD
 
 ### MethodDeclaration `ResultId` · L247–258
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:247–258](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L247-L258)
+[Drilling.Common/Correction/CAlignInterpolation.cs:247–258](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L247-L258)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2054,10 +2054,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L327-L327) | ResultId | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L332-L332) | ResultId | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5730–5730](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5730-L5730) | CAlignDistortionCycle.ResultId | False |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L77-L77) | CAlignDistortionCycle.ResultId | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L327-L327) | ResultId | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L332-L332) | ResultId | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5730–5730](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5730-L5730) | CAlignDistortionCycle.ResultId | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L77-L77) | CAlignDistortionCycle.ResultId | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2110,7 +2110,7 @@ flowchart TD
 
 ### MethodDeclaration `Names` · L259–260
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:259–260](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L259-L260)
+[Drilling.Common/Correction/CAlignInterpolation.cs:259–260](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L259-L260)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2129,10 +2129,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L261-L261) | Names | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L294-L294) | Names | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L338-L338) | Names | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L353-L353) | Names | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L261-L261) | Names | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L294-L294) | Names | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L338-L338) | Names | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L353-L353) | Names | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2160,7 +2160,7 @@ flowchart TD
 
 ### MethodDeclaration `ParameterKeys` · L261–261
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L261-L261)
+[Drilling.Common/Correction/CAlignInterpolation.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L261-L261)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2179,10 +2179,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:296–296](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L296-L296) | ParameterKeys | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L298-L298) | ParameterKeys | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L313-L313) | ParameterKeys | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L325-L325) | ParameterKeys | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:296–296](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L296-L296) | ParameterKeys | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L298-L298) | ParameterKeys | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L313-L313) | ParameterKeys | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L325-L325) | ParameterKeys | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2204,7 +2204,7 @@ flowchart TD
 
 ### MethodDeclaration `Read` · L262–267
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:262–267](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L262-L267)
+[Drilling.Common/Correction/CAlignInterpolation.cs:262–267](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L262-L267)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2224,10 +2224,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:272–272](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L272-L272) | Read | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L289-L289) | Read | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L290-L290) | Read | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:296–296](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L296-L296) | Read | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:272–272](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L272-L272) | Read | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L289-L289) | Read | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L290-L290) | Read | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:296–296](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L296-L296) | Read | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2263,7 +2263,7 @@ flowchart TD
 
 ### MethodDeclaration `Keys` · L268–274
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:268–274](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L268-L274)
+[Drilling.Common/Correction/CAlignInterpolation.cs:268–274](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L268-L274)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2276,9 +2276,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L294-L294) | Keys | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L338-L338) | Keys | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L356-L356) | Keys | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L294-L294) | Keys | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L338-L338) | Keys | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L356-L356) | Keys | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2316,7 +2316,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Delta` · L272–272
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:272–272](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L272-L272)
+[Drilling.Common/Correction/CAlignInterpolation.cs:272–272](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L272-L272)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2336,8 +2336,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L273-L273) | Delta | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L273-L273) | Delta | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L273-L273) | Delta | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L273-L273) | Delta | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2358,7 +2358,7 @@ flowchart TD
 
 ### MethodDeclaration `Prepare` · L276–321
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:276–321](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L276-L321)
+[Drilling.Common/Correction/CAlignInterpolation.cs:276–321](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L276-L321)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2619,7 +2619,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadResults` · L322–333
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:322–333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L322-L333)
+[Drilling.Common/Correction/CAlignInterpolation.cs:322–333](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L322-L333)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2702,7 +2702,7 @@ flowchart TD
 
 ### MethodDeclaration `Calculate` · L334–345
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:334–345](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L334-L345)
+[Drilling.Common/Correction/CAlignInterpolation.cs:334–345](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L334-L345)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2786,7 +2786,7 @@ flowchart TD
 
 ### MethodDeclaration `Save` · L346–371
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:346–371](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L346-L371)
+[Drilling.Common/Correction/CAlignInterpolation.cs:346–371](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L346-L371)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2929,7 +2929,7 @@ flowchart TD
 
 ### LocalFunctionStatement `OptionalBase` · L355–355
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:355–355](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L355-L355)
+[Drilling.Common/Correction/CAlignInterpolation.cs:355–355](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L355-L355)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2949,8 +2949,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L359-L359) | OptionalBase | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L359-L359) | OptionalBase | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L359-L359) | OptionalBase | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L359-L359) | OptionalBase | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2973,7 +2973,7 @@ flowchart TD
 
 ### MethodDeclaration `TakePreparedRequest` · L372–378
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:372–378](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L372-L378)
+[Drilling.Common/Correction/CAlignInterpolation.cs:372–378](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L372-L378)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2992,7 +2992,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:3273–3273](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3273-L3273) | .TakePreparedRequest | False |
+| [Drilling.UI/CRootView.cs:3273–3273](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L3273-L3273) | .TakePreparedRequest | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3035,7 +3035,7 @@ flowchart TD
 
 ### MethodDeclaration `Log` · L379–379
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L379-L379)
+[Drilling.Common/Correction/CAlignInterpolation.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L379-L379)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3054,11 +3054,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L315-L315) | Log | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L320-L320) | Log | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L332-L332) | Log | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L344-L344) | Log | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:370–370](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L370-L370) | Log | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L315-L315) | Log | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L320-L320) | Log | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L332-L332) | Log | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L344-L344) | Log | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:370–370](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L370-L370) | Log | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3091,7 +3091,7 @@ flowchart TD
 
 ### PropertyDeclaration `Points` · L387–393
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:387–393](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L387-L393)
+[Drilling.Common/Correction/CAlignInterpolation.cs:387–393](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L387-L393)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3130,7 +3130,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Points` · L387–387
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:387–387](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L387-L387)
+[Drilling.Common/Correction/CAlignInterpolation.cs:387–387](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L387-L387)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3145,7 +3145,7 @@ flowchart TD
 
 ### FieldDeclaration `_map` · L394–394
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:394–394](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L394-L394)
+[Drilling.Common/Correction/CAlignInterpolation.cs:394–394](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L394-L394)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3160,7 +3160,7 @@ flowchart TD
 
 ### FieldDeclaration `_connections` · L395–395
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:395–395](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L395-L395)
+[Drilling.Common/Correction/CAlignInterpolation.cs:395–395](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L395-L395)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3175,7 +3175,7 @@ flowchart TD
 
 ### FieldDeclaration `_read` · L396–396
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:396–396](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L396-L396)
+[Drilling.Common/Correction/CAlignInterpolation.cs:396–396](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L396-L396)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3190,7 +3190,7 @@ flowchart TD
 
 ### FieldDeclaration `_write` · L397–397
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:397–397](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L397-L397)
+[Drilling.Common/Correction/CAlignInterpolation.cs:397–397](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L397-L397)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3205,7 +3205,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L398–401
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:398–401](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L398-L401)
+[Drilling.Common/Correction/CAlignInterpolation.cs:398–401](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L398-L401)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3224,8 +3224,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L230-L230) | new | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L139-L139) | new CAlignWapageService | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L230-L230) | new | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L139-L139) | new CAlignWapageService | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3265,7 +3265,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L402–404
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:402–404](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L402-L404)
+[Drilling.Common/Correction/CAlignInterpolation.cs:402–404](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L402-L404)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3298,7 +3298,7 @@ flowchart TD
 
 ### MethodDeclaration `Validate` · L406–424
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:406–424](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L406-L424)
+[Drilling.Common/Correction/CAlignInterpolation.cs:406–424](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L406-L424)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3318,12 +3318,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L312-L312) | _io.Validate | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L313-L313) | _io.Validate | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L314-L314) | _io.Validate | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L430-L430) | Validate | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:435–435](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L435-L435) | Validate | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:464–464](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L464-L464) | Validate | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L312-L312) | _io.Validate | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L313-L313) | _io.Validate | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L314-L314) | _io.Validate | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L430-L430) | Validate | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:435–435](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L435-L435) | Validate | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:464–464](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L464-L464) | Validate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3402,7 +3402,7 @@ flowchart TD
 
 ### MethodDeclaration `Load` · L426–432
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:426–432](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L426-L432)
+[Drilling.Common/Correction/CAlignInterpolation.cs:426–432](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L426-L432)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3421,7 +3421,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2800–2800](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2800-L2800) | _wapage.Load | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2800–2800](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2800-L2800) | _wapage.Load | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3462,7 +3462,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadValues` · L433–437
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:433–437](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L433-L437)
+[Drilling.Common/Correction/CAlignInterpolation.cs:433–437](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L433-L437)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3482,8 +3482,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L316-L316) | _io.ReadValues | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L326-L326) | _io.ReadValues | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L316-L316) | _io.ReadValues | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L326-L326) | _io.ReadValues | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3506,7 +3506,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteValues` · L438–438
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:438–438](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L438-L438)
+[Drilling.Common/Correction/CAlignInterpolation.cs:438–438](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L438-L438)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3526,7 +3526,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L319-L319) | _io.WriteValues | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L319-L319) | _io.WriteValues | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3544,7 +3544,7 @@ flowchart TD
 
 ### MethodDeclaration `Read` · L439–450
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:439–450](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L439-L450)
+[Drilling.Common/Correction/CAlignInterpolation.cs:439–450](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L439-L450)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3564,9 +3564,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:431–431](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L431-L431) | Read | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L436-L436) | Read | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:484–484](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L484-L484) | Read | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:431–431](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L431-L431) | Read | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L436-L436) | Read | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:484–484](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L484-L484) | Read | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3613,7 +3613,7 @@ flowchart TD
 
 ### MethodDeclaration `SetBase` · L451–456
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:451–456](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L451-L456)
+[Drilling.Common/Correction/CAlignInterpolation.cs:451–456](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L451-L456)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3633,8 +3633,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L317-L317) | _io.SetBase | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2815–2815](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2815-L2815) | _wapage.SetBase | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L317-L317) | _io.SetBase | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2815–2815](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2815-L2815) | _wapage.SetBase | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3676,7 +3676,7 @@ flowchart TD
 
 ### MethodDeclaration `SetRange` · L457–461
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:457–461](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L457-L461)
+[Drilling.Common/Correction/CAlignInterpolation.cs:457–461](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L457-L461)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3696,8 +3696,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L318-L318) | _io.SetRange | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2826–2826](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2826-L2826) | _wapage.SetRange | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L318-L318) | _io.SetRange | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2826–2826](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2826-L2826) | _wapage.SetRange | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3735,7 +3735,7 @@ flowchart TD
 
 ### MethodDeclaration `Write` · L462–495
 
-[Drilling.Common/Correction/CAlignInterpolation.cs:462–495](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L462-L495)
+[Drilling.Common/Correction/CAlignInterpolation.cs:462–495](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L462-L495)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3755,9 +3755,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:438–438](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L438-L438) | Write | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:455–455](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L455-L455) | Write | False |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Correction/CAlignInterpolation.cs#L460-L460) | Write | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:438–438](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L438-L438) | Write | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:455–455](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L455-L455) | Write | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Correction/CAlignInterpolation.cs#L460-L460) | Write | False |
 
 호출하는 대상과 해석 범위:
 

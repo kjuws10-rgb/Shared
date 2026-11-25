@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml
-Commit: 334b3599651b2e8e0181fd4459bafaf3cddafff3
+Commit: 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: XAML UI 구조·속성·리소스 선언입니다: <Window x:Class="Drilling.UI.Popup.CMelsecStageSimulationDialog"
@@ -191,8 +191,8 @@ L000092 |                                     </Grid> ⟦EOL⟧
 L000093 |                                 </Grid> ⟦EOL⟧
 // 해설 L94: XAML UI 구조·속성·리소스 선언입니다: <DataTemplate.Triggers>
 L000094 |                                 <DataTemplate.Triggers> ⟦EOL⟧
-// 해설 L95: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <DataTrigger Binding="{Binding IsNumeric}" Value="True">
-L000095 |                                     <DataTrigger Binding="{Binding IsNumeric}" Value="True"> ⟦EOL⟧
+// 해설 L95: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <DataTrigger Binding="{Binding HasValueInput}" Value="True">
+L000095 |                                     <DataTrigger Binding="{Binding HasValueInput}" Value="True"> ⟦EOL⟧
 // 해설 L96: XAML UI 구조·속성·리소스 선언입니다: <Setter TargetName="BinaryInput" Property="Visibility" Value="Collapsed" />
 L000096 |                                         <Setter TargetName="BinaryInput" Property="Visibility" Value="Collapsed" /> ⟦EOL⟧
 // 해설 L97: XAML UI 구조·속성·리소스 선언입니다: <Setter TargetName="NumericInput" Property="Visibility" Value="Visible" />

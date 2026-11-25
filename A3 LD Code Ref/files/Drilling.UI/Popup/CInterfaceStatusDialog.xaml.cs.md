@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 0bc80bb0e523800765696d6ba42266ec811ac3406ac211aba5a6dec104a7e1b4 |
 | 파일 분류 | code |
 | 원본 크기/행 | 2,597 bytes / 70 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -54,7 +54,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L9–32
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:9–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L9-L32)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:9–32](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L9-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -74,7 +74,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2875–2875](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2875-L2875) | new CInterfaceStatusDialog | False |
+| [Drilling.UI/CRootView.cs:2875–2875](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L2875-L2875) | new CInterfaceStatusDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -106,7 +106,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `SelectNumber` · L12–15
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:12–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L12-L15)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:12–15](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L12-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -133,7 +133,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `SelectNickName` · L17–20
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:17–20](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L17-L20)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:17–20](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L17-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -160,7 +160,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `BuildCInterfaceStatusRow` · L22–25
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:22–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L22-L25)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:22–25](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L22-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -194,7 +194,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OnCloseClicked` · L34–37
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:34–37](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L34-L37)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:34–37](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L34-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -228,7 +228,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L41–50
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:41–50](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L41-L50)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:41–50](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L41-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -247,7 +247,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L24-L24) | new CInterfaceStatusRow | False |
+| [Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L24-L24) | new CInterfaceStatusRow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -286,7 +286,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `No` · L52–52
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L52-L52)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L52-L52)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -301,7 +301,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_No` · L52–52
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L52-L52)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L52-L52)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -316,7 +316,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `NickName` · L53–53
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L53-L53)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L53-L53)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -331,7 +331,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_NickName` · L53–53
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L53-L53)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L53-L53)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -346,7 +346,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `InterfaceType` · L54–54
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L54-L54)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L54-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -361,7 +361,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_InterfaceType` · L54–54
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L54-L54)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L54-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -376,7 +376,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `State` · L55–55
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L55-L55)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L55-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -391,7 +391,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_State` · L55–55
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L55-L55)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L55-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -406,7 +406,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `Endpoint` · L56–56
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L56-L56)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L56-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -421,7 +421,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_Endpoint` · L56–56
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L56-L56)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L56-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -436,7 +436,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `LastChangedText` · L57–57
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L57-L57)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L57-L57)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -451,7 +451,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_LastChangedText` · L57–57
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L57-L57)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L57-L57)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -466,7 +466,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `StateBrush` · L58–58
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L58-L58)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L58-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -481,7 +481,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_StateBrush` · L58–58
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L58-L58)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L58-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -496,7 +496,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `ToStateText` · L60–68
 
-[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:60–68](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L60-L68)
+[Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:60–68](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L60-L68)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -515,7 +515,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L49-L49) | ToStateText | False |
+| [Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L49-L49) | ToStateText | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 

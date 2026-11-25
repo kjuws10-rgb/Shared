@@ -1,0 +1,62 @@
+{
+  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "scope": "Copied production pure functions and exact DTOs; separate console runner. No original solution build/vendor code/equipment.",
+  "files": [
+    {
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "sha256": "18c6b5e5afc1fdb76dafc1fd6bc33a810af4a84492b53c686eef336adb989831",
+      "start": 1,
+      "end": 1431,
+      "whole": true
+    },
+    {
+      "path": "Drilling.Common/Recipe/CCellPatternCalculator.cs",
+      "sha256": "2d09557b69d8cf7e03b380e9adf01f5938a8d0b9f7bdf79dff397778013431fd",
+      "start": 1,
+      "end": 490,
+      "whole": true
+    },
+    {
+      "path": "Drilling.Common/Managers/CAlignKeyMarginSettings.cs",
+      "sha256": "1d5a5568cadfa7d9c22efe92232696811c540a7535f971bc50cdeb845f216f37",
+      "start": 1,
+      "end": 53,
+      "whole": true
+    },
+    {
+      "path": "Drilling.Common/Managers/CRecipeManager.cs",
+      "sha256": "b8d208d8945081e6a6d500f40d51e3f4fca414124329325c36c7fffedb86c9b9",
+      "start": 349,
+      "end": 387,
+      "whole": false
+    },
+    {
+      "path": "Drilling.Common/Managers/CSettingManager.cs",
+      "sha256": "ab5eedee3d573b21ff626315c37803e06fd4d9d7d0e8709e0bf89e55f838743c",
+      "start": 254,
+      "end": 279,
+      "whole": false
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "sha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d",
+      "start": 4139,
+      "end": 4164,
+      "whole": false
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "sha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d",
+      "start": 4357,
+      "end": 4414,
+      "whole": false
+    },
+    {
+      "path": "Drilling.Common/Correction/CAlignInterpolation.cs",
+      "sha256": "52be19d632488f70435f9c08a0b0ae82c36635c914161a731333839df3aaa94b",
+      "start": 11,
+      "end": 122,
+      "whole": false
+    }
+  ]
+}

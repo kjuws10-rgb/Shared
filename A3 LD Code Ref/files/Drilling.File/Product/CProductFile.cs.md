@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
-| 원본 SHA256 | 95c7adb3e3b691e4df22deaf53a5cc713ff2a1e77cd066c911935f963b79b965 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
+| 원본 SHA256 | 450b06158f48549c563ec41a8ef58a22614382b29effa8361879af0bcf1d2900 |
 | 파일 분류 | code |
-| 원본 크기/행 | 22,109 bytes / 512 physical lines |
+| 원본 크기/행 | 21,739 bytes / 497 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -21,7 +21,7 @@
 
 | 타입 | 구분 | 원본 범위 | 선언/상속 |
 | --- | --- | --- | --- |
-| CProductFile | ClassDeclaration | 6–512 | CProductFile: CProductFileBase |
+| CProductFile | ClassDeclaration | 6–497 | CProductFile: CProductFileBase |
 
 ## 멤버 빠른 목록
 
@@ -33,60 +33,60 @@
 | _productRoot | FieldDeclaration | L11–11 | string Drilling.File.Product.CProductFile._productRoot |
 | LoadActive | MethodDeclaration | L12–39 | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA?> Drilling.File.Product.CProductFile.LoadActive(System.Threading.CancellationToken) |
 | MatchesItem | LocalFunctionStatement | L27–30 | bool MatchesItem(System.Collections.Generic.IReadOnlyDictionary<string, string>) |
-| LoadCompactActive | MethodDeclaration | L41–107 | Drilling.Common.Product.ST_PRODUCT_DATA? Drilling.File.Product.CProductFile.LoadCompactActive(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
-| ShouldIncludeItem | LocalFunctionStatement | L63–66 | bool ShouldIncludeItem(System.Collections.Generic.KeyValuePair<string, string>) |
-| SelectName | LocalFunctionStatement | L79–82 | string SelectName(string) |
-| SelectValue | LocalFunctionStatement | L84–87 | string SelectValue(string) |
-| SaveActive | MethodDeclaration | L109–180 | System.Threading.Tasks.Task Drilling.File.Product.CProductFile.SaveActive(Drilling.Common.Product.ST_PRODUCT_DATA, System.Threading.CancellationToken) |
-| ShouldIncludeItem | LocalFunctionStatement | L118–121 | bool ShouldIncludeItem(System.Collections.Generic.KeyValuePair<string, string>) |
-| SelectKey | LocalFunctionStatement | L123–126 | string SelectKey(System.Collections.Generic.KeyValuePair<string, string>) |
-| BuildRecipeParameterCompactRow | LocalFunctionStatement | L128–131 | System.Collections.Generic.IReadOnlyDictionary<string, string> BuildRecipeParameterCompactRow(System.Collections.Generic.KeyValuePair<string, string>) |
-| SelectCellNo | LocalFunctionStatement | L158–161 | int SelectCellNo(Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT) |
-| SelectShotKey | LocalFunctionStatement | L163–166 | string SelectShotKey(Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT) |
-| WriteActiveProductAtomically | MethodDeclaration | L182–202 | void Drilling.File.Product.CProductFile.WriteActiveProductAtomically(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
-| ClearActive | MethodDeclaration | L204–209 | System.Threading.Tasks.Task Drilling.File.Product.CProductFile.ClearActive(System.Threading.CancellationToken) |
-| AppendHistory | MethodDeclaration | L211–223 | System.Threading.Tasks.Task Drilling.File.Product.CProductFile.AppendHistory(Drilling.Common.Product.ST_PRODUCT_HISTORY, System.Threading.CancellationToken) |
-| LoadHistory | MethodDeclaration | L225–256 | System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HISTORY>> Drilling.File.Product.CProductFile.LoadHistory(int, int, System.Threading.CancellationToken) |
-| SelectValue | LocalFunctionStatement | L229–232 | System.DateTime SelectValue(int) |
-| SelectHistoryPath | LocalFunctionStatement | L234–237 | string SelectHistoryPath(System.DateTime) |
-| ShouldIncludeItem | LocalFunctionStatement | L239–242 | bool ShouldIncludeItem(Drilling.Common.Product.ST_PRODUCT_HISTORY?) |
-| SelectItem | LocalFunctionStatement | L244–247 | Drilling.Common.Product.ST_PRODUCT_HISTORY SelectItem(Drilling.Common.Product.ST_PRODUCT_HISTORY?) |
-| SelectOccurredAt | LocalFunctionStatement | L249–252 | System.DateTimeOffset SelectOccurredAt(Drilling.Common.Product.ST_PRODUCT_HISTORY) |
-| GetActiveProductPath | MethodDeclaration | L258–261 | string Drilling.File.Product.CProductFile.GetActiveProductPath() |
-| GetHistoryPath | MethodDeclaration | L263–266 | string Drilling.File.Product.CProductFile.GetHistoryPath(System.DateTimeOffset) |
-| ValidateReview | MethodDeclaration | L268–279 | void Drilling.File.Product.CProductFile.ValidateReview(Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA) |
-| ParseCompactReview | MethodDeclaration | L281–338 | Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA Drilling.File.Product.CProductFile.ParseCompactReview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyDictionary<string, string>) |
-| ShouldIncludeItem | LocalFunctionStatement | L283–286 | bool ShouldIncludeItem(System.Collections.Generic.KeyValuePair<string, string>) |
-| SelectCellNo | LocalFunctionStatement | L288–291 | int SelectCellNo(Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT) |
-| SelectShotKey | LocalFunctionStatement | L293–296 | string SelectShotKey(Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT) |
-| ReadSection | MethodDeclaration | L340–368 | System.Collections.Generic.Dictionary<string, string> Drilling.File.Product.CProductFile.ReadSection(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string) |
-| MatchesSectionType | LocalFunctionStatement | L342–345 | bool MatchesSectionType(System.Collections.Generic.IReadOnlyDictionary<string, string>) |
-| HasSectionName | LocalFunctionStatement | L347–350 | bool HasSectionName(System.Collections.Generic.IReadOnlyDictionary<string, string>) |
-| SelectGroupKey | LocalFunctionStatement | L352–355 | string SelectGroupKey(System.Collections.Generic.IReadOnlyDictionary<string, string>) |
-| SelectKey | LocalFunctionStatement | L357–360 | string SelectKey(System.Linq.IGrouping<string, System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
-| SelectValue | LocalFunctionStatement | L362–365 | string SelectValue(System.Linq.IGrouping<string, System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
-| ReadAny | MethodDeclaration | L370–381 | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) |
-| AddCompactRow | MethodDeclaration | L383–386 | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) |
-| CompactRow | MethodDeclaration | L388–396 | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.Product.CProductFile.CompactRow(string, string, string) |
-| IsCompactProductCoreName | MethodDeclaration | L398–405 | bool Drilling.File.Product.CProductFile.IsCompactProductCoreName(string) |
-| DefaultText | MethodDeclaration | L407–410 | string Drilling.File.Product.CProductFile.DefaultText(string, string) |
-| ParseInt | MethodDeclaration | L412–415 | int Drilling.File.Product.CProductFile.ParseInt(string, int) |
-| ParseNullableInt | MethodDeclaration | L417–420 | int? Drilling.File.Product.CProductFile.ParseNullableInt(string) |
-| ParseNullableDouble | MethodDeclaration | L422–425 | double? Drilling.File.Product.CProductFile.ParseNullableDouble(string) |
-| FormatDouble | MethodDeclaration | L427–430 | string Drilling.File.Product.CProductFile.FormatDouble(double?) |
-| ToHistoryRow | MethodDeclaration | L432–446 | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.Product.CProductFile.ToHistoryRow(Drilling.Common.Product.ST_PRODUCT_HISTORY) |
-| ParseHistory | MethodDeclaration | L448–466 | Drilling.Common.Product.ST_PRODUCT_HISTORY? Drilling.File.Product.CProductFile.ParseHistory(System.Collections.Generic.IReadOnlyDictionary<string, string>) |
-| WriteRowsAtomically | MethodDeclaration | L468–487 | void Drilling.File.Product.CProductFile.WriteRowsAtomically(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
-| ParseEnum | MethodDeclaration | L489–493 | T Drilling.File.Product.CProductFile.ParseEnum<T>(string, T) |
-| FormatDate | MethodDeclaration | L495–498 | string Drilling.File.Product.CProductFile.FormatDate(System.DateTimeOffset?) |
-| ParseDate | MethodDeclaration | L500–503 | System.DateTimeOffset? Drilling.File.Product.CProductFile.ParseDate(string) |
-| DeleteIfExists | MethodDeclaration | L505–511 | void Drilling.File.Product.CProductFile.DeleteIfExists(string) |
+| LoadCompactActive | MethodDeclaration | L41–96 | Drilling.Common.Product.ST_PRODUCT_DATA? Drilling.File.Product.CProductFile.LoadCompactActive(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
+| ShouldIncludeItem | LocalFunctionStatement | L52–55 | bool ShouldIncludeItem(System.Collections.Generic.KeyValuePair<string, string>) |
+| SelectName | LocalFunctionStatement | L68–71 | string SelectName(string) |
+| SelectValue | LocalFunctionStatement | L73–76 | string SelectValue(string) |
+| SaveActive | MethodDeclaration | L98–169 | System.Threading.Tasks.Task Drilling.File.Product.CProductFile.SaveActive(Drilling.Common.Product.ST_PRODUCT_DATA, System.Threading.CancellationToken) |
+| ShouldIncludeItem | LocalFunctionStatement | L107–110 | bool ShouldIncludeItem(System.Collections.Generic.KeyValuePair<string, string>) |
+| SelectKey | LocalFunctionStatement | L112–115 | string SelectKey(System.Collections.Generic.KeyValuePair<string, string>) |
+| BuildRecipeParameterCompactRow | LocalFunctionStatement | L117–120 | System.Collections.Generic.IReadOnlyDictionary<string, string> BuildRecipeParameterCompactRow(System.Collections.Generic.KeyValuePair<string, string>) |
+| SelectCellNo | LocalFunctionStatement | L147–150 | int SelectCellNo(Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT) |
+| SelectShotKey | LocalFunctionStatement | L152–155 | string SelectShotKey(Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT) |
+| WriteActiveProductAtomically | MethodDeclaration | L171–191 | void Drilling.File.Product.CProductFile.WriteActiveProductAtomically(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
+| ClearActive | MethodDeclaration | L193–198 | System.Threading.Tasks.Task Drilling.File.Product.CProductFile.ClearActive(System.Threading.CancellationToken) |
+| AppendHistory | MethodDeclaration | L200–212 | System.Threading.Tasks.Task Drilling.File.Product.CProductFile.AppendHistory(Drilling.Common.Product.ST_PRODUCT_HISTORY, System.Threading.CancellationToken) |
+| LoadHistory | MethodDeclaration | L214–245 | System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HISTORY>> Drilling.File.Product.CProductFile.LoadHistory(int, int, System.Threading.CancellationToken) |
+| SelectValue | LocalFunctionStatement | L218–221 | System.DateTime SelectValue(int) |
+| SelectHistoryPath | LocalFunctionStatement | L223–226 | string SelectHistoryPath(System.DateTime) |
+| ShouldIncludeItem | LocalFunctionStatement | L228–231 | bool ShouldIncludeItem(Drilling.Common.Product.ST_PRODUCT_HISTORY?) |
+| SelectItem | LocalFunctionStatement | L233–236 | Drilling.Common.Product.ST_PRODUCT_HISTORY SelectItem(Drilling.Common.Product.ST_PRODUCT_HISTORY?) |
+| SelectOccurredAt | LocalFunctionStatement | L238–241 | System.DateTimeOffset SelectOccurredAt(Drilling.Common.Product.ST_PRODUCT_HISTORY) |
+| GetActiveProductPath | MethodDeclaration | L247–250 | string Drilling.File.Product.CProductFile.GetActiveProductPath() |
+| GetHistoryPath | MethodDeclaration | L252–255 | string Drilling.File.Product.CProductFile.GetHistoryPath(System.DateTimeOffset) |
+| ValidateReview | MethodDeclaration | L257–268 | void Drilling.File.Product.CProductFile.ValidateReview(Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA) |
+| ParseCompactReview | MethodDeclaration | L270–327 | Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA Drilling.File.Product.CProductFile.ParseCompactReview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyDictionary<string, string>) |
+| ShouldIncludeItem | LocalFunctionStatement | L272–275 | bool ShouldIncludeItem(System.Collections.Generic.KeyValuePair<string, string>) |
+| SelectCellNo | LocalFunctionStatement | L277–280 | int SelectCellNo(Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT) |
+| SelectShotKey | LocalFunctionStatement | L282–285 | string SelectShotKey(Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT) |
+| ReadSection | MethodDeclaration | L329–357 | System.Collections.Generic.Dictionary<string, string> Drilling.File.Product.CProductFile.ReadSection(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string) |
+| MatchesSectionType | LocalFunctionStatement | L331–334 | bool MatchesSectionType(System.Collections.Generic.IReadOnlyDictionary<string, string>) |
+| HasSectionName | LocalFunctionStatement | L336–339 | bool HasSectionName(System.Collections.Generic.IReadOnlyDictionary<string, string>) |
+| SelectGroupKey | LocalFunctionStatement | L341–344 | string SelectGroupKey(System.Collections.Generic.IReadOnlyDictionary<string, string>) |
+| SelectKey | LocalFunctionStatement | L346–349 | string SelectKey(System.Linq.IGrouping<string, System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
+| SelectValue | LocalFunctionStatement | L351–354 | string SelectValue(System.Linq.IGrouping<string, System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
+| ReadAny | MethodDeclaration | L359–370 | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) |
+| AddCompactRow | MethodDeclaration | L372–375 | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) |
+| CompactRow | MethodDeclaration | L377–385 | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.Product.CProductFile.CompactRow(string, string, string) |
+| IsCompactProductCoreName | MethodDeclaration | L387–390 | bool Drilling.File.Product.CProductFile.IsCompactProductCoreName(string) |
+| DefaultText | MethodDeclaration | L392–395 | string Drilling.File.Product.CProductFile.DefaultText(string, string) |
+| ParseInt | MethodDeclaration | L397–400 | int Drilling.File.Product.CProductFile.ParseInt(string, int) |
+| ParseNullableInt | MethodDeclaration | L402–405 | int? Drilling.File.Product.CProductFile.ParseNullableInt(string) |
+| ParseNullableDouble | MethodDeclaration | L407–410 | double? Drilling.File.Product.CProductFile.ParseNullableDouble(string) |
+| FormatDouble | MethodDeclaration | L412–415 | string Drilling.File.Product.CProductFile.FormatDouble(double?) |
+| ToHistoryRow | MethodDeclaration | L417–431 | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.Product.CProductFile.ToHistoryRow(Drilling.Common.Product.ST_PRODUCT_HISTORY) |
+| ParseHistory | MethodDeclaration | L433–451 | Drilling.Common.Product.ST_PRODUCT_HISTORY? Drilling.File.Product.CProductFile.ParseHistory(System.Collections.Generic.IReadOnlyDictionary<string, string>) |
+| WriteRowsAtomically | MethodDeclaration | L453–472 | void Drilling.File.Product.CProductFile.WriteRowsAtomically(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
+| ParseEnum | MethodDeclaration | L474–478 | T Drilling.File.Product.CProductFile.ParseEnum<T>(string, T) |
+| FormatDate | MethodDeclaration | L480–483 | string Drilling.File.Product.CProductFile.FormatDate(System.DateTimeOffset?) |
+| ParseDate | MethodDeclaration | L485–488 | System.DateTimeOffset? Drilling.File.Product.CProductFile.ParseDate(string) |
+| DeleteIfExists | MethodDeclaration | L490–496 | void Drilling.File.Product.CProductFile.DeleteIfExists(string) |
 
 ## 멤버별 상세 계약·호출·처리 해설
 
 ### FieldDeclaration `DefaultReviewBeamNo` · L8–8
 
-[Drilling.File/Product/CProductFile.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L8-L8)
+[Drilling.File/Product/CProductFile.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L8-L8)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -107,7 +107,7 @@
 
 ### FieldDeclaration `ActiveHeaders` · L9–9
 
-[Drilling.File/Product/CProductFile.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L9-L9)
+[Drilling.File/Product/CProductFile.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L9-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -128,7 +128,7 @@
 
 ### FieldDeclaration `HistoryHeaders` · L10–10
 
-[Drilling.File/Product/CProductFile.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L10-L10)
+[Drilling.File/Product/CProductFile.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -149,7 +149,7 @@
 
 ### FieldDeclaration `_productRoot` · L11–11
 
-[Drilling.File/Product/CProductFile.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L11-L11)
+[Drilling.File/Product/CProductFile.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -179,7 +179,7 @@
 
 ### MethodDeclaration `LoadActive` · L12–39
 
-[Drilling.File/Product/CProductFile.cs:12–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L12-L39)
+[Drilling.File/Product/CProductFile.cs:12–39](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L12-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -201,7 +201,7 @@
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 14 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
-| 15 | GetActiveProductPath | resolved | string Drilling.File.Product.CProductFile.GetActiveProductPath() · Drilling.File/Product/CProductFile.cs:258 |
+| 15 | GetActiveProductPath | resolved | string Drilling.File.Product.CProductFile.GetActiveProductPath() · Drilling.File/Product/CProductFile.cs:247 |
 | 16 | System.IO.File.Exists | resolved | bool System.IO.File.Exists(string?) |
 | 18 | Task.FromResult<ST_PRODUCT_DATA?> | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA?> System.Threading.Tasks.Task.FromResult<Drilling.Common.Product.ST_PRODUCT_DATA?>(Drilling.Common.Product.ST_PRODUCT_DATA?) |
 | 21 | CCsvParser.Read | resolved | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.Parser.CCsvParser.Read(string) · Drilling.File/Parser/CCsvParser.cs:12 |
@@ -260,7 +260,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L27–30
 
-[Drilling.File/Product/CProductFile.cs:27–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L27-L30)
+[Drilling.File/Product/CProductFile.cs:27–30](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L27-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -294,9 +294,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `LoadCompactActive` · L41–107
+### MethodDeclaration `LoadCompactActive` · L41–96
 
-[Drilling.File/Product/CProductFile.cs:41–107](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L41-L107)
+[Drilling.File/Product/CProductFile.cs:41–96](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L41-L96)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -315,50 +315,50 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L37-L37) | LoadCompactActive | False |
+| [Drilling.File/Product/CProductFile.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L37-L37) | LoadCompactActive | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 43 | ReadSection | resolved | System.Collections.Generic.Dictionary<string, string> Drilling.File.Product.CProductFile.ReadSection(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string) · Drilling.File/Product/CProductFile.cs:340 |
-| 44 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
+| 43 | ReadSection | resolved | System.Collections.Generic.Dictionary<string, string> Drilling.File.Product.CProductFile.ReadSection(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string) · Drilling.File/Product/CProductFile.cs:329 |
+| 44 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
 | 45 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 50 | new HashSet<string> | resolved | System.Collections.Generic.HashSet<string>.HashSet(System.Collections.Generic.IEqualityComparer<string>?) |
-| 62 | ReadSection | resolved | System.Collections.Generic.Dictionary<string, string> Drilling.File.Product.CProductFile.ReadSection(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string) · Drilling.File/Product/CProductFile.cs:340 |
-| 68 | productValues.Where | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>.Where<System.Collections.Generic.KeyValuePair<string, string>>(System.Func<System.Collections.Generic.KeyValuePair<string, string>, bool>) |
-| 70 | parameters.TryAdd | resolved | bool System.Collections.Generic.Dictionary<string, string>.TryAdd(string, string) |
-| 73 | ReadSection | resolved | System.Collections.Generic.Dictionary<string, string> Drilling.File.Product.CProductFile.ReadSection(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string) · Drilling.File/Product/CProductFile.cs:340 |
-| 74 | ReadSection | resolved | System.Collections.Generic.Dictionary<string, string> Drilling.File.Product.CProductFile.ReadSection(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string) · Drilling.File/Product/CProductFile.cs:340 |
-| 75 | ReadSection | resolved | System.Collections.Generic.Dictionary<string, string> Drilling.File.Product.CProductFile.ReadSection(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string) · Drilling.File/Product/CProductFile.cs:340 |
-| 76 | ReadSection | resolved | System.Collections.Generic.Dictionary<string, string> Drilling.File.Product.CProductFile.ReadSection(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string) · Drilling.File/Product/CProductFile.cs:340 |
-| 77 | ParseCompactReview | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA Drilling.File.Product.CProductFile.ParseCompactReview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.File/Product/CProductFile.cs:281 |
-| 78 | ValidateReview | resolved | void Drilling.File.Product.CProductFile.ValidateReview(Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA) · Drilling.File/Product/CProductFile.cs:268 |
-| 89 | CProductManager.ProductFieldNames.ToDictionary | resolved | System.Collections.Generic.Dictionary<string, string> System.Collections.Generic.IEnumerable<string>.ToDictionary<string, string, string>(System.Func<string, string>, System.Func<string, string>, System.Collections.Generic.IEqualityComparer<string>?) |
-| 91 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 92 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 93 | new ST_PRODUCT_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_DATA.ST_PRODUCT_DATA(Drilling.Common.Product.ST_PRODUCT_INFO, Drilling.Common.Product.ST_PRODUCT_RECIPE_DATA, Drilling.Common.Product.ST_PRODUCT_ALIGN_DATA, Drilling.Common.Product.ST_PRODUCT_DISTORTION_DATA, Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA, Drilling.Common.Product.ST_PRODUCT_RUNTIME_DATA) · Drilling.Common/Product/CProductManager.cs:1047 |
-| 94 | new ST_PRODUCT_INFO | resolved | Drilling.Common.Product.ST_PRODUCT_INFO.ST_PRODUCT_INFO(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Product/CProductManager.cs:1017 |
-| 95 | new ST_PRODUCT_RECIPE_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_RECIPE_DATA.ST_PRODUCT_RECIPE_DATA(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Product/CProductManager.cs:1034 |
-| 96 | new ST_PRODUCT_ALIGN_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_ALIGN_DATA.ST_PRODUCT_ALIGN_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, string, double?, double?, double?) · Drilling.Common/Product/CProductManager.cs:996 |
-| 97 | ParseEnum | resolved | Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE Drilling.File.Product.CProductFile.ParseEnum<Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE>(string, Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE) · Drilling.File/Product/CProductFile.cs:489 |
-| 97 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 98 | DefaultText | resolved | string Drilling.File.Product.CProductFile.DefaultText(string, string) · Drilling.File/Product/CProductFile.cs:407 |
-| 98 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 99 | ParseNullableDouble | resolved | double? Drilling.File.Product.CProductFile.ParseNullableDouble(string) · Drilling.File/Product/CProductFile.cs:422 |
-| 99 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 100 | ParseNullableDouble | resolved | double? Drilling.File.Product.CProductFile.ParseNullableDouble(string) · Drilling.File/Product/CProductFile.cs:422 |
-| 100 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 101 | ParseNullableDouble | resolved | double? Drilling.File.Product.CProductFile.ParseNullableDouble(string) · Drilling.File/Product/CProductFile.cs:422 |
-| 101 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 103 | new ST_PRODUCT_DISTORTION_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_DISTORTION_DATA.ST_PRODUCT_DISTORTION_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, string, double?) · Drilling.Common/Product/CProductManager.cs:997 |
-| 103 | ParseEnum | resolved | Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE Drilling.File.Product.CProductFile.ParseEnum<Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE>(string, Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE) · Drilling.File/Product/CProductFile.cs:489 |
-| 103 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 103 | DefaultText | resolved | string Drilling.File.Product.CProductFile.DefaultText(string, string) · Drilling.File/Product/CProductFile.cs:407 |
-| 103 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 103 | ParseNullableDouble | resolved | double? Drilling.File.Product.CProductFile.ParseNullableDouble(string) · Drilling.File/Product/CProductFile.cs:422 |
-| 103 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 105 | new ST_PRODUCT_RUNTIME_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_RUNTIME_DATA.ST_PRODUCT_RUNTIME_DATA(System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT>) · Drilling.Common/Product/CProductManager.cs:1035 |
+| 50 | new HashSet<string> | resolved | System.Collections.Generic.HashSet<string>.HashSet(System.Collections.Generic.IEnumerable<string>, System.Collections.Generic.IEqualityComparer<string>?) |
+| 51 | ReadSection | resolved | System.Collections.Generic.Dictionary<string, string> Drilling.File.Product.CProductFile.ReadSection(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string) · Drilling.File/Product/CProductFile.cs:329 |
+| 57 | productValues.Where | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>.Where<System.Collections.Generic.KeyValuePair<string, string>>(System.Func<System.Collections.Generic.KeyValuePair<string, string>, bool>) |
+| 59 | parameters.TryAdd | resolved | bool System.Collections.Generic.Dictionary<string, string>.TryAdd(string, string) |
+| 62 | ReadSection | resolved | System.Collections.Generic.Dictionary<string, string> Drilling.File.Product.CProductFile.ReadSection(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string) · Drilling.File/Product/CProductFile.cs:329 |
+| 63 | ReadSection | resolved | System.Collections.Generic.Dictionary<string, string> Drilling.File.Product.CProductFile.ReadSection(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string) · Drilling.File/Product/CProductFile.cs:329 |
+| 64 | ReadSection | resolved | System.Collections.Generic.Dictionary<string, string> Drilling.File.Product.CProductFile.ReadSection(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string) · Drilling.File/Product/CProductFile.cs:329 |
+| 65 | ReadSection | resolved | System.Collections.Generic.Dictionary<string, string> Drilling.File.Product.CProductFile.ReadSection(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string) · Drilling.File/Product/CProductFile.cs:329 |
+| 66 | ParseCompactReview | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA Drilling.File.Product.CProductFile.ParseCompactReview(System.Collections.Generic.IReadOnlyDictionary<string, string>, System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.File/Product/CProductFile.cs:270 |
+| 67 | ValidateReview | resolved | void Drilling.File.Product.CProductFile.ValidateReview(Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA) · Drilling.File/Product/CProductFile.cs:257 |
+| 78 | CProductManager.ProductFieldNames.ToDictionary | resolved | System.Collections.Generic.Dictionary<string, string> System.Collections.Generic.IEnumerable<string>.ToDictionary<string, string, string>(System.Func<string, string>, System.Func<string, string>, System.Collections.Generic.IEqualityComparer<string>?) |
+| 80 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 81 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 82 | new ST_PRODUCT_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_DATA.ST_PRODUCT_DATA(Drilling.Common.Product.ST_PRODUCT_INFO, Drilling.Common.Product.ST_PRODUCT_RECIPE_DATA, Drilling.Common.Product.ST_PRODUCT_ALIGN_DATA, Drilling.Common.Product.ST_PRODUCT_DISTORTION_DATA, Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA, Drilling.Common.Product.ST_PRODUCT_RUNTIME_DATA) · Drilling.Common/Product/CProductManager.cs:991 |
+| 83 | new ST_PRODUCT_INFO | resolved | Drilling.Common.Product.ST_PRODUCT_INFO.ST_PRODUCT_INFO(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Product/CProductManager.cs:961 |
+| 84 | new ST_PRODUCT_RECIPE_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_RECIPE_DATA.ST_PRODUCT_RECIPE_DATA(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Product/CProductManager.cs:978 |
+| 85 | new ST_PRODUCT_ALIGN_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_ALIGN_DATA.ST_PRODUCT_ALIGN_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, string, double?, double?, double?) · Drilling.Common/Product/CProductManager.cs:940 |
+| 86 | ParseEnum | resolved | Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE Drilling.File.Product.CProductFile.ParseEnum<Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE>(string, Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE) · Drilling.File/Product/CProductFile.cs:474 |
+| 86 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 87 | DefaultText | resolved | string Drilling.File.Product.CProductFile.DefaultText(string, string) · Drilling.File/Product/CProductFile.cs:392 |
+| 87 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 88 | ParseNullableDouble | resolved | double? Drilling.File.Product.CProductFile.ParseNullableDouble(string) · Drilling.File/Product/CProductFile.cs:407 |
+| 88 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 89 | ParseNullableDouble | resolved | double? Drilling.File.Product.CProductFile.ParseNullableDouble(string) · Drilling.File/Product/CProductFile.cs:407 |
+| 89 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 90 | ParseNullableDouble | resolved | double? Drilling.File.Product.CProductFile.ParseNullableDouble(string) · Drilling.File/Product/CProductFile.cs:407 |
+| 90 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 92 | new ST_PRODUCT_DISTORTION_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_DISTORTION_DATA.ST_PRODUCT_DISTORTION_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, string, double?) · Drilling.Common/Product/CProductManager.cs:941 |
+| 92 | ParseEnum | resolved | Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE Drilling.File.Product.CProductFile.ParseEnum<Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE>(string, Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE) · Drilling.File/Product/CProductFile.cs:474 |
+| 92 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 92 | DefaultText | resolved | string Drilling.File.Product.CProductFile.DefaultText(string, string) · Drilling.File/Product/CProductFile.cs:392 |
+| 92 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 92 | ParseNullableDouble | resolved | double? Drilling.File.Product.CProductFile.ParseNullableDouble(string) · Drilling.File/Product/CProductFile.cs:407 |
+| 92 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 94 | new ST_PRODUCT_RUNTIME_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_RUNTIME_DATA.ST_PRODUCT_RUNTIME_DATA(System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT>) · Drilling.Common/Product/CProductManager.cs:979 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -373,62 +373,62 @@ flowchart TD
 | 45 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(glassId) |
 | 45 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(glassId)) |
 | 47 | return | 호출자에게 값 또는 제어를 반환합니다: return null; |
-| 50 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "H_GLASSID", "LOTID", "PROCESS_ID", "PPID", "PRODUCT_STATE", "JUDGEMENT", "CREATED_AT", "STARTED_AT", "COMPLETED_AT" } |
-| 50 | local-declaration | 지역 변수를 선언합니다: var reservedNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "H_GLASSID", "LOTID", "PROCESS_ID", "PPID", "PRODUCT_STATE", "JUDGEMENT", "CREATED_AT", "STARTED_AT", "COMPLETED_AT" }; |
-| 50 | variable-initializer | 변수의 초기값을 지정합니다: reservedNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "H_GLASSID", "LOTID", "PROCESS_ID", "PPID", "PRODUCT_STATE", "JUDGEMENT", "CREATED_AT", "STARTED_AT", "COMPLETED_AT" } |
-| 62 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSection(rows, "RECIPE") |
-| 62 | local-declaration | 지역 변수를 선언합니다: var parameters = ReadSection(rows, "RECIPE"); |
-| 62 | variable-initializer | 변수의 초기값을 지정합니다: parameters = ReadSection(rows, "RECIPE") |
-| 68 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: productValues.Where(ShouldIncludeItem) |
-| 68 | foreach | 컬렉션 요소를 순회합니다: foreach (var item in productValues.Where(ShouldIncludeItem)) |
-| 70 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryAdd(item.Key, item.Value) |
-| 73 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSection(rows, "ALIGN") |
-| 73 | local-declaration | 지역 변수를 선언합니다: var alignValues = ReadSection(rows, "ALIGN"); |
-| 73 | variable-initializer | 변수의 초기값을 지정합니다: alignValues = ReadSection(rows, "ALIGN") |
-| 74 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSection(rows, "DISTORTION") |
-| 74 | local-declaration | 지역 변수를 선언합니다: var distortionValues = ReadSection(rows, "DISTORTION"); |
-| 74 | variable-initializer | 변수의 초기값을 지정합니다: distortionValues = ReadSection(rows, "DISTORTION") |
-| 75 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSection(rows, "REVIEW") |
-| 75 | local-declaration | 지역 변수를 선언합니다: var reviewValues = ReadSection(rows, "REVIEW"); |
-| 75 | variable-initializer | 변수의 초기값을 지정합니다: reviewValues = ReadSection(rows, "REVIEW") |
-| 76 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSection(rows, "REVIEW_RESULT") |
-| 76 | local-declaration | 지역 변수를 선언합니다: var reviewResultValues = ReadSection(rows, "REVIEW_RESULT"); |
-| 76 | variable-initializer | 변수의 초기값을 지정합니다: reviewResultValues = ReadSection(rows, "REVIEW_RESULT") |
-| 77 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseCompactReview(reviewValues, reviewResultValues) |
-| 77 | local-declaration | 지역 변수를 선언합니다: var review = ParseCompactReview(reviewValues, reviewResultValues); |
-| 77 | variable-initializer | 변수의 초기값을 지정합니다: review = ParseCompactReview(reviewValues, reviewResultValues) |
-| 78 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateReview(review) |
-| 89 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CProductManager.ProductFieldNames.ToDictionary(SelectName, SelectValue, StringComparer.OrdinalIgnoreCase) |
-| 89 | local-declaration | 지역 변수를 선언합니다: var normalizedProductValues = CProductManager.ProductFieldNames.ToDictionary(SelectName, SelectValue, StringComparer.OrdinalIgnoreCase); |
-| 89 | variable-initializer | 변수의 초기값을 지정합니다: normalizedProductValues = CProductManager.ProductFieldNames.ToDictionary(SelectName, SelectValue, StringComparer.OrdinalIgnoreCase) |
-| 90 | assignment | 값을 대상에 대입합니다: normalizedProductValues["H_GLASSID"] = glassId |
-| 91 | assignment | 값을 대상에 대입합니다: normalizedProductValues["LOTID"] = ReadAny(productValues, "LOTID") |
-| 91 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(productValues, "LOTID") |
-| 92 | assignment | 값을 대상에 대입합니다: normalizedProductValues["PPID"] = ReadAny(productValues, "PPID") |
-| 92 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(productValues, "PPID") |
-| 93 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_DATA( new ST_PRODUCT_INFO(normalizedProductValues), new ST_PRODUCT_RECIPE_DATA(parameters), new ST_PRODUCT_ALIGN_DATA( ParseEnum(ReadAny(alignValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), Default… |
-| 93 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_PRODUCT_DATA( new ST_PRODUCT_INFO(normalizedProductValues), new ST_PRODUCT_RECIPE_DATA(parameters), new ST_PRODUCT_ALIGN_DATA( ParseEnum(ReadAny(alignValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), DefaultTex |
-| 94 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_INFO(normalizedProductValues) |
-| 95 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_RECIPE_DATA(parameters) |
-| 96 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_ALIGN_DATA( ParseEnum(ReadAny(alignValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), DefaultText(ReadAny(alignValues, "RESULT"), "PENDING"), ParseNullableDouble(ReadAny(alignValues, "OFFSET_X")), Par… |
-| 97 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseEnum(ReadAny(alignValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted) |
-| 97 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(alignValues, "STATE") |
-| 98 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DefaultText(ReadAny(alignValues, "RESULT"), "PENDING") |
-| 98 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(alignValues, "RESULT") |
-| 99 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableDouble(ReadAny(alignValues, "OFFSET_X")) |
-| 99 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(alignValues, "OFFSET_X") |
-| 100 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableDouble(ReadAny(alignValues, "OFFSET_Y")) |
-| 100 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(alignValues, "OFFSET_Y") |
-| 101 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableDouble(ReadAny(alignValues, "ROTATION")) |
-| 101 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(alignValues, "ROTATION") |
-| 103 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_DISTORTION_DATA(ParseEnum(ReadAny(distortionValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), DefaultText(ReadAny(distortionValues, "RESULT"), "PENDING"), ParseNullableDouble(ReadAny(distortionValues… |
-| 103 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseEnum(ReadAny(distortionValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted) |
-| 103 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(distortionValues, "STATE") |
-| 103 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DefaultText(ReadAny(distortionValues, "RESULT"), "PENDING") |
-| 103 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(distortionValues, "RESULT") |
-| 103 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableDouble(ReadAny(distortionValues, "MAX_DA")) |
-| 103 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(distortionValues, "MAX_DA") |
-| 105 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_RUNTIME_DATA([]) |
+| 50 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet<string>(CProductManager.ProductFieldNames, StringComparer.OrdinalIgnoreCase) |
+| 50 | local-declaration | 지역 변수를 선언합니다: var reservedNames = new HashSet<string>(CProductManager.ProductFieldNames, StringComparer.OrdinalIgnoreCase); |
+| 50 | variable-initializer | 변수의 초기값을 지정합니다: reservedNames = new HashSet<string>(CProductManager.ProductFieldNames, StringComparer.OrdinalIgnoreCase) |
+| 51 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSection(rows, "RECIPE") |
+| 51 | local-declaration | 지역 변수를 선언합니다: var parameters = ReadSection(rows, "RECIPE"); |
+| 51 | variable-initializer | 변수의 초기값을 지정합니다: parameters = ReadSection(rows, "RECIPE") |
+| 57 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: productValues.Where(ShouldIncludeItem) |
+| 57 | foreach | 컬렉션 요소를 순회합니다: foreach (var item in productValues.Where(ShouldIncludeItem)) |
+| 59 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.TryAdd(item.Key, item.Value) |
+| 62 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSection(rows, "ALIGN") |
+| 62 | local-declaration | 지역 변수를 선언합니다: var alignValues = ReadSection(rows, "ALIGN"); |
+| 62 | variable-initializer | 변수의 초기값을 지정합니다: alignValues = ReadSection(rows, "ALIGN") |
+| 63 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSection(rows, "DISTORTION") |
+| 63 | local-declaration | 지역 변수를 선언합니다: var distortionValues = ReadSection(rows, "DISTORTION"); |
+| 63 | variable-initializer | 변수의 초기값을 지정합니다: distortionValues = ReadSection(rows, "DISTORTION") |
+| 64 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSection(rows, "REVIEW") |
+| 64 | local-declaration | 지역 변수를 선언합니다: var reviewValues = ReadSection(rows, "REVIEW"); |
+| 64 | variable-initializer | 변수의 초기값을 지정합니다: reviewValues = ReadSection(rows, "REVIEW") |
+| 65 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSection(rows, "REVIEW_RESULT") |
+| 65 | local-declaration | 지역 변수를 선언합니다: var reviewResultValues = ReadSection(rows, "REVIEW_RESULT"); |
+| 65 | variable-initializer | 변수의 초기값을 지정합니다: reviewResultValues = ReadSection(rows, "REVIEW_RESULT") |
+| 66 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseCompactReview(reviewValues, reviewResultValues) |
+| 66 | local-declaration | 지역 변수를 선언합니다: var review = ParseCompactReview(reviewValues, reviewResultValues); |
+| 66 | variable-initializer | 변수의 초기값을 지정합니다: review = ParseCompactReview(reviewValues, reviewResultValues) |
+| 67 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateReview(review) |
+| 78 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CProductManager.ProductFieldNames.ToDictionary(SelectName, SelectValue, StringComparer.OrdinalIgnoreCase) |
+| 78 | local-declaration | 지역 변수를 선언합니다: var normalizedProductValues = CProductManager.ProductFieldNames.ToDictionary(SelectName, SelectValue, StringComparer.OrdinalIgnoreCase); |
+| 78 | variable-initializer | 변수의 초기값을 지정합니다: normalizedProductValues = CProductManager.ProductFieldNames.ToDictionary(SelectName, SelectValue, StringComparer.OrdinalIgnoreCase) |
+| 79 | assignment | 값을 대상에 대입합니다: normalizedProductValues["H_GLASSID"] = glassId |
+| 80 | assignment | 값을 대상에 대입합니다: normalizedProductValues["LOTID"] = ReadAny(productValues, "LOTID") |
+| 80 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(productValues, "LOTID") |
+| 81 | assignment | 값을 대상에 대입합니다: normalizedProductValues["PPID"] = ReadAny(productValues, "PPID") |
+| 81 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(productValues, "PPID") |
+| 82 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_DATA( new ST_PRODUCT_INFO(normalizedProductValues), new ST_PRODUCT_RECIPE_DATA(parameters), new ST_PRODUCT_ALIGN_DATA( ParseEnum(ReadAny(alignValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), Default… |
+| 82 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_PRODUCT_DATA( new ST_PRODUCT_INFO(normalizedProductValues), new ST_PRODUCT_RECIPE_DATA(parameters), new ST_PRODUCT_ALIGN_DATA( ParseEnum(ReadAny(alignValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), DefaultTex |
+| 83 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_INFO(normalizedProductValues) |
+| 84 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_RECIPE_DATA(parameters) |
+| 85 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_ALIGN_DATA( ParseEnum(ReadAny(alignValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), DefaultText(ReadAny(alignValues, "RESULT"), "PENDING"), ParseNullableDouble(ReadAny(alignValues, "OFFSET_X")), Par… |
+| 86 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseEnum(ReadAny(alignValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted) |
+| 86 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(alignValues, "STATE") |
+| 87 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DefaultText(ReadAny(alignValues, "RESULT"), "PENDING") |
+| 87 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(alignValues, "RESULT") |
+| 88 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableDouble(ReadAny(alignValues, "OFFSET_X")) |
+| 88 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(alignValues, "OFFSET_X") |
+| 89 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableDouble(ReadAny(alignValues, "OFFSET_Y")) |
+| 89 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(alignValues, "OFFSET_Y") |
+| 90 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableDouble(ReadAny(alignValues, "ROTATION")) |
+| 90 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(alignValues, "ROTATION") |
+| 92 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_DISTORTION_DATA(ParseEnum(ReadAny(distortionValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), DefaultText(ReadAny(distortionValues, "RESULT"), "PENDING"), ParseNullableDouble(ReadAny(distortionValues… |
+| 92 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseEnum(ReadAny(distortionValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted) |
+| 92 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(distortionValues, "STATE") |
+| 92 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DefaultText(ReadAny(distortionValues, "RESULT"), "PENDING") |
+| 92 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(distortionValues, "RESULT") |
+| 92 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableDouble(ReadAny(distortionValues, "MAX_DA")) |
+| 92 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(distortionValues, "MAX_DA") |
+| 94 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_RUNTIME_DATA([]) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
@@ -437,15 +437,15 @@ flowchart TD
  M["LoadCompactActive"]
  N0["L45 if"]
  M -->|포함| N0
- N1["L68 foreach"]
+ N1["L57 foreach"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `ShouldIncludeItem` · L63–66
+### LocalFunctionStatement `ShouldIncludeItem` · L52–55
 
-[Drilling.File/Product/CProductFile.cs:63–66](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L63-L66)
+[Drilling.File/Product/CProductFile.cs:52–55](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L52-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -466,20 +466,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 65 | reservedNames.Contains | resolved | bool System.Collections.Generic.HashSet<string>.Contains(string) |
+| 54 | reservedNames.Contains | resolved | bool System.Collections.Generic.HashSet<string>.Contains(string) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 65 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reservedNames.Contains(item.Key) |
-| 65 | return | 호출자에게 값 또는 제어를 반환합니다: return !reservedNames.Contains(item.Key); |
+| 54 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reservedNames.Contains(item.Key) |
+| 54 | return | 호출자에게 값 또는 제어를 반환합니다: return !reservedNames.Contains(item.Key); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectName` · L79–82
+### LocalFunctionStatement `SelectName` · L68–71
 
-[Drilling.File/Product/CProductFile.cs:79–82](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L79-L82)
+[Drilling.File/Product/CProductFile.cs:68–71](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L68-L71)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -500,13 +500,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 81 | return | 호출자에게 값 또는 제어를 반환합니다: return name; |
+| 70 | return | 호출자에게 값 또는 제어를 반환합니다: return name; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectValue` · L84–87
+### LocalFunctionStatement `SelectValue` · L73–76
 
-[Drilling.File/Product/CProductFile.cs:84–87](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L84-L87)
+[Drilling.File/Product/CProductFile.cs:73–76](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L73-L76)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -527,20 +527,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 86 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
+| 75 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 86 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(productValues, name) |
-| 86 | return | 호출자에게 값 또는 제어를 반환합니다: return ReadAny(productValues, name); |
+| 75 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(productValues, name) |
+| 75 | return | 호출자에게 값 또는 제어를 반환합니다: return ReadAny(productValues, name); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `SaveActive` · L109–180
+### MethodDeclaration `SaveActive` · L98–169
 
-[Drilling.File/Product/CProductFile.cs:109–180](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L109-L180)
+[Drilling.File/Product/CProductFile.cs:98–169](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L98-L169)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -562,150 +562,150 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 111 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
-| 112 | new List<IReadOnlyDictionary<string, string>> | resolved | System.Collections.Generic.List<System.Collections.Generic.IReadOnlyDictionary<string, string>>.List() |
-| 115 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 115 | product.Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1019 |
-| 133 | rows.AddRange | resolved | void System.Collections.Generic.List<System.Collections.Generic.IReadOnlyDictionary<string, string>>.AddRange(System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
-| 133 | product.Parameters.Where(ShouldIncludeItem).OrderBy(SelectKey, StringComparer.OrdinalIgnoreCase).Select | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>.Select<System.Collections.Generic.KeyValuePair<string, string>, System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Func<System.Collections.Generic.KeyValuePair<string, string>, System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
-| 133 | product.Parameters.Where(ShouldIncludeItem).OrderBy | resolved | System.Linq.IOrderedEnumerable<System.Collections.Generic.KeyValuePair<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>.OrderBy<System.Collections.Generic.KeyValuePair<string, string>, string>(System.Func<System.Collections.Generic.KeyValuePair<string, string>, string>, System.Collections.Generic.IComparer<string>?) |
-| 133 | product.Parameters.Where | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>.Where<System.Collections.Generic.KeyValuePair<string, string>>(System.Func<System.Collections.Generic.KeyValuePair<string, string>, bool>) |
-| 134 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 134 | product.Align.State.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 134 | product.Align.State.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
-| 135 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 136 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 136 | FormatDouble | resolved | string Drilling.File.Product.CProductFile.FormatDouble(double?) · Drilling.File/Product/CProductFile.cs:427 |
-| 137 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 137 | FormatDouble | resolved | string Drilling.File.Product.CProductFile.FormatDouble(double?) · Drilling.File/Product/CProductFile.cs:427 |
-| 138 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 138 | FormatDouble | resolved | string Drilling.File.Product.CProductFile.FormatDouble(double?) · Drilling.File/Product/CProductFile.cs:427 |
-| 139 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 139 | product.Distortion.State.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 139 | product.Distortion.State.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
-| 140 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 141 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 141 | FormatDouble | resolved | string Drilling.File.Product.CProductFile.FormatDouble(double?) · Drilling.File/Product/CProductFile.cs:427 |
-| 142 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 142 | product.Review.State.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 142 | product.Review.State.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
-| 143 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 144 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 145 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 146 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 147 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 147 | product.Review.BeamNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 148 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 148 | .ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 149 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 150 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 151 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 151 | product.Review.FineLineCount.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 152 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 152 | product.Review.TotalCount.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 155 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 155 | FormatDate | resolved | string Drilling.File.Product.CProductFile.FormatDate(System.DateTimeOffset?) · Drilling.File/Product/CProductFile.cs:495 |
-| 168 | product.Review.Results.OrderBy(SelectCellNo).ThenBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT> System.Linq.IOrderedEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>.ThenBy<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT, string>(System.Func<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT, string>, System.Collections.Generic.IComparer<string>?) |
-| 168 | product.Review.Results.OrderBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT> System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>.OrderBy<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT, int>(System.Func<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT, int>) |
-| 170 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 170 | result.HeadNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 171 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 171 | result.CellNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 172 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 172 | result.BeamNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 173 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 173 | result.ErrorX.ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
-| 174 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 174 | result.ErrorY.ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
-| 175 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 178 | WriteActiveProductAtomically | resolved | void Drilling.File.Product.CProductFile.WriteActiveProductAtomically(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>) · Drilling.File/Product/CProductFile.cs:182 |
+| 100 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
+| 101 | new List<IReadOnlyDictionary<string, string>> | resolved | System.Collections.Generic.List<System.Collections.Generic.IReadOnlyDictionary<string, string>>.List() |
+| 104 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 104 | product.Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:963 |
+| 122 | rows.AddRange | resolved | void System.Collections.Generic.List<System.Collections.Generic.IReadOnlyDictionary<string, string>>.AddRange(System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
+| 122 | product.Parameters.Where(ShouldIncludeItem).OrderBy(SelectKey, StringComparer.OrdinalIgnoreCase).Select | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>.Select<System.Collections.Generic.KeyValuePair<string, string>, System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Func<System.Collections.Generic.KeyValuePair<string, string>, System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
+| 122 | product.Parameters.Where(ShouldIncludeItem).OrderBy | resolved | System.Linq.IOrderedEnumerable<System.Collections.Generic.KeyValuePair<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>.OrderBy<System.Collections.Generic.KeyValuePair<string, string>, string>(System.Func<System.Collections.Generic.KeyValuePair<string, string>, string>, System.Collections.Generic.IComparer<string>?) |
+| 122 | product.Parameters.Where | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>.Where<System.Collections.Generic.KeyValuePair<string, string>>(System.Func<System.Collections.Generic.KeyValuePair<string, string>, bool>) |
+| 123 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 123 | product.Align.State.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
+| 123 | product.Align.State.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
+| 124 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 125 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 125 | FormatDouble | resolved | string Drilling.File.Product.CProductFile.FormatDouble(double?) · Drilling.File/Product/CProductFile.cs:412 |
+| 126 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 126 | FormatDouble | resolved | string Drilling.File.Product.CProductFile.FormatDouble(double?) · Drilling.File/Product/CProductFile.cs:412 |
+| 127 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 127 | FormatDouble | resolved | string Drilling.File.Product.CProductFile.FormatDouble(double?) · Drilling.File/Product/CProductFile.cs:412 |
+| 128 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 128 | product.Distortion.State.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
+| 128 | product.Distortion.State.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
+| 129 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 130 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 130 | FormatDouble | resolved | string Drilling.File.Product.CProductFile.FormatDouble(double?) · Drilling.File/Product/CProductFile.cs:412 |
+| 131 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 131 | product.Review.State.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
+| 131 | product.Review.State.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
+| 132 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 133 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 134 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 135 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 136 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 136 | product.Review.BeamNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 137 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 137 | .ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 138 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 139 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 140 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 140 | product.Review.FineLineCount.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 141 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 141 | product.Review.TotalCount.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 144 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 144 | FormatDate | resolved | string Drilling.File.Product.CProductFile.FormatDate(System.DateTimeOffset?) · Drilling.File/Product/CProductFile.cs:480 |
+| 157 | product.Review.Results.OrderBy(SelectCellNo).ThenBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT> System.Linq.IOrderedEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>.ThenBy<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT, string>(System.Func<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT, string>, System.Collections.Generic.IComparer<string>?) |
+| 157 | product.Review.Results.OrderBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT> System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>.OrderBy<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT, int>(System.Func<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT, int>) |
+| 159 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 159 | result.HeadNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 160 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 160 | result.CellNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 161 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 161 | result.BeamNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 162 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 162 | result.ErrorX.ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
+| 163 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 163 | result.ErrorY.ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
+| 164 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:372 |
+| 167 | WriteActiveProductAtomically | resolved | void Drilling.File.Product.CProductFile.WriteActiveProductAtomically(System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>) · Drilling.File/Product/CProductFile.cs:171 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 111 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested() |
-| 112 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<IReadOnlyDictionary<string, string>>() |
-| 112 | local-declaration | 지역 변수를 선언합니다: var rows = new List<IReadOnlyDictionary<string, string>>(); |
-| 112 | variable-initializer | 변수의 초기값을 지정합니다: rows = new List<IReadOnlyDictionary<string, string>>() |
-| 113 | foreach | 컬렉션 요소를 순회합니다: foreach (var name in CProductManager.ProductFieldNames) |
-| 115 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "PRODUCT", name, product.Product.Get(name)) |
-| 115 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Product.Get(name) |
-| 133 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.AddRange(product.Parameters.Where(ShouldIncludeItem).OrderBy(SelectKey, StringComparer.OrdinalIgnoreCase).Select(BuildRecipeParameterCompactRow)) |
-| 133 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Parameters.Where(ShouldIncludeItem).OrderBy(SelectKey, StringComparer.OrdinalIgnoreCase).Select(BuildRecipeParameterCompactRow) |
-| 133 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Parameters.Where(ShouldIncludeItem).OrderBy(SelectKey, StringComparer.OrdinalIgnoreCase) |
-| 133 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Parameters.Where(ShouldIncludeItem) |
-| 134 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "ALIGN", "STATE", product.Align.State.ToString().ToUpperInvariant()) |
-| 134 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Align.State.ToString().ToUpperInvariant() |
-| 134 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Align.State.ToString() |
-| 135 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "ALIGN", "RESULT", product.Align.Result) |
-| 136 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "ALIGN", "OFFSET_X", FormatDouble(product.Align.OffsetX)) |
-| 136 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDouble(product.Align.OffsetX) |
-| 137 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "ALIGN", "OFFSET_Y", FormatDouble(product.Align.OffsetY)) |
-| 137 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDouble(product.Align.OffsetY) |
-| 138 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "ALIGN", "ROTATION", FormatDouble(product.Align.Rotation)) |
-| 138 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDouble(product.Align.Rotation) |
-| 139 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "DISTORTION", "STATE", product.Distortion.State.ToString().ToUpperInvariant()) |
-| 139 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Distortion.State.ToString().ToUpperInvariant() |
-| 139 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Distortion.State.ToString() |
-| 140 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "DISTORTION", "RESULT", product.Distortion.Result) |
-| 141 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "DISTORTION", "MAX_DA", FormatDouble(product.Distortion.MaxDa)) |
-| 141 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDouble(product.Distortion.MaxDa) |
-| 142 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "STATE", product.Review.State.ToString().ToUpperInvariant()) |
-| 142 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.State.ToString().ToUpperInvariant() |
-| 142 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.State.ToString() |
-| 143 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "INSPECTION_METHOD", product.Review.InspectionMethod) |
-| 144 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "RECIPE_ID", product.Review.RecipeId) |
-| 145 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "RULE", product.Review.Rule) |
-| 146 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "RULE_SCOPE", product.Review.RuleScope) |
-| 147 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "BEAM_NO", product.Review.BeamNo.ToString(CultureInfo.InvariantCulture)) |
-| 147 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.BeamNo.ToString(CultureInfo.InvariantCulture) |
-| 148 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "REFERENCE_CELL_NO", product.Review.ReferenceCellNo?.ToString(CultureInfo.InvariantCulture) ?? "") |
-| 148 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString(CultureInfo.InvariantCulture) |
-| 149 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "REFERENCE_SHOT", product.Review.ReferenceShot) |
-| 150 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "ROUGH_REFERENCE", product.Review.RoughReference) |
-| 151 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "FINE_LINE_COUNT", product.Review.FineLineCount.ToString(CultureInfo.InvariantCulture)) |
-| 151 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.FineLineCount.ToString(CultureInfo.InvariantCulture) |
-| 152 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "TOTAL_COUNT", product.Review.TotalCount.ToString(CultureInfo.InvariantCulture)) |
-| 152 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.TotalCount.ToString(CultureInfo.InvariantCulture) |
-| 153 | if | 조건에 따라 분기합니다: if (product.Review.SavedAt.HasValue) |
-| 155 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", "SAVED_AT", FormatDate(product.Review.SavedAt)) |
-| 155 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDate(product.Review.SavedAt) |
-| 168 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.Results.OrderBy(SelectCellNo).ThenBy(SelectShotKey, StringComparer.OrdinalIgnoreCase) |
-| 168 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.Results.OrderBy(SelectCellNo) |
-| 168 | foreach | 컬렉션 요소를 순회합니다: foreach (var result in product.Review.Results.OrderBy(SelectCellNo).ThenBy(SelectShotKey, StringComparer.OrdinalIgnoreCase)) |
-| 170 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.HEAD_NO", result.HeadNo.ToString(CultureInfo.InvariantCulture)) |
-| 170 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: result.HeadNo.ToString(CultureInfo.InvariantCulture) |
-| 171 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.CELL_NO", result.CellNo.ToString(CultureInfo.InvariantCulture)) |
-| 171 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: result.CellNo.ToString(CultureInfo.InvariantCulture) |
-| 172 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.BEAM_NO", result.BeamNo.ToString(CultureInfo.InvariantCulture)) |
-| 172 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: result.BeamNo.ToString(CultureInfo.InvariantCulture) |
-| 173 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.ERROR_X", result.ErrorX.ToString("G", CultureInfo.InvariantCulture)) |
-| 173 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: result.ErrorX.ToString("G", CultureInfo.InvariantCulture) |
-| 174 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.ERROR_Y", result.ErrorY.ToString("G", CultureInfo.InvariantCulture)) |
-| 174 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: result.ErrorY.ToString("G", CultureInfo.InvariantCulture) |
-| 175 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.JUDGE", result.Judge) |
-| 178 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteActiveProductAtomically(rows) |
-| 179 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask; |
+| 100 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested() |
+| 101 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<IReadOnlyDictionary<string, string>>() |
+| 101 | local-declaration | 지역 변수를 선언합니다: var rows = new List<IReadOnlyDictionary<string, string>>(); |
+| 101 | variable-initializer | 변수의 초기값을 지정합니다: rows = new List<IReadOnlyDictionary<string, string>>() |
+| 102 | foreach | 컬렉션 요소를 순회합니다: foreach (var name in CProductManager.ProductFieldNames) |
+| 104 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "PRODUCT", name, product.Product.Get(name)) |
+| 104 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Product.Get(name) |
+| 122 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.AddRange(product.Parameters.Where(ShouldIncludeItem).OrderBy(SelectKey, StringComparer.OrdinalIgnoreCase).Select(BuildRecipeParameterCompactRow)) |
+| 122 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Parameters.Where(ShouldIncludeItem).OrderBy(SelectKey, StringComparer.OrdinalIgnoreCase).Select(BuildRecipeParameterCompactRow) |
+| 122 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Parameters.Where(ShouldIncludeItem).OrderBy(SelectKey, StringComparer.OrdinalIgnoreCase) |
+| 122 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Parameters.Where(ShouldIncludeItem) |
+| 123 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "ALIGN", "STATE", product.Align.State.ToString().ToUpperInvariant()) |
+| 123 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Align.State.ToString().ToUpperInvariant() |
+| 123 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Align.State.ToString() |
+| 124 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "ALIGN", "RESULT", product.Align.Result) |
+| 125 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "ALIGN", "OFFSET_X", FormatDouble(product.Align.OffsetX)) |
+| 125 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDouble(product.Align.OffsetX) |
+| 126 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "ALIGN", "OFFSET_Y", FormatDouble(product.Align.OffsetY)) |
+| 126 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDouble(product.Align.OffsetY) |
+| 127 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "ALIGN", "ROTATION", FormatDouble(product.Align.Rotation)) |
+| 127 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDouble(product.Align.Rotation) |
+| 128 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "DISTORTION", "STATE", product.Distortion.State.ToString().ToUpperInvariant()) |
+| 128 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Distortion.State.ToString().ToUpperInvariant() |
+| 128 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Distortion.State.ToString() |
+| 129 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "DISTORTION", "RESULT", product.Distortion.Result) |
+| 130 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "DISTORTION", "MAX_DA", FormatDouble(product.Distortion.MaxDa)) |
+| 130 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDouble(product.Distortion.MaxDa) |
+| 131 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "STATE", product.Review.State.ToString().ToUpperInvariant()) |
+| 131 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.State.ToString().ToUpperInvariant() |
+| 131 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.State.ToString() |
+| 132 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "INSPECTION_METHOD", product.Review.InspectionMethod) |
+| 133 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "RECIPE_ID", product.Review.RecipeId) |
+| 134 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "RULE", product.Review.Rule) |
+| 135 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "RULE_SCOPE", product.Review.RuleScope) |
+| 136 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "BEAM_NO", product.Review.BeamNo.ToString(CultureInfo.InvariantCulture)) |
+| 136 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.BeamNo.ToString(CultureInfo.InvariantCulture) |
+| 137 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "REFERENCE_CELL_NO", product.Review.ReferenceCellNo?.ToString(CultureInfo.InvariantCulture) ?? "") |
+| 137 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString(CultureInfo.InvariantCulture) |
+| 138 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "REFERENCE_SHOT", product.Review.ReferenceShot) |
+| 139 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "ROUGH_REFERENCE", product.Review.RoughReference) |
+| 140 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "FINE_LINE_COUNT", product.Review.FineLineCount.ToString(CultureInfo.InvariantCulture)) |
+| 140 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.FineLineCount.ToString(CultureInfo.InvariantCulture) |
+| 141 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW", "TOTAL_COUNT", product.Review.TotalCount.ToString(CultureInfo.InvariantCulture)) |
+| 141 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.TotalCount.ToString(CultureInfo.InvariantCulture) |
+| 142 | if | 조건에 따라 분기합니다: if (product.Review.SavedAt.HasValue) |
+| 144 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", "SAVED_AT", FormatDate(product.Review.SavedAt)) |
+| 144 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDate(product.Review.SavedAt) |
+| 157 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.Results.OrderBy(SelectCellNo).ThenBy(SelectShotKey, StringComparer.OrdinalIgnoreCase) |
+| 157 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: product.Review.Results.OrderBy(SelectCellNo) |
+| 157 | foreach | 컬렉션 요소를 순회합니다: foreach (var result in product.Review.Results.OrderBy(SelectCellNo).ThenBy(SelectShotKey, StringComparer.OrdinalIgnoreCase)) |
+| 159 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.HEAD_NO", result.HeadNo.ToString(CultureInfo.InvariantCulture)) |
+| 159 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: result.HeadNo.ToString(CultureInfo.InvariantCulture) |
+| 160 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.CELL_NO", result.CellNo.ToString(CultureInfo.InvariantCulture)) |
+| 160 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: result.CellNo.ToString(CultureInfo.InvariantCulture) |
+| 161 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.BEAM_NO", result.BeamNo.ToString(CultureInfo.InvariantCulture)) |
+| 161 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: result.BeamNo.ToString(CultureInfo.InvariantCulture) |
+| 162 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.ERROR_X", result.ErrorX.ToString("G", CultureInfo.InvariantCulture)) |
+| 162 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: result.ErrorX.ToString("G", CultureInfo.InvariantCulture) |
+| 163 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.ERROR_Y", result.ErrorY.ToString("G", CultureInfo.InvariantCulture)) |
+| 163 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: result.ErrorY.ToString("G", CultureInfo.InvariantCulture) |
+| 164 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddCompactRow(rows, "REVIEW_RESULT", $"{result.ShotKey}.JUDGE", result.Judge) |
+| 167 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteActiveProductAtomically(rows) |
+| 168 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["SaveActive"]
- N0["L113 foreach"]
+ N0["L102 foreach"]
  M -->|포함| N0
- N1["L153 if"]
+ N1["L142 if"]
  M -->|포함| N1
- N2["L168 foreach"]
+ N2["L157 foreach"]
  M -->|포함| N2
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `ShouldIncludeItem` · L118–121
+### LocalFunctionStatement `ShouldIncludeItem` · L107–110
 
-[Drilling.File/Product/CProductFile.cs:118–121](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L118-L121)
+[Drilling.File/Product/CProductFile.cs:107–110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L107-L110)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -726,20 +726,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 120 | IsCompactProductCoreName | resolved | bool Drilling.File.Product.CProductFile.IsCompactProductCoreName(string) · Drilling.File/Product/CProductFile.cs:398 |
+| 109 | IsCompactProductCoreName | resolved | bool Drilling.File.Product.CProductFile.IsCompactProductCoreName(string) · Drilling.File/Product/CProductFile.cs:387 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 120 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsCompactProductCoreName(item.Key) |
-| 120 | return | 호출자에게 값 또는 제어를 반환합니다: return !IsCompactProductCoreName(item.Key); |
+| 109 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsCompactProductCoreName(item.Key) |
+| 109 | return | 호출자에게 값 또는 제어를 반환합니다: return !IsCompactProductCoreName(item.Key); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectKey` · L123–126
+### LocalFunctionStatement `SelectKey` · L112–115
 
-[Drilling.File/Product/CProductFile.cs:123–126](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L123-L126)
+[Drilling.File/Product/CProductFile.cs:112–115](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L112-L115)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -760,13 +760,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 125 | return | 호출자에게 값 또는 제어를 반환합니다: return item.Key; |
+| 114 | return | 호출자에게 값 또는 제어를 반환합니다: return item.Key; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `BuildRecipeParameterCompactRow` · L128–131
+### LocalFunctionStatement `BuildRecipeParameterCompactRow` · L117–120
 
-[Drilling.File/Product/CProductFile.cs:128–131](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L128-L131)
+[Drilling.File/Product/CProductFile.cs:117–120](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L117-L120)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -787,20 +787,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 130 | CompactRow | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.Product.CProductFile.CompactRow(string, string, string) · Drilling.File/Product/CProductFile.cs:388 |
+| 119 | CompactRow | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.Product.CProductFile.CompactRow(string, string, string) · Drilling.File/Product/CProductFile.cs:377 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 130 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CompactRow("RECIPE", item.Key, item.Value) |
-| 130 | return | 호출자에게 값 또는 제어를 반환합니다: return CompactRow("RECIPE", item.Key, item.Value); |
+| 119 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CompactRow("RECIPE", item.Key, item.Value) |
+| 119 | return | 호출자에게 값 또는 제어를 반환합니다: return CompactRow("RECIPE", item.Key, item.Value); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectCellNo` · L158–161
+### LocalFunctionStatement `SelectCellNo` · L147–150
 
-[Drilling.File/Product/CProductFile.cs:158–161](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L158-L161)
+[Drilling.File/Product/CProductFile.cs:147–150](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L147-L150)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -821,13 +821,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 160 | return | 호출자에게 값 또는 제어를 반환합니다: return item.CellNo; |
+| 149 | return | 호출자에게 값 또는 제어를 반환합니다: return item.CellNo; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectShotKey` · L163–166
+### LocalFunctionStatement `SelectShotKey` · L152–155
 
-[Drilling.File/Product/CProductFile.cs:163–166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L163-L166)
+[Drilling.File/Product/CProductFile.cs:152–155](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L152-L155)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -848,13 +848,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 165 | return | 호출자에게 값 또는 제어를 반환합니다: return item.ShotKey; |
+| 154 | return | 호출자에게 값 또는 제어를 반환합니다: return item.ShotKey; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `WriteActiveProductAtomically` · L182–202
+### MethodDeclaration `WriteActiveProductAtomically` · L171–191
 
-[Drilling.File/Product/CProductFile.cs:182–202](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L182-L202)
+[Drilling.File/Product/CProductFile.cs:171–191](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L171-L191)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -873,60 +873,60 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L178-L178) | WriteActiveProductAtomically | False |
+| [Drilling.File/Product/CProductFile.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L167-L167) | WriteActiveProductAtomically | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 184 | GetActiveProductPath | resolved | string Drilling.File.Product.CProductFile.GetActiveProductPath() · Drilling.File/Product/CProductFile.cs:258 |
-| 185 | Guid.NewGuid | resolved | System.Guid System.Guid.NewGuid() |
-| 188 | CCsvParser.Write | resolved | void Drilling.File.Parser.CCsvParser.Write(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>) · Drilling.File/Parser/CCsvParser.cs:58 |
-| 189 | System.IO.File.Exists | resolved | bool System.IO.File.Exists(string?) |
-| 191 | System.IO.File.Replace | resolved | void System.IO.File.Replace(string, string, string?) |
-| 195 | System.IO.File.Move | resolved | void System.IO.File.Move(string, string) |
-| 200 | DeleteIfExists | resolved | void Drilling.File.Product.CProductFile.DeleteIfExists(string) · Drilling.File/Product/CProductFile.cs:505 |
+| 173 | GetActiveProductPath | resolved | string Drilling.File.Product.CProductFile.GetActiveProductPath() · Drilling.File/Product/CProductFile.cs:247 |
+| 174 | Guid.NewGuid | resolved | System.Guid System.Guid.NewGuid() |
+| 177 | CCsvParser.Write | resolved | void Drilling.File.Parser.CCsvParser.Write(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>) · Drilling.File/Parser/CCsvParser.cs:58 |
+| 178 | System.IO.File.Exists | resolved | bool System.IO.File.Exists(string?) |
+| 180 | System.IO.File.Replace | resolved | void System.IO.File.Replace(string, string, string?) |
+| 184 | System.IO.File.Move | resolved | void System.IO.File.Move(string, string) |
+| 189 | DeleteIfExists | resolved | void Drilling.File.Product.CProductFile.DeleteIfExists(string) · Drilling.File/Product/CProductFile.cs:490 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 184 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetActiveProductPath() |
-| 184 | local-declaration | 지역 변수를 선언합니다: var activePath = GetActiveProductPath(); |
-| 184 | variable-initializer | 변수의 초기값을 지정합니다: activePath = GetActiveProductPath() |
-| 185 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid() |
-| 185 | local-declaration | 지역 변수를 선언합니다: var temporaryPath = $"{activePath}.{Guid.NewGuid():N}.tmp"; |
-| 185 | variable-initializer | 변수의 초기값을 지정합니다: temporaryPath = $"{activePath}.{Guid.NewGuid():N}.tmp" |
-| 186 | try | 예외 처리 범위입니다: try |
-| 188 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write(temporaryPath, ActiveHeaders, rows) |
-| 189 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(activePath) |
-| 189 | if | 조건에 따라 분기합니다: if (System.IO.File.Exists(activePath)) |
-| 191 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Replace(temporaryPath, activePath, null) |
-| 193 | else | 앞 조건이 거짓인 경로입니다: else |
-| 195 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Move(temporaryPath, activePath) |
-| 198 | finally | 종료 정리 구간입니다: finally |
-| 200 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DeleteIfExists(temporaryPath) |
+| 173 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetActiveProductPath() |
+| 173 | local-declaration | 지역 변수를 선언합니다: var activePath = GetActiveProductPath(); |
+| 173 | variable-initializer | 변수의 초기값을 지정합니다: activePath = GetActiveProductPath() |
+| 174 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid() |
+| 174 | local-declaration | 지역 변수를 선언합니다: var temporaryPath = $"{activePath}.{Guid.NewGuid():N}.tmp"; |
+| 174 | variable-initializer | 변수의 초기값을 지정합니다: temporaryPath = $"{activePath}.{Guid.NewGuid():N}.tmp" |
+| 175 | try | 예외 처리 범위입니다: try |
+| 177 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write(temporaryPath, ActiveHeaders, rows) |
+| 178 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(activePath) |
+| 178 | if | 조건에 따라 분기합니다: if (System.IO.File.Exists(activePath)) |
+| 180 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Replace(temporaryPath, activePath, null) |
+| 182 | else | 앞 조건이 거짓인 경로입니다: else |
+| 184 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Move(temporaryPath, activePath) |
+| 187 | finally | 종료 정리 구간입니다: finally |
+| 189 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DeleteIfExists(temporaryPath) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["WriteActiveProductAtomically"]
- N0["L186 try"]
+ N0["L175 try"]
  M -->|포함| N0
- N1["L189 if"]
+ N1["L178 if"]
  N0 -->|포함| N1
- N2["L193 else"]
+ N2["L182 else"]
  N1 -->|포함| N2
- N3["L198 finally"]
+ N3["L187 finally"]
  N0 -->|포함| N3
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ClearActive` · L204–209
+### MethodDeclaration `ClearActive` · L193–198
 
-[Drilling.File/Product/CProductFile.cs:204–209](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L204-L209)
+[Drilling.File/Product/CProductFile.cs:193–198](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L193-L198)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -947,24 +947,24 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 206 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
-| 207 | DeleteIfExists | resolved | void Drilling.File.Product.CProductFile.DeleteIfExists(string) · Drilling.File/Product/CProductFile.cs:505 |
-| 207 | GetActiveProductPath | resolved | string Drilling.File.Product.CProductFile.GetActiveProductPath() · Drilling.File/Product/CProductFile.cs:258 |
+| 195 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
+| 196 | DeleteIfExists | resolved | void Drilling.File.Product.CProductFile.DeleteIfExists(string) · Drilling.File/Product/CProductFile.cs:490 |
+| 196 | GetActiveProductPath | resolved | string Drilling.File.Product.CProductFile.GetActiveProductPath() · Drilling.File/Product/CProductFile.cs:247 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 206 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested() |
-| 207 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DeleteIfExists(GetActiveProductPath()) |
-| 207 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetActiveProductPath() |
-| 208 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask; |
+| 195 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested() |
+| 196 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DeleteIfExists(GetActiveProductPath()) |
+| 196 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetActiveProductPath() |
+| 197 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `AppendHistory` · L211–223
+### MethodDeclaration `AppendHistory` · L200–212
 
-[Drilling.File/Product/CProductFile.cs:211–223](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L211-L223)
+[Drilling.File/Product/CProductFile.cs:200–212](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L200-L212)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -986,44 +986,44 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 213 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
-| 214 | GetHistoryPath | resolved | string Drilling.File.Product.CProductFile.GetHistoryPath(System.DateTimeOffset) · Drilling.File/Product/CProductFile.cs:263 |
-| 215 | CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select(item => ToHistoryRow(item!)) .Append(ToHistoryRow(history)) .ToArray | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string>[] System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.ToArray<System.Collections.Generic.IReadOnlyDictionary<string, string>>() |
-| 215 | CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select(item => ToHistoryRow(item!)) .Append | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Append<System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Collections.Generic.IReadOnlyDictionary<string, string>) |
-| 215 | CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY?>.Select<Drilling.Common.Product.ST_PRODUCT_HISTORY?, System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Func<Drilling.Common.Product.ST_PRODUCT_HISTORY?, System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
-| 215 | CCsvParser.Read(path) .Select(ParseHistory) .Where | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY?> System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY?>.Where<Drilling.Common.Product.ST_PRODUCT_HISTORY?>(System.Func<Drilling.Common.Product.ST_PRODUCT_HISTORY?, bool>) |
-| 215 | CCsvParser.Read(path) .Select | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY?> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Select<System.Collections.Generic.IReadOnlyDictionary<string, string>, Drilling.Common.Product.ST_PRODUCT_HISTORY?>(System.Func<System.Collections.Generic.IReadOnlyDictionary<string, string>, Drilling.Common.Product.ST_PRODUCT_HISTORY?>) |
-| 215 | CCsvParser.Read | resolved | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.Parser.CCsvParser.Read(string) · Drilling.File/Parser/CCsvParser.cs:12 |
-| 218 | ToHistoryRow | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.Product.CProductFile.ToHistoryRow(Drilling.Common.Product.ST_PRODUCT_HISTORY) · Drilling.File/Product/CProductFile.cs:432 |
-| 219 | ToHistoryRow | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.Product.CProductFile.ToHistoryRow(Drilling.Common.Product.ST_PRODUCT_HISTORY) · Drilling.File/Product/CProductFile.cs:432 |
-| 221 | WriteRowsAtomically | resolved | void Drilling.File.Product.CProductFile.WriteRowsAtomically(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>) · Drilling.File/Product/CProductFile.cs:468 |
+| 202 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
+| 203 | GetHistoryPath | resolved | string Drilling.File.Product.CProductFile.GetHistoryPath(System.DateTimeOffset) · Drilling.File/Product/CProductFile.cs:252 |
+| 204 | CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select(item => ToHistoryRow(item!)) .Append(ToHistoryRow(history)) .ToArray | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string>[] System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.ToArray<System.Collections.Generic.IReadOnlyDictionary<string, string>>() |
+| 204 | CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select(item => ToHistoryRow(item!)) .Append | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Append<System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Collections.Generic.IReadOnlyDictionary<string, string>) |
+| 204 | CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY?>.Select<Drilling.Common.Product.ST_PRODUCT_HISTORY?, System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Func<Drilling.Common.Product.ST_PRODUCT_HISTORY?, System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
+| 204 | CCsvParser.Read(path) .Select(ParseHistory) .Where | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY?> System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY?>.Where<Drilling.Common.Product.ST_PRODUCT_HISTORY?>(System.Func<Drilling.Common.Product.ST_PRODUCT_HISTORY?, bool>) |
+| 204 | CCsvParser.Read(path) .Select | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY?> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Select<System.Collections.Generic.IReadOnlyDictionary<string, string>, Drilling.Common.Product.ST_PRODUCT_HISTORY?>(System.Func<System.Collections.Generic.IReadOnlyDictionary<string, string>, Drilling.Common.Product.ST_PRODUCT_HISTORY?>) |
+| 204 | CCsvParser.Read | resolved | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.Parser.CCsvParser.Read(string) · Drilling.File/Parser/CCsvParser.cs:12 |
+| 207 | ToHistoryRow | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.Product.CProductFile.ToHistoryRow(Drilling.Common.Product.ST_PRODUCT_HISTORY) · Drilling.File/Product/CProductFile.cs:417 |
+| 208 | ToHistoryRow | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.Product.CProductFile.ToHistoryRow(Drilling.Common.Product.ST_PRODUCT_HISTORY) · Drilling.File/Product/CProductFile.cs:417 |
+| 210 | WriteRowsAtomically | resolved | void Drilling.File.Product.CProductFile.WriteRowsAtomically(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>>) · Drilling.File/Product/CProductFile.cs:453 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 213 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested() |
-| 214 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetHistoryPath(history.OccurredAt) |
-| 214 | local-declaration | 지역 변수를 선언합니다: var path = GetHistoryPath(history.OccurredAt); |
-| 214 | variable-initializer | 변수의 초기값을 지정합니다: path = GetHistoryPath(history.OccurredAt) |
-| 215 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path) |
-| 215 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path) .Select(ParseHistory) |
-| 215 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) |
-| 215 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select(item => ToHistoryRow(item!)) |
-| 215 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select(item => ToHistoryRow(item!)) .Append(ToHistoryRow(history)) |
-| 215 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select(item => ToHistoryRow(item!)) .Append(ToHistoryRow(history)) .ToArray() |
-| 215 | local-declaration | 지역 변수를 선언합니다: var rows = CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select(item => ToHistoryRow(item!)) .Append(ToHistoryRow(history)) .ToArray(); |
-| 215 | variable-initializer | 변수의 초기값을 지정합니다: rows = CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select(item => ToHistoryRow(item!)) .Append(ToHistoryRow(history)) .ToArray() |
-| 218 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ToHistoryRow(item!) |
-| 219 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ToHistoryRow(history) |
-| 221 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteRowsAtomically(path, HistoryHeaders, rows) |
-| 222 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask; |
+| 202 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested() |
+| 203 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetHistoryPath(history.OccurredAt) |
+| 203 | local-declaration | 지역 변수를 선언합니다: var path = GetHistoryPath(history.OccurredAt); |
+| 203 | variable-initializer | 변수의 초기값을 지정합니다: path = GetHistoryPath(history.OccurredAt) |
+| 204 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path) |
+| 204 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path) .Select(ParseHistory) |
+| 204 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) |
+| 204 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select(item => ToHistoryRow(item!)) |
+| 204 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select(item => ToHistoryRow(item!)) .Append(ToHistoryRow(history)) |
+| 204 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select(item => ToHistoryRow(item!)) .Append(ToHistoryRow(history)) .ToArray() |
+| 204 | local-declaration | 지역 변수를 선언합니다: var rows = CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select(item => ToHistoryRow(item!)) .Append(ToHistoryRow(history)) .ToArray(); |
+| 204 | variable-initializer | 변수의 초기값을 지정합니다: rows = CCsvParser.Read(path) .Select(ParseHistory) .Where(item => item is not null) .Select(item => ToHistoryRow(item!)) .Append(ToHistoryRow(history)) .ToArray() |
+| 207 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ToHistoryRow(item!) |
+| 208 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ToHistoryRow(history) |
+| 210 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteRowsAtomically(path, HistoryHeaders, rows) |
+| 211 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `LoadHistory` · L225–256
+### MethodDeclaration `LoadHistory` · L214–245
 
-[Drilling.File/Product/CProductFile.cs:225–256](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L225-L256)
+[Drilling.File/Product/CProductFile.cs:214–245](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L214-L245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1046,52 +1046,52 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 227 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
-| 254 | Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem).OrderByDescending(SelectOccurredAt).Take(Math.Max(1, maxRows)).ToArray | resolved | Drilling.Common.Product.ST_PRODUCT_HISTORY[] System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY>.ToArray<Drilling.Common.Product.ST_PRODUCT_HISTORY>() |
-| 254 | Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem).OrderByDescending(SelectOccurredAt).Take | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY> System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY>.Take<Drilling.Common.Product.ST_PRODUCT_HISTORY>(int) |
-| 254 | Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem).OrderByDescending | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY> System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY>.OrderByDescending<Drilling.Common.Product.ST_PRODUCT_HISTORY, System.DateTimeOffset>(System.Func<Drilling.Common.Product.ST_PRODUCT_HISTORY, System.DateTimeOffset>) |
-| 254 | Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY> System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY?>.Select<Drilling.Common.Product.ST_PRODUCT_HISTORY?, Drilling.Common.Product.ST_PRODUCT_HISTORY>(System.Func<Drilling.Common.Product.ST_PRODUCT_HISTORY?, Drilling.Common.Product.ST_PRODUCT_HISTORY>) |
-| 254 | Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY?> System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY?>.Where<Drilling.Common.Product.ST_PRODUCT_HISTORY?>(System.Func<Drilling.Common.Product.ST_PRODUCT_HISTORY?, bool>) |
-| 254 | Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY?> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Select<System.Collections.Generic.IReadOnlyDictionary<string, string>, Drilling.Common.Product.ST_PRODUCT_HISTORY?>(System.Func<System.Collections.Generic.IReadOnlyDictionary<string, string>, Drilling.Common.Product.ST_PRODUCT_HISTORY?>) |
-| 254 | Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<string>.SelectMany<string, System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Func<string, System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>>) |
-| 254 | Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<string>.Where<string>(System.Func<string, bool>) |
-| 254 | Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<System.DateTime>.Select<System.DateTime, string>(System.Func<System.DateTime, string>) |
-| 254 | Enumerable.Range(0, Math.Max(1, days)).Select | resolved | System.Collections.Generic.IEnumerable<System.DateTime> System.Collections.Generic.IEnumerable<int>.Select<int, System.DateTime>(System.Func<int, System.DateTime>) |
-| 254 | Enumerable.Range | resolved | System.Collections.Generic.IEnumerable<int> System.Linq.Enumerable.Range(int, int) |
-| 254 | Math.Max | resolved | int System.Math.Max(int, int) |
-| 254 | Math.Max | resolved | int System.Math.Max(int, int) |
-| 255 | Task.FromResult<IReadOnlyList<ST_PRODUCT_HISTORY>> | resolved | System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HISTORY>> System.Threading.Tasks.Task.FromResult<System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HISTORY>>(System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HISTORY>) |
+| 216 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
+| 243 | Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem).OrderByDescending(SelectOccurredAt).Take(Math.Max(1, maxRows)).ToArray | resolved | Drilling.Common.Product.ST_PRODUCT_HISTORY[] System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY>.ToArray<Drilling.Common.Product.ST_PRODUCT_HISTORY>() |
+| 243 | Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem).OrderByDescending(SelectOccurredAt).Take | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY> System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY>.Take<Drilling.Common.Product.ST_PRODUCT_HISTORY>(int) |
+| 243 | Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem).OrderByDescending | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY> System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY>.OrderByDescending<Drilling.Common.Product.ST_PRODUCT_HISTORY, System.DateTimeOffset>(System.Func<Drilling.Common.Product.ST_PRODUCT_HISTORY, System.DateTimeOffset>) |
+| 243 | Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY> System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY?>.Select<Drilling.Common.Product.ST_PRODUCT_HISTORY?, Drilling.Common.Product.ST_PRODUCT_HISTORY>(System.Func<Drilling.Common.Product.ST_PRODUCT_HISTORY?, Drilling.Common.Product.ST_PRODUCT_HISTORY>) |
+| 243 | Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY?> System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY?>.Where<Drilling.Common.Product.ST_PRODUCT_HISTORY?>(System.Func<Drilling.Common.Product.ST_PRODUCT_HISTORY?, bool>) |
+| 243 | Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HISTORY?> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Select<System.Collections.Generic.IReadOnlyDictionary<string, string>, Drilling.Common.Product.ST_PRODUCT_HISTORY?>(System.Func<System.Collections.Generic.IReadOnlyDictionary<string, string>, Drilling.Common.Product.ST_PRODUCT_HISTORY?>) |
+| 243 | Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<string>.SelectMany<string, System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Func<string, System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>>) |
+| 243 | Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<string>.Where<string>(System.Func<string, bool>) |
+| 243 | Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<System.DateTime>.Select<System.DateTime, string>(System.Func<System.DateTime, string>) |
+| 243 | Enumerable.Range(0, Math.Max(1, days)).Select | resolved | System.Collections.Generic.IEnumerable<System.DateTime> System.Collections.Generic.IEnumerable<int>.Select<int, System.DateTime>(System.Func<int, System.DateTime>) |
+| 243 | Enumerable.Range | resolved | System.Collections.Generic.IEnumerable<int> System.Linq.Enumerable.Range(int, int) |
+| 243 | Math.Max | resolved | int System.Math.Max(int, int) |
+| 243 | Math.Max | resolved | int System.Math.Max(int, int) |
+| 244 | Task.FromResult<IReadOnlyList<ST_PRODUCT_HISTORY>> | resolved | System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HISTORY>> System.Threading.Tasks.Task.FromResult<System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HISTORY>>(System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HISTORY>) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 227 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested() |
-| 228 | local-declaration | 지역 변수를 선언합니다: var today = DateTime.Today; |
-| 228 | variable-initializer | 변수의 초기값을 지정합니다: today = DateTime.Today |
-| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem).OrderByDescen… |
-| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem).OrderByDescen… |
-| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem).OrderByDescen… |
-| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem) |
-| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem) |
-| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory) |
-| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read) |
-| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists) |
-| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath) |
-| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue) |
-| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)) |
-| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, days) |
-| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, maxRows) |
-| 254 | local-declaration | 지역 변수를 선언합니다: var histories = Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem).OrderBy |
-| 254 | variable-initializer | 변수의 초기값을 지정합니다: histories = Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem).OrderByDesc |
-| 255 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult<IReadOnlyList<ST_PRODUCT_HISTORY>>(histories) |
-| 255 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult<IReadOnlyList<ST_PRODUCT_HISTORY>>(histories); |
+| 216 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested() |
+| 217 | local-declaration | 지역 변수를 선언합니다: var today = DateTime.Today; |
+| 217 | variable-initializer | 변수의 초기값을 지정합니다: today = DateTime.Today |
+| 243 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem).OrderByDescen… |
+| 243 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem).OrderByDescen… |
+| 243 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem).OrderByDescen… |
+| 243 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem) |
+| 243 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem) |
+| 243 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory) |
+| 243 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read) |
+| 243 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists) |
+| 243 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath) |
+| 243 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue) |
+| 243 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, Math.Max(1, days)) |
+| 243 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, days) |
+| 243 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, maxRows) |
+| 243 | local-declaration | 지역 변수를 선언합니다: var histories = Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem).OrderBy |
+| 243 | variable-initializer | 변수의 초기값을 지정합니다: histories = Enumerable.Range(0, Math.Max(1, days)).Select(SelectValue).Select(SelectHistoryPath).Where(System.IO.File.Exists).SelectMany(CCsvParser.Read).Select(ParseHistory).Where(ShouldIncludeItem).Select(SelectItem).OrderByDesc |
+| 244 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult<IReadOnlyList<ST_PRODUCT_HISTORY>>(histories) |
+| 244 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult<IReadOnlyList<ST_PRODUCT_HISTORY>>(histories); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectValue` · L229–232
+### LocalFunctionStatement `SelectValue` · L218–221
 
-[Drilling.File/Product/CProductFile.cs:229–232](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L229-L232)
+[Drilling.File/Product/CProductFile.cs:218–221](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L218-L221)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1112,20 +1112,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 231 | today.AddDays | resolved | System.DateTime System.DateTime.AddDays(double) |
+| 220 | today.AddDays | resolved | System.DateTime System.DateTime.AddDays(double) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 231 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: today.AddDays(-offset) |
-| 231 | return | 호출자에게 값 또는 제어를 반환합니다: return today.AddDays(-offset); |
+| 220 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: today.AddDays(-offset) |
+| 220 | return | 호출자에게 값 또는 제어를 반환합니다: return today.AddDays(-offset); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectHistoryPath` · L234–237
+### LocalFunctionStatement `SelectHistoryPath` · L223–226
 
-[Drilling.File/Product/CProductFile.cs:234–237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L234-L237)
+[Drilling.File/Product/CProductFile.cs:223–226](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L223-L226)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1146,22 +1146,22 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 236 | GetHistoryPath | resolved | string Drilling.File.Product.CProductFile.GetHistoryPath(System.DateTimeOffset) · Drilling.File/Product/CProductFile.cs:263 |
-| 236 | new DateTimeOffset | resolved | System.DateTimeOffset.DateTimeOffset(System.DateTime) |
+| 225 | GetHistoryPath | resolved | string Drilling.File.Product.CProductFile.GetHistoryPath(System.DateTimeOffset) · Drilling.File/Product/CProductFile.cs:252 |
+| 225 | new DateTimeOffset | resolved | System.DateTimeOffset.DateTimeOffset(System.DateTime) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 236 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetHistoryPath(new DateTimeOffset(date)) |
-| 236 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new DateTimeOffset(date) |
-| 236 | return | 호출자에게 값 또는 제어를 반환합니다: return GetHistoryPath(new DateTimeOffset(date)); |
+| 225 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetHistoryPath(new DateTimeOffset(date)) |
+| 225 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new DateTimeOffset(date) |
+| 225 | return | 호출자에게 값 또는 제어를 반환합니다: return GetHistoryPath(new DateTimeOffset(date)); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `ShouldIncludeItem` · L239–242
+### LocalFunctionStatement `ShouldIncludeItem` · L228–231
 
-[Drilling.File/Product/CProductFile.cs:239–242](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L239-L242)
+[Drilling.File/Product/CProductFile.cs:228–231](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L228-L231)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1182,13 +1182,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 241 | return | 호출자에게 값 또는 제어를 반환합니다: return history is not null; |
+| 230 | return | 호출자에게 값 또는 제어를 반환합니다: return history is not null; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectItem` · L244–247
+### LocalFunctionStatement `SelectItem` · L233–236
 
-[Drilling.File/Product/CProductFile.cs:244–247](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L244-L247)
+[Drilling.File/Product/CProductFile.cs:233–236](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L233-L236)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1209,13 +1209,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 246 | return | 호출자에게 값 또는 제어를 반환합니다: return history!; |
+| 235 | return | 호출자에게 값 또는 제어를 반환합니다: return history!; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectOccurredAt` · L249–252
+### LocalFunctionStatement `SelectOccurredAt` · L238–241
 
-[Drilling.File/Product/CProductFile.cs:249–252](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L249-L252)
+[Drilling.File/Product/CProductFile.cs:238–241](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L238-L241)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1236,13 +1236,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 251 | return | 호출자에게 값 또는 제어를 반환합니다: return history.OccurredAt; |
+| 240 | return | 호출자에게 값 또는 제어를 반환합니다: return history.OccurredAt; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `GetActiveProductPath` · L258–261
+### MethodDeclaration `GetActiveProductPath` · L247–250
 
-[Drilling.File/Product/CProductFile.cs:258–261](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L258-L261)
+[Drilling.File/Product/CProductFile.cs:247–250](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L247-L250)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1255,28 +1255,28 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L15-L15) | GetActiveProductPath | False |
-| [Drilling.File/Product/CProductFile.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L184-L184) | GetActiveProductPath | False |
-| [Drilling.File/Product/CProductFile.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L207-L207) | GetActiveProductPath | False |
+| [Drilling.File/Product/CProductFile.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L15-L15) | GetActiveProductPath | False |
+| [Drilling.File/Product/CProductFile.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L173-L173) | GetActiveProductPath | False |
+| [Drilling.File/Product/CProductFile.cs:196–196](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L196-L196) | GetActiveProductPath | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 260 | Path.Combine | resolved | string System.IO.Path.Combine(string, string) |
+| 249 | Path.Combine | resolved | string System.IO.Path.Combine(string, string) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 260 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_productRoot, "ActiveProduct.csv") |
-| 260 | return | 호출자에게 값 또는 제어를 반환합니다: return Path.Combine(_productRoot, "ActiveProduct.csv"); |
+| 249 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_productRoot, "ActiveProduct.csv") |
+| 249 | return | 호출자에게 값 또는 제어를 반환합니다: return Path.Combine(_productRoot, "ActiveProduct.csv"); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `GetHistoryPath` · L263–266
+### MethodDeclaration `GetHistoryPath` · L252–255
 
-[Drilling.File/Product/CProductFile.cs:263–266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L263-L266)
+[Drilling.File/Product/CProductFile.cs:252–255](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L252-L255)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1295,29 +1295,29 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L214-L214) | GetHistoryPath | False |
-| [Drilling.File/Product/CProductFile.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L236-L236) | GetHistoryPath | False |
+| [Drilling.File/Product/CProductFile.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L203-L203) | GetHistoryPath | False |
+| [Drilling.File/Product/CProductFile.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L225-L225) | GetHistoryPath | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 265 | Path.Combine | resolved | string System.IO.Path.Combine(string, string, string, string) |
-| 265 | timestamp.ToString | resolved | string System.DateTimeOffset.ToString(string?, System.IFormatProvider?) |
+| 254 | Path.Combine | resolved | string System.IO.Path.Combine(string, string, string, string) |
+| 254 | timestamp.ToString | resolved | string System.DateTimeOffset.ToString(string?, System.IFormatProvider?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 265 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_productRoot, "History", timestamp.ToString("yyyyMMdd", CultureInfo.InvariantCulture), $"ProductHistory_{timestamp:yyyyMMdd}.csv") |
-| 265 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: timestamp.ToString("yyyyMMdd", CultureInfo.InvariantCulture) |
-| 265 | return | 호출자에게 값 또는 제어를 반환합니다: return Path.Combine(_productRoot, "History", timestamp.ToString("yyyyMMdd", CultureInfo.InvariantCulture), $"ProductHistory_{timestamp:yyyyMMdd}.csv"); |
+| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_productRoot, "History", timestamp.ToString("yyyyMMdd", CultureInfo.InvariantCulture), $"ProductHistory_{timestamp:yyyyMMdd}.csv") |
+| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: timestamp.ToString("yyyyMMdd", CultureInfo.InvariantCulture) |
+| 254 | return | 호출자에게 값 또는 제어를 반환합니다: return Path.Combine(_productRoot, "History", timestamp.ToString("yyyyMMdd", CultureInfo.InvariantCulture), $"ProductHistory_{timestamp:yyyyMMdd}.csv"); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ValidateReview` · L268–279
+### MethodDeclaration `ValidateReview` · L257–268
 
-[Drilling.File/Product/CProductFile.cs:268–279](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L268-L279)
+[Drilling.File/Product/CProductFile.cs:257–268](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L257-L268)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1336,42 +1336,42 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L78-L78) | ValidateReview | False |
+| [Drilling.File/Product/CProductFile.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L67-L67) | ValidateReview | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 272 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
-| 277 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
+| 261 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
+| 266 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 270 | if | 조건에 따라 분기합니다: if (review.State == EN_PRODUCT_PROCESS_STATE.Completed && review.Results.Count == 0) |
-| 272 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Active Product validation failed. REVIEW is COMPLETED but REVIEW_RESULT is empty.") |
-| 272 | throw | 예외를 발생/전달합니다: throw new InvalidDataException("Active Product validation failed. REVIEW is COMPLETED but REVIEW_RESULT is empty."); |
-| 275 | if | 조건에 따라 분기합니다: if (review.State == EN_PRODUCT_PROCESS_STATE.NotStarted && review.Results.Count > 0) |
-| 277 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Active Product validation failed. REVIEW_RESULT exists while REVIEW is NOT_STARTED.") |
-| 277 | throw | 예외를 발생/전달합니다: throw new InvalidDataException("Active Product validation failed. REVIEW_RESULT exists while REVIEW is NOT_STARTED."); |
+| 259 | if | 조건에 따라 분기합니다: if (review.State == EN_PRODUCT_PROCESS_STATE.Completed && review.Results.Count == 0) |
+| 261 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Active Product validation failed. REVIEW is COMPLETED but REVIEW_RESULT is empty.") |
+| 261 | throw | 예외를 발생/전달합니다: throw new InvalidDataException("Active Product validation failed. REVIEW is COMPLETED but REVIEW_RESULT is empty."); |
+| 264 | if | 조건에 따라 분기합니다: if (review.State == EN_PRODUCT_PROCESS_STATE.NotStarted && review.Results.Count > 0) |
+| 266 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Active Product validation failed. REVIEW_RESULT exists while REVIEW is NOT_STARTED.") |
+| 266 | throw | 예외를 발생/전달합니다: throw new InvalidDataException("Active Product validation failed. REVIEW_RESULT exists while REVIEW is NOT_STARTED."); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ValidateReview"]
- N0["L270 if"]
+ N0["L259 if"]
  M -->|포함| N0
- N1["L275 if"]
+ N1["L264 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ParseCompactReview` · L281–338
+### MethodDeclaration `ParseCompactReview` · L270–327
 
-[Drilling.File/Product/CProductFile.cs:281–338](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L281-L338)
+[Drilling.File/Product/CProductFile.cs:270–327](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L270-L327)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1391,125 +1391,125 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L77-L77) | ParseCompactReview | False |
+| [Drilling.File/Product/CProductFile.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L66-L66) | ParseCompactReview | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 298 | resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; }).Where(item => item is not null).GroupBy(item => item!.ShotKey, StringComparer.OrdinalIgnoreCase).Select(group => { var values = g… | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT[] System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>.ToArray<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>() |
-| 298 | resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; }).Where(item => item is not null).GroupBy(item => item!.ShotKey, StringComparer.OrdinalIgnoreCase).Select(group => { var values = g… | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT> System.Linq.IOrderedEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>.ThenBy<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT, string>(System.Func<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT, string>, System.Collections.Generic.IComparer<string>?) |
-| 298 | resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; }).Where(item => item is not null).GroupBy(item => item!.ShotKey, StringComparer.OrdinalIgnoreCase).Select(group => { var values = g… | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT> System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>.OrderBy<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT, int>(System.Func<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT, int>) |
-| 298 | resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; }).Where(item => item is not null).GroupBy(item => item!.ShotKey, StringComparer.OrdinalIgnoreCase).Select | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT> System.Collections.Generic.IEnumerable<System.Linq.IGrouping<string, <anonymous type: string ShotKey, string Field, string Value>?>>.Select<System.Linq.IGrouping<string, <anonymous type: string ShotKey, string Field, string Value>?>, Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>(System.Func<System.Linq.IGrouping<string, <anonymous type: string ShotKey, string Field, string Value>?>, Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>) |
-| 298 | resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; }).Where(item => item is not null).GroupBy | resolved | System.Collections.Generic.IEnumerable<System.Linq.IGrouping<string, <anonymous type: string ShotKey, string Field, string Value>?>> System.Collections.Generic.IEnumerable<<anonymous type: string ShotKey, string Field, string Value>?>.GroupBy<<anonymous type: string ShotKey, string Field, string Value>?, string>(System.Func<<anonymous type: string ShotKey, string Field, string Value>?, string>, System.Collections.Generic.IEqualityComparer<string>?) |
-| 298 | resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; }).Where | resolved | System.Collections.Generic.IEnumerable<<anonymous type: string ShotKey, string Field, string Value>?> System.Collections.Generic.IEnumerable<<anonymous type: string ShotKey, string Field, string Value>?>.Where<<anonymous type: string ShotKey, string Field, string Value>?>(System.Func<<anonymous type: string ShotKey, string Field, string Value>?, bool>) |
-| 298 | resultValues.Where(ShouldIncludeItem).Select | resolved | System.Collections.Generic.IEnumerable<<anonymous type: string ShotKey, string Field, string Value>?> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>.Select<System.Collections.Generic.KeyValuePair<string, string>, <anonymous type: string ShotKey, string Field, string Value>?>(System.Func<System.Collections.Generic.KeyValuePair<string, string>, <anonymous type: string ShotKey, string Field, string Value>?>) |
-| 298 | resultValues.Where | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>.Where<System.Collections.Generic.KeyValuePair<string, string>>(System.Func<System.Collections.Generic.KeyValuePair<string, string>, bool>) |
-| 300 | item.Key.LastIndexOf | resolved | int string.LastIndexOf(char) |
-| 311 | group.ToDictionary | resolved | System.Collections.Generic.Dictionary<string, string> System.Collections.Generic.IEnumerable<<anonymous type: string ShotKey, string Field, string Value>?>.ToDictionary<<anonymous type: string ShotKey, string Field, string Value>?, string, string>(System.Func<<anonymous type: string ShotKey, string Field, string Value>?, string>, System.Func<<anonymous type: string ShotKey, string Field, string Value>?, string>, System.Collections.Generic.IEqualityComparer<string>?) |
-| 312 | new ST_PRODUCT_REVIEW_RESULT | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT.ST_PRODUCT_REVIEW_RESULT(string, int, int, int, double, double, string) · Drilling.Common/Product/CProductManager.cs:998 |
-| 314 | ParseInt | resolved | int Drilling.File.Product.CProductFile.ParseInt(string, int) · Drilling.File/Product/CProductFile.cs:412 |
-| 314 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 315 | ParseInt | resolved | int Drilling.File.Product.CProductFile.ParseInt(string, int) · Drilling.File/Product/CProductFile.cs:412 |
-| 315 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 316 | ParseInt | resolved | int Drilling.File.Product.CProductFile.ParseInt(string, int) · Drilling.File/Product/CProductFile.cs:412 |
-| 316 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 317 | ParseNullableDouble | resolved | double? Drilling.File.Product.CProductFile.ParseNullableDouble(string) · Drilling.File/Product/CProductFile.cs:422 |
-| 317 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 318 | ParseNullableDouble | resolved | double? Drilling.File.Product.CProductFile.ParseNullableDouble(string) · Drilling.File/Product/CProductFile.cs:422 |
-| 318 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 319 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 322 | new ST_PRODUCT_REVIEW_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ST_PRODUCT_REVIEW_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, System.DateTimeOffset?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>) · Drilling.Common/Product/CProductManager.cs:1003 |
-| 323 | ParseEnum | resolved | Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE Drilling.File.Product.CProductFile.ParseEnum<Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE>(string, Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE) · Drilling.File/Product/CProductFile.cs:489 |
-| 323 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 324 | ParseDate | resolved | System.DateTimeOffset? Drilling.File.Product.CProductFile.ParseDate(string) · Drilling.File/Product/CProductFile.cs:500 |
-| 324 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 327 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 328 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 329 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 330 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 331 | ParseInt | resolved | int Drilling.File.Product.CProductFile.ParseInt(string, int) · Drilling.File/Product/CProductFile.cs:412 |
-| 331 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 332 | ParseNullableInt | resolved | int? Drilling.File.Product.CProductFile.ParseNullableInt(string) · Drilling.File/Product/CProductFile.cs:417 |
-| 332 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 333 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 334 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 335 | ParseInt | resolved | int Drilling.File.Product.CProductFile.ParseInt(string, int) · Drilling.File/Product/CProductFile.cs:412 |
-| 335 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 336 | ParseInt | resolved | int Drilling.File.Product.CProductFile.ParseInt(string, int) · Drilling.File/Product/CProductFile.cs:412 |
-| 336 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
+| 287 | resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; }).Where(item => item is not null).GroupBy(item => item!.ShotKey, StringComparer.OrdinalIgnoreCase).Select(group => { var values = g… | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT[] System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>.ToArray<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>() |
+| 287 | resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; }).Where(item => item is not null).GroupBy(item => item!.ShotKey, StringComparer.OrdinalIgnoreCase).Select(group => { var values = g… | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT> System.Linq.IOrderedEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>.ThenBy<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT, string>(System.Func<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT, string>, System.Collections.Generic.IComparer<string>?) |
+| 287 | resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; }).Where(item => item is not null).GroupBy(item => item!.ShotKey, StringComparer.OrdinalIgnoreCase).Select(group => { var values = g… | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT> System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>.OrderBy<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT, int>(System.Func<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT, int>) |
+| 287 | resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; }).Where(item => item is not null).GroupBy(item => item!.ShotKey, StringComparer.OrdinalIgnoreCase).Select | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT> System.Collections.Generic.IEnumerable<System.Linq.IGrouping<string, <anonymous type: string ShotKey, string Field, string Value>?>>.Select<System.Linq.IGrouping<string, <anonymous type: string ShotKey, string Field, string Value>?>, Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>(System.Func<System.Linq.IGrouping<string, <anonymous type: string ShotKey, string Field, string Value>?>, Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>) |
+| 287 | resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; }).Where(item => item is not null).GroupBy | resolved | System.Collections.Generic.IEnumerable<System.Linq.IGrouping<string, <anonymous type: string ShotKey, string Field, string Value>?>> System.Collections.Generic.IEnumerable<<anonymous type: string ShotKey, string Field, string Value>?>.GroupBy<<anonymous type: string ShotKey, string Field, string Value>?, string>(System.Func<<anonymous type: string ShotKey, string Field, string Value>?, string>, System.Collections.Generic.IEqualityComparer<string>?) |
+| 287 | resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; }).Where | resolved | System.Collections.Generic.IEnumerable<<anonymous type: string ShotKey, string Field, string Value>?> System.Collections.Generic.IEnumerable<<anonymous type: string ShotKey, string Field, string Value>?>.Where<<anonymous type: string ShotKey, string Field, string Value>?>(System.Func<<anonymous type: string ShotKey, string Field, string Value>?, bool>) |
+| 287 | resultValues.Where(ShouldIncludeItem).Select | resolved | System.Collections.Generic.IEnumerable<<anonymous type: string ShotKey, string Field, string Value>?> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>.Select<System.Collections.Generic.KeyValuePair<string, string>, <anonymous type: string ShotKey, string Field, string Value>?>(System.Func<System.Collections.Generic.KeyValuePair<string, string>, <anonymous type: string ShotKey, string Field, string Value>?>) |
+| 287 | resultValues.Where | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>.Where<System.Collections.Generic.KeyValuePair<string, string>>(System.Func<System.Collections.Generic.KeyValuePair<string, string>, bool>) |
+| 289 | item.Key.LastIndexOf | resolved | int string.LastIndexOf(char) |
+| 300 | group.ToDictionary | resolved | System.Collections.Generic.Dictionary<string, string> System.Collections.Generic.IEnumerable<<anonymous type: string ShotKey, string Field, string Value>?>.ToDictionary<<anonymous type: string ShotKey, string Field, string Value>?, string, string>(System.Func<<anonymous type: string ShotKey, string Field, string Value>?, string>, System.Func<<anonymous type: string ShotKey, string Field, string Value>?, string>, System.Collections.Generic.IEqualityComparer<string>?) |
+| 301 | new ST_PRODUCT_REVIEW_RESULT | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT.ST_PRODUCT_REVIEW_RESULT(string, int, int, int, double, double, string) · Drilling.Common/Product/CProductManager.cs:942 |
+| 303 | ParseInt | resolved | int Drilling.File.Product.CProductFile.ParseInt(string, int) · Drilling.File/Product/CProductFile.cs:397 |
+| 303 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 304 | ParseInt | resolved | int Drilling.File.Product.CProductFile.ParseInt(string, int) · Drilling.File/Product/CProductFile.cs:397 |
+| 304 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 305 | ParseInt | resolved | int Drilling.File.Product.CProductFile.ParseInt(string, int) · Drilling.File/Product/CProductFile.cs:397 |
+| 305 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 306 | ParseNullableDouble | resolved | double? Drilling.File.Product.CProductFile.ParseNullableDouble(string) · Drilling.File/Product/CProductFile.cs:407 |
+| 306 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 307 | ParseNullableDouble | resolved | double? Drilling.File.Product.CProductFile.ParseNullableDouble(string) · Drilling.File/Product/CProductFile.cs:407 |
+| 307 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 308 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 311 | new ST_PRODUCT_REVIEW_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ST_PRODUCT_REVIEW_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, System.DateTimeOffset?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>) · Drilling.Common/Product/CProductManager.cs:947 |
+| 312 | ParseEnum | resolved | Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE Drilling.File.Product.CProductFile.ParseEnum<Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE>(string, Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE) · Drilling.File/Product/CProductFile.cs:474 |
+| 312 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 313 | ParseDate | resolved | System.DateTimeOffset? Drilling.File.Product.CProductFile.ParseDate(string) · Drilling.File/Product/CProductFile.cs:485 |
+| 313 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 316 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 317 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 318 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 319 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 320 | ParseInt | resolved | int Drilling.File.Product.CProductFile.ParseInt(string, int) · Drilling.File/Product/CProductFile.cs:397 |
+| 320 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 321 | ParseNullableInt | resolved | int? Drilling.File.Product.CProductFile.ParseNullableInt(string) · Drilling.File/Product/CProductFile.cs:402 |
+| 321 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 322 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 323 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 324 | ParseInt | resolved | int Drilling.File.Product.CProductFile.ParseInt(string, int) · Drilling.File/Product/CProductFile.cs:397 |
+| 324 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
+| 325 | ParseInt | resolved | int Drilling.File.Product.CProductFile.ParseInt(string, int) · Drilling.File/Product/CProductFile.cs:397 |
+| 325 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:359 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 298 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues.Where(ShouldIncludeItem) |
-| 298 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; })… |
-| 298 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; })… |
-| 298 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; }) |
-| 298 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; })… |
-| 298 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; })… |
-| 298 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; })… |
-| 298 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; })… |
-| 298 | local-declaration | 지역 변수를 선언합니다: var groupedResults = resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } |
-| 298 | variable-initializer | 변수의 초기값을 지정합니다: groupedResults = resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : n |
-| 300 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Key.LastIndexOf('.') |
-| 300 | local-declaration | 지역 변수를 선언합니다: var separator = item.Key.LastIndexOf('.'); |
-| 300 | variable-initializer | 변수의 초기값을 지정합니다: separator = item.Key.LastIndexOf('.') |
-| 301 | conditional-expression | 조건에 따라 결과식을 선택합니다: separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null |
-| 301 | return | 호출자에게 값 또는 제어를 반환합니다: return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; |
-| 311 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: group.ToDictionary(item => item!.Field, item => item!.Value, StringComparer.OrdinalIgnoreCase) |
-| 311 | local-declaration | 지역 변수를 선언합니다: var values = group.ToDictionary(item => item!.Field, item => item!.Value, StringComparer.OrdinalIgnoreCase); |
-| 311 | variable-initializer | 변수의 초기값을 지정합니다: values = group.ToDictionary(item => item!.Field, item => item!.Value, StringComparer.OrdinalIgnoreCase) |
-| 312 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_REVIEW_RESULT( group.Key, ParseInt(ReadAny(values, "HEAD_NO")), ParseInt(ReadAny(values, "CELL_NO")), ParseInt(ReadAny(values, "BEAM_NO"), DefaultReviewBeamNo), ParseNullableDouble(ReadAny(values, "ERROR_X… |
-| 312 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_PRODUCT_REVIEW_RESULT( group.Key, ParseInt(ReadAny(values, "HEAD_NO")), ParseInt(ReadAny(values, "CELL_NO")), ParseInt(ReadAny(values, "BEAM_NO"), DefaultReviewBeamNo), ParseNullableDouble(ReadAny(values, "ERROR_X")) |
-| 314 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(ReadAny(values, "HEAD_NO")) |
-| 314 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(values, "HEAD_NO") |
-| 315 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(ReadAny(values, "CELL_NO")) |
-| 315 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(values, "CELL_NO") |
-| 316 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(ReadAny(values, "BEAM_NO"), DefaultReviewBeamNo) |
-| 316 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(values, "BEAM_NO") |
-| 317 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableDouble(ReadAny(values, "ERROR_X")) |
-| 317 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(values, "ERROR_X") |
-| 318 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableDouble(ReadAny(values, "ERROR_Y")) |
-| 318 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(values, "ERROR_Y") |
-| 319 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(values, "JUDGE") |
-| 322 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_REVIEW_DATA( ParseEnum(ReadAny(reviewValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), ParseDate(ReadAny(resultValues, "SAVED_AT")), groupedResults) { InspectionMethod = ReadAny(reviewValues, "INSPEC… |
-| 322 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_PRODUCT_REVIEW_DATA( ParseEnum(ReadAny(reviewValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), ParseDate(ReadAny(resultValues, "SAVED_AT")), groupedResults) { InspectionMethod = ReadAny(reviewValues, "INSPECTIO |
-| 323 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseEnum(ReadAny(reviewValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted) |
-| 323 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "STATE") |
-| 324 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDate(ReadAny(resultValues, "SAVED_AT")) |
-| 324 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(resultValues, "SAVED_AT") |
-| 327 | assignment | 값을 대상에 대입합니다: InspectionMethod = ReadAny(reviewValues, "INSPECTION_METHOD") |
-| 327 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "INSPECTION_METHOD") |
-| 328 | assignment | 값을 대상에 대입합니다: RecipeId = ReadAny(reviewValues, "RECIPE_ID") |
-| 328 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "RECIPE_ID") |
-| 329 | assignment | 값을 대상에 대입합니다: Rule = ReadAny(reviewValues, "RULE") |
-| 329 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "RULE") |
-| 330 | assignment | 값을 대상에 대입합니다: RuleScope = ReadAny(reviewValues, "RULE_SCOPE") |
-| 330 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "RULE_SCOPE") |
-| 331 | assignment | 값을 대상에 대입합니다: BeamNo = ParseInt(ReadAny(reviewValues, "BEAM_NO"), DefaultReviewBeamNo) |
-| 331 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(ReadAny(reviewValues, "BEAM_NO"), DefaultReviewBeamNo) |
-| 331 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "BEAM_NO") |
-| 332 | assignment | 값을 대상에 대입합니다: ReferenceCellNo = ParseNullableInt(ReadAny(reviewValues, "REFERENCE_CELL_NO")) |
-| 332 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableInt(ReadAny(reviewValues, "REFERENCE_CELL_NO")) |
-| 332 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "REFERENCE_CELL_NO") |
-| 333 | assignment | 값을 대상에 대입합니다: ReferenceShot = ReadAny(reviewValues, "REFERENCE_SHOT") |
-| 333 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "REFERENCE_SHOT") |
-| 334 | assignment | 값을 대상에 대입합니다: RoughReference = ReadAny(reviewValues, "ROUGH_REFERENCE") |
-| 334 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "ROUGH_REFERENCE") |
-| 335 | assignment | 값을 대상에 대입합니다: FineLineCount = ParseInt(ReadAny(reviewValues, "FINE_LINE_COUNT")) |
-| 335 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(ReadAny(reviewValues, "FINE_LINE_COUNT")) |
-| 335 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "FINE_LINE_COUNT") |
-| 336 | assignment | 값을 대상에 대입합니다: TotalCount = ParseInt(ReadAny(reviewValues, "TOTAL_COUNT")) |
-| 336 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(ReadAny(reviewValues, "TOTAL_COUNT")) |
-| 336 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "TOTAL_COUNT") |
+| 287 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues.Where(ShouldIncludeItem) |
+| 287 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; })… |
+| 287 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; })… |
+| 287 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; }) |
+| 287 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; })… |
+| 287 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; })… |
+| 287 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; })… |
+| 287 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; })… |
+| 287 | local-declaration | 지역 변수를 선언합니다: var groupedResults = resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } |
+| 287 | variable-initializer | 변수의 초기값을 지정합니다: groupedResults = resultValues.Where(ShouldIncludeItem).Select(item => { var separator = item.Key.LastIndexOf('.'); return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : n |
+| 289 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Key.LastIndexOf('.') |
+| 289 | local-declaration | 지역 변수를 선언합니다: var separator = item.Key.LastIndexOf('.'); |
+| 289 | variable-initializer | 변수의 초기값을 지정합니다: separator = item.Key.LastIndexOf('.') |
+| 290 | conditional-expression | 조건에 따라 결과식을 선택합니다: separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null |
+| 290 | return | 호출자에게 값 또는 제어를 반환합니다: return separator > 0 ? new { ShotKey = item.Key[..separator], Field = item.Key[(separator + 1)..], item.Value } : null; |
+| 300 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: group.ToDictionary(item => item!.Field, item => item!.Value, StringComparer.OrdinalIgnoreCase) |
+| 300 | local-declaration | 지역 변수를 선언합니다: var values = group.ToDictionary(item => item!.Field, item => item!.Value, StringComparer.OrdinalIgnoreCase); |
+| 300 | variable-initializer | 변수의 초기값을 지정합니다: values = group.ToDictionary(item => item!.Field, item => item!.Value, StringComparer.OrdinalIgnoreCase) |
+| 301 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_REVIEW_RESULT( group.Key, ParseInt(ReadAny(values, "HEAD_NO")), ParseInt(ReadAny(values, "CELL_NO")), ParseInt(ReadAny(values, "BEAM_NO"), DefaultReviewBeamNo), ParseNullableDouble(ReadAny(values, "ERROR_X… |
+| 301 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_PRODUCT_REVIEW_RESULT( group.Key, ParseInt(ReadAny(values, "HEAD_NO")), ParseInt(ReadAny(values, "CELL_NO")), ParseInt(ReadAny(values, "BEAM_NO"), DefaultReviewBeamNo), ParseNullableDouble(ReadAny(values, "ERROR_X")) |
+| 303 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(ReadAny(values, "HEAD_NO")) |
+| 303 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(values, "HEAD_NO") |
+| 304 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(ReadAny(values, "CELL_NO")) |
+| 304 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(values, "CELL_NO") |
+| 305 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(ReadAny(values, "BEAM_NO"), DefaultReviewBeamNo) |
+| 305 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(values, "BEAM_NO") |
+| 306 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableDouble(ReadAny(values, "ERROR_X")) |
+| 306 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(values, "ERROR_X") |
+| 307 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableDouble(ReadAny(values, "ERROR_Y")) |
+| 307 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(values, "ERROR_Y") |
+| 308 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(values, "JUDGE") |
+| 311 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_REVIEW_DATA( ParseEnum(ReadAny(reviewValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), ParseDate(ReadAny(resultValues, "SAVED_AT")), groupedResults) { InspectionMethod = ReadAny(reviewValues, "INSPEC… |
+| 311 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_PRODUCT_REVIEW_DATA( ParseEnum(ReadAny(reviewValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted), ParseDate(ReadAny(resultValues, "SAVED_AT")), groupedResults) { InspectionMethod = ReadAny(reviewValues, "INSPECTIO |
+| 312 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseEnum(ReadAny(reviewValues, "STATE"), EN_PRODUCT_PROCESS_STATE.NotStarted) |
+| 312 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "STATE") |
+| 313 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDate(ReadAny(resultValues, "SAVED_AT")) |
+| 313 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(resultValues, "SAVED_AT") |
+| 316 | assignment | 값을 대상에 대입합니다: InspectionMethod = ReadAny(reviewValues, "INSPECTION_METHOD") |
+| 316 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "INSPECTION_METHOD") |
+| 317 | assignment | 값을 대상에 대입합니다: RecipeId = ReadAny(reviewValues, "RECIPE_ID") |
+| 317 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "RECIPE_ID") |
+| 318 | assignment | 값을 대상에 대입합니다: Rule = ReadAny(reviewValues, "RULE") |
+| 318 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "RULE") |
+| 319 | assignment | 값을 대상에 대입합니다: RuleScope = ReadAny(reviewValues, "RULE_SCOPE") |
+| 319 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "RULE_SCOPE") |
+| 320 | assignment | 값을 대상에 대입합니다: BeamNo = ParseInt(ReadAny(reviewValues, "BEAM_NO"), DefaultReviewBeamNo) |
+| 320 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(ReadAny(reviewValues, "BEAM_NO"), DefaultReviewBeamNo) |
+| 320 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "BEAM_NO") |
+| 321 | assignment | 값을 대상에 대입합니다: ReferenceCellNo = ParseNullableInt(ReadAny(reviewValues, "REFERENCE_CELL_NO")) |
+| 321 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseNullableInt(ReadAny(reviewValues, "REFERENCE_CELL_NO")) |
+| 321 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "REFERENCE_CELL_NO") |
+| 322 | assignment | 값을 대상에 대입합니다: ReferenceShot = ReadAny(reviewValues, "REFERENCE_SHOT") |
+| 322 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "REFERENCE_SHOT") |
+| 323 | assignment | 값을 대상에 대입합니다: RoughReference = ReadAny(reviewValues, "ROUGH_REFERENCE") |
+| 323 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "ROUGH_REFERENCE") |
+| 324 | assignment | 값을 대상에 대입합니다: FineLineCount = ParseInt(ReadAny(reviewValues, "FINE_LINE_COUNT")) |
+| 324 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(ReadAny(reviewValues, "FINE_LINE_COUNT")) |
+| 324 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "FINE_LINE_COUNT") |
+| 325 | assignment | 값을 대상에 대입합니다: TotalCount = ParseInt(ReadAny(reviewValues, "TOTAL_COUNT")) |
+| 325 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInt(ReadAny(reviewValues, "TOTAL_COUNT")) |
+| 325 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAny(reviewValues, "TOTAL_COUNT") |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `ShouldIncludeItem` · L283–286
+### LocalFunctionStatement `ShouldIncludeItem` · L272–275
 
-[Drilling.File/Product/CProductFile.cs:283–286](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L283-L286)
+[Drilling.File/Product/CProductFile.cs:272–275](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L272-L275)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1530,20 +1530,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 285 | item.Key.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 274 | item.Key.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 285 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Key.Equals("SAVED_AT", StringComparison.OrdinalIgnoreCase) |
-| 285 | return | 호출자에게 값 또는 제어를 반환합니다: return !item.Key.Equals("SAVED_AT", StringComparison.OrdinalIgnoreCase); |
+| 274 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Key.Equals("SAVED_AT", StringComparison.OrdinalIgnoreCase) |
+| 274 | return | 호출자에게 값 또는 제어를 반환합니다: return !item.Key.Equals("SAVED_AT", StringComparison.OrdinalIgnoreCase); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectCellNo` · L288–291
+### LocalFunctionStatement `SelectCellNo` · L277–280
 
-[Drilling.File/Product/CProductFile.cs:288–291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L288-L291)
+[Drilling.File/Product/CProductFile.cs:277–280](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L277-L280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1564,13 +1564,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 290 | return | 호출자에게 값 또는 제어를 반환합니다: return result.CellNo; |
+| 279 | return | 호출자에게 값 또는 제어를 반환합니다: return result.CellNo; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectShotKey` · L293–296
+### LocalFunctionStatement `SelectShotKey` · L282–285
 
-[Drilling.File/Product/CProductFile.cs:293–296](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L293-L296)
+[Drilling.File/Product/CProductFile.cs:282–285](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L282-L285)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1591,13 +1591,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 295 | return | 호출자에게 값 또는 제어를 반환합니다: return result.ShotKey; |
+| 284 | return | 호출자에게 값 또는 제어를 반환합니다: return result.ShotKey; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReadSection` · L340–368
+### MethodDeclaration `ReadSection` · L329–357
 
-[Drilling.File/Product/CProductFile.cs:340–368](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L340-L368)
+[Drilling.File/Product/CProductFile.cs:329–357](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L329-L357)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1617,37 +1617,37 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L43-L43) | ReadSection | False |
-| [Drilling.File/Product/CProductFile.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L62-L62) | ReadSection | False |
-| [Drilling.File/Product/CProductFile.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L73-L73) | ReadSection | False |
-| [Drilling.File/Product/CProductFile.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L74-L74) | ReadSection | False |
-| [Drilling.File/Product/CProductFile.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L75-L75) | ReadSection | False |
-| [Drilling.File/Product/CProductFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L76-L76) | ReadSection | False |
+| [Drilling.File/Product/CProductFile.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L43-L43) | ReadSection | False |
+| [Drilling.File/Product/CProductFile.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L51-L51) | ReadSection | False |
+| [Drilling.File/Product/CProductFile.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L62-L62) | ReadSection | False |
+| [Drilling.File/Product/CProductFile.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L63-L63) | ReadSection | False |
+| [Drilling.File/Product/CProductFile.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L64-L64) | ReadSection | False |
+| [Drilling.File/Product/CProductFile.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L65-L65) | ReadSection | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 367 | rows.Where(MatchesSectionType).Where(HasSectionName).GroupBy(SelectGroupKey, StringComparer.OrdinalIgnoreCase).ToDictionary | resolved | System.Collections.Generic.Dictionary<string, string> System.Collections.Generic.IEnumerable<System.Linq.IGrouping<string, System.Collections.Generic.IReadOnlyDictionary<string, string>>>.ToDictionary<System.Linq.IGrouping<string, System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string>(System.Func<System.Linq.IGrouping<string, System.Collections.Generic.IReadOnlyDictionary<string, string>>, string>, System.Func<System.Linq.IGrouping<string, System.Collections.Generic.IReadOnlyDictionary<string, string>>, string>, System.Collections.Generic.IEqualityComparer<string>?) |
-| 367 | rows.Where(MatchesSectionType).Where(HasSectionName).GroupBy | resolved | System.Collections.Generic.IEnumerable<System.Linq.IGrouping<string, System.Collections.Generic.IReadOnlyDictionary<string, string>>> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.GroupBy<System.Collections.Generic.IReadOnlyDictionary<string, string>, string>(System.Func<System.Collections.Generic.IReadOnlyDictionary<string, string>, string>, System.Collections.Generic.IEqualityComparer<string>?) |
-| 367 | rows.Where(MatchesSectionType).Where | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Where<System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Func<System.Collections.Generic.IReadOnlyDictionary<string, string>, bool>) |
-| 367 | rows.Where | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Where<System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Func<System.Collections.Generic.IReadOnlyDictionary<string, string>, bool>) |
+| 356 | rows.Where(MatchesSectionType).Where(HasSectionName).GroupBy(SelectGroupKey, StringComparer.OrdinalIgnoreCase).ToDictionary | resolved | System.Collections.Generic.Dictionary<string, string> System.Collections.Generic.IEnumerable<System.Linq.IGrouping<string, System.Collections.Generic.IReadOnlyDictionary<string, string>>>.ToDictionary<System.Linq.IGrouping<string, System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string>(System.Func<System.Linq.IGrouping<string, System.Collections.Generic.IReadOnlyDictionary<string, string>>, string>, System.Func<System.Linq.IGrouping<string, System.Collections.Generic.IReadOnlyDictionary<string, string>>, string>, System.Collections.Generic.IEqualityComparer<string>?) |
+| 356 | rows.Where(MatchesSectionType).Where(HasSectionName).GroupBy | resolved | System.Collections.Generic.IEnumerable<System.Linq.IGrouping<string, System.Collections.Generic.IReadOnlyDictionary<string, string>>> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.GroupBy<System.Collections.Generic.IReadOnlyDictionary<string, string>, string>(System.Func<System.Collections.Generic.IReadOnlyDictionary<string, string>, string>, System.Collections.Generic.IEqualityComparer<string>?) |
+| 356 | rows.Where(MatchesSectionType).Where | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Where<System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Func<System.Collections.Generic.IReadOnlyDictionary<string, string>, bool>) |
+| 356 | rows.Where | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Where<System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Func<System.Collections.Generic.IReadOnlyDictionary<string, string>, bool>) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 367 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(MatchesSectionType).Where(HasSectionName).GroupBy(SelectGroupKey, StringComparer.OrdinalIgnoreCase).ToDictionary(SelectKey, SelectValue, StringComparer.OrdinalIgnoreCase) |
-| 367 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(MatchesSectionType).Where(HasSectionName).GroupBy(SelectGroupKey, StringComparer.OrdinalIgnoreCase) |
-| 367 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(MatchesSectionType).Where(HasSectionName) |
-| 367 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(MatchesSectionType) |
-| 367 | return | 호출자에게 값 또는 제어를 반환합니다: return rows.Where(MatchesSectionType).Where(HasSectionName).GroupBy(SelectGroupKey, StringComparer.OrdinalIgnoreCase).ToDictionary(SelectKey, SelectValue, StringComparer.OrdinalIgnoreCase); |
+| 356 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(MatchesSectionType).Where(HasSectionName).GroupBy(SelectGroupKey, StringComparer.OrdinalIgnoreCase).ToDictionary(SelectKey, SelectValue, StringComparer.OrdinalIgnoreCase) |
+| 356 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(MatchesSectionType).Where(HasSectionName).GroupBy(SelectGroupKey, StringComparer.OrdinalIgnoreCase) |
+| 356 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(MatchesSectionType).Where(HasSectionName) |
+| 356 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(MatchesSectionType) |
+| 356 | return | 호출자에게 값 또는 제어를 반환합니다: return rows.Where(MatchesSectionType).Where(HasSectionName).GroupBy(SelectGroupKey, StringComparer.OrdinalIgnoreCase).ToDictionary(SelectKey, SelectValue, StringComparer.OrdinalIgnoreCase); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `MatchesSectionType` · L342–345
+### LocalFunctionStatement `MatchesSectionType` · L331–334
 
-[Drilling.File/Product/CProductFile.cs:342–345](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L342-L345)
+[Drilling.File/Product/CProductFile.cs:331–334](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L331-L334)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1668,22 +1668,22 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 344 | CCsvParser.Get(row, "TYPE").Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 344 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
+| 333 | CCsvParser.Get(row, "TYPE").Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 333 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 344 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "TYPE").Equals(type, StringComparison.OrdinalIgnoreCase) |
-| 344 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "TYPE") |
-| 344 | return | 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, "TYPE").Equals(type, StringComparison.OrdinalIgnoreCase); |
+| 333 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "TYPE").Equals(type, StringComparison.OrdinalIgnoreCase) |
+| 333 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "TYPE") |
+| 333 | return | 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, "TYPE").Equals(type, StringComparison.OrdinalIgnoreCase); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `HasSectionName` · L347–350
+### LocalFunctionStatement `HasSectionName` · L336–339
 
-[Drilling.File/Product/CProductFile.cs:347–350](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L347-L350)
+[Drilling.File/Product/CProductFile.cs:336–339](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L336-L339)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1704,22 +1704,22 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 349 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 349 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
+| 338 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 338 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 349 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(CCsvParser.Get(row, "NAME")) |
-| 349 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "NAME") |
-| 349 | return | 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(CCsvParser.Get(row, "NAME")); |
+| 338 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(CCsvParser.Get(row, "NAME")) |
+| 338 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "NAME") |
+| 338 | return | 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(CCsvParser.Get(row, "NAME")); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectGroupKey` · L352–355
+### LocalFunctionStatement `SelectGroupKey` · L341–344
 
-[Drilling.File/Product/CProductFile.cs:352–355](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L352-L355)
+[Drilling.File/Product/CProductFile.cs:341–344](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L341-L344)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1740,20 +1740,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 354 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
+| 343 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 354 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "NAME") |
-| 354 | return | 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, "NAME"); |
+| 343 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "NAME") |
+| 343 | return | 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(row, "NAME"); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectKey` · L357–360
+### LocalFunctionStatement `SelectKey` · L346–349
 
-[Drilling.File/Product/CProductFile.cs:357–360](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L357-L360)
+[Drilling.File/Product/CProductFile.cs:346–349](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L346-L349)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1774,13 +1774,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 359 | return | 호출자에게 값 또는 제어를 반환합니다: return group.Key; |
+| 348 | return | 호출자에게 값 또는 제어를 반환합니다: return group.Key; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectValue` · L362–365
+### LocalFunctionStatement `SelectValue` · L351–354
 
-[Drilling.File/Product/CProductFile.cs:362–365](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L362-L365)
+[Drilling.File/Product/CProductFile.cs:351–354](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L351-L354)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1801,22 +1801,22 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 364 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
-| 364 | group.Last | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Last<System.Collections.Generic.IReadOnlyDictionary<string, string>>() |
+| 353 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
+| 353 | group.Last | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Last<System.Collections.Generic.IReadOnlyDictionary<string, string>>() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 364 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(group.Last(), "VALUE") |
-| 364 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Last() |
-| 364 | return | 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(group.Last(), "VALUE"); |
+| 353 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(group.Last(), "VALUE") |
+| 353 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Last() |
+| 353 | return | 호출자에게 값 또는 제어를 반환합니다: return CCsvParser.Get(group.Last(), "VALUE"); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReadAny` · L370–381
+### MethodDeclaration `ReadAny` · L359–370
 
-[Drilling.File/Product/CProductFile.cs:370–381](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L370-L381)
+[Drilling.File/Product/CProductFile.cs:359–370](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L359-L370)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1836,69 +1836,69 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L44-L44) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L86-L86) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L91-L91) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L92-L92) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L97-L97) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L98-L98) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L99-L99) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L100-L100) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L101-L101) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L103-L103) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L103-L103) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L103-L103) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L314-L314) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L315-L315) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L316-L316) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L317-L317) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L318-L318) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L319-L319) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L323-L323) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L324-L324) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L327-L327) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L328-L328) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L329-L329) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L330-L330) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L331-L331) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L332-L332) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L333-L333) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L334-L334) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L335-L335) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L336-L336) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L44-L44) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L75-L75) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L80-L80) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L81-L81) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L86-L86) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L87-L87) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L88-L88) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L89-L89) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L90-L90) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L92-L92) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L92-L92) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L92-L92) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L303-L303) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L304-L304) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L305-L305) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L306-L306) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L307-L307) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L308-L308) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L312-L312) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L313-L313) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L316-L316) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L317-L317) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L318-L318) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L319-L319) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L320-L320) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L321-L321) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:322–322](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L322-L322) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L323-L323) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L324-L324) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L325-L325) | ReadAny | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 374 | values.TryGetValue | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlyDictionary<string, string>.TryGetValue(string, out string) |
+| 363 | values.TryGetValue | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlyDictionary<string, string>.TryGetValue(string, out string) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 372 | foreach | 컬렉션 요소를 순회합니다: foreach (var name in names) |
-| 374 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(name, out var value) |
-| 374 | if | 조건에 따라 분기합니다: if (values.TryGetValue(name, out var value)) |
-| 376 | return | 호출자에게 값 또는 제어를 반환합니다: return value; |
-| 380 | return | 호출자에게 값 또는 제어를 반환합니다: return ""; |
+| 361 | foreach | 컬렉션 요소를 순회합니다: foreach (var name in names) |
+| 363 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(name, out var value) |
+| 363 | if | 조건에 따라 분기합니다: if (values.TryGetValue(name, out var value)) |
+| 365 | return | 호출자에게 값 또는 제어를 반환합니다: return value; |
+| 369 | return | 호출자에게 값 또는 제어를 반환합니다: return ""; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReadAny"]
- N0["L372 foreach"]
+ N0["L361 foreach"]
  M -->|포함| N0
- N1["L374 if"]
+ N1["L363 if"]
  N0 -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `AddCompactRow` · L383–386
+### MethodDeclaration `AddCompactRow` · L372–375
 
-[Drilling.File/Product/CProductFile.cs:383–386](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L383-L386)
+[Drilling.File/Product/CProductFile.cs:372–375](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L372-L375)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1920,53 +1920,53 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L115-L115) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L134-L134) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L135-L135) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L136-L136) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L137-L137) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L138-L138) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L139-L139) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L140-L140) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L141-L141) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L142-L142) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L143-L143) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L144-L144) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L145-L145) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L146-L146) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L147-L147) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L148-L148) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L149-L149) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L150-L150) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L151-L151) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L152-L152) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L155-L155) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L170-L170) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L171-L171) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L172-L172) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L173-L173) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L174-L174) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L175-L175) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L104-L104) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L123-L123) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L124-L124) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L125-L125) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L126-L126) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L127-L127) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L128-L128) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L129-L129) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L130-L130) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L131-L131) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L132-L132) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L133-L133) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L134-L134) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L135-L135) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L136-L136) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L137-L137) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L138-L138) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L139-L139) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L140-L140) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L141-L141) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L144-L144) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L159-L159) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L160-L160) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:161–161](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L161-L161) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L162-L162) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L163-L163) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L164-L164) | AddCompactRow | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 385 | rows.Add | resolved · 동적 구현 선택 가능 | void System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Add(System.Collections.Generic.IReadOnlyDictionary<string, string>) |
-| 385 | CompactRow | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.Product.CProductFile.CompactRow(string, string, string) · Drilling.File/Product/CProductFile.cs:388 |
+| 374 | rows.Add | resolved · 동적 구현 선택 가능 | void System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>.Add(System.Collections.Generic.IReadOnlyDictionary<string, string>) |
+| 374 | CompactRow | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.Product.CProductFile.CompactRow(string, string, string) · Drilling.File/Product/CProductFile.cs:377 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 385 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Add(CompactRow(type, name, value)) |
-| 385 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CompactRow(type, name, value) |
+| 374 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Add(CompactRow(type, name, value)) |
+| 374 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CompactRow(type, name, value) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CompactRow` · L388–396
+### MethodDeclaration `CompactRow` · L377–385
 
-[Drilling.File/Product/CProductFile.cs:388–396](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L388-L396)
+[Drilling.File/Product/CProductFile.cs:377–385](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L377-L385)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1987,30 +1987,30 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L130-L130) | CompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:385–385](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L385-L385) | CompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L119-L119) | CompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:374–374](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L374-L374) | CompactRow | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 390 | new Dictionary<string, string> | resolved | System.Collections.Generic.Dictionary<string, string>.Dictionary(System.Collections.Generic.IEqualityComparer<string>?) |
+| 379 | new Dictionary<string, string> | resolved | System.Collections.Generic.Dictionary<string, string>.Dictionary(System.Collections.Generic.IEqualityComparer<string>?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 390 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["TYPE"] = type, ["NAME"] = name, ["VALUE"] = value } |
-| 390 | return | 호출자에게 값 또는 제어를 반환합니다: return new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["TYPE"] = type, ["NAME"] = name, ["VALUE"] = value }; |
-| 392 | assignment | 값을 대상에 대입합니다: ["TYPE"] = type |
-| 393 | assignment | 값을 대상에 대입합니다: ["NAME"] = name |
-| 394 | assignment | 값을 대상에 대입합니다: ["VALUE"] = value |
+| 379 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["TYPE"] = type, ["NAME"] = name, ["VALUE"] = value } |
+| 379 | return | 호출자에게 값 또는 제어를 반환합니다: return new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["TYPE"] = type, ["NAME"] = name, ["VALUE"] = value }; |
+| 381 | assignment | 값을 대상에 대입합니다: ["TYPE"] = type |
+| 382 | assignment | 값을 대상에 대입합니다: ["NAME"] = name |
+| 383 | assignment | 값을 대상에 대입합니다: ["VALUE"] = value |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `IsCompactProductCoreName` · L398–405
+### MethodDeclaration `IsCompactProductCoreName` · L387–390
 
-[Drilling.File/Product/CProductFile.cs:398–405](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L398-L405)
+[Drilling.File/Product/CProductFile.cs:387–390](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L387-L390)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2029,38 +2029,28 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L120-L120) | IsCompactProductCoreName | False |
+| [Drilling.File/Product/CProductFile.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L109-L109) | IsCompactProductCoreName | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 400 | name.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 400 | name.Trim | resolved | string string.Trim() |
+| 389 | CProductManager.ProductFieldNames.Contains | resolved | bool System.Collections.Generic.IEnumerable<string>.Contains<string>(string, System.Collections.Generic.IEqualityComparer<string>?) |
+| 389 | name.Trim | resolved | string string.Trim() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 400 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: name.Trim().ToUpperInvariant() |
-| 400 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: name.Trim() |
-| 400 | return | 호출자에게 값 또는 제어를 반환합니다: return name.Trim().ToUpperInvariant() switch { "H_GLASSID" or "LOTID" or "PROCESS_ID" or "PPID" or "PRODUCT_STATE" or "JUDGEMENT" or "CREATED_AT" or "STARTED_AT" or "COMPLETED_AT" => true, _ => false }; |
-| 400 | switch-expression | 값별 결과식을 선택합니다: name.Trim().ToUpperInvariant() switch { "H_GLASSID" or "LOTID" or "PROCESS_ID" or "PPID" or "PRODUCT_STATE" or "JUDGEMENT" or "CREATED_AT" or "STARTED_AT" or "COMPLETED_AT" => true, _ => false } |
-
-제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
-
-```mermaid
-flowchart TD
- M["IsCompactProductCoreName"]
- N0["L400 switch-expression"]
- M -->|포함| N0
-```
+| 389 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CProductManager.ProductFieldNames.Contains(name.Trim(), StringComparer.OrdinalIgnoreCase) |
+| 389 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: name.Trim() |
+| 389 | return | 호출자에게 값 또는 제어를 반환합니다: return CProductManager.ProductFieldNames.Contains(name.Trim(), StringComparer.OrdinalIgnoreCase); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `DefaultText` · L407–410
+### MethodDeclaration `DefaultText` · L392–395
 
-[Drilling.File/Product/CProductFile.cs:407–410](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L407-L410)
+[Drilling.File/Product/CProductFile.cs:392–395](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L392-L395)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2080,28 +2070,28 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L98-L98) | DefaultText | False |
-| [Drilling.File/Product/CProductFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L103-L103) | DefaultText | False |
+| [Drilling.File/Product/CProductFile.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L87-L87) | DefaultText | False |
+| [Drilling.File/Product/CProductFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L92-L92) | DefaultText | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 409 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 394 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 409 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) |
-| 409 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(value) ? defaultValue : value |
-| 409 | return | 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(value) ? defaultValue : value; |
+| 394 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) |
+| 394 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(value) ? defaultValue : value |
+| 394 | return | 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(value) ? defaultValue : value; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ParseInt` · L412–415
+### MethodDeclaration `ParseInt` · L397–400
 
-[Drilling.File/Product/CProductFile.cs:412–415](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L412-L415)
+[Drilling.File/Product/CProductFile.cs:397–400](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L397-L400)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2121,32 +2111,32 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L314-L314) | ParseInt | False |
-| [Drilling.File/Product/CProductFile.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L315-L315) | ParseInt | False |
-| [Drilling.File/Product/CProductFile.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L316-L316) | ParseInt | False |
-| [Drilling.File/Product/CProductFile.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L331-L331) | ParseInt | False |
-| [Drilling.File/Product/CProductFile.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L335-L335) | ParseInt | False |
-| [Drilling.File/Product/CProductFile.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L336-L336) | ParseInt | False |
+| [Drilling.File/Product/CProductFile.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L303-L303) | ParseInt | False |
+| [Drilling.File/Product/CProductFile.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L304-L304) | ParseInt | False |
+| [Drilling.File/Product/CProductFile.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L305-L305) | ParseInt | False |
+| [Drilling.File/Product/CProductFile.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L320-L320) | ParseInt | False |
+| [Drilling.File/Product/CProductFile.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L324-L324) | ParseInt | False |
+| [Drilling.File/Product/CProductFile.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L325-L325) | ParseInt | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 414 | int.TryParse | resolved | bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int) |
+| 399 | int.TryParse | resolved | bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 414 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) |
-| 414 | conditional-expression | 조건에 따라 결과식을 선택합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) ? parsed : defaultValue |
-| 414 | return | 호출자에게 값 또는 제어를 반환합니다: return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) ? parsed : defaultValue; |
+| 399 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) |
+| 399 | conditional-expression | 조건에 따라 결과식을 선택합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) ? parsed : defaultValue |
+| 399 | return | 호출자에게 값 또는 제어를 반환합니다: return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) ? parsed : defaultValue; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ParseNullableInt` · L417–420
+### MethodDeclaration `ParseNullableInt` · L402–405
 
-[Drilling.File/Product/CProductFile.cs:417–420](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L417-L420)
+[Drilling.File/Product/CProductFile.cs:402–405](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L402-L405)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2165,27 +2155,27 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L332-L332) | ParseNullableInt | False |
+| [Drilling.File/Product/CProductFile.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L321-L321) | ParseNullableInt | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 419 | int.TryParse | resolved | bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int) |
+| 404 | int.TryParse | resolved | bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 419 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) |
-| 419 | conditional-expression | 조건에 따라 결과식을 선택합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) ? parsed : null |
-| 419 | return | 호출자에게 값 또는 제어를 반환합니다: return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) ? parsed : null; |
+| 404 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) |
+| 404 | conditional-expression | 조건에 따라 결과식을 선택합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) ? parsed : null |
+| 404 | return | 호출자에게 값 또는 제어를 반환합니다: return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed) ? parsed : null; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ParseNullableDouble` · L422–425
+### MethodDeclaration `ParseNullableDouble` · L407–410
 
-[Drilling.File/Product/CProductFile.cs:422–425](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L422-L425)
+[Drilling.File/Product/CProductFile.cs:407–410](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L407-L410)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2204,32 +2194,32 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L99-L99) | ParseNullableDouble | False |
-| [Drilling.File/Product/CProductFile.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L100-L100) | ParseNullableDouble | False |
-| [Drilling.File/Product/CProductFile.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L101-L101) | ParseNullableDouble | False |
-| [Drilling.File/Product/CProductFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L103-L103) | ParseNullableDouble | False |
-| [Drilling.File/Product/CProductFile.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L317-L317) | ParseNullableDouble | False |
-| [Drilling.File/Product/CProductFile.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L318-L318) | ParseNullableDouble | False |
+| [Drilling.File/Product/CProductFile.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L88-L88) | ParseNullableDouble | False |
+| [Drilling.File/Product/CProductFile.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L89-L89) | ParseNullableDouble | False |
+| [Drilling.File/Product/CProductFile.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L90-L90) | ParseNullableDouble | False |
+| [Drilling.File/Product/CProductFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L92-L92) | ParseNullableDouble | False |
+| [Drilling.File/Product/CProductFile.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L306-L306) | ParseNullableDouble | False |
+| [Drilling.File/Product/CProductFile.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L307-L307) | ParseNullableDouble | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 424 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
+| 409 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 424 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) |
-| 424 | conditional-expression | 조건에 따라 결과식을 선택합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) ? parsed : null |
-| 424 | return | 호출자에게 값 또는 제어를 반환합니다: return double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) ? parsed : null; |
+| 409 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) |
+| 409 | conditional-expression | 조건에 따라 결과식을 선택합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) ? parsed : null |
+| 409 | return | 호출자에게 값 또는 제어를 반환합니다: return double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) ? parsed : null; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `FormatDouble` · L427–430
+### MethodDeclaration `FormatDouble` · L412–415
 
-[Drilling.File/Product/CProductFile.cs:427–430](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L427-L430)
+[Drilling.File/Product/CProductFile.cs:412–415](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L412-L415)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2248,29 +2238,29 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L136-L136) | FormatDouble | False |
-| [Drilling.File/Product/CProductFile.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L137-L137) | FormatDouble | False |
-| [Drilling.File/Product/CProductFile.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L138-L138) | FormatDouble | False |
-| [Drilling.File/Product/CProductFile.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L141-L141) | FormatDouble | False |
+| [Drilling.File/Product/CProductFile.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L125-L125) | FormatDouble | False |
+| [Drilling.File/Product/CProductFile.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L126-L126) | FormatDouble | False |
+| [Drilling.File/Product/CProductFile.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L127-L127) | FormatDouble | False |
+| [Drilling.File/Product/CProductFile.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L130-L130) | FormatDouble | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 429 | .ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
+| 414 | .ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 429 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("G", CultureInfo.InvariantCulture) |
-| 429 | return | 호출자에게 값 또는 제어를 반환합니다: return value?.ToString("G", CultureInfo.InvariantCulture) ?? ""; |
+| 414 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("G", CultureInfo.InvariantCulture) |
+| 414 | return | 호출자에게 값 또는 제어를 반환합니다: return value?.ToString("G", CultureInfo.InvariantCulture) ?? ""; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ToHistoryRow` · L432–446
+### MethodDeclaration `ToHistoryRow` · L417–431
 
-[Drilling.File/Product/CProductFile.cs:432–446](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L432-L446)
+[Drilling.File/Product/CProductFile.cs:417–431](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L417-L431)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2289,38 +2279,38 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L218-L218) | ToHistoryRow | False |
-| [Drilling.File/Product/CProductFile.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L219-L219) | ToHistoryRow | False |
+| [Drilling.File/Product/CProductFile.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L207-L207) | ToHistoryRow | False |
+| [Drilling.File/Product/CProductFile.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L208-L208) | ToHistoryRow | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 434 | new Dictionary<string, string> | resolved | System.Collections.Generic.Dictionary<string, string>.Dictionary(System.Collections.Generic.IEqualityComparer<string>?) |
-| 436 | FormatDate | resolved | string Drilling.File.Product.CProductFile.FormatDate(System.DateTimeOffset?) · Drilling.File/Product/CProductFile.cs:495 |
+| 419 | new Dictionary<string, string> | resolved | System.Collections.Generic.Dictionary<string, string>.Dictionary(System.Collections.Generic.IEqualityComparer<string>?) |
+| 421 | FormatDate | resolved | string Drilling.File.Product.CProductFile.FormatDate(System.DateTimeOffset?) · Drilling.File/Product/CProductFile.cs:480 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 434 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["OCCURRED_AT"] = FormatDate(history.OccurredAt), ["ROW_TYPE"] = "EVENT", ["GLASS_ID"] = history.GlassId, ["PROCESS_ID"] = history.ProcessId, ["RECIPE_ID… |
-| 434 | return | 호출자에게 값 또는 제어를 반환합니다: return new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["OCCURRED_AT"] = FormatDate(history.OccurredAt), ["ROW_TYPE"] = "EVENT", ["GLASS_ID"] = history.GlassId, ["PROCESS_ID"] = history.ProcessId, ["RECIPE_ID"]  |
-| 436 | assignment | 값을 대상에 대입합니다: ["OCCURRED_AT"] = FormatDate(history.OccurredAt) |
-| 436 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDate(history.OccurredAt) |
-| 437 | assignment | 값을 대상에 대입합니다: ["ROW_TYPE"] = "EVENT" |
-| 438 | assignment | 값을 대상에 대입합니다: ["GLASS_ID"] = history.GlassId |
-| 439 | assignment | 값을 대상에 대입합니다: ["PROCESS_ID"] = history.ProcessId |
-| 440 | assignment | 값을 대상에 대입합니다: ["RECIPE_ID"] = history.RecipeId |
-| 441 | assignment | 값을 대상에 대입합니다: ["ACTION"] = history.Action |
-| 442 | assignment | 값을 대상에 대입합니다: ["STATE"] = history.State |
-| 443 | assignment | 값을 대상에 대입합니다: ["RESULT"] = history.Result |
-| 444 | assignment | 값을 대상에 대입합니다: ["DETAIL"] = history.Detail |
+| 419 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["OCCURRED_AT"] = FormatDate(history.OccurredAt), ["ROW_TYPE"] = "EVENT", ["GLASS_ID"] = history.GlassId, ["PROCESS_ID"] = history.ProcessId, ["RECIPE_ID… |
+| 419 | return | 호출자에게 값 또는 제어를 반환합니다: return new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { ["OCCURRED_AT"] = FormatDate(history.OccurredAt), ["ROW_TYPE"] = "EVENT", ["GLASS_ID"] = history.GlassId, ["PROCESS_ID"] = history.ProcessId, ["RECIPE_ID"]  |
+| 421 | assignment | 값을 대상에 대입합니다: ["OCCURRED_AT"] = FormatDate(history.OccurredAt) |
+| 421 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDate(history.OccurredAt) |
+| 422 | assignment | 값을 대상에 대입합니다: ["ROW_TYPE"] = "EVENT" |
+| 423 | assignment | 값을 대상에 대입합니다: ["GLASS_ID"] = history.GlassId |
+| 424 | assignment | 값을 대상에 대입합니다: ["PROCESS_ID"] = history.ProcessId |
+| 425 | assignment | 값을 대상에 대입합니다: ["RECIPE_ID"] = history.RecipeId |
+| 426 | assignment | 값을 대상에 대입합니다: ["ACTION"] = history.Action |
+| 427 | assignment | 값을 대상에 대입합니다: ["STATE"] = history.State |
+| 428 | assignment | 값을 대상에 대입합니다: ["RESULT"] = history.Result |
+| 429 | assignment | 값을 대상에 대입합니다: ["DETAIL"] = history.Detail |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ParseHistory` · L448–466
+### MethodDeclaration `ParseHistory` · L433–451
 
-[Drilling.File/Product/CProductFile.cs:448–466](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L448-L466)
+[Drilling.File/Product/CProductFile.cs:433–451](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L433-L451)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2341,51 +2331,51 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 450 | ParseDate | resolved | System.DateTimeOffset? Drilling.File.Product.CProductFile.ParseDate(string) · Drilling.File/Product/CProductFile.cs:500 |
-| 450 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
-| 456 | new ST_PRODUCT_HISTORY | resolved | Drilling.Common.Product.ST_PRODUCT_HISTORY.ST_PRODUCT_HISTORY(System.DateTimeOffset, string, string, string, string, string, string, string) · Drilling.Common/Product/CProductManager.cs:1166 |
-| 458 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
-| 459 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
-| 460 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
-| 461 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
-| 462 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
-| 463 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
-| 464 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
+| 435 | ParseDate | resolved | System.DateTimeOffset? Drilling.File.Product.CProductFile.ParseDate(string) · Drilling.File/Product/CProductFile.cs:485 |
+| 435 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
+| 441 | new ST_PRODUCT_HISTORY | resolved | Drilling.Common.Product.ST_PRODUCT_HISTORY.ST_PRODUCT_HISTORY(System.DateTimeOffset, string, string, string, string, string, string, string) · Drilling.Common/Product/CProductManager.cs:1112 |
+| 443 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
+| 444 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
+| 445 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
+| 446 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
+| 447 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
+| 448 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
+| 449 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 450 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDate(CCsvParser.Get(row, "OCCURRED_AT")) |
-| 450 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "OCCURRED_AT") |
-| 450 | local-declaration | 지역 변수를 선언합니다: var occurredAt = ParseDate(CCsvParser.Get(row, "OCCURRED_AT")); |
-| 450 | variable-initializer | 변수의 초기값을 지정합니다: occurredAt = ParseDate(CCsvParser.Get(row, "OCCURRED_AT")) |
-| 451 | if | 조건에 따라 분기합니다: if (!occurredAt.HasValue) |
-| 453 | return | 호출자에게 값 또는 제어를 반환합니다: return null; |
-| 456 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_HISTORY( occurredAt.Value, CCsvParser.Get(row, "GLASS_ID"), CCsvParser.Get(row, "PROCESS_ID"), CCsvParser.Get(row, "RECIPE_ID"), CCsvParser.Get(row, "ACTION"), CCsvParser.Get(row, "STATE"), CCsvParser.Get(… |
-| 456 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_PRODUCT_HISTORY( occurredAt.Value, CCsvParser.Get(row, "GLASS_ID"), CCsvParser.Get(row, "PROCESS_ID"), CCsvParser.Get(row, "RECIPE_ID"), CCsvParser.Get(row, "ACTION"), CCsvParser.Get(row, "STATE"), CCsvParser.Get(row |
-| 458 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "GLASS_ID") |
-| 459 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "PROCESS_ID") |
-| 460 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "RECIPE_ID") |
-| 461 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "ACTION") |
-| 462 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "STATE") |
-| 463 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "RESULT") |
-| 464 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "DETAIL") |
+| 435 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDate(CCsvParser.Get(row, "OCCURRED_AT")) |
+| 435 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "OCCURRED_AT") |
+| 435 | local-declaration | 지역 변수를 선언합니다: var occurredAt = ParseDate(CCsvParser.Get(row, "OCCURRED_AT")); |
+| 435 | variable-initializer | 변수의 초기값을 지정합니다: occurredAt = ParseDate(CCsvParser.Get(row, "OCCURRED_AT")) |
+| 436 | if | 조건에 따라 분기합니다: if (!occurredAt.HasValue) |
+| 438 | return | 호출자에게 값 또는 제어를 반환합니다: return null; |
+| 441 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_HISTORY( occurredAt.Value, CCsvParser.Get(row, "GLASS_ID"), CCsvParser.Get(row, "PROCESS_ID"), CCsvParser.Get(row, "RECIPE_ID"), CCsvParser.Get(row, "ACTION"), CCsvParser.Get(row, "STATE"), CCsvParser.Get(… |
+| 441 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_PRODUCT_HISTORY( occurredAt.Value, CCsvParser.Get(row, "GLASS_ID"), CCsvParser.Get(row, "PROCESS_ID"), CCsvParser.Get(row, "RECIPE_ID"), CCsvParser.Get(row, "ACTION"), CCsvParser.Get(row, "STATE"), CCsvParser.Get(row |
+| 443 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "GLASS_ID") |
+| 444 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "PROCESS_ID") |
+| 445 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "RECIPE_ID") |
+| 446 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "ACTION") |
+| 447 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "STATE") |
+| 448 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "RESULT") |
+| 449 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Get(row, "DETAIL") |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ParseHistory"]
- N0["L451 if"]
+ N0["L436 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `WriteRowsAtomically` · L468–487
+### MethodDeclaration `WriteRowsAtomically` · L453–472
 
-[Drilling.File/Product/CProductFile.cs:468–487](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L468-L487)
+[Drilling.File/Product/CProductFile.cs:453–472](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L453-L472)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2406,56 +2396,56 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L221-L221) | WriteRowsAtomically | False |
+| [Drilling.File/Product/CProductFile.cs:210–210](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L210-L210) | WriteRowsAtomically | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 470 | Guid.NewGuid | resolved | System.Guid System.Guid.NewGuid() |
-| 473 | CCsvParser.Write | resolved | void Drilling.File.Parser.CCsvParser.Write(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>) · Drilling.File/Parser/CCsvParser.cs:58 |
-| 474 | System.IO.File.Exists | resolved | bool System.IO.File.Exists(string?) |
-| 476 | System.IO.File.Replace | resolved | void System.IO.File.Replace(string, string, string?) |
-| 480 | System.IO.File.Move | resolved | void System.IO.File.Move(string, string) |
-| 485 | DeleteIfExists | resolved | void Drilling.File.Product.CProductFile.DeleteIfExists(string) · Drilling.File/Product/CProductFile.cs:505 |
+| 455 | Guid.NewGuid | resolved | System.Guid System.Guid.NewGuid() |
+| 458 | CCsvParser.Write | resolved | void Drilling.File.Parser.CCsvParser.Write(string, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>) · Drilling.File/Parser/CCsvParser.cs:58 |
+| 459 | System.IO.File.Exists | resolved | bool System.IO.File.Exists(string?) |
+| 461 | System.IO.File.Replace | resolved | void System.IO.File.Replace(string, string, string?) |
+| 465 | System.IO.File.Move | resolved | void System.IO.File.Move(string, string) |
+| 470 | DeleteIfExists | resolved | void Drilling.File.Product.CProductFile.DeleteIfExists(string) · Drilling.File/Product/CProductFile.cs:490 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 470 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid() |
-| 470 | local-declaration | 지역 변수를 선언합니다: var temporaryPath = $"{path}.{Guid.NewGuid():N}.tmp"; |
-| 470 | variable-initializer | 변수의 초기값을 지정합니다: temporaryPath = $"{path}.{Guid.NewGuid():N}.tmp" |
-| 471 | try | 예외 처리 범위입니다: try |
-| 473 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write(temporaryPath, headers, rows) |
-| 474 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) |
-| 474 | if | 조건에 따라 분기합니다: if (System.IO.File.Exists(path)) |
-| 476 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Replace(temporaryPath, path, null) |
-| 478 | else | 앞 조건이 거짓인 경로입니다: else |
-| 480 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Move(temporaryPath, path) |
-| 483 | finally | 종료 정리 구간입니다: finally |
-| 485 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DeleteIfExists(temporaryPath) |
+| 455 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Guid.NewGuid() |
+| 455 | local-declaration | 지역 변수를 선언합니다: var temporaryPath = $"{path}.{Guid.NewGuid():N}.tmp"; |
+| 455 | variable-initializer | 변수의 초기값을 지정합니다: temporaryPath = $"{path}.{Guid.NewGuid():N}.tmp" |
+| 456 | try | 예외 처리 범위입니다: try |
+| 458 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CCsvParser.Write(temporaryPath, headers, rows) |
+| 459 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) |
+| 459 | if | 조건에 따라 분기합니다: if (System.IO.File.Exists(path)) |
+| 461 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Replace(temporaryPath, path, null) |
+| 463 | else | 앞 조건이 거짓인 경로입니다: else |
+| 465 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Move(temporaryPath, path) |
+| 468 | finally | 종료 정리 구간입니다: finally |
+| 470 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DeleteIfExists(temporaryPath) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["WriteRowsAtomically"]
- N0["L471 try"]
+ N0["L456 try"]
  M -->|포함| N0
- N1["L474 if"]
+ N1["L459 if"]
  N0 -->|포함| N1
- N2["L478 else"]
+ N2["L463 else"]
  N1 -->|포함| N2
- N3["L483 finally"]
+ N3["L468 finally"]
  N0 -->|포함| N3
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ParseEnum` · L489–493
+### MethodDeclaration `ParseEnum` · L474–478
 
-[Drilling.File/Product/CProductFile.cs:489–493](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L489-L493)
+[Drilling.File/Product/CProductFile.cs:474–478](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L474-L478)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2475,29 +2465,29 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L97-L97) | ParseEnum | False |
-| [Drilling.File/Product/CProductFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L103-L103) | ParseEnum | False |
-| [Drilling.File/Product/CProductFile.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L323-L323) | ParseEnum | False |
+| [Drilling.File/Product/CProductFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L86-L86) | ParseEnum | False |
+| [Drilling.File/Product/CProductFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L92-L92) | ParseEnum | False |
+| [Drilling.File/Product/CProductFile.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L312-L312) | ParseEnum | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 492 | Enum.TryParse<T> | resolved | bool System.Enum.TryParse<T>(string?, bool, out T) |
+| 477 | Enum.TryParse<T> | resolved | bool System.Enum.TryParse<T>(string?, bool, out T) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 492 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.TryParse<T>(value, true, out var result) |
-| 492 | conditional-expression | 조건에 따라 결과식을 선택합니다: Enum.TryParse<T>(value, true, out var result) ? result : defaultValue |
-| 492 | return | 호출자에게 값 또는 제어를 반환합니다: return Enum.TryParse<T>(value, true, out var result) ? result : defaultValue; |
+| 477 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.TryParse<T>(value, true, out var result) |
+| 477 | conditional-expression | 조건에 따라 결과식을 선택합니다: Enum.TryParse<T>(value, true, out var result) ? result : defaultValue |
+| 477 | return | 호출자에게 값 또는 제어를 반환합니다: return Enum.TryParse<T>(value, true, out var result) ? result : defaultValue; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `FormatDate` · L495–498
+### MethodDeclaration `FormatDate` · L480–483
 
-[Drilling.File/Product/CProductFile.cs:495–498](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L495-L498)
+[Drilling.File/Product/CProductFile.cs:480–483](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L480-L483)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2516,27 +2506,27 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L155-L155) | FormatDate | False |
-| [Drilling.File/Product/CProductFile.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L436-L436) | FormatDate | False |
+| [Drilling.File/Product/CProductFile.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L144-L144) | FormatDate | False |
+| [Drilling.File/Product/CProductFile.cs:421–421](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L421-L421) | FormatDate | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 497 | .ToString | resolved | string System.DateTimeOffset.ToString(string?, System.IFormatProvider?) |
+| 482 | .ToString | resolved | string System.DateTimeOffset.ToString(string?, System.IFormatProvider?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 497 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("O", CultureInfo.InvariantCulture) |
-| 497 | return | 호출자에게 값 또는 제어를 반환합니다: return value?.ToString("O", CultureInfo.InvariantCulture) ?? ""; |
+| 482 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("O", CultureInfo.InvariantCulture) |
+| 482 | return | 호출자에게 값 또는 제어를 반환합니다: return value?.ToString("O", CultureInfo.InvariantCulture) ?? ""; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ParseDate` · L500–503
+### MethodDeclaration `ParseDate` · L485–488
 
-[Drilling.File/Product/CProductFile.cs:500–503](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L500-L503)
+[Drilling.File/Product/CProductFile.cs:485–488](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L485-L488)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2555,28 +2545,28 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L324-L324) | ParseDate | False |
-| [Drilling.File/Product/CProductFile.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L450-L450) | ParseDate | False |
+| [Drilling.File/Product/CProductFile.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L313-L313) | ParseDate | False |
+| [Drilling.File/Product/CProductFile.cs:435–435](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L435-L435) | ParseDate | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 502 | DateTimeOffset.TryParse | resolved | bool System.DateTimeOffset.TryParse(string?, System.IFormatProvider?, System.Globalization.DateTimeStyles, out System.DateTimeOffset) |
+| 487 | DateTimeOffset.TryParse | resolved | bool System.DateTimeOffset.TryParse(string?, System.IFormatProvider?, System.Globalization.DateTimeStyles, out System.DateTimeOffset) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 502 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTimeOffset.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.RoundtripKind, out var result) |
-| 502 | conditional-expression | 조건에 따라 결과식을 선택합니다: DateTimeOffset.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.RoundtripKind, out var result) ? result : null |
-| 502 | return | 호출자에게 값 또는 제어를 반환합니다: return DateTimeOffset.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.RoundtripKind, out var result) ? result : null; |
+| 487 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTimeOffset.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.RoundtripKind, out var result) |
+| 487 | conditional-expression | 조건에 따라 결과식을 선택합니다: DateTimeOffset.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.RoundtripKind, out var result) ? result : null |
+| 487 | return | 호출자에게 값 또는 제어를 반환합니다: return DateTimeOffset.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.RoundtripKind, out var result) ? result : null; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `DeleteIfExists` · L505–511
+### MethodDeclaration `DeleteIfExists` · L490–496
 
-[Drilling.File/Product/CProductFile.cs:505–511](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L505-L511)
+[Drilling.File/Product/CProductFile.cs:490–496](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L490-L496)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2595,31 +2585,31 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L200-L200) | DeleteIfExists | False |
-| [Drilling.File/Product/CProductFile.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L207-L207) | DeleteIfExists | False |
-| [Drilling.File/Product/CProductFile.cs:485–485](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Product/CProductFile.cs#L485-L485) | DeleteIfExists | False |
+| [Drilling.File/Product/CProductFile.cs:189–189](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L189-L189) | DeleteIfExists | False |
+| [Drilling.File/Product/CProductFile.cs:196–196](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L196-L196) | DeleteIfExists | False |
+| [Drilling.File/Product/CProductFile.cs:470–470](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Product/CProductFile.cs#L470-L470) | DeleteIfExists | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 507 | System.IO.File.Exists | resolved | bool System.IO.File.Exists(string?) |
-| 509 | System.IO.File.Delete | resolved | void System.IO.File.Delete(string) |
+| 492 | System.IO.File.Exists | resolved | bool System.IO.File.Exists(string?) |
+| 494 | System.IO.File.Delete | resolved | void System.IO.File.Delete(string) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 507 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) |
-| 507 | if | 조건에 따라 분기합니다: if (System.IO.File.Exists(path)) |
-| 509 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Delete(path) |
+| 492 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Exists(path) |
+| 492 | if | 조건에 따라 분기합니다: if (System.IO.File.Exists(path)) |
+| 494 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.IO.File.Delete(path) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["DeleteIfExists"]
- N0["L507 if"]
+ N0["L492 if"]
  M -->|포함| N0
 ```
 

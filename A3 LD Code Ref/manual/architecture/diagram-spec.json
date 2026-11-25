@@ -1,6 +1,6 @@
 {
   "schema": "a3-diagram-spec-v1",
-  "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+  "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
   "evidenceScope": "static_source_only",
   "runtimeValidated": false,
   "diagrams": [
@@ -346,6 +346,36 @@
           ],
           "x": 830,
           "y": 315
+        },
+        {
+          "id": "n6",
+          "label": "Stage Glass Data · WF600 · 43개 외부 Product 필드",
+          "lines": [
+            "Stage Glass Data",
+            "WF600 · 43개 외부 Product 필드"
+          ],
+          "x": 30,
+          "y": 530
+        },
+        {
+          "id": "n7",
+          "label": "Product와 Recipe 분리 · productFields / parameters 사본",
+          "lines": [
+            "Product와 Recipe 분리",
+            "productFields / parameters 사본"
+          ],
+          "x": 430,
+          "y": 530
+        },
+        {
+          "id": "n8",
+          "label": "두 판정을 별도 보존 · JUDGEMENT / PRODUCT_RESULT",
+          "lines": [
+            "두 판정을 별도 보존",
+            "JUDGEMENT / PRODUCT_RESULT"
+          ],
+          "x": 830,
+          "y": 530
         }
       ],
       "edges": [
@@ -373,6 +403,16 @@
           "source": "n3",
           "target": "n5",
           "label": "각기 다른 상태"
+        },
+        {
+          "source": "n6",
+          "target": "n7",
+          "label": "생성 분리"
+        },
+        {
+          "source": "n7",
+          "target": "n8",
+          "label": "판정 분리"
         }
       ]
     },
@@ -888,6 +928,144 @@
           "label": "성공·출처 대조",
           "source": "readers",
           "target": "truth"
+        }
+      ]
+    },
+    {
+      "id": "10-stage-glass",
+      "title": "WF600 → Product: 외부 기판 정보·Recipe·판정의 분리",
+      "nodes": [
+        {
+          "id": "choice",
+          "label": "Monitor Glass 생성 · STAGE PC DATA / DUMMY / 취소",
+          "lines": [
+            "Monitor Glass 생성",
+            "STAGE PC DATA / DUMMY / 취소"
+          ],
+          "x": 30,
+          "y": 100
+        },
+        {
+          "id": "bus",
+          "label": "Stage 수신 기본 맵 · WF600~WF767 · 44항목 / 360 WORD",
+          "lines": [
+            "Stage 수신 기본 맵",
+            "WF600~WF767 · 44항목 / 360 WORD"
+          ],
+          "x": 430,
+          "y": 100
+        },
+        {
+          "id": "read",
+          "label": "ReadAsync · fresh block·43필드·필수 ID 검사",
+          "lines": [
+            "ReadAsync",
+            "fresh block·43필드·필수 ID 검사"
+          ],
+          "x": 830,
+          "y": 100
+        },
+        {
+          "id": "display",
+          "label": "Monitor·재시작 복구 · 외부 필드와 내부 Result 별도 표시",
+          "lines": [
+            "Monitor·재시작 복구",
+            "외부 필드와 내부 Result 별도 표시"
+          ],
+          "x": 30,
+          "y": 315
+        },
+        {
+          "id": "file",
+          "label": "ActiveProduct / History · TYPE,NAME,VALUE · 구역 분리",
+          "lines": [
+            "ActiveProduct / History",
+            "TYPE,NAME,VALUE · 구역 분리"
+          ],
+          "x": 430,
+          "y": 315
+        },
+        {
+          "id": "product",
+          "label": "CreateProduct · productFields / parameters 별도",
+          "lines": [
+            "CreateProduct",
+            "productFields / parameters 별도"
+          ],
+          "x": 830,
+          "y": 315
+        },
+        {
+          "id": "judgement",
+          "label": "JUDGEMENT · 물류 PC 원문 · 공정 OK/NG 아님",
+          "lines": [
+            "JUDGEMENT",
+            "물류 PC 원문 · 공정 OK/NG 아님"
+          ],
+          "x": 30,
+          "y": 530
+        },
+        {
+          "id": "result",
+          "label": "PRODUCT_RESULT · 프로그램 Pending/OK/NG/Skipped",
+          "lines": [
+            "PRODUCT_RESULT",
+            "프로그램 Pending/OK/NG/Skipped"
+          ],
+          "x": 430,
+          "y": 530
+        },
+        {
+          "id": "job",
+          "label": "PPID 수신 ≠ Job Change · Recipe 검증·준비·가공은 별도",
+          "lines": [
+            "PPID 수신 ≠ Job Change",
+            "Recipe 검증·준비·가공은 별도"
+          ],
+          "x": 830,
+          "y": 530
+        }
+      ],
+      "edges": [
+        {
+          "source": "choice",
+          "target": "bus",
+          "label": "새 읽기"
+        },
+        {
+          "source": "bus",
+          "target": "read",
+          "label": "Poll block"
+        },
+        {
+          "source": "read",
+          "target": "product",
+          "label": "검증한 필드 사전"
+        },
+        {
+          "source": "product",
+          "target": "file",
+          "label": "저장·공개 경계"
+        },
+        {
+          "source": "file",
+          "target": "display",
+          "label": "동일 목록 소비"
+        },
+        {
+          "source": "file",
+          "target": "result",
+          "label": "내부 결과 저장"
+        },
+        {
+          "source": "display",
+          "target": "judgement",
+          "label": "외부 판정 보존"
+        },
+        {
+          "source": "product",
+          "target": "job",
+          "label": "자동 Recipe 전환 없음"
         }
       ]
     }

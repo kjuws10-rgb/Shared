@@ -1,12 +1,12 @@
 {
-  "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+  "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
   "originalTrackedStatusPreserved": true,
   "originalHeadPreserved": true,
   "allCSharpByteHashesPreserved": true,
   "sourcePushUrl": "DISABLED",
   "validation": {
     "allFileHashesRecorded": true,
-    "sourceRangesChecked": 158986,
+    "sourceRangesChecked": 159479,
     "everyRangeWithinPhysicalFile": true,
     "allTypeAndCallNodesCovered": true,
     "allExplicitMemberNodesCovered": true,
@@ -14,8 +14,8 @@
     "memberScope": "Explicit source declarations, including accessors, enum values and local functions. Compiler-synthesized primary-constructor/record members and WPF-generated XAML fields are not counted as source declarations.",
     "localFunctionCount": 1057,
     "localFunctionSourceIdsUnique": true,
-    "parsedCSharpFiles": 158
+    "parsedCSharpFiles": 159
   },
-  "outputBytes": 97975136,
-  "outputSha256": "d2b3e31121a9515729c3daa96d7d2ff577ecbf19b644995371f2e5ef3546ad22"
+  "outputBytes": 98290199,
+  "outputSha256": "748353ac5f05974f4e0c917843b761c347fbd61df35dc23e685fb3a85ef6dafe"
 }

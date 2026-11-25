@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 71a00f66738e1f87fbb411a2657b4a1c61ce145703a47e03c3a70d971511f288 |
 | 파일 분류 | code |
 | 원본 크기/행 | 4,458 bytes / 142 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -49,7 +49,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_panel` · L10–10
 
-[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L10-L10)
+[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -64,7 +64,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_logGrids` · L11–11
 
-[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L11-L11)
+[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -85,7 +85,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_loaded` · L12–12
 
-[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L12-L12)
+[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -100,7 +100,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_synchronizingSelection` · L13–13
 
-[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L13-L13)
+[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -115,7 +115,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L15–23
 
-[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:15–23](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L15-L23)
+[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:15–23](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L15-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -135,7 +135,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L314-L314) | new CAlarmCauseAnalysisDialog | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L314-L314) | new CAlarmCauseAnalysisDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -160,7 +160,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OnLoaded` · L25–31
 
-[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:25–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L25-L31)
+[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:25–31](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L25-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -207,7 +207,7 @@ flowchart TD
 
 ### MethodDeclaration `OnClosed` · L33–37
 
-[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:33–37](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L33-L37)
+[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:33–37](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L33-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -242,7 +242,7 @@ flowchart TD
 
 ### MethodDeclaration `QuickRangeClicked` · L39–48
 
-[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:39–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L39-L48)
+[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:39–48](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L39-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -296,7 +296,7 @@ flowchart TD
 
 ### MethodDeclaration `LogGridLoaded` · L50–57
 
-[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:50–57](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L50-L57)
+[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:50–57](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L50-L57)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -346,7 +346,7 @@ flowchart TD
 
 ### MethodDeclaration `LogGridUnloaded` · L59–63
 
-[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:59–63](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L59-L63)
+[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:59–63](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L59-L63)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -390,7 +390,7 @@ flowchart TD
 
 ### MethodDeclaration `LogGridSelectionChanged` · L65–71
 
-[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:65–71](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L65-L71)
+[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:65–71](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L65-L71)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -435,7 +435,7 @@ flowchart TD
 
 ### MethodDeclaration `CandidateClicked` · L73–78
 
-[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:73–78](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L73-L78)
+[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:73–78](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L73-L78)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -480,7 +480,7 @@ flowchart TD
 
 ### MethodDeclaration `TimelineClicked` · L80–85
 
-[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:80–85](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L80-L85)
+[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:80–85](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L80-L85)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -525,7 +525,7 @@ flowchart TD
 
 ### MethodDeclaration `AnalysisLoaded` · L87–90
 
-[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:87–90](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L87-L90)
+[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:87–90](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L87-L90)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -560,7 +560,7 @@ flowchart TD
 
 ### MethodDeclaration `SynchronizeTo` · L92–105
 
-[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:92–105](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L92-L105)
+[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:92–105](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L92-L105)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -580,10 +580,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L70-L70) | SynchronizeTo | False |
-| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L77-L77) | SynchronizeTo | False |
-| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L84-L84) | SynchronizeTo | False |
-| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L89-L89) | SynchronizeTo | False |
+| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L70-L70) | SynchronizeTo | False |
+| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L77-L77) | SynchronizeTo | False |
+| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L84-L84) | SynchronizeTo | False |
+| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L89-L89) | SynchronizeTo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -623,7 +623,7 @@ flowchart TD
 
 ### MethodDeclaration `SynchronizeGrid` · L107–139
 
-[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:107–139](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L107-L139)
+[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:107–139](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L107-L139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -644,8 +644,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L56-L56) | SynchronizeGrid | False |
-| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L99-L99) | SynchronizeGrid | False |
+| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L56-L56) | SynchronizeGrid | False |
+| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L99-L99) | SynchronizeGrid | False |
 
 호출하는 대상과 해석 범위:
 
@@ -704,7 +704,7 @@ flowchart TD
 
 ### MethodDeclaration `CloseClicked` · L141–141
 
-[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L141-L141)
+[Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L141-L141)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "a3-tool-source-xaml-oracle/1",
+  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "generatorVersion": "1.1.3",
+  "validatorVersion": "1.1.2",
+  "passed": true,
+  "counts": {
+    "xamlFiles": 58,
+    "events": 308,
+    "namedElements": 385,
+    "bindings": 2956,
+    "handlerCandidates": 0
+  },
+  "findings": [],
+  "scope": "Static XML declarations and code-behind method signatures only; no WPF object creation or event execution."
+}

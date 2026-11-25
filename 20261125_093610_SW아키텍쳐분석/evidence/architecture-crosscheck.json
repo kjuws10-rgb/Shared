@@ -1,0 +1,887 @@
+{
+  "schemaVersion": "a3-architecture-source-crosscheck/1",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "sourceBranch": "master",
+  "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
+  "baseCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+  "baselineFolder": "20261121_085657_SW아키텍쳐분석",
+  "reportFolder": "20261125_093610_SW아키텍쳐분석",
+  "generatedAtUtc": "2026-11-25T01:22:45.847109+00:00",
+  "passed": true,
+  "validationKind": "static_source_and_document_checks_only",
+  "errors": [],
+  "source": {
+    "head": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
+    "clean": true,
+    "pushUrl": "DISABLED",
+    "trackedFiles": 2289,
+    "noSourceMutationByReportAuthor": true
+  },
+  "diff": {
+    "commits": 1,
+    "files": 1603,
+    "added": 1589,
+    "modified": 14,
+    "deleted": 0,
+    "insertions": 24579869,
+    "deletions": 42972,
+    "codeXamlProjectFiles": 11,
+    "codeAdditions": 445,
+    "codeDeletions": 134,
+    "configRecipeFiles": 110,
+    "dataFiles": 1480,
+    "apiCompareInitialFileListLimitedTo": 300,
+    "recursiveTreesTruncated": false
+  },
+  "dataAudit": {
+    "stageProductFields": 43,
+    "stageMapRows": 44,
+    "stageWords": 360,
+    "stageRange": "WF600-WF767",
+    "recipeRows": 43375,
+    "recipeChangedRows": 42826,
+    "alignAxisItemsChanged": 42822,
+    "reviewToleranceKeysChanged": 2,
+    "processCountKeysChanged": 2,
+    "settingKeysChanged": 7,
+    "newReviewOffsetFiles": 109,
+    "totalReviewOffsetFiles": 137,
+    "operationalRecordsPublished": false,
+    "dataSessionBodyReadOrPublished": false,
+    "generatedScriptsExecuted": false
+  },
+  "documents": {
+    "markdownFiles": 7,
+    "sourceAnchors": 79,
+    "sourceAnchorErrors": 0,
+    "markdownFencesPaired": true,
+    "replacementCharacters": 0,
+    "svgXmlValid": true,
+    "parentSharedLinks": "pending_parent_final_publish_tree_validation"
+  },
+  "sourceFiles": [
+    {
+      "path": "Drilling.UI/Drilling.UI.csproj",
+      "sha256": "48b75916a1babcf93fbbf641f434358508bdda43d26677c08d869f030532aed9",
+      "lines": 26
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+      "sha256": "bdb093c436121df1cdb0860bcc39b1cc2c29eef2c4ce595ce3500ff423456878",
+      "lines": 7870
+    },
+    {
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "sha256": "2bf74d7b1467df2ed769d1c20caa241b871981c39407b1e261f9c7009bff4869",
+      "lines": 1120
+    },
+    {
+      "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "sha256": "b57367eef12cab616f493e29ea7aed3ce1a583d13756a42890e07f57df8def1e",
+      "lines": 3349
+    },
+    {
+      "path": "Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs",
+      "sha256": "ae42e0681f9e8510476ad367eb29714feae95abc2dc1b4fb9e1af2129fc01eb3",
+      "lines": 157
+    },
+    {
+      "path": "Drilling.File/JHMI/CMelsecMapFile.cs",
+      "sha256": "af5bdafc70abcd66e7a8b1490a535eab6d841bcc487154c1efb4292773fd9e56",
+      "lines": 1714
+    },
+    {
+      "path": "Drilling.File/Product/CProductFile.cs",
+      "sha256": "450b06158f48549c563ec41a8ef58a22614382b29effa8361879af0bcf1d2900",
+      "lines": 497
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "sha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d",
+      "lines": 4617
+    },
+    {
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "sha256": "7e5b1fd549370e222890c0882624bd116e1375ae160cb55e0d94cf3513f8b917",
+      "lines": 6635
+    },
+    {
+      "path": "Drilling.UI/CRootView.cs",
+      "sha256": "09f2e5df917b40012488baaad112bcba54488350e86e3bdc181cffa5ffeee8ab",
+      "lines": 3356
+    },
+    {
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "sha256": "18c6b5e5afc1fdb76dafc1fd6bc33a810af4a84492b53c686eef336adb989831",
+      "lines": 1431
+    },
+    {
+      "path": "Drilling.Common/Managers/CSettingManager.cs",
+      "sha256": "ab5eedee3d573b21ff626315c37803e06fd4d9d7d0e8709e0bf89e55f838743c",
+      "lines": 293
+    },
+    {
+      "path": "Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs",
+      "sha256": "4d63ccb44f16c33e57672fa63f88dd46a9ab26a9a27f490d41048f26bec8e712",
+      "lines": 443
+    },
+    {
+      "path": "Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs",
+      "sha256": "7a383ef12d6fda215d2a83a04258002665f40ce18f8bd5caca61fbaaf93210b6",
+      "lines": 228
+    }
+  ],
+  "sourceLinks": [
+    {
+      "document": "01_Commit변경요약.md",
+      "path": "Drilling.UI/Drilling.UI.csproj",
+      "start": 17,
+      "end": 24,
+      "lineCount": 26,
+      "valid": true
+    },
+    {
+      "document": "01_Commit변경요약.md",
+      "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+      "start": 4448,
+      "end": 4495,
+      "lineCount": 7870,
+      "valid": true
+    },
+    {
+      "document": "01_Commit변경요약.md",
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "start": 1049,
+      "end": 1057,
+      "lineCount": 1120,
+      "valid": true
+    },
+    {
+      "document": "01_Commit변경요약.md",
+      "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+      "start": 2911,
+      "end": 2941,
+      "lineCount": 7870,
+      "valid": true
+    },
+    {
+      "document": "01_Commit변경요약.md",
+      "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "start": 3060,
+      "end": 3095,
+      "lineCount": 3349,
+      "valid": true
+    },
+    {
+      "document": "02_데이터구조와흐름.md",
+      "path": "Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs",
+      "start": 25,
+      "end": 83,
+      "lineCount": 157,
+      "valid": true
+    },
+    {
+      "document": "02_데이터구조와흐름.md",
+      "path": "Drilling.File/JHMI/CMelsecMapFile.cs",
+      "start": 322,
+      "end": 341,
+      "lineCount": 1714,
+      "valid": true
+    },
+    {
+      "document": "02_데이터구조와흐름.md",
+      "path": "Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs",
+      "start": 87,
+      "end": 122,
+      "lineCount": 157,
+      "valid": true
+    },
+    {
+      "document": "02_데이터구조와흐름.md",
+      "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "start": 2693,
+      "end": 2717,
+      "lineCount": 3349,
+      "valid": true
+    },
+    {
+      "document": "02_데이터구조와흐름.md",
+      "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "start": 2927,
+      "end": 2947,
+      "lineCount": 3349,
+      "valid": true
+    },
+    {
+      "document": "02_데이터구조와흐름.md",
+      "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+      "start": 4454,
+      "end": 4488,
+      "lineCount": 7870,
+      "valid": true
+    },
+    {
+      "document": "02_데이터구조와흐름.md",
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "start": 129,
+      "end": 195,
+      "lineCount": 1120,
+      "valid": true
+    },
+    {
+      "document": "02_데이터구조와흐름.md",
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "start": 823,
+      "end": 874,
+      "lineCount": 1120,
+      "valid": true
+    },
+    {
+      "document": "02_데이터구조와흐름.md",
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "start": 844,
+      "end": 874,
+      "lineCount": 1120,
+      "valid": true
+    },
+    {
+      "document": "02_데이터구조와흐름.md",
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "start": 1050,
+      "end": 1057,
+      "lineCount": 1120,
+      "valid": true
+    },
+    {
+      "document": "02_데이터구조와흐름.md",
+      "path": "Drilling.File/Product/CProductFile.cs",
+      "start": 50,
+      "end": 84,
+      "lineCount": 497,
+      "valid": true
+    },
+    {
+      "document": "02_데이터구조와흐름.md",
+      "path": "Drilling.File/Product/CProductFile.cs",
+      "start": 98,
+      "end": 120,
+      "lineCount": 497,
+      "valid": true
+    },
+    {
+      "document": "02_데이터구조와흐름.md",
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 509,
+      "end": 575,
+      "lineCount": 4617,
+      "valid": true
+    },
+    {
+      "document": "02_데이터구조와흐름.md",
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 1545,
+      "end": 1564,
+      "lineCount": 6635,
+      "valid": true
+    },
+    {
+      "document": "03_가공Review영향.md",
+      "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+      "start": 4448,
+      "end": 4488,
+      "lineCount": 7870,
+      "valid": true
+    },
+    {
+      "document": "03_가공Review영향.md",
+      "path": "Drilling.UI/CRootView.cs",
+      "start": 1627,
+      "end": 1653,
+      "lineCount": 3356,
+      "valid": true
+    },
+    {
+      "document": "03_가공Review영향.md",
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 1593,
+      "end": 1610,
+      "lineCount": 4617,
+      "valid": true
+    },
+    {
+      "document": "03_가공Review영향.md",
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "start": 203,
+      "end": 232,
+      "lineCount": 1120,
+      "valid": true
+    },
+    {
+      "document": "03_가공Review영향.md",
+      "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+      "start": 4480,
+      "end": 4488,
+      "lineCount": 7870,
+      "valid": true
+    },
+    {
+      "document": "03_가공Review영향.md",
+      "path": "Drilling.UI/CRootView.cs",
+      "start": 1642,
+      "end": 1651,
+      "lineCount": 3356,
+      "valid": true
+    },
+    {
+      "document": "03_가공Review영향.md",
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 1508,
+      "end": 1516,
+      "lineCount": 6635,
+      "valid": true
+    },
+    {
+      "document": "03_가공Review영향.md",
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 1415,
+      "end": 1459,
+      "lineCount": 6635,
+      "valid": true
+    },
+    {
+      "document": "03_가공Review영향.md",
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "start": 141,
+      "end": 156,
+      "lineCount": 1431,
+      "valid": true
+    },
+    {
+      "document": "03_가공Review영향.md",
+      "path": "Drilling.Common/Managers/CSettingManager.cs",
+      "start": 190,
+      "end": 219,
+      "lineCount": 293,
+      "valid": true
+    },
+    {
+      "document": "03_가공Review영향.md",
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "start": 135,
+      "end": 156,
+      "lineCount": 1431,
+      "valid": true
+    },
+    {
+      "document": "04_통합흐름도.md",
+      "path": "Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs",
+      "start": 87,
+      "end": 122,
+      "lineCount": 157,
+      "valid": true
+    },
+    {
+      "document": "04_통합흐름도.md",
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "start": 823,
+      "end": 874,
+      "lineCount": 1120,
+      "valid": true
+    },
+    {
+      "document": "04_통합흐름도.md",
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 509,
+      "end": 575,
+      "lineCount": 4617,
+      "valid": true
+    },
+    {
+      "document": "04_통합흐름도.md",
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 1593,
+      "end": 1626,
+      "lineCount": 4617,
+      "valid": true
+    },
+    {
+      "document": "04_통합흐름도.md",
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 1545,
+      "end": 1564,
+      "lineCount": 6635,
+      "valid": true
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 1545,
+      "end": 1564,
+      "lineCount": 6635,
+      "valid": true
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+      "start": 4459,
+      "end": 4488,
+      "lineCount": 7870,
+      "valid": true
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "path": "Drilling.UI/CRootView.cs",
+      "start": 1632,
+      "end": 1651,
+      "lineCount": 3356,
+      "valid": true
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 1600,
+      "end": 1607,
+      "lineCount": 4617,
+      "valid": true
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "start": 40,
+      "end": 108,
+      "lineCount": 1120,
+      "valid": true
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+      "start": 4480,
+      "end": 4488,
+      "lineCount": 7870,
+      "valid": true
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "path": "Drilling.UI/CRootView.cs",
+      "start": 1642,
+      "end": 1651,
+      "lineCount": 3356,
+      "valid": true
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 1508,
+      "end": 1516,
+      "lineCount": 6635,
+      "valid": true
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 1415,
+      "end": 1459,
+      "lineCount": 6635,
+      "valid": true
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "start": 2693,
+      "end": 2717,
+      "lineCount": 3349,
+      "valid": true
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "path": "Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs",
+      "start": 92,
+      "end": 121,
+      "lineCount": 157,
+      "valid": true
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "path": "Drilling.File/JHMI/CMelsecMapFile.cs",
+      "start": 102,
+      "end": 110,
+      "lineCount": 1714,
+      "valid": true
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "start": 857,
+      "end": 874,
+      "lineCount": 1120,
+      "valid": true
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "start": 1050,
+      "end": 1057,
+      "lineCount": 1120,
+      "valid": true
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "path": "Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs",
+      "start": 33,
+      "end": 78,
+      "lineCount": 157,
+      "valid": true
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "start": 3075,
+      "end": 3089,
+      "lineCount": 3349,
+      "valid": true
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "start": 278,
+      "end": 306,
+      "lineCount": 1120,
+      "valid": true
+    },
+    {
+      "document": "05_위험도별발견사항.md",
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "start": 862,
+      "end": 874,
+      "lineCount": 1120,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs",
+      "start": 1,
+      "end": 157,
+      "lineCount": 157,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "start": 2536,
+      "end": 2637,
+      "lineCount": 3349,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "start": 2693,
+      "end": 2717,
+      "lineCount": 3349,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "start": 2927,
+      "end": 2947,
+      "lineCount": 3349,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "start": 3060,
+      "end": 3095,
+      "lineCount": 3349,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.File/JHMI/CMelsecMapFile.cs",
+      "start": 30,
+      "end": 62,
+      "lineCount": 1714,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.File/JHMI/CMelsecMapFile.cs",
+      "start": 102,
+      "end": 110,
+      "lineCount": 1714,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.File/JHMI/CMelsecMapFile.cs",
+      "start": 322,
+      "end": 341,
+      "lineCount": 1714,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "start": 129,
+      "end": 232,
+      "lineCount": 1120,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "start": 278,
+      "end": 306,
+      "lineCount": 1120,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "start": 823,
+      "end": 874,
+      "lineCount": 1120,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.File/Product/CProductFile.cs",
+      "start": 30,
+      "end": 120,
+      "lineCount": 497,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+      "start": 4429,
+      "end": 4496,
+      "lineCount": 7870,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+      "start": 4613,
+      "end": 4629,
+      "lineCount": 7870,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs",
+      "start": 156,
+      "end": 181,
+      "lineCount": 443,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs",
+      "start": 51,
+      "end": 72,
+      "lineCount": 228,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.UI/CRootView.cs",
+      "start": 1627,
+      "end": 1653,
+      "lineCount": 3356,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 1545,
+      "end": 1564,
+      "lineCount": 6635,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 509,
+      "end": 575,
+      "lineCount": 4617,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "start": 1593,
+      "end": 1626,
+      "lineCount": 4617,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+      "start": 4480,
+      "end": 4488,
+      "lineCount": 7870,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.UI/CRootView.cs",
+      "start": 1642,
+      "end": 1651,
+      "lineCount": 3356,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 1508,
+      "end": 1516,
+      "lineCount": 6635,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "start": 1415,
+      "end": 1459,
+      "lineCount": 6635,
+      "valid": true
+    },
+    {
+      "document": "06_근거와검증.md",
+      "path": "Drilling.Common/Managers/CSettingManager.cs",
+      "start": 190,
+      "end": 219,
+      "lineCount": 293,
+      "valid": true
+    },
+    {
+      "document": "README.md",
+      "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+      "start": 4429,
+      "end": 4496,
+      "lineCount": 7870,
+      "valid": true
+    }
+  ],
+  "rootStaticLayoutReport": "audits/stage-layout-static.json",
+  "runtime": {
+    "equipmentExecuted": false,
+    "vendorDllLoaded": false,
+    "aeroScriptExecuted": false,
+    "buildExecuted": false,
+    "programTestsExecuted": 0
+  },
+  "limitations": [
+    "Static source/call-path review, not runtime or physical equipment proof.",
+    "CSV schema/key/count metadata reviewed; actual production measurement records and session values excluded. AeroScript/scan original and annotation preservation belongs to the full reference; generated artifacts are classified as optional retrieval material.",
+    "Full source-preservation before/after and Shared publication checks belong to root integration.",
+    "Default cache block consistency does not establish PLC business-data snapshot atomicity or Spec0.13 conformance."
+  ],
+  "readAreas": [
+    "Complete added StageGlassDataMap and changed code diffs",
+    "MELSEC cache refresh/block publication and SIM setters",
+    "Product fields, Product file load/save, legacy result fallback",
+    "Monitor Glass create/display/group refresh, SIM/dialog/XAML",
+    "Selected Recipe preparation, Review Plan/head/masking/product match, Offset/align/RunOption consumers",
+    "Product/Process lifecycle id handoff and declaration-only PrepareProductForProcess/StartProduct call search"
+  ],
+  "documentHashes": [
+    {
+      "path": "01_Commit변경요약.md",
+      "sha256": "c8dd59161f409b3c208c4a900b11ccb4b755b6da8a0292cc71ff4947420cd908",
+      "fencesPaired": true
+    },
+    {
+      "path": "02_데이터구조와흐름.md",
+      "sha256": "3c85b6e55fbd1f96fdd53e1bd406e7b3b18a1408099668d3f8aeb659fa522427",
+      "fencesPaired": true
+    },
+    {
+      "path": "03_가공Review영향.md",
+      "sha256": "15af034ee330a64ef9838b838411d87c5bc97be564e7c0ce73c552f414afc816",
+      "fencesPaired": true
+    },
+    {
+      "path": "04_통합흐름도.md",
+      "sha256": "7ce37a53673471c2f26515c4cfec6503ff25ca0dea3788cec20b1a039f4b5c81",
+      "fencesPaired": true
+    },
+    {
+      "path": "05_위험도별발견사항.md",
+      "sha256": "1195e99b14d04dd9c8f8106fb0d6878def619f476d908f33416b978cae6b0c6e",
+      "fencesPaired": true
+    },
+    {
+      "path": "06_근거와검증.md",
+      "sha256": "1b70c3c64c927d67db8a0a266048ed4ece6d6dcc182da5fae4e29b683af22ff8",
+      "fencesPaired": true
+    },
+    {
+      "path": "README.md",
+      "sha256": "7718f8edb7c668ffad774e8f4042e53380c8883e0c81286bf01ed22cdccf8768",
+      "fencesPaired": true
+    }
+  ],
+  "lifecycleGapAudit": {
+    "riskId": "ARC-09",
+    "priority": "high",
+    "classification": "static_lifecycle_connection_gap_not_equipment_failure_reproduction",
+    "callsSearched": "all repository *.cs using unqualified method names; declarations only",
+    "directOccurrences": [
+      ".\\Drilling.Common\\Product\\CProductManager.cs:203:    public async Task<ST_PRODUCT_DATA> PrepareProductForProcess(",
+      ".\\Drilling.Common\\Product\\CProductManager.cs:240:    public async Task<ST_PRODUCT_DATA> StartProduct(string productId, CancellationToken cancellationToken = default)"
+    ],
+    "prepareDirectCallerCount": 0,
+    "startDirectCallerCount": 0,
+    "baselineDummyAlreadyHadEmptyProcessId": true,
+    "newRegressionClaimed": false,
+    "findings": [
+      {
+        "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+        "lines": [
+          4480,
+          4488
+        ],
+        "claim": "Stage/Dummy Product created with empty processId and empty recipe/head dictionaries."
+      },
+      {
+        "path": "Drilling.UI/CRootView.cs",
+        "lines": [
+          1642,
+          1651
+        ],
+        "claim": "Prepare creates a new SCAN id, reuses current Glass/Lot, and prepares Station without Product assignment."
+      },
+      {
+        "path": "Drilling.Common/Station/CStationProcess.cs",
+        "lines": [
+          1508,
+          1516
+        ],
+        "claim": "Product id requires Product.ProcessId to match ProcessModel.ProcessId."
+      },
+      {
+        "path": "Drilling.Common/Station/CStationProcess.cs",
+        "lines": [
+          528,
+          548
+        ],
+        "claim": "Align/Distortion Product update returns without a matching product id."
+      },
+      {
+        "path": "Drilling.Common/Station/CStationProcess.cs",
+        "lines": [
+          1415,
+          1459
+        ],
+        "claim": "Complete/stop/error Product update returns without a matching product id."
+      }
+    ],
+    "limitations": [
+      "No equipment, app, DLL, AeroScript or runtime tests executed.",
+      "Direct search does not disprove reflection, external injection or an already matched legacy Product."
+    ]
+  }
+}

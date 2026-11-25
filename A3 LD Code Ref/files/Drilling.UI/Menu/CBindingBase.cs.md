@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 7ee36a35d9f2245fb0207f302e75751ba8b3f02e211631d5a474b0d9946988ac |
 | 파일 분류 | code |
 | 원본 크기/행 | 146,839 bytes / 3,076 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -795,7 +795,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ActiveInspectionShotTextChanged` · L6–6
 
-[Drilling.UI/Menu/CBindingBase.cs:6–6](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L6-L6)
+[Drilling.UI/Menu/CBindingBase.cs:6–6](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L6-L6)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -810,7 +810,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsActiveSelectionChanged` · L7–7
 
-[Drilling.UI/Menu/CBindingBase.cs:7–7](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L7-L7)
+[Drilling.UI/Menu/CBindingBase.cs:7–7](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L7-L7)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -825,7 +825,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BeamInspectionAssignmentSummaryChanged` · L8–8
 
-[Drilling.UI/Menu/CBindingBase.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L8-L8)
+[Drilling.UI/Menu/CBindingBase.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L8-L8)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -840,7 +840,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BeamInspectionShotAssignmentsChanged` · L9–9
 
-[Drilling.UI/Menu/CBindingBase.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L9-L9)
+[Drilling.UI/Menu/CBindingBase.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L9-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -855,7 +855,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CanBrowseRunShotsChanged` · L10–10
 
-[Drilling.UI/Menu/CBindingBase.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L10-L10)
+[Drilling.UI/Menu/CBindingBase.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -870,7 +870,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CanClearLoadedRunReviewResultChanged` · L11–11
 
-[Drilling.UI/Menu/CBindingBase.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L11-L11)
+[Drilling.UI/Menu/CBindingBase.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -885,7 +885,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CanCommitInspectionShotChanged` · L12–12
 
-[Drilling.UI/Menu/CBindingBase.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L12-L12)
+[Drilling.UI/Menu/CBindingBase.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -900,7 +900,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CanDeleteInspectionShotChanged` · L13–13
 
-[Drilling.UI/Menu/CBindingBase.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L13-L13)
+[Drilling.UI/Menu/CBindingBase.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -915,7 +915,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CanEditActiveInspectionBeamsChanged` · L14–14
 
-[Drilling.UI/Menu/CBindingBase.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L14-L14)
+[Drilling.UI/Menu/CBindingBase.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -930,7 +930,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CanLoadRunReviewResultChanged` · L15–15
 
-[Drilling.UI/Menu/CBindingBase.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L15-L15)
+[Drilling.UI/Menu/CBindingBase.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -945,7 +945,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CanStopOneShotChanged` · L16–16
 
-[Drilling.UI/Menu/CBindingBase.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L16-L16)
+[Drilling.UI/Menu/CBindingBase.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -960,7 +960,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `InspectionListCommitTextChanged` · L17–17
 
-[Drilling.UI/Menu/CBindingBase.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L17-L17)
+[Drilling.UI/Menu/CBindingBase.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -975,7 +975,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsReviewHeadCardsVisibleChanged` · L18–18
 
-[Drilling.UI/Menu/CBindingBase.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L18-L18)
+[Drilling.UI/Menu/CBindingBase.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -990,7 +990,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsInspectionRunWorkspaceChanged` · L19–19
 
-[Drilling.UI/Menu/CBindingBase.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L19-L19)
+[Drilling.UI/Menu/CBindingBase.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1005,7 +1005,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsInspectionResultWorkspaceChanged` · L20–20
 
-[Drilling.UI/Menu/CBindingBase.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L20-L20)
+[Drilling.UI/Menu/CBindingBase.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1020,7 +1020,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsRoughInspectionModeChanged` · L21–21
 
-[Drilling.UI/Menu/CBindingBase.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L21-L21)
+[Drilling.UI/Menu/CBindingBase.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1035,7 +1035,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsFineInspectionModeChanged` · L22–22
 
-[Drilling.UI/Menu/CBindingBase.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L22-L22)
+[Drilling.UI/Menu/CBindingBase.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1050,7 +1050,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsCorrectionInspectionModeChanged` · L23–23
 
-[Drilling.UI/Menu/CBindingBase.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L23-L23)
+[Drilling.UI/Menu/CBindingBase.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L23-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1065,7 +1065,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsStandardInspectionModeChanged` · L24–24
 
-[Drilling.UI/Menu/CBindingBase.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L24-L24)
+[Drilling.UI/Menu/CBindingBase.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L24-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1080,7 +1080,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsRunStageStatusVisibleChanged` · L25–25
 
-[Drilling.UI/Menu/CBindingBase.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L25-L25)
+[Drilling.UI/Menu/CBindingBase.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L25-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1095,7 +1095,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsShotInspectionOngoingChanged` · L26–26
 
-[Drilling.UI/Menu/CBindingBase.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L26-L26)
+[Drilling.UI/Menu/CBindingBase.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1110,7 +1110,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsSingleBeamSelectionModeChanged` · L27–27
 
-[Drilling.UI/Menu/CBindingBase.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L27-L27)
+[Drilling.UI/Menu/CBindingBase.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1125,7 +1125,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ReviewLevelLegendItemsChanged` · L28–28
 
-[Drilling.UI/Menu/CBindingBase.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L28-L28)
+[Drilling.UI/Menu/CBindingBase.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1140,7 +1140,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedBeamInspectionAssignmentChanged` · L29–29
 
-[Drilling.UI/Menu/CBindingBase.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L29-L29)
+[Drilling.UI/Menu/CBindingBase.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1155,7 +1155,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedInspectionResultTypeChanged` · L30–30
 
-[Drilling.UI/Menu/CBindingBase.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L30-L30)
+[Drilling.UI/Menu/CBindingBase.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1170,7 +1170,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AbleBrushChanged` · L31–31
 
-[Drilling.UI/Menu/CBindingBase.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L31-L31)
+[Drilling.UI/Menu/CBindingBase.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1185,7 +1185,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AccentBrushChanged` · L32–32
 
-[Drilling.UI/Menu/CBindingBase.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L32-L32)
+[Drilling.UI/Menu/CBindingBase.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L32-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1200,7 +1200,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AccessChanged` · L33–33
 
-[Drilling.UI/Menu/CBindingBase.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L33-L33)
+[Drilling.UI/Menu/CBindingBase.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1215,7 +1215,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ActionsChanged` · L34–34
 
-[Drilling.UI/Menu/CBindingBase.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L34-L34)
+[Drilling.UI/Menu/CBindingBase.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L34-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1230,7 +1230,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ActiveChanged` · L35–35
 
-[Drilling.UI/Menu/CBindingBase.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L35-L35)
+[Drilling.UI/Menu/CBindingBase.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L35-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1245,7 +1245,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AddressChanged` · L36–36
 
-[Drilling.UI/Menu/CBindingBase.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L36-L36)
+[Drilling.UI/Menu/CBindingBase.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L36-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1260,7 +1260,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AfterBrushChanged` · L37–37
 
-[Drilling.UI/Menu/CBindingBase.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L37-L37)
+[Drilling.UI/Menu/CBindingBase.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L37-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1275,7 +1275,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AlarmChanged` · L38–38
 
-[Drilling.UI/Menu/CBindingBase.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L38-L38)
+[Drilling.UI/Menu/CBindingBase.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1290,7 +1290,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AlarmBrushChanged` · L39–39
 
-[Drilling.UI/Menu/CBindingBase.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L39-L39)
+[Drilling.UI/Menu/CBindingBase.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1305,7 +1305,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AlarmDetailChanged` · L40–40
 
-[Drilling.UI/Menu/CBindingBase.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L40-L40)
+[Drilling.UI/Menu/CBindingBase.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L40-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1320,7 +1320,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AlarmResetCommandChanged` · L41–41
 
-[Drilling.UI/Menu/CBindingBase.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L41-L41)
+[Drilling.UI/Menu/CBindingBase.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L41-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1335,7 +1335,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AllInterfaceRowsChanged` · L42–42
 
-[Drilling.UI/Menu/CBindingBase.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L42-L42)
+[Drilling.UI/Menu/CBindingBase.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L42-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1350,7 +1350,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AllManagedItemsChanged` · L43–43
 
-[Drilling.UI/Menu/CBindingBase.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L43-L43)
+[Drilling.UI/Menu/CBindingBase.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L43-L43)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1365,7 +1365,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AllParameterRowsChanged` · L44–44
 
-[Drilling.UI/Menu/CBindingBase.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L44-L44)
+[Drilling.UI/Menu/CBindingBase.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L44-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1380,7 +1380,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ApplyOneHoleReviewOffsetCommandChanged` · L45–45
 
-[Drilling.UI/Menu/CBindingBase.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L45-L45)
+[Drilling.UI/Menu/CBindingBase.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L45-L45)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1395,7 +1395,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ApplyPreviewRowsChanged` · L46–46
 
-[Drilling.UI/Menu/CBindingBase.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L46-L46)
+[Drilling.UI/Menu/CBindingBase.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1410,7 +1410,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ApplyRowsChanged` · L47–47
 
-[Drilling.UI/Menu/CBindingBase.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L47-L47)
+[Drilling.UI/Menu/CBindingBase.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L47-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1425,7 +1425,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `Arg1Changed` · L48–48
 
-[Drilling.UI/Menu/CBindingBase.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L48-L48)
+[Drilling.UI/Menu/CBindingBase.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L48-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1440,7 +1440,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `Arg2Changed` · L49–49
 
-[Drilling.UI/Menu/CBindingBase.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L49-L49)
+[Drilling.UI/Menu/CBindingBase.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L49-L49)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1455,7 +1455,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `Arg3Changed` · L50–50
 
-[Drilling.UI/Menu/CBindingBase.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L50-L50)
+[Drilling.UI/Menu/CBindingBase.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L50-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1470,7 +1470,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `Arg4Changed` · L51–51
 
-[Drilling.UI/Menu/CBindingBase.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L51-L51)
+[Drilling.UI/Menu/CBindingBase.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L51-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1485,7 +1485,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `Arg5Changed` · L52–52
 
-[Drilling.UI/Menu/CBindingBase.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L52-L52)
+[Drilling.UI/Menu/CBindingBase.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L52-L52)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1500,7 +1500,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AttenuatorSettingItemsChanged` · L53–53
 
-[Drilling.UI/Menu/CBindingBase.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L53-L53)
+[Drilling.UI/Menu/CBindingBase.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L53-L53)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1515,7 +1515,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AttenuatorStateBrushChanged` · L54–54
 
-[Drilling.UI/Menu/CBindingBase.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L54-L54)
+[Drilling.UI/Menu/CBindingBase.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L54-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1530,7 +1530,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AttenuatorStatusItemsChanged` · L55–55
 
-[Drilling.UI/Menu/CBindingBase.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L55-L55)
+[Drilling.UI/Menu/CBindingBase.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L55-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1545,7 +1545,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AttenuatorTextChanged` · L56–56
 
-[Drilling.UI/Menu/CBindingBase.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L56-L56)
+[Drilling.UI/Menu/CBindingBase.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L56-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1560,7 +1560,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AutoConnectionChanged` · L57–57
 
-[Drilling.UI/Menu/CBindingBase.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L57-L57)
+[Drilling.UI/Menu/CBindingBase.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L57-L57)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1575,7 +1575,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AutoConnectionOptionsChanged` · L58–58
 
-[Drilling.UI/Menu/CBindingBase.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L58-L58)
+[Drilling.UI/Menu/CBindingBase.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L58-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1590,7 +1590,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AutomationControllerStatusItemsChanged` · L59–59
 
-[Drilling.UI/Menu/CBindingBase.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L59-L59)
+[Drilling.UI/Menu/CBindingBase.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L59-L59)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1605,7 +1605,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AxisChanged` · L60–60
 
-[Drilling.UI/Menu/CBindingBase.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L60-L60)
+[Drilling.UI/Menu/CBindingBase.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L60-L60)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1620,7 +1620,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AxisIdChanged` · L61–61
 
-[Drilling.UI/Menu/CBindingBase.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L61-L61)
+[Drilling.UI/Menu/CBindingBase.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L61-L61)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1635,7 +1635,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AxisRowsChanged` · L62–62
 
-[Drilling.UI/Menu/CBindingBase.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L62-L62)
+[Drilling.UI/Menu/CBindingBase.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L62-L62)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1650,7 +1650,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BackgroundBrushChanged` · L63–63
 
-[Drilling.UI/Menu/CBindingBase.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L63-L63)
+[Drilling.UI/Menu/CBindingBase.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L63-L63)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1665,7 +1665,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BackToCellPreviewCommandChanged` · L64–64
 
-[Drilling.UI/Menu/CBindingBase.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L64-L64)
+[Drilling.UI/Menu/CBindingBase.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L64-L64)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1680,7 +1680,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BackToCoordinateGlassPreviewCommandChanged` · L65–65
 
-[Drilling.UI/Menu/CBindingBase.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L65-L65)
+[Drilling.UI/Menu/CBindingBase.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L65-L65)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1695,7 +1695,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BackToOneHoleCellMapCommandChanged` · L66–66
 
-[Drilling.UI/Menu/CBindingBase.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L66-L66)
+[Drilling.UI/Menu/CBindingBase.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L66-L66)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1710,7 +1710,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BackToOneHoleHoleMapCommandChanged` · L67–67
 
-[Drilling.UI/Menu/CBindingBase.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L67-L67)
+[Drilling.UI/Menu/CBindingBase.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L67-L67)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1725,7 +1725,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BackToRunGlassPreviewCommandChanged` · L68–68
 
-[Drilling.UI/Menu/CBindingBase.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L68-L68)
+[Drilling.UI/Menu/CBindingBase.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L68-L68)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1740,7 +1740,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BackToRunShotMapCommandChanged` · L69–69
 
-[Drilling.UI/Menu/CBindingBase.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L69-L69)
+[Drilling.UI/Menu/CBindingBase.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L69-L69)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1755,7 +1755,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BackToSampleGlassPreviewCommandChanged` · L70–70
 
-[Drilling.UI/Menu/CBindingBase.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L70-L70)
+[Drilling.UI/Menu/CBindingBase.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L70-L70)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1770,7 +1770,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BaseCenterXChanged` · L71–71
 
-[Drilling.UI/Menu/CBindingBase.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L71-L71)
+[Drilling.UI/Menu/CBindingBase.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L71-L71)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1785,7 +1785,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BaseCenterYChanged` · L72–72
 
-[Drilling.UI/Menu/CBindingBase.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L72-L72)
+[Drilling.UI/Menu/CBindingBase.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L72-L72)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1800,7 +1800,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BeamOptionsChanged` · L73–73
 
-[Drilling.UI/Menu/CBindingBase.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L73-L73)
+[Drilling.UI/Menu/CBindingBase.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L73-L73)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1815,7 +1815,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BeamSelectionSummaryChanged` · L74–74
 
-[Drilling.UI/Menu/CBindingBase.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L74-L74)
+[Drilling.UI/Menu/CBindingBase.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L74-L74)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1830,7 +1830,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BetDivergenceTextChanged` · L75–75
 
-[Drilling.UI/Menu/CBindingBase.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L75-L75)
+[Drilling.UI/Menu/CBindingBase.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L75-L75)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1845,7 +1845,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BetMagnificationTextChanged` · L76–76
 
-[Drilling.UI/Menu/CBindingBase.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L76-L76)
+[Drilling.UI/Menu/CBindingBase.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L76-L76)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1860,7 +1860,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BetStateBrushChanged` · L77–77
 
-[Drilling.UI/Menu/CBindingBase.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L77-L77)
+[Drilling.UI/Menu/CBindingBase.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L77-L77)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1875,7 +1875,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BetTableRowsChanged` · L78–78
 
-[Drilling.UI/Menu/CBindingBase.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L78-L78)
+[Drilling.UI/Menu/CBindingBase.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L78-L78)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1890,7 +1890,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BlockedItemsChanged` · L79–79
 
-[Drilling.UI/Menu/CBindingBase.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L79-L79)
+[Drilling.UI/Menu/CBindingBase.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L79-L79)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1905,7 +1905,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BorderBrushChanged` · L80–80
 
-[Drilling.UI/Menu/CBindingBase.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L80-L80)
+[Drilling.UI/Menu/CBindingBase.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L80-L80)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1920,7 +1920,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `BuzzerOffCommandChanged` · L81–81
 
-[Drilling.UI/Menu/CBindingBase.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L81-L81)
+[Drilling.UI/Menu/CBindingBase.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L81-L81)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1935,7 +1935,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CalculatedOffsetRowsChanged` · L82–82
 
-[Drilling.UI/Menu/CBindingBase.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L82-L82)
+[Drilling.UI/Menu/CBindingBase.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L82-L82)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1950,7 +1950,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CanApplyOneHoleReviewOffsetChanged` · L83–83
 
-[Drilling.UI/Menu/CBindingBase.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L83-L83)
+[Drilling.UI/Menu/CBindingBase.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L83-L83)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1965,7 +1965,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CancelCommandChanged` · L84–84
 
-[Drilling.UI/Menu/CBindingBase.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L84-L84)
+[Drilling.UI/Menu/CBindingBase.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L84-L84)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1980,7 +1980,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CandidateRowsChanged` · L85–85
 
-[Drilling.UI/Menu/CBindingBase.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L85-L85)
+[Drilling.UI/Menu/CBindingBase.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L85-L85)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1995,7 +1995,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CanOperateSelectedInterfaceChanged` · L86–86
 
-[Drilling.UI/Menu/CBindingBase.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L86-L86)
+[Drilling.UI/Menu/CBindingBase.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L86-L86)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2010,7 +2010,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CanReadChanged` · L87–87
 
-[Drilling.UI/Menu/CBindingBase.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L87-L87)
+[Drilling.UI/Menu/CBindingBase.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L87-L87)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2025,7 +2025,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CanLoadBeamInspectionResultChanged` · L88–88
 
-[Drilling.UI/Menu/CBindingBase.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L88-L88)
+[Drilling.UI/Menu/CBindingBase.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L88-L88)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2040,7 +2040,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CanClearLoadedBeamInspectionResultChanged` · L89–89
 
-[Drilling.UI/Menu/CBindingBase.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L89-L89)
+[Drilling.UI/Menu/CBindingBase.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L89-L89)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2055,7 +2055,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CanSelectBeamChanged` · L90–90
 
-[Drilling.UI/Menu/CBindingBase.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L90-L90)
+[Drilling.UI/Menu/CBindingBase.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L90-L90)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2070,7 +2070,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CanSelectInspectionMethodChanged` · L91–91
 
-[Drilling.UI/Menu/CBindingBase.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L91-L91)
+[Drilling.UI/Menu/CBindingBase.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L91-L91)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2085,7 +2085,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CanWriteChanged` · L92–92
 
-[Drilling.UI/Menu/CBindingBase.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L92-L92)
+[Drilling.UI/Menu/CBindingBase.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L92-L92)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2100,7 +2100,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CAppStartupChanged` · L93–93
 
-[Drilling.UI/Menu/CBindingBase.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L93-L93)
+[Drilling.UI/Menu/CBindingBase.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L93-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2115,7 +2115,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CategoryChanged` · L94–94
 
-[Drilling.UI/Menu/CBindingBase.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L94-L94)
+[Drilling.UI/Menu/CBindingBase.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L94-L94)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2130,7 +2130,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CButtonCommandBehaviorChanged` · L95–95
 
-[Drilling.UI/Menu/CBindingBase.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L95-L95)
+[Drilling.UI/Menu/CBindingBase.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L95-L95)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2145,7 +2145,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CellMapDesignHeightChanged` · L96–96
 
-[Drilling.UI/Menu/CBindingBase.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L96-L96)
+[Drilling.UI/Menu/CBindingBase.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L96-L96)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2160,7 +2160,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CellMapDesignWidthChanged` · L97–97
 
-[Drilling.UI/Menu/CBindingBase.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L97-L97)
+[Drilling.UI/Menu/CBindingBase.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L97-L97)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2175,7 +2175,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CellNoChanged` · L98–98
 
-[Drilling.UI/Menu/CBindingBase.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L98-L98)
+[Drilling.UI/Menu/CBindingBase.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L98-L98)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2190,7 +2190,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CellModelTypeCountItemChanged` · L99–99
 
-[Drilling.UI/Menu/CBindingBase.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L99-L99)
+[Drilling.UI/Menu/CBindingBase.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L99-L99)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2205,7 +2205,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CellOverviewRowsChanged` · L100–100
 
-[Drilling.UI/Menu/CBindingBase.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L100-L100)
+[Drilling.UI/Menu/CBindingBase.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L100-L100)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2220,7 +2220,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CellPreviewImageChanged` · L101–101
 
-[Drilling.UI/Menu/CBindingBase.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L101-L101)
+[Drilling.UI/Menu/CBindingBase.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L101-L101)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2235,7 +2235,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CellPreviewLabelsChanged` · L102–102
 
-[Drilling.UI/Menu/CBindingBase.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L102-L102)
+[Drilling.UI/Menu/CBindingBase.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L102-L102)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2250,7 +2250,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CellShotMapImageChanged` · L103–103
 
-[Drilling.UI/Menu/CBindingBase.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L103-L103)
+[Drilling.UI/Menu/CBindingBase.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L103-L103)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2265,7 +2265,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CenterMoveCommandChanged` · L104–104
 
-[Drilling.UI/Menu/CBindingBase.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L104-L104)
+[Drilling.UI/Menu/CBindingBase.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L104-L104)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2280,7 +2280,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CenterOnCommandChanged` · L105–105
 
-[Drilling.UI/Menu/CBindingBase.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L105-L105)
+[Drilling.UI/Menu/CBindingBase.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L105-L105)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2295,7 +2295,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CenterXTextChanged` · L106–106
 
-[Drilling.UI/Menu/CBindingBase.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L106-L106)
+[Drilling.UI/Menu/CBindingBase.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L106-L106)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2310,7 +2310,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CenterYTextChanged` · L107–107
 
-[Drilling.UI/Menu/CBindingBase.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L107-L107)
+[Drilling.UI/Menu/CBindingBase.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L107-L107)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2325,7 +2325,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ChangeHistoryChanged` · L108–108
 
-[Drilling.UI/Menu/CBindingBase.cs:108–108](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L108-L108)
+[Drilling.UI/Menu/CBindingBase.cs:108–108](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L108-L108)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2340,7 +2340,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ChangeLimitChanged` · L109–109
 
-[Drilling.UI/Menu/CBindingBase.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L109-L109)
+[Drilling.UI/Menu/CBindingBase.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L109-L109)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2355,7 +2355,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ChessItemChanged` · L110–110
 
-[Drilling.UI/Menu/CBindingBase.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L110-L110)
+[Drilling.UI/Menu/CBindingBase.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L110-L110)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2370,7 +2370,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CInterfaceStatusRowChanged` · L111–111
 
-[Drilling.UI/Menu/CBindingBase.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L111-L111)
+[Drilling.UI/Menu/CBindingBase.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L111-L111)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2385,7 +2385,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ColumnChanged` · L112–112
 
-[Drilling.UI/Menu/CBindingBase.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L112-L112)
+[Drilling.UI/Menu/CBindingBase.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L112-L112)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2400,7 +2400,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CommandBlueChanged` · L113–113
 
-[Drilling.UI/Menu/CBindingBase.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L113-L113)
+[Drilling.UI/Menu/CBindingBase.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L113-L113)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2415,7 +2415,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CommandBlueBorderChanged` · L114–114
 
-[Drilling.UI/Menu/CBindingBase.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L114-L114)
+[Drilling.UI/Menu/CBindingBase.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L114-L114)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2430,7 +2430,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CommandDarkChanged` · L115–115
 
-[Drilling.UI/Menu/CBindingBase.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L115-L115)
+[Drilling.UI/Menu/CBindingBase.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L115-L115)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2445,7 +2445,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CommandDarkBorderChanged` · L116–116
 
-[Drilling.UI/Menu/CBindingBase.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L116-L116)
+[Drilling.UI/Menu/CBindingBase.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L116-L116)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2460,7 +2460,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CommandGreenChanged` · L117–117
 
-[Drilling.UI/Menu/CBindingBase.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L117-L117)
+[Drilling.UI/Menu/CBindingBase.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L117-L117)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2475,7 +2475,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CommandGreenBorderChanged` · L118–118
 
-[Drilling.UI/Menu/CBindingBase.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L118-L118)
+[Drilling.UI/Menu/CBindingBase.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L118-L118)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2490,7 +2490,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CommandHistoryRowsChanged` · L119–119
 
-[Drilling.UI/Menu/CBindingBase.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L119-L119)
+[Drilling.UI/Menu/CBindingBase.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L119-L119)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2505,7 +2505,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CommandLabelChanged` · L120–120
 
-[Drilling.UI/Menu/CBindingBase.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L120-L120)
+[Drilling.UI/Menu/CBindingBase.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L120-L120)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2520,7 +2520,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CommandOpacityChanged` · L121–121
 
-[Drilling.UI/Menu/CBindingBase.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L121-L121)
+[Drilling.UI/Menu/CBindingBase.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L121-L121)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2535,7 +2535,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CommandPropertyChanged` · L122–122
 
-[Drilling.UI/Menu/CBindingBase.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L122-L122)
+[Drilling.UI/Menu/CBindingBase.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L122-L122)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2550,7 +2550,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CommandRedChanged` · L123–123
 
-[Drilling.UI/Menu/CBindingBase.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L123-L123)
+[Drilling.UI/Menu/CBindingBase.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L123-L123)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2565,7 +2565,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CommandRedBorderChanged` · L124–124
 
-[Drilling.UI/Menu/CBindingBase.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L124-L124)
+[Drilling.UI/Menu/CBindingBase.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L124-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2580,7 +2580,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CommandStateItemsChanged` · L125–125
 
-[Drilling.UI/Menu/CBindingBase.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L125-L125)
+[Drilling.UI/Menu/CBindingBase.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L125-L125)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2595,7 +2595,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CommandStateRowsChanged` · L126–126
 
-[Drilling.UI/Menu/CBindingBase.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L126-L126)
+[Drilling.UI/Menu/CBindingBase.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L126-L126)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2610,7 +2610,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ConnectInterfaceCommandChanged` · L127–127
 
-[Drilling.UI/Menu/CBindingBase.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L127-L127)
+[Drilling.UI/Menu/CBindingBase.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L127-L127)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2625,7 +2625,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ContainerHeightPropertyChanged` · L128–128
 
-[Drilling.UI/Menu/CBindingBase.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L128-L128)
+[Drilling.UI/Menu/CBindingBase.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L128-L128)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2640,7 +2640,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ContainerWidthPropertyChanged` · L129–129
 
-[Drilling.UI/Menu/CBindingBase.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L129-L129)
+[Drilling.UI/Menu/CBindingBase.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L129-L129)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2655,7 +2655,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ControllerTaskTextChanged` · L130–130
 
-[Drilling.UI/Menu/CBindingBase.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L130-L130)
+[Drilling.UI/Menu/CBindingBase.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L130-L130)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2670,7 +2670,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CoordinateBasisDescriptionChanged` · L131–131
 
-[Drilling.UI/Menu/CBindingBase.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L131-L131)
+[Drilling.UI/Menu/CBindingBase.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L131-L131)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2685,7 +2685,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CoordinateBasisOptionsChanged` · L132–132
 
-[Drilling.UI/Menu/CBindingBase.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L132-L132)
+[Drilling.UI/Menu/CBindingBase.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L132-L132)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2700,7 +2700,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CoordinateCellPreviewLabelsChanged` · L133–133
 
-[Drilling.UI/Menu/CBindingBase.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L133-L133)
+[Drilling.UI/Menu/CBindingBase.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L133-L133)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2715,7 +2715,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CoordinateGlassPreviewImageChanged` · L134–134
 
-[Drilling.UI/Menu/CBindingBase.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L134-L134)
+[Drilling.UI/Menu/CBindingBase.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L134-L134)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2730,7 +2730,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CoordinateGlassPreviewSummaryChanged` · L135–135
 
-[Drilling.UI/Menu/CBindingBase.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L135-L135)
+[Drilling.UI/Menu/CBindingBase.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L135-L135)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2745,7 +2745,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CoordinateIsCellDetailVisibleChanged` · L136–136
 
-[Drilling.UI/Menu/CBindingBase.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L136-L136)
+[Drilling.UI/Menu/CBindingBase.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L136-L136)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2760,7 +2760,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CoordinateIsGlassPreviewVisibleChanged` · L137–137
 
-[Drilling.UI/Menu/CBindingBase.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L137-L137)
+[Drilling.UI/Menu/CBindingBase.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L137-L137)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2775,7 +2775,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CoordinateSelectedBasisNameChanged` · L138–138
 
-[Drilling.UI/Menu/CBindingBase.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L138-L138)
+[Drilling.UI/Menu/CBindingBase.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L138-L138)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2790,7 +2790,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CoordinateSelectedCellNameChanged` · L139–139
 
-[Drilling.UI/Menu/CBindingBase.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L139-L139)
+[Drilling.UI/Menu/CBindingBase.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L139-L139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2805,7 +2805,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CoordinateSelectedRecipeNameChanged` · L140–140
 
-[Drilling.UI/Menu/CBindingBase.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L140-L140)
+[Drilling.UI/Menu/CBindingBase.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L140-L140)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2820,7 +2820,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CoordinateSelectedShotNameChanged` · L141–141
 
-[Drilling.UI/Menu/CBindingBase.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L141-L141)
+[Drilling.UI/Menu/CBindingBase.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L141-L141)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2835,7 +2835,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CoordinateShotMatrixRowsChanged` · L142–142
 
-[Drilling.UI/Menu/CBindingBase.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L142-L142)
+[Drilling.UI/Menu/CBindingBase.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L142-L142)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2850,7 +2850,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CoordinateValueRowsChanged` · L143–143
 
-[Drilling.UI/Menu/CBindingBase.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L143-L143)
+[Drilling.UI/Menu/CBindingBase.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L143-L143)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2865,7 +2865,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CorrectedCenterXChanged` · L144–144
 
-[Drilling.UI/Menu/CBindingBase.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L144-L144)
+[Drilling.UI/Menu/CBindingBase.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L144-L144)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2880,7 +2880,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CorrectedCenterYChanged` · L145–145
 
-[Drilling.UI/Menu/CBindingBase.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L145-L145)
+[Drilling.UI/Menu/CBindingBase.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L145-L145)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2895,7 +2895,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CorrectionChanged` · L146–146
 
-[Drilling.UI/Menu/CBindingBase.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L146-L146)
+[Drilling.UI/Menu/CBindingBase.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L146-L146)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2910,7 +2910,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CPreviewCoordinateBehaviorChanged` · L147–147
 
-[Drilling.UI/Menu/CBindingBase.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L147-L147)
+[Drilling.UI/Menu/CBindingBase.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L147-L147)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2925,7 +2925,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CreateCommandChanged` · L148–148
 
-[Drilling.UI/Menu/CBindingBase.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L148-L148)
+[Drilling.UI/Menu/CBindingBase.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L148-L148)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2940,7 +2940,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CThemeManagerChanged` · L149–149
 
-[Drilling.UI/Menu/CBindingBase.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L149-L149)
+[Drilling.UI/Menu/CBindingBase.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L149-L149)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2955,7 +2955,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CurrentAlarmRowsChanged` · L150–150
 
-[Drilling.UI/Menu/CBindingBase.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L150-L150)
+[Drilling.UI/Menu/CBindingBase.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L150-L150)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2970,7 +2970,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CurrentAlarmsChanged` · L151–151
 
-[Drilling.UI/Menu/CBindingBase.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L151-L151)
+[Drilling.UI/Menu/CBindingBase.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L151-L151)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2985,7 +2985,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CurrentCellIndicatorTextChanged` · L152–152
 
-[Drilling.UI/Menu/CBindingBase.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L152-L152)
+[Drilling.UI/Menu/CBindingBase.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L152-L152)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3000,7 +3000,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CurrentDateTextChanged` · L153–153
 
-[Drilling.UI/Menu/CBindingBase.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L153-L153)
+[Drilling.UI/Menu/CBindingBase.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L153-L153)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3015,7 +3015,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CurrentOffsetRowsChanged` · L154–154
 
-[Drilling.UI/Menu/CBindingBase.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L154-L154)
+[Drilling.UI/Menu/CBindingBase.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L154-L154)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3030,7 +3030,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CurrentPositionChanged` · L155–155
 
-[Drilling.UI/Menu/CBindingBase.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L155-L155)
+[Drilling.UI/Menu/CBindingBase.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L155-L155)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3045,7 +3045,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CurrentReviewOffsetRecipeNameChanged` · L156–156
 
-[Drilling.UI/Menu/CBindingBase.cs:156–156](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L156-L156)
+[Drilling.UI/Menu/CBindingBase.cs:156–156](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L156-L156)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3060,7 +3060,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CurrentScreenChanged` · L157–157
 
-[Drilling.UI/Menu/CBindingBase.cs:157–157](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L157-L157)
+[Drilling.UI/Menu/CBindingBase.cs:157–157](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L157-L157)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3075,7 +3075,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CurrentSettingStateChanged` · L158–158
 
-[Drilling.UI/Menu/CBindingBase.cs:158–158](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L158-L158)
+[Drilling.UI/Menu/CBindingBase.cs:158–158](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L158-L158)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3090,7 +3090,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CurrentStepDetailsChanged` · L159–159
 
-[Drilling.UI/Menu/CBindingBase.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L159-L159)
+[Drilling.UI/Menu/CBindingBase.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L159-L159)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3105,7 +3105,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CurrentThemeChanged` · L160–160
 
-[Drilling.UI/Menu/CBindingBase.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L160-L160)
+[Drilling.UI/Menu/CBindingBase.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L160-L160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3120,7 +3120,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CurrentTimeTextChanged` · L161–161
 
-[Drilling.UI/Menu/CBindingBase.cs:161–161](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L161-L161)
+[Drilling.UI/Menu/CBindingBase.cs:161–161](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L161-L161)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3135,7 +3135,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CurrentUserTextChanged` · L162–162
 
-[Drilling.UI/Menu/CBindingBase.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L162-L162)
+[Drilling.UI/Menu/CBindingBase.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L162-L162)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3150,7 +3150,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CurrentValueBrushChanged` · L163–163
 
-[Drilling.UI/Menu/CBindingBase.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L163-L163)
+[Drilling.UI/Menu/CBindingBase.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L163-L163)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3165,7 +3165,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CycleItemsChanged` · L164–164
 
-[Drilling.UI/Menu/CBindingBase.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L164-L164)
+[Drilling.UI/Menu/CBindingBase.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L164-L164)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3180,7 +3180,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DataTypeChanged` · L165–165
 
-[Drilling.UI/Menu/CBindingBase.cs:165–165](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L165-L165)
+[Drilling.UI/Menu/CBindingBase.cs:165–165](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L165-L165)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3195,7 +3195,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DefaultChanged` · L166–166
 
-[Drilling.UI/Menu/CBindingBase.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L166-L166)
+[Drilling.UI/Menu/CBindingBase.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L166-L166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3210,7 +3210,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DefaultValueChanged` · L167–167
 
-[Drilling.UI/Menu/CBindingBase.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L167-L167)
+[Drilling.UI/Menu/CBindingBase.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L167-L167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3225,7 +3225,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DeleteCommandChanged` · L168–168
 
-[Drilling.UI/Menu/CBindingBase.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L168-L168)
+[Drilling.UI/Menu/CBindingBase.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L168-L168)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3240,7 +3240,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DescriptionChanged` · L169–169
 
-[Drilling.UI/Menu/CBindingBase.cs:169–169](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L169-L169)
+[Drilling.UI/Menu/CBindingBase.cs:169–169](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L169-L169)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3255,7 +3255,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DesignHeightPropertyChanged` · L170–170
 
-[Drilling.UI/Menu/CBindingBase.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L170-L170)
+[Drilling.UI/Menu/CBindingBase.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L170-L170)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3270,7 +3270,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DesignWidthPropertyChanged` · L171–171
 
-[Drilling.UI/Menu/CBindingBase.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L171-L171)
+[Drilling.UI/Menu/CBindingBase.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L171-L171)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3285,7 +3285,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DetailChanged` · L172–172
 
-[Drilling.UI/Menu/CBindingBase.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L172-L172)
+[Drilling.UI/Menu/CBindingBase.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L172-L172)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3300,7 +3300,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DetailBrushChanged` · L173–173
 
-[Drilling.UI/Menu/CBindingBase.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L173-L173)
+[Drilling.UI/Menu/CBindingBase.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L173-L173)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3315,7 +3315,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DetailItemsChanged` · L174–174
 
-[Drilling.UI/Menu/CBindingBase.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L174-L174)
+[Drilling.UI/Menu/CBindingBase.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L174-L174)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3330,7 +3330,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DetailRowsChanged` · L175–175
 
-[Drilling.UI/Menu/CBindingBase.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L175-L175)
+[Drilling.UI/Menu/CBindingBase.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L175-L175)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3345,7 +3345,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DetailTextChanged` · L176–176
 
-[Drilling.UI/Menu/CBindingBase.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L176-L176)
+[Drilling.UI/Menu/CBindingBase.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L176-L176)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3360,7 +3360,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DeviceChanged` · L177–177
 
-[Drilling.UI/Menu/CBindingBase.cs:177–177](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L177-L177)
+[Drilling.UI/Menu/CBindingBase.cs:177–177](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L177-L177)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3375,7 +3375,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DeviceNoChanged` · L178–178
 
-[Drilling.UI/Menu/CBindingBase.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L178-L178)
+[Drilling.UI/Menu/CBindingBase.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L178-L178)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3390,7 +3390,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DeviceTabsChanged` · L179–179
 
-[Drilling.UI/Menu/CBindingBase.cs:179–179](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L179-L179)
+[Drilling.UI/Menu/CBindingBase.cs:179–179](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L179-L179)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3405,7 +3405,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DioAddressChanged` · L180–180
 
-[Drilling.UI/Menu/CBindingBase.cs:180–180](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L180-L180)
+[Drilling.UI/Menu/CBindingBase.cs:180–180](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L180-L180)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3420,7 +3420,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DioAxisNameChanged` · L181–181
 
-[Drilling.UI/Menu/CBindingBase.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L181-L181)
+[Drilling.UI/Menu/CBindingBase.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L181-L181)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3435,7 +3435,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DioCurrentValueChanged` · L182–182
 
-[Drilling.UI/Menu/CBindingBase.cs:182–182](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L182-L182)
+[Drilling.UI/Menu/CBindingBase.cs:182–182](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L182-L182)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3450,7 +3450,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DioLastResultChanged` · L183–183
 
-[Drilling.UI/Menu/CBindingBase.cs:183–183](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L183-L183)
+[Drilling.UI/Menu/CBindingBase.cs:183–183](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L183-L183)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3465,7 +3465,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DioNoChanged` · L184–184
 
-[Drilling.UI/Menu/CBindingBase.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L184-L184)
+[Drilling.UI/Menu/CBindingBase.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L184-L184)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3480,7 +3480,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DioOffCommandChanged` · L185–185
 
-[Drilling.UI/Menu/CBindingBase.cs:185–185](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L185-L185)
+[Drilling.UI/Menu/CBindingBase.cs:185–185](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L185-L185)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3495,7 +3495,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DioOnCommandChanged` · L186–186
 
-[Drilling.UI/Menu/CBindingBase.cs:186–186](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L186-L186)
+[Drilling.UI/Menu/CBindingBase.cs:186–186](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L186-L186)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3510,7 +3510,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DioReadCommandChanged` · L187–187
 
-[Drilling.UI/Menu/CBindingBase.cs:187–187](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L187-L187)
+[Drilling.UI/Menu/CBindingBase.cs:187–187](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L187-L187)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3525,7 +3525,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DirectionChanged` · L188–188
 
-[Drilling.UI/Menu/CBindingBase.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L188-L188)
+[Drilling.UI/Menu/CBindingBase.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L188-L188)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3540,7 +3540,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DisconnectInterfaceCommandChanged` · L189–189
 
-[Drilling.UI/Menu/CBindingBase.cs:189–189](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L189-L189)
+[Drilling.UI/Menu/CBindingBase.cs:189–189](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L189-L189)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3555,7 +3555,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DisplayAxisChanged` · L190–190
 
-[Drilling.UI/Menu/CBindingBase.cs:190–190](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L190-L190)
+[Drilling.UI/Menu/CBindingBase.cs:190–190](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L190-L190)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3570,7 +3570,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DisplayLabelChanged` · L191–191
 
-[Drilling.UI/Menu/CBindingBase.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L191-L191)
+[Drilling.UI/Menu/CBindingBase.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L191-L191)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3585,7 +3585,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DisplayTextChanged` · L192–192
 
-[Drilling.UI/Menu/CBindingBase.cs:192–192](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L192-L192)
+[Drilling.UI/Menu/CBindingBase.cs:192–192](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L192-L192)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3600,7 +3600,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DistortionKeyItemsChanged` · L193–193
 
-[Drilling.UI/Menu/CBindingBase.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L193-L193)
+[Drilling.UI/Menu/CBindingBase.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L193-L193)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3615,7 +3615,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `DivChanged` · L194–194
 
-[Drilling.UI/Menu/CBindingBase.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L194-L194)
+[Drilling.UI/Menu/CBindingBase.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L194-L194)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3630,7 +3630,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ElapsedTimeTextChanged` · L195–195
 
-[Drilling.UI/Menu/CBindingBase.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L195-L195)
+[Drilling.UI/Menu/CBindingBase.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L195-L195)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3645,7 +3645,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ElementHeightPropertyChanged` · L196–196
 
-[Drilling.UI/Menu/CBindingBase.cs:196–196](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L196-L196)
+[Drilling.UI/Menu/CBindingBase.cs:196–196](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L196-L196)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3660,7 +3660,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ElementWidthPropertyChanged` · L197–197
 
-[Drilling.UI/Menu/CBindingBase.cs:197–197](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L197-L197)
+[Drilling.UI/Menu/CBindingBase.cs:197–197](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L197-L197)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3675,7 +3675,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `EmptyChanged` · L198–198
 
-[Drilling.UI/Menu/CBindingBase.cs:198–198](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L198-L198)
+[Drilling.UI/Menu/CBindingBase.cs:198–198](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L198-L198)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3690,7 +3690,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `EN_MENUChanged` · L199–199
 
-[Drilling.UI/Menu/CBindingBase.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L199-L199)
+[Drilling.UI/Menu/CBindingBase.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L199-L199)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3705,7 +3705,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `EN_UI_THEMEChanged` · L200–200
 
-[Drilling.UI/Menu/CBindingBase.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L200-L200)
+[Drilling.UI/Menu/CBindingBase.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L200-L200)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3720,7 +3720,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `EndpointChanged` · L201–201
 
-[Drilling.UI/Menu/CBindingBase.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L201-L201)
+[Drilling.UI/Menu/CBindingBase.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L201-L201)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3735,7 +3735,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ErrorBrushChanged` · L202–202
 
-[Drilling.UI/Menu/CBindingBase.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L202-L202)
+[Drilling.UI/Menu/CBindingBase.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L202-L202)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3750,7 +3750,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ErrorXChanged` · L203–203
 
-[Drilling.UI/Menu/CBindingBase.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L203-L203)
+[Drilling.UI/Menu/CBindingBase.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L203-L203)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3765,7 +3765,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ErrorYChanged` · L204–204
 
-[Drilling.UI/Menu/CBindingBase.cs:204–204](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L204-L204)
+[Drilling.UI/Menu/CBindingBase.cs:204–204](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L204-L204)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3780,7 +3780,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `EstimatedTimeTextChanged` · L205–205
 
-[Drilling.UI/Menu/CBindingBase.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L205-L205)
+[Drilling.UI/Menu/CBindingBase.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L205-L205)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3795,7 +3795,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `EvenHeadPreviewsChanged` · L206–206
 
-[Drilling.UI/Menu/CBindingBase.cs:206–206](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L206-L206)
+[Drilling.UI/Menu/CBindingBase.cs:206–206](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L206-L206)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3810,7 +3810,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ExecuteCommandChanged` · L207–207
 
-[Drilling.UI/Menu/CBindingBase.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L207-L207)
+[Drilling.UI/Menu/CBindingBase.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L207-L207)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3825,7 +3825,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ExecuteOperationCommandChanged` · L208–208
 
-[Drilling.UI/Menu/CBindingBase.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L208-L208)
+[Drilling.UI/Menu/CBindingBase.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L208-L208)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3840,7 +3840,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ExtraChanged` · L209–209
 
-[Drilling.UI/Menu/CBindingBase.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L209-L209)
+[Drilling.UI/Menu/CBindingBase.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L209-L209)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3855,7 +3855,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `FileTextChanged` · L210–210
 
-[Drilling.UI/Menu/CBindingBase.cs:210–210](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L210-L210)
+[Drilling.UI/Menu/CBindingBase.cs:210–210](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L210-L210)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3870,7 +3870,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `FirstXChanged` · L211–211
 
-[Drilling.UI/Menu/CBindingBase.cs:211–211](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L211-L211)
+[Drilling.UI/Menu/CBindingBase.cs:211–211](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L211-L211)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3885,7 +3885,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `FirstYChanged` · L212–212
 
-[Drilling.UI/Menu/CBindingBase.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L212-L212)
+[Drilling.UI/Menu/CBindingBase.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L212-L212)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3900,7 +3900,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `FooterStatusItemsChanged` · L213–213
 
-[Drilling.UI/Menu/CBindingBase.cs:213–213](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L213-L213)
+[Drilling.UI/Menu/CBindingBase.cs:213–213](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L213-L213)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3915,7 +3915,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `GlassFrameChanged` · L214–214
 
-[Drilling.UI/Menu/CBindingBase.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L214-L214)
+[Drilling.UI/Menu/CBindingBase.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L214-L214)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3930,7 +3930,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `GlassPreviewSummaryChanged` · L215–215
 
-[Drilling.UI/Menu/CBindingBase.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L215-L215)
+[Drilling.UI/Menu/CBindingBase.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L215-L215)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3945,7 +3945,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `GlassSizeXItemChanged` · L216–216
 
-[Drilling.UI/Menu/CBindingBase.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L216-L216)
+[Drilling.UI/Menu/CBindingBase.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L216-L216)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3960,7 +3960,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `GlassSizeYItemChanged` · L217–217
 
-[Drilling.UI/Menu/CBindingBase.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L217-L217)
+[Drilling.UI/Menu/CBindingBase.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L217-L217)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3975,7 +3975,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `GridColLinesChanged` · L218–218
 
-[Drilling.UI/Menu/CBindingBase.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L218-L218)
+[Drilling.UI/Menu/CBindingBase.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L218-L218)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3990,7 +3990,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `GridRowLinesChanged` · L219–219
 
-[Drilling.UI/Menu/CBindingBase.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L219-L219)
+[Drilling.UI/Menu/CBindingBase.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L219-L219)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4005,7 +4005,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `GroupChanged` · L220–220
 
-[Drilling.UI/Menu/CBindingBase.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L220-L220)
+[Drilling.UI/Menu/CBindingBase.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L220-L220)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4020,7 +4020,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `GroupItemsChanged` · L221–221
 
-[Drilling.UI/Menu/CBindingBase.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L221-L221)
+[Drilling.UI/Menu/CBindingBase.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L221-L221)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4035,7 +4035,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `GroupTabsChanged` · L222–222
 
-[Drilling.UI/Menu/CBindingBase.cs:222–222](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L222-L222)
+[Drilling.UI/Menu/CBindingBase.cs:222–222](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L222-L222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4050,7 +4050,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HasCommandChanged` · L223–223
 
-[Drilling.UI/Menu/CBindingBase.cs:223–223](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L223-L223)
+[Drilling.UI/Menu/CBindingBase.cs:223–223](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L223-L223)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4065,7 +4065,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HasResultChanged` · L224–224
 
-[Drilling.UI/Menu/CBindingBase.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L224-L224)
+[Drilling.UI/Menu/CBindingBase.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L224-L224)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4080,7 +4080,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HeadAssignmentAreasChanged` · L225–225
 
-[Drilling.UI/Menu/CBindingBase.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L225-L225)
+[Drilling.UI/Menu/CBindingBase.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L225-L225)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4095,7 +4095,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HeadCardsChanged` · L226–226
 
-[Drilling.UI/Menu/CBindingBase.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L226-L226)
+[Drilling.UI/Menu/CBindingBase.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L226-L226)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4110,7 +4110,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HeadGroupsChanged` · L227–227
 
-[Drilling.UI/Menu/CBindingBase.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L227-L227)
+[Drilling.UI/Menu/CBindingBase.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L227-L227)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4125,7 +4125,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HeadDeviceSelectorTitleChanged` · L228–228
 
-[Drilling.UI/Menu/CBindingBase.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L228-L228)
+[Drilling.UI/Menu/CBindingBase.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L228-L228)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4140,7 +4140,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HeaderStatusItemsChanged` · L229–229
 
-[Drilling.UI/Menu/CBindingBase.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L229-L229)
+[Drilling.UI/Menu/CBindingBase.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L229-L229)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4155,7 +4155,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HeadParametersChanged` · L230–230
 
-[Drilling.UI/Menu/CBindingBase.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L230-L230)
+[Drilling.UI/Menu/CBindingBase.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L230-L230)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4170,7 +4170,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HeadParameterVisibilityChanged` · L231–231
 
-[Drilling.UI/Menu/CBindingBase.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L231-L231)
+[Drilling.UI/Menu/CBindingBase.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L231-L231)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4185,7 +4185,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HeadPreviewImageChanged` · L232–232
 
-[Drilling.UI/Menu/CBindingBase.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L232-L232)
+[Drilling.UI/Menu/CBindingBase.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L232-L232)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4200,7 +4200,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HeadPreviewLabelsChanged` · L233–233
 
-[Drilling.UI/Menu/CBindingBase.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L233-L233)
+[Drilling.UI/Menu/CBindingBase.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L233-L233)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4215,7 +4215,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HeadPreviewsChanged` · L234–234
 
-[Drilling.UI/Menu/CBindingBase.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L234-L234)
+[Drilling.UI/Menu/CBindingBase.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L234-L234)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4230,7 +4230,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HeadPreviewSummaryTextChanged` · L235–235
 
-[Drilling.UI/Menu/CBindingBase.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L235-L235)
+[Drilling.UI/Menu/CBindingBase.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L235-L235)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4245,7 +4245,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HeadSelectRowsChanged` · L236–236
 
-[Drilling.UI/Menu/CBindingBase.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L236-L236)
+[Drilling.UI/Menu/CBindingBase.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L236-L236)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4260,7 +4260,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HeightChanged` · L237–237
 
-[Drilling.UI/Menu/CBindingBase.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L237-L237)
+[Drilling.UI/Menu/CBindingBase.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L237-L237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4275,7 +4275,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HistoryChanged` · L238–238
 
-[Drilling.UI/Menu/CBindingBase.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L238-L238)
+[Drilling.UI/Menu/CBindingBase.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L238-L238)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4290,7 +4290,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HistoryPanelTitleChanged` · L239–239
 
-[Drilling.UI/Menu/CBindingBase.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L239-L239)
+[Drilling.UI/Menu/CBindingBase.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L239-L239)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4305,7 +4305,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HistoryRowsChanged` · L240–240
 
-[Drilling.UI/Menu/CBindingBase.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L240-L240)
+[Drilling.UI/Menu/CBindingBase.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L240-L240)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4320,7 +4320,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `HomeBrushChanged` · L241–241
 
-[Drilling.UI/Menu/CBindingBase.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L241-L241)
+[Drilling.UI/Menu/CBindingBase.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L241-L241)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4335,7 +4335,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IconGeometryChanged` · L242–242
 
-[Drilling.UI/Menu/CBindingBase.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L242-L242)
+[Drilling.UI/Menu/CBindingBase.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L242-L242)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4350,7 +4350,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IdChanged` · L243–243
 
-[Drilling.UI/Menu/CBindingBase.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L243-L243)
+[Drilling.UI/Menu/CBindingBase.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L243-L243)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4365,7 +4365,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `InspectionModeTextChanged` · L244–244
 
-[Drilling.UI/Menu/CBindingBase.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L244-L244)
+[Drilling.UI/Menu/CBindingBase.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L244-L244)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4380,7 +4380,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `InspectionMethodItemsChanged` · L245–245
 
-[Drilling.UI/Menu/CBindingBase.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L245-L245)
+[Drilling.UI/Menu/CBindingBase.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L245-L245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4395,7 +4395,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `InspectionRuleTextChanged` · L246–246
 
-[Drilling.UI/Menu/CBindingBase.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L246-L246)
+[Drilling.UI/Menu/CBindingBase.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L246-L246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4410,7 +4410,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `InspectionRuleVisibilityChanged` · L247–247
 
-[Drilling.UI/Menu/CBindingBase.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L247-L247)
+[Drilling.UI/Menu/CBindingBase.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L247-L247)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4425,7 +4425,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `InspectionStatusItemsChanged` · L248–248
 
-[Drilling.UI/Menu/CBindingBase.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L248-L248)
+[Drilling.UI/Menu/CBindingBase.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L248-L248)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4440,7 +4440,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `InspectionSummaryChanged` · L249–249
 
-[Drilling.UI/Menu/CBindingBase.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L249-L249)
+[Drilling.UI/Menu/CBindingBase.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L249-L249)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4455,7 +4455,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `InterfaceRowsChanged` · L250–250
 
-[Drilling.UI/Menu/CBindingBase.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L250-L250)
+[Drilling.UI/Menu/CBindingBase.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L250-L250)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4470,7 +4470,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `InterfaceTypeChanged` · L251–251
 
-[Drilling.UI/Menu/CBindingBase.cs:251–251](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L251-L251)
+[Drilling.UI/Menu/CBindingBase.cs:251–251](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L251-L251)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4485,7 +4485,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `InterlockItemsChanged` · L252–252
 
-[Drilling.UI/Menu/CBindingBase.cs:252–252](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L252-L252)
+[Drilling.UI/Menu/CBindingBase.cs:252–252](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L252-L252)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4500,7 +4500,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsAlarmLayoutChanged` · L253–253
 
-[Drilling.UI/Menu/CBindingBase.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L253-L253)
+[Drilling.UI/Menu/CBindingBase.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L253-L253)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4515,7 +4515,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsAttenuatorChanged` · L254–254
 
-[Drilling.UI/Menu/CBindingBase.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L254-L254)
+[Drilling.UI/Menu/CBindingBase.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L254-L254)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4530,7 +4530,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsBetChanged` · L255–255
 
-[Drilling.UI/Menu/CBindingBase.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L255-L255)
+[Drilling.UI/Menu/CBindingBase.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L255-L255)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4545,7 +4545,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsBooleanChanged` · L256–256
 
-[Drilling.UI/Menu/CBindingBase.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L256-L256)
+[Drilling.UI/Menu/CBindingBase.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L256-L256)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4560,7 +4560,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsCellCategoryChanged` · L257–257
 
-[Drilling.UI/Menu/CBindingBase.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L257-L257)
+[Drilling.UI/Menu/CBindingBase.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L257-L257)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4575,7 +4575,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsCellDetailVisibleChanged` · L258–258
 
-[Drilling.UI/Menu/CBindingBase.cs:258–258](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L258-L258)
+[Drilling.UI/Menu/CBindingBase.cs:258–258](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L258-L258)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4590,7 +4590,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsCellPreviewVisibleChanged` · L259–259
 
-[Drilling.UI/Menu/CBindingBase.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L259-L259)
+[Drilling.UI/Menu/CBindingBase.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L259-L259)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4605,7 +4605,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsControlDeviceChanged` · L260–260
 
-[Drilling.UI/Menu/CBindingBase.cs:260–260](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L260-L260)
+[Drilling.UI/Menu/CBindingBase.cs:260–260](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L260-L260)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4620,7 +4620,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsCoordinateViewerChanged` · L261–261
 
-[Drilling.UI/Menu/CBindingBase.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L261-L261)
+[Drilling.UI/Menu/CBindingBase.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L261-L261)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4635,7 +4635,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsLogViewerChanged` · L262–262
 
-[Drilling.UI/Menu/CBindingBase.cs:262–262](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L262-L262)
+[Drilling.UI/Menu/CBindingBase.cs:262–262](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L262-L262)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4650,7 +4650,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsCorrectionLayoutChanged` · L263–263
 
-[Drilling.UI/Menu/CBindingBase.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L263-L263)
+[Drilling.UI/Menu/CBindingBase.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L263-L263)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4665,7 +4665,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsAlignDistortionTabChanged` · L264–264
 
-[Drilling.UI/Menu/CBindingBase.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L264-L264)
+[Drilling.UI/Menu/CBindingBase.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L264-L264)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4680,7 +4680,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsCorrectionCommandsVisibleChanged` · L265–265
 
-[Drilling.UI/Menu/CBindingBase.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L265-L265)
+[Drilling.UI/Menu/CBindingBase.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L265-L265)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4695,7 +4695,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsOutputHistoryTabChanged` · L266–266
 
-[Drilling.UI/Menu/CBindingBase.cs:266–266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L266-L266)
+[Drilling.UI/Menu/CBindingBase.cs:266–266](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L266-L266)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4710,7 +4710,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsCurrentChanged` · L267–267
 
-[Drilling.UI/Menu/CBindingBase.cs:267–267](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L267-L267)
+[Drilling.UI/Menu/CBindingBase.cs:267–267](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L267-L267)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4725,7 +4725,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsDioControlBusyChanged` · L268–268
 
-[Drilling.UI/Menu/CBindingBase.cs:268–268](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L268-L268)
+[Drilling.UI/Menu/CBindingBase.cs:268–268](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L268-L268)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4740,7 +4740,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsDioControlEnabledChanged` · L269–269
 
-[Drilling.UI/Menu/CBindingBase.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L269-L269)
+[Drilling.UI/Menu/CBindingBase.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L269-L269)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4755,7 +4755,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsDioOffChanged` · L270–270
 
-[Drilling.UI/Menu/CBindingBase.cs:270–270](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L270-L270)
+[Drilling.UI/Menu/CBindingBase.cs:270–270](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L270-L270)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4770,7 +4770,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsDioOnChanged` · L271–271
 
-[Drilling.UI/Menu/CBindingBase.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L271-L271)
+[Drilling.UI/Menu/CBindingBase.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L271-L271)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4785,7 +4785,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsDioTargetReadyChanged` · L272–272
 
-[Drilling.UI/Menu/CBindingBase.cs:272–272](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L272-L272)
+[Drilling.UI/Menu/CBindingBase.cs:272–272](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L272-L272)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4800,7 +4800,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsEditableChanged` · L273–273
 
-[Drilling.UI/Menu/CBindingBase.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L273-L273)
+[Drilling.UI/Menu/CBindingBase.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L273-L273)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4815,7 +4815,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsEditedChanged` · L274–274
 
-[Drilling.UI/Menu/CBindingBase.cs:274–274](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L274-L274)
+[Drilling.UI/Menu/CBindingBase.cs:274–274](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L274-L274)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4830,7 +4830,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsEnabledChanged` · L275–275
 
-[Drilling.UI/Menu/CBindingBase.cs:275–275](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L275-L275)
+[Drilling.UI/Menu/CBindingBase.cs:275–275](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L275-L275)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4845,7 +4845,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsGenericDeviceChanged` · L276–276
 
-[Drilling.UI/Menu/CBindingBase.cs:276–276](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L276-L276)
+[Drilling.UI/Menu/CBindingBase.cs:276–276](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L276-L276)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4860,7 +4860,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsGenericLayoutChanged` · L277–277
 
-[Drilling.UI/Menu/CBindingBase.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L277-L277)
+[Drilling.UI/Menu/CBindingBase.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L277-L277)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4875,7 +4875,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsHeadCategoryChanged` · L278–278
 
-[Drilling.UI/Menu/CBindingBase.cs:278–278](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L278-L278)
+[Drilling.UI/Menu/CBindingBase.cs:278–278](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L278-L278)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4890,7 +4890,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsInsideGlassChanged` · L279–279
 
-[Drilling.UI/Menu/CBindingBase.cs:279–279](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L279-L279)
+[Drilling.UI/Menu/CBindingBase.cs:279–279](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L279-L279)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4905,7 +4905,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsInterfaceTabChanged` · L280–280
 
-[Drilling.UI/Menu/CBindingBase.cs:280–280](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L280-L280)
+[Drilling.UI/Menu/CBindingBase.cs:280–280](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L280-L280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4920,7 +4920,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsLaserChanged` · L281–281
 
-[Drilling.UI/Menu/CBindingBase.cs:281–281](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L281-L281)
+[Drilling.UI/Menu/CBindingBase.cs:281–281](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L281-L281)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4935,7 +4935,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsLaserCountModeChanged` · L282–282
 
-[Drilling.UI/Menu/CBindingBase.cs:282–282](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L282-L282)
+[Drilling.UI/Menu/CBindingBase.cs:282–282](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L282-L282)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4950,7 +4950,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsLaserTimeModeChanged` · L283–283
 
-[Drilling.UI/Menu/CBindingBase.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L283-L283)
+[Drilling.UI/Menu/CBindingBase.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L283-L283)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4965,7 +4965,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsMainLayoutChanged` · L284–284
 
-[Drilling.UI/Menu/CBindingBase.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L284-L284)
+[Drilling.UI/Menu/CBindingBase.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L284-L284)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4980,7 +4980,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsManualLayoutChanged` · L285–285
 
-[Drilling.UI/Menu/CBindingBase.cs:285–285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L285-L285)
+[Drilling.UI/Menu/CBindingBase.cs:285–285](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L285-L285)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4995,7 +4995,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsManualShiftOffsetVisibleChanged` · L286–286
 
-[Drilling.UI/Menu/CBindingBase.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L286-L286)
+[Drilling.UI/Menu/CBindingBase.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L286-L286)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5010,7 +5010,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsMelsecChanged` · L287–287
 
-[Drilling.UI/Menu/CBindingBase.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L287-L287)
+[Drilling.UI/Menu/CBindingBase.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L287-L287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5025,7 +5025,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsMelsecWriteLockVisibleChanged` · L288–288
 
-[Drilling.UI/Menu/CBindingBase.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L288-L288)
+[Drilling.UI/Menu/CBindingBase.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L288-L288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5040,7 +5040,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsMelsecWriteUnlockedChanged` · L289–289
 
-[Drilling.UI/Menu/CBindingBase.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L289-L289)
+[Drilling.UI/Menu/CBindingBase.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L289-L289)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5055,7 +5055,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsModifiedChanged` · L290–290
 
-[Drilling.UI/Menu/CBindingBase.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L290-L290)
+[Drilling.UI/Menu/CBindingBase.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L290-L290)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5070,7 +5070,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsMonitorLayoutChanged` · L291–291
 
-[Drilling.UI/Menu/CBindingBase.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L291-L291)
+[Drilling.UI/Menu/CBindingBase.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L291-L291)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5085,7 +5085,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsMotorChanged` · L292–292
 
-[Drilling.UI/Menu/CBindingBase.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L292-L292)
+[Drilling.UI/Menu/CBindingBase.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L292-L292)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5100,7 +5100,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsOneHoleBeamMapChanged` · L293–293
 
-[Drilling.UI/Menu/CBindingBase.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L293-L293)
+[Drilling.UI/Menu/CBindingBase.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L293-L293)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5115,7 +5115,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsOneHoleCellMapChanged` · L294–294
 
-[Drilling.UI/Menu/CBindingBase.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L294-L294)
+[Drilling.UI/Menu/CBindingBase.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L294-L294)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5130,7 +5130,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsOneHoleDetailMapChanged` · L295–295
 
-[Drilling.UI/Menu/CBindingBase.cs:295–295](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L295-L295)
+[Drilling.UI/Menu/CBindingBase.cs:295–295](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L295-L295)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5145,7 +5145,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsOneHoleHoleMapChanged` · L296–296
 
-[Drilling.UI/Menu/CBindingBase.cs:296–296](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L296-L296)
+[Drilling.UI/Menu/CBindingBase.cs:296–296](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L296-L296)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5160,7 +5160,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsOneHoleTabChanged` · L297–297
 
-[Drilling.UI/Menu/CBindingBase.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L297-L297)
+[Drilling.UI/Menu/CBindingBase.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L297-L297)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5175,7 +5175,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsOtherCorrectionTabChanged` · L298–298
 
-[Drilling.UI/Menu/CBindingBase.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L298-L298)
+[Drilling.UI/Menu/CBindingBase.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L298-L298)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5190,7 +5190,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsParameterTabChanged` · L299–299
 
-[Drilling.UI/Menu/CBindingBase.cs:299–299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L299-L299)
+[Drilling.UI/Menu/CBindingBase.cs:299–299](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L299-L299)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5205,7 +5205,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsPicoMotorChanged` · L300–300
 
-[Drilling.UI/Menu/CBindingBase.cs:300–300](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L300-L300)
+[Drilling.UI/Menu/CBindingBase.cs:300–300](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L300-L300)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5220,7 +5220,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsPmLayoutChanged` · L301–301
 
-[Drilling.UI/Menu/CBindingBase.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L301-L301)
+[Drilling.UI/Menu/CBindingBase.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L301-L301)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5235,7 +5235,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsPowerMeterChanged` · L302–302
 
-[Drilling.UI/Menu/CBindingBase.cs:302–302](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L302-L302)
+[Drilling.UI/Menu/CBindingBase.cs:302–302](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L302-L302)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5250,7 +5250,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsProductChanged` · L303–303
 
-[Drilling.UI/Menu/CBindingBase.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L303-L303)
+[Drilling.UI/Menu/CBindingBase.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L303-L303)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5265,7 +5265,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsReadOnlyChanged` · L304–304
 
-[Drilling.UI/Menu/CBindingBase.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L304-L304)
+[Drilling.UI/Menu/CBindingBase.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L304-L304)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5280,7 +5280,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsRecipeLayoutChanged` · L305–305
 
-[Drilling.UI/Menu/CBindingBase.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L305-L305)
+[Drilling.UI/Menu/CBindingBase.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L305-L305)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5295,7 +5295,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsReviewLayoutChanged` · L306–306
 
-[Drilling.UI/Menu/CBindingBase.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L306-L306)
+[Drilling.UI/Menu/CBindingBase.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L306-L306)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5310,7 +5310,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsAllShotReviewModeChanged` · L307–307
 
-[Drilling.UI/Menu/CBindingBase.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L307-L307)
+[Drilling.UI/Menu/CBindingBase.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L307-L307)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5325,7 +5325,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsAllShotStyleReviewModeChanged` · L308–308
 
-[Drilling.UI/Menu/CBindingBase.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L308-L308)
+[Drilling.UI/Menu/CBindingBase.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L308-L308)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5340,7 +5340,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsRuleReviewModeChanged` · L309–309
 
-[Drilling.UI/Menu/CBindingBase.cs:309–309](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L309-L309)
+[Drilling.UI/Menu/CBindingBase.cs:309–309](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L309-L309)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5355,7 +5355,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsBeamInspectionModeChanged` · L310–310
 
-[Drilling.UI/Menu/CBindingBase.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L310-L310)
+[Drilling.UI/Menu/CBindingBase.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L310-L310)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5370,7 +5370,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsBeamSelectionVisibleChanged` · L311–311
 
-[Drilling.UI/Menu/CBindingBase.cs:311–311](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L311-L311)
+[Drilling.UI/Menu/CBindingBase.cs:311–311](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L311-L311)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5385,7 +5385,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsLastMeasurementVisibleChanged` · L312–312
 
-[Drilling.UI/Menu/CBindingBase.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L312-L312)
+[Drilling.UI/Menu/CBindingBase.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L312-L312)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5400,7 +5400,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsRunBeamDetailVisibleChanged` · L313–313
 
-[Drilling.UI/Menu/CBindingBase.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L313-L313)
+[Drilling.UI/Menu/CBindingBase.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L313-L313)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5415,7 +5415,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsRunCellDetailVisibleChanged` · L314–314
 
-[Drilling.UI/Menu/CBindingBase.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L314-L314)
+[Drilling.UI/Menu/CBindingBase.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L314-L314)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5430,7 +5430,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsRunGlassPreviewVisibleChanged` · L315–315
 
-[Drilling.UI/Menu/CBindingBase.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L315-L315)
+[Drilling.UI/Menu/CBindingBase.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L315-L315)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5445,7 +5445,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsRunReviewResultLoadingChanged` · L316–316
 
-[Drilling.UI/Menu/CBindingBase.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L316-L316)
+[Drilling.UI/Menu/CBindingBase.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L316-L316)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5460,7 +5460,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsRunShotMapVisibleChanged` · L317–317
 
-[Drilling.UI/Menu/CBindingBase.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L317-L317)
+[Drilling.UI/Menu/CBindingBase.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L317-L317)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5475,7 +5475,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsZPositionMoveEnabledChanged` · L318–318
 
-[Drilling.UI/Menu/CBindingBase.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L318-L318)
+[Drilling.UI/Menu/CBindingBase.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L318-L318)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5490,7 +5490,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsRunTabChanged` · L319–319
 
-[Drilling.UI/Menu/CBindingBase.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L319-L319)
+[Drilling.UI/Menu/CBindingBase.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L319-L319)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5505,7 +5505,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsEdgeSampleRuleUiChanged` · L320–320
 
-[Drilling.UI/Menu/CBindingBase.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L320-L320)
+[Drilling.UI/Menu/CBindingBase.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L320-L320)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5520,7 +5520,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsFineFiveLineChanged` · L321–321
 
-[Drilling.UI/Menu/CBindingBase.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L321-L321)
+[Drilling.UI/Menu/CBindingBase.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L321-L321)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5535,7 +5535,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsFineOneLineChanged` · L322–322
 
-[Drilling.UI/Menu/CBindingBase.cs:322–322](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L322-L322)
+[Drilling.UI/Menu/CBindingBase.cs:322–322](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L322-L322)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5550,7 +5550,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsFineSampleRuleUiChanged` · L323–323
 
-[Drilling.UI/Menu/CBindingBase.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L323-L323)
+[Drilling.UI/Menu/CBindingBase.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L323-L323)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5565,7 +5565,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsFineSevenLineChanged` · L324–324
 
-[Drilling.UI/Menu/CBindingBase.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L324-L324)
+[Drilling.UI/Menu/CBindingBase.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L324-L324)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5580,7 +5580,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsFineThreeLineChanged` · L325–325
 
-[Drilling.UI/Menu/CBindingBase.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L325-L325)
+[Drilling.UI/Menu/CBindingBase.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L325-L325)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5595,7 +5595,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsRoughCenterChanged` · L326–326
 
-[Drilling.UI/Menu/CBindingBase.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L326-L326)
+[Drilling.UI/Menu/CBindingBase.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L326-L326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5610,7 +5610,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsRoughFirstChanged` · L327–327
 
-[Drilling.UI/Menu/CBindingBase.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L327-L327)
+[Drilling.UI/Menu/CBindingBase.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L327-L327)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5625,7 +5625,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsRoughLastChanged` · L328–328
 
-[Drilling.UI/Menu/CBindingBase.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L328-L328)
+[Drilling.UI/Menu/CBindingBase.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L328-L328)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5640,7 +5640,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsRoughSampleRuleUiChanged` · L329–329
 
-[Drilling.UI/Menu/CBindingBase.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L329-L329)
+[Drilling.UI/Menu/CBindingBase.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L329-L329)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5655,7 +5655,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsSampleCellDetailVisibleChanged` · L330–330
 
-[Drilling.UI/Menu/CBindingBase.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L330-L330)
+[Drilling.UI/Menu/CBindingBase.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L330-L330)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5670,7 +5670,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsSampleGlassPreviewVisibleChanged` · L331–331
 
-[Drilling.UI/Menu/CBindingBase.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L331-L331)
+[Drilling.UI/Menu/CBindingBase.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L331-L331)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5685,7 +5685,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsSampleScopeHeadChanged` · L332–332
 
-[Drilling.UI/Menu/CBindingBase.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L332-L332)
+[Drilling.UI/Menu/CBindingBase.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L332-L332)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5700,7 +5700,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsSampleScopeHeadCellChanged` · L333–333
 
-[Drilling.UI/Menu/CBindingBase.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L333-L333)
+[Drilling.UI/Menu/CBindingBase.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L333-L333)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5715,7 +5715,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsSampleScopeVisibleChanged` · L334–334
 
-[Drilling.UI/Menu/CBindingBase.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L334-L334)
+[Drilling.UI/Menu/CBindingBase.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L334-L334)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5730,7 +5730,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsSampleSelectTabChanged` · L335–335
 
-[Drilling.UI/Menu/CBindingBase.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L335-L335)
+[Drilling.UI/Menu/CBindingBase.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L335-L335)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5745,7 +5745,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsSimpleSampleRuleUiChanged` · L336–336
 
-[Drilling.UI/Menu/CBindingBase.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L336-L336)
+[Drilling.UI/Menu/CBindingBase.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L336-L336)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5760,7 +5760,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsScannerStatusSelectedChanged` · L337–337
 
-[Drilling.UI/Menu/CBindingBase.cs:337–337](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L337-L337)
+[Drilling.UI/Menu/CBindingBase.cs:337–337](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L337-L337)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5775,7 +5775,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsScannerWorkspaceChanged` · L338–338
 
-[Drilling.UI/Menu/CBindingBase.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L338-L338)
+[Drilling.UI/Menu/CBindingBase.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L338-L338)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5790,7 +5790,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsManualMofTabChanged` · L339–339
 
-[Drilling.UI/Menu/CBindingBase.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L339-L339)
+[Drilling.UI/Menu/CBindingBase.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L339-L339)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5805,7 +5805,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsManualControllerTabChanged` · L340–340
 
-[Drilling.UI/Menu/CBindingBase.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L340-L340)
+[Drilling.UI/Menu/CBindingBase.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L340-L340)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5820,7 +5820,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ManualControllerHeadsChanged` · L341–341
 
-[Drilling.UI/Menu/CBindingBase.cs:341–341](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L341-L341)
+[Drilling.UI/Menu/CBindingBase.cs:341–341](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L341-L341)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5835,7 +5835,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsManualMotionTabChanged` · L342–342
 
-[Drilling.UI/Menu/CBindingBase.cs:342–342](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L342-L342)
+[Drilling.UI/Menu/CBindingBase.cs:342–342](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L342-L342)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5850,7 +5850,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsManualScanTabChanged` · L343–343
 
-[Drilling.UI/Menu/CBindingBase.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L343-L343)
+[Drilling.UI/Menu/CBindingBase.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L343-L343)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5865,7 +5865,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsManualPowerMeasureTabChanged` · L344–344
 
-[Drilling.UI/Menu/CBindingBase.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L344-L344)
+[Drilling.UI/Menu/CBindingBase.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L344-L344)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5880,7 +5880,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsManualStageReviewTabChanged` · L345–345
 
-[Drilling.UI/Menu/CBindingBase.cs:345–345](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L345-L345)
+[Drilling.UI/Menu/CBindingBase.cs:345–345](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L345-L345)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5895,7 +5895,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsSelectedChanged` · L346–346
 
-[Drilling.UI/Menu/CBindingBase.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L346-L346)
+[Drilling.UI/Menu/CBindingBase.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L346-L346)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5910,7 +5910,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsSettingLayoutChanged` · L347–347
 
-[Drilling.UI/Menu/CBindingBase.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L347-L347)
+[Drilling.UI/Menu/CBindingBase.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L347-L347)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5925,7 +5925,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsSignChanged` · L348–348
 
-[Drilling.UI/Menu/CBindingBase.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L348-L348)
+[Drilling.UI/Menu/CBindingBase.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L348-L348)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5940,7 +5940,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsSimulationChanged` · L349–349
 
-[Drilling.UI/Menu/CBindingBase.cs:349–349](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L349-L349)
+[Drilling.UI/Menu/CBindingBase.cs:349–349](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L349-L349)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5955,7 +5955,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsStageVisionWorkspaceChanged` · L350–350
 
-[Drilling.UI/Menu/CBindingBase.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L350-L350)
+[Drilling.UI/Menu/CBindingBase.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L350-L350)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5970,7 +5970,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsVisionProtocolBusyChanged` · L351–351
 
-[Drilling.UI/Menu/CBindingBase.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L351-L351)
+[Drilling.UI/Menu/CBindingBase.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L351-L351)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5985,7 +5985,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsVisionFlipOptionChanged` · L352–352
 
-[Drilling.UI/Menu/CBindingBase.cs:352–352](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L352-L352)
+[Drilling.UI/Menu/CBindingBase.cs:352–352](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L352-L352)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6000,7 +6000,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ItemChanged` · L353–353
 
-[Drilling.UI/Menu/CBindingBase.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L353-L353)
+[Drilling.UI/Menu/CBindingBase.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L353-L353)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6015,7 +6015,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ItemTabsChanged` · L354–354
 
-[Drilling.UI/Menu/CBindingBase.cs:354–354](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L354-L354)
+[Drilling.UI/Menu/CBindingBase.cs:354–354](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L354-L354)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6030,7 +6030,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `JudgeBrushChanged` · L355–355
 
-[Drilling.UI/Menu/CBindingBase.cs:355–355](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L355-L355)
+[Drilling.UI/Menu/CBindingBase.cs:355–355](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L355-L355)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6045,7 +6045,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `KeyChanged` · L356–356
 
-[Drilling.UI/Menu/CBindingBase.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L356-L356)
+[Drilling.UI/Menu/CBindingBase.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L356-L356)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6060,7 +6060,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LabelCanvasTopChanged` · L357–357
 
-[Drilling.UI/Menu/CBindingBase.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L357-L357)
+[Drilling.UI/Menu/CBindingBase.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L357-L357)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6075,7 +6075,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LaserControlRowsChanged` · L358–358
 
-[Drilling.UI/Menu/CBindingBase.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L358-L358)
+[Drilling.UI/Menu/CBindingBase.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L358-L358)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6090,7 +6090,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LaserGateBrushChanged` · L359–359
 
-[Drilling.UI/Menu/CBindingBase.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L359-L359)
+[Drilling.UI/Menu/CBindingBase.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L359-L359)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6105,7 +6105,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LaserGateTextChanged` · L360–360
 
-[Drilling.UI/Menu/CBindingBase.cs:360–360](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L360-L360)
+[Drilling.UI/Menu/CBindingBase.cs:360–360](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L360-L360)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6120,7 +6120,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LaserOffCommandChanged` · L361–361
 
-[Drilling.UI/Menu/CBindingBase.cs:361–361](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L361-L361)
+[Drilling.UI/Menu/CBindingBase.cs:361–361](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L361-L361)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6135,7 +6135,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LaserOnCommandChanged` · L362–362
 
-[Drilling.UI/Menu/CBindingBase.cs:362–362](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L362-L362)
+[Drilling.UI/Menu/CBindingBase.cs:362–362](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L362-L362)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6150,7 +6150,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LaserOnModeChanged` · L363–363
 
-[Drilling.UI/Menu/CBindingBase.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L363-L363)
+[Drilling.UI/Menu/CBindingBase.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L363-L363)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6165,7 +6165,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LaserOnSegmentsTextChanged` · L364–364
 
-[Drilling.UI/Menu/CBindingBase.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L364-L364)
+[Drilling.UI/Menu/CBindingBase.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L364-L364)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6180,7 +6180,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LaserOnTimeMsecChanged` · L365–365
 
-[Drilling.UI/Menu/CBindingBase.cs:365–365](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L365-L365)
+[Drilling.UI/Menu/CBindingBase.cs:365–365](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L365-L365)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6195,7 +6195,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LaserPowerBrushChanged` · L366–366
 
-[Drilling.UI/Menu/CBindingBase.cs:366–366](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L366-L366)
+[Drilling.UI/Menu/CBindingBase.cs:366–366](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L366-L366)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6210,7 +6210,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LaserPowerTextChanged` · L367–367
 
-[Drilling.UI/Menu/CBindingBase.cs:367–367](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L367-L367)
+[Drilling.UI/Menu/CBindingBase.cs:367–367](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L367-L367)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6225,7 +6225,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LaserShotCountChanged` · L368–368
 
-[Drilling.UI/Menu/CBindingBase.cs:368–368](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L368-L368)
+[Drilling.UI/Menu/CBindingBase.cs:368–368](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L368-L368)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6240,7 +6240,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LaserShutterBrushChanged` · L369–369
 
-[Drilling.UI/Menu/CBindingBase.cs:369–369](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L369-L369)
+[Drilling.UI/Menu/CBindingBase.cs:369–369](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L369-L369)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6255,7 +6255,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LaserShutterTextChanged` · L370–370
 
-[Drilling.UI/Menu/CBindingBase.cs:370–370](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L370-L370)
+[Drilling.UI/Menu/CBindingBase.cs:370–370](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L370-L370)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6270,7 +6270,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LaserStateBrushChanged` · L371–371
 
-[Drilling.UI/Menu/CBindingBase.cs:371–371](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L371-L371)
+[Drilling.UI/Menu/CBindingBase.cs:371–371](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L371-L371)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6285,7 +6285,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LastChangedTextChanged` · L372–372
 
-[Drilling.UI/Menu/CBindingBase.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L372-L372)
+[Drilling.UI/Menu/CBindingBase.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L372-L372)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6300,7 +6300,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LengthChanged` · L373–373
 
-[Drilling.UI/Menu/CBindingBase.cs:373–373](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L373-L373)
+[Drilling.UI/Menu/CBindingBase.cs:373–373](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L373-L373)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6315,7 +6315,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LevelBrushChanged` · L374–374
 
-[Drilling.UI/Menu/CBindingBase.cs:374–374](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L374-L374)
+[Drilling.UI/Menu/CBindingBase.cs:374–374](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L374-L374)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6330,7 +6330,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LifecycleItemsChanged` · L375–375
 
-[Drilling.UI/Menu/CBindingBase.cs:375–375](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L375-L375)
+[Drilling.UI/Menu/CBindingBase.cs:375–375](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L375-L375)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6345,7 +6345,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LimitMinusBrushChanged` · L376–376
 
-[Drilling.UI/Menu/CBindingBase.cs:376–376](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L376-L376)
+[Drilling.UI/Menu/CBindingBase.cs:376–376](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L376-L376)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6360,7 +6360,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LimitPlusBrushChanged` · L377–377
 
-[Drilling.UI/Menu/CBindingBase.cs:377–377](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L377-L377)
+[Drilling.UI/Menu/CBindingBase.cs:377–377](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L377-L377)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6375,7 +6375,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LoadedReviewFileNameChanged` · L378–378
 
-[Drilling.UI/Menu/CBindingBase.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L378-L378)
+[Drilling.UI/Menu/CBindingBase.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L378-L378)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6390,7 +6390,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LoadedSettingNameChanged` · L379–379
 
-[Drilling.UI/Menu/CBindingBase.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L379-L379)
+[Drilling.UI/Menu/CBindingBase.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L379-L379)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6405,7 +6405,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LoadedSettingPathChanged` · L380–380
 
-[Drilling.UI/Menu/CBindingBase.cs:380–380](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L380-L380)
+[Drilling.UI/Menu/CBindingBase.cs:380–380](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L380-L380)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6420,7 +6420,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `LockItemsChanged` · L381–381
 
-[Drilling.UI/Menu/CBindingBase.cs:381–381](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L381-L381)
+[Drilling.UI/Menu/CBindingBase.cs:381–381](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L381-L381)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6435,7 +6435,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MagChanged` · L382–382
 
-[Drilling.UI/Menu/CBindingBase.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L382-L382)
+[Drilling.UI/Menu/CBindingBase.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L382-L382)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6450,7 +6450,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MainOperatingChanged` · L383–383
 
-[Drilling.UI/Menu/CBindingBase.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L383-L383)
+[Drilling.UI/Menu/CBindingBase.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L383-L383)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6465,7 +6465,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ManagedItemsChanged` · L384–384
 
-[Drilling.UI/Menu/CBindingBase.cs:384–384](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L384-L384)
+[Drilling.UI/Menu/CBindingBase.cs:384–384](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L384-L384)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6480,7 +6480,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ManualChanged` · L385–385
 
-[Drilling.UI/Menu/CBindingBase.cs:385–385](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L385-L385)
+[Drilling.UI/Menu/CBindingBase.cs:385–385](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L385-L385)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6495,7 +6495,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ManualSettingsChanged` · L386–386
 
-[Drilling.UI/Menu/CBindingBase.cs:386–386](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L386-L386)
+[Drilling.UI/Menu/CBindingBase.cs:386–386](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L386-L386)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6510,7 +6510,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MatrixPointNameChanged` · L387–387
 
-[Drilling.UI/Menu/CBindingBase.cs:387–387](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L387-L387)
+[Drilling.UI/Menu/CBindingBase.cs:387–387](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L387-L387)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6525,7 +6525,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MaxChanged` · L388–388
 
-[Drilling.UI/Menu/CBindingBase.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L388-L388)
+[Drilling.UI/Menu/CBindingBase.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L388-L388)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6540,7 +6540,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MaxCellNumberItemChanged` · L389–389
 
-[Drilling.UI/Menu/CBindingBase.cs:389–389](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L389-L389)
+[Drilling.UI/Menu/CBindingBase.cs:389–389](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L389-L389)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6555,7 +6555,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MelsecGroupsChanged` · L390–390
 
-[Drilling.UI/Menu/CBindingBase.cs:390–390](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L390-L390)
+[Drilling.UI/Menu/CBindingBase.cs:390–390](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L390-L390)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6570,7 +6570,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MelsecReadRowsChanged` · L391–391
 
-[Drilling.UI/Menu/CBindingBase.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L391-L391)
+[Drilling.UI/Menu/CBindingBase.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L391-L391)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6585,7 +6585,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MelsecRowsChanged` · L392–392
 
-[Drilling.UI/Menu/CBindingBase.cs:392–392](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L392-L392)
+[Drilling.UI/Menu/CBindingBase.cs:392–392](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L392-L392)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6600,7 +6600,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MelsecWriteRowsChanged` · L393–393
 
-[Drilling.UI/Menu/CBindingBase.cs:393–393](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L393-L393)
+[Drilling.UI/Menu/CBindingBase.cs:393–393](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L393-L393)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6615,7 +6615,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MelsecWriteLockTextChanged` · L394–394
 
-[Drilling.UI/Menu/CBindingBase.cs:394–394](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L394-L394)
+[Drilling.UI/Menu/CBindingBase.cs:394–394](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L394-L394)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6630,7 +6630,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MenuChanged` · L395–395
 
-[Drilling.UI/Menu/CBindingBase.cs:395–395](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L395-L395)
+[Drilling.UI/Menu/CBindingBase.cs:395–395](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L395-L395)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6645,7 +6645,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MenusChanged` · L396–396
 
-[Drilling.UI/Menu/CBindingBase.cs:396–396](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L396-L396)
+[Drilling.UI/Menu/CBindingBase.cs:396–396](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L396-L396)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6660,7 +6660,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MetricsChanged` · L397–397
 
-[Drilling.UI/Menu/CBindingBase.cs:397–397](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L397-L397)
+[Drilling.UI/Menu/CBindingBase.cs:397–397](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L397-L397)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6675,7 +6675,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MinChanged` · L398–398
 
-[Drilling.UI/Menu/CBindingBase.cs:398–398](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L398-L398)
+[Drilling.UI/Menu/CBindingBase.cs:398–398](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L398-L398)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6690,7 +6690,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ModesChanged` · L399–399
 
-[Drilling.UI/Menu/CBindingBase.cs:399–399](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L399-L399)
+[Drilling.UI/Menu/CBindingBase.cs:399–399](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L399-L399)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6705,7 +6705,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ModelOptionsChanged` · L400–400
 
-[Drilling.UI/Menu/CBindingBase.cs:400–400](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L400-L400)
+[Drilling.UI/Menu/CBindingBase.cs:400–400](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L400-L400)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6720,7 +6720,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ModelTypeChanged` · L401–401
 
-[Drilling.UI/Menu/CBindingBase.cs:401–401](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L401-L401)
+[Drilling.UI/Menu/CBindingBase.cs:401–401](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L401-L401)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6735,7 +6735,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ModifiedBrushChanged` · L402–402
 
-[Drilling.UI/Menu/CBindingBase.cs:402–402](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L402-L402)
+[Drilling.UI/Menu/CBindingBase.cs:402–402](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L402-L402)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6750,7 +6750,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ModifiedTextChanged` · L403–403
 
-[Drilling.UI/Menu/CBindingBase.cs:403–403](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L403-L403)
+[Drilling.UI/Menu/CBindingBase.cs:403–403](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L403-L403)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6765,7 +6765,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ModifyCommandChanged` · L404–404
 
-[Drilling.UI/Menu/CBindingBase.cs:404–404](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L404-L404)
+[Drilling.UI/Menu/CBindingBase.cs:404–404](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L404-L404)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6780,7 +6780,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MonitorChanged` · L405–405
 
-[Drilling.UI/Menu/CBindingBase.cs:405–405](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L405-L405)
+[Drilling.UI/Menu/CBindingBase.cs:405–405](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L405-L405)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6795,7 +6795,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MoveCommandLabelChanged` · L406–406
 
-[Drilling.UI/Menu/CBindingBase.cs:406–406](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L406-L406)
+[Drilling.UI/Menu/CBindingBase.cs:406–406](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L406-L406)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6810,7 +6810,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MoveCountTextChanged` · L407–407
 
-[Drilling.UI/Menu/CBindingBase.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L407-L407)
+[Drilling.UI/Menu/CBindingBase.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L407-L407)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6825,7 +6825,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MoveStopCommandChanged` · L408–408
 
-[Drilling.UI/Menu/CBindingBase.cs:408–408](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L408-L408)
+[Drilling.UI/Menu/CBindingBase.cs:408–408](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L408-L408)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6840,7 +6840,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MultiMoveAxisRowsChanged` · L409–409
 
-[Drilling.UI/Menu/CBindingBase.cs:409–409](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L409-L409)
+[Drilling.UI/Menu/CBindingBase.cs:409–409](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L409-L409)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6855,7 +6855,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `MutedChanged` · L410–410
 
-[Drilling.UI/Menu/CBindingBase.cs:410–410](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L410-L410)
+[Drilling.UI/Menu/CBindingBase.cs:410–410](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L410-L410)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6870,7 +6870,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `NameChanged` · L411–411
 
-[Drilling.UI/Menu/CBindingBase.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L411-L411)
+[Drilling.UI/Menu/CBindingBase.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L411-L411)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6885,7 +6885,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `NavigateShotGroupCommandChanged` · L412–412
 
-[Drilling.UI/Menu/CBindingBase.cs:412–412](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L412-L412)
+[Drilling.UI/Menu/CBindingBase.cs:412–412](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L412-L412)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6900,7 +6900,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `NextChanged` · L413–413
 
-[Drilling.UI/Menu/CBindingBase.cs:413–413](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L413-L413)
+[Drilling.UI/Menu/CBindingBase.cs:413–413](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L413-L413)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6915,7 +6915,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `NextCellCommandChanged` · L414–414
 
-[Drilling.UI/Menu/CBindingBase.cs:414–414](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L414-L414)
+[Drilling.UI/Menu/CBindingBase.cs:414–414](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L414-L414)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6930,7 +6930,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `NickNameChanged` · L415–415
 
-[Drilling.UI/Menu/CBindingBase.cs:415–415](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L415-L415)
+[Drilling.UI/Menu/CBindingBase.cs:415–415](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L415-L415)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6945,7 +6945,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `NoChanged` · L416–416
 
-[Drilling.UI/Menu/CBindingBase.cs:416–416](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L416-L416)
+[Drilling.UI/Menu/CBindingBase.cs:416–416](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L416-L416)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6960,7 +6960,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `NoOpChanged` · L417–417
 
-[Drilling.UI/Menu/CBindingBase.cs:417–417](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L417-L417)
+[Drilling.UI/Menu/CBindingBase.cs:417–417](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L417-L417)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6975,7 +6975,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `NumberChanged` · L418–418
 
-[Drilling.UI/Menu/CBindingBase.cs:418–418](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L418-L418)
+[Drilling.UI/Menu/CBindingBase.cs:418–418](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L418-L418)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6990,7 +6990,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OddHeadPreviewsChanged` · L419–419
 
-[Drilling.UI/Menu/CBindingBase.cs:419–419](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L419-L419)
+[Drilling.UI/Menu/CBindingBase.cs:419–419](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L419-L419)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7005,7 +7005,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OfflineChanged` · L420–420
 
-[Drilling.UI/Menu/CBindingBase.cs:420–420](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L420-L420)
+[Drilling.UI/Menu/CBindingBase.cs:420–420](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L420-L420)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7020,7 +7020,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OffsetCoordinateTextChanged` · L421–421
 
-[Drilling.UI/Menu/CBindingBase.cs:421–421](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L421-L421)
+[Drilling.UI/Menu/CBindingBase.cs:421–421](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L421-L421)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7035,7 +7035,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OffsetValueBrushChanged` · L422–422
 
-[Drilling.UI/Menu/CBindingBase.cs:422–422](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L422-L422)
+[Drilling.UI/Menu/CBindingBase.cs:422–422](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L422-L422)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7050,7 +7050,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OffsetXChanged` · L423–423
 
-[Drilling.UI/Menu/CBindingBase.cs:423–423](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L423-L423)
+[Drilling.UI/Menu/CBindingBase.cs:423–423](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L423-L423)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7065,7 +7065,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OffsetYChanged` · L424–424
 
-[Drilling.UI/Menu/CBindingBase.cs:424–424](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L424-L424)
+[Drilling.UI/Menu/CBindingBase.cs:424–424](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L424-L424)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7080,7 +7080,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OneHoleBeamRowsChanged` · L425–425
 
-[Drilling.UI/Menu/CBindingBase.cs:425–425](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L425-L425)
+[Drilling.UI/Menu/CBindingBase.cs:425–425](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L425-L425)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7095,7 +7095,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OneHoleCellHoleMatrixRowsChanged` · L426–426
 
-[Drilling.UI/Menu/CBindingBase.cs:426–426](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L426-L426)
+[Drilling.UI/Menu/CBindingBase.cs:426–426](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L426-L426)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7110,7 +7110,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OneHoleCellHoleRowsChanged` · L427–427
 
-[Drilling.UI/Menu/CBindingBase.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L427-L427)
+[Drilling.UI/Menu/CBindingBase.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L427-L427)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7125,7 +7125,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OneHoleCellPreviewLabelsChanged` · L428–428
 
-[Drilling.UI/Menu/CBindingBase.cs:428–428](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L428-L428)
+[Drilling.UI/Menu/CBindingBase.cs:428–428](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L428-L428)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7140,7 +7140,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OneHoleCurrentHoleMarkersChanged` · L429–429
 
-[Drilling.UI/Menu/CBindingBase.cs:429–429](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L429-L429)
+[Drilling.UI/Menu/CBindingBase.cs:429–429](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L429-L429)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7155,7 +7155,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OneHoleGlassPreviewImageChanged` · L430–430
 
-[Drilling.UI/Menu/CBindingBase.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L430-L430)
+[Drilling.UI/Menu/CBindingBase.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L430-L430)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7170,7 +7170,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OneHoleGlassPreviewSummaryChanged` · L431–431
 
-[Drilling.UI/Menu/CBindingBase.cs:431–431](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L431-L431)
+[Drilling.UI/Menu/CBindingBase.cs:431–431](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L431-L431)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7185,7 +7185,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OneHoleWorkspaceSummaryChanged` · L432–432
 
-[Drilling.UI/Menu/CBindingBase.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L432-L432)
+[Drilling.UI/Menu/CBindingBase.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L432-L432)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7200,7 +7200,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OneHoleWorkspaceTitleChanged` · L433–433
 
-[Drilling.UI/Menu/CBindingBase.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L433-L433)
+[Drilling.UI/Menu/CBindingBase.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L433-L433)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7215,7 +7215,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OnlineChanged` · L434–434
 
-[Drilling.UI/Menu/CBindingBase.cs:434–434](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L434-L434)
+[Drilling.UI/Menu/CBindingBase.cs:434–434](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L434-L434)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7230,7 +7230,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OpenChanged` · L435–435
 
-[Drilling.UI/Menu/CBindingBase.cs:435–435](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L435-L435)
+[Drilling.UI/Menu/CBindingBase.cs:435–435](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L435-L435)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7245,7 +7245,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OperationButtonsChanged` · L436–436
 
-[Drilling.UI/Menu/CBindingBase.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L436-L436)
+[Drilling.UI/Menu/CBindingBase.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L436-L436)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7260,7 +7260,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OperationFieldsChanged` · L437–437
 
-[Drilling.UI/Menu/CBindingBase.cs:437–437](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L437-L437)
+[Drilling.UI/Menu/CBindingBase.cs:437–437](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L437-L437)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7275,7 +7275,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OperationPanelTitleChanged` · L438–438
 
-[Drilling.UI/Menu/CBindingBase.cs:438–438](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L438-L438)
+[Drilling.UI/Menu/CBindingBase.cs:438–438](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L438-L438)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7290,7 +7290,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OpticAttenuatorVisibilityChanged` · L439–439
 
-[Drilling.UI/Menu/CBindingBase.cs:439–439](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L439-L439)
+[Drilling.UI/Menu/CBindingBase.cs:439–439](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L439-L439)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7305,7 +7305,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OpticBetVisibilityChanged` · L440–440
 
-[Drilling.UI/Menu/CBindingBase.cs:440–440](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L440-L440)
+[Drilling.UI/Menu/CBindingBase.cs:440–440](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L440-L440)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7320,7 +7320,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OpticHeadParametersChanged` · L441–441
 
-[Drilling.UI/Menu/CBindingBase.cs:441–441](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L441-L441)
+[Drilling.UI/Menu/CBindingBase.cs:441–441](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L441-L441)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7335,7 +7335,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OpticLaserVisibilityChanged` · L442–442
 
-[Drilling.UI/Menu/CBindingBase.cs:442–442](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L442-L442)
+[Drilling.UI/Menu/CBindingBase.cs:442–442](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L442-L442)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7350,7 +7350,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OpticParameterGroupsChanged` · L443–443
 
-[Drilling.UI/Menu/CBindingBase.cs:443–443](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L443-L443)
+[Drilling.UI/Menu/CBindingBase.cs:443–443](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L443-L443)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7365,7 +7365,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OpticParameterVisibilityChanged` · L444–444
 
-[Drilling.UI/Menu/CBindingBase.cs:444–444](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L444-L444)
+[Drilling.UI/Menu/CBindingBase.cs:444–444](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L444-L444)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7380,7 +7380,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OpticStatusTabsChanged` · L445–445
 
-[Drilling.UI/Menu/CBindingBase.cs:445–445](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L445-L445)
+[Drilling.UI/Menu/CBindingBase.cs:445–445](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L445-L445)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7395,7 +7395,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OptionBorderBrushChanged` · L446–446
 
-[Drilling.UI/Menu/CBindingBase.cs:446–446](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L446-L446)
+[Drilling.UI/Menu/CBindingBase.cs:446–446](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L446-L446)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7410,7 +7410,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OptionBrushChanged` · L447–447
 
-[Drilling.UI/Menu/CBindingBase.cs:447–447](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L447-L447)
+[Drilling.UI/Menu/CBindingBase.cs:447–447](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L447-L447)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7425,7 +7425,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OptionOpacityChanged` · L448–448
 
-[Drilling.UI/Menu/CBindingBase.cs:448–448](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L448-L448)
+[Drilling.UI/Menu/CBindingBase.cs:448–448](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L448-L448)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7440,7 +7440,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OptionTextChanged` · L449–449
 
-[Drilling.UI/Menu/CBindingBase.cs:449–449](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L449-L449)
+[Drilling.UI/Menu/CBindingBase.cs:449–449](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L449-L449)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7455,7 +7455,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OptionVisibilityChanged` · L450–450
 
-[Drilling.UI/Menu/CBindingBase.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L450-L450)
+[Drilling.UI/Menu/CBindingBase.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L450-L450)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7470,7 +7470,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OriginalValueChanged` · L451–451
 
-[Drilling.UI/Menu/CBindingBase.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L451-L451)
+[Drilling.UI/Menu/CBindingBase.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L451-L451)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7485,7 +7485,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ParameterChanged` · L452–452
 
-[Drilling.UI/Menu/CBindingBase.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L452-L452)
+[Drilling.UI/Menu/CBindingBase.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L452-L452)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7500,7 +7500,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ParameterPanelTitleChanged` · L453–453
 
-[Drilling.UI/Menu/CBindingBase.cs:453–453](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L453-L453)
+[Drilling.UI/Menu/CBindingBase.cs:453–453](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L453-L453)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7515,7 +7515,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ParameterRowsChanged` · L454–454
 
-[Drilling.UI/Menu/CBindingBase.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L454-L454)
+[Drilling.UI/Menu/CBindingBase.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L454-L454)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7530,7 +7530,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ParametersChanged` · L455–455
 
-[Drilling.UI/Menu/CBindingBase.cs:455–455](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L455-L455)
+[Drilling.UI/Menu/CBindingBase.cs:455–455](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L455-L455)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7545,7 +7545,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ParameterTabsChanged` · L456–456
 
-[Drilling.UI/Menu/CBindingBase.cs:456–456](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L456-L456)
+[Drilling.UI/Menu/CBindingBase.cs:456–456](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L456-L456)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7560,7 +7560,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PicoAllMotorCommandButtonsChanged` · L457–457
 
-[Drilling.UI/Menu/CBindingBase.cs:457–457](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L457-L457)
+[Drilling.UI/Menu/CBindingBase.cs:457–457](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L457-L457)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7575,7 +7575,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PicoAllMotorSelectButtonsChanged` · L458–458
 
-[Drilling.UI/Menu/CBindingBase.cs:458–458](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L458-L458)
+[Drilling.UI/Menu/CBindingBase.cs:458–458](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L458-L458)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7590,7 +7590,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PicoConnectionButtonsChanged` · L459–459
 
-[Drilling.UI/Menu/CBindingBase.cs:459–459](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L459-L459)
+[Drilling.UI/Menu/CBindingBase.cs:459–459](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L459-L459)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7605,7 +7605,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PicoErrorRowsChanged` · L460–460
 
-[Drilling.UI/Menu/CBindingBase.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L460-L460)
+[Drilling.UI/Menu/CBindingBase.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L460-L460)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7620,7 +7620,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PicoJogStartCommandChanged` · L461–461
 
-[Drilling.UI/Menu/CBindingBase.cs:461–461](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L461-L461)
+[Drilling.UI/Menu/CBindingBase.cs:461–461](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L461-L461)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7635,7 +7635,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PicoJogStopCommandChanged` · L462–462
 
-[Drilling.UI/Menu/CBindingBase.cs:462–462](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L462-L462)
+[Drilling.UI/Menu/CBindingBase.cs:462–462](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L462-L462)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7650,7 +7650,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PicoMotionJogButtonsChanged` · L463–463
 
-[Drilling.UI/Menu/CBindingBase.cs:463–463](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L463-L463)
+[Drilling.UI/Menu/CBindingBase.cs:463–463](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L463-L463)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7665,7 +7665,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PicoMotionMoveButtonsChanged` · L464–464
 
-[Drilling.UI/Menu/CBindingBase.cs:464–464](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L464-L464)
+[Drilling.UI/Menu/CBindingBase.cs:464–464](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L464-L464)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7680,7 +7680,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PicoMotionRelButtonsChanged` · L465–465
 
-[Drilling.UI/Menu/CBindingBase.cs:465–465](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L465-L465)
+[Drilling.UI/Menu/CBindingBase.cs:465–465](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L465-L465)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7695,7 +7695,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PicoMotionStopButtonsChanged` · L466–466
 
-[Drilling.UI/Menu/CBindingBase.cs:466–466](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L466-L466)
+[Drilling.UI/Menu/CBindingBase.cs:466–466](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L466-L466)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7710,7 +7710,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PicoMotorSelectButtonsChanged` · L467–467
 
-[Drilling.UI/Menu/CBindingBase.cs:467–467](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L467-L467)
+[Drilling.UI/Menu/CBindingBase.cs:467–467](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L467-L467)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7725,7 +7725,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PixelCountXItemChanged` · L468–468
 
-[Drilling.UI/Menu/CBindingBase.cs:468–468](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L468-L468)
+[Drilling.UI/Menu/CBindingBase.cs:468–468](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L468-L468)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7740,7 +7740,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PixelCountYItemChanged` · L469–469
 
-[Drilling.UI/Menu/CBindingBase.cs:469–469](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L469-L469)
+[Drilling.UI/Menu/CBindingBase.cs:469–469](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L469-L469)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7755,7 +7755,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PixelSizeItemChanged` · L470–470
 
-[Drilling.UI/Menu/CBindingBase.cs:470–470](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L470-L470)
+[Drilling.UI/Menu/CBindingBase.cs:470–470](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L470-L470)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7770,7 +7770,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PlacementStateChanged` · L471–471
 
-[Drilling.UI/Menu/CBindingBase.cs:471–471](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L471-L471)
+[Drilling.UI/Menu/CBindingBase.cs:471–471](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L471-L471)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7785,7 +7785,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PlanSummaryChanged` · L472–472
 
-[Drilling.UI/Menu/CBindingBase.cs:472–472](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L472-L472)
+[Drilling.UI/Menu/CBindingBase.cs:472–472](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L472-L472)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7800,7 +7800,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PmChanged` · L473–473
 
-[Drilling.UI/Menu/CBindingBase.cs:473–473](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L473-L473)
+[Drilling.UI/Menu/CBindingBase.cs:473–473](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L473-L473)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7815,7 +7815,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PointSelectRowsChanged` · L474–474
 
-[Drilling.UI/Menu/CBindingBase.cs:474–474](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L474-L474)
+[Drilling.UI/Menu/CBindingBase.cs:474–474](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L474-L474)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7830,7 +7830,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PollMsChanged` · L475–475
 
-[Drilling.UI/Menu/CBindingBase.cs:475–475](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L475-L475)
+[Drilling.UI/Menu/CBindingBase.cs:475–475](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L475-L475)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7845,7 +7845,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PositionMoveCommandChanged` · L476–476
 
-[Drilling.UI/Menu/CBindingBase.cs:476–476](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L476-L476)
+[Drilling.UI/Menu/CBindingBase.cs:476–476](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L476-L476)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7860,7 +7860,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PositionMoveItemsChanged` · L477–477
 
-[Drilling.UI/Menu/CBindingBase.cs:477–477](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L477-L477)
+[Drilling.UI/Menu/CBindingBase.cs:477–477](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L477-L477)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7875,7 +7875,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PositionRowsChanged` · L478–478
 
-[Drilling.UI/Menu/CBindingBase.cs:478–478](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L478-L478)
+[Drilling.UI/Menu/CBindingBase.cs:478–478](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L478-L478)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7890,7 +7890,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PositionXPropertyChanged` · L479–479
 
-[Drilling.UI/Menu/CBindingBase.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L479-L479)
+[Drilling.UI/Menu/CBindingBase.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L479-L479)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7905,7 +7905,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PositionYPropertyChanged` · L480–480
 
-[Drilling.UI/Menu/CBindingBase.cs:480–480](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L480-L480)
+[Drilling.UI/Menu/CBindingBase.cs:480–480](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L480-L480)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7920,7 +7920,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PowerBrushChanged` · L481–481
 
-[Drilling.UI/Menu/CBindingBase.cs:481–481](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L481-L481)
+[Drilling.UI/Menu/CBindingBase.cs:481–481](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L481-L481)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7935,7 +7935,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PowerMeterGraphLineChanged` · L482–482
 
-[Drilling.UI/Menu/CBindingBase.cs:482–482](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L482-L482)
+[Drilling.UI/Menu/CBindingBase.cs:482–482](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L482-L482)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7950,7 +7950,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PowerMeterGraphMaxTextChanged` · L483–483
 
-[Drilling.UI/Menu/CBindingBase.cs:483–483](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L483-L483)
+[Drilling.UI/Menu/CBindingBase.cs:483–483](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L483-L483)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7965,7 +7965,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PowerMeterGraphMinTextChanged` · L484–484
 
-[Drilling.UI/Menu/CBindingBase.cs:484–484](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L484-L484)
+[Drilling.UI/Menu/CBindingBase.cs:484–484](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L484-L484)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7980,7 +7980,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PowerMeterGraphTargetTextChanged` · L485–485
 
-[Drilling.UI/Menu/CBindingBase.cs:485–485](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L485-L485)
+[Drilling.UI/Menu/CBindingBase.cs:485–485](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L485-L485)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7995,7 +7995,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PowerMeterTargetLineYChanged` · L486–486
 
-[Drilling.UI/Menu/CBindingBase.cs:486–486](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L486-L486)
+[Drilling.UI/Menu/CBindingBase.cs:486–486](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L486-L486)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8010,7 +8010,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PowerMeterTuneMessageChanged` · L487–487
 
-[Drilling.UI/Menu/CBindingBase.cs:487–487](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L487-L487)
+[Drilling.UI/Menu/CBindingBase.cs:487–487](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L487-L487)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8025,7 +8025,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PowerMeterTuneRowsChanged` · L488–488
 
-[Drilling.UI/Menu/CBindingBase.cs:488–488](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L488-L488)
+[Drilling.UI/Menu/CBindingBase.cs:488–488](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L488-L488)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8040,7 +8040,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PowerMeterTuneStateChanged` · L489–489
 
-[Drilling.UI/Menu/CBindingBase.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L489-L489)
+[Drilling.UI/Menu/CBindingBase.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L489-L489)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8055,7 +8055,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PreviousChanged` · L490–490
 
-[Drilling.UI/Menu/CBindingBase.cs:490–490](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L490-L490)
+[Drilling.UI/Menu/CBindingBase.cs:490–490](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L490-L490)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8070,7 +8070,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PreviousCellCommandChanged` · L491–491
 
-[Drilling.UI/Menu/CBindingBase.cs:491–491](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L491-L491)
+[Drilling.UI/Menu/CBindingBase.cs:491–491](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L491-L491)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8085,7 +8085,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PrimaryTextChanged` · L492–492
 
-[Drilling.UI/Menu/CBindingBase.cs:492–492](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L492-L492)
+[Drilling.UI/Menu/CBindingBase.cs:492–492](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L492-L492)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8100,7 +8100,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ProcessPitchItemChanged` · L493–493
 
-[Drilling.UI/Menu/CBindingBase.cs:493–493](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L493-L493)
+[Drilling.UI/Menu/CBindingBase.cs:493–493](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L493-L493)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8115,7 +8115,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ProcessResultBrushChanged` · L494–494
 
-[Drilling.UI/Menu/CBindingBase.cs:494–494](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L494-L494)
+[Drilling.UI/Menu/CBindingBase.cs:494–494](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L494-L494)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8130,7 +8130,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ProcessResultValueChanged` · L495–495
 
-[Drilling.UI/Menu/CBindingBase.cs:495–495](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L495-L495)
+[Drilling.UI/Menu/CBindingBase.cs:495–495](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L495-L495)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8145,7 +8145,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ProcessSequenceItemsChanged` · L496–496
 
-[Drilling.UI/Menu/CBindingBase.cs:496–496](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L496-L496)
+[Drilling.UI/Menu/CBindingBase.cs:496–496](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L496-L496)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8160,7 +8160,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ProcessStepChanged` · L497–497
 
-[Drilling.UI/Menu/CBindingBase.cs:497–497](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L497-L497)
+[Drilling.UI/Menu/CBindingBase.cs:497–497](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L497-L497)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8175,7 +8175,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ProcessSummaryItemsChanged` · L498–498
 
-[Drilling.UI/Menu/CBindingBase.cs:498–498](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L498-L498)
+[Drilling.UI/Menu/CBindingBase.cs:498–498](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L498-L498)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8190,7 +8190,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ProductAlignItemsChanged` · L499–499
 
-[Drilling.UI/Menu/CBindingBase.cs:499–499](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L499-L499)
+[Drilling.UI/Menu/CBindingBase.cs:499–499](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L499-L499)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8205,7 +8205,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ProductDistortionItemsChanged` · L500–500
 
-[Drilling.UI/Menu/CBindingBase.cs:500–500](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L500-L500)
+[Drilling.UI/Menu/CBindingBase.cs:500–500](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L500-L500)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8220,7 +8220,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ProductGlassItemsChanged` · L501–501
 
-[Drilling.UI/Menu/CBindingBase.cs:501–501](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L501-L501)
+[Drilling.UI/Menu/CBindingBase.cs:501–501](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L501-L501)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8235,7 +8235,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ProductHistoryRowsChanged` · L502–502
 
-[Drilling.UI/Menu/CBindingBase.cs:502–502](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L502-L502)
+[Drilling.UI/Menu/CBindingBase.cs:502–502](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L502-L502)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8250,7 +8250,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ProductItemsChanged` · L503–503
 
-[Drilling.UI/Menu/CBindingBase.cs:503–503](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L503-L503)
+[Drilling.UI/Menu/CBindingBase.cs:503–503](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L503-L503)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8265,7 +8265,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ProductProcessItemsChanged` · L504–504
 
-[Drilling.UI/Menu/CBindingBase.cs:504–504](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L504-L504)
+[Drilling.UI/Menu/CBindingBase.cs:504–504](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L504-L504)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8280,7 +8280,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ProductRecipeItemsChanged` · L505–505
 
-[Drilling.UI/Menu/CBindingBase.cs:505–505](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L505-L505)
+[Drilling.UI/Menu/CBindingBase.cs:505–505](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L505-L505)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8295,7 +8295,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ProductReviewItemsChanged` · L506–506
 
-[Drilling.UI/Menu/CBindingBase.cs:506–506](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L506-L506)
+[Drilling.UI/Menu/CBindingBase.cs:506–506](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L506-L506)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8310,7 +8310,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ProductReviewRowsChanged` · L507–507
 
-[Drilling.UI/Menu/CBindingBase.cs:507–507](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L507-L507)
+[Drilling.UI/Menu/CBindingBase.cs:507–507](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L507-L507)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8325,7 +8325,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ProgressPercentChanged` · L508–508
 
-[Drilling.UI/Menu/CBindingBase.cs:508–508](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L508-L508)
+[Drilling.UI/Menu/CBindingBase.cs:508–508](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L508-L508)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8340,7 +8340,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ProgressPercentTextChanged` · L509–509
 
-[Drilling.UI/Menu/CBindingBase.cs:509–509](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L509-L509)
+[Drilling.UI/Menu/CBindingBase.cs:509–509](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L509-L509)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8355,7 +8355,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ProgressTextChanged` · L510–510
 
-[Drilling.UI/Menu/CBindingBase.cs:510–510](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L510-L510)
+[Drilling.UI/Menu/CBindingBase.cs:510–510](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L510-L510)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8370,7 +8370,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PwmDeviceRowsChanged` · L511–511
 
-[Drilling.UI/Menu/CBindingBase.cs:511–511](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L511-L511)
+[Drilling.UI/Menu/CBindingBase.cs:511–511](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L511-L511)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8385,7 +8385,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PwmRunButtonsChanged` · L512–512
 
-[Drilling.UI/Menu/CBindingBase.cs:512–512](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L512-L512)
+[Drilling.UI/Menu/CBindingBase.cs:512–512](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L512-L512)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8400,7 +8400,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PwmSettingRowsChanged` · L513–513
 
-[Drilling.UI/Menu/CBindingBase.cs:513–513](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L513-L513)
+[Drilling.UI/Menu/CBindingBase.cs:513–513](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L513-L513)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8415,7 +8415,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `QuickSelectCommandChanged` · L514–514
 
-[Drilling.UI/Menu/CBindingBase.cs:514–514](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L514-L514)
+[Drilling.UI/Menu/CBindingBase.cs:514–514](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L514-L514)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8430,7 +8430,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RangeVisibilityChanged` · L515–515
 
-[Drilling.UI/Menu/CBindingBase.cs:515–515](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L515-L515)
+[Drilling.UI/Menu/CBindingBase.cs:515–515](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L515-L515)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8445,7 +8445,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ReadValueChanged` · L516–516
 
-[Drilling.UI/Menu/CBindingBase.cs:516–516](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L516-L516)
+[Drilling.UI/Menu/CBindingBase.cs:516–516](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L516-L516)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8460,7 +8460,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RecipeChanged` · L517–517
 
-[Drilling.UI/Menu/CBindingBase.cs:517–517](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L517-L517)
+[Drilling.UI/Menu/CBindingBase.cs:517–517](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L517-L517)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8475,7 +8475,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RecipeFilesChanged` · L518–518
 
-[Drilling.UI/Menu/CBindingBase.cs:518–518](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L518-L518)
+[Drilling.UI/Menu/CBindingBase.cs:518–518](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L518-L518)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8490,7 +8490,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RecipeFilesPageTextChanged` · L519–519
 
-[Drilling.UI/Menu/CBindingBase.cs:519–519](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L519-L519)
+[Drilling.UI/Menu/CBindingBase.cs:519–519](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L519-L519)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8505,7 +8505,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RecipeListChanged` · L520–520
 
-[Drilling.UI/Menu/CBindingBase.cs:520–520](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L520-L520)
+[Drilling.UI/Menu/CBindingBase.cs:520–520](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L520-L520)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8520,7 +8520,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RecipeNameChanged` · L521–521
 
-[Drilling.UI/Menu/CBindingBase.cs:521–521](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L521-L521)
+[Drilling.UI/Menu/CBindingBase.cs:521–521](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L521-L521)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8535,7 +8535,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RecipePreviewImageChanged` · L522–522
 
-[Drilling.UI/Menu/CBindingBase.cs:522–522](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L522-L522)
+[Drilling.UI/Menu/CBindingBase.cs:522–522](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L522-L522)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8550,7 +8550,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RecoveryCommandsChanged` · L523–523
 
-[Drilling.UI/Menu/CBindingBase.cs:523–523](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L523-L523)
+[Drilling.UI/Menu/CBindingBase.cs:523–523](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L523-L523)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8565,7 +8565,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ReloadCommandChanged` · L524–524
 
-[Drilling.UI/Menu/CBindingBase.cs:524–524](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L524-L524)
+[Drilling.UI/Menu/CBindingBase.cs:524–524](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L524-L524)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8580,7 +8580,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RenameCommandChanged` · L525–525
 
-[Drilling.UI/Menu/CBindingBase.cs:525–525](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L525-L525)
+[Drilling.UI/Menu/CBindingBase.cs:525–525](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L525-L525)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8595,7 +8595,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ResultBrushChanged` · L526–526
 
-[Drilling.UI/Menu/CBindingBase.cs:526–526](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L526-L526)
+[Drilling.UI/Menu/CBindingBase.cs:526–526](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L526-L526)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8610,7 +8610,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ResultItemsChanged` · L527–527
 
-[Drilling.UI/Menu/CBindingBase.cs:527–527](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L527-L527)
+[Drilling.UI/Menu/CBindingBase.cs:527–527](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L527-L527)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8625,7 +8625,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ResultMessageChanged` · L528–528
 
-[Drilling.UI/Menu/CBindingBase.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L528-L528)
+[Drilling.UI/Menu/CBindingBase.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L528-L528)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8640,7 +8640,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ResultMatrixChanged` · L529–529
 
-[Drilling.UI/Menu/CBindingBase.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L529-L529)
+[Drilling.UI/Menu/CBindingBase.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L529-L529)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8655,7 +8655,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsReviewResultDeferredChanged` · L530–530
 
-[Drilling.UI/Menu/CBindingBase.cs:530–530](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L530-L530)
+[Drilling.UI/Menu/CBindingBase.cs:530–530](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L530-L530)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8670,7 +8670,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ResultPasswordChanged` · L531–531
 
-[Drilling.UI/Menu/CBindingBase.cs:531–531](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L531-L531)
+[Drilling.UI/Menu/CBindingBase.cs:531–531](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L531-L531)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8685,7 +8685,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ResultRowsChanged` · L532–532
 
-[Drilling.UI/Menu/CBindingBase.cs:532–532](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L532-L532)
+[Drilling.UI/Menu/CBindingBase.cs:532–532](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L532-L532)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8700,7 +8700,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ResultValueChanged` · L533–533
 
-[Drilling.UI/Menu/CBindingBase.cs:533–533](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L533-L533)
+[Drilling.UI/Menu/CBindingBase.cs:533–533](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L533-L533)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8715,7 +8715,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RetryCommandChanged` · L534–534
 
-[Drilling.UI/Menu/CBindingBase.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L534-L534)
+[Drilling.UI/Menu/CBindingBase.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L534-L534)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8730,7 +8730,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ReviewChanged` · L535–535
 
-[Drilling.UI/Menu/CBindingBase.cs:535–535](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L535-L535)
+[Drilling.UI/Menu/CBindingBase.cs:535–535](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L535-L535)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8745,7 +8745,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ReviewLoadStatusChanged` · L536–536
 
-[Drilling.UI/Menu/CBindingBase.cs:536–536](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L536-L536)
+[Drilling.UI/Menu/CBindingBase.cs:536–536](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L536-L536)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8760,7 +8760,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ReviewLoadStatusBrushChanged` · L537–537
 
-[Drilling.UI/Menu/CBindingBase.cs:537–537](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L537-L537)
+[Drilling.UI/Menu/CBindingBase.cs:537–537](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L537-L537)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8775,7 +8775,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ReviewResultRowsChanged` · L538–538
 
-[Drilling.UI/Menu/CBindingBase.cs:538–538](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L538-L538)
+[Drilling.UI/Menu/CBindingBase.cs:538–538](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L538-L538)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8790,7 +8790,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ReviewSetsChanged` · L539–539
 
-[Drilling.UI/Menu/CBindingBase.cs:539–539](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L539-L539)
+[Drilling.UI/Menu/CBindingBase.cs:539–539](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L539-L539)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8805,7 +8805,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RotationChanged` · L540–540
 
-[Drilling.UI/Menu/CBindingBase.cs:540–540](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L540-L540)
+[Drilling.UI/Menu/CBindingBase.cs:540–540](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L540-L540)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8820,7 +8820,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RowChanged` · L541–541
 
-[Drilling.UI/Menu/CBindingBase.cs:541–541](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L541-L541)
+[Drilling.UI/Menu/CBindingBase.cs:541–541](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L541-L541)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8835,7 +8835,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RowBrushChanged` · L542–542
 
-[Drilling.UI/Menu/CBindingBase.cs:542–542](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L542-L542)
+[Drilling.UI/Menu/CBindingBase.cs:542–542](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L542-L542)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8850,7 +8850,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RunBeamRowsChanged` · L543–543
 
-[Drilling.UI/Menu/CBindingBase.cs:543–543](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L543-L543)
+[Drilling.UI/Menu/CBindingBase.cs:543–543](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L543-L543)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8865,7 +8865,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `InspectionBeamResultRowsChanged` · L544–544
 
-[Drilling.UI/Menu/CBindingBase.cs:544–544](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L544-L544)
+[Drilling.UI/Menu/CBindingBase.cs:544–544](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L544-L544)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8880,7 +8880,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RunCellShotMatrixRowsChanged` · L545–545
 
-[Drilling.UI/Menu/CBindingBase.cs:545–545](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L545-L545)
+[Drilling.UI/Menu/CBindingBase.cs:545–545](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L545-L545)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8895,7 +8895,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RunCellShotRowsChanged` · L546–546
 
-[Drilling.UI/Menu/CBindingBase.cs:546–546](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L546-L546)
+[Drilling.UI/Menu/CBindingBase.cs:546–546](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L546-L546)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8910,7 +8910,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RunCellPreviewLabelsChanged` · L547–547
 
-[Drilling.UI/Menu/CBindingBase.cs:547–547](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L547-L547)
+[Drilling.UI/Menu/CBindingBase.cs:547–547](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L547-L547)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8925,7 +8925,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `InspectionHeadRowsChanged` · L548–548
 
-[Drilling.UI/Menu/CBindingBase.cs:548–548](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L548-L548)
+[Drilling.UI/Menu/CBindingBase.cs:548–548](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L548-L548)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8940,7 +8940,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsOneShotReviewModeChanged` · L549–549
 
-[Drilling.UI/Menu/CBindingBase.cs:549–549](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L549-L549)
+[Drilling.UI/Menu/CBindingBase.cs:549–549](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L549-L549)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8955,7 +8955,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsOneLineReviewModeChanged` · L550–550
 
-[Drilling.UI/Menu/CBindingBase.cs:550–550](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L550-L550)
+[Drilling.UI/Menu/CBindingBase.cs:550–550](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L550-L550)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8970,7 +8970,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsShotSelectionModeChanged` · L551–551
 
-[Drilling.UI/Menu/CBindingBase.cs:551–551](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L551-L551)
+[Drilling.UI/Menu/CBindingBase.cs:551–551](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L551-L551)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8985,7 +8985,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsRunCommandsVisibleChanged` · L552–552
 
-[Drilling.UI/Menu/CBindingBase.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L552-L552)
+[Drilling.UI/Menu/CBindingBase.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L552-L552)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9000,7 +9000,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OneShotSelectionChanged` · L553–553
 
-[Drilling.UI/Menu/CBindingBase.cs:553–553](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L553-L553)
+[Drilling.UI/Menu/CBindingBase.cs:553–553](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L553-L553)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9015,7 +9015,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OneShotStatusChanged` · L554–554
 
-[Drilling.UI/Menu/CBindingBase.cs:554–554](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L554-L554)
+[Drilling.UI/Menu/CBindingBase.cs:554–554](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L554-L554)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9030,7 +9030,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `OneShotResultTextChanged` · L555–555
 
-[Drilling.UI/Menu/CBindingBase.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L555-L555)
+[Drilling.UI/Menu/CBindingBase.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L555-L555)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9045,7 +9045,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedOneShotMethodChanged` · L556–556
 
-[Drilling.UI/Menu/CBindingBase.cs:556–556](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L556-L556)
+[Drilling.UI/Menu/CBindingBase.cs:556–556](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L556-L556)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9060,7 +9060,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `InspectionShotSummaryChanged` · L557–557
 
-[Drilling.UI/Menu/CBindingBase.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L557-L557)
+[Drilling.UI/Menu/CBindingBase.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L557-L557)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9075,7 +9075,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `InspectionProgressTextChanged` · L558–558
 
-[Drilling.UI/Menu/CBindingBase.cs:558–558](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L558-L558)
+[Drilling.UI/Menu/CBindingBase.cs:558–558](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L558-L558)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9090,7 +9090,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsInspectionExecutionViewVisibleChanged` · L559–559
 
-[Drilling.UI/Menu/CBindingBase.cs:559–559](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L559-L559)
+[Drilling.UI/Menu/CBindingBase.cs:559–559](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L559-L559)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9105,7 +9105,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `IsInspectionSelectionControlsVisibleChanged` · L560–560
 
-[Drilling.UI/Menu/CBindingBase.cs:560–560](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L560-L560)
+[Drilling.UI/Menu/CBindingBase.cs:560–560](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L560-L560)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9120,7 +9120,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RunCurrentHoleMarkersChanged` · L561–561
 
-[Drilling.UI/Menu/CBindingBase.cs:561–561](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L561-L561)
+[Drilling.UI/Menu/CBindingBase.cs:561–561](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L561-L561)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9135,7 +9135,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RunGlassPreviewImageChanged` · L562–562
 
-[Drilling.UI/Menu/CBindingBase.cs:562–562](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L562-L562)
+[Drilling.UI/Menu/CBindingBase.cs:562–562](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L562-L562)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9150,7 +9150,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RunGlassPreviewInspectionOverlayImageChanged` · L563–563
 
-[Drilling.UI/Menu/CBindingBase.cs:563–563](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L563-L563)
+[Drilling.UI/Menu/CBindingBase.cs:563–563](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L563-L563)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9165,7 +9165,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RunGlassPreviewSummaryChanged` · L564–564
 
-[Drilling.UI/Menu/CBindingBase.cs:564–564](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L564-L564)
+[Drilling.UI/Menu/CBindingBase.cs:564–564](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L564-L564)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9180,7 +9180,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RunResultLoadStatusChanged` · L565–565
 
-[Drilling.UI/Menu/CBindingBase.cs:565–565](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L565-L565)
+[Drilling.UI/Menu/CBindingBase.cs:565–565](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L565-L565)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9195,7 +9195,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RunWorkspaceSummaryChanged` · L566–566
 
-[Drilling.UI/Menu/CBindingBase.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L566-L566)
+[Drilling.UI/Menu/CBindingBase.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L566-L566)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9210,7 +9210,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RunWorkspaceTitleChanged` · L567–567
 
-[Drilling.UI/Menu/CBindingBase.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L567-L567)
+[Drilling.UI/Menu/CBindingBase.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L567-L567)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9225,7 +9225,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleCorrectionTargetChanged` · L568–568
 
-[Drilling.UI/Menu/CBindingBase.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L568-L568)
+[Drilling.UI/Menu/CBindingBase.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L568-L568)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9240,7 +9240,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleCorrectionTitleChanged` · L569–569
 
-[Drilling.UI/Menu/CBindingBase.cs:569–569](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L569-L569)
+[Drilling.UI/Menu/CBindingBase.cs:569–569](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L569-L569)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9255,7 +9255,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleCellShotMatrixRowsChanged` · L570–570
 
-[Drilling.UI/Menu/CBindingBase.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L570-L570)
+[Drilling.UI/Menu/CBindingBase.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L570-L570)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9270,7 +9270,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleCellShotRowsChanged` · L571–571
 
-[Drilling.UI/Menu/CBindingBase.cs:571–571](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L571-L571)
+[Drilling.UI/Menu/CBindingBase.cs:571–571](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L571-L571)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9285,7 +9285,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleCellOptionsChanged` · L572–572
 
-[Drilling.UI/Menu/CBindingBase.cs:572–572](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L572-L572)
+[Drilling.UI/Menu/CBindingBase.cs:572–572](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L572-L572)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9300,7 +9300,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleCellPreviewLabelsChanged` · L573–573
 
-[Drilling.UI/Menu/CBindingBase.cs:573–573](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L573-L573)
+[Drilling.UI/Menu/CBindingBase.cs:573–573](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L573-L573)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9315,7 +9315,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleGlassPreviewImageChanged` · L574–574
 
-[Drilling.UI/Menu/CBindingBase.cs:574–574](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L574-L574)
+[Drilling.UI/Menu/CBindingBase.cs:574–574](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L574-L574)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9330,7 +9330,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleGlassPreviewInspectionOverlayImageChanged` · L575–575
 
-[Drilling.UI/Menu/CBindingBase.cs:575–575](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L575-L575)
+[Drilling.UI/Menu/CBindingBase.cs:575–575](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L575-L575)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9345,7 +9345,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleGlassPreviewSummaryChanged` · L576–576
 
-[Drilling.UI/Menu/CBindingBase.cs:576–576](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L576-L576)
+[Drilling.UI/Menu/CBindingBase.cs:576–576](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L576-L576)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9360,7 +9360,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleHeadOptionsChanged` · L577–577
 
-[Drilling.UI/Menu/CBindingBase.cs:577–577](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L577-L577)
+[Drilling.UI/Menu/CBindingBase.cs:577–577](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L577-L577)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9375,7 +9375,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleInspectionShotCountChanged` · L578–578
 
-[Drilling.UI/Menu/CBindingBase.cs:578–578](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L578-L578)
+[Drilling.UI/Menu/CBindingBase.cs:578–578](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L578-L578)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9390,7 +9390,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleMapColumnCountChanged` · L579–579
 
-[Drilling.UI/Menu/CBindingBase.cs:579–579](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L579-L579)
+[Drilling.UI/Menu/CBindingBase.cs:579–579](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L579-L579)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9405,7 +9405,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleOffsetApplyCountChanged` · L580–580
 
-[Drilling.UI/Menu/CBindingBase.cs:580–580](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L580-L580)
+[Drilling.UI/Menu/CBindingBase.cs:580–580](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L580-L580)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9420,7 +9420,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SamplePlanStatusChanged` · L581–581
 
-[Drilling.UI/Menu/CBindingBase.cs:581–581](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L581-L581)
+[Drilling.UI/Menu/CBindingBase.cs:581–581](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L581-L581)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9435,7 +9435,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleReferenceCellChanged` · L582–582
 
-[Drilling.UI/Menu/CBindingBase.cs:582–582](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L582-L582)
+[Drilling.UI/Menu/CBindingBase.cs:582–582](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L582-L582)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9450,7 +9450,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleReferenceHeadChanged` · L583–583
 
-[Drilling.UI/Menu/CBindingBase.cs:583–583](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L583-L583)
+[Drilling.UI/Menu/CBindingBase.cs:583–583](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L583-L583)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9465,7 +9465,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleReferenceShotChanged` · L584–584
 
-[Drilling.UI/Menu/CBindingBase.cs:584–584](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L584-L584)
+[Drilling.UI/Menu/CBindingBase.cs:584–584](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L584-L584)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9480,7 +9480,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleRuleDescriptionChanged` · L585–585
 
-[Drilling.UI/Menu/CBindingBase.cs:585–585](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L585-L585)
+[Drilling.UI/Menu/CBindingBase.cs:585–585](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L585-L585)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9495,7 +9495,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleRuleNameChanged` · L586–586
 
-[Drilling.UI/Menu/CBindingBase.cs:586–586](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L586-L586)
+[Drilling.UI/Menu/CBindingBase.cs:586–586](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L586-L586)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9510,7 +9510,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleRuleSelectionSummaryChanged` · L587–587
 
-[Drilling.UI/Menu/CBindingBase.cs:587–587](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L587-L587)
+[Drilling.UI/Menu/CBindingBase.cs:587–587](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L587-L587)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9525,7 +9525,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleReferenceShotMarkersChanged` · L588–588
 
-[Drilling.UI/Menu/CBindingBase.cs:588–588](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L588-L588)
+[Drilling.UI/Menu/CBindingBase.cs:588–588](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L588-L588)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9540,7 +9540,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleReferenceThirdLabelChanged` · L589–589
 
-[Drilling.UI/Menu/CBindingBase.cs:589–589](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L589-L589)
+[Drilling.UI/Menu/CBindingBase.cs:589–589](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L589-L589)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9555,7 +9555,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleTargetSectionTitleChanged` · L590–590
 
-[Drilling.UI/Menu/CBindingBase.cs:590–590](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L590-L590)
+[Drilling.UI/Menu/CBindingBase.cs:590–590](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L590-L590)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9570,7 +9570,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleWorkspaceSummaryChanged` · L591–591
 
-[Drilling.UI/Menu/CBindingBase.cs:591–591](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L591-L591)
+[Drilling.UI/Menu/CBindingBase.cs:591–591](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L591-L591)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9585,7 +9585,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SampleWorkspaceTitleChanged` · L592–592
 
-[Drilling.UI/Menu/CBindingBase.cs:592–592](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L592-L592)
+[Drilling.UI/Menu/CBindingBase.cs:592–592](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L592-L592)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9600,7 +9600,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SaveCommandChanged` · L593–593
 
-[Drilling.UI/Menu/CBindingBase.cs:593–593](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L593-L593)
+[Drilling.UI/Menu/CBindingBase.cs:593–593](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L593-L593)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9615,7 +9615,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ScaleChanged` · L594–594
 
-[Drilling.UI/Menu/CBindingBase.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L594-L594)
+[Drilling.UI/Menu/CBindingBase.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L594-L594)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9630,7 +9630,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ScannerAxesChanged` · L595–595
 
-[Drilling.UI/Menu/CBindingBase.cs:595–595](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L595-L595)
+[Drilling.UI/Menu/CBindingBase.cs:595–595](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L595-L595)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9645,7 +9645,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ScannerStatusItemsChanged` · L596–596
 
-[Drilling.UI/Menu/CBindingBase.cs:596–596](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L596-L596)
+[Drilling.UI/Menu/CBindingBase.cs:596–596](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L596-L596)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9660,7 +9660,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ScannerStatusHeadTabsChanged` · L597–597
 
-[Drilling.UI/Menu/CBindingBase.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L597-L597)
+[Drilling.UI/Menu/CBindingBase.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L597-L597)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9675,7 +9675,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ScannerStatusVisibilityChanged` · L598–598
 
-[Drilling.UI/Menu/CBindingBase.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L598-L598)
+[Drilling.UI/Menu/CBindingBase.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L598-L598)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9690,7 +9690,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ScriptStatusChanged` · L599–599
 
-[Drilling.UI/Menu/CBindingBase.cs:599–599](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L599-L599)
+[Drilling.UI/Menu/CBindingBase.cs:599–599](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L599-L599)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9705,7 +9705,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ScriptStatusTextChanged` · L600–600
 
-[Drilling.UI/Menu/CBindingBase.cs:600–600](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L600-L600)
+[Drilling.UI/Menu/CBindingBase.cs:600–600](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L600-L600)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9720,7 +9720,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ScriptTaskStatusItemsChanged` · L601–601
 
-[Drilling.UI/Menu/CBindingBase.cs:601–601](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L601-L601)
+[Drilling.UI/Menu/CBindingBase.cs:601–601](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L601-L601)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9735,7 +9735,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SectionsChanged` · L602–602
 
-[Drilling.UI/Menu/CBindingBase.cs:602–602](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L602-L602)
+[Drilling.UI/Menu/CBindingBase.cs:602–602](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L602-L602)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9750,7 +9750,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectCategoryCommandChanged` · L603–603
 
-[Drilling.UI/Menu/CBindingBase.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L603-L603)
+[Drilling.UI/Menu/CBindingBase.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L603-L603)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9765,7 +9765,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectCellCommandChanged` · L604–604
 
-[Drilling.UI/Menu/CBindingBase.cs:604–604](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L604-L604)
+[Drilling.UI/Menu/CBindingBase.cs:604–604](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L604-L604)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9780,7 +9780,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectCommandChanged` · L605–605
 
-[Drilling.UI/Menu/CBindingBase.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L605-L605)
+[Drilling.UI/Menu/CBindingBase.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L605-L605)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9795,7 +9795,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectCoordinateBasisCommandChanged` · L606–606
 
-[Drilling.UI/Menu/CBindingBase.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L606-L606)
+[Drilling.UI/Menu/CBindingBase.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L606-L606)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9810,7 +9810,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectCoordinateCellCommandChanged` · L607–607
 
-[Drilling.UI/Menu/CBindingBase.cs:607–607](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L607-L607)
+[Drilling.UI/Menu/CBindingBase.cs:607–607](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L607-L607)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9825,7 +9825,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectCoordinateShotCommandChanged` · L608–608
 
-[Drilling.UI/Menu/CBindingBase.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L608-L608)
+[Drilling.UI/Menu/CBindingBase.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L608-L608)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9840,7 +9840,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedAxisIdChanged` · L609–609
 
-[Drilling.UI/Menu/CBindingBase.cs:609–609](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L609-L609)
+[Drilling.UI/Menu/CBindingBase.cs:609–609](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L609-L609)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9855,7 +9855,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedAxisRowChanged` · L610–610
 
-[Drilling.UI/Menu/CBindingBase.cs:610–610](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L610-L610)
+[Drilling.UI/Menu/CBindingBase.cs:610–610](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L610-L610)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9870,7 +9870,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedBeamChanged` · L611–611
 
-[Drilling.UI/Menu/CBindingBase.cs:611–611](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L611-L611)
+[Drilling.UI/Menu/CBindingBase.cs:611–611](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L611-L611)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9885,7 +9885,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedInspectionMethodChanged` · L612–612
 
-[Drilling.UI/Menu/CBindingBase.cs:612–612](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L612-L612)
+[Drilling.UI/Menu/CBindingBase.cs:612–612](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L612-L612)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9900,7 +9900,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedCellExcludedTargetTextChanged` · L613–613
 
-[Drilling.UI/Menu/CBindingBase.cs:613–613](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L613-L613)
+[Drilling.UI/Menu/CBindingBase.cs:613–613](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L613-L613)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9915,7 +9915,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedCellHasExcludedTargetsChanged` · L614–614
 
-[Drilling.UI/Menu/CBindingBase.cs:614–614](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L614-L614)
+[Drilling.UI/Menu/CBindingBase.cs:614–614](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L614-L614)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9930,7 +9930,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedCellNavigationTextChanged` · L615–615
 
-[Drilling.UI/Menu/CBindingBase.cs:615–615](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L615-L615)
+[Drilling.UI/Menu/CBindingBase.cs:615–615](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L615-L615)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9945,7 +9945,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedCellShotGroupTitleChanged` · L616–616
 
-[Drilling.UI/Menu/CBindingBase.cs:616–616](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L616-L616)
+[Drilling.UI/Menu/CBindingBase.cs:616–616](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L616-L616)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9960,7 +9960,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedGroupChanged` · L617–617
 
-[Drilling.UI/Menu/CBindingBase.cs:617–617](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L617-L617)
+[Drilling.UI/Menu/CBindingBase.cs:617–617](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L617-L617)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9975,7 +9975,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedHeadChanged` · L618–618
 
-[Drilling.UI/Menu/CBindingBase.cs:618–618](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L618-L618)
+[Drilling.UI/Menu/CBindingBase.cs:618–618](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L618-L618)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9990,7 +9990,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedHeadDeviceNameChanged` · L619–619
 
-[Drilling.UI/Menu/CBindingBase.cs:619–619](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L619-L619)
+[Drilling.UI/Menu/CBindingBase.cs:619–619](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L619-L619)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10005,7 +10005,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedHeadItemsChanged` · L620–620
 
-[Drilling.UI/Menu/CBindingBase.cs:620–620](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L620-L620)
+[Drilling.UI/Menu/CBindingBase.cs:620–620](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L620-L620)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10020,7 +10020,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedInterfaceRowChanged` · L621–621
 
-[Drilling.UI/Menu/CBindingBase.cs:621–621](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L621-L621)
+[Drilling.UI/Menu/CBindingBase.cs:621–621](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L621-L621)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10035,7 +10035,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedLaserNameChanged` · L622–622
 
-[Drilling.UI/Menu/CBindingBase.cs:622–622](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L622-L622)
+[Drilling.UI/Menu/CBindingBase.cs:622–622](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L622-L622)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10050,7 +10050,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedLaserNumberChanged` · L623–623
 
-[Drilling.UI/Menu/CBindingBase.cs:623–623](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L623-L623)
+[Drilling.UI/Menu/CBindingBase.cs:623–623](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L623-L623)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10065,7 +10065,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedMenuChanged` · L624–624
 
-[Drilling.UI/Menu/CBindingBase.cs:624–624](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L624-L624)
+[Drilling.UI/Menu/CBindingBase.cs:624–624](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L624-L624)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10080,7 +10080,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `NavigationSelectedMenuChanged` · L625–625
 
-[Drilling.UI/Menu/CBindingBase.cs:625–625](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L625-L625)
+[Drilling.UI/Menu/CBindingBase.cs:625–625](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L625-L625)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10095,7 +10095,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedPointItemsChanged` · L626–626
 
-[Drilling.UI/Menu/CBindingBase.cs:626–626](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L626-L626)
+[Drilling.UI/Menu/CBindingBase.cs:626–626](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L626-L626)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10110,7 +10110,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedRecipeFileChanged` · L627–627
 
-[Drilling.UI/Menu/CBindingBase.cs:627–627](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L627-L627)
+[Drilling.UI/Menu/CBindingBase.cs:627–627](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L627-L627)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10125,7 +10125,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedRunShotNameChanged` · L628–628
 
-[Drilling.UI/Menu/CBindingBase.cs:628–628](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L628-L628)
+[Drilling.UI/Menu/CBindingBase.cs:628–628](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L628-L628)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10140,7 +10140,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedSampleRuleUiChanged` · L629–629
 
-[Drilling.UI/Menu/CBindingBase.cs:629–629](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L629-L629)
+[Drilling.UI/Menu/CBindingBase.cs:629–629](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L629-L629)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10155,7 +10155,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedSampleCellChanged` · L630–630
 
-[Drilling.UI/Menu/CBindingBase.cs:630–630](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L630-L630)
+[Drilling.UI/Menu/CBindingBase.cs:630–630](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L630-L630)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10170,7 +10170,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedSampleHeadChanged` · L631–631
 
-[Drilling.UI/Menu/CBindingBase.cs:631–631](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L631-L631)
+[Drilling.UI/Menu/CBindingBase.cs:631–631](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L631-L631)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10185,7 +10185,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedShotDetailImageChanged` · L632–632
 
-[Drilling.UI/Menu/CBindingBase.cs:632–632](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L632-L632)
+[Drilling.UI/Menu/CBindingBase.cs:632–632](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L632-L632)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10200,7 +10200,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedShotInspectionChanged` · L633–633
 
-[Drilling.UI/Menu/CBindingBase.cs:633–633](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L633-L633)
+[Drilling.UI/Menu/CBindingBase.cs:633–633](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L633-L633)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10215,7 +10215,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedShotGroupChanged` · L634–634
 
-[Drilling.UI/Menu/CBindingBase.cs:634–634](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L634-L634)
+[Drilling.UI/Menu/CBindingBase.cs:634–634](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L634-L634)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10230,7 +10230,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedShotGroupBeamTextChanged` · L635–635
 
-[Drilling.UI/Menu/CBindingBase.cs:635–635](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L635-L635)
+[Drilling.UI/Menu/CBindingBase.cs:635–635](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L635-L635)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10245,7 +10245,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedShotGroupCenterTextChanged` · L636–636
 
-[Drilling.UI/Menu/CBindingBase.cs:636–636](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L636-L636)
+[Drilling.UI/Menu/CBindingBase.cs:636–636](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L636-L636)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10260,7 +10260,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedShotGroupGridTextChanged` · L637–637
 
-[Drilling.UI/Menu/CBindingBase.cs:637–637](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L637-L637)
+[Drilling.UI/Menu/CBindingBase.cs:637–637](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L637-L637)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10275,7 +10275,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedShotGroupIndicatorTextChanged` · L638–638
 
-[Drilling.UI/Menu/CBindingBase.cs:638–638](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L638-L638)
+[Drilling.UI/Menu/CBindingBase.cs:638–638](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L638-L638)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10290,7 +10290,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedShotGroupPitchTextChanged` · L639–639
 
-[Drilling.UI/Menu/CBindingBase.cs:639–639](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L639-L639)
+[Drilling.UI/Menu/CBindingBase.cs:639–639](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L639-L639)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10305,7 +10305,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedShotGroupPixelWindowTextChanged` · L640–640
 
-[Drilling.UI/Menu/CBindingBase.cs:640–640](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L640-L640)
+[Drilling.UI/Menu/CBindingBase.cs:640–640](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L640-L640)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10320,7 +10320,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedShotGroupStateTextChanged` · L641–641
 
-[Drilling.UI/Menu/CBindingBase.cs:641–641](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L641-L641)
+[Drilling.UI/Menu/CBindingBase.cs:641–641](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L641-L641)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10335,7 +10335,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedTabChanged` · L642–642
 
-[Drilling.UI/Menu/CBindingBase.cs:642–642](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L642-L642)
+[Drilling.UI/Menu/CBindingBase.cs:642–642](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L642-L642)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10350,7 +10350,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedReviewTabIndexChanged` · L643–643
 
-[Drilling.UI/Menu/CBindingBase.cs:643–643](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L643-L643)
+[Drilling.UI/Menu/CBindingBase.cs:643–643](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L643-L643)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10365,7 +10365,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedVisionProtocolCommandChanged` · L644–644
 
-[Drilling.UI/Menu/CBindingBase.cs:644–644](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L644-L644)
+[Drilling.UI/Menu/CBindingBase.cs:644–644](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L644-L644)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10380,7 +10380,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectGroupCommandChanged` · L645–645
 
-[Drilling.UI/Menu/CBindingBase.cs:645–645](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L645-L645)
+[Drilling.UI/Menu/CBindingBase.cs:645–645](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L645-L645)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10395,7 +10395,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectHeadCommandChanged` · L646–646
 
-[Drilling.UI/Menu/CBindingBase.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L646-L646)
+[Drilling.UI/Menu/CBindingBase.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L646-L646)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10410,7 +10410,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectHeadDeviceCommandChanged` · L647–647
 
-[Drilling.UI/Menu/CBindingBase.cs:647–647](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L647-L647)
+[Drilling.UI/Menu/CBindingBase.cs:647–647](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L647-L647)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10425,7 +10425,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectionSummaryItemsChanged` · L648–648
 
-[Drilling.UI/Menu/CBindingBase.cs:648–648](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L648-L648)
+[Drilling.UI/Menu/CBindingBase.cs:648–648](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L648-L648)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10440,7 +10440,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectManualWorkspaceCommandChanged` · L649–649
 
-[Drilling.UI/Menu/CBindingBase.cs:649–649](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L649-L649)
+[Drilling.UI/Menu/CBindingBase.cs:649–649](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L649-L649)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10455,7 +10455,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectMelsecGroupCommandChanged` · L650–650
 
-[Drilling.UI/Menu/CBindingBase.cs:650–650](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L650-L650)
+[Drilling.UI/Menu/CBindingBase.cs:650–650](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L650-L650)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10470,7 +10470,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectModeCommandChanged` · L651–651
 
-[Drilling.UI/Menu/CBindingBase.cs:651–651](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L651-L651)
+[Drilling.UI/Menu/CBindingBase.cs:651–651](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L651-L651)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10485,7 +10485,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectOneHoleCellCommandChanged` · L652–652
 
-[Drilling.UI/Menu/CBindingBase.cs:652–652](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L652-L652)
+[Drilling.UI/Menu/CBindingBase.cs:652–652](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L652-L652)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10500,7 +10500,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectOneHoleCommandChanged` · L653–653
 
-[Drilling.UI/Menu/CBindingBase.cs:653–653](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L653-L653)
+[Drilling.UI/Menu/CBindingBase.cs:653–653](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L653-L653)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10515,7 +10515,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectParameterTabCommandChanged` · L654–654
 
-[Drilling.UI/Menu/CBindingBase.cs:654–654](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L654-L654)
+[Drilling.UI/Menu/CBindingBase.cs:654–654](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L654-L654)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10530,7 +10530,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectPreviewCellCommandChanged` · L655–655
 
-[Drilling.UI/Menu/CBindingBase.cs:655–655](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L655-L655)
+[Drilling.UI/Menu/CBindingBase.cs:655–655](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L655-L655)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10545,7 +10545,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectRunBeamCommandChanged` · L656–656
 
-[Drilling.UI/Menu/CBindingBase.cs:656–656](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L656-L656)
+[Drilling.UI/Menu/CBindingBase.cs:656–656](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L656-L656)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10560,7 +10560,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectRunCellCommandChanged` · L657–657
 
-[Drilling.UI/Menu/CBindingBase.cs:657–657](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L657-L657)
+[Drilling.UI/Menu/CBindingBase.cs:657–657](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L657-L657)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10575,7 +10575,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectRunShotCommandChanged` · L658–658
 
-[Drilling.UI/Menu/CBindingBase.cs:658–658](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L658-L658)
+[Drilling.UI/Menu/CBindingBase.cs:658–658](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L658-L658)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10590,7 +10590,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectSampleCellCommandChanged` · L659–659
 
-[Drilling.UI/Menu/CBindingBase.cs:659–659](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L659-L659)
+[Drilling.UI/Menu/CBindingBase.cs:659–659](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L659-L659)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10605,7 +10605,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectSettingCommandChanged` · L660–660
 
-[Drilling.UI/Menu/CBindingBase.cs:660–660](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L660-L660)
+[Drilling.UI/Menu/CBindingBase.cs:660–660](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L660-L660)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10620,7 +10620,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectShapeCommandChanged` · L661–661
 
-[Drilling.UI/Menu/CBindingBase.cs:661–661](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L661-L661)
+[Drilling.UI/Menu/CBindingBase.cs:661–661](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L661-L661)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10635,7 +10635,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectTabCommandChanged` · L662–662
 
-[Drilling.UI/Menu/CBindingBase.cs:662–662](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L662-L662)
+[Drilling.UI/Menu/CBindingBase.cs:662–662](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L662-L662)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10650,7 +10650,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ServoBrushChanged` · L663–663
 
-[Drilling.UI/Menu/CBindingBase.cs:663–663](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L663-L663)
+[Drilling.UI/Menu/CBindingBase.cs:663–663](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L663-L663)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10665,7 +10665,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SetSampleHoleSelectionCommandChanged` · L664–664
 
-[Drilling.UI/Menu/CBindingBase.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L664-L664)
+[Drilling.UI/Menu/CBindingBase.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L664-L664)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10680,7 +10680,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SettingChanged` · L665–665
 
-[Drilling.UI/Menu/CBindingBase.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L665-L665)
+[Drilling.UI/Menu/CBindingBase.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L665-L665)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10695,7 +10695,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SettingFilesChanged` · L666–666
 
-[Drilling.UI/Menu/CBindingBase.cs:666–666](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L666-L666)
+[Drilling.UI/Menu/CBindingBase.cs:666–666](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L666-L666)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10710,7 +10710,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SettingFilesPageTextChanged` · L667–667
 
-[Drilling.UI/Menu/CBindingBase.cs:667–667](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L667-L667)
+[Drilling.UI/Menu/CBindingBase.cs:667–667](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L667-L667)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10725,7 +10725,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SettingParametersChanged` · L668–668
 
-[Drilling.UI/Menu/CBindingBase.cs:668–668](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L668-L668)
+[Drilling.UI/Menu/CBindingBase.cs:668–668](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L668-L668)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10740,7 +10740,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ShapeDirectionChanged` · L669–669
 
-[Drilling.UI/Menu/CBindingBase.cs:669–669](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L669-L669)
+[Drilling.UI/Menu/CBindingBase.cs:669–669](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L669-L669)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10755,7 +10755,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ShapeNameChanged` · L670–670
 
-[Drilling.UI/Menu/CBindingBase.cs:670–670](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L670-L670)
+[Drilling.UI/Menu/CBindingBase.cs:670–670](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L670-L670)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10770,7 +10770,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ShapeOffsetXChanged` · L671–671
 
-[Drilling.UI/Menu/CBindingBase.cs:671–671](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L671-L671)
+[Drilling.UI/Menu/CBindingBase.cs:671–671](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L671-L671)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10785,7 +10785,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ShapeOffsetYChanged` · L672–672
 
-[Drilling.UI/Menu/CBindingBase.cs:672–672](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L672-L672)
+[Drilling.UI/Menu/CBindingBase.cs:672–672](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L672-L672)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10800,7 +10800,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ShapeScanItemsChanged` · L673–673
 
-[Drilling.UI/Menu/CBindingBase.cs:673–673](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L673-L673)
+[Drilling.UI/Menu/CBindingBase.cs:673–673](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L673-L673)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10815,7 +10815,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ShapeSizeChanged` · L674–674
 
-[Drilling.UI/Menu/CBindingBase.cs:674–674](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L674-L674)
+[Drilling.UI/Menu/CBindingBase.cs:674–674](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L674-L674)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10830,7 +10830,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ShapeStartCommandChanged` · L675–675
 
-[Drilling.UI/Menu/CBindingBase.cs:675–675](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L675-L675)
+[Drilling.UI/Menu/CBindingBase.cs:675–675](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L675-L675)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10845,7 +10845,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ShapeStopCommandChanged` · L676–676
 
-[Drilling.UI/Menu/CBindingBase.cs:676–676](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L676-L676)
+[Drilling.UI/Menu/CBindingBase.cs:676–676](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L676-L676)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10860,7 +10860,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ShiftOffsetXChanged` · L677–677
 
-[Drilling.UI/Menu/CBindingBase.cs:677–677](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L677-L677)
+[Drilling.UI/Menu/CBindingBase.cs:677–677](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L677-L677)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10875,7 +10875,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ShiftOffsetYChanged` · L678–678
 
-[Drilling.UI/Menu/CBindingBase.cs:678–678](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L678-L678)
+[Drilling.UI/Menu/CBindingBase.cs:678–678](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L678-L678)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10890,7 +10890,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ShotCentersChanged` · L679–679
 
-[Drilling.UI/Menu/CBindingBase.cs:679–679](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L679-L679)
+[Drilling.UI/Menu/CBindingBase.cs:679–679](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L679-L679)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10905,7 +10905,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ShotDetailDesignHeightChanged` · L680–680
 
-[Drilling.UI/Menu/CBindingBase.cs:680–680](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L680-L680)
+[Drilling.UI/Menu/CBindingBase.cs:680–680](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L680-L680)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10920,7 +10920,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ShotDetailDesignWidthChanged` · L681–681
 
-[Drilling.UI/Menu/CBindingBase.cs:681–681](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L681-L681)
+[Drilling.UI/Menu/CBindingBase.cs:681–681](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L681-L681)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10935,7 +10935,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CellShotNoChanged` · L682–682
 
-[Drilling.UI/Menu/CBindingBase.cs:682–682](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L682-L682)
+[Drilling.UI/Menu/CBindingBase.cs:682–682](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L682-L682)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10950,7 +10950,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ShotGroupPatternSummaryChanged` · L683–683
 
-[Drilling.UI/Menu/CBindingBase.cs:683–683](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L683-L683)
+[Drilling.UI/Menu/CBindingBase.cs:683–683](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L683-L683)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10965,7 +10965,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ShotGroupRowsChanged` · L684–684
 
-[Drilling.UI/Menu/CBindingBase.cs:684–684](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L684-L684)
+[Drilling.UI/Menu/CBindingBase.cs:684–684](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L684-L684)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10980,7 +10980,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ShotTextChanged` · L685–685
 
-[Drilling.UI/Menu/CBindingBase.cs:685–685](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L685-L685)
+[Drilling.UI/Menu/CBindingBase.cs:685–685](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L685-L685)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10995,7 +10995,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ShowCycleControlsChanged` · L686–686
 
-[Drilling.UI/Menu/CBindingBase.cs:686–686](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L686-L686)
+[Drilling.UI/Menu/CBindingBase.cs:686–686](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L686-L686)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11010,7 +11010,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SimulChanged` · L687–687
 
-[Drilling.UI/Menu/CBindingBase.cs:687–687](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L687-L687)
+[Drilling.UI/Menu/CBindingBase.cs:687–687](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L687-L687)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11025,7 +11025,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SimulBrushChanged` · L688–688
 
-[Drilling.UI/Menu/CBindingBase.cs:688–688](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L688-L688)
+[Drilling.UI/Menu/CBindingBase.cs:688–688](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L688-L688)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11040,7 +11040,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SourceGroupChanged` · L689–689
 
-[Drilling.UI/Menu/CBindingBase.cs:689–689](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L689-L689)
+[Drilling.UI/Menu/CBindingBase.cs:689–689](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L689-L689)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11055,7 +11055,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SourceRowsChanged` · L690–690
 
-[Drilling.UI/Menu/CBindingBase.cs:690–690](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L690-L690)
+[Drilling.UI/Menu/CBindingBase.cs:690–690](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L690-L690)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11070,7 +11070,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SplitBeamCountItemChanged` · L691–691
 
-[Drilling.UI/Menu/CBindingBase.cs:691–691](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L691-L691)
+[Drilling.UI/Menu/CBindingBase.cs:691–691](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L691-L691)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11085,7 +11085,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SpotSizeChanged` · L692–692
 
-[Drilling.UI/Menu/CBindingBase.cs:692–692](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L692-L692)
+[Drilling.UI/Menu/CBindingBase.cs:692–692](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L692-L692)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11100,7 +11100,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ST_MONITOR_MELSEC_ROWChanged` · L693–693
 
-[Drilling.UI/Menu/CBindingBase.cs:693–693](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L693-L693)
+[Drilling.UI/Menu/CBindingBase.cs:693–693](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L693-L693)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11115,7 +11115,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ST_MONITOR_PARAMETER_ROWChanged` · L694–694
 
-[Drilling.UI/Menu/CBindingBase.cs:694–694](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L694-L694)
+[Drilling.UI/Menu/CBindingBase.cs:694–694](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L694-L694)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11130,7 +11130,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `StageAxesChanged` · L695–695
 
-[Drilling.UI/Menu/CBindingBase.cs:695–695](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L695-L695)
+[Drilling.UI/Menu/CBindingBase.cs:695–695](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L695-L695)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11145,7 +11145,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `StageHomeCommandChanged` · L696–696
 
-[Drilling.UI/Menu/CBindingBase.cs:696–696](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L696-L696)
+[Drilling.UI/Menu/CBindingBase.cs:696–696](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L696-L696)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11160,7 +11160,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `StageMoveCommandChanged` · L697–697
 
-[Drilling.UI/Menu/CBindingBase.cs:697–697](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L697-L697)
+[Drilling.UI/Menu/CBindingBase.cs:697–697](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L697-L697)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11175,7 +11175,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `StageStopCommandChanged` · L698–698
 
-[Drilling.UI/Menu/CBindingBase.cs:698–698](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L698-L698)
+[Drilling.UI/Menu/CBindingBase.cs:698–698](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L698-L698)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11190,7 +11190,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `StartCommandChanged` · L699–699
 
-[Drilling.UI/Menu/CBindingBase.cs:699–699](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L699-L699)
+[Drilling.UI/Menu/CBindingBase.cs:699–699](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L699-L699)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11205,7 +11205,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `StartTimeChanged` · L700–700
 
-[Drilling.UI/Menu/CBindingBase.cs:700–700](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L700-L700)
+[Drilling.UI/Menu/CBindingBase.cs:700–700](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L700-L700)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11220,7 +11220,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `StateChanged` · L701–701
 
-[Drilling.UI/Menu/CBindingBase.cs:701–701](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L701-L701)
+[Drilling.UI/Menu/CBindingBase.cs:701–701](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L701-L701)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11235,7 +11235,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `StateBrushChanged` · L702–702
 
-[Drilling.UI/Menu/CBindingBase.cs:702–702](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L702-L702)
+[Drilling.UI/Menu/CBindingBase.cs:702–702](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L702-L702)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11250,7 +11250,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `StateRowsChanged` · L703–703
 
-[Drilling.UI/Menu/CBindingBase.cs:703–703](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L703-L703)
+[Drilling.UI/Menu/CBindingBase.cs:703–703](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L703-L703)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11265,7 +11265,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `StateTextChanged` · L704–704
 
-[Drilling.UI/Menu/CBindingBase.cs:704–704](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L704-L704)
+[Drilling.UI/Menu/CBindingBase.cs:704–704](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L704-L704)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11280,7 +11280,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `StatusBrushChanged` · L705–705
 
-[Drilling.UI/Menu/CBindingBase.cs:705–705](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L705-L705)
+[Drilling.UI/Menu/CBindingBase.cs:705–705](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L705-L705)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11295,7 +11295,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `StatusMessageChanged` · L706–706
 
-[Drilling.UI/Menu/CBindingBase.cs:706–706](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L706-L706)
+[Drilling.UI/Menu/CBindingBase.cs:706–706](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L706-L706)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11310,7 +11310,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `StatusPanelTitleChanged` · L707–707
 
-[Drilling.UI/Menu/CBindingBase.cs:707–707](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L707-L707)
+[Drilling.UI/Menu/CBindingBase.cs:707–707](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L707-L707)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11325,7 +11325,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `StatusRowsChanged` · L708–708
 
-[Drilling.UI/Menu/CBindingBase.cs:708–708](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L708-L708)
+[Drilling.UI/Menu/CBindingBase.cs:708–708](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L708-L708)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11340,7 +11340,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `StopCommandChanged` · L709–709
 
-[Drilling.UI/Menu/CBindingBase.cs:709–709](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L709-L709)
+[Drilling.UI/Menu/CBindingBase.cs:709–709](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L709-L709)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11355,7 +11355,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SubtitleChanged` · L710–710
 
-[Drilling.UI/Menu/CBindingBase.cs:710–710](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L710-L710)
+[Drilling.UI/Menu/CBindingBase.cs:710–710](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L710-L710)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11370,7 +11370,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SummaryItemsChanged` · L711–711
 
-[Drilling.UI/Menu/CBindingBase.cs:711–711](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L711-L711)
+[Drilling.UI/Menu/CBindingBase.cs:711–711](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L711-L711)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11385,7 +11385,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SummaryRowsChanged` · L712–712
 
-[Drilling.UI/Menu/CBindingBase.cs:712–712](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L712-L712)
+[Drilling.UI/Menu/CBindingBase.cs:712–712](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L712-L712)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11400,7 +11400,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SystemSectionChanged` · L713–713
 
-[Drilling.UI/Menu/CBindingBase.cs:713–713](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L713-L713)
+[Drilling.UI/Menu/CBindingBase.cs:713–713](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L713-L713)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11415,7 +11415,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TabItemsChanged` · L714–714
 
-[Drilling.UI/Menu/CBindingBase.cs:714–714](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L714-L714)
+[Drilling.UI/Menu/CBindingBase.cs:714–714](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L714-L714)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11430,7 +11430,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TabsChanged` · L715–715
 
-[Drilling.UI/Menu/CBindingBase.cs:715–715](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L715-L715)
+[Drilling.UI/Menu/CBindingBase.cs:715–715](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L715-L715)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11445,7 +11445,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TargetGxChanged` · L716–716
 
-[Drilling.UI/Menu/CBindingBase.cs:716–716](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L716-L716)
+[Drilling.UI/Menu/CBindingBase.cs:716–716](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L716-L716)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11460,7 +11460,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TargetGyChanged` · L717–717
 
-[Drilling.UI/Menu/CBindingBase.cs:717–717](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L717-L717)
+[Drilling.UI/Menu/CBindingBase.cs:717–717](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L717-L717)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11475,7 +11475,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TargetGzChanged` · L718–718
 
-[Drilling.UI/Menu/CBindingBase.cs:718–718](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L718-L718)
+[Drilling.UI/Menu/CBindingBase.cs:718–718](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L718-L718)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11490,7 +11490,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TargetItemsChanged` · L719–719
 
-[Drilling.UI/Menu/CBindingBase.cs:719–719](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L719-L719)
+[Drilling.UI/Menu/CBindingBase.cs:719–719](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L719-L719)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11505,7 +11505,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TargetPositionChanged` · L720–720
 
-[Drilling.UI/Menu/CBindingBase.cs:720–720](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L720-L720)
+[Drilling.UI/Menu/CBindingBase.cs:720–720](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L720-L720)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11520,7 +11520,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TextBrushChanged` · L721–721
 
-[Drilling.UI/Menu/CBindingBase.cs:721–721](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L721-L721)
+[Drilling.UI/Menu/CBindingBase.cs:721–721](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L721-L721)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11535,7 +11535,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ThemeModeTextChanged` · L722–722
 
-[Drilling.UI/Menu/CBindingBase.cs:722–722](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L722-L722)
+[Drilling.UI/Menu/CBindingBase.cs:722–722](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L722-L722)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11550,7 +11550,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ThemeToggleTextChanged` · L723–723
 
-[Drilling.UI/Menu/CBindingBase.cs:723–723](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L723-L723)
+[Drilling.UI/Menu/CBindingBase.cs:723–723](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L723-L723)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11565,7 +11565,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TitleChanged` · L724–724
 
-[Drilling.UI/Menu/CBindingBase.cs:724–724](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L724-L724)
+[Drilling.UI/Menu/CBindingBase.cs:724–724](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L724-L724)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11580,7 +11580,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ToggleOperationModeCommandChanged` · L725–725
 
-[Drilling.UI/Menu/CBindingBase.cs:725–725](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L725-L725)
+[Drilling.UI/Menu/CBindingBase.cs:725–725](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L725-L725)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11595,7 +11595,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ToggleMelsecWriteLockCommandChanged` · L726–726
 
-[Drilling.UI/Menu/CBindingBase.cs:726–726](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L726-L726)
+[Drilling.UI/Menu/CBindingBase.cs:726–726](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L726-L726)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11610,7 +11610,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TogglePointCommandChanged` · L727–727
 
-[Drilling.UI/Menu/CBindingBase.cs:727–727](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L727-L727)
+[Drilling.UI/Menu/CBindingBase.cs:727–727](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L727-L727)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11625,7 +11625,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TogglePreviewHeadCommandChanged` · L728–728
 
-[Drilling.UI/Menu/CBindingBase.cs:728–728](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L728-L728)
+[Drilling.UI/Menu/CBindingBase.cs:728–728](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L728-L728)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11640,7 +11640,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ToggleThemeCommandChanged` · L729–729
 
-[Drilling.UI/Menu/CBindingBase.cs:729–729](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L729-L729)
+[Drilling.UI/Menu/CBindingBase.cs:729–729](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L729-L729)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11655,7 +11655,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TotalShotsTextChanged` · L730–730
 
-[Drilling.UI/Menu/CBindingBase.cs:730–730](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L730-L730)
+[Drilling.UI/Menu/CBindingBase.cs:730–730](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L730-L730)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11670,7 +11670,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TrendChanged` · L731–731
 
-[Drilling.UI/Menu/CBindingBase.cs:731–731](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L731-L731)
+[Drilling.UI/Menu/CBindingBase.cs:731–731](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L731-L731)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11685,7 +11685,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TrendBarsChanged` · L732–732
 
-[Drilling.UI/Menu/CBindingBase.cs:732–732](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L732-L732)
+[Drilling.UI/Menu/CBindingBase.cs:732–732](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L732-L732)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11700,7 +11700,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TrendPanelTitleChanged` · L733–733
 
-[Drilling.UI/Menu/CBindingBase.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L733-L733)
+[Drilling.UI/Menu/CBindingBase.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L733-L733)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11715,7 +11715,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TrendPointsChanged` · L734–734
 
-[Drilling.UI/Menu/CBindingBase.cs:734–734](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L734-L734)
+[Drilling.UI/Menu/CBindingBase.cs:734–734](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L734-L734)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11730,7 +11730,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TypeChanged` · L735–735
 
-[Drilling.UI/Menu/CBindingBase.cs:735–735](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L735-L735)
+[Drilling.UI/Menu/CBindingBase.cs:735–735](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L735-L735)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11745,7 +11745,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TypeBrushChanged` · L736–736
 
-[Drilling.UI/Menu/CBindingBase.cs:736–736](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L736-L736)
+[Drilling.UI/Menu/CBindingBase.cs:736–736](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L736-L736)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11760,7 +11760,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `TypeOptionsChanged` · L737–737
 
-[Drilling.UI/Menu/CBindingBase.cs:737–737](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L737-L737)
+[Drilling.UI/Menu/CBindingBase.cs:737–737](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L737-L737)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11775,7 +11775,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `UnitChanged` · L738–738
 
-[Drilling.UI/Menu/CBindingBase.cs:738–738](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L738-L738)
+[Drilling.UI/Menu/CBindingBase.cs:738–738](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L738-L738)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11790,7 +11790,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `UseBrushChanged` · L739–739
 
-[Drilling.UI/Menu/CBindingBase.cs:739–739](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L739-L739)
+[Drilling.UI/Menu/CBindingBase.cs:739–739](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L739-L739)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11805,7 +11805,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `UsesSelectionEditorChanged` · L740–740
 
-[Drilling.UI/Menu/CBindingBase.cs:740–740](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L740-L740)
+[Drilling.UI/Menu/CBindingBase.cs:740–740](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L740-L740)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11820,7 +11820,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `UseStretchScalePropertyChanged` · L741–741
 
-[Drilling.UI/Menu/CBindingBase.cs:741–741](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L741-L741)
+[Drilling.UI/Menu/CBindingBase.cs:741–741](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L741-L741)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11835,7 +11835,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `UsesWriteSelectionChanged` · L742–742
 
-[Drilling.UI/Menu/CBindingBase.cs:742–742](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L742-L742)
+[Drilling.UI/Menu/CBindingBase.cs:742–742](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L742-L742)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11850,7 +11850,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `UseTextChanged` · L743–743
 
-[Drilling.UI/Menu/CBindingBase.cs:743–743](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L743-L743)
+[Drilling.UI/Menu/CBindingBase.cs:743–743](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L743-L743)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11865,7 +11865,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ValueChanged` · L744–744
 
-[Drilling.UI/Menu/CBindingBase.cs:744–744](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L744-L744)
+[Drilling.UI/Menu/CBindingBase.cs:744–744](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L744-L744)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11880,7 +11880,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ValueBrushChanged` · L745–745
 
-[Drilling.UI/Menu/CBindingBase.cs:745–745](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L745-L745)
+[Drilling.UI/Menu/CBindingBase.cs:745–745](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L745-L745)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11895,7 +11895,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ValueOptionsChanged` · L746–746
 
-[Drilling.UI/Menu/CBindingBase.cs:746–746](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L746-L746)
+[Drilling.UI/Menu/CBindingBase.cs:746–746](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L746-L746)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11910,7 +11910,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ValueStateChanged` · L747–747
 
-[Drilling.UI/Menu/CBindingBase.cs:747–747](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L747-L747)
+[Drilling.UI/Menu/CBindingBase.cs:747–747](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L747-L747)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11925,7 +11925,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `VisionProtocolCommandDescriptionChanged` · L748–748
 
-[Drilling.UI/Menu/CBindingBase.cs:748–748](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L748-L748)
+[Drilling.UI/Menu/CBindingBase.cs:748–748](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L748-L748)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11940,7 +11940,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `VisionProtocolEndpointChanged` · L749–749
 
-[Drilling.UI/Menu/CBindingBase.cs:749–749](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L749-L749)
+[Drilling.UI/Menu/CBindingBase.cs:749–749](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L749-L749)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11955,7 +11955,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `VisionProtocolHasNoArgumentsChanged` · L750–750
 
-[Drilling.UI/Menu/CBindingBase.cs:750–750](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L750-L750)
+[Drilling.UI/Menu/CBindingBase.cs:750–750](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L750-L750)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11970,7 +11970,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `VisionProtocolInspectionTypeChanged` · L751–751
 
-[Drilling.UI/Menu/CBindingBase.cs:751–751](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L751-L751)
+[Drilling.UI/Menu/CBindingBase.cs:751–751](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L751-L751)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11985,7 +11985,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `VisionProtocolIsFlyingReadyChanged` · L752–752
 
-[Drilling.UI/Menu/CBindingBase.cs:752–752](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L752-L752)
+[Drilling.UI/Menu/CBindingBase.cs:752–752](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L752-L752)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12000,7 +12000,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `VisionProtocolKeepAliveChanged` · L753–753
 
-[Drilling.UI/Menu/CBindingBase.cs:753–753](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L753-L753)
+[Drilling.UI/Menu/CBindingBase.cs:753–753](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L753-L753)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12015,7 +12015,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `VisionProtocolMarkRowCountTextChanged` · L754–754
 
-[Drilling.UI/Menu/CBindingBase.cs:754–754](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L754-L754)
+[Drilling.UI/Menu/CBindingBase.cs:754–754](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L754-L754)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12030,7 +12030,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `VisionProtocolRequestPreviewChanged` · L755–755
 
-[Drilling.UI/Menu/CBindingBase.cs:755–755](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L755-L755)
+[Drilling.UI/Menu/CBindingBase.cs:755–755](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L755-L755)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12045,7 +12045,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `VisionProtocolStatusChanged` · L756–756
 
-[Drilling.UI/Menu/CBindingBase.cs:756–756](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L756-L756)
+[Drilling.UI/Menu/CBindingBase.cs:756–756](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L756-L756)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12060,7 +12060,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `VisionProtocolUsesMarkRowsChanged` · L757–757
 
-[Drilling.UI/Menu/CBindingBase.cs:757–757](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L757-L757)
+[Drilling.UI/Menu/CBindingBase.cs:757–757](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L757-L757)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12075,7 +12075,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `ZPositionMoveCommandChanged` · L758–758
 
-[Drilling.UI/Menu/CBindingBase.cs:758–758](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L758-L758)
+[Drilling.UI/Menu/CBindingBase.cs:758–758](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L758-L758)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12090,7 +12090,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `WaitChanged` · L759–759
 
-[Drilling.UI/Menu/CBindingBase.cs:759–759](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L759-L759)
+[Drilling.UI/Menu/CBindingBase.cs:759–759](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L759-L759)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12105,7 +12105,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `WriteInputTypeChanged` · L760–760
 
-[Drilling.UI/Menu/CBindingBase.cs:760–760](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L760-L760)
+[Drilling.UI/Menu/CBindingBase.cs:760–760](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L760-L760)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12120,7 +12120,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `WriteMelsecCommandChanged` · L761–761
 
-[Drilling.UI/Menu/CBindingBase.cs:761–761](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L761-L761)
+[Drilling.UI/Menu/CBindingBase.cs:761–761](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L761-L761)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12135,7 +12135,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `WriteValueChanged` · L762–762
 
-[Drilling.UI/Menu/CBindingBase.cs:762–762](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L762-L762)
+[Drilling.UI/Menu/CBindingBase.cs:762–762](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L762-L762)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12150,7 +12150,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `WriteValueOptionsChanged` · L763–763
 
-[Drilling.UI/Menu/CBindingBase.cs:763–763](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L763-L763)
+[Drilling.UI/Menu/CBindingBase.cs:763–763](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L763-L763)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12165,7 +12165,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `XLabelChanged` · L764–764
 
-[Drilling.UI/Menu/CBindingBase.cs:764–764](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L764-L764)
+[Drilling.UI/Menu/CBindingBase.cs:764–764](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L764-L764)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12180,7 +12180,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `YLabelChanged` · L765–765
 
-[Drilling.UI/Menu/CBindingBase.cs:765–765](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L765-L765)
+[Drilling.UI/Menu/CBindingBase.cs:765–765](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L765-L765)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12195,7 +12195,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `SetProperty` · L766–776
 
-[Drilling.UI/Menu/CBindingBase.cs:766–776](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L766-L776)
+[Drilling.UI/Menu/CBindingBase.cs:766–776](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L766-L776)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12216,89 +12216,89 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L339-L339) | SetProperty | False |
-| [Drilling.UI/CRootView.cs:393–393](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L393-L393) | SetProperty | False |
-| [Drilling.UI/CRootView.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L411-L411) | SetProperty | False |
-| [Drilling.UI/CRootView.cs:424–424](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L424-L424) | SetProperty | False |
-| [Drilling.UI/CRootView.cs:437–437](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L437-L437) | SetProperty | False |
-| [Drilling.UI/CRootView.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L450-L450) | SetProperty | False |
-| [Drilling.UI/CRootView.cs:494–494](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L494-L494) | SetProperty | False |
-| [Drilling.UI/CRootView.cs:507–507](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L507-L507) | SetProperty | False |
-| [Drilling.UI/CRootView.cs:1439–1442](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1439-L1442) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuBase.cs:541–541](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuBase.cs#L541-L541) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L303-L303) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L316-L316) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L329-L329) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:475–475](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L475-L475) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:488–488](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L488-L488) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:501–501](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L501-L501) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:514–514](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L514-L514) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:527–527](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L527-L527) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:540–540](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L540-L540) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:553–553](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L553-L553) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L566-L566) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:579–579](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L579-L579) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:592–592](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L592-L592) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L605-L605) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:618–618](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L618-L618) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:631–631](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L631-L631) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:3523–3523](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L3523-L3523) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:3530–3530](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L3530-L3530) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:462–462](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L462-L462) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:475–475](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L475-L475) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:488–488](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L488-L488) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:509–509](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L509-L509) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:522–522](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L522-L522) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:535–535](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L535-L535) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:548–548](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L548-L548) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:561–561](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L561-L561) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:574–574](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L574-L574) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:587–587](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L587-L587) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:601–601](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L601-L601) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:635–635](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L635-L635) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:648–648](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L648-L648) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:652–652](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L652-L652) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:653–653](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L653-L653) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:690–690](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L690-L690) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:721–721](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L721-L721) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:737–737](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L737-L737) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:750–750](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L750-L750) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:763–763](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L763-L763) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:776–776](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L776-L776) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:809–809](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L809-L809) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:833–833](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L833-L833) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:846–846](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L846-L846) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:862–862](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L862-L862) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:888–888](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L888-L888) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:936–936](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L936-L936) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:968–968](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L968-L968) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:981–981](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L981-L981) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:994–994](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L994-L994) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1007–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L1007-L1007) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8324–8324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L8324-L8324) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8456–8456](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L8456-L8456) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8469–8469](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L8469-L8469) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8482–8482](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L8482-L8482) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8495–8495](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L8495-L8495) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8508–8508](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L8508-L8508) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8521–8521](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L8521-L8521) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8534–8534](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L8534-L8534) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8569–8569](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L8569-L8569) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8629–8629](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L8629-L8629) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:6979–6979](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L6979-L6979) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:6983–6983](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L6983-L6983) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:6984–6984](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L6984-L6984) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:285–285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L285-L285) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L303-L303) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:548–548](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L548-L548) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3817–3817](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3817-L3817) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3849–3849](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3849-L3849) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4068–4068](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4068-L4068) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4162–4162](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4162-L4162) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuSetting.cs#L184-L184) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1143–1143](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1143-L1143) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1265–1265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1265-L1265) | SetProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1636–1636](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1636-L1636) | SetProperty | False |
+| [Drilling.UI/CRootView.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L339-L339) | SetProperty | False |
+| [Drilling.UI/CRootView.cs:393–393](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L393-L393) | SetProperty | False |
+| [Drilling.UI/CRootView.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L411-L411) | SetProperty | False |
+| [Drilling.UI/CRootView.cs:424–424](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L424-L424) | SetProperty | False |
+| [Drilling.UI/CRootView.cs:437–437](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L437-L437) | SetProperty | False |
+| [Drilling.UI/CRootView.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L450-L450) | SetProperty | False |
+| [Drilling.UI/CRootView.cs:494–494](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L494-L494) | SetProperty | False |
+| [Drilling.UI/CRootView.cs:507–507](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L507-L507) | SetProperty | False |
+| [Drilling.UI/CRootView.cs:1439–1442](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L1439-L1442) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuBase.cs:541–541](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuBase.cs#L541-L541) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L303-L303) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L316-L316) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L329-L329) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:475–475](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L475-L475) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:488–488](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L488-L488) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:501–501](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L501-L501) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:514–514](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L514-L514) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:527–527](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L527-L527) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:540–540](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L540-L540) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:553–553](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L553-L553) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L566-L566) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:579–579](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L579-L579) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:592–592](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L592-L592) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L605-L605) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:618–618](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L618-L618) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:631–631](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L631-L631) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:3523–3523](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L3523-L3523) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:3530–3530](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L3530-L3530) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:462–462](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L462-L462) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:475–475](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L475-L475) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:488–488](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L488-L488) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:509–509](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L509-L509) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:522–522](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L522-L522) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:535–535](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L535-L535) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:548–548](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L548-L548) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:561–561](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L561-L561) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:574–574](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L574-L574) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:587–587](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L587-L587) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:601–601](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L601-L601) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:635–635](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L635-L635) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:648–648](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L648-L648) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:652–652](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L652-L652) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:653–653](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L653-L653) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:690–690](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L690-L690) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:721–721](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L721-L721) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:737–737](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L737-L737) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:750–750](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L750-L750) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:763–763](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L763-L763) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:776–776](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L776-L776) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:809–809](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L809-L809) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:833–833](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L833-L833) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:846–846](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L846-L846) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:862–862](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L862-L862) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:888–888](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L888-L888) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:936–936](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L936-L936) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:968–968](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L968-L968) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:981–981](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L981-L981) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:994–994](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L994-L994) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1007–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L1007-L1007) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8324–8324](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L8324-L8324) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8456–8456](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L8456-L8456) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8469–8469](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L8469-L8469) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8482–8482](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L8482-L8482) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8495–8495](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L8495-L8495) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8508–8508](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L8508-L8508) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8521–8521](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L8521-L8521) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8534–8534](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L8534-L8534) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8569–8569](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L8569-L8569) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8629–8629](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L8629-L8629) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7052–7052](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7052-L7052) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7056–7056](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7056-L7056) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7057–7057](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7057-L7057) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:285–285](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L285-L285) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L303-L303) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:548–548](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L548-L548) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3817–3817](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3817-L3817) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3849–3849](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3849-L3849) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4068–4068](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4068-L4068) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4162–4162](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4162-L4162) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuSetting.cs#L184-L184) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1143–1143](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1143-L1143) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1265–1265](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1265-L1265) | SetProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1636–1636](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1636-L1636) | SetProperty | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12331,7 +12331,7 @@ flowchart TD
 
 ### MethodDeclaration `SetSequenceProperty` · L778–788
 
-[Drilling.UI/Menu/CBindingBase.cs:778–788](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L778-L788)
+[Drilling.UI/Menu/CBindingBase.cs:778–788](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L778-L788)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12352,29 +12352,29 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L154-L154) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L173-L173) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L174-L174) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L175-L175) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:186–186](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L186-L186) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L199-L199) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L212-L212) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L225-L225) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L238-L238) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:251–251](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L251-L251) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L264-L264) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L277-L277) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L290-L290) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L357-L357) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:370–370](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L370-L370) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L383-L383) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:396–396](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L396-L396) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:409–409](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L409-L409) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:422–422](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L422-L422) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L664-L664) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:677–677](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L677-L677) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:703–703](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L703-L703) | SetSequenceProperty | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:272–272](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L272-L272) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L154-L154) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L173-L173) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L174-L174) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L175-L175) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:186–186](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L186-L186) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L199-L199) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L212-L212) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L225-L225) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L238-L238) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:251–251](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L251-L251) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L264-L264) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L277-L277) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L290-L290) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L357-L357) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:370–370](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L370-L370) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L383-L383) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:396–396](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L396-L396) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:409–409](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L409-L409) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:422–422](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L422-L422) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L664-L664) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:677–677](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L677-L677) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:703–703](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L703-L703) | SetSequenceProperty | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:272–272](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L272-L272) | SetSequenceProperty | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12409,7 +12409,7 @@ flowchart TD
 
 ### MethodDeclaration `OnPropertyChanged` · L790–3075
 
-[Drilling.UI/Menu/CBindingBase.cs:790–3075](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L790-L3075)
+[Drilling.UI/Menu/CBindingBase.cs:790–3075](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L790-L3075)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12428,461 +12428,462 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L254-L254) | OnPropertyChanged | False |
-| [Drilling.UI/CRootView.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L314-L314) | OnPropertyChanged | False |
-| [Drilling.UI/CRootView.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L321-L321) | OnPropertyChanged | False |
-| [Drilling.UI/CRootView.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L334-L334) | OnPropertyChanged | False |
-| [Drilling.UI/CRootView.cs:690–690](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L690-L690) | OnPropertyChanged | False |
-| [Drilling.UI/CRootView.cs:691–691](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L691-L691) | OnPropertyChanged | False |
-| [Drilling.UI/CRootView.cs:752–752](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L752-L752) | OnPropertyChanged | False |
-| [Drilling.UI/CRootView.cs:892–892](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L892-L892) | OnPropertyChanged | False |
-| [Drilling.UI/CRootView.cs:909–909](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L909-L909) | OnPropertyChanged | False |
-| [Drilling.UI/CRootView.cs:1430–1430](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1430-L1430) | OnPropertyChanged | False |
-| [Drilling.UI/CRootView.cs:3118–3118](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3118-L3118) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/CBindingBase.cs:774–774](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L774-L774) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/CBindingBase.cs:786–786](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/CBindingBase.cs#L786-L786) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L114-L114) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:272–272](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L272-L272) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1450–1450](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1450-L1450) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1451–1451](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1451-L1451) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1452–1452](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1452-L1452) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1453–1453](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1453-L1453) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1454–1454](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1454-L1454) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1455–1455](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1455-L1455) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1456–1456](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1456-L1456) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1457–1457](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1457-L1457) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1458–1458](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1458-L1458) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1459–1459](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1459-L1459) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1460–1460](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1460-L1460) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1893–1893](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1893-L1893) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1894–1894](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1894-L1894) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1895–1895](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1895-L1895) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1896–1896](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1896-L1896) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1897–1897](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1897-L1897) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1898–1898](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1898-L1898) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1899–1899](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1899-L1899) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1900–1900](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1900-L1900) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1901–1901](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1901-L1901) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1902–1902](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1902-L1902) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1903–1903](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1903-L1903) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1904–1904](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1904-L1904) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1905–1905](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1905-L1905) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1906–1906](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1906-L1906) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1907–1907](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1907-L1907) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1908–1908](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1908-L1908) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1909–1909](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1909-L1909) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1910–1910](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1910-L1910) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1911–1911](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1911-L1911) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1912–1912](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1912-L1912) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1913–1913](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1913-L1913) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1914–1914](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1914-L1914) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1915–1915](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1915-L1915) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1072–1072](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L1072-L1072) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1073–1073](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L1073-L1073) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1074–1074](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L1074-L1074) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:3426–3426](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L3426-L3426) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:3427–3427](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L3427-L3427) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:3450–3450](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L3450-L3450) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:3451–3451](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L3451-L3451) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:3525–3525](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L3525-L3525) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:3526–3526](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L3526-L3526) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L603-L603) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:604–604](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L604-L604) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:705–705](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L705-L705) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:778–778](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L778-L778) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:779–779](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L779-L779) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:811–811](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L811-L811) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:848–848](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L848-L848) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:864–864](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L864-L864) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:938–938](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L938-L938) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1728–1728](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L1728-L1728) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1913–1913](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L1913-L1913) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2137–2137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L2137-L2137) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2138–2138](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L2138-L2138) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2139–2139](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L2139-L2139) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2140–2140](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L2140-L2140) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2141–2141](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L2141-L2141) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5541–5541](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L5541-L5541) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5542–5542](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L5542-L5542) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6209–6209](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6209-L6209) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6210–6210](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6210-L6210) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6211–6211](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6211-L6211) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6212–6212](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6212-L6212) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6213–6213](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6213-L6213) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6214–6214](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6214-L6214) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6237–6237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6237-L6237) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6254–6254](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6254-L6254) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6396–6396](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6396-L6396) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6479–6479](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6479-L6479) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6480–6480](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6480-L6480) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6481–6481](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6481-L6481) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6482–6482](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6482-L6482) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6483–6483](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6483-L6483) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6516–6516](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6516-L6516) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6517–6517](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6517-L6517) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:494–494](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L494-L494) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:495–495](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L495-L495) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:969–969](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L969-L969) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:970–970](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L970-L970) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:1880–1880](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L1880-L1880) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:2873–2873](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2873-L2873) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:2874–2874](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2874-L2874) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:2875–2875](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2875-L2875) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:5306–5306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L5306-L5306) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:5313–5313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L5313-L5313) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:6987–6987](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L6987-L6987) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:6992–6992](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L6992-L6992) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7165–7165](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7165-L7165) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7184–7184](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7184-L7184) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7203–7203](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7203-L7203) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7514–7514](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7514-L7514) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7515–7515](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7515-L7515) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7534–7534](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7534-L7534) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7535–7535](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7535-L7535) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7650–7650](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7650-L7650) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L318-L318) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L605-L605) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:823–823](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L823-L823) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:824–824](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L824-L824) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:825–825](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L825-L825) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:938–938](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L938-L938) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:939–939](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L939-L939) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:945–945](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L945-L945) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:946–946](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L946-L946) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1374–1374](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1374-L1374) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1375–1375](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1375-L1375) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1376–1376](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1376-L1376) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1377–1377](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1377-L1377) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1378–1378](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1378-L1378) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1379–1379](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1379-L1379) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1380–1380](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1380-L1380) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1381–1381](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1381-L1381) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1382–1382](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1382-L1382) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1455–1455](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1455-L1455) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1456–1456](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1456-L1456) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1457–1457](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1457-L1457) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1458–1458](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1458-L1458) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1459–1459](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1459-L1459) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1594–1594](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1594-L1594) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1595–1595](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1595-L1595) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1596–1596](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1596-L1596) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1597–1597](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1597-L1597) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1598–1598](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1598-L1598) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1619–1619](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1619-L1619) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1620–1620](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1620-L1620) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1621–1621](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1621-L1621) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2086–2086](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2086-L2086) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2087–2087](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2087-L2087) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2088–2088](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2088-L2088) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2089–2089](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2089-L2089) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2090–2090](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2090-L2090) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2091–2091](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2091-L2091) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2092–2092](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2092-L2092) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2093–2093](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2093-L2093) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2094–2094](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2094-L2094) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2095–2095](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2095-L2095) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2096–2096](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2096-L2096) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2097–2097](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2097-L2097) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2098–2098](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2098-L2098) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2099–2099](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2099-L2099) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2100–2100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2100-L2100) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2101–2101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2101-L2101) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2102–2102](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2102-L2102) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2103–2103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2103-L2103) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2104–2104](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2104-L2104) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2105–2105](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2105-L2105) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2106–2106](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2106-L2106) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2107–2107](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2107-L2107) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2108–2108](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2108-L2108) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2109–2109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2109-L2109) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2110–2110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2110-L2110) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2111–2111](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2111-L2111) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2112–2112](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2112-L2112) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2113–2113](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2113-L2113) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2114–2114](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2114-L2114) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2115–2115](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2115-L2115) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2744–2744](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2744-L2744) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2745–2745](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2745-L2745) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2785–2785](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2785-L2785) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3611–3618](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3611-L3618) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3851–3851](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3851-L3851) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3852–3852](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3852-L3852) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3853–3853](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3853-L3853) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3854–3854](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3854-L3854) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3855–3855](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3855-L3855) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3856–3856](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3856-L3856) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3857–3857](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3857-L3857) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3859–3859](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3859-L3859) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3860–3860](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3860-L3860) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3861–3861](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3861-L3861) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3862–3862](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3862-L3862) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4074–4074](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4074-L4074) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4137–4137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4137-L4137) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4138–4138](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4138-L4138) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4164–4164](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4164-L4164) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:573–573](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L573-L573) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:791–791](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L791-L791) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:792–792](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L792-L792) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:878–878](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L878-L878) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:879–879](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L879-L879) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:880–880](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L880-L880) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:882–882](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L882-L882) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:883–883](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L883-L883) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:884–884](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L884-L884) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:885–885](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L885-L885) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:886–886](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L886-L886) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:887–887](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L887-L887) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:888–888](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L888-L888) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:889–889](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L889-L889) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:890–890](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L890-L890) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:891–891](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L891-L891) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:892–892](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L892-L892) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:893–893](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L893-L893) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:894–894](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L894-L894) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:895–895](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L895-L895) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:896–896](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L896-L896) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:897–897](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L897-L897) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:898–898](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L898-L898) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:899–899](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L899-L899) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1048–1048](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1048-L1048) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1049–1049](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1049-L1049) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1050–1050](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1050-L1050) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1051–1051](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1051-L1051) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1052–1052](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1052-L1052) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1053–1053](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1053-L1053) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1054–1054](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1054-L1054) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1055–1055](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1055-L1055) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1056–1056](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1056-L1056) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1057–1057](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1057-L1057) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1058–1058](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1058-L1058) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1090–1090](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1090-L1090) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1091–1091](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1091-L1091) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1092–1092](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1092-L1092) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1093–1093](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1093-L1093) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1094–1094](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1094-L1094) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1095–1095](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1095-L1095) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1096–1096](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1096-L1096) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1097–1097](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1097-L1097) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1098–1098](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1098-L1098) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1099–1099](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1099-L1099) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1100–1100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1100-L1100) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1101–1101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1101-L1101) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1102–1102](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1102-L1102) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1103–1103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1103-L1103) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1104–1104](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1104-L1104) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1105–1105](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1105-L1105) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1106–1106](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1106-L1106) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1107–1107](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1107-L1107) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1108–1108](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1108-L1108) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1109–1109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1109-L1109) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1110–1110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1110-L1110) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1111–1111](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1111-L1111) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1112–1112](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1112-L1112) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1113–1113](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1113-L1113) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1114–1114](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1114-L1114) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1115–1115](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1115-L1115) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1307–1307](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1307-L1307) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1308–1308](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1308-L1308) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1309–1309](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1309-L1309) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1310–1310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1310-L1310) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1311–1311](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1311-L1311) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1312–1312](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1312-L1312) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1313–1313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1313-L1313) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1314–1314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1314-L1314) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1315–1315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1315-L1315) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1316–1316](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1316-L1316) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1317–1317](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1317-L1317) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1318–1318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1318-L1318) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1319–1319](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1319-L1319) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1320–1320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1320-L1320) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1406–1406](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1406-L1406) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1433–1433](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1433-L1433) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1461–1461](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1461-L1461) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1462–1462](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1462-L1462) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1463–1463](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1463-L1463) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1473–1473](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1473-L1473) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1474–1474](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1474-L1474) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1484–1484](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1484-L1484) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1507–1507](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1507-L1507) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1508–1508](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1508-L1508) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1516–1516](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1516-L1516) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1611–1611](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1611-L1611) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1612–1612](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1612-L1612) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1613–1613](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1613-L1613) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1634–1634](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1634-L1634) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1635–1635](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1635-L1635) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1659–1659](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1659-L1659) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1660–1660](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1660-L1660) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1661–1661](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1661-L1661) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1752–1752](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1752-L1752) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1753–1753](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1753-L1753) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1754–1754](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1754-L1754) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1755–1755](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1755-L1755) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1756–1756](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1756-L1756) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1757–1757](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1757-L1757) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1758–1758](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1758-L1758) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1773–1773](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1773-L1773) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1774–1774](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1774-L1774) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1775–1775](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1775-L1775) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1776–1776](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1776-L1776) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1777–1777](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1777-L1777) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1778–1778](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1778-L1778) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1779–1779](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1779-L1779) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1805–1805](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1805-L1805) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1806–1806](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1806-L1806) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1807–1807](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1807-L1807) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1808–1808](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1808-L1808) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1809–1809](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1809-L1809) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1810–1810](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1810-L1810) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2896–2896](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2896-L2896) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2897–2897](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2897-L2897) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2898–2898](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2898-L2898) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2899–2899](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2899-L2899) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2900–2900](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2900-L2900) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2901–2901](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2901-L2901) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2902–2902](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2902-L2902) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2993–2993](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2993-L2993) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2994–2994](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2994-L2994) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2995–2995](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2995-L2995) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2996–2996](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2996-L2996) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2997–2997](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2997-L2997) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2998–2998](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2998-L2998) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2999–2999](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2999-L2999) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3000–3000](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3000-L3000) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3001–3001](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3001-L3001) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3002–3002](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3002-L3002) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3003–3003](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3003-L3003) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3004–3004](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3004-L3004) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3005–3005](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3005-L3005) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3006–3006](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3006-L3006) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3007–3007](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3007-L3007) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3008–3008](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3008-L3008) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3149–3149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3149-L3149) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3150–3150](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3150-L3150) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3151–3151](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3151-L3151) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3152–3152](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3152-L3152) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3153–3153](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3153-L3153) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3295–3295](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3295-L3295) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3296–3296](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3296-L3296) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3297–3297](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3297-L3297) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3298–3298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3298-L3298) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3341–3341](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3341-L3341) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3364–3364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3364-L3364) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3400–3400](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3400-L3400) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3433–3433](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3433-L3433) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3441–3441](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3441-L3441) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3462–3462](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3462-L3462) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3463–3463](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3463-L3463) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3464–3464](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3464-L3464) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3672–3672](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3672-L3672) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3727–3727](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3727-L3727) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3734–3734](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3734-L3734) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3735–3735](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3735-L3735) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3736–3736](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3736-L3736) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3737–3737](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3737-L3737) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3738–3738](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3738-L3738) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3739–3739](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3739-L3739) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3740–3740](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3740-L3740) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3741–3741](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3741-L3741) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3745–3745](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3745-L3745) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3958–3958](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3958-L3958) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3959–3959](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3959-L3959) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3975–3975](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3975-L3975) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3976–3976](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3976-L3976) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4091–4091](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4091-L4091) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4092–4092](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4092-L4092) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4133–4133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4133-L4133) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4138–4138](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4138-L4138) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4139–4139](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4139-L4139) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4161–4161](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4161-L4161) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4162–4162](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4162-L4162) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4163–4163](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4163-L4163) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4164–4164](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4164-L4164) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4165–4165](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4165-L4165) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4166–4166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4166-L4166) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4167–4167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4167-L4167) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4168–4168](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4168-L4168) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4294–4294](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4294-L4294) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4354–4354](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4354-L4354) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4422–4422](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4422-L4422) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4423–4423](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4423-L4423) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4424–4424](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4424-L4424) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4425–4425](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4425-L4425) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4426–4426](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4426-L4426) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4427–4427](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4427-L4427) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4428–4428](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4428-L4428) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4429–4429](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4429-L4429) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4430–4430](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4430-L4430) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4431–4431](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4431-L4431) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4432–4432](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4432-L4432) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4438–4438](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4438-L4438) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4504–4504](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4504-L4504) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4535–4535](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4535-L4535) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4536–4536](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4536-L4536) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4537–4537](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4537-L4537) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4538–4538](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4538-L4538) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4539–4539](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4539-L4539) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4540–4540](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4540-L4540) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4541–4541](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4541-L4541) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4542–4542](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4542-L4542) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4543–4543](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4543-L4543) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4544–4544](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4544-L4544) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4545–4545](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4545-L4545) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4546–4546](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4546-L4546) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4547–4547](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4547-L4547) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4548–4548](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4548-L4548) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4549–4549](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4549-L4549) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4550–4550](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4550-L4550) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4551–4551](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4551-L4551) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4552–4552](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4552-L4552) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4553–4553](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4553-L4553) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4554–4554](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4554-L4554) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4555–4555](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4555-L4555) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4556–4556](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4556-L4556) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4557–4557](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4557-L4557) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4558–4558](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4558-L4558) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4559–4559](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4559-L4559) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4560–4560](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4560-L4560) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4561–4561](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4561-L4561) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4562–4562](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4562-L4562) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4563–4563](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4563-L4563) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4677–4677](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4677-L4677) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4699–4699](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4699-L4699) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4767–4767](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4767-L4767) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4792–4792](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4792-L4792) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5166–5166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5166-L5166) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5167–5167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5167-L5167) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5776–5776](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5776-L5776) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5777–5777](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5777-L5777) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5778–5778](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5778-L5778) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5779–5779](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5779-L5779) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5780–5780](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5780-L5780) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5781–5781](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5781-L5781) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5782–5782](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5782-L5782) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5783–5783](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5783-L5783) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5794–5794](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5794-L5794) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5795–5795](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5795-L5795) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5796–5796](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5796-L5796) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5804–5804](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5804-L5804) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5805–5805](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5805-L5805) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5930–5930](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5930-L5930) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5931–5931](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5931-L5931) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5932–5932](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5932-L5932) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5933–5933](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5933-L5933) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5934–5934](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5934-L5934) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5935–5935](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5935-L5935) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5936–5936](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5936-L5936) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:625–625](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuSetting.cs#L625-L625) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1149–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1149-L1149) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1150–1150](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1150-L1150) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1151–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1151-L1151) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1152–1152](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1152-L1152) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1267–1267](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1267-L1267) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1641–1641](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1641-L1641) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1642–1642](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1642-L1642) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1643–1643](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1643-L1643) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1644–1644](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1644-L1644) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1645–1645](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1645-L1645) | OnPropertyChanged | False |
+| [Drilling.UI/CRootView.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L254-L254) | OnPropertyChanged | False |
+| [Drilling.UI/CRootView.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L314-L314) | OnPropertyChanged | False |
+| [Drilling.UI/CRootView.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L321-L321) | OnPropertyChanged | False |
+| [Drilling.UI/CRootView.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L334-L334) | OnPropertyChanged | False |
+| [Drilling.UI/CRootView.cs:690–690](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L690-L690) | OnPropertyChanged | False |
+| [Drilling.UI/CRootView.cs:691–691](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L691-L691) | OnPropertyChanged | False |
+| [Drilling.UI/CRootView.cs:752–752](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L752-L752) | OnPropertyChanged | False |
+| [Drilling.UI/CRootView.cs:892–892](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L892-L892) | OnPropertyChanged | False |
+| [Drilling.UI/CRootView.cs:909–909](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L909-L909) | OnPropertyChanged | False |
+| [Drilling.UI/CRootView.cs:1430–1430](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L1430-L1430) | OnPropertyChanged | False |
+| [Drilling.UI/CRootView.cs:3118–3118](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L3118-L3118) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/CBindingBase.cs:774–774](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L774-L774) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/CBindingBase.cs:786–786](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/CBindingBase.cs#L786-L786) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L114-L114) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:272–272](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L272-L272) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1450–1450](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1450-L1450) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1451–1451](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1451-L1451) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1452–1452](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1452-L1452) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1453–1453](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1453-L1453) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1454–1454](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1454-L1454) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1455–1455](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1455-L1455) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1456–1456](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1456-L1456) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1457–1457](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1457-L1457) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1458–1458](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1458-L1458) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1459–1459](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1459-L1459) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1460–1460](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1460-L1460) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1893–1893](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1893-L1893) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1894–1894](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1894-L1894) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1895–1895](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1895-L1895) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1896–1896](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1896-L1896) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1897–1897](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1897-L1897) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1898–1898](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1898-L1898) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1899–1899](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1899-L1899) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1900–1900](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1900-L1900) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1901–1901](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1901-L1901) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1902–1902](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1902-L1902) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1903–1903](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1903-L1903) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1904–1904](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1904-L1904) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1905–1905](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1905-L1905) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1906–1906](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1906-L1906) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1907–1907](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1907-L1907) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1908–1908](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1908-L1908) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1909–1909](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1909-L1909) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1910–1910](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1910-L1910) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1911–1911](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1911-L1911) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1912–1912](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1912-L1912) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1913–1913](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1913-L1913) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1914–1914](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1914-L1914) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1915–1915](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1915-L1915) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1072–1072](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L1072-L1072) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1073–1073](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L1073-L1073) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1074–1074](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L1074-L1074) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:3426–3426](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L3426-L3426) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:3427–3427](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L3427-L3427) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:3450–3450](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L3450-L3450) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:3451–3451](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L3451-L3451) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:3525–3525](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L3525-L3525) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:3526–3526](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L3526-L3526) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L603-L603) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:604–604](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L604-L604) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:705–705](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L705-L705) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:778–778](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L778-L778) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:779–779](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L779-L779) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:811–811](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L811-L811) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:848–848](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L848-L848) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:864–864](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L864-L864) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:938–938](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L938-L938) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1728–1728](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L1728-L1728) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1913–1913](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L1913-L1913) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2137–2137](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L2137-L2137) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2138–2138](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L2138-L2138) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2139–2139](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L2139-L2139) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2140–2140](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L2140-L2140) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2141–2141](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L2141-L2141) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5541–5541](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L5541-L5541) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5542–5542](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L5542-L5542) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6209–6209](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6209-L6209) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6210–6210](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6210-L6210) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6211–6211](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6211-L6211) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6212–6212](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6212-L6212) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6213–6213](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6213-L6213) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6214–6214](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6214-L6214) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6237–6237](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6237-L6237) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6254–6254](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6254-L6254) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6396–6396](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6396-L6396) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6479–6479](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6479-L6479) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6480–6480](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6480-L6480) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6481–6481](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6481-L6481) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6482–6482](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6482-L6482) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6483–6483](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6483-L6483) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6516–6516](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6516-L6516) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6517–6517](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6517-L6517) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L147-L147) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:510–510](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L510-L510) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:511–511](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L511-L511) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:985–985](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L985-L985) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:986–986](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L986-L986) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:1897–1897](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L1897-L1897) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:2890–2890](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2890-L2890) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:2891–2891](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2891-L2891) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:2892–2892](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2892-L2892) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:5376–5376](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L5376-L5376) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:5383–5383](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L5383-L5383) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7060–7060](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7060-L7060) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7065–7065](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7065-L7065) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7238–7238](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7238-L7238) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7257–7257](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7257-L7257) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7276–7276](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7276-L7276) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7587–7587](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7587-L7587) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7588–7588](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7588-L7588) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7607–7607](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7607-L7607) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7608–7608](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7608-L7608) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:7723–7723](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L7723-L7723) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L318-L318) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L605-L605) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:823–823](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L823-L823) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:824–824](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L824-L824) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:825–825](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L825-L825) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:938–938](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L938-L938) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:939–939](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L939-L939) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:945–945](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L945-L945) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:946–946](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L946-L946) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1374–1374](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1374-L1374) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1375–1375](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1375-L1375) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1376–1376](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1376-L1376) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1377–1377](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1377-L1377) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1378–1378](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1378-L1378) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1379–1379](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1379-L1379) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1380–1380](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1380-L1380) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1381–1381](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1381-L1381) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1382–1382](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1382-L1382) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1455–1455](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1455-L1455) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1456–1456](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1456-L1456) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1457–1457](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1457-L1457) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1458–1458](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1458-L1458) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1459–1459](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1459-L1459) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1594–1594](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1594-L1594) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1595–1595](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1595-L1595) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1596–1596](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1596-L1596) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1597–1597](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1597-L1597) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1598–1598](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1598-L1598) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1619–1619](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1619-L1619) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1620–1620](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1620-L1620) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1621–1621](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1621-L1621) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2086–2086](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2086-L2086) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2087–2087](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2087-L2087) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2088–2088](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2088-L2088) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2089–2089](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2089-L2089) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2090–2090](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2090-L2090) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2091–2091](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2091-L2091) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2092–2092](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2092-L2092) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2093–2093](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2093-L2093) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2094–2094](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2094-L2094) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2095–2095](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2095-L2095) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2096–2096](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2096-L2096) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2097–2097](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2097-L2097) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2098–2098](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2098-L2098) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2099–2099](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2099-L2099) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2100–2100](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2100-L2100) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2101–2101](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2101-L2101) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2102–2102](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2102-L2102) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2103–2103](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2103-L2103) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2104–2104](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2104-L2104) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2105–2105](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2105-L2105) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2106–2106](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2106-L2106) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2107–2107](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2107-L2107) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2108–2108](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2108-L2108) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2109–2109](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2109-L2109) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2110–2110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2110-L2110) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2111–2111](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2111-L2111) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2112–2112](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2112-L2112) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2113–2113](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2113-L2113) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2114–2114](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2114-L2114) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2115–2115](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2115-L2115) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2744–2744](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2744-L2744) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2745–2745](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2745-L2745) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2785–2785](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2785-L2785) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3611–3618](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3611-L3618) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3851–3851](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3851-L3851) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3852–3852](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3852-L3852) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3853–3853](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3853-L3853) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3854–3854](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3854-L3854) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3855–3855](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3855-L3855) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3856–3856](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3856-L3856) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3857–3857](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3857-L3857) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3859–3859](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3859-L3859) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3860–3860](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3860-L3860) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3861–3861](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3861-L3861) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3862–3862](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3862-L3862) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4074–4074](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4074-L4074) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4137–4137](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4137-L4137) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4138–4138](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4138-L4138) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4164–4164](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4164-L4164) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:573–573](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L573-L573) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:791–791](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L791-L791) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:792–792](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L792-L792) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:878–878](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L878-L878) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:879–879](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L879-L879) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:880–880](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L880-L880) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:882–882](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L882-L882) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:883–883](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L883-L883) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:884–884](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L884-L884) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:885–885](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L885-L885) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:886–886](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L886-L886) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:887–887](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L887-L887) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:888–888](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L888-L888) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:889–889](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L889-L889) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:890–890](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L890-L890) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:891–891](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L891-L891) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:892–892](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L892-L892) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:893–893](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L893-L893) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:894–894](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L894-L894) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:895–895](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L895-L895) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:896–896](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L896-L896) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:897–897](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L897-L897) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:898–898](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L898-L898) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:899–899](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L899-L899) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1048–1048](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1048-L1048) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1049–1049](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1049-L1049) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1050–1050](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1050-L1050) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1051–1051](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1051-L1051) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1052–1052](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1052-L1052) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1053–1053](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1053-L1053) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1054–1054](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1054-L1054) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1055–1055](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1055-L1055) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1056–1056](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1056-L1056) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1057–1057](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1057-L1057) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1058–1058](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1058-L1058) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1090–1090](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1090-L1090) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1091–1091](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1091-L1091) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1092–1092](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1092-L1092) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1093–1093](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1093-L1093) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1094–1094](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1094-L1094) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1095–1095](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1095-L1095) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1096–1096](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1096-L1096) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1097–1097](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1097-L1097) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1098–1098](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1098-L1098) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1099–1099](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1099-L1099) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1100–1100](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1100-L1100) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1101–1101](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1101-L1101) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1102–1102](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1102-L1102) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1103–1103](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1103-L1103) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1104–1104](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1104-L1104) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1105–1105](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1105-L1105) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1106–1106](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1106-L1106) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1107–1107](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1107-L1107) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1108–1108](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1108-L1108) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1109–1109](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1109-L1109) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1110–1110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1110-L1110) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1111–1111](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1111-L1111) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1112–1112](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1112-L1112) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1113–1113](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1113-L1113) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1114–1114](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1114-L1114) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1115–1115](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1115-L1115) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1307–1307](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1307-L1307) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1308–1308](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1308-L1308) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1309–1309](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1309-L1309) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1310–1310](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1310-L1310) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1311–1311](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1311-L1311) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1312–1312](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1312-L1312) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1313–1313](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1313-L1313) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1314–1314](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1314-L1314) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1315–1315](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1315-L1315) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1316–1316](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1316-L1316) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1317–1317](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1317-L1317) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1318–1318](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1318-L1318) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1319–1319](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1319-L1319) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1320–1320](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1320-L1320) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1406–1406](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1406-L1406) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1433–1433](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1433-L1433) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1461–1461](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1461-L1461) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1462–1462](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1462-L1462) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1463–1463](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1463-L1463) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1473–1473](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1473-L1473) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1474–1474](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1474-L1474) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1484–1484](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1484-L1484) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1507–1507](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1507-L1507) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1508–1508](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1508-L1508) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1516–1516](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1516-L1516) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1611–1611](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1611-L1611) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1612–1612](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1612-L1612) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1613–1613](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1613-L1613) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1634–1634](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1634-L1634) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1635–1635](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1635-L1635) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1659–1659](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1659-L1659) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1660–1660](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1660-L1660) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1661–1661](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1661-L1661) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1752–1752](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1752-L1752) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1753–1753](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1753-L1753) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1754–1754](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1754-L1754) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1755–1755](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1755-L1755) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1756–1756](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1756-L1756) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1757–1757](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1757-L1757) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1758–1758](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1758-L1758) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1773–1773](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1773-L1773) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1774–1774](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1774-L1774) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1775–1775](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1775-L1775) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1776–1776](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1776-L1776) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1777–1777](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1777-L1777) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1778–1778](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1778-L1778) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1779–1779](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1779-L1779) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1805–1805](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1805-L1805) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1806–1806](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1806-L1806) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1807–1807](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1807-L1807) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1808–1808](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1808-L1808) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1809–1809](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1809-L1809) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1810–1810](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1810-L1810) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2896–2896](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2896-L2896) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2897–2897](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2897-L2897) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2898–2898](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2898-L2898) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2899–2899](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2899-L2899) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2900–2900](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2900-L2900) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2901–2901](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2901-L2901) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2902–2902](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2902-L2902) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2993–2993](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2993-L2993) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2994–2994](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2994-L2994) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2995–2995](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2995-L2995) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2996–2996](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2996-L2996) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2997–2997](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2997-L2997) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2998–2998](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2998-L2998) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2999–2999](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2999-L2999) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3000–3000](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3000-L3000) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3001–3001](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3001-L3001) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3002–3002](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3002-L3002) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3003–3003](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3003-L3003) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3004–3004](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3004-L3004) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3005–3005](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3005-L3005) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3006–3006](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3006-L3006) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3007–3007](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3007-L3007) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3008–3008](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3008-L3008) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3149–3149](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3149-L3149) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3150–3150](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3150-L3150) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3151–3151](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3151-L3151) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3152–3152](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3152-L3152) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3153–3153](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3153-L3153) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3295–3295](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3295-L3295) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3296–3296](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3296-L3296) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3297–3297](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3297-L3297) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3298–3298](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3298-L3298) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3341–3341](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3341-L3341) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3364–3364](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3364-L3364) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3400–3400](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3400-L3400) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3433–3433](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3433-L3433) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3441–3441](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3441-L3441) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3462–3462](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3462-L3462) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3463–3463](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3463-L3463) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3464–3464](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3464-L3464) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3672–3672](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3672-L3672) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3727–3727](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3727-L3727) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3734–3734](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3734-L3734) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3735–3735](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3735-L3735) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3736–3736](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3736-L3736) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3737–3737](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3737-L3737) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3738–3738](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3738-L3738) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3739–3739](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3739-L3739) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3740–3740](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3740-L3740) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3741–3741](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3741-L3741) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3745–3745](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3745-L3745) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3958–3958](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3958-L3958) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3959–3959](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3959-L3959) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3975–3975](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3975-L3975) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3976–3976](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3976-L3976) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4091–4091](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4091-L4091) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4092–4092](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4092-L4092) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4133–4133](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4133-L4133) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4138–4138](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4138-L4138) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4139–4139](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4139-L4139) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4161–4161](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4161-L4161) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4162–4162](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4162-L4162) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4163–4163](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4163-L4163) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4164–4164](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4164-L4164) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4165–4165](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4165-L4165) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4166–4166](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4166-L4166) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4167–4167](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4167-L4167) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4168–4168](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4168-L4168) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4294–4294](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4294-L4294) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4354–4354](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4354-L4354) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4422–4422](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4422-L4422) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4423–4423](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4423-L4423) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4424–4424](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4424-L4424) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4425–4425](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4425-L4425) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4426–4426](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4426-L4426) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4427–4427](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4427-L4427) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4428–4428](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4428-L4428) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4429–4429](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4429-L4429) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4430–4430](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4430-L4430) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4431–4431](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4431-L4431) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4432–4432](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4432-L4432) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4438–4438](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4438-L4438) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4504–4504](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4504-L4504) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4535–4535](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4535-L4535) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4536–4536](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4536-L4536) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4537–4537](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4537-L4537) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4538–4538](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4538-L4538) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4539–4539](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4539-L4539) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4540–4540](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4540-L4540) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4541–4541](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4541-L4541) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4542–4542](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4542-L4542) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4543–4543](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4543-L4543) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4544–4544](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4544-L4544) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4545–4545](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4545-L4545) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4546–4546](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4546-L4546) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4547–4547](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4547-L4547) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4548–4548](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4548-L4548) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4549–4549](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4549-L4549) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4550–4550](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4550-L4550) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4551–4551](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4551-L4551) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4552–4552](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4552-L4552) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4553–4553](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4553-L4553) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4554–4554](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4554-L4554) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4555–4555](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4555-L4555) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4556–4556](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4556-L4556) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4557–4557](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4557-L4557) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4558–4558](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4558-L4558) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4559–4559](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4559-L4559) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4560–4560](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4560-L4560) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4561–4561](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4561-L4561) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4562–4562](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4562-L4562) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4563–4563](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4563-L4563) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4677–4677](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4677-L4677) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4699–4699](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4699-L4699) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4767–4767](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4767-L4767) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4792–4792](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4792-L4792) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5166–5166](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5166-L5166) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5167–5167](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5167-L5167) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5776–5776](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5776-L5776) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5777–5777](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5777-L5777) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5778–5778](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5778-L5778) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5779–5779](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5779-L5779) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5780–5780](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5780-L5780) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5781–5781](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5781-L5781) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5782–5782](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5782-L5782) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5783–5783](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5783-L5783) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5794–5794](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5794-L5794) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5795–5795](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5795-L5795) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5796–5796](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5796-L5796) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5804–5804](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5804-L5804) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5805–5805](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5805-L5805) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5930–5930](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5930-L5930) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5931–5931](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5931-L5931) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5932–5932](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5932-L5932) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5933–5933](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5933-L5933) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5934–5934](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5934-L5934) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5935–5935](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5935-L5935) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5936–5936](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5936-L5936) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:625–625](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuSetting.cs#L625-L625) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1149–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1149-L1149) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1150–1150](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1150-L1150) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1151–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1151-L1151) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1152–1152](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1152-L1152) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1267–1267](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1267-L1267) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1641–1641](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1641-L1641) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1642–1642](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1642-L1642) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1643–1643](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1643-L1643) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1644–1644](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1644-L1644) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1645–1645](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1645-L1645) | OnPropertyChanged | False |
 
 호출하는 대상과 해석 범위:
 

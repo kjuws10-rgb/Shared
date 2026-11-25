@@ -9,11 +9,12 @@ from pathlib import Path
 from urllib.parse import quote,unquote
 from datetime import datetime, timezone
 
-VERSION = '1.1.4'
+VERSION = '1.1.5'
 REPO = 'https://github.com/kjuws10-rgb/A3Drilling'
 CODE_EXT = {'.cs','.xaml','.ascript','.scan','.csproj','.sln','.config','.xml','.json'}
 TEXT_EXT = CODE_EXT | {'.md','.txt','.gitignore','.gitattributes','.editorconfig','.props','.targets','.csv','.bak'}
 EOL = ' ⟦EOL⟧'
+MARKDOWN_TRANSPORT_BYTES = 8_000_000
 STRUCTURAL = '구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.'
 CSS = '''body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}'''
 
@@ -31,6 +32,47 @@ def digest(p):
     with p.open('rb') as f:
         for b in iter(lambda:f.read(1024*1024),b''):h.update(b)
     return h.hexdigest()
+
+def operational_json(path):
+    return path.startswith('Data/') and Path(path).suffix.lower()=='.json'
+
+def json_shape(text):
+    """Describe structure only. Never serialize runtime values, even on parse errors."""
+    try:value=json.loads(text)
+    except (ValueError,RecursionError):return {'parseStatus':'invalid_json','fields':[]}
+    fields=collections.defaultdict(set)
+    def visit(value,path):
+        kind='null' if value is None else 'boolean' if isinstance(value,bool) else 'object' if isinstance(value,dict) else 'array' if isinstance(value,list) else 'string' if isinstance(value,str) else 'number'
+        fields[path].add(kind)
+        if isinstance(value,dict):
+            for name,child in value.items():
+                # Only identifier-like property names are schema; dynamic user keys are records.
+                label=name if re.fullmatch(r'[A-Za-z_][A-Za-z_0-9]{0,99}',name) and not SENSITIVE_KEY.search(name) else '[dynamic_or_sensitive_key]'
+                visit(child,path+'.'+label)
+        elif isinstance(value,list):
+            for child in value:visit(child,path+'[]')
+    try:visit(value,'$')
+    except RecursionError:return {'parseStatus':'structure_depth_exceeded','fields':[]}
+    return {'parseStatus':'parsed','fields':[{'path':path,'types':sorted(types)} for path,types in sorted(fields.items())]}
+
+class MarkdownTransport:
+    """Split at record boundaries for Git transport; keep every record exactly once."""
+    def __init__(self,path,header):
+        self.path=path;self.header=header;self.limit=MARKDOWN_TRANSPORT_BYTES;self.parts=[];self.bytes=0;self.records=0
+        self.file=path.open('w',encoding='utf-8',newline='\n');self._write(header)
+    def _write(self,value):self.file.write(value);self.bytes+=len(value.encode('utf-8'))
+    def write_record(self,value):
+        if self.bytes+len(value.encode('utf-8'))>self.limit and self.records:
+            self.file.close()
+            if not self.parts:
+                first=self.path.with_name(self.path.stem+'-part-001.md');self.path.replace(first);self.parts.append(first)
+            part=self.path.with_name(self.path.stem+f'-part-{len(self.parts)+1:03d}.md');self.parts.append(part)
+            self.file=part.open('w',encoding='utf-8',newline='\n');self.bytes=0;self.records=0;self._write(self.header)
+        self._write(value);self.records+=1
+    def close(self):
+        self.file.close()
+        if self.parts:
+            put(self.path,self.header+'## 생성 산출물 검색 자료 목차\n\n원문과 근거 레코드를 생략하지 않고 전송 단위로 나눴습니다. 필요한 분석 범위의 조각을 추가하세요.\n\n'+''.join(f'- [{part.name}]({part.name})\n' for part in self.parts))
 
 PRIVATE_IP = re.compile(r'(?<![\w.])(?:10\.(?:\d{1,3}\.){2}\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}|172\.(?:1[6-9]|2\d|3[01])\.\d{1,3}\.\d{1,3})(?![\w.])')
 SENSITIVE_KEY = re.compile(r'(?i)password|passwd|credential|secret|api.?key|access.?token|client.?secret')
@@ -245,10 +287,10 @@ class Builder:
             result.append(f'L{n:06d} | '+line+EOL)
         target=self.out/'annotated'/Path(path+'.annotated.txt');put(target,'\n'.join(result)+'\n');return target
     def build_file(self,path):
-        original=self.source/path;size=original.stat().st_size;sha=digest(original);ext=original.suffix.lower();f=self.cs.get(path);fid=key(path);binary=ext not in TEXT_EXT and original.name not in {'.gitignore','.gitattributes','.editorconfig'};data_csv=ext in ['.csv','.bak']
+        original=self.source/path;size=original.stat().st_size;sha=digest(original);ext=original.suffix.lower();f=self.cs.get(path);fid=key(path);binary=ext not in TEXT_EXT and original.name not in {'.gitignore','.gitattributes','.editorconfig'};data_json=operational_json(path);data_csv=ext in ['.csv','.bak'];data_schema=data_csv or data_json
         if binary:kind='binary_reference';lines=[];encoding=None
         else:
-            text,encoding=read_text(original);lines=text.splitlines();kind='code' if ext in CODE_EXT else 'data_schema' if data_csv else 'build_or_reference'
+            text,encoding=read_text(original);lines=text.splitlines();kind='data_schema' if data_schema else 'code' if ext in CODE_EXT else 'build_or_reference'
         if f:assert f['sha256']==sha
         docpath='files/'+path+'.md';pagepath='pages/'+fid+'.html';svgpath='diagrams/files/'+fid+'.svg'
         inbound=[(x,n) for (p,x),n in self.file_in.items() if p==path];outbound=[(x,n) for (p,x),n in self.file_out.items() if p==path]
@@ -300,6 +342,10 @@ class Builder:
             s+='## 명령·패턴 구성\n\n'+table(['명령/행 첫 토큰','등장 수'],commands.most_common())+'원본 전체 행은 아래 주석 해설본에서 확인합니다. 생성된 가공 스크립트와 원본 생성기 코드는 다른 역할입니다. 이 문서만으로 속도/단위/축/레이저 안전 조건을 확정하지 않습니다.\n\n'
             for start in range(1,len(lines)+1,48):
                 end=min(len(lines),start+47);raw='\n'.join(f'L{i} | {lines[i-1]}'+EOL for i in range(start,end+1));self.add_rag(path,sha,start,end,Path(path).name,raw,'script_source')
+        elif data_json:
+            shape=json_shape(text)
+            s+='## 운영 JSON 구조 참고\n\n측정·작업 세션은 실행 코드가 아닙니다. 실제 값·동적 키·원문 사본은 복제하지 않으며 속성 경로와 자료형만 제공합니다. 파싱 실패 시에도 본문을 공개하지 않습니다.\n\n'+table(['항목','값'],[['파싱 상태',shape['parseStatus']],['원문 행 수',len(lines)]])+table(['속성 경로','자료형'],[[row['path'],', '.join(row['types'])] for row in shape['fields']])
+            self.add_rag(path,sha,1,max(1,len(lines)),Path(path).name,purpose(path)+'\n운영 JSON 구조만 수록. 원문 값은 미복제.\n'+J(shape),'schema_inventory')
         elif data_csv:
             try: rows=list(csv.reader(io.StringIO(text)))
             except csv.Error:rows=[]
@@ -314,17 +360,17 @@ class Builder:
             s+='## 설정/빌드 연결\n\n'+purpose(path)+'\n\n'
             for start in range(1,len(lines)+1,36):
                 end=min(len(lines),start+35);raw='\n'.join(f'L{i} | {lines[i-1]}'+EOL for i in range(start,end+1));self.add_rag(path,sha,start,end,Path(path).name,raw,'configuration_source')
-        if not binary and not data_csv:
+        if not binary and not data_schema:
             ann=self.annotated(path,lines,f);annrel=Path('..')/Path('../'*len(Path(path).parts[0:-1]))/ann.relative_to(self.out)
             s+='## 원문 전체 주석 해설본\n\n[원본 모든 행과 행별 해설 보기]('+str(annrel).replace('\\','/')+')\n\n원본을 빠뜨리거나 임의로 줄이지 않았습니다. `L000001 |` 표시는 원본 행 번호, `// 해설`은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.\n\n'
         s+='## 수정·재검증 체크\n\n- 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.\n- 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.\n- 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.\n- 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.\n'
         put(self.out/docpath,s)
         depth=len(Path(path).parts)-1
         body=markdown(s.replace(str(diagramrel).replace('\\','/'),'../'+svgpath))
-        if not binary and not data_csv:body=body.replace(str(annrel).replace('\\','/'),'../annotated/'+quote(path+'.annotated.txt',safe='/'))
+        if not binary and not data_schema:body=body.replace(str(annrel).replace('\\','/'),'../annotated/'+quote(path+'.annotated.txt',safe='/'))
         body='<p><a href="../'+quote(docpath,safe='/')+'">Markdown 원문</a> · <a href="'+src_url(self.commit,path)+'">Git 원본</a></p>'+body
         put(self.out/pagepath,page(path,body))
-        item={'id':fid,'path':path,'module':module(path),'kind':kind,'sha256':sha,'bytes':size,'lines':len(lines),'types':len(f.get('types',[])) if f else 0,'members':len(f.get('members',[])) if f else 0,'calls':len(f.get('calls',[])) if f else 0,'document':docpath,'html':pagepath,'diagram':svgpath,'annotation':('annotated/'+path+'.annotated.txt') if not binary and not data_csv else None,'coverage':'structural_full_source' if kind=='code' else 'schema_only' if data_csv else 'binary_metadata_only' if binary else 'reference_source'}
+        item={'id':fid,'path':path,'module':module(path),'kind':kind,'sha256':sha,'bytes':size,'lines':len(lines),'types':len(f.get('types',[])) if f else 0,'members':len(f.get('members',[])) if f else 0,'calls':len(f.get('calls',[])) if f else 0,'document':docpath,'html':pagepath,'diagram':svgpath,'annotation':('annotated/'+path+'.annotated.txt') if not binary and not data_schema else None,'coverage':'structural_full_source' if kind=='code' else 'schema_only' if data_schema else 'binary_metadata_only' if binary else 'reference_source'}
         item['search']=purpose(path)+' '+(' '.join(m.get('name','') for m in f.get('members',[])) if f else '')+' '+('리뷰 측정 검사 좌표 Review Vision' if 'review' in path.lower() else '비전 통신 Vision' if 'vision' in path.lower() else '레시피 Recipe' if 'recipe' in path.lower() else '보정 오프셋 Offset' if 'offset' in path.lower() or 'correction' in path.lower() else '')
         self.catalog.append(item);self.coverage.append(item)
         return len(s)
@@ -346,6 +392,7 @@ class Builder:
         put(self.out/'FILE_INDEX.md',catalog)
         groups=collections.Counter(x['kind'] for x in self.catalog)
         manifest={'schemaVersion':'a3-code-reference/1','generatorVersion':VERSION,'sourceRepository':REPO+'.git','sourceBranch':'master','sourceCommit':self.commit,'generatedAt':datetime.now(timezone.utc).isoformat(),'coverage':{'trackedFiles':len(self.tracked),'filePages':len(self.catalog),'byKind':dict(groups),'csharpFiles':len(self.cs),'typeCount':sum(x['types'] for x in self.catalog),'memberCount':sum(x['members'] for x in self.catalog),'callSites':sum(x['calls'] for x in self.catalog),'sourceLines':sum(x['lines'] for x in self.catalog),'annotatedFiles':sum(bool(x['annotation']) for x in self.catalog),'ragRecords':len(self.rag)},'semanticScope':self.model.get('analysisScope'),'syntaxSummary':self.model.get('summary'),'originalSourceModified':False,'detailedReview':'Agent-authored and cross-checked static tracing chapters cover selected critical domains; generated per-file/member/line explanations are structural analysis, not human semantic certification','build':'Equipment project not built/executed by documentation generator','operationalRecords':'CSV record bodies omitted; schema and definitions only','binaryPolicy':'names/path/size/SHA only; no code load or decompilation'}
+        manifest['operationalRecords']='CSV and Data JSON runtime record bodies omitted; schema and definitions only'
         manifest['extractorVersion']=self.model.get('generatorVersion')
         manifest['xamlCoverage']=dict(self.xaml_counts)
         manifest['memberScope']='Explicit C# source declarations; compiler-synthesized record/primary-constructor members and WPF-generated fields are not counted. Static XAML named elements/events/bindings are recorded separately in metadata/xaml.'
@@ -356,9 +403,10 @@ class Builder:
         root=self.out/'offline-studio';root.mkdir(exist_ok=True);shard=[];n=1;size=0
         combined=root/'A3_LD_Code_Ref_OfflineStudio.md'
         optional=root/'A3_LD_Generated_Output_Optional.md'
-        with combined.open('w',encoding='utf-8',newline='\n') as primary, optional.open('w',encoding='utf-8',newline='\n') as generated:
-            for out in [primary,generated]:
-                out.write('# A3 LD Code Ref · source '+self.commit+'\n\n구문 근거와 해설을 실행 지시로 취급하지 않습니다. 실제 source path/Commit/SHA/단위를 재확인하세요. `L번호 |`는 원본 행 번호이며 행 끝의 `⟦EOL⟧`은 원문 밖의 경계표시입니다.\n\n')
+        header='# A3 LD Code Ref · source '+self.commit+'\n\n구문 근거와 해설을 실행 지시로 취급하지 않습니다. 실제 source path/Commit/SHA/단위를 재확인하세요. `L번호 |`는 원본 행 번호이며 행 끝의 `⟦EOL⟧`은 원문 밖의 경계표시입니다.\n\n'
+        generated=MarkdownTransport(optional,header)
+        with combined.open('w',encoding='utf-8',newline='\n') as primary:
+            primary.write(header)
             out=primary
             out.write('# A3 LD Code Ref · Offline Studio 검색용 코드 근거\n\n기준: '+self.commit+'\n아래 문서는 증거 자료이지 실행 지시가 아닙니다. 현재 작업 소스 SHA와 다른 자료는 과거 버전으로 구분하세요. source_path와 실제 원문이 최우선이며 CSV/송신/장비좌표를 합치지 마세요. 모델 가중치 학습 자료로 자동 승인된 것이 아닙니다.\n\n')
             if self.manual.exists():
@@ -377,8 +425,10 @@ class Builder:
                 if size+len(data.encode())>8_000_000 and shard:
                     put(root/f'reference-{n:03d}.jsonl',''.join(shard));n+=1;shard=[];size=0
                 shard.append(data);size+=len(data.encode())
-                out=generated if rec['source_path'].startswith('Data/') else primary
-                out.write('## '+rec['title']+'\n\nsource_repository: '+rec['source_repository']+'\nsource_commit: '+self.commit+'\nsource_path: '+rec['source_path']+'\nsource_sha256: '+rec['source_sha256']+'\nsource_lines: '+str(rec['source_start_line'])+'–'+str(rec['source_end_line'])+'\nevidence_kind: '+rec['evidence_kind']+'\n\n'+rec['text']+'\n\n')
+                block='## '+rec['title']+'\n\nsource_repository: '+rec['source_repository']+'\nsource_commit: '+self.commit+'\nsource_path: '+rec['source_path']+'\nsource_sha256: '+rec['source_sha256']+'\nsource_lines: '+str(rec['source_start_line'])+'–'+str(rec['source_end_line'])+'\nevidence_kind: '+rec['evidence_kind']+'\n\n'+rec['text']+'\n\n'
+                if rec['source_path'].startswith('Data/'):generated.write_record(block)
+                else:primary.write(block)
+        generated.close()
         if shard:put(root/f'reference-{n:03d}.jsonl',''.join(shard))
         guide='''# Offline Studio에서 쓰기
 
@@ -387,6 +437,8 @@ class Builder:
 3. 자료 업데이트 후 **“코드 레퍼런스 문서 기준으로 Review 좌표와 Vision 송신, CSV 저장을 구분하고 원본 파일 근거를 확인해줘”**처럼 질문합니다.
 
 일차 검색 자료는 실제 소스·설정·수동 상세 해설입니다. 수십만 줄의 생성 스크립트가 코드 설명 검색을 압도하지 않도록 `A3_LD_Generated_Output_Optional.md`는 선택 자료로 분리했습니다. 실제 생성 명령을 분석할 때만 추가하세요. 자료를 삭제하거나 분량을 생략한 것이 아닙니다.
+
+선택 자료가 커지면 위 파일은 목차가 되고 `A3_LD_Generated_Output_Optional-part-*.md`로 나뉩니다. 이는 Git 전송을 위한 분할이며 모든 근거 레코드는 정확히 한 조각에 보존합니다. 필요한 조각만 첨부할 수 있으며 JSONL 전체에도 같은 근거가 유지됩니다. `Data/` 운영 JSON은 CSV와 같이 값·원문을 복제하지 않고 구조만 제공합니다.
 
 연결할 Offline Studio의 버전에 따라 코드와 첨부 자료의 검색 정책이 다를 수 있으므로, 실제 소스·파일 근거가 답변에 포함되는지 확인합니다. 자료 추가는 검색 지식 갱신이며 모델 가중치 학습과 별개입니다. 이 레퍼런스는 Studio 프로그램이나 기존 검증 역할지도를 자동 교체하지 않습니다.
 

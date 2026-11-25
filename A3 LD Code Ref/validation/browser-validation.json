@@ -1,6 +1,6 @@
 {
   "schemaVersion": "a3-independent-browser-qa/1",
-  "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+  "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
   "outputPath": "<private-run>\\staging\\A3Ref",
   "offline": true,
   "passed": true,
@@ -44,26 +44,26 @@
     {
       "name": "korean_keyword_search",
       "passed": true,
-      "actualCount": 214,
-      "expectedCount": 214
+      "actualCount": 329,
+      "expectedCount": 329
     },
     {
       "name": "multiple_word_search",
       "passed": true,
-      "actualCount": 220,
-      "expectedCount": 220
+      "actualCount": 551,
+      "expectedCount": 551
     },
     {
       "name": "case_lowercase_search",
       "passed": true,
-      "actualCount": 242,
-      "expectedCount": 242
+      "actualCount": 573,
+      "expectedCount": 573
     },
     {
       "name": "case_uppercase_search",
       "passed": true,
-      "actualCount": 242,
-      "expectedCount": 242
+      "actualCount": 573,
+      "expectedCount": 573
     },
     {
       "name": "case_insensitive_identical_rows",
@@ -78,14 +78,14 @@
     {
       "name": "kind_filter_code",
       "passed": true,
-      "actualCount": 343,
-      "expectedCount": 343
+      "actualCount": 1255,
+      "expectedCount": 1255
     },
     {
       "name": "kind_filter_data_schema",
       "passed": true,
-      "actualCount": 335,
-      "expectedCount": 335
+      "actualCount": 898,
+      "expectedCount": 898
     },
     {
       "name": "kind_filter_binary_reference",
@@ -96,8 +96,8 @@
     {
       "name": "kind_filter_build_or_reference",
       "passed": true,
-      "actualCount": 10,
-      "expectedCount": 10
+      "actualCount": 124,
+      "expectedCount": 124
     },
     {
       "name": "combined_query_and_kind_filter",
@@ -108,8 +108,8 @@
     {
       "name": "reset_restores_all_rows",
       "passed": true,
-      "actualCount": 700,
-      "expectedCount": 700
+      "actualCount": 2289,
+      "expectedCount": 2289
     },
     {
       "name": "all_file_navigation_targets",
@@ -152,7 +152,7 @@
     {
       "name": "manual_chapters_available",
       "passed": true,
-      "chapterCount": 17
+      "chapterCount": 18
     },
     {
       "name": "all_manual_pages_listed_on_homepage",
@@ -227,15 +227,19 @@
       "passed": true
     },
     {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
       "name": "all_manual_pages_open_and_images_render",
       "passed": true,
-      "chapterCount": 17,
+      "chapterCount": 18,
       "brokenImages": 0
     },
     {
       "name": "all_svg_files_render_offline",
       "passed": true,
-      "svgFiles": 733,
+      "svgFiles": 2324,
       "brokenSvg": 0
     },
     {
@@ -249,8 +253,8 @@
     {
       "name": "mobile_320_search",
       "passed": true,
-      "actualCount": 224,
-      "expectedCount": 224
+      "actualCount": 555,
+      "expectedCount": 555
     },
     {
       "name": "mobile_768_homepage_no_horizontal_overflow",
@@ -263,8 +267,8 @@
     {
       "name": "mobile_768_search",
       "passed": true,
-      "actualCount": 224,
-      "expectedCount": 224
+      "actualCount": 555,
+      "expectedCount": 555
     },
     {
       "name": "no_browser_javascript_errors",

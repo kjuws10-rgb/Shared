@@ -1,13 +1,13 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs">Git 원본</a></p><h1>Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs">Git 원본</a></p><h1>Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>334b3599651b2e8e0181fd4459bafaf3cddafff3</td></tr>
+<tr><td>원본 Commit</td><td>0219666f9053b907d96d7e0aa7d0c6c1be3a73d4</td></tr>
 <tr><td>원본 SHA256</td><td>0bc80bb0e523800765696d6ba42266ec811ac3406ac211aba5a6dec104a7e1b4</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
 <tr><td>원본 크기/행</td><td>2,597 bytes / 70 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
@@ -43,7 +43,7 @@
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
 <h3 id="L9">ConstructorDeclaration <code>.ctor</code> · L9–32</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L9-L32">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:9–32</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L9-L32">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:9–32</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusDialog(string, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -57,7 +57,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2875-L2875">Drilling.UI/CRootView.cs:2875–2875</a></td><td>new CInterfaceStatusDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L2875-L2875">Drilling.UI/CRootView.cs:2875–2875</a></td><td>new CInterfaceStatusDialog</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -83,7 +83,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L12">LocalFunctionStatement <code>SelectNumber</code> · L12–15</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L12-L15">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:12–15</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L12-L15">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:12–15</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int SelectNumber(Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -101,7 +101,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L17">LocalFunctionStatement <code>SelectNickName</code> · L17–20</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L17-L20">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:17–20</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L17-L20">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:17–20</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string SelectNickName(Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -119,7 +119,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L22">LocalFunctionStatement <code>BuildCInterfaceStatusRow</code> · L22–25</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L22-L25">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:22–25</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L22-L25">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:22–25</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow BuildCInterfaceStatusRow(Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -142,7 +142,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L34">MethodDeclaration <code>OnCloseClicked</code> · L34–37</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L34-L37">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:34–37</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L34-L37">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:34–37</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CInterfaceStatusDialog.OnCloseClicked(object, RoutedEventArgs)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -165,7 +165,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L41">ConstructorDeclaration <code>.ctor</code> · L41–50</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L41-L50">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:41–50</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L41-L50">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:41–50</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.CInterfaceStatusRow(Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -178,7 +178,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L24-L24">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:24–24</a></td><td>new CInterfaceStatusRow</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L24-L24">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:24–24</a></td><td>new CInterfaceStatusRow</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -211,7 +211,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L52">PropertyDeclaration <code>No</code> · L52–52</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L52-L52">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:52–52</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L52-L52">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:52–52</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.No</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -221,7 +221,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L52">GetAccessorDeclaration <code>get_No</code> · L52–52</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L52-L52">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:52–52</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L52-L52">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:52–52</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.No.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -231,7 +231,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L53">PropertyDeclaration <code>NickName</code> · L53–53</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L53-L53">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:53–53</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L53-L53">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:53–53</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.NickName</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -241,7 +241,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L53">GetAccessorDeclaration <code>get_NickName</code> · L53–53</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L53-L53">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:53–53</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L53-L53">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:53–53</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.NickName.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -251,7 +251,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L54">PropertyDeclaration <code>InterfaceType</code> · L54–54</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L54-L54">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:54–54</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L54-L54">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:54–54</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.InterfaceType</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -261,7 +261,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L54">GetAccessorDeclaration <code>get_InterfaceType</code> · L54–54</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L54-L54">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:54–54</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L54-L54">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:54–54</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.InterfaceType.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -271,7 +271,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L55">PropertyDeclaration <code>State</code> · L55–55</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L55-L55">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:55–55</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L55-L55">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:55–55</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.State</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -281,7 +281,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L55">GetAccessorDeclaration <code>get_State</code> · L55–55</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L55-L55">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:55–55</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L55-L55">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:55–55</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.State.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -291,7 +291,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L56">PropertyDeclaration <code>Endpoint</code> · L56–56</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L56-L56">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:56–56</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L56-L56">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:56–56</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.Endpoint</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -301,7 +301,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L56">GetAccessorDeclaration <code>get_Endpoint</code> · L56–56</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L56-L56">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:56–56</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L56-L56">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:56–56</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.Endpoint.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -311,7 +311,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L57">PropertyDeclaration <code>LastChangedText</code> · L57–57</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L57-L57">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:57–57</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L57-L57">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:57–57</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.LastChangedText</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -321,7 +321,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L57">GetAccessorDeclaration <code>get_LastChangedText</code> · L57–57</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L57-L57">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:57–57</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L57-L57">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:57–57</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.LastChangedText.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -331,7 +331,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L58">PropertyDeclaration <code>StateBrush</code> · L58–58</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L58-L58">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:58–58</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L58-L58">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:58–58</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Brush Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.StateBrush</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -341,7 +341,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L58">GetAccessorDeclaration <code>get_StateBrush</code> · L58–58</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L58-L58">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:58–58</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L58-L58">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:58–58</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Brush Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.StateBrush.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -351,7 +351,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L60">MethodDeclaration <code>ToStateText</code> · L60–68</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L60-L68">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:60–68</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L60-L68">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:60–68</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.CInterfaceStatusDialog.CInterfaceStatusRow.ToStateText(Drilling.Common.Interface.EN_COMM_STATE)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -364,7 +364,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L49-L49">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:49–49</a></td><td>ToStateText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs#L49-L49">Drilling.UI/Popup/CInterfaceStatusDialog.xaml.cs:49–49</a></td><td>ToStateText</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>

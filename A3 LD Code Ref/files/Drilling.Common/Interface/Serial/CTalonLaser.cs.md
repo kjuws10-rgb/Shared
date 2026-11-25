@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 73f3a2de798fff48de0f67ee34d85c2d2e068b13c8b9d797ce3d2b75ebce48db |
 | 파일 분류 | code |
 | 원본 크기/행 | 14,445 bytes / 390 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -86,7 +86,7 @@
 
 ### PropertyDeclaration `CommandNewLine` · L15–21
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:15–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L15-L21)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:15–21](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L15-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -101,7 +101,7 @@
 
 ### GetAccessorDeclaration `get_CommandNewLine` · L17–20
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:17–20](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L17-L20)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:17–20](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L17-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -122,7 +122,7 @@
 
 ### MethodDeclaration `FormatCommand` · L23–26
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:23–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L23-L26)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:23–26](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L23-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -141,7 +141,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L43-L43) | FormatCommand | True |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L43-L43) | FormatCommand | True |
 
 호출하는 대상과 해석 범위:
 
@@ -160,7 +160,7 @@
 
 ### MethodDeclaration `Execute` · L28–88
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:28–88](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L28-L88)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:28–88](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L28-L88)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -289,7 +289,7 @@ flowchart TD
 
 ### MethodDeclaration `ExpectsResponse` · L90–93
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:90–93](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L90-L93)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:90–93](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L90-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -308,8 +308,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:944–944](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L944-L944) | CTalonLaser.ExpectsResponse | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L139-L139) | ExpectsResponse | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:944–944](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L944-L944) | CTalonLaser.ExpectsResponse | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L139-L139) | ExpectsResponse | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -321,7 +321,7 @@ flowchart TD
 
 ### MethodDeclaration `Build` · L95–129
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:95–129](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L95-L129)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:95–129](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L95-L129)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -341,7 +341,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:903–903](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L903-L903) | CTalonLaser.Build | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:903–903](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L903-L903) | CTalonLaser.Build | False |
 
 호출하는 대상과 해석 범위:
 
@@ -371,7 +371,7 @@ flowchart TD
 
 ### MethodDeclaration `IsValidResponse` · L131–134
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:131–134](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L131-L134)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:131–134](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L131-L134)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -390,8 +390,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:946–946](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L946-L946) | CTalonLaser.IsValidResponse | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L139-L139) | IsValidResponse | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:946–946](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L946-L946) | CTalonLaser.IsValidResponse | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L139-L139) | IsValidResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -414,7 +414,7 @@ flowchart TD
 
 ### MethodDeclaration `Apply` · L136–263
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:136–263](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L136-L263)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:136–263](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L136-L263)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -437,9 +437,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:882–882](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L882-L882) | CTalonLaser.Apply | False |
-| [Drilling.Common/Interface/CInterfaceManager.cs:917–917](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L917-L917) | CTalonLaser.Apply | False |
-| [Drilling.Common/Interface/CInterfaceManager.cs:957–957](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L957-L957) | CTalonLaser.Apply | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:882–882](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L882-L882) | CTalonLaser.Apply | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:917–917](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L917-L917) | CTalonLaser.Apply | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:957–957](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L957-L957) | CTalonLaser.Apply | False |
 
 호출하는 대상과 해석 범위:
 
@@ -548,7 +548,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateSimulationResponse` · L265–289
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:265–289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L265-L289)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:265–289](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L265-L289)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -569,7 +569,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L138-L138) | CreateSimulationResponse | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L138-L138) | CreateSimulationResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -627,7 +627,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDouble` · L291–295
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:291–295](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L291-L295)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:291–295](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L291-L295)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -646,14 +646,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L195-L195) | ReadDouble | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L207-L207) | ReadDouble | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:211–211](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L211-L211) | ReadDouble | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L215-L215) | ReadDouble | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L219-L219) | ReadDouble | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L235-L235) | ReadDouble | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L243-L243) | ReadDouble | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:299–299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L299-L299) | ReadDouble | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L195-L195) | ReadDouble | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L207-L207) | ReadDouble | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:211–211](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L211-L211) | ReadDouble | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L215-L215) | ReadDouble | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L219-L219) | ReadDouble | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L235-L235) | ReadDouble | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L243-L243) | ReadDouble | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:299–299](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L299-L299) | ReadDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -677,7 +677,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadInt` · L297–300
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:297–300](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L297-L300)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:297–300](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L297-L300)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -696,12 +696,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L199-L199) | ReadInt | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L203-L203) | ReadInt | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L231-L231) | ReadInt | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L239-L239) | ReadInt | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L247-L247) | ReadInt | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L259-L259) | ReadInt | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L199-L199) | ReadInt | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L203-L203) | ReadInt | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L231-L231) | ReadInt | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L239-L239) | ReadInt | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L247-L247) | ReadInt | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L259-L259) | ReadInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -722,7 +722,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadBool` · L302–306
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:302–306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L302-L306)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:302–306](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L302-L306)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -741,8 +741,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:223–223](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L223-L223) | ReadBool | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L227-L227) | ReadBool | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:223–223](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L223-L223) | ReadBool | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L227-L227) | ReadBool | False |
 
 호출하는 대상과 해석 범위:
 
@@ -771,7 +771,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadLaserEmission` · L308–312
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:308–312](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L308-L312)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:308–312](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L308-L312)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -790,7 +790,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:251–251](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L251-L251) | ReadLaserEmission | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:251–251](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L251-L251) | ReadLaserEmission | False |
 
 호출하는 대상과 해석 범위:
 
@@ -817,7 +817,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadLeadingNumber` · L314–323
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:314–323](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L314-L323)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:314–323](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L314-L323)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -836,7 +836,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L293-L293) | ReadLeadingNumber | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L293-L293) | ReadLeadingNumber | False |
 
 호출하는 대상과 해석 범위:
 
@@ -864,7 +864,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesChar` · L316–319
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:316–319](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L316-L319)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:316–319](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L316-L319)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -898,7 +898,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetDiodeCurrent` · L328–328
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L328-L328)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L328-L328)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -913,7 +913,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetQsw` · L329–329
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L329-L329)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L329-L329)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -928,7 +928,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetEprf` · L330–330
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L330-L330)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L330-L330)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -943,7 +943,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetLaserOnOff` · L331–331
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L331-L331)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L331-L331)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -958,7 +958,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetShutterOpenClose` · L332–332
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L332-L332)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L332-L332)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -973,7 +973,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetGateOpenClose` · L333–333
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L333-L333)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L333-L333)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -988,7 +988,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetExtGateEnableDisable` · L334–334
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L334-L334)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L334-L334)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1003,7 +1003,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetShg` · L335–335
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L335-L335)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L335-L335)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1018,7 +1018,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetShgAutotune` · L336–336
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L336-L336)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L336-L336)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1033,7 +1033,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetQMode` · L337–337
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:337–337](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L337-L337)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:337–337](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L337-L337)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1048,7 +1048,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetDiodeCurrent` · L338–338
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L338-L338)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L338-L338)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1063,7 +1063,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetQsw` · L339–339
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L339-L339)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L339-L339)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1078,7 +1078,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetEprf` · L340–340
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L340-L340)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L340-L340)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1093,7 +1093,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetShutterOpenClose` · L341–341
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:341–341](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L341-L341)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:341–341](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L341-L341)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1108,7 +1108,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetGateOpenClose` · L342–342
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:342–342](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L342-L342)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:342–342](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L342-L342)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1123,7 +1123,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetExtGateEnableDisable` · L343–343
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L343-L343)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L343-L343)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1138,7 +1138,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetOutputPower` · L344–344
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L344-L344)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L344-L344)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1153,7 +1153,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetShg` · L345–345
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:345–345](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L345-L345)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:345–345](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L345-L345)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1168,7 +1168,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetShgAutotune` · L346–346
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L346-L346)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L346-L346)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1183,7 +1183,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetThgSpot` · L347–347
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L347-L347)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L347-L347)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1198,7 +1198,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetThgHour` · L348–348
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L348-L348)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L348-L348)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1213,7 +1213,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetQMode` · L349–349
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:349–349](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L349-L349)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:349–349](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L349-L349)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1228,7 +1228,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetDiodeTemp` · L350–350
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L350-L350)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L350-L350)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1243,7 +1243,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetTowerTemp` · L351–351
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L351-L351)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L351-L351)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1258,7 +1258,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetLaserOnOff` · L352–352
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:352–352](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L352-L352)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:352–352](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L352-L352)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1273,7 +1273,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `RequestStatusString` · L353–353
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L353-L353)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L353-L353)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1288,7 +1288,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `RequestStatusCode` · L354–354
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:354–354](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L354-L354)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:354–354](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L354-L354)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1303,7 +1303,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `RequestSave` · L355–355
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:355–355](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L355-L355)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:355–355](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L355-L355)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1318,7 +1318,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Ok` · L360–360
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:360–360](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L360-L360)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:360–360](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L360-L360)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1333,7 +1333,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Warning` · L361–361
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:361–361](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L361-L361)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:361–361](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L361-L361)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1348,7 +1348,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Error` · L362–362
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:362–362](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L362-L362)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:362–362](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L362-L362)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1363,7 +1363,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Timeout` · L363–363
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L363-L363)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L363-L363)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1378,7 +1378,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `InvalidResponse` · L364–364
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L364-L364)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L364-L364)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1393,7 +1393,7 @@ flowchart TD
 
 ### PropertyDeclaration `Empty` · L389–389
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:389–389](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L389-L389)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:389–389](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L389-L389)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1420,7 +1420,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Empty` · L389–389
 
-[Drilling.Common/Interface/Serial/CTalonLaser.cs:389–389](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CTalonLaser.cs#L389-L389)
+[Drilling.Common/Interface/Serial/CTalonLaser.cs:389–389](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CTalonLaser.cs#L389-L389)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

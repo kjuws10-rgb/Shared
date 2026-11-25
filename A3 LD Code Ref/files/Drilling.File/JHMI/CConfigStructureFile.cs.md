@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 6703e663836345c24527cde64ebec2994fa59443f19285374abff3f62ac379be |
 | 파일 분류 | code |
 | 원본 크기/행 | 18,185 bytes / 470 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -69,7 +69,7 @@
 
 ### FieldDeclaration `RequiredCsvFiles` · L7–69
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:7–69](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L7-L69)
+[Drilling.File/JHMI/CConfigStructureFile.cs:7–69](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L7-L69)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -109,7 +109,7 @@
 
 ### FieldDeclaration `OptionalValueFiles` · L70–70
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L70-L70)
+[Drilling.File/JHMI/CConfigStructureFile.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L70-L70)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -137,7 +137,7 @@
 
 ### MethodDeclaration `Validate` · L71–98
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:71–98](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L71-L98)
+[Drilling.File/JHMI/CConfigStructureFile.cs:71–98](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L71-L98)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -220,7 +220,7 @@ flowchart TD
 
 ### MethodDeclaration `CheckRoot` · L100–105
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:100–105](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L100-L105)
+[Drilling.File/JHMI/CConfigStructureFile.cs:100–105](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L100-L105)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -233,7 +233,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L76-L76) | CheckRoot | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L76-L76) | CheckRoot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -261,7 +261,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsureDirectory` · L107–118
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:107–118](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L107-L118)
+[Drilling.File/JHMI/CConfigStructureFile.cs:107–118](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L107-L118)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -282,9 +282,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L79-L79) | EnsureDirectory | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L80-L80) | EnsureDirectory | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L81-L81) | EnsureDirectory | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L79-L79) | EnsureDirectory | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L80-L80) | EnsureDirectory | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L81-L81) | EnsureDirectory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -330,7 +330,7 @@ flowchart TD
 
 ### MethodDeclaration `CheckCsv` · L120–139
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:120–139](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L120-L139)
+[Drilling.File/JHMI/CConfigStructureFile.cs:120–139](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L120-L139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -349,7 +349,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L86-L86) | CheckCsv | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L86-L86) | CheckCsv | False |
 
 호출하는 대상과 해석 범위:
 
@@ -404,7 +404,7 @@ flowchart TD
 
 ### MethodDeclaration `CheckValueCsv` · L141–160
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:141–160](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L141-L160)
+[Drilling.File/JHMI/CConfigStructureFile.cs:141–160](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L141-L160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -423,7 +423,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L92-L92) | CheckValueCsv | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L92-L92) | CheckValueCsv | False |
 
 호출하는 대상과 해석 범위:
 
@@ -478,7 +478,7 @@ flowchart TD
 
 ### MethodDeclaration `CheckRecipeValueFiles` · L162–170
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:162–170](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L162-L170)
+[Drilling.File/JHMI/CConfigStructureFile.cs:162–170](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L162-L170)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -497,7 +497,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L95-L95) | CheckRecipeValueFiles | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L95-L95) | CheckRecipeValueFiles | False |
 
 호출하는 대상과 해석 범위:
 
@@ -516,7 +516,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesCount` · L164–167
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:164–167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L164-L167)
+[Drilling.File/JHMI/CConfigStructureFile.cs:164–167](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L164-L167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -543,7 +543,7 @@ flowchart TD
 
 ### MethodDeclaration `CheckManualValueFiles` · L172–175
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:172–175](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L172-L175)
+[Drilling.File/JHMI/CConfigStructureFile.cs:172–175](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L172-L175)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -562,7 +562,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L96-L96) | CheckManualValueFiles | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L96-L96) | CheckManualValueFiles | False |
 
 호출하는 대상과 해석 범위:
 
@@ -581,7 +581,7 @@ flowchart TD
 
 ### MethodDeclaration `CheckCsvValueFiles` · L177–221
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:177–221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L177-L221)
+[Drilling.File/JHMI/CConfigStructureFile.cs:177–221](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L177-L221)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -605,7 +605,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L174-L174) | CheckCsvValueFiles | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L174-L174) | CheckCsvValueFiles | False |
 
 호출하는 대상과 해석 범위:
 
@@ -682,7 +682,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectPath` · L192–195
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:192–195](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L192-L195)
+[Drilling.File/JHMI/CConfigStructureFile.cs:192–195](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L192-L195)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -709,7 +709,7 @@ flowchart TD
 
 ### MethodDeclaration `CheckLineValueFiles` · L223–279
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:223–279](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L223-L279)
+[Drilling.File/JHMI/CConfigStructureFile.cs:223–279](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L223-L279)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -733,7 +733,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:169–169](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L169-L169) | CheckLineValueFiles | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:169–169](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L169-L169) | CheckLineValueFiles | False |
 
 호출하는 대상과 해석 범위:
 
@@ -828,7 +828,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectPath` · L238–241
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:238–241](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L238-L241)
+[Drilling.File/JHMI/CConfigStructureFile.cs:238–241](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L238-L241)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -855,7 +855,7 @@ flowchart TD
 
 ### MethodDeclaration `GetPath` · L281–284
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:281–284](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L281-L284)
+[Drilling.File/JHMI/CConfigStructureFile.cs:281–284](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L281-L284)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -874,11 +874,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L110-L110) | GetPath | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L122-L122) | GetPath | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L143-L143) | GetPath | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:186–186](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L186-L186) | GetPath | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L232-L232) | GetPath | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L110-L110) | GetPath | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L122-L122) | GetPath | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L143-L143) | GetPath | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:186–186](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L186-L186) | GetPath | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L232-L232) | GetPath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -899,7 +899,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizePath` · L286–289
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:286–289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L286-L289)
+[Drilling.File/JHMI/CConfigStructureFile.cs:286–289](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L286-L289)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -918,8 +918,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L102-L102) | NormalizePath | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L283-L283) | NormalizePath | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L102-L102) | NormalizePath | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L283-L283) | NormalizePath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -938,7 +938,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateTabNameKey` · L291–299
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:291–299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L291-L299)
+[Drilling.File/JHMI/CConfigStructureFile.cs:291–299](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L291-L299)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -972,7 +972,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L293–296
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:293–296](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L293-L296)
+[Drilling.File/JHMI/CConfigStructureFile.cs:293–296](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L293-L296)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1016,7 +1016,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateDeviceNumberKey` · L301–309
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:301–309](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L301-L309)
+[Drilling.File/JHMI/CConfigStructureFile.cs:301–309](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L301-L309)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1050,7 +1050,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L303–306
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:303–306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L303-L306)
+[Drilling.File/JHMI/CConfigStructureFile.cs:303–306](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L303-L306)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1094,7 +1094,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateNameKey` · L311–319
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:311–319](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L311-L319)
+[Drilling.File/JHMI/CConfigStructureFile.cs:311–319](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L311-L319)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1128,7 +1128,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L313–316
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:313–316](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L313-L316)
+[Drilling.File/JHMI/CConfigStructureFile.cs:313–316](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L313-L316)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1166,7 +1166,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateGroupKey` · L321–329
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:321–329](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L321-L329)
+[Drilling.File/JHMI/CConfigStructureFile.cs:321–329](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L321-L329)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1200,7 +1200,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L323–326
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:323–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L323-L326)
+[Drilling.File/JHMI/CConfigStructureFile.cs:323–326](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L323-L326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1244,7 +1244,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateIdKey` · L331–339
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:331–339](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L331-L339)
+[Drilling.File/JHMI/CConfigStructureFile.cs:331–339](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L331-L339)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1278,7 +1278,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L333–336
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:333–336](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L333-L336)
+[Drilling.File/JHMI/CConfigStructureFile.cs:333–336](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L333-L336)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1316,7 +1316,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateIndexKey` · L341–349
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:341–349](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L341-L349)
+[Drilling.File/JHMI/CConfigStructureFile.cs:341–349](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L341-L349)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1350,7 +1350,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L343–346
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:343–346](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L343-L346)
+[Drilling.File/JHMI/CConfigStructureFile.cs:343–346](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L343-L346)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1388,7 +1388,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateStepKey` · L351–359
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:351–359](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L351-L359)
+[Drilling.File/JHMI/CConfigStructureFile.cs:351–359](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L351-L359)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1422,7 +1422,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L353–356
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:353–356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L353-L356)
+[Drilling.File/JHMI/CConfigStructureFile.cs:353–356](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L353-L356)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1460,7 +1460,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateUniqueKey` · L361–382
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:361–382](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L361-L382)
+[Drilling.File/JHMI/CConfigStructureFile.cs:361–382](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L361-L382)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1482,13 +1482,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L298-L298) | ValidateUniqueKey | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L308-L308) | ValidateUniqueKey | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L318-L318) | ValidateUniqueKey | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L328-L328) | ValidateUniqueKey | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L338-L338) | ValidateUniqueKey | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L348-L348) | ValidateUniqueKey | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L358-L358) | ValidateUniqueKey | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L298-L298) | ValidateUniqueKey | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L308-L308) | ValidateUniqueKey | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L318-L318) | ValidateUniqueKey | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L328-L328) | ValidateUniqueKey | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L338-L338) | ValidateUniqueKey | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L348-L348) | ValidateUniqueKey | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L358-L358) | ValidateUniqueKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1540,7 +1540,7 @@ flowchart TD
 
 ### MethodDeclaration `GetFirstValue` · L384–396
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:384–396](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L384-L396)
+[Drilling.File/JHMI/CConfigStructureFile.cs:384–396](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L384-L396)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1560,7 +1560,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L305-L305) | GetFirstValue | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L305-L305) | GetFirstValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1597,7 +1597,7 @@ flowchart TD
 
 ### MethodDeclaration `SplitCsvLine` · L398–436
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:398–436](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L398-L436)
+[Drilling.File/JHMI/CConfigStructureFile.cs:398–436](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L398-L436)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1618,7 +1618,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L265-L265) | SplitCsvLine | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L265-L265) | SplitCsvLine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1699,7 +1699,7 @@ flowchart TD
 
 ### MethodDeclaration `Csv` · L438–446
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:438–446](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L438-L446)
+[Drilling.File/JHMI/CConfigStructureFile.cs:438–446](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L438-L446)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1721,13 +1721,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:10–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L10-L32) | Csv | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L34-L34) | Csv | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:36–54](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L36-L54) | Csv | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:56–61](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L56-L61) | Csv | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L63-L63) | Csv | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L65-L65) | Csv | False |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L67-L67) | Csv | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:10–32](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L10-L32) | Csv | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L34-L34) | Csv | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:36–54](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L36-L54) | Csv | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:56–61](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L56-L61) | Csv | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L63-L63) | Csv | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L65-L65) | Csv | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L67-L67) | Csv | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1746,7 +1746,7 @@ flowchart TD
 
 ### MethodDeclaration `ValueCsv` · L448–456
 
-[Drilling.File/JHMI/CConfigStructureFile.cs:448–456](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L448-L456)
+[Drilling.File/JHMI/CConfigStructureFile.cs:448–456](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L448-L456)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1768,7 +1768,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CConfigStructureFile.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CConfigStructureFile.cs#L70-L70) | ValueCsv | False |
+| [Drilling.File/JHMI/CConfigStructureFile.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CConfigStructureFile.cs#L70-L70) | ValueCsv | False |
 
 호출하는 대상과 해석 범위:
 

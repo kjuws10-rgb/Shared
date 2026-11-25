@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | e1ffed980afb9a56e23d8f6ebbe252a93a7eeaed75e9276537dddd3773fc62f9 |
 | 파일 분류 | code |
 | 원본 크기/행 | 4,395 bytes / 112 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -54,7 +54,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `Panel` · L12–12
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L12-L12)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -69,7 +69,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_Panel` · L12–12
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L12-L12)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -84,7 +84,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L14–23
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:14–23](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L14-L23)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:14–23](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L14-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -103,7 +103,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2988–2988](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2988-L2988) | new CAlarmPopupDialog | False |
+| [Drilling.UI/CRootView.cs:2988–2988](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L2988-L2988) | new CAlarmPopupDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -133,7 +133,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `ApplySeverityTheme` · L25–39
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:25–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L25-L39)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:25–39](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L25-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -152,7 +152,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L20-L20) | ApplySeverityTheme | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L20-L20) | ApplySeverityTheme | False |
 
 호출하는 대상과 해석 범위:
 
@@ -206,7 +206,7 @@ flowchart TD
 
 ### MethodDeclaration `Brush` · L41–46
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:41–46](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L41-L46)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:41–46](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L41-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -227,13 +227,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L32-L32) | Brush | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L33-L33) | Brush | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L34-L34) | Brush | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L35-L35) | Brush | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L36-L36) | Brush | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L37-L37) | Brush | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L38-L38) | Brush | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L32-L32) | Brush | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L33-L33) | Brush | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L34-L34) | Brush | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L35-L35) | Brush | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L36-L36) | Brush | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L37-L37) | Brush | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L38-L38) | Brush | False |
 
 호출하는 대상과 해석 범위:
 
@@ -258,7 +258,7 @@ flowchart TD
 
 ### MethodDeclaration `CloseClicked` · L48–48
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L48-L48)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L48-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -292,7 +292,7 @@ flowchart TD
 
 ### FieldDeclaration `_revision` · L53–53
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L53-L53)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L53-L53)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -313,7 +313,7 @@ flowchart TD
 
 ### FieldDeclaration `_resetting` · L54–54
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L54-L54)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L54-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -328,7 +328,7 @@ flowchart TD
 
 ### EventFieldDeclaration `PropertyChanged` · L55–55
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L55-L55)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L55-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -343,7 +343,7 @@ flowchart TD
 
 ### PropertyDeclaration `Rows` · L56–56
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L56-L56)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L56-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -358,7 +358,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Rows` · L56–56
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L56-L56)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L56-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -373,7 +373,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Rows` · L56–56
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L56-L56)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L56-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -394,7 +394,7 @@ flowchart TD
 
 ### PropertyDeclaration `Summary` · L57–57
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L57-L57)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L57-L57)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -423,7 +423,7 @@ flowchart TD
 
 ### PropertyDeclaration `RecoveryStatus` · L58–58
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L58-L58)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L58-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -438,7 +438,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_RecoveryStatus` · L58–58
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L58-L58)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L58-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -453,7 +453,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_RecoveryStatus` · L58–58
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L58-L58)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L58-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -474,7 +474,7 @@ flowchart TD
 
 ### PropertyDeclaration `ResetCommand` · L59–80
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:59–80](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L59-L80)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:59–80](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L59-L80)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -537,7 +537,7 @@ flowchart TD
 
 ### FieldDeclaration `_resetCommand` · L82–82
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L82-L82)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L82-L82)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -552,7 +552,7 @@ flowchart TD
 
 ### MethodDeclaration `SetRecoveryStatus` · L83–89
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:83–89](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L83-L89)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:83–89](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L83-L89)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -571,9 +571,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2987–2987](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2987-L2987) | panel.SetRecoveryStatus | False |
-| [Drilling.UI/CRootView.cs:3023–3023](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3023-L3023) | .Panel.SetRecoveryStatus | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L72-L72) | SetRecoveryStatus | False |
+| [Drilling.UI/CRootView.cs:2987–2987](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L2987-L2987) | panel.SetRecoveryStatus | False |
+| [Drilling.UI/CRootView.cs:3023–3023](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L3023-L3023) | .Panel.SetRecoveryStatus | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L72-L72) | SetRecoveryStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -607,7 +607,7 @@ flowchart TD
 
 ### MethodDeclaration `Refresh` · L91–108
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:91–108](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L91-L108)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:91–108](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L91-L108)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -620,12 +620,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2979–2979](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2979-L2979) | open.Panel.Refresh | False |
-| [Drilling.UI/CRootView.cs:3012–3012](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3012-L3012) | .Panel.Refresh | False |
-| [Drilling.UI/CRootView.cs:3143–3143](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3143-L3143) | .Panel.Refresh | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L19-L19) | panel.Refresh | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L68-L68) | Refresh | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L73-L73) | Refresh | False |
+| [Drilling.UI/CRootView.cs:2979–2979](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L2979-L2979) | open.Panel.Refresh | False |
+| [Drilling.UI/CRootView.cs:3012–3012](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L3012-L3012) | .Panel.Refresh | False |
+| [Drilling.UI/CRootView.cs:3143–3143](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L3143-L3143) | .Panel.Refresh | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L19-L19) | panel.Refresh | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L68-L68) | Refresh | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L73-L73) | Refresh | False |
 
 호출하는 대상과 해석 범위:
 

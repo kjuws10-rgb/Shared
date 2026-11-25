@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 780a694918743578bd81b3c69a687d1b1ae6bd60972bd17637bcbb0eabe0095f |
 | 파일 분류 | code |
 | 원본 크기/행 | 4,664 bytes / 125 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CCorrectionView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CCorrectionView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -43,7 +43,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastCorrectionReviewTab` · L10–10
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CCorrectionView.xaml.cs#L10-L10)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CCorrectionView.xaml.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -58,7 +58,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_restoringCorrectionReviewTab` · L11–11
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CCorrectionView.xaml.cs#L11-L11)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CCorrectionView.xaml.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -73,7 +73,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L13–16
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:13–16](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CCorrectionView.xaml.cs#L13-L16)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:13–16](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CCorrectionView.xaml.cs#L13-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -100,7 +100,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `CorrectionReviewTabControl_SelectionChanged` · L18–38
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:18–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CCorrectionView.xaml.cs#L18-L38)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:18–38](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CCorrectionView.xaml.cs#L18-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -124,7 +124,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | --- | --- | --- | --- |
 | 30 | ReferenceEquals | candidate | OverloadResolutionFailure |
 | 32 | RestoreCorrectionReviewTab | resolved | void Drilling.UI.Views.CCorrectionView.RestoreCorrectionReviewTab(TabControl) · Drilling.UI/Views/CCorrectionView.xaml.cs:40 |
-| 33 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
+| 33 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:110 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -161,7 +161,7 @@ flowchart TD
 
 ### MethodDeclaration `RestoreCorrectionReviewTab` · L40–48
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:40–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CCorrectionView.xaml.cs#L40-L48)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:40–48](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CCorrectionView.xaml.cs#L40-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -180,7 +180,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CCorrectionView.xaml.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CCorrectionView.xaml.cs#L32-L32) | RestoreCorrectionReviewTab | False |
+| [Drilling.UI/Views/CCorrectionView.xaml.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CCorrectionView.xaml.cs#L32-L32) | RestoreCorrectionReviewTab | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -205,7 +205,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectOutputViewerShotFromMap` · L50–60
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:50–60](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CCorrectionView.xaml.cs#L50-L60)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:50–60](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CCorrectionView.xaml.cs#L50-L60)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -255,7 +255,7 @@ flowchart TD
 
 ### MethodDeclaration `OutputOffsetGrid_SelectionChanged` · L62–77
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:62–77](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CCorrectionView.xaml.cs#L62-L77)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:62–77](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CCorrectionView.xaml.cs#L62-L77)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -310,7 +310,7 @@ flowchart TD
 
 ### MethodDeclaration `OutputViewerCellPreviewLabel_MouseMove` · L79–90
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:79–90](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CCorrectionView.xaml.cs#L79-L90)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:79–90](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CCorrectionView.xaml.cs#L79-L90)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -363,7 +363,7 @@ flowchart TD
 
 ### MethodDeclaration `OutputViewerCellPreviewLabel_MouseLeave` · L92–95
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:92–95](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CCorrectionView.xaml.cs#L92-L95)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:92–95](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CCorrectionView.xaml.cs#L92-L95)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -397,7 +397,7 @@ flowchart TD
 
 ### MethodDeclaration `PositionOutputViewerPreviewHoverTip` · L97–118
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:97–118](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CCorrectionView.xaml.cs#L97-L118)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:97–118](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CCorrectionView.xaml.cs#L97-L118)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -469,7 +469,7 @@ flowchart TD
 
 ### MethodDeclaration `HideOutputViewerPreviewHoverTip` · L120–124
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:120–124](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CCorrectionView.xaml.cs#L120-L124)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:120–124](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CCorrectionView.xaml.cs#L120-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -482,8 +482,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CCorrectionView.xaml.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CCorrectionView.xaml.cs#L83-L83) | HideOutputViewerPreviewHoverTip | False |
-| [Drilling.UI/Views/CCorrectionView.xaml.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CCorrectionView.xaml.cs#L94-L94) | HideOutputViewerPreviewHoverTip | False |
+| [Drilling.UI/Views/CCorrectionView.xaml.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CCorrectionView.xaml.cs#L83-L83) | HideOutputViewerPreviewHoverTip | False |
+| [Drilling.UI/Views/CCorrectionView.xaml.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CCorrectionView.xaml.cs#L94-L94) | HideOutputViewerPreviewHoverTip | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 

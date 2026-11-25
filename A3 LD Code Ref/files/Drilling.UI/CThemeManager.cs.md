@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 62cfa74dec098d8e3ce6ead2d3fc803b88fa20ede22e2871cd394e70f66c1931 |
 | 파일 분류 | code |
 | 원본 크기/행 | 1,503 bytes / 45 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CThemeManager.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CThemeManager.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -42,7 +42,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `LightThemeSource` · L6–6
 
-[Drilling.UI/CThemeManager.cs:6–6](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CThemeManager.cs#L6-L6)
+[Drilling.UI/CThemeManager.cs:6–6](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CThemeManager.cs#L6-L6)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -63,7 +63,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `DarkThemeSource` · L7–7
 
-[Drilling.UI/CThemeManager.cs:7–7](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CThemeManager.cs#L7-L7)
+[Drilling.UI/CThemeManager.cs:7–7](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CThemeManager.cs#L7-L7)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -84,7 +84,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `CurrentTheme` · L8–8
 
-[Drilling.UI/CThemeManager.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CThemeManager.cs#L8-L8)
+[Drilling.UI/CThemeManager.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CThemeManager.cs#L8-L8)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -99,7 +99,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_CurrentTheme` · L8–8
 
-[Drilling.UI/CThemeManager.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CThemeManager.cs#L8-L8)
+[Drilling.UI/CThemeManager.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CThemeManager.cs#L8-L8)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -114,7 +114,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_CurrentTheme` · L8–8
 
-[Drilling.UI/CThemeManager.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CThemeManager.cs#L8-L8)
+[Drilling.UI/CThemeManager.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CThemeManager.cs#L8-L8)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -135,7 +135,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `Apply` · L10–31
 
-[Drilling.UI/CThemeManager.cs:10–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CThemeManager.cs#L10-L31)
+[Drilling.UI/CThemeManager.cs:10–31](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CThemeManager.cs#L10-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -154,8 +154,8 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L171-L171) | CThemeManager.Apply | False |
-| [Drilling.UI/CThemeManager.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CThemeManager.cs#L36-L36) | Apply | False |
+| [Drilling.UI/CRootView.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L171-L171) | CThemeManager.Apply | False |
+| [Drilling.UI/CThemeManager.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CThemeManager.cs#L36-L36) | Apply | False |
 
 호출하는 대상과 해석 범위:
 
@@ -212,7 +212,7 @@ flowchart TD
 
 ### MethodDeclaration `Toggle` · L33–38
 
-[Drilling.UI/CThemeManager.cs:33–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CThemeManager.cs#L33-L38)
+[Drilling.UI/CThemeManager.cs:33–38](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CThemeManager.cs#L33-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -225,7 +225,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:689–689](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L689-L689) | CThemeManager.Toggle | False |
+| [Drilling.UI/CRootView.cs:689–689](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L689-L689) | CThemeManager.Toggle | False |
 
 호출하는 대상과 해석 범위:
 
@@ -247,7 +247,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Light` · L43–43
 
-[Drilling.UI/CThemeManager.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CThemeManager.cs#L43-L43)
+[Drilling.UI/CThemeManager.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CThemeManager.cs#L43-L43)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -262,7 +262,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Dark` · L44–44
 
-[Drilling.UI/CThemeManager.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CThemeManager.cs#L44-L44)
+[Drilling.UI/CThemeManager.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CThemeManager.cs#L44-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

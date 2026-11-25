@@ -4,16 +4,16 @@
 
 - [오프라인 HTML 목차](index.html) · [전체 파일 목차](FILE_INDEX.md)
 - [전체 구조 그림](diagrams/architecture.svg) · [Offline Studio 첨부 방법](offline-studio/README.md)
-- [원본 저장소](https://github.com/kjuws10-rgb/A3Drilling) · 기준 master Commit `334b3599651b2e8e0181fd4459bafaf3cddafff3`
+- [원본 저장소](https://github.com/kjuws10-rgb/A3Drilling) · 기준 master Commit `0219666f9053b907d96d7e0aa7d0c6c1be3a73d4`
 
 |범위|수량|
 |---|---:|
-|Git 추적 파일/개별 문서|700 / 700|
-|C#|158|
-|타입/멤버|941 / 16511|
-|호출 구문|43446|
-|전체 행 주석 해설본|353파일|
-|RAG 근거 레코드|32191|
+|Git 추적 파일/개별 문서|2289 / 2289|
+|C#|159|
+|타입/멤버|946 / 16543|
+|호출 구문|43603|
+|전체 행 주석 해설본|1379파일|
+|RAG 근거 레코드|373996|
 
 ## 읽는 순서
 
@@ -33,6 +33,7 @@
 - [07. 변경 영향 검토와 Offline Studio에서 이 문서를 쓰는 방법](manual/architecture/07-change-impact-and-offline-reference.md)
 - [08. 알람 원인 분석: 전후 로그에서 무엇을 알 수 있는가](manual/architecture/08-alarm-cause-analysis.md)
 - [09. 로그 서비스·PM 이력·Review 추적을 끝까지 읽기](manual/architecture/09_Log_PM_%ED%81%90%EC%99%80_%EC%9D%B4%EB%A0%A5%EC%B6%94%EC%A0%81.md)
+- [10. Stage Glass Data에서 Product까지: WF600·PPID·공정 판정의 분리](manual/architecture/10-stage-glass-data-and-product-fields.md)
 - [A3 전체 구조·데이터 흐름 상세 안내](manual/architecture/README.md)
 - [Review 계획과 좌표계: 설계 Shot이 카메라 측정점이 되는 과정](manual/review/01_Review_%EA%B3%84%ED%9A%8D%EA%B3%BC_%EC%A2%8C%ED%91%9C%EA%B3%84.md)
 - [Masking·Sampling·IOF: 검사점 제외와 실제 이동을 구별하기](manual/review/02_Masking_Sampling_IOF.md)

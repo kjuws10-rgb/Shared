@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="900" viewBox="0 0 1280 900" role="img" aria-labelledby="title desc">
+<title id="title">A3Drilling Stage 기판 정보와 기존 가공·Review 통합 흐름</title>
+<desc id="desc">Stage 43개 제품 필드는 Product 식별정보로 보관된다. 선택 Recipe와 최신 보정 파일은 기존 좌표와 Review를 만든다. 수신 PPID는 자동 Recipe 전환이 아니다.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#587086"/></marker><style>
+text{font-family:'Malgun Gothic','Noto Sans KR',sans-serif;fill:#203448}
+.title{font-size:25px;font-weight:700}.sub{font-size:15px;fill:#526a7d}.label{font-size:18px;font-weight:700}.small{font-size:14px}.node{stroke-width:1.5;rx:12}.new{fill:#e8f5f1;stroke:#3e947d}.old{fill:#eef4fb;stroke:#6f95b9}.warn{fill:#fff5df;stroke:#c49b43}.edge{fill:none;stroke:#587086;stroke-width:2;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}
+</style></defs>
+<rect width="1280" height="900" fill="#f8fafc"/>
+<text x="40" y="48" class="title">Stage 기판 정보 수신 + 기존 가공·Review 데이터 흐름</text>
+<text x="40" y="78" class="sub">master 0219666 · 비교 334b359 → 0219666 · 2026-11-25 · 소스 정적 분석</text>
+<rect x="35" y="109" width="1210" height="330" rx="18" fill="#f0f7f4" stroke="#cadfd5"/>
+<text x="57" y="139" class="label">이번 코드 변경: 식별정보의 입력·보관·표시</text>
+<rect x="60" y="165" width="235" height="112" class="node new"/>
+<text x="80" y="198" class="label">Stage / MELSEC</text><text x="80" y="224" class="small">43개 제품 필드 · 44개 map</text><text x="80" y="248" class="small">WF600~WF767 · 360 WORD</text>
+<rect x="350" y="165" width="230" height="112" class="node new"/>
+<text x="370" y="198" class="label">새 poll → 캐시 복사</text><text x="370" y="224" class="small">전체 Valid · 필수 ID 검사</text><text x="370" y="248" class="small">기본 map의 연속 block</text>
+<rect x="635" y="165" width="240" height="112" class="node new"/>
+<text x="655" y="198" class="label">Monitor 기판 생성</text><text x="655" y="224" class="small">Stage / Dummy / 취소</text><text x="655" y="248" class="small">읽기 실패는 생성 실패 안내</text>
+<rect x="930" y="165" width="280" height="112" class="node new"/>
+<text x="950" y="198" class="label">Product · CSV · Monitor</text><text x="950" y="224" class="small">Glass / Lot / PPID / 원 판정</text><text x="950" y="248" class="small">PRODUCT_RESULT 별도 관리</text>
+<path d="M295 220H350M580 220H635M875 220H930" class="edge"/>
+<rect x="350" y="310" width="860" height="95" class="node warn"/>
+<text x="373" y="343" class="label">PPID 수신 ≠ Recipe 자동 선택 · Auto Job Change</text>
+<text x="373" y="372" class="small">43개 필드는 제품 정보이며, GLASS_SIZE·THICKNESS도 공정 치수로 자동 적용하지 않음</text>
+<rect x="35" y="460" width="1210" height="356" rx="18" fill="#f0f4fa" stroke="#ced9e6"/>
+<text x="57" y="490" class="label">기존 계산 통로: 소스 알고리즘은 유지, 실제 입력 파일 변경은 영향 있음</text>
+<rect x="60" y="520" width="245" height="105" class="node old"/>
+<text x="80" y="552" class="label">선택 Recipe + Setting</text><text x="80" y="579" class="small">JHMI · Cell / Shot / Beam</text><text x="80" y="603" class="small">Head 배정 · Masking</text>
+<rect x="365" y="520" width="245" height="105" class="node old"/>
+<text x="385" y="552" class="label">Station 가공 준비</text><text x="385" y="579" class="small">최신 Review / Align 보정</text><text x="385" y="603" class="small">A1 Script 생성 파일</text>
+<rect x="670" y="520" width="245" height="105" class="node old"/>
+<text x="690" y="552" class="label">Review Plan / Vision</text><text x="690" y="579" class="small">Sampling Rule · 위치 계산</text><text x="690" y="603" class="small">Glass·PPID 일치 확인</text>
+<rect x="975" y="520" width="235" height="105" class="node old"/>
+<text x="995" y="552" class="label">ReviewResult</text><text x="995" y="579" class="small">측정 결과 CSV / Product</text><text x="995" y="603" class="small">측정과 보정은 다른 자료</text>
+<path d="M305 572H365M610 572H670M915 572H975" class="edge"/>
+<path d="M1070 277V454H792V520" class="edge dash"/>
+<text x="830" y="444" class="small">식별 연결 확인</text>
+<rect x="365" y="679" width="550" height="96" class="node warn"/>
+<text x="387" y="713" class="label">Correction Offset 계산·저장 → 모델 최신 CSV</text><text x="387" y="744" class="small">이번에 Review CSV 109개 추가 · Recipe Align·실행 옵션 변경</text>
+<path d="M1093 625V728H915M487 679V625" class="edge"/>
+<text x="40" y="852" class="small">운영 레코드·세션 값 비공개 · Script 원문/생성 자료 구분 · 장비/Script 실행 0 · 빌드 0</text>
+<text x="40" y="878" class="small">초록: 새 식별정보 경로 / 파랑: 기존 계산 경로 / 노랑: 구분·검증이 필요한 경계</text>
+</svg>

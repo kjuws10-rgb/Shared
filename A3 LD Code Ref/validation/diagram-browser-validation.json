@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "a3-independent-diagram-browser/1",
+  "passed": true,
+  "checks": [
+    {
+      "name": "stage-glass-offline.png_rendered",
+      "passed": true
+    },
+    {
+      "name": "integrated-flow-offline.png_rendered",
+      "passed": true
+    },
+    {
+      "name": "no_external_network_requests",
+      "passed": true
+    },
+    {
+      "name": "no_browser_javascript_errors",
+      "passed": true
+    }
+  ],
+  "images": [
+    {
+      "name": "stage-glass-offline.png",
+      "sourceFile": "<private-run>\\staging\\A3Ref\\manual\\architecture\\diagrams\\10-stage-glass.svg",
+      "sourceSha256": "c65db53c9d5a6549e75bdbf146d8d4d40e1601b36900bf43aa29410f91ee7693"
+    },
+    {
+      "name": "integrated-flow-offline.png",
+      "sourceFile": "<private-run>\\report\\diagrams\\integrated.svg",
+      "sourceSha256": "fe0bcdfd3580172e2e84098bee4652866596ae4dcfca674566f06524cc84d4cd"
+    }
+  ],
+  "externalRequests": [],
+  "javascriptErrors": [],
+  "scope": "Two actual frozen SVGs rendered through temporary offline HTML in headless Chromium. Equipment application/scripts/SDK not executed."
+}

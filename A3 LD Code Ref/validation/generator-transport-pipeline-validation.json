@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "a3-independent-transport-pipeline/1",
+  "passed": true,
+  "checks": [
+    {
+      "name": "real_pipeline_with_forced_transport_split_passes_complete_validator",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "optional_transport_has_multiple_real_parts",
+      "passed": true,
+      "parts": 8,
+      "fixtureByteLimit": 3600
+    },
+    {
+      "name": "optional_index_links_every_part_once",
+      "passed": true
+    },
+    {
+      "name": "pipeline_markdown_parts_cover_every_optional_jsonl_record_exactly_once",
+      "passed": true,
+      "optionalRecords": 17
+    },
+    {
+      "name": "valid_and_malformed_operational_json_are_schema_only_without_annotations",
+      "passed": true
+    },
+    {
+      "name": "operational_scalar_values_dynamic_keys_and_malformed_raw_are_not_published",
+      "passed": true
+    },
+    {
+      "name": "complete_validator_rejects_broken_shard_provenance_or_routing",
+      "passed": true
+    },
+    {
+      "name": "complete_validator_rejects_new_replacement_character_in_shard",
+      "passed": true
+    },
+    {
+      "name": "restored_pipeline_passes_after_both_fault_injections",
+      "passed": true
+    },
+    {
+      "name": "synthetic_source_bytes_and_git_status_are_unchanged",
+      "passed": true
+    }
+  ],
+  "scope": "Complete Builder.run -> optional transport parts -> complete validate, using a synthetic temporary Git repository and reduced transport threshold. No operational source data, equipment project build, vendor binary or hardware execution.",
+  "toolCodeSha256": {
+    "build_reference.py": "3728c3e8e69a8d2cc2bbb3997f633435bcb589568e6032b2c8fba8274d2a3bcc",
+    "validate_reference.py": "7614b889660d67d5f6e2d62aba5624e2bbf2662972bb920ae74a9d707ff5a821",
+    "test_reference.py": "4ff5157b171912517316250f11249f7bc01a1f8409782a2c77781c4c589d301c"
+  }
+}

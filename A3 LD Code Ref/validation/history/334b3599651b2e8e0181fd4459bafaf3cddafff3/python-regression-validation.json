@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "a3-generator-regression/1",
+  "testsRun": 11,
+  "passed": true,
+  "failures": 0,
+  "errors": 0,
+  "scope": "Synthetic temporary Git repository only; equipment and vendor binaries not invoked."
+}

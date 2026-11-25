@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d |
 | 파일 분류 | code |
 | 원본 크기/행 | 246,747 bytes / 4,617 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -742,7 +742,7 @@
 
 ### FieldDeclaration `DefaultReviewBeamNo` · L26–26
 
-[Drilling.Common/Review/CReviewManager.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L26-L26)
+[Drilling.Common/Review/CReviewManager.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -763,7 +763,7 @@
 
 ### FieldDeclaration `MaxHeadCount` · L27–27
 
-[Drilling.Common/Review/CReviewManager.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L27-L27)
+[Drilling.Common/Review/CReviewManager.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -784,7 +784,7 @@
 
 ### FieldDeclaration `DefaultHeadCount` · L28–28
 
-[Drilling.Common/Review/CReviewManager.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L28-L28)
+[Drilling.Common/Review/CReviewManager.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -805,7 +805,7 @@
 
 ### FieldDeclaration `DefaultCellCount` · L29–29
 
-[Drilling.Common/Review/CReviewManager.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L29-L29)
+[Drilling.Common/Review/CReviewManager.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -826,7 +826,7 @@
 
 ### FieldDeclaration `IofInspectionType` · L30–30
 
-[Drilling.Common/Review/CReviewManager.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L30-L30)
+[Drilling.Common/Review/CReviewManager.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -847,7 +847,7 @@
 
 ### FieldDeclaration `ReviewSequenceRowTolerance` · L31–31
 
-[Drilling.Common/Review/CReviewManager.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L31-L31)
+[Drilling.Common/Review/CReviewManager.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -868,7 +868,7 @@
 
 ### FieldDeclaration `RecipeParameterIndexes` · L32–32
 
-[Drilling.Common/Review/CReviewManager.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L32-L32)
+[Drilling.Common/Review/CReviewManager.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L32-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -896,7 +896,7 @@
 
 ### FieldDeclaration `_sequenceLock` · L33–33
 
-[Drilling.Common/Review/CReviewManager.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L33-L33)
+[Drilling.Common/Review/CReviewManager.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -924,7 +924,7 @@
 
 ### FieldDeclaration `_stateLock` · L34–34
 
-[Drilling.Common/Review/CReviewManager.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L34-L34)
+[Drilling.Common/Review/CReviewManager.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L34-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -952,7 +952,7 @@
 
 ### FieldDeclaration `_stopRequested` · L35–35
 
-[Drilling.Common/Review/CReviewManager.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L35-L35)
+[Drilling.Common/Review/CReviewManager.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L35-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -967,7 +967,7 @@
 
 ### FieldDeclaration `_sequenceState` · L36–36
 
-[Drilling.Common/Review/CReviewManager.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L36-L36)
+[Drilling.Common/Review/CReviewManager.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L36-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -988,7 +988,7 @@
 
 ### FieldDeclaration `_currentPlan` · L37–37
 
-[Drilling.Common/Review/CReviewManager.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L37-L37)
+[Drilling.Common/Review/CReviewManager.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L37-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1003,7 +1003,7 @@
 
 ### FieldDeclaration `_currentPoint` · L38–38
 
-[Drilling.Common/Review/CReviewManager.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L38-L38)
+[Drilling.Common/Review/CReviewManager.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1018,7 +1018,7 @@
 
 ### FieldDeclaration `_lastMeasuredPoint` · L39–39
 
-[Drilling.Common/Review/CReviewManager.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L39-L39)
+[Drilling.Common/Review/CReviewManager.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1033,7 +1033,7 @@
 
 ### FieldDeclaration `_reviewProductId` · L40–40
 
-[Drilling.Common/Review/CReviewManager.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L40-L40)
+[Drilling.Common/Review/CReviewManager.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L40-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1048,7 +1048,7 @@
 
 ### FieldDeclaration `_reviewStageMotion` · L41–41
 
-[Drilling.Common/Review/CReviewManager.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L41-L41)
+[Drilling.Common/Review/CReviewManager.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L41-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1063,7 +1063,7 @@
 
 ### FieldDeclaration `_interruptedReviewPlan` · L42–42
 
-[Drilling.Common/Review/CReviewManager.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L42-L42)
+[Drilling.Common/Review/CReviewManager.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L42-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1078,7 +1078,7 @@
 
 ### FieldDeclaration `_interruptedReviewProductId` · L43–43
 
-[Drilling.Common/Review/CReviewManager.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L43-L43)
+[Drilling.Common/Review/CReviewManager.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L43-L43)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1093,7 +1093,7 @@
 
 ### PropertyDeclaration `FineMonitor` · L44–44
 
-[Drilling.Common/Review/CReviewManager.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L44-L44)
+[Drilling.Common/Review/CReviewManager.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L44-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1120,7 +1120,7 @@
 
 ### GetAccessorDeclaration `get_FineMonitor` · L44–44
 
-[Drilling.Common/Review/CReviewManager.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L44-L44)
+[Drilling.Common/Review/CReviewManager.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L44-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1135,7 +1135,7 @@
 
 ### PropertyDeclaration `LastSavedResultPath` · L47–47
 
-[Drilling.Common/Review/CReviewManager.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L47-L47)
+[Drilling.Common/Review/CReviewManager.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L47-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1150,7 +1150,7 @@
 
 ### GetAccessorDeclaration `get_LastSavedResultPath` · L47–47
 
-[Drilling.Common/Review/CReviewManager.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L47-L47)
+[Drilling.Common/Review/CReviewManager.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L47-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1165,7 +1165,7 @@
 
 ### SetAccessorDeclaration `set_LastSavedResultPath` · L47–47
 
-[Drilling.Common/Review/CReviewManager.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L47-L47)
+[Drilling.Common/Review/CReviewManager.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L47-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1186,7 +1186,7 @@
 
 ### PropertyDeclaration `CameraResolution` · L48–48
 
-[Drilling.Common/Review/CReviewManager.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L48-L48)
+[Drilling.Common/Review/CReviewManager.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L48-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1213,7 +1213,7 @@
 
 ### PropertyDeclaration `AlignKeyMargins` · L49–49
 
-[Drilling.Common/Review/CReviewManager.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L49-L49)
+[Drilling.Common/Review/CReviewManager.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L49-L49)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1240,7 +1240,7 @@
 
 ### PropertyDeclaration `CurrentPlan` · L51–60
 
-[Drilling.Common/Review/CReviewManager.cs:51–60](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L51-L60)
+[Drilling.Common/Review/CReviewManager.cs:51–60](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L51-L60)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1255,7 +1255,7 @@
 
 ### GetAccessorDeclaration `get_CurrentPlan` · L53–59
 
-[Drilling.Common/Review/CReviewManager.cs:53–59](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L53-L59)
+[Drilling.Common/Review/CReviewManager.cs:53–59](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L53-L59)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1286,7 +1286,7 @@ flowchart TD
 
 ### PropertyDeclaration `SequenceState` · L62–62
 
-[Drilling.Common/Review/CReviewManager.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L62-L62)
+[Drilling.Common/Review/CReviewManager.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L62-L62)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1301,7 +1301,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SequenceState` · L62–62
 
-[Drilling.Common/Review/CReviewManager.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L62-L62)
+[Drilling.Common/Review/CReviewManager.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L62-L62)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1328,7 +1328,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_SequenceState` · L62–62
 
-[Drilling.Common/Review/CReviewManager.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L62-L62)
+[Drilling.Common/Review/CReviewManager.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L62-L62)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1361,7 +1361,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsStopRequested` · L63–63
 
-[Drilling.Common/Review/CReviewManager.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L63-L63)
+[Drilling.Common/Review/CReviewManager.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L63-L63)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1388,7 +1388,7 @@ flowchart TD
 
 ### MethodDeclaration `CreatePlan` · L65–68
 
-[Drilling.Common/Review/CReviewManager.cs:65–68](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L65-L68)
+[Drilling.Common/Review/CReviewManager.cs:65–68](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L65-L68)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1423,7 +1423,7 @@ flowchart TD
 
 ### MethodDeclaration `CreatePlan` · L70–73
 
-[Drilling.Common/Review/CReviewManager.cs:70–73](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L70-L73)
+[Drilling.Common/Review/CReviewManager.cs:70–73](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L70-L73)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1444,8 +1444,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L67-L67) | CreatePlan | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4204–4204](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4204-L4204) | _reviewManager.CreatePlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L67-L67) | CreatePlan | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4204–4204](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4204-L4204) | _reviewManager.CreatePlan | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1464,7 +1464,7 @@ flowchart TD
 
 ### MethodDeclaration `CreatePlan` · L75–115
 
-[Drilling.Common/Review/CReviewManager.cs:75–115](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L75-L115)
+[Drilling.Common/Review/CReviewManager.cs:75–115](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L75-L115)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1487,9 +1487,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L72-L72) | CreatePlan | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:527–532](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L527-L532) | _reviewManager.CreatePlan | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4277–4277](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4277-L4277) | _reviewManager.CreatePlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L72-L72) | CreatePlan | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:527–532](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L527-L532) | _reviewManager.CreatePlan | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4277–4277](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4277-L4277) | _reviewManager.CreatePlan | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1571,7 +1571,7 @@ flowchart TD
 
 ### PropertyDeclaration `CurrentPoint` · L117–126
 
-[Drilling.Common/Review/CReviewManager.cs:117–126](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L117-L126)
+[Drilling.Common/Review/CReviewManager.cs:117–126](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L117-L126)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1586,7 +1586,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CurrentPoint` · L119–125
 
-[Drilling.Common/Review/CReviewManager.cs:119–125](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L119-L125)
+[Drilling.Common/Review/CReviewManager.cs:119–125](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L119-L125)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1617,7 +1617,7 @@ flowchart TD
 
 ### PropertyDeclaration `LastMeasuredPoint` · L128–137
 
-[Drilling.Common/Review/CReviewManager.cs:128–137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L128-L137)
+[Drilling.Common/Review/CReviewManager.cs:128–137](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L128-L137)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1632,7 +1632,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_LastMeasuredPoint` · L130–136
 
-[Drilling.Common/Review/CReviewManager.cs:130–136](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L130-L136)
+[Drilling.Common/Review/CReviewManager.cs:130–136](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L130-L136)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1663,7 +1663,7 @@ flowchart TD
 
 ### MethodDeclaration `GetShotBeamPositions` · L139–150
 
-[Drilling.Common/Review/CReviewManager.cs:139–150](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L139-L150)
+[Drilling.Common/Review/CReviewManager.cs:139–150](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L139-L150)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1687,11 +1687,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1412–1418](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1412-L1418) | GetShotBeamPositions | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7466–7466](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7466-L7466) | CReviewManager.GetShotBeamPositions | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3491–3491](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3491-L3491) | CReviewManager.GetShotBeamPositions | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3828–3828](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3828-L3828) | CReviewManager.GetShotBeamPositions | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5041–5047](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5041-L5047) | CReviewManager.GetShotBeamPositions | False |
+| [Drilling.Common/Review/CReviewManager.cs:1412–1418](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1412-L1418) | GetShotBeamPositions | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7466–7466](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7466-L7466) | CReviewManager.GetShotBeamPositions | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3491–3491](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3491-L3491) | CReviewManager.GetShotBeamPositions | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3828–3828](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3828-L3828) | CReviewManager.GetShotBeamPositions | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5041–5047](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5041-L5047) | CReviewManager.GetShotBeamPositions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1724,7 +1724,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateShotBeamPositionCalculator` · L153–196
 
-[Drilling.Common/Review/CReviewManager.cs:153–196](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L153-L196)
+[Drilling.Common/Review/CReviewManager.cs:153–196](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L153-L196)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1753,11 +1753,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:224–227](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L224-L227) | CReviewManager.CreateShotBeamPositionCalculator | False |
-| [Drilling.Common/Review/CReviewManager.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L147-L147) | CreateShotBeamPositionCalculator | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L36-L36) | CReviewManager.CreateShotBeamPositionCalculator | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6342–6342](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6342-L6342) | CReviewManager.CreateShotBeamPositionCalculator | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2767–2772](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2767-L2772) | CReviewManager.CreateShotBeamPositionCalculator | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:224–227](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L224-L227) | CReviewManager.CreateShotBeamPositionCalculator | False |
+| [Drilling.Common/Review/CReviewManager.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L147-L147) | CreateShotBeamPositionCalculator | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L36-L36) | CReviewManager.CreateShotBeamPositionCalculator | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6342–6342](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6342-L6342) | CReviewManager.CreateShotBeamPositionCalculator | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2767–2772](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2767-L2772) | CReviewManager.CreateShotBeamPositionCalculator | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1865,7 +1865,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateAllPlan` · L198–201
 
-[Drilling.Common/Review/CReviewManager.cs:198–201](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L198-L201)
+[Drilling.Common/Review/CReviewManager.cs:198–201](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L198-L201)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1885,12 +1885,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L155-L155) | _reviewManager.CreateAllPlan | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:275–275](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L275-L275) | _reviewManager.CreateAllPlan | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1963–1963](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1963-L1963) | _reviewManager.CreateAllPlan | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:498–498](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L498-L498) | _reviewManager.CreateAllPlan | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3862–3862](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3862-L3862) | _reviewManager.CreateAllPlan | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4529–4529](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4529-L4529) | _reviewManager.CreateAllPlan | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L155-L155) | _reviewManager.CreateAllPlan | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:275–275](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L275-L275) | _reviewManager.CreateAllPlan | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1963–1963](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1963-L1963) | _reviewManager.CreateAllPlan | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:498–498](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L498-L498) | _reviewManager.CreateAllPlan | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3862–3862](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3862-L3862) | _reviewManager.CreateAllPlan | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4529–4529](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4529-L4529) | _reviewManager.CreateAllPlan | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1909,7 +1909,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateAllPlan` · L203–212
 
-[Drilling.Common/Review/CReviewManager.cs:203–212](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L203-L212)
+[Drilling.Common/Review/CReviewManager.cs:203–212](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L203-L212)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1931,11 +1931,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L85-L85) | CreateAllPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L200-L200) | CreateAllPlan | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2740–2740](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2740-L2740) | _reviewManager.CreateAllPlan | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3065–3065](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3065-L3065) | _reviewManager.CreateAllPlan | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4262–4262](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4262-L4262) | _reviewManager.CreateAllPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L85-L85) | CreateAllPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L200-L200) | CreateAllPlan | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2740–2740](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2740-L2740) | _reviewManager.CreateAllPlan | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3065–3065](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3065-L3065) | _reviewManager.CreateAllPlan | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4262–4262](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4262-L4262) | _reviewManager.CreateAllPlan | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1960,7 +1960,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectGlassLineShotKeys` · L214–249
 
-[Drilling.Common/Review/CReviewManager.cs:214–249](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L214-L249)
+[Drilling.Common/Review/CReviewManager.cs:214–249](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L214-L249)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1980,8 +1980,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2186–2186](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2186-L2186) | CReviewManager.SelectGlassLineShotKeys | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2227–2227](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2227-L2227) | CReviewManager.SelectGlassLineShotKeys | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2186–2186](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2186-L2186) | CReviewManager.SelectGlassLineShotKeys | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2227–2227](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2227-L2227) | CReviewManager.SelectGlassLineShotKeys | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2055,7 +2055,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyShiftOffset` · L251–277
 
-[Drilling.Common/Review/CReviewManager.cs:251–277](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L251-L277)
+[Drilling.Common/Review/CReviewManager.cs:251–277](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L251-L277)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2076,8 +2076,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6475–6475](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6475-L6475) | CReviewManager.ApplyShiftOffset | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7502–7502](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7502-L7502) | CReviewManager.ApplyShiftOffset | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6475–6475](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6475-L6475) | CReviewManager.ApplyShiftOffset | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7502–7502](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7502-L7502) | CReviewManager.ApplyShiftOffset | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2116,7 +2116,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Apply` · L258–265
 
-[Drilling.Common/Review/CReviewManager.cs:258–265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L258-L265)
+[Drilling.Common/Review/CReviewManager.cs:258–265](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L258-L265)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2171,7 +2171,7 @@ flowchart TD
 
 ### MethodDeclaration `GetHeadScopes` · L284–287
 
-[Drilling.Common/Review/CReviewManager.cs:284–287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L284-L287)
+[Drilling.Common/Review/CReviewManager.cs:284–287](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L284-L287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2200,8 +2200,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1299–1299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1299-L1299) | _reviewManager.GetHeadScopes | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4646–4646](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4646-L4646) | _reviewManager.GetHeadScopes | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1299–1299](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1299-L1299) | _reviewManager.GetHeadScopes | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4646–4646](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4646-L4646) | _reviewManager.GetHeadScopes | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2226,7 +2226,7 @@ flowchart TD
 
 ### MethodDeclaration `Start` · L289–292
 
-[Drilling.Common/Review/CReviewManager.cs:289–292](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L289-L292)
+[Drilling.Common/Review/CReviewManager.cs:289–292](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L289-L292)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2263,7 +2263,7 @@ flowchart TD
 
 ### MethodDeclaration `Start` · L294–444
 
-[Drilling.Common/Review/CReviewManager.cs:294–444](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L294-L444)
+[Drilling.Common/Review/CReviewManager.cs:294–444](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L294-L444)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2287,8 +2287,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L291-L291) | Start | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4321–4321](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4321-L4321) | _reviewManager.Start | False |
+| [Drilling.Common/Review/CReviewManager.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L291-L291) | Start | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4321–4321](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4321-L4321) | _reviewManager.Start | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2313,7 +2313,7 @@ flowchart TD
 | 339 | OpenReviewStageMotion | resolved | Drilling.Common.Review.CReviewManager.CReviewStageMotion Drilling.Common.Review.CReviewManager.OpenReviewStageMotion(double?) · Drilling.Common/Review/CReviewManager.cs:2555 |
 | 340 | WriteReviewLog | resolved | void Drilling.Common.Review.CReviewManager.WriteReviewLog(string, string) · Drilling.Common/Review/CReviewManager.cs:1029 |
 | 341 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 343 | productManager.SetReviewRunning | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA> Drilling.Common.Product.CProductManager.SetReviewRunning(string, Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:444 |
+| 343 | productManager.SetReviewRunning | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA> Drilling.Common.Product.CProductManager.SetReviewRunning(string, Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:445 |
 | 343 | CreateProductReviewData | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA Drilling.Common.Review.CReviewManager.CreateProductReviewData(Drilling.Common.Review.ST_REVIEW_PLAN, System.DateTimeOffset?) · Drilling.Common/Review/CReviewManager.cs:1639 |
 | 346 | IsPointToPoint | resolved | bool Drilling.Common.Review.CReviewManager.IsPointToPoint(Drilling.Common.Review.ST_REVIEW_PLAN) · Drilling.Common/Review/CReviewManager.cs:1684 |
 | 348 | RunIofSequence | resolved | System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_SEQUENCE_STATUS> Drilling.Common.Review.CReviewManager.RunIofSequence(Drilling.Common.Review.ST_REVIEW_PLAN, string?, System.Action<Drilling.Common.Review.ST_REVIEW_PLAN>?, System.Threading.CancellationToken, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_PLAN_POINT>?, bool) · Drilling.Common/Review/CReviewManager.cs:1967 |
@@ -2574,7 +2574,7 @@ flowchart TD
 
 ### MethodDeclaration `Stop` · L446–456
 
-[Drilling.Common/Review/CReviewManager.cs:446–456](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L446-L456)
+[Drilling.Common/Review/CReviewManager.cs:446–456](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L446-L456)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2587,12 +2587,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:3069–3069](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3069-L3069) | _reviewManager.Stop | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L336-L336) | _reviewManager.Stop | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L664-L664) | _reviewManager.Stop | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2694–2694](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2694-L2694) | _reviewManager.Stop | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2491–2491](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2491-L2491) | _reviewManager.Stop | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4449–4449](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4449-L4449) | _reviewManager.Stop | False |
+| [Drilling.UI/CRootView.cs:3069–3069](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L3069-L3069) | _reviewManager.Stop | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L336-L336) | _reviewManager.Stop | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L664-L664) | _reviewManager.Stop | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2694–2694](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2694-L2694) | _reviewManager.Stop | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2491–2491](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2491-L2491) | _reviewManager.Stop | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4449–4449](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4449-L4449) | _reviewManager.Stop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2627,7 +2627,7 @@ flowchart TD
 
 ### MethodDeclaration `FindIncompleteProductReview` · L458–469
 
-[Drilling.Common/Review/CReviewManager.cs:458–469](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L458-L469)
+[Drilling.Common/Review/CReviewManager.cs:458–469](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L458-L469)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2648,7 +2648,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4305–4305](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4305-L4305) | _reviewManager.FindIncompleteProductReview | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4305–4305](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4305-L4305) | _reviewManager.FindIncompleteProductReview | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2696,7 +2696,7 @@ flowchart TD
 
 ### MethodDeclaration `GetScannerAxisTransform` · L471–479
 
-[Drilling.Common/Review/CReviewManager.cs:471–479](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L471-L479)
+[Drilling.Common/Review/CReviewManager.cs:471–479](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L471-L479)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2747,7 +2747,7 @@ flowchart TD
 
 ### MethodDeclaration `RetryRemaining` · L481–499
 
-[Drilling.Common/Review/CReviewManager.cs:481–499](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L481-L499)
+[Drilling.Common/Review/CReviewManager.cs:481–499](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L481-L499)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2767,7 +2767,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4476–4476](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4476-L4476) | _reviewManager.RetryRemaining | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4476–4476](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4476-L4476) | _reviewManager.RetryRemaining | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2823,7 +2823,7 @@ flowchart TD
 
 ### MethodDeclaration `CreatePlanCore` · L501–556
 
-[Drilling.Common/Review/CReviewManager.cs:501–556](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L501-L556)
+[Drilling.Common/Review/CReviewManager.cs:501–556](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L501-L556)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2847,7 +2847,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:211–211](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L211-L211) | CreatePlanCore | False |
+| [Drilling.Common/Review/CReviewManager.cs:211–211](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L211-L211) | CreatePlanCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2950,7 +2950,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildReviewExcludedShots` · L558–574
 
-[Drilling.Common/Review/CReviewManager.cs:558–574](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L558-L574)
+[Drilling.Common/Review/CReviewManager.cs:558–574](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L558-L574)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2970,7 +2970,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:519–519](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L519-L519) | BuildReviewExcludedShots | False |
+| [Drilling.Common/Review/CReviewManager.cs:519–519](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L519-L519) | BuildReviewExcludedShots | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3018,7 +3018,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildRuntimeCoordinateParameters` · L576–598
 
-[Drilling.Common/Review/CReviewManager.cs:576–598](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L576-L598)
+[Drilling.Common/Review/CReviewManager.cs:576–598](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L576-L598)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3037,7 +3037,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:515–515](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L515-L515) | BuildRuntimeCoordinateParameters | False |
+| [Drilling.Common/Review/CReviewManager.cs:515–515](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L515-L515) | BuildRuntimeCoordinateParameters | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3087,7 +3087,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadReviewCoordinateSettings` · L600–615
 
-[Drilling.Common/Review/CReviewManager.cs:600–615](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L600-L615)
+[Drilling.Common/Review/CReviewManager.cs:600–615](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L600-L615)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3106,8 +3106,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L286-L286) | LoadReviewCoordinateSettings | False |
-| [Drilling.Common/Review/CReviewManager.cs:514–514](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L514-L514) | LoadReviewCoordinateSettings | False |
+| [Drilling.Common/Review/CReviewManager.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L286-L286) | LoadReviewCoordinateSettings | False |
+| [Drilling.Common/Review/CReviewManager.cs:514–514](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L514-L514) | LoadReviewCoordinateSettings | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3174,7 +3174,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHeadPositionX` · L617–624
 
-[Drilling.Common/Review/CReviewManager.cs:617–624](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L617-L624)
+[Drilling.Common/Review/CReviewManager.cs:617–624](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L617-L624)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3194,7 +3194,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L606-L606) | ReadHeadPositionX | False |
+| [Drilling.Common/Review/CReviewManager.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L606-L606) | ReadHeadPositionX | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3223,7 +3223,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadSettingDouble` · L626–642
 
-[Drilling.Common/Review/CReviewManager.cs:626–642](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L626-L642)
+[Drilling.Common/Review/CReviewManager.cs:626–642](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L626-L642)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3244,9 +3244,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L608-L608) | ReadSettingDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:621–621](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L621-L621) | ReadSettingDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:622–622](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L622-L622) | ReadSettingDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L608-L608) | ReadSettingDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:621–621](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L621-L621) | ReadSettingDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:622–622](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L622-L622) | ReadSettingDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3289,7 +3289,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadSettingBoolean` · L644–663
 
-[Drilling.Common/Review/CReviewManager.cs:644–663](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L644-L663)
+[Drilling.Common/Review/CReviewManager.cs:644–663](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L644-L663)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3310,7 +3310,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:613–613](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L613-L613) | ReadSettingBoolean | False |
+| [Drilling.Common/Review/CReviewManager.cs:613–613](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L613-L613) | ReadSettingBoolean | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3357,7 +3357,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadSettingText` · L665–678
 
-[Drilling.Common/Review/CReviewManager.cs:665–678](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L665-L678)
+[Drilling.Common/Review/CReviewManager.cs:665–678](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L665-L678)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3378,10 +3378,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L603-L603) | ReadSettingText | False |
-| [Drilling.Common/Review/CReviewManager.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L603-L603) | ReadSettingText | False |
-| [Drilling.Common/Review/CReviewManager.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L603-L603) | ReadSettingText | False |
-| [Drilling.Common/Review/CReviewManager.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L646-L646) | ReadSettingText | False |
+| [Drilling.Common/Review/CReviewManager.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L603-L603) | ReadSettingText | False |
+| [Drilling.Common/Review/CReviewManager.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L603-L603) | ReadSettingText | False |
+| [Drilling.Common/Review/CReviewManager.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L603-L603) | ReadSettingText | False |
+| [Drilling.Common/Review/CReviewManager.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L646-L646) | ReadSettingText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3424,7 +3424,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildShotPoints` · L680–778
 
-[Drilling.Common/Review/CReviewManager.cs:680–778](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L680-L778)
+[Drilling.Common/Review/CReviewManager.cs:680–778](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L680-L778)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3454,7 +3454,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:521–533](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L521-L533) | BuildShotPoints | False |
+| [Drilling.Common/Review/CReviewManager.cs:521–533](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L521-L533) | BuildShotPoints | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3620,7 +3620,7 @@ flowchart TD
 
 ### MethodDeclaration `GetMeasuredResultRows` · L780–792
 
-[Drilling.Common/Review/CReviewManager.cs:780–792](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L780-L792)
+[Drilling.Common/Review/CReviewManager.cs:780–792](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L780-L792)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3639,7 +3639,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1616–1616](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1616-L1616) | GetMeasuredResultRows | False |
+| [Drilling.Common/Review/CReviewManager.cs:1616–1616](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1616-L1616) | GetMeasuredResultRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3675,7 +3675,7 @@ flowchart TD
 
 ### MethodDeclaration `ProjectCorrectionRows` · L794–815
 
-[Drilling.Common/Review/CReviewManager.cs:794–815](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L794-L815)
+[Drilling.Common/Review/CReviewManager.cs:794–815](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L794-L815)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3695,8 +3695,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:438–438](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L438-L438) | CReviewManager.ProjectCorrectionRows | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2017–2017](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2017-L2017) | CReviewManager.ProjectCorrectionRows | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:438–438](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L438-L438) | CReviewManager.ProjectCorrectionRows | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2017–2017](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2017-L2017) | CReviewManager.ProjectCorrectionRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3743,7 +3743,7 @@ flowchart TD
 
 ### MethodDeclaration `ProjectSimpleResultRows` · L817–826
 
-[Drilling.Common/Review/CReviewManager.cs:817–826](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L817-L826)
+[Drilling.Common/Review/CReviewManager.cs:817–826](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L817-L826)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3763,7 +3763,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:809–809](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L809-L809) | ProjectSimpleResultRows | False |
+| [Drilling.Common/Review/CReviewManager.cs:809–809](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L809-L809) | ProjectSimpleResultRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3803,7 +3803,7 @@ flowchart TD
 
 ### MethodDeclaration `ProjectRoughResultRows` · L828–832
 
-[Drilling.Common/Review/CReviewManager.cs:828–832](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L828-L832)
+[Drilling.Common/Review/CReviewManager.cs:828–832](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L828-L832)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3823,7 +3823,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:810–810](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L810-L810) | ProjectRoughResultRows | False |
+| [Drilling.Common/Review/CReviewManager.cs:810–810](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L810-L810) | ProjectRoughResultRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3864,7 +3864,7 @@ flowchart TD
 
 ### MethodDeclaration `ProjectFineResultRows` · L834–849
 
-[Drilling.Common/Review/CReviewManager.cs:834–849](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L834-L849)
+[Drilling.Common/Review/CReviewManager.cs:834–849](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L834-L849)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3884,7 +3884,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:811–811](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L811-L811) | ProjectFineResultRows | False |
+| [Drilling.Common/Review/CReviewManager.cs:811–811](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L811-L811) | ProjectFineResultRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3959,7 +3959,7 @@ flowchart TD
 
 ### MethodDeclaration `InterpolateFineMeasurementAcrossGlass` · L851–860
 
-[Drilling.Common/Review/CReviewManager.cs:851–860](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L851-L860)
+[Drilling.Common/Review/CReviewManager.cs:851–860](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L851-L860)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3979,7 +3979,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:845–845](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L845-L845) | InterpolateFineMeasurementAcrossGlass | False |
+| [Drilling.Common/Review/CReviewManager.cs:845–845](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L845-L845) | InterpolateFineMeasurementAcrossGlass | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4010,7 +4010,7 @@ flowchart TD
 
 ### MethodDeclaration `InterpolateFineMeasurement` · L862–897
 
-[Drilling.Common/Review/CReviewManager.cs:862–897](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L862-L897)
+[Drilling.Common/Review/CReviewManager.cs:862–897](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L862-L897)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4030,7 +4030,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:853–853](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L853-L853) | InterpolateFineMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:853–853](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L853-L853) | InterpolateFineMeasurement | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4103,7 +4103,7 @@ flowchart TD
 
 ### MethodDeclaration `CopyMeasurement` · L899–906
 
-[Drilling.Common/Review/CReviewManager.cs:899–906](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L899-L906)
+[Drilling.Common/Review/CReviewManager.cs:899–906](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L899-L906)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4123,11 +4123,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:825–825](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L825-L825) | CopyMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:831–831](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L831-L831) | CopyMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:866–866](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L866-L866) | CopyMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:871–871](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L871-L871) | CopyMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:896–896](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L896-L896) | CopyMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:825–825](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L825-L825) | CopyMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:831–831](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L831-L831) | CopyMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:866–866](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L866-L866) | CopyMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:871–871](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L871-L871) | CopyMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:896–896](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L896-L896) | CopyMeasurement | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -4143,7 +4143,7 @@ flowchart TD
 
 ### MethodDeclaration `FineCoordinateKey` · L907–907
 
-[Drilling.Common/Review/CReviewManager.cs:907–907](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L907-L907)
+[Drilling.Common/Review/CReviewManager.cs:907–907](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L907-L907)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4162,9 +4162,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:836–836](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L836-L836) | FineCoordinateKey | False |
-| [Drilling.Common/Review/CReviewManager.cs:836–836](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L836-L836) | FineCoordinateKey | False |
-| [Drilling.Common/Review/CReviewManager.cs:840–840](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L840-L840) | FineCoordinateKey | False |
+| [Drilling.Common/Review/CReviewManager.cs:836–836](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L836-L836) | FineCoordinateKey | False |
+| [Drilling.Common/Review/CReviewManager.cs:836–836](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L836-L836) | FineCoordinateKey | False |
+| [Drilling.Common/Review/CReviewManager.cs:840–840](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L840-L840) | FineCoordinateKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4182,7 +4182,7 @@ flowchart TD
 
 ### FieldDeclaration `_pointCache` · L910–910
 
-[Drilling.Common/Review/CReviewManager.cs:910–910](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L910-L910)
+[Drilling.Common/Review/CReviewManager.cs:910–910](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L910-L910)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4203,7 +4203,7 @@ flowchart TD
 
 ### PropertyDeclaration `Count` · L911–911
 
-[Drilling.Common/Review/CReviewManager.cs:911–911](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L911-L911)
+[Drilling.Common/Review/CReviewManager.cs:911–911](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L911-L911)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4218,7 +4218,7 @@ flowchart TD
 
 ### PropertyDeclaration `AreAllPointsSelected` · L912–912
 
-[Drilling.Common/Review/CReviewManager.cs:912–912](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L912-L912)
+[Drilling.Common/Review/CReviewManager.cs:912–912](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L912-L912)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4233,7 +4233,7 @@ flowchart TD
 
 ### PropertyDeclaration `PatternCellCount` · L913–913
 
-[Drilling.Common/Review/CReviewManager.cs:913–913](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L913-L913)
+[Drilling.Common/Review/CReviewManager.cs:913–913](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L913-L913)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4248,7 +4248,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCellRange` · L915–924
 
-[Drilling.Common/Review/CReviewManager.cs:915–924](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L915-L924)
+[Drilling.Common/Review/CReviewManager.cs:915–924](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L915-L924)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4299,7 +4299,7 @@ flowchart TD
 
 ### IndexerDeclaration `this[]` · L926–945
 
-[Drilling.Common/Review/CReviewManager.cs:926–945](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L926-L945)
+[Drilling.Common/Review/CReviewManager.cs:926–945](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L926-L945)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4320,7 +4320,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Item` · L928–944
 
-[Drilling.Common/Review/CReviewManager.cs:928–944](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L928-L944)
+[Drilling.Common/Review/CReviewManager.cs:928–944](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L928-L944)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4384,7 +4384,7 @@ flowchart TD
 
 ### MethodDeclaration `GetEnumerator` · L947–953
 
-[Drilling.Common/Review/CReviewManager.cs:947–953](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L947-L953)
+[Drilling.Common/Review/CReviewManager.cs:947–953](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L947-L953)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4397,7 +4397,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:955–955](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L955-L955) | GetEnumerator | False |
+| [Drilling.Common/Review/CReviewManager.cs:955–955](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L955-L955) | GetEnumerator | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -4420,7 +4420,7 @@ flowchart TD
 
 ### MethodDeclaration `System.Collections.IEnumerable.GetEnumerator` · L955–955
 
-[Drilling.Common/Review/CReviewManager.cs:955–955](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L955-L955)
+[Drilling.Common/Review/CReviewManager.cs:955–955](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L955-L955)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4447,7 +4447,7 @@ flowchart TD
 
 ### MethodDeclaration `CalculateBeamOffset` · L958–978
 
-[Drilling.Common/Review/CReviewManager.cs:958–978](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L958-L978)
+[Drilling.Common/Review/CReviewManager.cs:958–978](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L958-L978)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4468,8 +4468,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:182–182](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L182-L182) | CalculateBeamOffset | False |
-| [Drilling.Common/Review/CReviewManager.cs:730–730](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L730-L730) | CalculateBeamOffset | False |
+| [Drilling.Common/Review/CReviewManager.cs:182–182](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L182-L182) | CalculateBeamOffset | False |
+| [Drilling.Common/Review/CReviewManager.cs:730–730](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L730-L730) | CalculateBeamOffset | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4527,7 +4527,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateBeamNo` · L980–992
 
-[Drilling.Common/Review/CReviewManager.cs:980–992](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L980-L992)
+[Drilling.Common/Review/CReviewManager.cs:980–992](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L980-L992)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4547,13 +4547,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L83-L83) | ValidateBeamNo | False |
-| [Drilling.Common/Review/CReviewManager.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L162-L162) | ValidateBeamNo | False |
-| [Drilling.Common/Review/CReviewManager.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L172-L172) | ValidateBeamNo | False |
-| [Drilling.Common/Review/CReviewManager.cs:210–210](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L210-L210) | ValidateBeamNo | False |
-| [Drilling.Common/Review/CReviewManager.cs:704–704](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L704-L704) | ValidateBeamNo | False |
-| [Drilling.Common/Review/CReviewManager.cs:960–960](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L960-L960) | ValidateBeamNo | False |
-| [Drilling.Common/Review/CReviewManager.cs:1400–1400](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1400-L1400) | ValidateBeamNo | False |
+| [Drilling.Common/Review/CReviewManager.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L83-L83) | ValidateBeamNo | False |
+| [Drilling.Common/Review/CReviewManager.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L162-L162) | ValidateBeamNo | False |
+| [Drilling.Common/Review/CReviewManager.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L172-L172) | ValidateBeamNo | False |
+| [Drilling.Common/Review/CReviewManager.cs:210–210](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L210-L210) | ValidateBeamNo | False |
+| [Drilling.Common/Review/CReviewManager.cs:704–704](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L704-L704) | ValidateBeamNo | False |
+| [Drilling.Common/Review/CReviewManager.cs:960–960](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L960-L960) | ValidateBeamNo | False |
+| [Drilling.Common/Review/CReviewManager.cs:1400–1400](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1400-L1400) | ValidateBeamNo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4594,7 +4594,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateShiftOffset` · L994–999
 
-[Drilling.Common/Review/CReviewManager.cs:994–999](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L994-L999)
+[Drilling.Common/Review/CReviewManager.cs:994–999](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L994-L999)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4614,10 +4614,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L82-L82) | ValidateShiftOffset | False |
-| [Drilling.Common/Review/CReviewManager.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L160-L160) | ValidateShiftOffset | False |
-| [Drilling.Common/Review/CReviewManager.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L209-L209) | ValidateShiftOffset | False |
-| [Drilling.Common/Review/CReviewManager.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L253-L253) | ValidateShiftOffset | False |
+| [Drilling.Common/Review/CReviewManager.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L82-L82) | ValidateShiftOffset | False |
+| [Drilling.Common/Review/CReviewManager.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L160-L160) | ValidateShiftOffset | False |
+| [Drilling.Common/Review/CReviewManager.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L209-L209) | ValidateShiftOffset | False |
+| [Drilling.Common/Review/CReviewManager.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L253-L253) | ValidateShiftOffset | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4652,7 +4652,7 @@ flowchart TD
 
 ### MethodDeclaration `CalculateReviewTarget` · L1001–1014
 
-[Drilling.Common/Review/CReviewManager.cs:1001–1014](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1001-L1014)
+[Drilling.Common/Review/CReviewManager.cs:1001–1014](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1001-L1014)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4678,8 +4678,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:183–191](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L183-L191) | CalculateReviewTarget | False |
-| [Drilling.Common/Review/CReviewManager.cs:734–742](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L734-L742) | CalculateReviewTarget | False |
+| [Drilling.Common/Review/CReviewManager.cs:183–191](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L183-L191) | CalculateReviewTarget | False |
+| [Drilling.Common/Review/CReviewManager.cs:734–742](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L734-L742) | CalculateReviewTarget | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4702,7 +4702,7 @@ flowchart TD
 
 ### MethodDeclaration `RotateLocalOffset` · L1016–1022
 
-[Drilling.Common/Review/CReviewManager.cs:1016–1022](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1016-L1022)
+[Drilling.Common/Review/CReviewManager.cs:1016–1022](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1016-L1022)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4723,7 +4723,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1012–1012](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1012-L1012) | RotateLocalOffset | False |
+| [Drilling.Common/Review/CReviewManager.cs:1012–1012](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1012-L1012) | RotateLocalOffset | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4752,7 +4752,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatDouble` · L1024–1027
 
-[Drilling.Common/Review/CReviewManager.cs:1024–1027](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1024-L1027)
+[Drilling.Common/Review/CReviewManager.cs:1024–1027](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1024-L1027)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4771,10 +4771,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1927–1927](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1927-L1927) | FormatDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:1927–1927](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1927-L1927) | FormatDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:2280–2280](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2280-L2280) | FormatDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:2280–2280](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2280-L2280) | FormatDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:1927–1927](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1927-L1927) | FormatDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:1927–1927](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1927-L1927) | FormatDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:2280–2280](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2280-L2280) | FormatDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:2280–2280](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2280-L2280) | FormatDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4793,7 +4793,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteReviewLog` · L1029–1045
 
-[Drilling.Common/Review/CReviewManager.cs:1029–1045](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1029-L1045)
+[Drilling.Common/Review/CReviewManager.cs:1029–1045](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1029-L1045)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4813,35 +4813,35 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L321-L321) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L328-L328) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L340-L340) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:415–415](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L415-L415) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L451-L451) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:1049–1049](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1049-L1049) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:1158–1158](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1158-L1158) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:1619–1619](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1619-L1619) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:1867–1867](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1867-L1867) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:1927–1927](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1927-L1927) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:1937–1937](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1937-L1937) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:1957–1957](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1957-L1957) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:1962–1962](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1962-L1962) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:1993–1993](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1993-L1993) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:2000–2000](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2000-L2000) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:2004–2004](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2004-L2004) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:2009–2009](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2009-L2009) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:2036–2036](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2036-L2036) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:2440–2440](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2440-L2440) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:2506–2506](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2506-L2506) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:2660–2660](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2660-L2660) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:3039–3039](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3039-L3039) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:3104–3104](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3104-L3104) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:3113–3113](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3113-L3113) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:3184–3184](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3184-L3184) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:3310–3310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3310-L3310) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:3315–3315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3315-L3315) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:3494–3494](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3494-L3494) | WriteReviewLog | False |
-| [Drilling.Common/Review/CReviewManager.cs:3503–3503](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3503-L3503) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L321-L321) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L328-L328) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L340-L340) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:415–415](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L415-L415) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L451-L451) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:1049–1049](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1049-L1049) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:1158–1158](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1158-L1158) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:1619–1619](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1619-L1619) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:1867–1867](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1867-L1867) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:1927–1927](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1927-L1927) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:1937–1937](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1937-L1937) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:1957–1957](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1957-L1957) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:1962–1962](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1962-L1962) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:1993–1993](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1993-L1993) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:2000–2000](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2000-L2000) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:2004–2004](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2004-L2004) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:2009–2009](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2009-L2009) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:2036–2036](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2036-L2036) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:2440–2440](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2440-L2440) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:2506–2506](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2506-L2506) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:2660–2660](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2660-L2660) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:3039–3039](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3039-L3039) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:3104–3104](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3104-L3104) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:3113–3113](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3113-L3113) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:3184–3184](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3184-L3184) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:3310–3310](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3310-L3310) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:3315–3315](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3315-L3315) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:3494–3494](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3494-L3494) | WriteReviewLog | False |
+| [Drilling.Common/Review/CReviewManager.cs:3503–3503](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3503-L3503) | WriteReviewLog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4880,7 +4880,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteReviewError` · L1047–1050
 
-[Drilling.Common/Review/CReviewManager.cs:1047–1050](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1047-L1050)
+[Drilling.Common/Review/CReviewManager.cs:1047–1050](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1047-L1050)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4893,8 +4893,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L432-L432) | WriteReviewError | False |
-| [Drilling.Common/Review/CReviewManager.cs:2523–2523](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2523-L2523) | WriteReviewError | False |
+| [Drilling.Common/Review/CReviewManager.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L432-L432) | WriteReviewError | False |
+| [Drilling.Common/Review/CReviewManager.cs:2523–2523](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2523-L2523) | WriteReviewError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4912,7 +4912,7 @@ flowchart TD
 
 ### MethodDeclaration `SetCurrentPlan` · L1052–1060
 
-[Drilling.Common/Review/CReviewManager.cs:1052–1060](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1052-L1060)
+[Drilling.Common/Review/CReviewManager.cs:1052–1060](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1052-L1060)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4932,29 +4932,29 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L336-L336) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L363-L363) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:376–376](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L376-L376) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L382-L382) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L391-L391) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:400–400](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L400-L400) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L407-L407) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:413–413](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L413-L413) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:423–423](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L423-L423) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:431–431](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L431-L431) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:490–490](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L490-L490) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:1992–1992](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1992-L1992) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:2028–2028](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2028-L2028) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:2034–2034](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2034-L2034) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:2045–2045](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2045-L2045) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:2439–2439](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2439-L2439) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:2469–2469](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2469-L2469) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:2475–2475](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2475-L2475) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:2484–2484](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2484-L2484) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:2493–2493](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2493-L2493) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:2500–2500](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2500-L2500) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:2514–2514](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2514-L2514) | SetCurrentPlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:2522–2522](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2522-L2522) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L336-L336) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L363-L363) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:376–376](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L376-L376) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L382-L382) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L391-L391) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:400–400](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L400-L400) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L407-L407) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:413–413](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L413-L413) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:423–423](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L423-L423) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:431–431](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L431-L431) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:490–490](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L490-L490) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:1992–1992](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1992-L1992) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:2028–2028](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2028-L2028) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:2034–2034](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2034-L2034) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:2045–2045](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2045-L2045) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:2439–2439](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2439-L2439) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:2469–2469](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2469-L2469) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:2475–2475](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2475-L2475) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:2484–2484](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2484-L2484) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:2493–2493](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2493-L2493) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:2500–2500](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2500-L2500) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:2514–2514](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2514-L2514) | SetCurrentPlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:2522–2522](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2522-L2522) | SetCurrentPlan | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4983,7 +4983,7 @@ flowchart TD
 
 ### MethodDeclaration `SetActivePoints` · L1062–1069
 
-[Drilling.Common/Review/CReviewManager.cs:1062–1069](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1062-L1069)
+[Drilling.Common/Review/CReviewManager.cs:1062–1069](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1062-L1069)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5003,14 +5003,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L333-L333) | SetActivePoints | False |
-| [Drilling.Common/Review/CReviewManager.cs:374–374](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L374-L374) | SetActivePoints | False |
-| [Drilling.Common/Review/CReviewManager.cs:405–405](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L405-L405) | SetActivePoints | False |
-| [Drilling.Common/Review/CReviewManager.cs:1991–1991](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1991-L1991) | SetActivePoints | False |
-| [Drilling.Common/Review/CReviewManager.cs:2027–2027](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2027-L2027) | SetActivePoints | False |
-| [Drilling.Common/Review/CReviewManager.cs:2044–2044](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2044-L2044) | SetActivePoints | False |
-| [Drilling.Common/Review/CReviewManager.cs:2467–2467](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2467-L2467) | SetActivePoints | False |
-| [Drilling.Common/Review/CReviewManager.cs:2498–2498](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2498-L2498) | SetActivePoints | False |
+| [Drilling.Common/Review/CReviewManager.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L333-L333) | SetActivePoints | False |
+| [Drilling.Common/Review/CReviewManager.cs:374–374](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L374-L374) | SetActivePoints | False |
+| [Drilling.Common/Review/CReviewManager.cs:405–405](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L405-L405) | SetActivePoints | False |
+| [Drilling.Common/Review/CReviewManager.cs:1991–1991](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1991-L1991) | SetActivePoints | False |
+| [Drilling.Common/Review/CReviewManager.cs:2027–2027](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2027-L2027) | SetActivePoints | False |
+| [Drilling.Common/Review/CReviewManager.cs:2044–2044](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2044-L2044) | SetActivePoints | False |
+| [Drilling.Common/Review/CReviewManager.cs:2467–2467](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2467-L2467) | SetActivePoints | False |
+| [Drilling.Common/Review/CReviewManager.cs:2498–2498](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2498-L2498) | SetActivePoints | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -5033,7 +5033,7 @@ flowchart TD
 
 ### MethodDeclaration `SetReviewProductId` · L1071–1077
 
-[Drilling.Common/Review/CReviewManager.cs:1071–1077](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1071-L1077)
+[Drilling.Common/Review/CReviewManager.cs:1071–1077](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1071-L1077)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5052,7 +5052,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L315-L315) | SetReviewProductId | False |
+| [Drilling.Common/Review/CReviewManager.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L315-L315) | SetReviewProductId | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5082,7 +5082,7 @@ flowchart TD
 
 ### MethodDeclaration `GetReviewProductId` · L1079–1085
 
-[Drilling.Common/Review/CReviewManager.cs:1079–1085](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1079-L1085)
+[Drilling.Common/Review/CReviewManager.cs:1079–1085](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1079-L1085)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5095,7 +5095,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2431–2431](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2431-L2431) | GetReviewProductId | False |
+| [Drilling.Common/Review/CReviewManager.cs:2431–2431](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2431-L2431) | GetReviewProductId | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -5117,7 +5117,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetPlanForRun` · L1087–1094
 
-[Drilling.Common/Review/CReviewManager.cs:1087–1094](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1087-L1094)
+[Drilling.Common/Review/CReviewManager.cs:1087–1094](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1087-L1094)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5136,7 +5136,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L334-L334) | ResetPlanForRun | False |
+| [Drilling.Common/Review/CReviewManager.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L334-L334) | ResetPlanForRun | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5180,7 +5180,7 @@ flowchart TD
 
 ### MethodDeclaration `SetWaitingPointsReady` · L1096–1099
 
-[Drilling.Common/Review/CReviewManager.cs:1096–1099](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1096-L1099)
+[Drilling.Common/Review/CReviewManager.cs:1096–1099](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1096-L1099)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5199,13 +5199,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:362–362](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L362-L362) | SetWaitingPointsReady | False |
-| [Drilling.Common/Review/CReviewManager.cs:422–422](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L422-L422) | SetWaitingPointsReady | False |
-| [Drilling.Common/Review/CReviewManager.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L430-L430) | SetWaitingPointsReady | False |
-| [Drilling.Common/Review/CReviewManager.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L489-L489) | SetWaitingPointsReady | False |
-| [Drilling.Common/Review/CReviewManager.cs:2043–2043](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2043-L2043) | SetWaitingPointsReady | False |
-| [Drilling.Common/Review/CReviewManager.cs:2513–2513](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2513-L2513) | SetWaitingPointsReady | False |
-| [Drilling.Common/Review/CReviewManager.cs:2521–2521](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2521-L2521) | SetWaitingPointsReady | False |
+| [Drilling.Common/Review/CReviewManager.cs:362–362](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L362-L362) | SetWaitingPointsReady | False |
+| [Drilling.Common/Review/CReviewManager.cs:422–422](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L422-L422) | SetWaitingPointsReady | False |
+| [Drilling.Common/Review/CReviewManager.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L430-L430) | SetWaitingPointsReady | False |
+| [Drilling.Common/Review/CReviewManager.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L489-L489) | SetWaitingPointsReady | False |
+| [Drilling.Common/Review/CReviewManager.cs:2043–2043](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2043-L2043) | SetWaitingPointsReady | False |
+| [Drilling.Common/Review/CReviewManager.cs:2513–2513](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2513-L2513) | SetWaitingPointsReady | False |
+| [Drilling.Common/Review/CReviewManager.cs:2521–2521](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2521-L2521) | SetWaitingPointsReady | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5231,7 +5231,7 @@ flowchart TD
 
 ### MethodDeclaration `PrepareRuntimePlan` · L1101–1106
 
-[Drilling.Common/Review/CReviewManager.cs:1101–1106](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1101-L1106)
+[Drilling.Common/Review/CReviewManager.cs:1101–1106](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1101-L1106)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5250,8 +5250,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L335-L335) | PrepareRuntimePlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:2434–2434](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2434-L2434) | PrepareRuntimePlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L335-L335) | PrepareRuntimePlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:2434–2434](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2434-L2434) | PrepareRuntimePlan | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5275,7 +5275,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdatePoints` · L1107–1115
 
-[Drilling.Common/Review/CReviewManager.cs:1107–1115](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1107-L1115)
+[Drilling.Common/Review/CReviewManager.cs:1107–1115](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1107-L1115)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5295,10 +5295,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1098–1098](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1098-L1098) | UpdatePoints | False |
-| [Drilling.Common/Review/CReviewManager.cs:1119–1119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1119-L1119) | UpdatePoints | False |
-| [Drilling.Common/Review/CReviewManager.cs:2026–2026](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2026-L2026) | UpdatePoints | False |
-| [Drilling.Common/Review/CReviewManager.cs:2224–2230](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2224-L2230) | UpdatePoints | False |
+| [Drilling.Common/Review/CReviewManager.cs:1098–1098](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1098-L1098) | UpdatePoints | False |
+| [Drilling.Common/Review/CReviewManager.cs:1119–1119](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1119-L1119) | UpdatePoints | False |
+| [Drilling.Common/Review/CReviewManager.cs:2026–2026](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2026-L2026) | UpdatePoints | False |
+| [Drilling.Common/Review/CReviewManager.cs:2224–2230](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2224-L2230) | UpdatePoints | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5323,7 +5323,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdatePoint` · L1117–1120
 
-[Drilling.Common/Review/CReviewManager.cs:1117–1120](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1117-L1120)
+[Drilling.Common/Review/CReviewManager.cs:1117–1120](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1117-L1120)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5343,16 +5343,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:375–375](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L375-L375) | UpdatePoint | False |
-| [Drilling.Common/Review/CReviewManager.cs:381–381](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L381-L381) | UpdatePoint | False |
-| [Drilling.Common/Review/CReviewManager.cs:390–390](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L390-L390) | UpdatePoint | False |
-| [Drilling.Common/Review/CReviewManager.cs:399–399](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L399-L399) | UpdatePoint | False |
-| [Drilling.Common/Review/CReviewManager.cs:406–406](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L406-L406) | UpdatePoint | False |
-| [Drilling.Common/Review/CReviewManager.cs:2468–2468](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2468-L2468) | UpdatePoint | False |
-| [Drilling.Common/Review/CReviewManager.cs:2474–2474](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2474-L2474) | UpdatePoint | False |
-| [Drilling.Common/Review/CReviewManager.cs:2483–2483](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2483-L2483) | UpdatePoint | False |
-| [Drilling.Common/Review/CReviewManager.cs:2492–2492](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2492-L2492) | UpdatePoint | False |
-| [Drilling.Common/Review/CReviewManager.cs:2499–2499](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2499-L2499) | UpdatePoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:375–375](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L375-L375) | UpdatePoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:381–381](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L381-L381) | UpdatePoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:390–390](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L390-L390) | UpdatePoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:399–399](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L399-L399) | UpdatePoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:406–406](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L406-L406) | UpdatePoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:2468–2468](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2468-L2468) | UpdatePoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:2474–2474](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2474-L2474) | UpdatePoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:2483–2483](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2483-L2483) | UpdatePoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:2492–2492](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2492-L2492) | UpdatePoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:2499–2499](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2499-L2499) | UpdatePoint | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5371,7 +5371,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateStatus` · L1122–1128
 
-[Drilling.Common/Review/CReviewManager.cs:1122–1128](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1122-L1128)
+[Drilling.Common/Review/CReviewManager.cs:1122–1128](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1122-L1128)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5392,17 +5392,17 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L306-L306) | CreateStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:322–322](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L322-L322) | CreateStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L329-L329) | CreateStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:416–416](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L416-L416) | CreateStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:434–434](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L434-L434) | CreateStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:495–495](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L495-L495) | CreateStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:1874–1874](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1874-L1874) | CreateStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:2037–2037](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2037-L2037) | CreateStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:2428–2428](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2428-L2428) | CreateStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:2507–2507](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2507-L2507) | CreateStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:2525–2525](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2525-L2525) | CreateStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L306-L306) | CreateStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:322–322](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L322-L322) | CreateStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L329-L329) | CreateStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:416–416](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L416-L416) | CreateStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:434–434](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L434-L434) | CreateStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:495–495](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L495-L495) | CreateStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:1874–1874](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1874-L1874) | CreateStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:2037–2037](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2037-L2037) | CreateStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:2428–2428](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2428-L2428) | CreateStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:2507–2507](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2507-L2507) | CreateStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:2525–2525](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2525-L2525) | CreateStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5431,7 +5431,7 @@ flowchart TD
 
 ### MethodDeclaration `SummarizeReviewResults` · L1130–1152
 
-[Drilling.Common/Review/CReviewManager.cs:1130–1152](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1130-L1152)
+[Drilling.Common/Review/CReviewManager.cs:1130–1152](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1130-L1152)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5450,9 +5450,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L57-L57) | CReviewManager.SummarizeReviewResults | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L107-L107) | CReviewManager.SummarizeReviewResults | False |
-| [Drilling.Common/Review/CReviewManager.cs:1156–1156](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1156-L1156) | SummarizeReviewResults | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L57-L57) | CReviewManager.SummarizeReviewResults | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L107-L107) | CReviewManager.SummarizeReviewResults | False |
+| [Drilling.Common/Review/CReviewManager.cs:1156–1156](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1156-L1156) | SummarizeReviewResults | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5512,7 +5512,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteReviewNgSummary` · L1154–1159
 
-[Drilling.Common/Review/CReviewManager.cs:1154–1159](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1154-L1159)
+[Drilling.Common/Review/CReviewManager.cs:1154–1159](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1154-L1159)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5532,9 +5532,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L411-L411) | WriteReviewNgSummary | False |
-| [Drilling.Common/Review/CReviewManager.cs:2032–2032](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2032-L2032) | WriteReviewNgSummary | False |
-| [Drilling.Common/Review/CReviewManager.cs:3089–3089](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3089-L3089) | WriteReviewNgSummary | False |
+| [Drilling.Common/Review/CReviewManager.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L411-L411) | WriteReviewNgSummary | False |
+| [Drilling.Common/Review/CReviewManager.cs:2032–2032](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2032-L2032) | WriteReviewNgSummary | False |
+| [Drilling.Common/Review/CReviewManager.cs:3089–3089](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3089-L3089) | WriteReviewNgSummary | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5568,7 +5568,7 @@ flowchart TD
 
 ### PropertyDeclaration `MarkFind` · L1163–1163
 
-[Drilling.Common/Review/CReviewManager.cs:1163–1163](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1163-L1163)
+[Drilling.Common/Review/CReviewManager.cs:1163–1163](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1163-L1163)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5583,7 +5583,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_MarkFind` · L1163–1163
 
-[Drilling.Common/Review/CReviewManager.cs:1163–1163](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1163-L1163)
+[Drilling.Common/Review/CReviewManager.cs:1163–1163](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1163-L1163)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5598,7 +5598,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_MarkFind` · L1163–1163
 
-[Drilling.Common/Review/CReviewManager.cs:1163–1163](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1163-L1163)
+[Drilling.Common/Review/CReviewManager.cs:1163–1163](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1163-L1163)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5619,7 +5619,7 @@ flowchart TD
 
 ### PropertyDeclaration `Resolution` · L1164–1164
 
-[Drilling.Common/Review/CReviewManager.cs:1164–1164](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1164-L1164)
+[Drilling.Common/Review/CReviewManager.cs:1164–1164](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1164-L1164)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5634,7 +5634,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Resolution` · L1164–1164
 
-[Drilling.Common/Review/CReviewManager.cs:1164–1164](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1164-L1164)
+[Drilling.Common/Review/CReviewManager.cs:1164–1164](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1164-L1164)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5649,7 +5649,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_Resolution` · L1164–1164
 
-[Drilling.Common/Review/CReviewManager.cs:1164–1164](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1164-L1164)
+[Drilling.Common/Review/CReviewManager.cs:1164–1164](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1164-L1164)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5670,7 +5670,7 @@ flowchart TD
 
 ### PropertyDeclaration `CameraResolution` · L1165–1165
 
-[Drilling.Common/Review/CReviewManager.cs:1165–1165](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1165-L1165)
+[Drilling.Common/Review/CReviewManager.cs:1165–1165](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1165-L1165)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5685,7 +5685,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CameraResolution` · L1165–1165
 
-[Drilling.Common/Review/CReviewManager.cs:1165–1165](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1165-L1165)
+[Drilling.Common/Review/CReviewManager.cs:1165–1165](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1165-L1165)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5700,7 +5700,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_CameraResolution` · L1165–1165
 
-[Drilling.Common/Review/CReviewManager.cs:1165–1165](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1165-L1165)
+[Drilling.Common/Review/CReviewManager.cs:1165–1165](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1165-L1165)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5721,7 +5721,7 @@ flowchart TD
 
 ### PropertyDeclaration `ErrorMillimeters` · L1166–1166
 
-[Drilling.Common/Review/CReviewManager.cs:1166–1166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1166-L1166)
+[Drilling.Common/Review/CReviewManager.cs:1166–1166](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1166-L1166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5736,7 +5736,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ErrorMillimeters` · L1166–1166
 
-[Drilling.Common/Review/CReviewManager.cs:1166–1166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1166-L1166)
+[Drilling.Common/Review/CReviewManager.cs:1166–1166](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1166-L1166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5751,7 +5751,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ErrorMillimeters` · L1166–1166
 
-[Drilling.Common/Review/CReviewManager.cs:1166–1166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1166-L1166)
+[Drilling.Common/Review/CReviewManager.cs:1166–1166](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1166-L1166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5772,7 +5772,7 @@ flowchart TD
 
 ### PropertyDeclaration `VisionResultCode` · L1167–1167
 
-[Drilling.Common/Review/CReviewManager.cs:1167–1167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1167-L1167)
+[Drilling.Common/Review/CReviewManager.cs:1167–1167](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1167-L1167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5787,7 +5787,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_VisionResultCode` · L1167–1167
 
-[Drilling.Common/Review/CReviewManager.cs:1167–1167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1167-L1167)
+[Drilling.Common/Review/CReviewManager.cs:1167–1167](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1167-L1167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5802,7 +5802,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_VisionResultCode` · L1167–1167
 
-[Drilling.Common/Review/CReviewManager.cs:1167–1167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1167-L1167)
+[Drilling.Common/Review/CReviewManager.cs:1167–1167](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1167-L1167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5823,7 +5823,7 @@ flowchart TD
 
 ### PropertyDeclaration `NgReason` · L1168–1168
 
-[Drilling.Common/Review/CReviewManager.cs:1168–1168](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1168-L1168)
+[Drilling.Common/Review/CReviewManager.cs:1168–1168](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1168-L1168)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5838,7 +5838,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_NgReason` · L1168–1168
 
-[Drilling.Common/Review/CReviewManager.cs:1168–1168](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1168-L1168)
+[Drilling.Common/Review/CReviewManager.cs:1168–1168](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1168-L1168)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5853,7 +5853,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_NgReason` · L1168–1168
 
-[Drilling.Common/Review/CReviewManager.cs:1168–1168](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1168-L1168)
+[Drilling.Common/Review/CReviewManager.cs:1168–1168](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1168-L1168)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5874,7 +5874,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Success` · L1173–1173
 
-[Drilling.Common/Review/CReviewManager.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1173-L1173)
+[Drilling.Common/Review/CReviewManager.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1173-L1173)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5889,7 +5889,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `NotApplicable` · L1174–1174
 
-[Drilling.Common/Review/CReviewManager.cs:1174–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1174-L1174)
+[Drilling.Common/Review/CReviewManager.cs:1174–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1174-L1174)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5904,7 +5904,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `ProductReplaced` · L1175–1175
 
-[Drilling.Common/Review/CReviewManager.cs:1175–1175](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1175-L1175)
+[Drilling.Common/Review/CReviewManager.cs:1175–1175](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1175-L1175)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5919,7 +5919,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Failed` · L1176–1176
 
-[Drilling.Common/Review/CReviewManager.cs:1176–1176](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1176-L1176)
+[Drilling.Common/Review/CReviewManager.cs:1176–1176](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1176-L1176)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5934,7 +5934,7 @@ flowchart TD
 
 ### FieldDeclaration `Success` · L1181–1181
 
-[Drilling.Common/Review/CReviewManager.cs:1181–1181](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1181-L1181)
+[Drilling.Common/Review/CReviewManager.cs:1181–1181](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1181-L1181)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5962,7 +5962,7 @@ flowchart TD
 
 ### FieldDeclaration `NotApplicable` · L1182–1182
 
-[Drilling.Common/Review/CReviewManager.cs:1182–1182](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1182-L1182)
+[Drilling.Common/Review/CReviewManager.cs:1182–1182](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1182-L1182)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5990,7 +5990,7 @@ flowchart TD
 
 ### MethodDeclaration `OrderByReviewSequence` · L1185–1228
 
-[Drilling.Common/Review/CReviewManager.cs:1185–1228](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1185-L1228)
+[Drilling.Common/Review/CReviewManager.cs:1185–1228](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1185-L1228)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6009,9 +6009,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:492–492](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L492-L492) | OrderByReviewSequence | False |
-| [Drilling.Common/Review/CReviewManager.cs:1089–1089](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1089-L1089) | OrderByReviewSequence | False |
-| [Drilling.Common/Review/CReviewManager.cs:2203–2203](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2203-L2203) | OrderByReviewSequence | False |
+| [Drilling.Common/Review/CReviewManager.cs:492–492](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L492-L492) | OrderByReviewSequence | False |
+| [Drilling.Common/Review/CReviewManager.cs:1089–1089](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1089-L1089) | OrderByReviewSequence | False |
+| [Drilling.Common/Review/CReviewManager.cs:2203–2203](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2203-L2203) | OrderByReviewSequence | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6092,7 +6092,7 @@ flowchart TD
 
 ### LocalFunctionStatement `GetDesignY` · L1187–1190
 
-[Drilling.Common/Review/CReviewManager.cs:1187–1190](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1187-L1190)
+[Drilling.Common/Review/CReviewManager.cs:1187–1190](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1187-L1190)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6119,7 +6119,7 @@ flowchart TD
 
 ### LocalFunctionStatement `GetDesignX` · L1192–1195
 
-[Drilling.Common/Review/CReviewManager.cs:1192–1195](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1192-L1195)
+[Drilling.Common/Review/CReviewManager.cs:1192–1195](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1192-L1195)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6146,7 +6146,7 @@ flowchart TD
 
 ### LocalFunctionStatement `GetCellNo` · L1197–1200
 
-[Drilling.Common/Review/CReviewManager.cs:1197–1200](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1197-L1200)
+[Drilling.Common/Review/CReviewManager.cs:1197–1200](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1197-L1200)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6173,7 +6173,7 @@ flowchart TD
 
 ### LocalFunctionStatement `GetShotNo` · L1202–1205
 
-[Drilling.Common/Review/CReviewManager.cs:1202–1205](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1202-L1205)
+[Drilling.Common/Review/CReviewManager.cs:1202–1205](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1202-L1205)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6200,7 +6200,7 @@ flowchart TD
 
 ### MethodDeclaration `GetFieldOrUnassigned` · L1232–1235
 
-[Drilling.Common/Review/CReviewManager.cs:1232–1235](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1232-L1235)
+[Drilling.Common/Review/CReviewManager.cs:1232–1235](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1232-L1235)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6236,7 +6236,7 @@ flowchart TD
 
 ### MethodDeclaration `ToShotKey` · L1240–1243
 
-[Drilling.Common/Review/CReviewManager.cs:1240–1243](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1240-L1243)
+[Drilling.Common/Review/CReviewManager.cs:1240–1243](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1240-L1243)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6256,10 +6256,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:750–750](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L750-L750) | ToShotKey | False |
-| [Drilling.Common/Review/CReviewManager.cs:1266–1266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1266-L1266) | ToShotKey | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L454-L454) | CReviewManager.ToShotKey | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:543–543](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L543-L543) | CReviewManager.ToShotKey | False |
+| [Drilling.Common/Review/CReviewManager.cs:750–750](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L750-L750) | ToShotKey | False |
+| [Drilling.Common/Review/CReviewManager.cs:1266–1266](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1266-L1266) | ToShotKey | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L454-L454) | CReviewManager.ToShotKey | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:543–543](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L543-L543) | CReviewManager.ToShotKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6280,7 +6280,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeShotKey` · L1245–1271
 
-[Drilling.Common/Review/CReviewManager.cs:1245–1271](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1245-L1271)
+[Drilling.Common/Review/CReviewManager.cs:1245–1271](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1245-L1271)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6299,23 +6299,23 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L219-L219) | NormalizeShotKey | False |
-| [Drilling.Common/Review/CReviewManager.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L570-L570) | NormalizeShotKey | False |
-| [Drilling.Common/Review/CReviewManager.cs:1277–1277](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1277-L1277) | NormalizeShotKey | False |
-| [Drilling.Common/Review/CReviewManager.cs:1394–1394](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1394-L1394) | NormalizeShotKey | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L21-L21) | CReviewManager.NormalizeShotKey | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L339-L339) | CReviewManager.NormalizeShotKey | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L340-L340) | CReviewManager.NormalizeShotKey | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:497–497](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L497-L497) | CReviewManager.NormalizeShotKey | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:466–466](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L466-L466) | CReviewManager.NormalizeShotKey | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:626–626](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L626-L626) | CReviewManager.NormalizeShotKey | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:960–960](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L960-L960) | CReviewManager.NormalizeShotKey | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1376–1376](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1376-L1376) | CReviewManager.NormalizeShotKey | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1684–1684](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1684-L1684) | CReviewManager.NormalizeShotKey | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2050–2050](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2050-L2050) | CReviewManager.NormalizeShotKey | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2748–2748](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2748-L2748) | CReviewManager.NormalizeShotKey | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2758–2758](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2758-L2758) | CReviewManager.NormalizeShotKey | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3482–3482](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3482-L3482) | CReviewManager.NormalizeShotKey | False |
+| [Drilling.Common/Review/CReviewManager.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L219-L219) | NormalizeShotKey | False |
+| [Drilling.Common/Review/CReviewManager.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L570-L570) | NormalizeShotKey | False |
+| [Drilling.Common/Review/CReviewManager.cs:1277–1277](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1277-L1277) | NormalizeShotKey | False |
+| [Drilling.Common/Review/CReviewManager.cs:1394–1394](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1394-L1394) | NormalizeShotKey | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L21-L21) | CReviewManager.NormalizeShotKey | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.cs#L339-L339) | CReviewManager.NormalizeShotKey | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.cs#L340-L340) | CReviewManager.NormalizeShotKey | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:497–497](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.cs#L497-L497) | CReviewManager.NormalizeShotKey | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:466–466](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L466-L466) | CReviewManager.NormalizeShotKey | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:626–626](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L626-L626) | CReviewManager.NormalizeShotKey | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:960–960](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L960-L960) | CReviewManager.NormalizeShotKey | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1376–1376](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1376-L1376) | CReviewManager.NormalizeShotKey | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1684–1684](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1684-L1684) | CReviewManager.NormalizeShotKey | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2050–2050](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2050-L2050) | CReviewManager.NormalizeShotKey | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2748–2748](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2748-L2748) | CReviewManager.NormalizeShotKey | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2758–2758](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2758-L2758) | CReviewManager.NormalizeShotKey | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3482–3482](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3482-L3482) | CReviewManager.NormalizeShotKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6394,7 +6394,7 @@ flowchart TD
 
 ### MethodDeclaration `TryParseShotKey` · L1273–1280
 
-[Drilling.Common/Review/CReviewManager.cs:1273–1280](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1273-L1280)
+[Drilling.Common/Review/CReviewManager.cs:1273–1280](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1273-L1280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6415,8 +6415,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L97-L97) | TryParseShotKey | False |
-| [Drilling.Common/Review/CReviewManager.cs:1404–1404](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1404-L1404) | TryParseShotKey | False |
+| [Drilling.Common/Review/CReviewManager.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L97-L97) | TryParseShotKey | False |
+| [Drilling.Common/Review/CReviewManager.cs:1404–1404](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1404-L1404) | TryParseShotKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6451,7 +6451,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadInt` · L1282–1291
 
-[Drilling.Common/Review/CReviewManager.cs:1282–1291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1282-L1291)
+[Drilling.Common/Review/CReviewManager.cs:1282–1291](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1282-L1291)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6472,12 +6472,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L83-L83) | ReadInt | False |
-| [Drilling.Common/Review/CReviewManager.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L148-L148) | ReadInt | False |
-| [Drilling.Common/Review/CReviewManager.cs:161–161](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L161-L161) | ReadInt | False |
-| [Drilling.Common/Review/CReviewManager.cs:210–210](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L210-L210) | ReadInt | False |
-| [Drilling.Common/Review/CReviewManager.cs:701–701](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L701-L701) | ReadInt | False |
-| [Drilling.Common/Review/CReviewManager.cs:1392–1392](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1392-L1392) | ReadInt | False |
+| [Drilling.Common/Review/CReviewManager.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L83-L83) | ReadInt | False |
+| [Drilling.Common/Review/CReviewManager.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L148-L148) | ReadInt | False |
+| [Drilling.Common/Review/CReviewManager.cs:161–161](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L161-L161) | ReadInt | False |
+| [Drilling.Common/Review/CReviewManager.cs:210–210](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L210-L210) | ReadInt | False |
+| [Drilling.Common/Review/CReviewManager.cs:701–701](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L701-L701) | ReadInt | False |
+| [Drilling.Common/Review/CReviewManager.cs:1392–1392](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1392-L1392) | ReadInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6516,7 +6516,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadRequiredCellCount` · L1293–1305
 
-[Drilling.Common/Review/CReviewManager.cs:1293–1305](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1293-L1305)
+[Drilling.Common/Review/CReviewManager.cs:1293–1305](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1293-L1305)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6536,7 +6536,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:511–511](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L511-L511) | ReadRequiredCellCount | False |
+| [Drilling.Common/Review/CReviewManager.cs:511–511](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L511-L511) | ReadRequiredCellCount | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6584,7 +6584,7 @@ flowchart TD
 
 ### MethodDeclaration `FindParameter` · L1307–1310
 
-[Drilling.Common/Review/CReviewManager.cs:1307–1310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1307-L1310)
+[Drilling.Common/Review/CReviewManager.cs:1307–1310](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1307-L1310)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6604,7 +6604,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1295-L1295) | FindParameter | False |
+| [Drilling.Common/Review/CReviewManager.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1295-L1295) | FindParameter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6627,7 +6627,7 @@ flowchart TD
 
 ### MethodDeclaration `GetParameterMinimum` · L1312–1315
 
-[Drilling.Common/Review/CReviewManager.cs:1312–1315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1312-L1315)
+[Drilling.Common/Review/CReviewManager.cs:1312–1315](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1312-L1315)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6646,7 +6646,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1297–1297](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1297-L1297) | GetParameterMinimum | False |
+| [Drilling.Common/Review/CReviewManager.cs:1297–1297](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1297-L1297) | GetParameterMinimum | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6668,7 +6668,7 @@ flowchart TD
 
 ### MethodDeclaration `GetParameterMaximum` · L1317–1320
 
-[Drilling.Common/Review/CReviewManager.cs:1317–1320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1317-L1320)
+[Drilling.Common/Review/CReviewManager.cs:1317–1320](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1317-L1320)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6688,7 +6688,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1298–1298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1298-L1298) | GetParameterMaximum | False |
+| [Drilling.Common/Review/CReviewManager.cs:1298–1298](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1298-L1298) | GetParameterMaximum | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6708,7 +6708,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDouble` · L1322–1326
 
-[Drilling.Common/Review/CReviewManager.cs:1322–1326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1322-L1326)
+[Drilling.Common/Review/CReviewManager.cs:1322–1326](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1322-L1326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6729,19 +6729,19 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L164-L164) | ReadDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L167-L167) | ReadDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L168-L168) | ReadDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L176-L176) | ReadDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:512–512](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L512-L512) | ReadDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:513–513](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L513-L513) | ReadDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L552-L552) | ReadDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:698–698](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L698-L698) | ReadDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:699–699](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L699-L699) | ReadDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:700–700](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L700-L700) | ReadDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:708–708](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L708-L708) | ReadDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:709–709](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L709-L709) | ReadDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:710–710](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L710-L710) | ReadDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L164-L164) | ReadDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L167-L167) | ReadDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L168-L168) | ReadDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L176-L176) | ReadDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:512–512](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L512-L512) | ReadDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:513–513](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L513-L513) | ReadDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L552-L552) | ReadDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:698–698](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L698-L698) | ReadDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:699–699](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L699-L699) | ReadDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:700–700](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L700-L700) | ReadDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:708–708](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L708-L708) | ReadDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:709–709](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L709-L709) | ReadDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:710–710](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L710-L710) | ReadDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6765,7 +6765,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadText` · L1328–1340
 
-[Drilling.Common/Review/CReviewManager.cs:1328–1340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1328-L1340)
+[Drilling.Common/Review/CReviewManager.cs:1328–1340](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1328-L1340)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6785,8 +6785,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1284–1284](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1284-L1284) | ReadText | False |
-| [Drilling.Common/Review/CReviewManager.cs:1324–1324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1324-L1324) | ReadText | False |
+| [Drilling.Common/Review/CReviewManager.cs:1284–1284](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1284-L1284) | ReadText | False |
+| [Drilling.Common/Review/CReviewManager.cs:1324–1324](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1324-L1324) | ReadText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6827,7 +6827,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateRecipeParameterIndex` · L1342–1360
 
-[Drilling.Common/Review/CReviewManager.cs:1342–1360](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1342-L1360)
+[Drilling.Common/Review/CReviewManager.cs:1342–1360](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1342-L1360)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6846,7 +6846,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1330–1330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1330-L1330) | CreateRecipeParameterIndex | False |
+| [Drilling.Common/Review/CReviewManager.cs:1330–1330](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1330-L1330) | CreateRecipeParameterIndex | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6895,7 +6895,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildBeamInspectionTargets` · L1364–1379
 
-[Drilling.Common/Review/CReviewManager.cs:1364–1379](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1364-L1379)
+[Drilling.Common/Review/CReviewManager.cs:1364–1379](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1364-L1379)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6964,7 +6964,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildBeamInspectionTargets` · L1381–1427
 
-[Drilling.Common/Review/CReviewManager.cs:1381–1427](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1381-L1427)
+[Drilling.Common/Review/CReviewManager.cs:1381–1427](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1381-L1427)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6986,8 +6986,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1378–1378](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1378-L1378) | BuildBeamInspectionTargets | False |
-| [Drilling.Common/Review/CReviewManager.cs:1454–1454](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1454-L1454) | BuildBeamInspectionTargets | False |
+| [Drilling.Common/Review/CReviewManager.cs:1378–1378](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1378-L1378) | BuildBeamInspectionTargets | False |
+| [Drilling.Common/Review/CReviewManager.cs:1454–1454](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1454-L1454) | BuildBeamInspectionTargets | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7118,7 +7118,7 @@ flowchart TD
 
 ### MethodDeclaration `StartBeamInspection` · L1429–1444
 
-[Drilling.Common/Review/CReviewManager.cs:1429–1444](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1429-L1444)
+[Drilling.Common/Review/CReviewManager.cs:1429–1444](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1429-L1444)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7176,7 +7176,7 @@ flowchart TD
 
 ### MethodDeclaration `StartBeamInspection` · L1446–1571
 
-[Drilling.Common/Review/CReviewManager.cs:1446–1571](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1446-L1571)
+[Drilling.Common/Review/CReviewManager.cs:1446–1571](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1446-L1571)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7199,8 +7199,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1443–1443](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1443-L1443) | StartBeamInspection | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3078–3078](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3078-L3078) | _reviewManager.StartBeamInspection | False |
+| [Drilling.Common/Review/CReviewManager.cs:1443–1443](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1443-L1443) | StartBeamInspection | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3078–3078](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3078-L3078) | _reviewManager.StartBeamInspection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7357,7 +7357,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Publish` · L1462–1473
 
-[Drilling.Common/Review/CReviewManager.cs:1462–1473](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1462-L1473)
+[Drilling.Common/Review/CReviewManager.cs:1462–1473](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1462-L1473)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7376,9 +7376,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1512–1512](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1512-L1512) | Publish | False |
-| [Drilling.Common/Review/CReviewManager.cs:1523–1523](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1523-L1523) | Publish | False |
-| [Drilling.Common/Review/CReviewManager.cs:1530–1530](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1530-L1530) | Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:1512–1512](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1512-L1512) | Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:1523–1523](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1523-L1523) | Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:1530–1530](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1530-L1530) | Publish | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7409,7 +7409,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Finish` · L1475–1505
 
-[Drilling.Common/Review/CReviewManager.cs:1475–1505](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1475-L1505)
+[Drilling.Common/Review/CReviewManager.cs:1475–1505](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1475-L1505)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7428,9 +7428,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1541–1541](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1541-L1541) | Finish | False |
-| [Drilling.Common/Review/CReviewManager.cs:1552–1552](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1552-L1552) | Finish | False |
-| [Drilling.Common/Review/CReviewManager.cs:1564–1564](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1564-L1564) | Finish | False |
+| [Drilling.Common/Review/CReviewManager.cs:1541–1541](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1541-L1541) | Finish | False |
+| [Drilling.Common/Review/CReviewManager.cs:1552–1552](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1552-L1552) | Finish | False |
+| [Drilling.Common/Review/CReviewManager.cs:1564–1564](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1564-L1564) | Finish | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7486,7 +7486,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadLastBeamInspection` · L1573–1573
 
-[Drilling.Common/Review/CReviewManager.cs:1573–1573](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1573-L1573)
+[Drilling.Common/Review/CReviewManager.cs:1573–1573](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1573-L1573)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7505,7 +7505,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3578–3578](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3578-L3578) | _reviewManager.LoadLastBeamInspection | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3578–3578](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3578-L3578) | _reviewManager.LoadLastBeamInspection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7523,7 +7523,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadLastManualReviewResult` · L1575–1590
 
-[Drilling.Common/Review/CReviewManager.cs:1575–1590](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1575-L1590)
+[Drilling.Common/Review/CReviewManager.cs:1575–1590](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1575-L1590)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7544,7 +7544,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2676–2676](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2676-L2676) | _reviewManager.LoadLastManualReviewResult | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2676–2676](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2676-L2676) | _reviewManager.LoadLastManualReviewResult | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7594,7 +7594,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveReviewProductId` · L1593–1611
 
-[Drilling.Common/Review/CReviewManager.cs:1593–1611](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1593-L1611)
+[Drilling.Common/Review/CReviewManager.cs:1593–1611](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1593-L1611)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7614,7 +7614,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L314-L314) | ResolveReviewProductId | False |
+| [Drilling.Common/Review/CReviewManager.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L314-L314) | ResolveReviewProductId | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7662,7 +7662,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveResultForProduct` · L1613–1627
 
-[Drilling.Common/Review/CReviewManager.cs:1613–1627](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1613-L1627)
+[Drilling.Common/Review/CReviewManager.cs:1613–1627](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1613-L1627)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7684,9 +7684,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:414–414](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L414-L414) | SaveResultForProduct | False |
-| [Drilling.Common/Review/CReviewManager.cs:2035–2035](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2035-L2035) | SaveResultForProduct | False |
-| [Drilling.Common/Review/CReviewManager.cs:2505–2505](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2505-L2505) | SaveResultForProduct | False |
+| [Drilling.Common/Review/CReviewManager.cs:414–414](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L414-L414) | SaveResultForProduct | False |
+| [Drilling.Common/Review/CReviewManager.cs:2035–2035](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2035-L2035) | SaveResultForProduct | False |
+| [Drilling.Common/Review/CReviewManager.cs:2505–2505](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2505-L2505) | SaveResultForProduct | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7700,7 +7700,7 @@ flowchart TD
 | 1620 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
 | 1625 | CreateProductReviewResults | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT> Drilling.Common.Review.CReviewManager.CreateProductReviewResults(System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_PLAN_POINT>) · Drilling.Common/Review/CReviewManager.cs:1664 |
 | 1626 | productManager.SetReviewCompleted(reviewProductId, savedAt, productResults, CancellationToken.None).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<Drilling.Common.Product.ST_PRODUCT_DATA> System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA>.ConfigureAwait(bool) |
-| 1626 | productManager.SetReviewCompleted | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA> Drilling.Common.Product.CProductManager.SetReviewCompleted(string, System.DateTimeOffset, System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:490 |
+| 1626 | productManager.SetReviewCompleted | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA> Drilling.Common.Product.CProductManager.SetReviewCompleted(string, System.DateTimeOffset, System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:491 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -7743,7 +7743,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveProgressToProduct` · L1629–1637
 
-[Drilling.Common/Review/CReviewManager.cs:1629–1637](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1629-L1637)
+[Drilling.Common/Review/CReviewManager.cs:1629–1637](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1629-L1637)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7764,9 +7764,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:408–408](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L408-L408) | SaveProgressToProduct | False |
-| [Drilling.Common/Review/CReviewManager.cs:2029–2029](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2029-L2029) | SaveProgressToProduct | False |
-| [Drilling.Common/Review/CReviewManager.cs:2501–2501](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2501-L2501) | SaveProgressToProduct | False |
+| [Drilling.Common/Review/CReviewManager.cs:408–408](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L408-L408) | SaveProgressToProduct | False |
+| [Drilling.Common/Review/CReviewManager.cs:2029–2029](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2029-L2029) | SaveProgressToProduct | False |
+| [Drilling.Common/Review/CReviewManager.cs:2501–2501](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2501-L2501) | SaveProgressToProduct | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7774,7 +7774,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | 1631 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
 | 1636 | productManager.SetReviewProgress(reviewProductId, CreateProductReviewData(plan, DateTimeOffset.Now), cancellationToken).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<Drilling.Common.Product.ST_PRODUCT_DATA> System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA>.ConfigureAwait(bool) |
-| 1636 | productManager.SetReviewProgress | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA> Drilling.Common.Product.CProductManager.SetReviewProgress(string, Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:466 |
+| 1636 | productManager.SetReviewProgress | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA> Drilling.Common.Product.CProductManager.SetReviewProgress(string, Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:467 |
 | 1636 | CreateProductReviewData | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA Drilling.Common.Review.CReviewManager.CreateProductReviewData(Drilling.Common.Review.ST_REVIEW_PLAN, System.DateTimeOffset?) · Drilling.Common/Review/CReviewManager.cs:1639 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -7802,7 +7802,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateProductReviewData` · L1639–1662
 
-[Drilling.Common/Review/CReviewManager.cs:1639–1662](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1639-L1662)
+[Drilling.Common/Review/CReviewManager.cs:1639–1662](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1639-L1662)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7822,16 +7822,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L343-L343) | CreateProductReviewData | False |
-| [Drilling.Common/Review/CReviewManager.cs:1636–1636](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1636-L1636) | CreateProductReviewData | False |
-| [Drilling.Common/Review/CReviewManager.cs:2443–2443](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2443-L2443) | CreateProductReviewData | False |
-| [Drilling.Common/Review/CReviewManager.cs:2633–2633](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2633-L2633) | CreateProductReviewData | False |
+| [Drilling.Common/Review/CReviewManager.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L343-L343) | CreateProductReviewData | False |
+| [Drilling.Common/Review/CReviewManager.cs:1636–1636](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1636-L1636) | CreateProductReviewData | False |
+| [Drilling.Common/Review/CReviewManager.cs:2443–2443](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2443-L2443) | CreateProductReviewData | False |
+| [Drilling.Common/Review/CReviewManager.cs:2633–2633](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2633-L2633) | CreateProductReviewData | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1649 | new ST_PRODUCT_REVIEW_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ST_PRODUCT_REVIEW_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, System.DateTimeOffset?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>) · Drilling.Common/Product/CProductManager.cs:1003 |
+| 1649 | new ST_PRODUCT_REVIEW_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ST_PRODUCT_REVIEW_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, System.DateTimeOffset?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>) · Drilling.Common/Product/CProductManager.cs:947 |
 | 1649 | CreateProductReviewResults | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT> Drilling.Common.Review.CReviewManager.CreateProductReviewResults(System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_PLAN_POINT>) · Drilling.Common/Review/CReviewManager.cs:1664 |
 | 1653 | .Rule.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
 | 1653 | .Rule.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
@@ -7888,7 +7888,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateProductReviewResults` · L1664–1682
 
-[Drilling.Common/Review/CReviewManager.cs:1664–1682](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1664-L1682)
+[Drilling.Common/Review/CReviewManager.cs:1664–1682](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1664-L1682)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7907,8 +7907,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1625–1625](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1625-L1625) | CreateProductReviewResults | False |
-| [Drilling.Common/Review/CReviewManager.cs:1649–1649](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1649-L1649) | CreateProductReviewResults | False |
+| [Drilling.Common/Review/CReviewManager.cs:1625–1625](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1625-L1625) | CreateProductReviewResults | False |
+| [Drilling.Common/Review/CReviewManager.cs:1649–1649](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1649-L1649) | CreateProductReviewResults | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7916,7 +7916,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | 1666 | new List<ST_PRODUCT_REVIEW_RESULT> | resolved | System.Collections.Generic.List<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>.List() |
 | 1674 | productResults.Add | resolved | void System.Collections.Generic.List<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>.Add(Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT) |
-| 1674 | new ST_PRODUCT_REVIEW_RESULT | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT.ST_PRODUCT_REVIEW_RESULT(string, int, int, int, double, double, string) · Drilling.Common/Product/CProductManager.cs:998 |
+| 1674 | new ST_PRODUCT_REVIEW_RESULT | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT.ST_PRODUCT_REVIEW_RESULT(string, int, int, int, double, double, string) · Drilling.Common/Product/CProductManager.cs:942 |
 | 1674 | FormatShotName | resolved | string Drilling.Common.Review.CReviewManager.FormatShotName(Drilling.Common.Review.ST_REVIEW_PLAN_POINT?) · Drilling.Common/Review/CReviewManager.cs:1799 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -7951,7 +7951,7 @@ flowchart TD
 
 ### MethodDeclaration `IsPointToPoint` · L1684–1687
 
-[Drilling.Common/Review/CReviewManager.cs:1684–1687](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1684-L1687)
+[Drilling.Common/Review/CReviewManager.cs:1684–1687](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1684-L1687)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7970,9 +7970,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L346-L346) | IsPointToPoint | False |
-| [Drilling.Common/Review/CReviewManager.cs:2446–2446](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2446-L2446) | IsPointToPoint | False |
-| [Drilling.Common/Review/CReviewManager.cs:2546–2546](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2546-L2546) | IsPointToPoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L346-L346) | IsPointToPoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:2446–2446](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2446-L2446) | IsPointToPoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:2546–2546](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2546-L2546) | IsPointToPoint | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7991,7 +7991,7 @@ flowchart TD
 
 ### MethodDeclaration `IsMatchingIncompleteReview` · L1689–1748
 
-[Drilling.Common/Review/CReviewManager.cs:1689–1748](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1689-L1748)
+[Drilling.Common/Review/CReviewManager.cs:1689–1748](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1689-L1748)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8012,7 +8012,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:463–463](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L463-L463) | IsMatchingIncompleteReview | False |
+| [Drilling.Common/Review/CReviewManager.cs:463–463](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L463-L463) | IsMatchingIncompleteReview | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8126,7 +8126,7 @@ flowchart TD
 
 ### MethodDeclaration `RestoreCheckpoint` · L1750–1792
 
-[Drilling.Common/Review/CReviewManager.cs:1750–1792](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1750-L1792)
+[Drilling.Common/Review/CReviewManager.cs:1750–1792](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1750-L1792)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8146,7 +8146,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L334-L334) | RestoreCheckpoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L334-L334) | RestoreCheckpoint | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8219,7 +8219,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateCheckpointPointKey` · L1794–1797
 
-[Drilling.Common/Review/CReviewManager.cs:1794–1797](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1794-L1797)
+[Drilling.Common/Review/CReviewManager.cs:1794–1797](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1794-L1797)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8238,8 +8238,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1736–1736](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1736-L1736) | CreateCheckpointPointKey | False |
-| [Drilling.Common/Review/CReviewManager.cs:1762–1762](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1762-L1762) | CreateCheckpointPointKey | False |
+| [Drilling.Common/Review/CReviewManager.cs:1736–1736](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1736-L1736) | CreateCheckpointPointKey | False |
+| [Drilling.Common/Review/CReviewManager.cs:1762–1762](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1762-L1762) | CreateCheckpointPointKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8260,7 +8260,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatShotName` · L1799–1802
 
-[Drilling.Common/Review/CReviewManager.cs:1799–1802](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1799-L1802)
+[Drilling.Common/Review/CReviewManager.cs:1799–1802](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1799-L1802)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8279,10 +8279,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1657–1657](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1657-L1657) | FormatShotName | False |
-| [Drilling.Common/Review/CReviewManager.cs:1674–1674](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1674-L1674) | FormatShotName | False |
-| [Drilling.Common/Review/CReviewManager.cs:1718–1718](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1718-L1718) | FormatShotName | False |
-| [Drilling.Common/Review/CReviewManager.cs:1796–1796](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1796-L1796) | FormatShotName | False |
+| [Drilling.Common/Review/CReviewManager.cs:1657–1657](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1657-L1657) | FormatShotName | False |
+| [Drilling.Common/Review/CReviewManager.cs:1674–1674](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1674-L1674) | FormatShotName | False |
+| [Drilling.Common/Review/CReviewManager.cs:1718–1718](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1718-L1718) | FormatShotName | False |
+| [Drilling.Common/Review/CReviewManager.cs:1796–1796](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1796-L1796) | FormatShotName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8302,7 +8302,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateCheckpointPointKey` · L1804–1807
 
-[Drilling.Common/Review/CReviewManager.cs:1804–1807](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1804-L1807)
+[Drilling.Common/Review/CReviewManager.cs:1804–1807](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1804-L1807)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8336,7 +8336,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateCheckpointPointKey` · L1809–1812
 
-[Drilling.Common/Review/CReviewManager.cs:1809–1812](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1809-L1812)
+[Drilling.Common/Review/CReviewManager.cs:1809–1812](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1809-L1812)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8355,8 +8355,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1741–1741](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1741-L1741) | CreateCheckpointPointKey | False |
-| [Drilling.Common/Review/CReviewManager.cs:1755–1755](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1755-L1755) | CreateCheckpointPointKey | False |
+| [Drilling.Common/Review/CReviewManager.cs:1741–1741](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1741-L1741) | CreateCheckpointPointKey | False |
+| [Drilling.Common/Review/CReviewManager.cs:1755–1755](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1755-L1755) | CreateCheckpointPointKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8375,7 +8375,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateCheckpointPointKey` · L1814–1827
 
-[Drilling.Common/Review/CReviewManager.cs:1814–1827](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1814-L1827)
+[Drilling.Common/Review/CReviewManager.cs:1814–1827](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1814-L1827)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8397,9 +8397,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1796–1796](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1796-L1796) | CreateCheckpointPointKey | False |
-| [Drilling.Common/Review/CReviewManager.cs:1806–1806](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1806-L1806) | CreateCheckpointPointKey | False |
-| [Drilling.Common/Review/CReviewManager.cs:1811–1811](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1811-L1811) | CreateCheckpointPointKey | False |
+| [Drilling.Common/Review/CReviewManager.cs:1796–1796](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1796-L1796) | CreateCheckpointPointKey | False |
+| [Drilling.Common/Review/CReviewManager.cs:1806–1806](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1806-L1806) | CreateCheckpointPointKey | False |
+| [Drilling.Common/Review/CReviewManager.cs:1811–1811](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1811-L1811) | CreateCheckpointPointKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8446,7 +8446,7 @@ flowchart TD
 
 ### MethodDeclaration `TrySetProductReviewError` · L1829–1845
 
-[Drilling.Common/Review/CReviewManager.cs:1829–1845](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1829-L1845)
+[Drilling.Common/Review/CReviewManager.cs:1829–1845](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1829-L1845)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8466,15 +8466,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L433-L433) | TrySetProductReviewError | False |
-| [Drilling.Common/Review/CReviewManager.cs:2524–2524](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2524-L2524) | TrySetProductReviewError | False |
+| [Drilling.Common/Review/CReviewManager.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L433-L433) | TrySetProductReviewError | False |
+| [Drilling.Common/Review/CReviewManager.cs:2524–2524](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2524-L2524) | TrySetProductReviewError | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 1831 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 1838 | productManager.SetReviewError | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA> Drilling.Common.Product.CProductManager.SetReviewError(string, string, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:536 |
+| 1838 | productManager.SetReviewError | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA> Drilling.Common.Product.CProductManager.SetReviewError(string, string, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:537 |
 | 1843 | LogProductReviewUpdateFailure | resolved | Drilling.Common.Review.CReviewManager.ST_PRODUCT_REVIEW_UPDATE_RESULT Drilling.Common.Review.CReviewManager.LogProductReviewUpdateFailure(string, string, System.Exception) · Drilling.Common/Review/CReviewManager.cs:1877 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -8509,7 +8509,7 @@ flowchart TD
 
 ### MethodDeclaration `TrySetProductReviewStopped` · L1847–1863
 
-[Drilling.Common/Review/CReviewManager.cs:1847–1863](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1847-L1863)
+[Drilling.Common/Review/CReviewManager.cs:1847–1863](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1847-L1863)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8529,14 +8529,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1868–1868](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1868-L1868) | TrySetProductReviewStopped | False |
+| [Drilling.Common/Review/CReviewManager.cs:1868–1868](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1868-L1868) | TrySetProductReviewStopped | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 1849 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 1856 | productManager.SetReviewStopped | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA> Drilling.Common.Product.CProductManager.SetReviewStopped(string, string, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:514 |
+| 1856 | productManager.SetReviewStopped | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA> Drilling.Common.Product.CProductManager.SetReviewStopped(string, string, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:515 |
 | 1861 | LogProductReviewUpdateFailure | resolved | Drilling.Common.Review.CReviewManager.ST_PRODUCT_REVIEW_UPDATE_RESULT Drilling.Common.Review.CReviewManager.LogProductReviewUpdateFailure(string, string, System.Exception) · Drilling.Common/Review/CReviewManager.cs:1877 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -8571,7 +8571,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateStoppedStatus` · L1865–1875
 
-[Drilling.Common/Review/CReviewManager.cs:1865–1875](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1865-L1875)
+[Drilling.Common/Review/CReviewManager.cs:1865–1875](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1865-L1875)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8592,17 +8592,17 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L364-L364) | CreateStoppedStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L383-L383) | CreateStoppedStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:392–392](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L392-L392) | CreateStoppedStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:401–401](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L401-L401) | CreateStoppedStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:424–424](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L424-L424) | CreateStoppedStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:2046–2046](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2046-L2046) | CreateStoppedStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:2457–2457](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2457-L2457) | CreateStoppedStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:2476–2476](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2476-L2476) | CreateStoppedStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:2485–2485](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2485-L2485) | CreateStoppedStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:2494–2494](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2494-L2494) | CreateStoppedStatus | False |
-| [Drilling.Common/Review/CReviewManager.cs:2515–2515](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2515-L2515) | CreateStoppedStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L364-L364) | CreateStoppedStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L383-L383) | CreateStoppedStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:392–392](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L392-L392) | CreateStoppedStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:401–401](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L401-L401) | CreateStoppedStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:424–424](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L424-L424) | CreateStoppedStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:2046–2046](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2046-L2046) | CreateStoppedStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:2457–2457](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2457-L2457) | CreateStoppedStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:2476–2476](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2476-L2476) | CreateStoppedStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:2485–2485](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2485-L2485) | CreateStoppedStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:2494–2494](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2494-L2494) | CreateStoppedStatus | False |
+| [Drilling.Common/Review/CReviewManager.cs:2515–2515](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2515-L2515) | CreateStoppedStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8641,7 +8641,7 @@ flowchart TD
 
 ### MethodDeclaration `LogProductReviewUpdateFailure` · L1877–1899
 
-[Drilling.Common/Review/CReviewManager.cs:1877–1899](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1877-L1899)
+[Drilling.Common/Review/CReviewManager.cs:1877–1899](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1877-L1899)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8662,8 +8662,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1843–1843](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1843-L1843) | LogProductReviewUpdateFailure | False |
-| [Drilling.Common/Review/CReviewManager.cs:1861–1861](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1861-L1861) | LogProductReviewUpdateFailure | False |
+| [Drilling.Common/Review/CReviewManager.cs:1843–1843](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1843-L1843) | LogProductReviewUpdateFailure | False |
+| [Drilling.Common/Review/CReviewManager.cs:1861–1861](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1861-L1861) | LogProductReviewUpdateFailure | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8718,7 +8718,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendUpdateResult` · L1901–1909
 
-[Drilling.Common/Review/CReviewManager.cs:1901–1909](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1901-L1909)
+[Drilling.Common/Review/CReviewManager.cs:1901–1909](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1901-L1909)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8738,9 +8738,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:434–434](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L434-L434) | AppendUpdateResult | False |
-| [Drilling.Common/Review/CReviewManager.cs:1874–1874](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1874-L1874) | AppendUpdateResult | False |
-| [Drilling.Common/Review/CReviewManager.cs:2525–2525](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2525-L2525) | AppendUpdateResult | False |
+| [Drilling.Common/Review/CReviewManager.cs:434–434](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L434-L434) | AppendUpdateResult | False |
+| [Drilling.Common/Review/CReviewManager.cs:1874–1874](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1874-L1874) | AppendUpdateResult | False |
+| [Drilling.Common/Review/CReviewManager.cs:2525–2525](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2525-L2525) | AppendUpdateResult | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -8762,7 +8762,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveStageY` · L1911–1918
 
-[Drilling.Common/Review/CReviewManager.cs:1911–1918](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1911-L1918)
+[Drilling.Common/Review/CReviewManager.cs:1911–1918](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1911-L1918)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8782,8 +8782,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:377–377](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L377-L377) | MoveStageY | False |
-| [Drilling.Common/Review/CReviewManager.cs:2470–2470](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2470-L2470) | MoveStageY | False |
+| [Drilling.Common/Review/CReviewManager.cs:377–377](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L377-L377) | MoveStageY | False |
+| [Drilling.Common/Review/CReviewManager.cs:2470–2470](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2470-L2470) | MoveStageY | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8820,7 +8820,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveVisionX` · L1920–1930
 
-[Drilling.Common/Review/CReviewManager.cs:1920–1930](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1920-L1930)
+[Drilling.Common/Review/CReviewManager.cs:1920–1930](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1920-L1930)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8841,8 +8841,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:386–386](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L386-L386) | MoveVisionX | False |
-| [Drilling.Common/Review/CReviewManager.cs:2479–2479](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2479-L2479) | MoveVisionX | False |
+| [Drilling.Common/Review/CReviewManager.cs:386–386](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L386-L386) | MoveVisionX | False |
+| [Drilling.Common/Review/CReviewManager.cs:2479–2479](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2479-L2479) | MoveVisionX | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8892,7 +8892,7 @@ flowchart TD
 
 ### MethodDeclaration `MeasureVision` · L1932–1965
 
-[Drilling.Common/Review/CReviewManager.cs:1932–1965](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1932-L1965)
+[Drilling.Common/Review/CReviewManager.cs:1932–1965](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1932-L1965)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8912,12 +8912,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:395–395](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L395-L395) | MeasureVision | False |
-| [Drilling.Common/Review/CReviewManager.cs:1528–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1528-L1528) | MeasureVision | False |
-| [Drilling.Common/Review/CReviewManager.cs:2488–2488](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2488-L2488) | MeasureVision | False |
-| [Drilling.Common/Review/CReviewManager.cs:2829–2829](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2829-L2829) | MeasureVision | False |
-| [Drilling.Common/Review/CReviewManager.cs:3281–3281](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3281-L3281) | MeasureVision | False |
-| [Drilling.Common/Review/CReviewManager.cs:3422–3422](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3422-L3422) | MeasureVision | False |
+| [Drilling.Common/Review/CReviewManager.cs:395–395](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L395-L395) | MeasureVision | False |
+| [Drilling.Common/Review/CReviewManager.cs:1528–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1528-L1528) | MeasureVision | False |
+| [Drilling.Common/Review/CReviewManager.cs:2488–2488](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2488-L2488) | MeasureVision | False |
+| [Drilling.Common/Review/CReviewManager.cs:2829–2829](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2829-L2829) | MeasureVision | False |
+| [Drilling.Common/Review/CReviewManager.cs:3281–3281](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3281-L3281) | MeasureVision | False |
+| [Drilling.Common/Review/CReviewManager.cs:3422–3422](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3422-L3422) | MeasureVision | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8990,7 +8990,7 @@ flowchart TD
 
 ### MethodDeclaration `RunIofSequence` · L1967–2038
 
-[Drilling.Common/Review/CReviewManager.cs:1967–2038](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1967-L2038)
+[Drilling.Common/Review/CReviewManager.cs:1967–2038](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1967-L2038)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9014,8 +9014,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L348-L348) | RunIofSequence | False |
-| [Drilling.Common/Review/CReviewManager.cs:2448–2448](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2448-L2448) | RunIofSequence | False |
+| [Drilling.Common/Review/CReviewManager.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L348-L348) | RunIofSequence | False |
+| [Drilling.Common/Review/CReviewManager.cs:2448–2448](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2448-L2448) | RunIofSequence | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9147,7 +9147,7 @@ flowchart TD
 
 ### MethodDeclaration `StopIofSequence` · L2040–2047
 
-[Drilling.Common/Review/CReviewManager.cs:2040–2047](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2040-L2047)
+[Drilling.Common/Review/CReviewManager.cs:2040–2047](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2040-L2047)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9169,8 +9169,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1984–1984](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1984-L1984) | StopIofSequence | False |
-| [Drilling.Common/Review/CReviewManager.cs:2015–2015](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2015-L2015) | StopIofSequence | False |
+| [Drilling.Common/Review/CReviewManager.cs:1984–1984](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1984-L1984) | StopIofSequence | False |
+| [Drilling.Common/Review/CReviewManager.cs:2015–2015](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2015-L2015) | StopIofSequence | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9198,7 +9198,7 @@ flowchart TD
 
 ### MethodDeclaration `MeasureVisionLine` · L2049–2097
 
-[Drilling.Common/Review/CReviewManager.cs:2049–2097](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2049-L2097)
+[Drilling.Common/Review/CReviewManager.cs:2049–2097](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2049-L2097)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9218,7 +9218,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1997–1997](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1997-L1997) | MeasureVisionLine | False |
+| [Drilling.Common/Review/CReviewManager.cs:1997–1997](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1997-L1997) | MeasureVisionLine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9317,7 +9317,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteVisionCommand` · L2099–2110
 
-[Drilling.Common/Review/CReviewManager.cs:2099–2110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2099-L2110)
+[Drilling.Common/Review/CReviewManager.cs:2099–2110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2099-L2110)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9338,19 +9338,19 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2082–2082](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2082-L2082) | ExecuteVisionCommand | False |
-| [Drilling.Common/Review/CReviewManager.cs:2092–2092](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2092-L2092) | ExecuteVisionCommand | False |
-| [Drilling.Common/Review/CReviewManager.cs:2095–2095](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2095-L2095) | ExecuteVisionCommand | False |
-| [Drilling.Common/Review/CReviewManager.cs:2819–2819](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2819-L2819) | ExecuteVisionCommand | False |
-| [Drilling.Common/Review/CReviewManager.cs:2862–2862](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2862-L2862) | ExecuteVisionCommand | False |
-| [Drilling.Common/Review/CReviewManager.cs:2863–2863](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2863-L2863) | ExecuteVisionCommand | False |
-| [Drilling.Common/Review/CReviewManager.cs:2880–2880](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2880-L2880) | ExecuteVisionCommand | False |
-| [Drilling.Common/Review/CReviewManager.cs:2911–2911](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2911-L2911) | ExecuteVisionCommand | False |
-| [Drilling.Common/Review/CReviewManager.cs:3285–3285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3285-L3285) | ExecuteVisionCommand | False |
-| [Drilling.Common/Review/CReviewManager.cs:3556–3556](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3556-L3556) | _owner.ExecuteVisionCommand | False |
-| [Drilling.Common/Review/CReviewManager.cs:3559–3559](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3559-L3559) | _owner.ExecuteVisionCommand | False |
-| [Drilling.Common/Review/CReviewManager.cs:3585–3585](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3585-L3585) | _owner.ExecuteVisionCommand | False |
-| [Drilling.Common/Review/CReviewManager.cs:3592–3592](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3592-L3592) | _owner.ExecuteVisionCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:2082–2082](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2082-L2082) | ExecuteVisionCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:2092–2092](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2092-L2092) | ExecuteVisionCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:2095–2095](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2095-L2095) | ExecuteVisionCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:2819–2819](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2819-L2819) | ExecuteVisionCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:2862–2862](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2862-L2862) | ExecuteVisionCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:2863–2863](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2863-L2863) | ExecuteVisionCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:2880–2880](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2880-L2880) | ExecuteVisionCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:2911–2911](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2911-L2911) | ExecuteVisionCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:3285–3285](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3285-L3285) | ExecuteVisionCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:3556–3556](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3556-L3556) | _owner.ExecuteVisionCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:3559–3559](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3559-L3559) | _owner.ExecuteVisionCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:3585–3585](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3585-L3585) | _owner.ExecuteVisionCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:3592–3592](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3592-L3592) | _owner.ExecuteVisionCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9395,7 +9395,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveIofLineStart` · L2112–2116
 
-[Drilling.Common/Review/CReviewManager.cs:2112–2116](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2112-L2116)
+[Drilling.Common/Review/CReviewManager.cs:2112–2116](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2112-L2116)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9415,7 +9415,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2057–2057](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2057-L2057) | MoveIofLineStart | False |
+| [Drilling.Common/Review/CReviewManager.cs:2057–2057](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2057-L2057) | MoveIofLineStart | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9437,7 +9437,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveIofLineEnd` · L2118–2122
 
-[Drilling.Common/Review/CReviewManager.cs:2118–2122](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2118-L2122)
+[Drilling.Common/Review/CReviewManager.cs:2118–2122](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2118-L2122)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9457,8 +9457,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2067–2067](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2067-L2067) | MoveIofLineEnd | False |
-| [Drilling.Common/Review/CReviewManager.cs:2085–2085](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2085-L2085) | MoveIofLineEnd | False |
+| [Drilling.Common/Review/CReviewManager.cs:2067–2067](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2067-L2067) | MoveIofLineEnd | False |
+| [Drilling.Common/Review/CReviewManager.cs:2085–2085](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2085-L2085) | MoveIofLineEnd | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9480,7 +9480,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateFlyingReadyCommand` · L2124–2145
 
-[Drilling.Common/Review/CReviewManager.cs:2124–2145](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2124-L2145)
+[Drilling.Common/Review/CReviewManager.cs:2124–2145](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2124-L2145)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9500,9 +9500,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2082–2082](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2082-L2082) | CreateFlyingReadyCommand | False |
-| [Drilling.Common/Review/CReviewManager.cs:2863–2863](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2863-L2863) | CreateFlyingReadyCommand | False |
-| [Drilling.Common/Review/CReviewManager.cs:3559–3559](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3559-L3559) | _owner.CreateFlyingReadyCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:2082–2082](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2082-L2082) | CreateFlyingReadyCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:2863–2863](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2863-L2863) | CreateFlyingReadyCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:3559–3559](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3559-L3559) | _owner.CreateFlyingReadyCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9560,7 +9560,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendVisionMarkSearch` · L2147–2154
 
-[Drilling.Common/Review/CReviewManager.cs:2147–2154](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2147-L2154)
+[Drilling.Common/Review/CReviewManager.cs:2147–2154](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2147-L2154)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9580,7 +9580,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2141–2141](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2141-L2141) | AppendVisionMarkSearch | False |
+| [Drilling.Common/Review/CReviewManager.cs:2141–2141](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2141-L2141) | AppendVisionMarkSearch | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9630,7 +9630,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseVisionLineResponse` · L2156–2199
 
-[Drilling.Common/Review/CReviewManager.cs:2156–2199](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2156-L2199)
+[Drilling.Common/Review/CReviewManager.cs:2156–2199](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2156-L2199)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9650,9 +9650,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2096–2096](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2096-L2096) | ParseVisionLineResponse | False |
-| [Drilling.Common/Review/CReviewManager.cs:2912–2912](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2912-L2912) | ParseVisionLineResponse | False |
-| [Drilling.Common/Review/CReviewManager.cs:3594–3594](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3594-L3594) | _owner.ParseVisionLineResponse | False |
+| [Drilling.Common/Review/CReviewManager.cs:2096–2096](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2096-L2096) | ParseVisionLineResponse | False |
+| [Drilling.Common/Review/CReviewManager.cs:2912–2912](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2912-L2912) | ParseVisionLineResponse | False |
+| [Drilling.Common/Review/CReviewManager.cs:3594–3594](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3594-L3594) | _owner.ParseVisionLineResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9757,7 +9757,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateIofLines` · L2201–2220
 
-[Drilling.Common/Review/CReviewManager.cs:2201–2220](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2201-L2220)
+[Drilling.Common/Review/CReviewManager.cs:2201–2220](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2201-L2220)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9776,10 +9776,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L232-L232) | CreateIofLines | False |
-| [Drilling.Common/Review/CReviewManager.cs:1978–1978](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1978-L1978) | CreateIofLines | False |
-| [Drilling.Common/Review/CReviewManager.cs:2548–2548](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2548-L2548) | CreateIofLines | False |
-| [Drilling.Common/Review/CReviewManager.cs:2647–2647](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2647-L2647) | CreateIofLines | False |
+| [Drilling.Common/Review/CReviewManager.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L232-L232) | CreateIofLines | False |
+| [Drilling.Common/Review/CReviewManager.cs:1978–1978](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1978-L1978) | CreateIofLines | False |
+| [Drilling.Common/Review/CReviewManager.cs:2548–2548](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2548-L2548) | CreateIofLines | False |
+| [Drilling.Common/Review/CReviewManager.cs:2647–2647](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2647-L2647) | CreateIofLines | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9829,7 +9829,7 @@ flowchart TD
 
 ### MethodDeclaration `SetIofLineCurrent` · L2222–2231
 
-[Drilling.Common/Review/CReviewManager.cs:2222–2231](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2222-L2231)
+[Drilling.Common/Review/CReviewManager.cs:2222–2231](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2222-L2231)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9849,7 +9849,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1990–1990](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1990-L1990) | SetIofLineCurrent | False |
+| [Drilling.Common/Review/CReviewManager.cs:1990–1990](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1990-L1990) | SetIofLineCurrent | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9878,7 +9878,7 @@ flowchart TD
 
 ### MethodDeclaration `GetPlanPoint` · L2233–2246
 
-[Drilling.Common/Review/CReviewManager.cs:2233–2246](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2233-L2246)
+[Drilling.Common/Review/CReviewManager.cs:2233–2246](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2233-L2246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9898,8 +9898,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2021–2021](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2021-L2021) | GetPlanPoint | False |
-| [Drilling.Common/Review/CReviewManager.cs:2224–2224](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2224-L2224) | GetPlanPoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:2021–2021](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2021-L2021) | GetPlanPoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:2224–2224](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2224-L2224) | GetPlanPoint | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9943,7 +9943,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateMarkFindSingleCommand` · L2248–2256
 
-[Drilling.Common/Review/CReviewManager.cs:2248–2256](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2248-L2256)
+[Drilling.Common/Review/CReviewManager.cs:2248–2256](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2248-L2256)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9962,8 +9962,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1947–1947](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1947-L1947) | CreateMarkFindSingleCommand | False |
-| [Drilling.Common/Review/CReviewManager.cs:3178–3178](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3178-L3178) | CreateMarkFindSingleCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:1947–1947](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1947-L1947) | CreateMarkFindSingleCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:3178–3178](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3178-L3178) | CreateMarkFindSingleCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9996,7 +9996,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateTemporaryVisionMeasurement` · L2258–2288
 
-[Drilling.Common/Review/CReviewManager.cs:2258–2288](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2258-L2288)
+[Drilling.Common/Review/CReviewManager.cs:2258–2288](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2258-L2288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10015,10 +10015,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1943–1943](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1943-L1943) | CreateTemporaryVisionMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:2076–2076](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2076-L2076) | CreateTemporaryVisionMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:3064–3064](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3064-L3064) | CreateTemporaryVisionMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:3283–3283](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3283-L3283) | CreateTemporaryVisionMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:1943–1943](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1943-L1943) | CreateTemporaryVisionMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:2076–2076](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2076-L2076) | CreateTemporaryVisionMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:3064–3064](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3064-L3064) | CreateTemporaryVisionMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:3283–3283](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3283-L3283) | CreateTemporaryVisionMeasurement | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10101,7 +10101,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateRandomSignedValue` · L2290–2293
 
-[Drilling.Common/Review/CReviewManager.cs:2290–2293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2290-L2293)
+[Drilling.Common/Review/CReviewManager.cs:2290–2293](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2290-L2293)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10120,8 +10120,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2264–2264](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2264-L2264) | CreateRandomSignedValue | False |
-| [Drilling.Common/Review/CReviewManager.cs:2265–2265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2265-L2265) | CreateRandomSignedValue | False |
+| [Drilling.Common/Review/CReviewManager.cs:2264–2264](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2264-L2264) | CreateRandomSignedValue | False |
+| [Drilling.Common/Review/CReviewManager.cs:2265–2265](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2265-L2265) | CreateRandomSignedValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10140,7 +10140,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateRandomSignedValue` · L2295–2299
 
-[Drilling.Common/Review/CReviewManager.cs:2295–2299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2295-L2299)
+[Drilling.Common/Review/CReviewManager.cs:2295–2299](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2295-L2299)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10160,8 +10160,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2270–2270](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2270-L2270) | CreateRandomSignedValue | False |
-| [Drilling.Common/Review/CReviewManager.cs:2274–2274](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2274-L2274) | CreateRandomSignedValue | False |
+| [Drilling.Common/Review/CReviewManager.cs:2270–2270](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2270-L2270) | CreateRandomSignedValue | False |
+| [Drilling.Common/Review/CReviewManager.cs:2274–2274](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2274-L2274) | CreateRandomSignedValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10185,7 +10185,7 @@ flowchart TD
 
 ### MethodDeclaration `IsReviewSimulation` · L2301–2304
 
-[Drilling.Common/Review/CReviewManager.cs:2301–2304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2301-L2304)
+[Drilling.Common/Review/CReviewManager.cs:2301–2304](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2301-L2304)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10198,20 +10198,20 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1456–1456](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1456-L1456) | IsReviewSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:1936–1936](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1936-L1936) | IsReviewSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:2065–2065](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2065-L2065) | IsReviewSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:2677–2677](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2677-L2677) | IsReviewSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:2724–2724](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2724-L2724) | IsReviewSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:3160–3160](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3160-L3160) | IsReviewSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:3168–3168](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3168-L3168) | IsReviewSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:3176–3176](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3176-L3176) | IsReviewSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:3180–3180](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3180-L3180) | IsReviewSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:3203–3203](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3203-L3203) | _owner.IsReviewSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:3212–3212](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3212-L3212) | _owner.IsReviewSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:3272–3272](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3272-L3272) | IsReviewSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:3369–3369](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3369-L3369) | IsReviewSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:3527–3527](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3527-L3527) | IsReviewSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:1456–1456](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1456-L1456) | IsReviewSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:1936–1936](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1936-L1936) | IsReviewSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:2065–2065](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2065-L2065) | IsReviewSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:2677–2677](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2677-L2677) | IsReviewSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:2724–2724](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2724-L2724) | IsReviewSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:3160–3160](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3160-L3160) | IsReviewSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:3168–3168](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3168-L3168) | IsReviewSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:3176–3176](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3176-L3176) | IsReviewSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:3180–3180](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3180-L3180) | IsReviewSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:3203–3203](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3203-L3203) | _owner.IsReviewSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:3212–3212](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3212-L3212) | _owner.IsReviewSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:3272–3272](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3272-L3272) | IsReviewSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:3369–3369](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3369-L3369) | IsReviewSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:3527–3527](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3527-L3527) | IsReviewSimulation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10230,7 +10230,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyMeasurement` · L2306–2310
 
-[Drilling.Common/Review/CReviewManager.cs:2306–2310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2306-L2310)
+[Drilling.Common/Review/CReviewManager.cs:2306–2310](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2306-L2310)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10251,11 +10251,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:404–404](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L404-L404) | ApplyMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:1529–1529](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1529-L1529) | ApplyMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:2022–2022](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2022-L2022) | ApplyMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:2497–2497](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2497-L2497) | ApplyMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:3516–3516](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3516-L3516) | ApplyMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:404–404](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L404-L404) | ApplyMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:1529–1529](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1529-L1529) | ApplyMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:2022–2022](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2022-L2022) | ApplyMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:2497–2497](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2497-L2497) | ApplyMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:3516–3516](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3516-L3516) | ApplyMeasurement | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10278,7 +10278,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyMeasurementError` · L2312–2346
 
-[Drilling.Common/Review/CReviewManager.cs:2312–2346](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2312-L2346)
+[Drilling.Common/Review/CReviewManager.cs:2312–2346](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2312-L2346)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10303,7 +10303,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2309–2309](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2309-L2309) | ApplyMeasurementError | False |
+| [Drilling.Common/Review/CReviewManager.cs:2309–2309](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2309-L2309) | ApplyMeasurementError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10367,7 +10367,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseVisionResponse` · L2348–2357
 
-[Drilling.Common/Review/CReviewManager.cs:2348–2357](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2348-L2357)
+[Drilling.Common/Review/CReviewManager.cs:2348–2357](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2348-L2357)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10387,9 +10387,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1954–1954](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1954-L1954) | ParseVisionResponse | False |
-| [Drilling.Common/Review/CReviewManager.cs:3182–3182](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3182-L3182) | ParseVisionResponse | False |
-| [Drilling.Common/Review/CReviewManager.cs:3285–3285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3285-L3285) | ParseVisionResponse | False |
+| [Drilling.Common/Review/CReviewManager.cs:1954–1954](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1954-L1954) | ParseVisionResponse | False |
+| [Drilling.Common/Review/CReviewManager.cs:3182–3182](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3182-L3182) | ParseVisionResponse | False |
+| [Drilling.Common/Review/CReviewManager.cs:3285–3285](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3285-L3285) | ParseVisionResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10439,7 +10439,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateVisionMeasurement` · L2359–2373
 
-[Drilling.Common/Review/CReviewManager.cs:2359–2373](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2359-L2373)
+[Drilling.Common/Review/CReviewManager.cs:2359–2373](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2359-L2373)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10463,13 +10463,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2195–2195](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2195-L2195) | CreateVisionMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:2287–2287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2287-L2287) | CreateVisionMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:2356–2356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2356-L2356) | CreateVisionMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:2827–2827](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2827-L2827) | CreateVisionMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:2907–2907](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2907-L2907) | CreateVisionMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:3426–3427](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3426-L3427) | CreateVisionMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:3578–3579](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3578-L3579) | _owner.CreateVisionMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:2195–2195](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2195-L2195) | CreateVisionMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:2287–2287](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2287-L2287) | CreateVisionMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:2356–2356](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2356-L2356) | CreateVisionMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:2827–2827](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2827-L2827) | CreateVisionMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:2907–2907](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2907-L2907) | CreateVisionMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:3426–3427](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3426-L3427) | CreateVisionMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:3578–3579](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3578-L3579) | _owner.CreateVisionMeasurement | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10504,7 +10504,7 @@ flowchart TD
 
 ### MethodDeclaration `VisionPixelsToMillimeters` · L2376–2387
 
-[Drilling.Common/Review/CReviewManager.cs:2376–2387](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2376-L2387)
+[Drilling.Common/Review/CReviewManager.cs:2376–2387](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2376-L2387)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10531,7 +10531,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2362–2362](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2362-L2362) | VisionPixelsToMillimeters | False |
+| [Drilling.Common/Review/CReviewManager.cs:2362–2362](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2362-L2362) | VisionPixelsToMillimeters | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10591,7 +10591,7 @@ flowchart TD
 
 ### MethodDeclaration `SplitResponse` · L2389–2405
 
-[Drilling.Common/Review/CReviewManager.cs:2389–2405](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2389-L2405)
+[Drilling.Common/Review/CReviewManager.cs:2389–2405](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2389-L2405)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10610,8 +10610,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2165–2165](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2165-L2165) | SplitResponse | False |
-| [Drilling.Common/Review/CReviewManager.cs:2350–2350](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2350-L2350) | SplitResponse | False |
+| [Drilling.Common/Review/CReviewManager.cs:2165–2165](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2165-L2165) | SplitResponse | False |
+| [Drilling.Common/Review/CReviewManager.cs:2350–2350](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2350-L2350) | SplitResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10659,7 +10659,7 @@ flowchart TD
 
 ### MethodDeclaration `TryReadDouble` · L2407–2411
 
-[Drilling.Common/Review/CReviewManager.cs:2407–2411](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2407-L2411)
+[Drilling.Common/Review/CReviewManager.cs:2407–2411](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2407-L2411)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10680,10 +10680,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2351–2351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2351-L2351) | TryReadDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:2351–2351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2351-L2351) | TryReadDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:2351–2351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2351-L2351) | TryReadDouble | False |
-| [Drilling.Common/Review/CReviewManager.cs:2351–2351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2351-L2351) | TryReadDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:2351–2351](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2351-L2351) | TryReadDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:2351–2351](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2351-L2351) | TryReadDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:2351–2351](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2351-L2351) | TryReadDouble | False |
+| [Drilling.Common/Review/CReviewManager.cs:2351–2351](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2351-L2351) | TryReadDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10705,7 +10705,7 @@ flowchart TD
 
 ### MethodDeclaration `TryReadInt` · L2413–2417
 
-[Drilling.Common/Review/CReviewManager.cs:2413–2417](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2413-L2417)
+[Drilling.Common/Review/CReviewManager.cs:2413–2417](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2413-L2417)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10726,10 +10726,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2166–2166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2166-L2166) | TryReadInt | False |
-| [Drilling.Common/Review/CReviewManager.cs:2166–2166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2166-L2166) | TryReadInt | False |
-| [Drilling.Common/Review/CReviewManager.cs:2351–2351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2351-L2351) | TryReadInt | False |
-| [Drilling.Common/Review/CReviewManager.cs:2351–2351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2351-L2351) | TryReadInt | False |
+| [Drilling.Common/Review/CReviewManager.cs:2166–2166](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2166-L2166) | TryReadInt | False |
+| [Drilling.Common/Review/CReviewManager.cs:2166–2166](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2166-L2166) | TryReadInt | False |
+| [Drilling.Common/Review/CReviewManager.cs:2351–2351](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2351-L2351) | TryReadInt | False |
+| [Drilling.Common/Review/CReviewManager.cs:2351–2351](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2351-L2351) | TryReadInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10751,7 +10751,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatCommand` · L2419–2422
 
-[Drilling.Common/Review/CReviewManager.cs:2419–2422](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2419-L2422)
+[Drilling.Common/Review/CReviewManager.cs:2419–2422](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2419-L2422)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10771,7 +10771,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2280–2280](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2280-L2280) | FormatCommand | False |
+| [Drilling.Common/Review/CReviewManager.cs:2280–2280](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2280-L2280) | FormatCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10794,7 +10794,7 @@ flowchart TD
 
 ### MethodDeclaration `RunRetryPoints` · L2424–2534
 
-[Drilling.Common/Review/CReviewManager.cs:2424–2534](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2424-L2534)
+[Drilling.Common/Review/CReviewManager.cs:2424–2534](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2424-L2534)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10816,7 +10816,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:498–498](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L498-L498) | RunRetryPoints | False |
+| [Drilling.Common/Review/CReviewManager.cs:498–498](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L498-L498) | RunRetryPoints | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10832,7 +10832,7 @@ flowchart TD
 | 2439 | SetCurrentPlan | resolved | void Drilling.Common.Review.CReviewManager.SetCurrentPlan(Drilling.Common.Review.ST_REVIEW_PLAN, System.Action<Drilling.Common.Review.ST_REVIEW_PLAN>?) · Drilling.Common/Review/CReviewManager.cs:1052 |
 | 2440 | WriteReviewLog | resolved | void Drilling.Common.Review.CReviewManager.WriteReviewLog(string, string) · Drilling.Common/Review/CReviewManager.cs:1029 |
 | 2441 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 2443 | productManager.SetReviewRunning | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA> Drilling.Common.Product.CProductManager.SetReviewRunning(string, Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:444 |
+| 2443 | productManager.SetReviewRunning | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA> Drilling.Common.Product.CProductManager.SetReviewRunning(string, Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:445 |
 | 2443 | CreateProductReviewData | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA Drilling.Common.Review.CReviewManager.CreateProductReviewData(Drilling.Common.Review.ST_REVIEW_PLAN, System.DateTimeOffset?) · Drilling.Common/Review/CReviewManager.cs:1639 |
 | 2446 | IsPointToPoint | resolved | bool Drilling.Common.Review.CReviewManager.IsPointToPoint(Drilling.Common.Review.ST_REVIEW_PLAN) · Drilling.Common/Review/CReviewManager.cs:1684 |
 | 2448 | RunIofSequence | resolved | System.Threading.Tasks.Task<Drilling.Common.Review.ST_REVIEW_SEQUENCE_STATUS> Drilling.Common.Review.CReviewManager.RunIofSequence(Drilling.Common.Review.ST_REVIEW_PLAN, string?, System.Action<Drilling.Common.Review.ST_REVIEW_PLAN>?, System.Threading.CancellationToken, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_PLAN_POINT>?, bool) · Drilling.Common/Review/CReviewManager.cs:1967 |
@@ -11044,7 +11044,7 @@ flowchart TD
 
 ### MethodDeclaration `GetReviewStageDeviceNo` · L2536–2536
 
-[Drilling.Common/Review/CReviewManager.cs:2536–2536](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2536-L2536)
+[Drilling.Common/Review/CReviewManager.cs:2536–2536](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2536-L2536)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11057,17 +11057,17 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1455–1455](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1455-L1455) | GetReviewStageDeviceNo | False |
-| [Drilling.Common/Review/CReviewManager.cs:2551–2551](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2551-L2551) | GetReviewStageDeviceNo | False |
-| [Drilling.Common/Review/CReviewManager.cs:2557–2557](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2557-L2557) | GetReviewStageDeviceNo | False |
-| [Drilling.Common/Review/CReviewManager.cs:2671–2671](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2671-L2671) | GetReviewStageDeviceNo | False |
-| [Drilling.Common/Review/CReviewManager.cs:2674–2674](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2674-L2674) | GetReviewStageDeviceNo | False |
-| [Drilling.Common/Review/CReviewManager.cs:2675–2675](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2675-L2675) | GetReviewStageDeviceNo | False |
-| [Drilling.Common/Review/CReviewManager.cs:2694–2694](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2694-L2694) | GetReviewStageDeviceNo | False |
-| [Drilling.Common/Review/CReviewManager.cs:2721–2721](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2721-L2721) | GetReviewStageDeviceNo | False |
-| [Drilling.Common/Review/CReviewManager.cs:3164–3164](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3164-L3164) | GetReviewStageDeviceNo | False |
-| [Drilling.Common/Review/CReviewManager.cs:3244–3244](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3244-L3244) | GetReviewStageDeviceNo | False |
-| [Drilling.Common/Review/CReviewManager.cs:3358–3358](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3358-L3358) | GetReviewStageDeviceNo | False |
+| [Drilling.Common/Review/CReviewManager.cs:1455–1455](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1455-L1455) | GetReviewStageDeviceNo | False |
+| [Drilling.Common/Review/CReviewManager.cs:2551–2551](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2551-L2551) | GetReviewStageDeviceNo | False |
+| [Drilling.Common/Review/CReviewManager.cs:2557–2557](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2557-L2557) | GetReviewStageDeviceNo | False |
+| [Drilling.Common/Review/CReviewManager.cs:2671–2671](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2671-L2671) | GetReviewStageDeviceNo | False |
+| [Drilling.Common/Review/CReviewManager.cs:2674–2674](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2674-L2674) | GetReviewStageDeviceNo | False |
+| [Drilling.Common/Review/CReviewManager.cs:2675–2675](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2675-L2675) | GetReviewStageDeviceNo | False |
+| [Drilling.Common/Review/CReviewManager.cs:2694–2694](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2694-L2694) | GetReviewStageDeviceNo | False |
+| [Drilling.Common/Review/CReviewManager.cs:2721–2721](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2721-L2721) | GetReviewStageDeviceNo | False |
+| [Drilling.Common/Review/CReviewManager.cs:3164–3164](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3164-L3164) | GetReviewStageDeviceNo | False |
+| [Drilling.Common/Review/CReviewManager.cs:3244–3244](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3244-L3244) | GetReviewStageDeviceNo | False |
+| [Drilling.Common/Review/CReviewManager.cs:3358–3358](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3358-L3358) | GetReviewStageDeviceNo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11091,7 +11091,7 @@ flowchart TD
 
 ### MethodDeclaration `IsReviewDeviceSimulation` · L2537–2542
 
-[Drilling.Common/Review/CReviewManager.cs:2537–2542](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2537-L2542)
+[Drilling.Common/Review/CReviewManager.cs:2537–2542](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2537-L2542)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11111,14 +11111,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1455–1455](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1455-L1455) | IsReviewDeviceSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:2303–2303](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2303-L2303) | IsReviewDeviceSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:2558–2558](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2558-L2558) | IsReviewDeviceSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:2671–2671](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2671-L2671) | IsReviewDeviceSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:2723–2723](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2723-L2723) | IsReviewDeviceSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:3168–3168](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3168-L3168) | IsReviewDeviceSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:3245–3245](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3245-L3245) | IsReviewDeviceSimulation | False |
-| [Drilling.Common/Review/CReviewManager.cs:3359–3359](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3359-L3359) | IsReviewDeviceSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:1455–1455](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1455-L1455) | IsReviewDeviceSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:2303–2303](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2303-L2303) | IsReviewDeviceSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:2558–2558](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2558-L2558) | IsReviewDeviceSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:2671–2671](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2671-L2671) | IsReviewDeviceSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:2723–2723](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2723-L2723) | IsReviewDeviceSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:3168–3168](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3168-L3168) | IsReviewDeviceSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:3245–3245](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3245-L3245) | IsReviewDeviceSimulation | False |
+| [Drilling.Common/Review/CReviewManager.cs:3359–3359](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3359-L3359) | IsReviewDeviceSimulation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11141,7 +11141,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateReviewMoveMethod` · L2544–2553
 
-[Drilling.Common/Review/CReviewManager.cs:2544–2553](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2544-L2553)
+[Drilling.Common/Review/CReviewManager.cs:2544–2553](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2544-L2553)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11160,8 +11160,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L338-L338) | ValidateReviewMoveMethod | False |
-| [Drilling.Common/Review/CReviewManager.cs:2436–2436](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2436-L2436) | ValidateReviewMoveMethod | False |
+| [Drilling.Common/Review/CReviewManager.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L338-L338) | ValidateReviewMoveMethod | False |
+| [Drilling.Common/Review/CReviewManager.cs:2436–2436](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2436-L2436) | ValidateReviewMoveMethod | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11213,7 +11213,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenReviewStageMotion` · L2555–2571
 
-[Drilling.Common/Review/CReviewManager.cs:2555–2571](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2555-L2571)
+[Drilling.Common/Review/CReviewManager.cs:2555–2571](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2555-L2571)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11232,13 +11232,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L339-L339) | OpenReviewStageMotion | False |
-| [Drilling.Common/Review/CReviewManager.cs:1510–1510](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1510-L1510) | OpenReviewStageMotion | False |
-| [Drilling.Common/Review/CReviewManager.cs:2437–2437](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2437-L2437) | OpenReviewStageMotion | False |
-| [Drilling.Common/Review/CReviewManager.cs:2757–2757](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2757-L2757) | OpenReviewStageMotion | False |
-| [Drilling.Common/Review/CReviewManager.cs:3197–3197](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3197-L3197) | owner.OpenReviewStageMotion | False |
-| [Drilling.Common/Review/CReviewManager.cs:3255–3255](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3255-L3255) | OpenReviewStageMotion | False |
-| [Drilling.Common/Review/CReviewManager.cs:3381–3381](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3381-L3381) | OpenReviewStageMotion | False |
+| [Drilling.Common/Review/CReviewManager.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L339-L339) | OpenReviewStageMotion | False |
+| [Drilling.Common/Review/CReviewManager.cs:1510–1510](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1510-L1510) | OpenReviewStageMotion | False |
+| [Drilling.Common/Review/CReviewManager.cs:2437–2437](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2437-L2437) | OpenReviewStageMotion | False |
+| [Drilling.Common/Review/CReviewManager.cs:2757–2757](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2757-L2757) | OpenReviewStageMotion | False |
+| [Drilling.Common/Review/CReviewManager.cs:3197–3197](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3197-L3197) | owner.OpenReviewStageMotion | False |
+| [Drilling.Common/Review/CReviewManager.cs:3255–3255](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3255-L3255) | OpenReviewStageMotion | False |
+| [Drilling.Common/Review/CReviewManager.cs:3381–3381](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3381-L3381) | OpenReviewStageMotion | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11294,7 +11294,7 @@ flowchart TD
 
 ### FieldDeclaration `_session` · L2575–2575
 
-[Drilling.Common/Review/CReviewManager.cs:2575–2575](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2575-L2575)
+[Drilling.Common/Review/CReviewManager.cs:2575–2575](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2575-L2575)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11309,7 +11309,7 @@ flowchart TD
 
 ### FieldDeclaration `_motion` · L2576–2576
 
-[Drilling.Common/Review/CReviewManager.cs:2576–2576](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2576-L2576)
+[Drilling.Common/Review/CReviewManager.cs:2576–2576](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2576-L2576)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11324,7 +11324,7 @@ flowchart TD
 
 ### FieldDeclaration `_stageSpeed` · L2577–2577
 
-[Drilling.Common/Review/CReviewManager.cs:2577–2577](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2577-L2577)
+[Drilling.Common/Review/CReviewManager.cs:2577–2577](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2577-L2577)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11339,7 +11339,7 @@ flowchart TD
 
 ### FieldDeclaration `_pendingY` · L2578–2578
 
-[Drilling.Common/Review/CReviewManager.cs:2578–2578](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2578-L2578)
+[Drilling.Common/Review/CReviewManager.cs:2578–2578](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2578-L2578)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11354,7 +11354,7 @@ flowchart TD
 
 ### FieldDeclaration `_pending` · L2579–2579
 
-[Drilling.Common/Review/CReviewManager.cs:2579–2579](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2579-L2579)
+[Drilling.Common/Review/CReviewManager.cs:2579–2579](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2579-L2579)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11375,7 +11375,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L2580–2585
 
-[Drilling.Common/Review/CReviewManager.cs:2580–2585](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2580-L2585)
+[Drilling.Common/Review/CReviewManager.cs:2580–2585](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2580-L2585)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11396,7 +11396,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2570–2570](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2570-L2570) | new | False |
+| [Drilling.Common/Review/CReviewManager.cs:2570–2570](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2570-L2570) | new | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -11410,7 +11410,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveStageY` · L2587–2587
 
-[Drilling.Common/Review/CReviewManager.cs:2587–2587](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2587-L2587)
+[Drilling.Common/Review/CReviewManager.cs:2587–2587](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2587-L2587)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11429,7 +11429,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1916–1916](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1916-L1916) | (_reviewStageMotion ?? throw new InvalidOperationException("Review Stage 이동이 준비되지 않았습니다.")).MoveStageY | False |
+| [Drilling.Common/Review/CReviewManager.cs:1916–1916](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1916-L1916) | (_reviewStageMotion ?? throw new InvalidOperationException("Review Stage 이동이 준비되지 않았습니다.")).MoveStageY | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -11441,7 +11441,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveReviewX` · L2588–2593
 
-[Drilling.Common/Review/CReviewManager.cs:2588–2593](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2588-L2593)
+[Drilling.Common/Review/CReviewManager.cs:2588–2593](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2588-L2593)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11461,7 +11461,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1926–1926](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1926-L1926) | motion.MoveReviewX | False |
+| [Drilling.Common/Review/CReviewManager.cs:1926–1926](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1926-L1926) | motion.MoveReviewX | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11485,7 +11485,7 @@ flowchart TD
 
 ### PropertyDeclaration `ReviewXPosition` · L2595–2595
 
-[Drilling.Common/Review/CReviewManager.cs:2595–2595](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2595-L2595)
+[Drilling.Common/Review/CReviewManager.cs:2595–2595](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2595-L2595)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11500,7 +11500,7 @@ flowchart TD
 
 ### PropertyDeclaration `Position` · L2596–2596
 
-[Drilling.Common/Review/CReviewManager.cs:2596–2596](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2596-L2596)
+[Drilling.Common/Review/CReviewManager.cs:2596–2596](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2596-L2596)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11515,7 +11515,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadReviewXPosition` · L2597–2597
 
-[Drilling.Common/Review/CReviewManager.cs:2597–2597](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2597-L2597)
+[Drilling.Common/Review/CReviewManager.cs:2597–2597](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2597-L2597)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11534,8 +11534,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2790–2790](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2790-L2790) | motion.ReadReviewXPosition | False |
-| [Drilling.Common/Review/CReviewManager.cs:2931–2931](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2931-L2931) | motion.ReadReviewXPosition | False |
+| [Drilling.Common/Review/CReviewManager.cs:2790–2790](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2790-L2790) | motion.ReadReviewXPosition | False |
+| [Drilling.Common/Review/CReviewManager.cs:2931–2931](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2931-L2931) | motion.ReadReviewXPosition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11553,7 +11553,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveAndWait` · L2599–2599
 
-[Drilling.Common/Review/CReviewManager.cs:2599–2599](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2599-L2599)
+[Drilling.Common/Review/CReviewManager.cs:2599–2599](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2599-L2599)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11574,13 +11574,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1524–1524](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1524-L1524) | motion.MoveAndWait | False |
-| [Drilling.Common/Review/CReviewManager.cs:2115–2115](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2115-L2115) | (_reviewStageMotion ?? throw new InvalidOperationException("Review Stage 이동이 준비되지 않았습니다.")).MoveAndWait | False |
-| [Drilling.Common/Review/CReviewManager.cs:2121–2121](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2121-L2121) | (_reviewStageMotion ?? throw new InvalidOperationException("Review Stage 이동이 준비되지 않았습니다.")).MoveAndWait | False |
-| [Drilling.Common/Review/CReviewManager.cs:3049–3049](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3049-L3049) | motion!.MoveAndWait | False |
-| [Drilling.Common/Review/CReviewManager.cs:3198–3198](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3198-L3198) | _motion.MoveAndWait | False |
-| [Drilling.Common/Review/CReviewManager.cs:3264–3264](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3264-L3264) | motion!.MoveAndWait | False |
-| [Drilling.Common/Review/CReviewManager.cs:3415–3415](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3415-L3415) | motion.MoveAndWait | False |
+| [Drilling.Common/Review/CReviewManager.cs:1524–1524](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1524-L1524) | motion.MoveAndWait | False |
+| [Drilling.Common/Review/CReviewManager.cs:2115–2115](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2115-L2115) | (_reviewStageMotion ?? throw new InvalidOperationException("Review Stage 이동이 준비되지 않았습니다.")).MoveAndWait | False |
+| [Drilling.Common/Review/CReviewManager.cs:2121–2121](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2121-L2121) | (_reviewStageMotion ?? throw new InvalidOperationException("Review Stage 이동이 준비되지 않았습니다.")).MoveAndWait | False |
+| [Drilling.Common/Review/CReviewManager.cs:3049–3049](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3049-L3049) | motion!.MoveAndWait | False |
+| [Drilling.Common/Review/CReviewManager.cs:3198–3198](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3198-L3198) | _motion.MoveAndWait | False |
+| [Drilling.Common/Review/CReviewManager.cs:3264–3264](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3264-L3264) | motion!.MoveAndWait | False |
+| [Drilling.Common/Review/CReviewManager.cs:3415–3415](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3415-L3415) | motion.MoveAndWait | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11601,7 +11601,7 @@ flowchart TD
 
 ### MethodDeclaration `VerifyArrival` · L2600–2600
 
-[Drilling.Common/Review/CReviewManager.cs:2600–2600](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2600-L2600)
+[Drilling.Common/Review/CReviewManager.cs:2600–2600](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2600-L2600)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11621,7 +11621,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3054–3054](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3054-L3054) | motion!.VerifyArrival | False |
+| [Drilling.Common/Review/CReviewManager.cs:3054–3054](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3054-L3054) | motion!.VerifyArrival | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11641,7 +11641,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitForArrival` · L2601–2601
 
-[Drilling.Common/Review/CReviewManager.cs:2601–2601](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2601-L2601)
+[Drilling.Common/Review/CReviewManager.cs:2601–2601](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2601-L2601)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11661,7 +11661,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1929–1929](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1929-L1929) | motion.WaitForArrival | False |
+| [Drilling.Common/Review/CReviewManager.cs:1929–1929](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1929-L1929) | motion.WaitForArrival | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11679,7 +11679,7 @@ flowchart TD
 
 ### MethodDeclaration `PrepareIof` · L2602–2602
 
-[Drilling.Common/Review/CReviewManager.cs:2602–2602](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2602-L2602)
+[Drilling.Common/Review/CReviewManager.cs:2602–2602](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2602-L2602)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11699,8 +11699,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2058–2058](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2058-L2058) | (_reviewStageMotion ?? throw new InvalidOperationException("Review Stage 이동이 준비되지 않았습니다.")).PrepareIof | False |
-| [Drilling.Common/Review/CReviewManager.cs:2857–2857](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2857-L2857) | motion!.PrepareIof | False |
+| [Drilling.Common/Review/CReviewManager.cs:2058–2058](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2058-L2058) | (_reviewStageMotion ?? throw new InvalidOperationException("Review Stage 이동이 준비되지 않았습니다.")).PrepareIof | False |
+| [Drilling.Common/Review/CReviewManager.cs:2857–2857](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2857-L2857) | motion!.PrepareIof | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11724,7 +11724,7 @@ flowchart TD
 
 ### MethodDeclaration `Stop` · L2603–2603
 
-[Drilling.Common/Review/CReviewManager.cs:2603–2603](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2603-L2603)
+[Drilling.Common/Review/CReviewManager.cs:2603–2603](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2603-L2603)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11737,11 +11737,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:420–420](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L420-L420) | .Stop | False |
-| [Drilling.Common/Review/CReviewManager.cs:428–428](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L428-L428) | .Stop | False |
-| [Drilling.Common/Review/CReviewManager.cs:449–449](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L449-L449) | .Stop | False |
-| [Drilling.Common/Review/CReviewManager.cs:2511–2511](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2511-L2511) | .Stop | False |
-| [Drilling.Common/Review/CReviewManager.cs:2519–2519](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2519-L2519) | .Stop | False |
+| [Drilling.Common/Review/CReviewManager.cs:420–420](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L420-L420) | .Stop | False |
+| [Drilling.Common/Review/CReviewManager.cs:428–428](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L428-L428) | .Stop | False |
+| [Drilling.Common/Review/CReviewManager.cs:449–449](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L449-L449) | .Stop | False |
+| [Drilling.Common/Review/CReviewManager.cs:2511–2511](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2511-L2511) | .Stop | False |
+| [Drilling.Common/Review/CReviewManager.cs:2519–2519](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2519-L2519) | .Stop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11759,7 +11759,7 @@ flowchart TD
 
 ### MethodDeclaration `Dispose` · L2604–2604
 
-[Drilling.Common/Review/CReviewManager.cs:2604–2604](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2604-L2604)
+[Drilling.Common/Review/CReviewManager.cs:2604–2604](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2604-L2604)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11772,14 +11772,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:440–440](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L440-L440) | .Dispose | False |
-| [Drilling.Common/Review/CReviewManager.cs:1477–1477](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1477-L1477) | .Dispose | False |
-| [Drilling.Common/Review/CReviewManager.cs:1568–1568](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1568-L1568) | .Dispose | False |
-| [Drilling.Common/Review/CReviewManager.cs:2530–2530](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2530-L2530) | .Dispose | False |
-| [Drilling.Common/Review/CReviewManager.cs:3072–3072](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3072-L3072) | .Dispose | False |
-| [Drilling.Common/Review/CReviewManager.cs:3225–3225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3225-L3225) | _motion.Dispose | False |
-| [Drilling.Common/Review/CReviewManager.cs:3335–3335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3335-L3335) | .Dispose | False |
-| [Drilling.Common/Review/CReviewManager.cs:3461–3461](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3461-L3461) | .Dispose | False |
+| [Drilling.Common/Review/CReviewManager.cs:440–440](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L440-L440) | .Dispose | False |
+| [Drilling.Common/Review/CReviewManager.cs:1477–1477](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1477-L1477) | .Dispose | False |
+| [Drilling.Common/Review/CReviewManager.cs:1568–1568](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1568-L1568) | .Dispose | False |
+| [Drilling.Common/Review/CReviewManager.cs:2530–2530](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2530-L2530) | .Dispose | False |
+| [Drilling.Common/Review/CReviewManager.cs:3072–3072](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3072-L3072) | .Dispose | False |
+| [Drilling.Common/Review/CReviewManager.cs:3225–3225](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3225-L3225) | _motion.Dispose | False |
+| [Drilling.Common/Review/CReviewManager.cs:3335–3335](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3335-L3335) | .Dispose | False |
+| [Drilling.Common/Review/CReviewManager.cs:3461–3461](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3461-L3461) | .Dispose | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11797,7 +11797,7 @@ flowchart TD
 
 ### MethodDeclaration `RememberInterruptedReview` · L2607–2614
 
-[Drilling.Common/Review/CReviewManager.cs:2607–2614](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2607-L2614)
+[Drilling.Common/Review/CReviewManager.cs:2607–2614](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2607-L2614)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11816,8 +11816,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:439–439](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L439-L439) | RememberInterruptedReview | False |
-| [Drilling.Common/Review/CReviewManager.cs:2529–2529](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2529-L2529) | RememberInterruptedReview | False |
+| [Drilling.Common/Review/CReviewManager.cs:439–439](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L439-L439) | RememberInterruptedReview | False |
+| [Drilling.Common/Review/CReviewManager.cs:2529–2529](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2529-L2529) | RememberInterruptedReview | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -11841,7 +11841,7 @@ flowchart TD
 
 ### MethodDeclaration `FindInterruptedReviewCheckpoint` · L2616–2637
 
-[Drilling.Common/Review/CReviewManager.cs:2616–2637](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2616-L2637)
+[Drilling.Common/Review/CReviewManager.cs:2616–2637](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2616-L2637)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11861,7 +11861,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:461–461](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L461-L461) | FindInterruptedReviewCheckpoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:461–461](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L461-L461) | FindInterruptedReviewCheckpoint | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11922,7 +11922,7 @@ flowchart TD
 
 ### MethodDeclaration `OrderLineFromCurrentPosition` · L2639–2643
 
-[Drilling.Common/Review/CReviewManager.cs:2639–2643](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2639-L2643)
+[Drilling.Common/Review/CReviewManager.cs:2639–2643](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2639-L2643)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11942,8 +11942,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1989–1989](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1989-L1989) | OrderLineFromCurrentPosition | False |
-| [Drilling.Common/Review/CReviewManager.cs:2652–2652](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2652-L2652) | OrderLineFromCurrentPosition | False |
+| [Drilling.Common/Review/CReviewManager.cs:1989–1989](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1989-L1989) | OrderLineFromCurrentPosition | False |
+| [Drilling.Common/Review/CReviewManager.cs:2652–2652](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2652-L2652) | OrderLineFromCurrentPosition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11979,7 +11979,7 @@ flowchart TD
 
 ### MethodDeclaration `OrderPtoPFromCurrentPosition` · L2645–2656
 
-[Drilling.Common/Review/CReviewManager.cs:2645–2656](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2645-L2656)
+[Drilling.Common/Review/CReviewManager.cs:2645–2656](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2645-L2656)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11999,8 +11999,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L351-L351) | OrderPtoPFromCurrentPosition | False |
-| [Drilling.Common/Review/CReviewManager.cs:2451–2451](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2451-L2451) | OrderPtoPFromCurrentPosition | False |
+| [Drilling.Common/Review/CReviewManager.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L351-L351) | OrderPtoPFromCurrentPosition | False |
+| [Drilling.Common/Review/CReviewManager.cs:2451–2451](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2451-L2451) | OrderPtoPFromCurrentPosition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12042,7 +12042,7 @@ flowchart TD
 
 ### MethodDeclaration `RecordAutoFineLog` · L2660–2660
 
-[Drilling.Common/Review/CReviewManager.cs:2660–2660](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2660-L2660)
+[Drilling.Common/Review/CReviewManager.cs:2660–2660](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2660-L2660)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12062,14 +12062,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L40-L40) | review.RecordAutoFineLog | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L59-L59) | review.RecordAutoFineLog | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L65-L65) | review.RecordAutoFineLog | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L72-L72) | review.RecordAutoFineLog | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L109-L109) | review.RecordAutoFineLog | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L119-L119) | review.RecordAutoFineLog | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L160-L160) | review.RecordAutoFineLog | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L168-L168) | review.RecordAutoFineLog | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L40-L40) | review.RecordAutoFineLog | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L59-L59) | review.RecordAutoFineLog | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L65-L65) | review.RecordAutoFineLog | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L72-L72) | review.RecordAutoFineLog | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L109-L109) | review.RecordAutoFineLog | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L119-L119) | review.RecordAutoFineLog | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L160-L160) | review.RecordAutoFineLog | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L168-L168) | review.RecordAutoFineLog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12087,7 +12087,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateFinePreparation` · L2661–2681
 
-[Drilling.Common/Review/CReviewManager.cs:2661–2681](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2661-L2681)
+[Drilling.Common/Review/CReviewManager.cs:2661–2681](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2661-L2681)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12106,8 +12106,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2693–2693](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2693-L2693) | ValidateFinePreparation | False |
-| [Drilling.Common/Review/CReviewManager.cs:2720–2720](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2720-L2720) | ValidateFinePreparation | False |
+| [Drilling.Common/Review/CReviewManager.cs:2693–2693](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2693-L2693) | ValidateFinePreparation | False |
+| [Drilling.Common/Review/CReviewManager.cs:2720–2720](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2720-L2720) | ValidateFinePreparation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12189,7 +12189,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadFineStageSpeed` · L2683–2685
 
-[Drilling.Common/Review/CReviewManager.cs:2683–2685](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2683-L2685)
+[Drilling.Common/Review/CReviewManager.cs:2683–2685](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2683-L2685)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12208,8 +12208,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2676–2676](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2676-L2676) | ReadFineStageSpeed | False |
-| [Drilling.Common/Review/CReviewManager.cs:2756–2756](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2756-L2756) | ReadFineStageSpeed | False |
+| [Drilling.Common/Review/CReviewManager.cs:2676–2676](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2676-L2676) | ReadFineStageSpeed | False |
+| [Drilling.Common/Review/CReviewManager.cs:2756–2756](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2756-L2756) | ReadFineStageSpeed | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12235,7 +12235,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateAutoFinePlan` · L2687–2702
 
-[Drilling.Common/Review/CReviewManager.cs:2687–2702](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2687-L2702)
+[Drilling.Common/Review/CReviewManager.cs:2687–2702](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2687-L2702)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12255,8 +12255,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L36-L36) | review.CreateAutoFinePlan | False |
-| [Drilling.Common/Review/CReviewManager.cs:2708–2708](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2708-L2708) | CreateAutoFinePlan | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L36-L36) | review.CreateAutoFinePlan | False |
+| [Drilling.Common/Review/CReviewManager.cs:2708–2708](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2708-L2708) | CreateAutoFinePlan | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12299,7 +12299,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateZeroLineFollowUpPlan` · L2706–2709
 
-[Drilling.Common/Review/CReviewManager.cs:2706–2709](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2706-L2709)
+[Drilling.Common/Review/CReviewManager.cs:2706–2709](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2706-L2709)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12326,7 +12326,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L36-L36) | review.CreateZeroLineFollowUpPlan | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L36-L36) | review.CreateZeroLineFollowUpPlan | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12346,7 +12346,7 @@ flowchart TD
 
 ### MethodDeclaration `StartFineCorrection` · L2713–3120
 
-[Drilling.Common/Review/CReviewManager.cs:2713–3120](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2713-L3120)
+[Drilling.Common/Review/CReviewManager.cs:2713–3120](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2713-L3120)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12375,8 +12375,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:47–49](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L47-L49) | review.StartFineCorrection | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3114–3114](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3114-L3114) | _reviewManager.StartFineCorrection | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:47–49](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L47-L49) | review.StartFineCorrection | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3114–3114](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3114-L3114) | _reviewManager.StartFineCorrection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12892,7 +12892,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Publish` · L2740–2751
 
-[Drilling.Common/Review/CReviewManager.cs:2740–2751](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2740-L2751)
+[Drilling.Common/Review/CReviewManager.cs:2740–2751](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2740-L2751)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12911,17 +12911,17 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2777–2777](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2777-L2777) | Publish | False |
-| [Drilling.Common/Review/CReviewManager.cs:2813–2813](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2813-L2813) | Publish | False |
-| [Drilling.Common/Review/CReviewManager.cs:2833–2833](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2833-L2833) | Publish | False |
-| [Drilling.Common/Review/CReviewManager.cs:2850–2850](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2850-L2850) | Publish | False |
-| [Drilling.Common/Review/CReviewManager.cs:2856–2856](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2856-L2856) | Publish | False |
-| [Drilling.Common/Review/CReviewManager.cs:2867–2867](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2867-L2867) | Publish | False |
-| [Drilling.Common/Review/CReviewManager.cs:2888–2888](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2888-L2888) | Publish | False |
-| [Drilling.Common/Review/CReviewManager.cs:2922–2922](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2922-L2922) | Publish | False |
-| [Drilling.Common/Review/CReviewManager.cs:2974–2974](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2974-L2974) | Publish | False |
-| [Drilling.Common/Review/CReviewManager.cs:2992–2992](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2992-L2992) | Publish | False |
-| [Drilling.Common/Review/CReviewManager.cs:3086–3086](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3086-L3086) | Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:2777–2777](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2777-L2777) | Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:2813–2813](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2813-L2813) | Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:2833–2833](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2833-L2833) | Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:2850–2850](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2850-L2850) | Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:2856–2856](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2856-L2856) | Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:2867–2867](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2867-L2867) | Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:2888–2888](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2888-L2888) | Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:2922–2922](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2922-L2922) | Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:2974–2974](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2974-L2974) | Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:2992–2992](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2992-L2992) | Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:3086–3086](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3086-L3086) | Publish | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12953,7 +12953,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ReceiveLine` · L2901–2923
 
-[Drilling.Common/Review/CReviewManager.cs:2901–2923](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2901-L2923)
+[Drilling.Common/Review/CReviewManager.cs:2901–2923](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2901-L2923)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12972,8 +12972,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2947–2947](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2947-L2947) | ReceiveLine | False |
-| [Drilling.Common/Review/CReviewManager.cs:2966–2966](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2966-L2966) | ReceiveLine | False |
+| [Drilling.Common/Review/CReviewManager.cs:2947–2947](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2947-L2947) | ReceiveLine | False |
+| [Drilling.Common/Review/CReviewManager.cs:2966–2966](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2966-L2966) | ReceiveLine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13047,7 +13047,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Prefetch` · L2934–2945
 
-[Drilling.Common/Review/CReviewManager.cs:2934–2945](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2934-L2945)
+[Drilling.Common/Review/CReviewManager.cs:2934–2945](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2934-L2945)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13060,7 +13060,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2948–2948](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2948-L2948) | Prefetch | False |
+| [Drilling.Common/Review/CReviewManager.cs:2948–2948](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2948-L2948) | Prefetch | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13094,7 +13094,7 @@ flowchart TD
 
 ### LocalFunctionStatement `CheckStop` · L3024–3029
 
-[Drilling.Common/Review/CReviewManager.cs:3024–3029](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3024-L3029)
+[Drilling.Common/Review/CReviewManager.cs:3024–3029](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3024-L3029)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13107,17 +13107,17 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2781–2781](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2781-L2781) | CheckStop | False |
-| [Drilling.Common/Review/CReviewManager.cs:2807–2807](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2807-L2807) | CheckStop | False |
-| [Drilling.Common/Review/CReviewManager.cs:2816–2816](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2816-L2816) | CheckStop | False |
-| [Drilling.Common/Review/CReviewManager.cs:2853–2853](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2853-L2853) | CheckStop | False |
-| [Drilling.Common/Review/CReviewManager.cs:2858–2858](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2858-L2858) | CheckStop | False |
-| [Drilling.Common/Review/CReviewManager.cs:2866–2866](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2866-L2866) | CheckStop | False |
-| [Drilling.Common/Review/CReviewManager.cs:2869–2869](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2869-L2869) | CheckStop | False |
-| [Drilling.Common/Review/CReviewManager.cs:2898–2898](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2898-L2898) | CheckStop | False |
-| [Drilling.Common/Review/CReviewManager.cs:2915–2915](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2915-L2915) | CheckStop | False |
-| [Drilling.Common/Review/CReviewManager.cs:3045–3045](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3045-L3045) | CheckStop | False |
-| [Drilling.Common/Review/CReviewManager.cs:3062–3062](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3062-L3062) | CheckStop | False |
+| [Drilling.Common/Review/CReviewManager.cs:2781–2781](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2781-L2781) | CheckStop | False |
+| [Drilling.Common/Review/CReviewManager.cs:2807–2807](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2807-L2807) | CheckStop | False |
+| [Drilling.Common/Review/CReviewManager.cs:2816–2816](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2816-L2816) | CheckStop | False |
+| [Drilling.Common/Review/CReviewManager.cs:2853–2853](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2853-L2853) | CheckStop | False |
+| [Drilling.Common/Review/CReviewManager.cs:2858–2858](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2858-L2858) | CheckStop | False |
+| [Drilling.Common/Review/CReviewManager.cs:2866–2866](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2866-L2866) | CheckStop | False |
+| [Drilling.Common/Review/CReviewManager.cs:2869–2869](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2869-L2869) | CheckStop | False |
+| [Drilling.Common/Review/CReviewManager.cs:2898–2898](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2898-L2898) | CheckStop | False |
+| [Drilling.Common/Review/CReviewManager.cs:2915–2915](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2915-L2915) | CheckStop | False |
+| [Drilling.Common/Review/CReviewManager.cs:3045–3045](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3045-L3045) | CheckStop | False |
+| [Drilling.Common/Review/CReviewManager.cs:3062–3062](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3062-L3062) | CheckStop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13148,7 +13148,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ReplaceLine` · L3031–3035
 
-[Drilling.Common/Review/CReviewManager.cs:3031–3035](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3031-L3035)
+[Drilling.Common/Review/CReviewManager.cs:3031–3035](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3031-L3035)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13169,12 +13169,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2812–2812](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2812-L2812) | ReplaceLine | False |
-| [Drilling.Common/Review/CReviewManager.cs:2832–2832](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2832-L2832) | ReplaceLine | False |
-| [Drilling.Common/Review/CReviewManager.cs:2849–2849](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2849-L2849) | ReplaceLine | False |
-| [Drilling.Common/Review/CReviewManager.cs:2921–2921](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2921-L2921) | ReplaceLine | False |
-| [Drilling.Common/Review/CReviewManager.cs:2983–2983](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2983-L2983) | ReplaceLine | False |
-| [Drilling.Common/Review/CReviewManager.cs:3082–3082](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3082-L3082) | ReplaceLine | False |
+| [Drilling.Common/Review/CReviewManager.cs:2812–2812](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2812-L2812) | ReplaceLine | False |
+| [Drilling.Common/Review/CReviewManager.cs:2832–2832](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2832-L2832) | ReplaceLine | False |
+| [Drilling.Common/Review/CReviewManager.cs:2849–2849](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2849-L2849) | ReplaceLine | False |
+| [Drilling.Common/Review/CReviewManager.cs:2921–2921](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2921-L2921) | ReplaceLine | False |
+| [Drilling.Common/Review/CReviewManager.cs:2983–2983](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2983-L2983) | ReplaceLine | False |
+| [Drilling.Common/Review/CReviewManager.cs:3082–3082](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3082-L3082) | ReplaceLine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13197,7 +13197,7 @@ flowchart TD
 
 ### LocalFunctionStatement `LogNgAttempt` · L3036–3040
 
-[Drilling.Common/Review/CReviewManager.cs:3036–3040](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3036-L3040)
+[Drilling.Common/Review/CReviewManager.cs:3036–3040](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3036-L3040)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13218,8 +13218,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2836–2836](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2836-L2836) | LogNgAttempt | False |
-| [Drilling.Common/Review/CReviewManager.cs:2969–2969](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2969-L2969) | LogNgAttempt | False |
+| [Drilling.Common/Review/CReviewManager.cs:2836–2836](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2836-L2836) | LogNgAttempt | False |
+| [Drilling.Common/Review/CReviewManager.cs:2969–2969](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2969-L2969) | LogNgAttempt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13247,7 +13247,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MoveAndWait` · L3042–3056
 
-[Drilling.Common/Review/CReviewManager.cs:3042–3056](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3042-L3056)
+[Drilling.Common/Review/CReviewManager.cs:3042–3056](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3042-L3056)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13269,10 +13269,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2814–2814](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2814-L2814) | MoveAndWait | False |
-| [Drilling.Common/Review/CReviewManager.cs:2851–2851](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2851-L2851) | MoveAndWait | False |
-| [Drilling.Common/Review/CReviewManager.cs:2868–2868](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2868-L2868) | MoveAndWait | False |
-| [Drilling.Common/Review/CReviewManager.cs:2938–2938](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2938-L2938) | MoveAndWait | False |
+| [Drilling.Common/Review/CReviewManager.cs:2814–2814](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2814-L2814) | MoveAndWait | False |
+| [Drilling.Common/Review/CReviewManager.cs:2851–2851](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2851-L2851) | MoveAndWait | False |
+| [Drilling.Common/Review/CReviewManager.cs:2868–2868](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2868-L2868) | MoveAndWait | False |
+| [Drilling.Common/Review/CReviewManager.cs:2938–2938](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2938-L2938) | MoveAndWait | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13313,7 +13313,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SimulatedMarks` · L3058–3068
 
-[Drilling.Common/Review/CReviewManager.cs:3058–3068](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3058-L3068)
+[Drilling.Common/Review/CReviewManager.cs:3058–3068](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3058-L3068)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13333,8 +13333,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2827–2827](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2827-L2827) | SimulatedMarks | False |
-| [Drilling.Common/Review/CReviewManager.cs:2906–2906](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2906-L2906) | SimulatedMarks | False |
+| [Drilling.Common/Review/CReviewManager.cs:2827–2827](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2827-L2827) | SimulatedMarks | False |
+| [Drilling.Common/Review/CReviewManager.cs:2906–2906](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2906-L2906) | SimulatedMarks | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13385,7 +13385,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ReleaseMotion` · L3070–3074
 
-[Drilling.Common/Review/CReviewManager.cs:3070–3074](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3070-L3074)
+[Drilling.Common/Review/CReviewManager.cs:3070–3074](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3070-L3074)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13398,8 +13398,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3020–3020](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3020-L3020) | ReleaseMotion | False |
-| [Drilling.Common/Review/CReviewManager.cs:3085–3085](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3085-L3085) | ReleaseMotion | False |
+| [Drilling.Common/Review/CReviewManager.cs:3020–3020](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3020-L3020) | ReleaseMotion | False |
+| [Drilling.Common/Review/CReviewManager.cs:3085–3085](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3085-L3085) | ReleaseMotion | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13418,7 +13418,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Finish` · L3076–3119
 
-[Drilling.Common/Review/CReviewManager.cs:3076–3119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3076-L3119)
+[Drilling.Common/Review/CReviewManager.cs:3076–3119](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3076-L3119)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13437,10 +13437,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2989–2989](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2989-L2989) | Finish | False |
-| [Drilling.Common/Review/CReviewManager.cs:2996–2996](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2996-L2996) | Finish | False |
-| [Drilling.Common/Review/CReviewManager.cs:3001–3001](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3001-L3001) | Finish | False |
-| [Drilling.Common/Review/CReviewManager.cs:3016–3016](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3016-L3016) | Finish | False |
+| [Drilling.Common/Review/CReviewManager.cs:2989–2989](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2989-L2989) | Finish | False |
+| [Drilling.Common/Review/CReviewManager.cs:2996–2996](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2996-L2996) | Finish | False |
+| [Drilling.Common/Review/CReviewManager.cs:3001–3001](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3001-L3001) | Finish | False |
+| [Drilling.Common/Review/CReviewManager.cs:3016–3016](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3016-L3016) | Finish | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13542,7 +13542,7 @@ flowchart TD
 
 ### MethodDeclaration `ClearFinePoint` · L3122–3130
 
-[Drilling.Common/Review/CReviewManager.cs:3122–3130](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3122-L3130)
+[Drilling.Common/Review/CReviewManager.cs:3122–3130](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3122-L3130)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13561,8 +13561,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3012–3012](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3012-L3012) | ClearFinePoint | False |
-| [Drilling.Common/Review/CReviewManager.cs:3082–3082](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3082-L3082) | ClearFinePoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:3012–3012](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3012-L3012) | ClearFinePoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:3082–3082](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3082-L3082) | ClearFinePoint | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -13579,7 +13579,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateFineRequest` · L3131–3150
 
-[Drilling.Common/Review/CReviewManager.cs:3131–3150](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3131-L3150)
+[Drilling.Common/Review/CReviewManager.cs:3131–3150](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3131-L3150)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13598,7 +13598,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2663–2663](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2663-L2663) | ValidateFineRequest | False |
+| [Drilling.Common/Review/CReviewManager.cs:2663–2663](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2663-L2663) | ValidateFineRequest | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13713,7 +13713,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenDefaultInspection` · L3158–3171
 
-[Drilling.Common/Review/CReviewManager.cs:3158–3171](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3158-L3171)
+[Drilling.Common/Review/CReviewManager.cs:3158–3171](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3158-L3171)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13732,8 +13732,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3641–3641](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3641-L3641) | _reviewManager.OpenDefaultInspection | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3902–3902](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3902-L3902) | _reviewManager.OpenDefaultInspection | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3641–3641](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3641-L3641) | _reviewManager.OpenDefaultInspection | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3902–3902](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3902-L3902) | _reviewManager.OpenDefaultInspection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13805,7 +13805,7 @@ flowchart TD
 
 ### MethodDeclaration `ReceiveDefaultMark` · L3173–3186
 
-[Drilling.Common/Review/CReviewManager.cs:3173–3186](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3173-L3186)
+[Drilling.Common/Review/CReviewManager.cs:3173–3186](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3173-L3186)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13826,7 +13826,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3209–3209](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3209-L3209) | _owner.ReceiveDefaultMark | False |
+| [Drilling.Common/Review/CReviewManager.cs:3209–3209](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3209-L3209) | _owner.ReceiveDefaultMark | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13903,7 +13903,7 @@ flowchart TD
 
 ### FieldDeclaration `_owner` · L3190–3190
 
-[Drilling.Common/Review/CReviewManager.cs:3190–3190](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3190-L3190)
+[Drilling.Common/Review/CReviewManager.cs:3190–3190](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3190-L3190)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13918,7 +13918,7 @@ flowchart TD
 
 ### FieldDeclaration `_motion` · L3191–3191
 
-[Drilling.Common/Review/CReviewManager.cs:3191–3191](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3191-L3191)
+[Drilling.Common/Review/CReviewManager.cs:3191–3191](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3191-L3191)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13933,7 +13933,7 @@ flowchart TD
 
 ### FieldDeclaration `_disposed` · L3192–3192
 
-[Drilling.Common/Review/CReviewManager.cs:3192–3192](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3192-L3192)
+[Drilling.Common/Review/CReviewManager.cs:3192–3192](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3192-L3192)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13948,7 +13948,7 @@ flowchart TD
 
 ### PropertyDeclaration `StageSimulation` · L3193–3193
 
-[Drilling.Common/Review/CReviewManager.cs:3193–3193](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3193-L3193)
+[Drilling.Common/Review/CReviewManager.cs:3193–3193](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3193-L3193)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13963,7 +13963,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_StageSimulation` · L3193–3193
 
-[Drilling.Common/Review/CReviewManager.cs:3193–3193](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3193-L3193)
+[Drilling.Common/Review/CReviewManager.cs:3193–3193](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3193-L3193)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13978,7 +13978,7 @@ flowchart TD
 
 ### PropertyDeclaration `VisionSimulation` · L3194–3194
 
-[Drilling.Common/Review/CReviewManager.cs:3194–3194](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3194-L3194)
+[Drilling.Common/Review/CReviewManager.cs:3194–3194](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3194-L3194)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13993,7 +13993,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_VisionSimulation` · L3194–3194
 
-[Drilling.Common/Review/CReviewManager.cs:3194–3194](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3194-L3194)
+[Drilling.Common/Review/CReviewManager.cs:3194–3194](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3194-L3194)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14008,7 +14008,7 @@ flowchart TD
 
 ### PropertyDeclaration `Position` · L3195–3195
 
-[Drilling.Common/Review/CReviewManager.cs:3195–3195](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3195-L3195)
+[Drilling.Common/Review/CReviewManager.cs:3195–3195](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3195-L3195)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14023,7 +14023,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L3196–3197
 
-[Drilling.Common/Review/CReviewManager.cs:3196–3197](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3196-L3197)
+[Drilling.Common/Review/CReviewManager.cs:3196–3197](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3196-L3197)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14044,7 +14044,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3168–3168](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3168-L3168) | new | False |
+| [Drilling.Common/Review/CReviewManager.cs:3168–3168](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3168-L3168) | new | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14066,7 +14066,7 @@ flowchart TD
 
 ### MethodDeclaration `Move` · L3198–3198
 
-[Drilling.Common/Review/CReviewManager.cs:3198–3198](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3198-L3198)
+[Drilling.Common/Review/CReviewManager.cs:3198–3198](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3198-L3198)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14087,8 +14087,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3205–3205](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3205-L3205) | Move | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3923–3923](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3923-L3923) | inspection.Move | False |
+| [Drilling.Common/Review/CReviewManager.cs:3205–3205](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3205-L3205) | Move | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3923–3923](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3923-L3923) | inspection.Move | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14108,7 +14108,7 @@ flowchart TD
 
 ### MethodDeclaration `Capture` · L3199–3220
 
-[Drilling.Common/Review/CReviewManager.cs:3199–3220](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3199-L3220)
+[Drilling.Common/Review/CReviewManager.cs:3199–3220](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3199-L3220)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14136,7 +14136,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3916–3916](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3916-L3916) | inspection.Capture | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3916–3916](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3916-L3916) | inspection.Capture | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14265,7 +14265,7 @@ flowchart TD
 
 ### MethodDeclaration `Dispose` · L3221–3226
 
-[Drilling.Common/Review/CReviewManager.cs:3221–3226](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3221-L3226)
+[Drilling.Common/Review/CReviewManager.cs:3221–3226](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3221-L3226)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14312,7 +14312,7 @@ flowchart TD
 
 ### MethodDeclaration `Point` · L3227–3227
 
-[Drilling.Common/Review/CReviewManager.cs:3227–3227](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3227-L3227)
+[Drilling.Common/Review/CReviewManager.cs:3227–3227](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3227-L3227)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14334,8 +14334,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3198–3198](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3198-L3198) | Point | False |
-| [Drilling.Common/Review/CReviewManager.cs:3209–3209](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3209-L3209) | Point | False |
+| [Drilling.Common/Review/CReviewManager.cs:3198–3198](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3198-L3198) | Point | False |
+| [Drilling.Common/Review/CReviewManager.cs:3209–3209](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3209-L3209) | Point | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14354,7 +14354,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteOneShot` · L3230–3345
 
-[Drilling.Common/Review/CReviewManager.cs:3230–3345](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3230-L3345)
+[Drilling.Common/Review/CReviewManager.cs:3230–3345](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3230-L3345)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14379,8 +14379,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:554–561](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L554-L561) | _reviewManager.ExecuteOneShot | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3896–3896](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3896-L3896) | _reviewManager.ExecuteOneShot | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:554–561](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L554-L561) | _reviewManager.ExecuteOneShot | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3896–3896](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3896-L3896) | _reviewManager.ExecuteOneShot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14606,7 +14606,7 @@ flowchart TD
 
 ### LocalFunctionStatement `CheckStop` · L3339–3344
 
-[Drilling.Common/Review/CReviewManager.cs:3339–3344](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3339-L3344)
+[Drilling.Common/Review/CReviewManager.cs:3339–3344](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3339-L3344)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14619,11 +14619,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3259–3259](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3259-L3259) | CheckStop | False |
-| [Drilling.Common/Review/CReviewManager.cs:3263–3263](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3263-L3263) | CheckStop | False |
-| [Drilling.Common/Review/CReviewManager.cs:3277–3277](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3277-L3277) | CheckStop | False |
-| [Drilling.Common/Review/CReviewManager.cs:3286–3286](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3286-L3286) | CheckStop | False |
-| [Drilling.Common/Review/CReviewManager.cs:3293–3293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3293-L3293) | CheckStop | False |
+| [Drilling.Common/Review/CReviewManager.cs:3259–3259](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3259-L3259) | CheckStop | False |
+| [Drilling.Common/Review/CReviewManager.cs:3263–3263](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3263-L3263) | CheckStop | False |
+| [Drilling.Common/Review/CReviewManager.cs:3277–3277](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3277-L3277) | CheckStop | False |
+| [Drilling.Common/Review/CReviewManager.cs:3286–3286](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3286-L3286) | CheckStop | False |
+| [Drilling.Common/Review/CReviewManager.cs:3293–3293](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3293-L3293) | CheckStop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14654,7 +14654,7 @@ flowchart TD
 
 ### MethodDeclaration `OrderRoughTargets` · L3349–3349
 
-[Drilling.Common/Review/CReviewManager.cs:3349–3349](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3349-L3349)
+[Drilling.Common/Review/CReviewManager.cs:3349–3349](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3349-L3349)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14673,8 +14673,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3364–3364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3364-L3364) | OrderRoughTargets | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7470–7470](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7470-L7470) | CReviewManager.OrderRoughTargets | False |
+| [Drilling.Common/Review/CReviewManager.cs:3364–3364](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3364-L3364) | OrderRoughTargets | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7470–7470](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7470-L7470) | CReviewManager.OrderRoughTargets | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14709,7 +14709,7 @@ flowchart TD
 
 ### MethodDeclaration `StartRoughCorrection` · L3350–3509
 
-[Drilling.Common/Review/CReviewManager.cs:3350–3509](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3350-L3509)
+[Drilling.Common/Review/CReviewManager.cs:3350–3509](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3350-L3509)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14732,7 +14732,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4081–4081](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4081-L4081) | _reviewManager.StartRoughCorrection | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4081–4081](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4081-L4081) | _reviewManager.StartRoughCorrection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14935,7 +14935,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Publish` · L3370–3375
 
-[Drilling.Common/Review/CReviewManager.cs:3370–3375](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3370-L3375)
+[Drilling.Common/Review/CReviewManager.cs:3370–3375](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3370-L3375)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14954,10 +14954,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3397–3397](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3397-L3397) | Publish | False |
-| [Drilling.Common/Review/CReviewManager.cs:3414–3414](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3414-L3414) | Publish | False |
-| [Drilling.Common/Review/CReviewManager.cs:3431–3431](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3431-L3431) | Publish | False |
-| [Drilling.Common/Review/CReviewManager.cs:3478–3478](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3478-L3478) | Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:3397–3397](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3397-L3397) | Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:3414–3414](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3414-L3414) | Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:3431–3431](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3431-L3431) | Publish | False |
+| [Drilling.Common/Review/CReviewManager.cs:3478–3478](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3478-L3478) | Publish | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14986,7 +14986,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ReleaseMotion` · L3459–3463
 
-[Drilling.Common/Review/CReviewManager.cs:3459–3463](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3459-L3463)
+[Drilling.Common/Review/CReviewManager.cs:3459–3463](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3459-L3463)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14999,8 +14999,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3455–3455](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3455-L3455) | ReleaseMotion | False |
-| [Drilling.Common/Review/CReviewManager.cs:3477–3477](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3477-L3477) | ReleaseMotion | False |
+| [Drilling.Common/Review/CReviewManager.cs:3455–3455](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3455-L3455) | ReleaseMotion | False |
+| [Drilling.Common/Review/CReviewManager.cs:3477–3477](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3477-L3477) | ReleaseMotion | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15019,7 +15019,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Finish` · L3465–3508
 
-[Drilling.Common/Review/CReviewManager.cs:3465–3508](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3465-L3508)
+[Drilling.Common/Review/CReviewManager.cs:3465–3508](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3465-L3508)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15038,9 +15038,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3435–3435](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3435-L3435) | Finish | False |
-| [Drilling.Common/Review/CReviewManager.cs:3440–3440](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3440-L3440) | Finish | False |
-| [Drilling.Common/Review/CReviewManager.cs:3451–3451](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3451-L3451) | Finish | False |
+| [Drilling.Common/Review/CReviewManager.cs:3435–3435](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3435-L3435) | Finish | False |
+| [Drilling.Common/Review/CReviewManager.cs:3440–3440](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3440-L3440) | Finish | False |
+| [Drilling.Common/Review/CReviewManager.cs:3451–3451](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3451-L3451) | Finish | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15116,7 +15116,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyRoughMeasurement` · L3511–3517
 
-[Drilling.Common/Review/CReviewManager.cs:3511–3517](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3511-L3517)
+[Drilling.Common/Review/CReviewManager.cs:3511–3517](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3511-L3517)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15137,12 +15137,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2830–2830](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2830-L2830) | ApplyRoughMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:2920–2920](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2920-L2920) | ApplyRoughMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:3287–3287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3287-L3287) | ApplyRoughMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:3422–3422](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3422-L3422) | ApplyRoughMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:3426–3427](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3426-L3427) | ApplyRoughMeasurement | False |
-| [Drilling.Common/Review/CReviewManager.cs:3600–3600](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3600-L3600) | ApplyRoughMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:2830–2830](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2830-L2830) | ApplyRoughMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:2920–2920](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2920-L2920) | ApplyRoughMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:3287–3287](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3287-L3287) | ApplyRoughMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:3422–3422](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3422-L3422) | ApplyRoughMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:3426–3427](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3426-L3427) | ApplyRoughMeasurement | False |
+| [Drilling.Common/Review/CReviewManager.cs:3600–3600](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3600-L3600) | ApplyRoughMeasurement | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15165,7 +15165,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveZeroLineResult` · L3521–3521
 
-[Drilling.Common/Review/CReviewManager.cs:3521–3521](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3521-L3521)
+[Drilling.Common/Review/CReviewManager.cs:3521–3521](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3521-L3521)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15185,7 +15185,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3605–3605](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3605-L3605) | _owner.SaveZeroLineResult | False |
+| [Drilling.Common/Review/CReviewManager.cs:3605–3605](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3605-L3605) | _owner.SaveZeroLineResult | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15203,7 +15203,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenZeroLineVision` · L3522–3528
 
-[Drilling.Common/Review/CReviewManager.cs:3522–3528](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3522-L3528)
+[Drilling.Common/Review/CReviewManager.cs:3522–3528](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3522-L3528)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15224,7 +15224,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:6437–6437](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6437-L6437) | review.OpenZeroLineVision | False |
+| [Drilling.Common/Station/CStationProcess.cs:6437–6437](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Station/CStationProcess.cs#L6437-L6437) | review.OpenZeroLineVision | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15265,7 +15265,7 @@ flowchart TD
 
 ### FieldDeclaration `_owner` · L3532–3532
 
-[Drilling.Common/Review/CReviewManager.cs:3532–3532](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3532-L3532)
+[Drilling.Common/Review/CReviewManager.cs:3532–3532](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3532-L3532)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15280,7 +15280,7 @@ flowchart TD
 
 ### FieldDeclaration `_plan` · L3533–3533
 
-[Drilling.Common/Review/CReviewManager.cs:3533–3533](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3533-L3533)
+[Drilling.Common/Review/CReviewManager.cs:3533–3533](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3533-L3533)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15295,7 +15295,7 @@ flowchart TD
 
 ### FieldDeclaration `_stageSimulation` · L3534–3534
 
-[Drilling.Common/Review/CReviewManager.cs:3534–3534](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3534-L3534)
+[Drilling.Common/Review/CReviewManager.cs:3534–3534](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3534-L3534)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15310,7 +15310,7 @@ flowchart TD
 
 ### FieldDeclaration `_disposed` · L3535–3535
 
-[Drilling.Common/Review/CReviewManager.cs:3535–3535](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3535-L3535)
+[Drilling.Common/Review/CReviewManager.cs:3535–3535](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3535-L3535)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15325,7 +15325,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsSimulation` · L3536–3536
 
-[Drilling.Common/Review/CReviewManager.cs:3536–3536](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3536-L3536)
+[Drilling.Common/Review/CReviewManager.cs:3536–3536](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3536-L3536)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15340,7 +15340,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsSimulation` · L3536–3536
 
-[Drilling.Common/Review/CReviewManager.cs:3536–3536](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3536-L3536)
+[Drilling.Common/Review/CReviewManager.cs:3536–3536](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3536-L3536)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15355,7 +15355,7 @@ flowchart TD
 
 ### FieldDeclaration `_keepAlive` · L3538–3538
 
-[Drilling.Common/Review/CReviewManager.cs:3538–3538](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3538-L3538)
+[Drilling.Common/Review/CReviewManager.cs:3538–3538](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3538-L3538)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15370,7 +15370,7 @@ flowchart TD
 
 ### FieldDeclaration `_prepared` · L3539–3539
 
-[Drilling.Common/Review/CReviewManager.cs:3539–3539](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3539-L3539)
+[Drilling.Common/Review/CReviewManager.cs:3539–3539](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3539-L3539)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15385,7 +15385,7 @@ flowchart TD
 
 ### FieldDeclaration `_readStarted` · L3540–3540
 
-[Drilling.Common/Review/CReviewManager.cs:3540–3540](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3540-L3540)
+[Drilling.Common/Review/CReviewManager.cs:3540–3540](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3540-L3540)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15400,7 +15400,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L3541–3547
 
-[Drilling.Common/Review/CReviewManager.cs:3541–3547](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3541-L3547)
+[Drilling.Common/Review/CReviewManager.cs:3541–3547](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3541-L3547)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15422,7 +15422,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3527–3527](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3527-L3527) | new | False |
+| [Drilling.Common/Review/CReviewManager.cs:3527–3527](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3527-L3527) | new | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -15437,7 +15437,7 @@ flowchart TD
 
 ### MethodDeclaration `PrepareFirst` · L3549–3561
 
-[Drilling.Common/Review/CReviewManager.cs:3549–3561](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3549-L3561)
+[Drilling.Common/Review/CReviewManager.cs:3549–3561](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3549-L3561)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15456,7 +15456,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:6439–6439](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6439-L6439) | _vision.PrepareFirst | False |
+| [Drilling.Common/Station/CStationProcess.cs:6439–6439](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Station/CStationProcess.cs#L6439-L6439) | _vision.PrepareFirst | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15509,7 +15509,7 @@ flowchart TD
 
 ### MethodDeclaration `MeasureAll` · L3564–3603
 
-[Drilling.Common/Review/CReviewManager.cs:3564–3603](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3564-L3603)
+[Drilling.Common/Review/CReviewManager.cs:3564–3603](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3564-L3603)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15534,7 +15534,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:6482–6482](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6482-L6482) | _vision.MeasureAll | False |
+| [Drilling.Common/Station/CStationProcess.cs:6482–6482](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Station/CStationProcess.cs#L6482-L6482) | _vision.MeasureAll | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15645,7 +15645,7 @@ flowchart TD
 
 ### MethodDeclaration `Save` · L3605–3605
 
-[Drilling.Common/Review/CReviewManager.cs:3605–3605](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3605-L3605)
+[Drilling.Common/Review/CReviewManager.cs:3605–3605](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3605-L3605)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15666,7 +15666,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:6582–6582](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6582-L6582) | _vision.Save | False |
+| [Drilling.Common/Station/CStationProcess.cs:6582–6582](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Station/CStationProcess.cs#L6582-L6582) | _vision.Save | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15686,7 +15686,7 @@ flowchart TD
 
 ### MethodDeclaration `Dispose` · L3606–3612
 
-[Drilling.Common/Review/CReviewManager.cs:3606–3612](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3606-L3612)
+[Drilling.Common/Review/CReviewManager.cs:3606–3612](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3606-L3612)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15699,7 +15699,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:6628–6628](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6628-L6628) | .Dispose | False |
+| [Drilling.Common/Station/CStationProcess.cs:6628–6628](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Station/CStationProcess.cs#L6628-L6628) | .Dispose | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15729,7 +15729,7 @@ flowchart TD
 
 ### MethodDeclaration `CalculateFineOffsets` · L3616–3654
 
-[Drilling.Common/Review/CReviewManager.cs:3616–3654](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3616-L3654)
+[Drilling.Common/Review/CReviewManager.cs:3616–3654](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3616-L3654)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15750,9 +15750,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L123-L123) | CReviewManager.CalculateFineOffsets | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:466–466](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L466-L466) | CReviewManager.CalculateFineOffsets | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3182–3182](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3182-L3182) | CReviewManager.CalculateFineOffsets | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L123-L123) | CReviewManager.CalculateFineOffsets | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:466–466](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L466-L466) | CReviewManager.CalculateFineOffsets | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3182–3182](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3182-L3182) | CReviewManager.CalculateFineOffsets | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15928,7 +15928,7 @@ flowchart TD
 
 ### MethodDeclaration `FineOffsetColumnKey` · L3656–3656
 
-[Drilling.Common/Review/CReviewManager.cs:3656–3656](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3656-L3656)
+[Drilling.Common/Review/CReviewManager.cs:3656–3656](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3656-L3656)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15961,7 +15961,7 @@ flowchart TD
 
 ### MethodDeclaration `InterpolateFineOffsetColumn` · L3657–3683
 
-[Drilling.Common/Review/CReviewManager.cs:3657–3683](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3657-L3683)
+[Drilling.Common/Review/CReviewManager.cs:3657–3683](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3657-L3683)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15982,8 +15982,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3643–3643](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3643-L3643) | InterpolateFineOffsetColumn | False |
-| [Drilling.Common/Review/CReviewManager.cs:3644–3644](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3644-L3644) | InterpolateFineOffsetColumn | False |
+| [Drilling.Common/Review/CReviewManager.cs:3643–3643](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3643-L3643) | InterpolateFineOffsetColumn | False |
+| [Drilling.Common/Review/CReviewManager.cs:3644–3644](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3644-L3644) | InterpolateFineOffsetColumn | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16044,7 +16044,7 @@ flowchart TD
 
 ### MethodDeclaration `VisionErrorToStageOffset` · L3687–3708
 
-[Drilling.Common/Review/CReviewManager.cs:3687–3708](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3687-L3708)
+[Drilling.Common/Review/CReviewManager.cs:3687–3708](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3687-L3708)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16065,21 +16065,21 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2321–2321](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2321-L2321) | VisionErrorToStageOffset | False |
-| [Drilling.Common/Review/CReviewManager.cs:3218–3218](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3218-L3218) | VisionErrorToStageOffset | False |
-| [Drilling.Common/Review/CReviewManager.cs:3638–3638](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3638-L3638) | CReviewManager.VisionErrorToStageOffset | False |
-| [Drilling.Common/Review/CReviewManager.cs:3713–3713](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3713-L3713) | VisionErrorToStageOffset | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:535–535](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L535-L535) | CReviewManager.VisionErrorToStageOffset | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1030–1030](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1030-L1030) | CReviewManager.VisionErrorToStageOffset | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1151–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1151-L1151) | CReviewManager.VisionErrorToStageOffset | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1279–1279](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1279-L1279) | CReviewManager.VisionErrorToStageOffset | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1341–1341](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1341-L1341) | CReviewManager.VisionErrorToStageOffset | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:569–572](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L569-L572) | CReviewManager.VisionErrorToStageOffset | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6937–6937](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6937-L6937) | CReviewManager.VisionErrorToStageOffset | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7617–7617](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7617-L7617) | CReviewManager.VisionErrorToStageOffset | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:4337–4337](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L4337-L4337) | CReviewManager.VisionErrorToStageOffset | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3692–3692](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3692-L3692) | CReviewManager.VisionErrorToStageOffset | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3788–3788](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3788-L3788) | CReviewManager.VisionErrorToStageOffset | False |
+| [Drilling.Common/Review/CReviewManager.cs:2321–2321](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2321-L2321) | VisionErrorToStageOffset | False |
+| [Drilling.Common/Review/CReviewManager.cs:3218–3218](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3218-L3218) | VisionErrorToStageOffset | False |
+| [Drilling.Common/Review/CReviewManager.cs:3638–3638](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3638-L3638) | CReviewManager.VisionErrorToStageOffset | False |
+| [Drilling.Common/Review/CReviewManager.cs:3713–3713](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3713-L3713) | VisionErrorToStageOffset | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:535–535](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.cs#L535-L535) | CReviewManager.VisionErrorToStageOffset | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1030–1030](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.cs#L1030-L1030) | CReviewManager.VisionErrorToStageOffset | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1151–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.cs#L1151-L1151) | CReviewManager.VisionErrorToStageOffset | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1279–1279](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.cs#L1279-L1279) | CReviewManager.VisionErrorToStageOffset | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1341–1341](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.cs#L1341-L1341) | CReviewManager.VisionErrorToStageOffset | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:569–572](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L569-L572) | CReviewManager.VisionErrorToStageOffset | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6937–6937](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6937-L6937) | CReviewManager.VisionErrorToStageOffset | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7617–7617](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7617-L7617) | CReviewManager.VisionErrorToStageOffset | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:4337–4337](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L4337-L4337) | CReviewManager.VisionErrorToStageOffset | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3692–3692](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3692-L3692) | CReviewManager.VisionErrorToStageOffset | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3788–3788](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3788-L3788) | CReviewManager.VisionErrorToStageOffset | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16127,7 +16127,7 @@ flowchart TD
 
 ### MethodDeclaration `VisionErrorToScannerOffset` · L3710–3716
 
-[Drilling.Common/Review/CReviewManager.cs:3710–3716](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3710-L3716)
+[Drilling.Common/Review/CReviewManager.cs:3710–3716](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3710-L3716)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16149,9 +16149,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3720–3720](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3720-L3720) | VisionErrorToScannerOffset | False |
-| [Drilling.Common/Review/CReviewManager.cs:3721–3721](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3721-L3721) | VisionErrorToScannerOffset | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1613–1613](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1613-L1613) | CReviewManager.VisionErrorToScannerOffset | False |
+| [Drilling.Common/Review/CReviewManager.cs:3720–3720](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3720-L3720) | VisionErrorToScannerOffset | False |
+| [Drilling.Common/Review/CReviewManager.cs:3721–3721](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3721-L3721) | VisionErrorToScannerOffset | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1613–1613](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1613-L1613) | CReviewManager.VisionErrorToScannerOffset | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16178,7 +16178,7 @@ flowchart TD
 
 ### MethodDeclaration `VisionErrorToScannerFormula` · L3718–3723
 
-[Drilling.Common/Review/CReviewManager.cs:3718–3723](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3718-L3723)
+[Drilling.Common/Review/CReviewManager.cs:3718–3723](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3718-L3723)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16225,7 +16225,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateVisionFlipType` · L3725–3744
 
-[Drilling.Common/Review/CReviewManager.cs:3725–3744](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3725-L3744)
+[Drilling.Common/Review/CReviewManager.cs:3725–3744](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3725-L3744)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16246,7 +16246,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3748–3748](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3748-L3748) | CreateVisionFlipType | False |
+| [Drilling.Common/Review/CReviewManager.cs:3748–3748](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3748-L3748) | CreateVisionFlipType | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -16279,7 +16279,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseVisionFlipType` · L3746–3749
 
-[Drilling.Common/Review/CReviewManager.cs:3746–3749](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3746-L3749)
+[Drilling.Common/Review/CReviewManager.cs:3746–3749](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3746-L3749)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16300,13 +16300,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L256-L256) | CReviewManager.ParseVisionFlipType | False |
-| [Drilling.Common/Review/CReviewManager.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L603-L603) | CReviewManager.ParseVisionFlipType | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L314-L314) | CReviewManager.ParseVisionFlipType | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2324–2324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2324-L2324) | CReviewManager.ParseVisionFlipType | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3901–3901](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3901-L3901) | CReviewManager.ParseVisionFlipType | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6271–6271](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6271-L6271) | CReviewManager.ParseVisionFlipType | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7481–7481](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7481-L7481) | CReviewManager.ParseVisionFlipType | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L256-L256) | CReviewManager.ParseVisionFlipType | False |
+| [Drilling.Common/Review/CReviewManager.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L603-L603) | CReviewManager.ParseVisionFlipType | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L314-L314) | CReviewManager.ParseVisionFlipType | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2324–2324](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2324-L2324) | CReviewManager.ParseVisionFlipType | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3901–3901](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3901-L3901) | CReviewManager.ParseVisionFlipType | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6271–6271](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6271-L6271) | CReviewManager.ParseVisionFlipType | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7481–7481](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7481-L7481) | CReviewManager.ParseVisionFlipType | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16331,7 +16331,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatVisionFlipType` · L3751–3754
 
-[Drilling.Common/Review/CReviewManager.cs:3751–3754](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3751-L3754)
+[Drilling.Common/Review/CReviewManager.cs:3751–3754](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3751-L3754)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16350,7 +16350,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2303–2303](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2303-L2303) | CReviewManager.FormatVisionFlipType | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2303–2303](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2303-L2303) | CReviewManager.FormatVisionFlipType | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16379,7 +16379,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseVisionOnOff` · L3756–3759
 
-[Drilling.Common/Review/CReviewManager.cs:3756–3759](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3756-L3759)
+[Drilling.Common/Review/CReviewManager.cs:3756–3759](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3756-L3759)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16398,9 +16398,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3748–3748](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3748-L3748) | ParseVisionOnOff | False |
-| [Drilling.Common/Review/CReviewManager.cs:3748–3748](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3748-L3748) | ParseVisionOnOff | False |
-| [Drilling.Common/Review/CReviewManager.cs:3748–3748](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3748-L3748) | ParseVisionOnOff | False |
+| [Drilling.Common/Review/CReviewManager.cs:3748–3748](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3748-L3748) | ParseVisionOnOff | False |
+| [Drilling.Common/Review/CReviewManager.cs:3748–3748](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3748-L3748) | ParseVisionOnOff | False |
+| [Drilling.Common/Review/CReviewManager.cs:3748–3748](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3748-L3748) | ParseVisionOnOff | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16421,7 +16421,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatVisionOnOff` · L3761–3764
 
-[Drilling.Common/Review/CReviewManager.cs:3761–3764](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3761-L3764)
+[Drilling.Common/Review/CReviewManager.cs:3761–3764](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3761-L3764)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16440,9 +16440,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3753–3753](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3753-L3753) | FormatVisionOnOff | False |
-| [Drilling.Common/Review/CReviewManager.cs:3753–3753](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3753-L3753) | FormatVisionOnOff | False |
-| [Drilling.Common/Review/CReviewManager.cs:3753–3753](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3753-L3753) | FormatVisionOnOff | False |
+| [Drilling.Common/Review/CReviewManager.cs:3753–3753](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3753-L3753) | FormatVisionOnOff | False |
+| [Drilling.Common/Review/CReviewManager.cs:3753–3753](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3753-L3753) | FormatVisionOnOff | False |
+| [Drilling.Common/Review/CReviewManager.cs:3753–3753](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3753-L3753) | FormatVisionOnOff | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -16455,7 +16455,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatVisionFormula` · L3766–3774
 
-[Drilling.Common/Review/CReviewManager.cs:3766–3774](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3766-L3774)
+[Drilling.Common/Review/CReviewManager.cs:3766–3774](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3766-L3774)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16475,8 +16475,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3722–3722](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3722-L3722) | FormatVisionFormula | False |
-| [Drilling.Common/Review/CReviewManager.cs:3722–3722](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3722-L3722) | FormatVisionFormula | False |
+| [Drilling.Common/Review/CReviewManager.cs:3722–3722](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3722-L3722) | FormatVisionFormula | False |
+| [Drilling.Common/Review/CReviewManager.cs:3722–3722](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3722-L3722) | FormatVisionFormula | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16508,7 +16508,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Normal` · L3784–3784
 
-[Drilling.Common/Review/CReviewManager.cs:3784–3784](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3784-L3784)
+[Drilling.Common/Review/CReviewManager.cs:3784–3784](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3784-L3784)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16523,7 +16523,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `XFlip` · L3785–3785
 
-[Drilling.Common/Review/CReviewManager.cs:3785–3785](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3785-L3785)
+[Drilling.Common/Review/CReviewManager.cs:3785–3785](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3785-L3785)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16538,7 +16538,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `YFlip` · L3786–3786
 
-[Drilling.Common/Review/CReviewManager.cs:3786–3786](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3786-L3786)
+[Drilling.Common/Review/CReviewManager.cs:3786–3786](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3786-L3786)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16553,7 +16553,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `XyFlip` · L3787–3787
 
-[Drilling.Common/Review/CReviewManager.cs:3787–3787](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3787-L3787)
+[Drilling.Common/Review/CReviewManager.cs:3787–3787](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3787-L3787)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16568,7 +16568,7 @@ flowchart TD
 
 ### MethodDeclaration `ToDisplayText` · L3794–3804
 
-[Drilling.Common/Review/CReviewManager.cs:3794–3804](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3794-L3804)
+[Drilling.Common/Review/CReviewManager.cs:3794–3804](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3794-L3804)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16581,7 +16581,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4513–4513](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4513-L4513) | failureMessage.ToDisplayText | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4513–4513](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4513-L4513) | failureMessage.ToDisplayText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16638,7 +16638,7 @@ flowchart TD
 
 ### FieldDeclaration `ProductUpdateFailureMarker` · L3809–3809
 
-[Drilling.Common/Review/CReviewManager.cs:3809–3809](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3809-L3809)
+[Drilling.Common/Review/CReviewManager.cs:3809–3809](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3809-L3809)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16659,7 +16659,7 @@ flowchart TD
 
 ### MethodDeclaration `Create` · L3810–3814
 
-[Drilling.Common/Review/CReviewManager.cs:3810–3814](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3810-L3814)
+[Drilling.Common/Review/CReviewManager.cs:3810–3814](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3810-L3814)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16695,7 +16695,7 @@ flowchart TD
 
 ### MethodDeclaration `Create` · L3816–3841
 
-[Drilling.Common/Review/CReviewManager.cs:3816–3841](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3816-L3841)
+[Drilling.Common/Review/CReviewManager.cs:3816–3841](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3816-L3841)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16714,8 +16714,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3813–3813](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3813-L3813) | Create | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4511–4511](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4511-L4511) | CReviewFailureMessageBuilder.Create | False |
+| [Drilling.Common/Review/CReviewManager.cs:3813–3813](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3813-L3813) | Create | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4511–4511](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4511-L4511) | CReviewFailureMessageBuilder.Create | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16790,7 +16790,7 @@ flowchart TD
 
 ### MethodDeclaration `Classify` · L3843–3937
 
-[Drilling.Common/Review/CReviewManager.cs:3843–3937](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3843-L3937)
+[Drilling.Common/Review/CReviewManager.cs:3843–3937](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3843-L3937)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16810,8 +16810,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3829–3829](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3829-L3829) | Classify | False |
-| [Drilling.Common/Review/CReviewManager.cs:3833–3833](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3833-L3833) | Classify | False |
+| [Drilling.Common/Review/CReviewManager.cs:3829–3829](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3829-L3829) | Classify | False |
+| [Drilling.Common/Review/CReviewManager.cs:3833–3833](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3833-L3833) | Classify | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17053,7 +17053,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendShot` · L3939–3943
 
-[Drilling.Common/Review/CReviewManager.cs:3939–3943](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3939-L3943)
+[Drilling.Common/Review/CReviewManager.cs:3939–3943](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3939-L3943)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17073,8 +17073,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3873–3873](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3873-L3873) | AppendShot | False |
-| [Drilling.Common/Review/CReviewManager.cs:3903–3903](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3903-L3903) | AppendShot | False |
+| [Drilling.Common/Review/CReviewManager.cs:3873–3873](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3873-L3873) | AppendShot | False |
+| [Drilling.Common/Review/CReviewManager.cs:3903–3903](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3903-L3903) | AppendShot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17098,7 +17098,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadValue` · L3945–3961
 
-[Drilling.Common/Review/CReviewManager.cs:3945–3961](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3945-L3961)
+[Drilling.Common/Review/CReviewManager.cs:3945–3961](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3945-L3961)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17118,11 +17118,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3857–3857](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3857-L3857) | ReadValue | False |
-| [Drilling.Common/Review/CReviewManager.cs:3858–3858](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3858-L3858) | ReadValue | False |
-| [Drilling.Common/Review/CReviewManager.cs:3865–3865](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3865-L3865) | ReadValue | False |
-| [Drilling.Common/Review/CReviewManager.cs:3866–3866](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3866-L3866) | ReadValue | False |
-| [Drilling.Common/Review/CReviewManager.cs:3941–3941](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3941-L3941) | ReadValue | False |
+| [Drilling.Common/Review/CReviewManager.cs:3857–3857](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3857-L3857) | ReadValue | False |
+| [Drilling.Common/Review/CReviewManager.cs:3858–3858](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3858-L3858) | ReadValue | False |
+| [Drilling.Common/Review/CReviewManager.cs:3865–3865](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3865-L3865) | ReadValue | False |
+| [Drilling.Common/Review/CReviewManager.cs:3866–3866](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3866-L3866) | ReadValue | False |
+| [Drilling.Common/Review/CReviewManager.cs:3941–3941](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3941-L3941) | ReadValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17164,7 +17164,7 @@ flowchart TD
 
 ### MethodDeclaration `FirstLine` · L3963–3981
 
-[Drilling.Common/Review/CReviewManager.cs:3963–3981](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3963-L3981)
+[Drilling.Common/Review/CReviewManager.cs:3963–3981](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3963-L3981)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17183,7 +17183,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3936–3936](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3936-L3936) | FirstLine | False |
+| [Drilling.Common/Review/CReviewManager.cs:3936–3936](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3936-L3936) | FirstLine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17236,7 +17236,7 @@ flowchart TD
 
 ### MethodDeclaration `Contains` · L3983–3986
 
-[Drilling.Common/Review/CReviewManager.cs:3983–3986](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3983-L3986)
+[Drilling.Common/Review/CReviewManager.cs:3983–3986](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3983-L3986)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17256,43 +17256,43 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3845–3845](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3845-L3845) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3845–3845](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3845-L3845) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3850–3850](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3850-L3850) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3850–3850](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3850-L3850) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3850–3850](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3850-L3850) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3855–3855](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3855-L3855) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3863–3863](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3863-L3863) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3871–3871](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3871-L3871) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3876–3876](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3876-L3876) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3881–3881](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3881-L3881) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3886–3886](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3886-L3886) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3891–3891](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3891-L3891) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3891–3891](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3891-L3891) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3891–3891](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3891-L3891) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3896–3896](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3896-L3896) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3896–3896](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3896-L3896) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3901–3901](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3901-L3901) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3901–3901](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3901-L3901) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3901–3901](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3901-L3901) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3901–3901](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3901-L3901) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3901–3901](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3901-L3901) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3906–3906](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3906-L3906) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3906–3906](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3906-L3906) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3911–3911](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3911-L3911) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3916–3916](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3916-L3916) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3921–3921](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3921-L3921) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3921–3921](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3921-L3921) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3921–3921](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3921-L3921) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3921–3921](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3921-L3921) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3926–3926](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3926-L3926) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3926–3926](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3926-L3926) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3926–3926](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3926-L3926) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3926–3926](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3926-L3926) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3926–3926](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3926-L3926) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3926–3926](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3926-L3926) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3931–3931](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3931-L3931) | Contains | False |
-| [Drilling.Common/Review/CReviewManager.cs:3931–3931](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3931-L3931) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3845–3845](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3845-L3845) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3845–3845](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3845-L3845) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3850–3850](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3850-L3850) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3850–3850](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3850-L3850) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3850–3850](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3850-L3850) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3855–3855](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3855-L3855) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3863–3863](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3863-L3863) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3871–3871](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3871-L3871) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3876–3876](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3876-L3876) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3881–3881](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3881-L3881) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3886–3886](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3886-L3886) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3891–3891](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3891-L3891) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3891–3891](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3891-L3891) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3891–3891](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3891-L3891) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3896–3896](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3896-L3896) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3896–3896](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3896-L3896) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3901–3901](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3901-L3901) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3901–3901](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3901-L3901) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3901–3901](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3901-L3901) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3901–3901](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3901-L3901) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3901–3901](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3901-L3901) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3906–3906](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3906-L3906) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3906–3906](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3906-L3906) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3911–3911](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3911-L3911) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3916–3916](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3916-L3916) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3921–3921](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3921-L3921) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3921–3921](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3921-L3921) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3921–3921](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3921-L3921) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3921–3921](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3921-L3921) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3926–3926](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3926-L3926) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3926–3926](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3926-L3926) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3926–3926](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3926-L3926) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3926–3926](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3926-L3926) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3926–3926](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3926-L3926) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3926–3926](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3926-L3926) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3931–3931](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3931-L3931) | Contains | False |
+| [Drilling.Common/Review/CReviewManager.cs:3931–3931](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3931-L3931) | Contains | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17311,7 +17311,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsStageSimulation` · L3995–3995
 
-[Drilling.Common/Review/CReviewManager.cs:3995–3995](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3995-L3995)
+[Drilling.Common/Review/CReviewManager.cs:3995–3995](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3995-L3995)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17326,7 +17326,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsStageSimulation` · L3995–3995
 
-[Drilling.Common/Review/CReviewManager.cs:3995–3995](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3995-L3995)
+[Drilling.Common/Review/CReviewManager.cs:3995–3995](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3995-L3995)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17341,7 +17341,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_IsStageSimulation` · L3995–3995
 
-[Drilling.Common/Review/CReviewManager.cs:3995–3995](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3995-L3995)
+[Drilling.Common/Review/CReviewManager.cs:3995–3995](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3995-L3995)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17362,7 +17362,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsVisionSimulation` · L3996–3996
 
-[Drilling.Common/Review/CReviewManager.cs:3996–3996](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3996-L3996)
+[Drilling.Common/Review/CReviewManager.cs:3996–3996](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3996-L3996)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17377,7 +17377,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsVisionSimulation` · L3996–3996
 
-[Drilling.Common/Review/CReviewManager.cs:3996–3996](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3996-L3996)
+[Drilling.Common/Review/CReviewManager.cs:3996–3996](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3996-L3996)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17392,7 +17392,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_IsVisionSimulation` · L3996–3996
 
-[Drilling.Common/Review/CReviewManager.cs:3996–3996](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3996-L3996)
+[Drilling.Common/Review/CReviewManager.cs:3996–3996](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3996-L3996)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17413,7 +17413,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShiftOffsetX` · L3997–3997
 
-[Drilling.Common/Review/CReviewManager.cs:3997–3997](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3997-L3997)
+[Drilling.Common/Review/CReviewManager.cs:3997–3997](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3997-L3997)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17428,7 +17428,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ShiftOffsetX` · L3997–3997
 
-[Drilling.Common/Review/CReviewManager.cs:3997–3997](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3997-L3997)
+[Drilling.Common/Review/CReviewManager.cs:3997–3997](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3997-L3997)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17443,7 +17443,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ShiftOffsetX` · L3997–3997
 
-[Drilling.Common/Review/CReviewManager.cs:3997–3997](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3997-L3997)
+[Drilling.Common/Review/CReviewManager.cs:3997–3997](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3997-L3997)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17464,7 +17464,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShiftOffsetY` · L3998–3998
 
-[Drilling.Common/Review/CReviewManager.cs:3998–3998](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3998-L3998)
+[Drilling.Common/Review/CReviewManager.cs:3998–3998](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3998-L3998)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17479,7 +17479,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ShiftOffsetY` · L3998–3998
 
-[Drilling.Common/Review/CReviewManager.cs:3998–3998](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3998-L3998)
+[Drilling.Common/Review/CReviewManager.cs:3998–3998](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3998-L3998)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17494,7 +17494,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ShiftOffsetY` · L3998–3998
 
-[Drilling.Common/Review/CReviewManager.cs:3998–3998](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3998-L3998)
+[Drilling.Common/Review/CReviewManager.cs:3998–3998](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3998-L3998)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17515,7 +17515,7 @@ flowchart TD
 
 ### PropertyDeclaration `SavedPath` · L3999–3999
 
-[Drilling.Common/Review/CReviewManager.cs:3999–3999](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3999-L3999)
+[Drilling.Common/Review/CReviewManager.cs:3999–3999](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3999-L3999)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17530,7 +17530,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SavedPath` · L3999–3999
 
-[Drilling.Common/Review/CReviewManager.cs:3999–3999](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3999-L3999)
+[Drilling.Common/Review/CReviewManager.cs:3999–3999](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3999-L3999)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17545,7 +17545,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_SavedPath` · L3999–3999
 
-[Drilling.Common/Review/CReviewManager.cs:3999–3999](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3999-L3999)
+[Drilling.Common/Review/CReviewManager.cs:3999–3999](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3999-L3999)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17566,7 +17566,7 @@ flowchart TD
 
 ### PropertyDeclaration `SaveError` · L4000–4000
 
-[Drilling.Common/Review/CReviewManager.cs:4000–4000](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4000-L4000)
+[Drilling.Common/Review/CReviewManager.cs:4000–4000](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4000-L4000)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17581,7 +17581,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SaveError` · L4000–4000
 
-[Drilling.Common/Review/CReviewManager.cs:4000–4000](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4000-L4000)
+[Drilling.Common/Review/CReviewManager.cs:4000–4000](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4000-L4000)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17596,7 +17596,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_SaveError` · L4000–4000
 
-[Drilling.Common/Review/CReviewManager.cs:4000–4000](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4000-L4000)
+[Drilling.Common/Review/CReviewManager.cs:4000–4000](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4000-L4000)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17617,7 +17617,7 @@ flowchart TD
 
 ### PropertyDeclaration `CompletedCount` · L4001–4001
 
-[Drilling.Common/Review/CReviewManager.cs:4001–4001](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4001-L4001)
+[Drilling.Common/Review/CReviewManager.cs:4001–4001](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4001-L4001)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17644,7 +17644,7 @@ flowchart TD
 
 ### PropertyDeclaration `NgCount` · L4002–4002
 
-[Drilling.Common/Review/CReviewManager.cs:4002–4002](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4002-L4002)
+[Drilling.Common/Review/CReviewManager.cs:4002–4002](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4002-L4002)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17671,7 +17671,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsMeasured` · L4008–4008
 
-[Drilling.Common/Review/CReviewManager.cs:4008–4008](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4008-L4008)
+[Drilling.Common/Review/CReviewManager.cs:4008–4008](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4008-L4008)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17686,7 +17686,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShiftOffsetX` · L4014–4014
 
-[Drilling.Common/Review/CReviewManager.cs:4014–4014](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4014-L4014)
+[Drilling.Common/Review/CReviewManager.cs:4014–4014](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4014-L4014)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17701,7 +17701,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ShiftOffsetX` · L4014–4014
 
-[Drilling.Common/Review/CReviewManager.cs:4014–4014](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4014-L4014)
+[Drilling.Common/Review/CReviewManager.cs:4014–4014](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4014-L4014)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17716,7 +17716,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ShiftOffsetX` · L4014–4014
 
-[Drilling.Common/Review/CReviewManager.cs:4014–4014](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4014-L4014)
+[Drilling.Common/Review/CReviewManager.cs:4014–4014](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4014-L4014)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17737,7 +17737,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShiftOffsetY` · L4015–4015
 
-[Drilling.Common/Review/CReviewManager.cs:4015–4015](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4015-L4015)
+[Drilling.Common/Review/CReviewManager.cs:4015–4015](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4015-L4015)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17752,7 +17752,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ShiftOffsetY` · L4015–4015
 
-[Drilling.Common/Review/CReviewManager.cs:4015–4015](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4015-L4015)
+[Drilling.Common/Review/CReviewManager.cs:4015–4015](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4015-L4015)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17767,7 +17767,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ShiftOffsetY` · L4015–4015
 
-[Drilling.Common/Review/CReviewManager.cs:4015–4015](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4015-L4015)
+[Drilling.Common/Review/CReviewManager.cs:4015–4015](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4015-L4015)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17788,7 +17788,7 @@ flowchart TD
 
 ### PropertyDeclaration `AreAllPointsSelected` · L4019–4019
 
-[Drilling.Common/Review/CReviewManager.cs:4019–4019](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4019-L4019)
+[Drilling.Common/Review/CReviewManager.cs:4019–4019](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4019-L4019)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17803,7 +17803,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AreAllPointsSelected` · L4019–4019
 
-[Drilling.Common/Review/CReviewManager.cs:4019–4019](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4019-L4019)
+[Drilling.Common/Review/CReviewManager.cs:4019–4019](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4019-L4019)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17818,7 +17818,7 @@ flowchart TD
 
 ### PropertyDeclaration `PatternCellCount` · L4031–4031
 
-[Drilling.Common/Review/CReviewManager.cs:4031–4031](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4031-L4031)
+[Drilling.Common/Review/CReviewManager.cs:4031–4031](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4031-L4031)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17833,7 +17833,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_PatternCellCount` · L4031–4031
 
-[Drilling.Common/Review/CReviewManager.cs:4031–4031](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4031-L4031)
+[Drilling.Common/Review/CReviewManager.cs:4031–4031](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4031-L4031)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17848,7 +17848,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCellRange` · L4033–4033
 
-[Drilling.Common/Review/CReviewManager.cs:4033–4033](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4033-L4033)
+[Drilling.Common/Review/CReviewManager.cs:4033–4033](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4033-L4033)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17867,15 +17867,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:4181–4181](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4181-L4181) | cellSource.GetCellRange | True |
-| [Drilling.Common/Review/CReviewManager.cs:4209–4209](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4209-L4209) | cellSource.GetCellRange | True |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L327-L327) | cellSource.GetCellRange | True |
+| [Drilling.Common/Review/CReviewManager.cs:4181–4181](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4181-L4181) | cellSource.GetCellRange | True |
+| [Drilling.Common/Review/CReviewManager.cs:4209–4209](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4209-L4209) | cellSource.GetCellRange | True |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L327-L327) | cellSource.GetCellRange | True |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### EnumMemberDeclaration `Ready` · L4038–4038
 
-[Drilling.Common/Review/CReviewManager.cs:4038–4038](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4038-L4038)
+[Drilling.Common/Review/CReviewManager.cs:4038–4038](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4038-L4038)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17890,7 +17890,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Current` · L4039–4039
 
-[Drilling.Common/Review/CReviewManager.cs:4039–4039](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4039-L4039)
+[Drilling.Common/Review/CReviewManager.cs:4039–4039](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4039-L4039)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17905,7 +17905,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Ok` · L4040–4040
 
-[Drilling.Common/Review/CReviewManager.cs:4040–4040](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4040-L4040)
+[Drilling.Common/Review/CReviewManager.cs:4040–4040](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4040-L4040)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17920,7 +17920,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Ng` · L4041–4041
 
-[Drilling.Common/Review/CReviewManager.cs:4041–4041](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4041-L4041)
+[Drilling.Common/Review/CReviewManager.cs:4041–4041](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4041-L4041)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17935,7 +17935,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Skip` · L4042–4042
 
-[Drilling.Common/Review/CReviewManager.cs:4042–4042](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4042-L4042)
+[Drilling.Common/Review/CReviewManager.cs:4042–4042](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4042-L4042)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17950,7 +17950,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Idle` · L4047–4047
 
-[Drilling.Common/Review/CReviewManager.cs:4047–4047](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4047-L4047)
+[Drilling.Common/Review/CReviewManager.cs:4047–4047](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4047-L4047)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17965,7 +17965,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Running` · L4048–4048
 
-[Drilling.Common/Review/CReviewManager.cs:4048–4048](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4048-L4048)
+[Drilling.Common/Review/CReviewManager.cs:4048–4048](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4048-L4048)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17980,7 +17980,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Stopping` · L4049–4049
 
-[Drilling.Common/Review/CReviewManager.cs:4049–4049](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4049-L4049)
+[Drilling.Common/Review/CReviewManager.cs:4049–4049](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4049-L4049)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17995,7 +17995,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Stopped` · L4050–4050
 
-[Drilling.Common/Review/CReviewManager.cs:4050–4050](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4050-L4050)
+[Drilling.Common/Review/CReviewManager.cs:4050–4050](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4050-L4050)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18010,7 +18010,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Completed` · L4051–4051
 
-[Drilling.Common/Review/CReviewManager.cs:4051–4051](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4051-L4051)
+[Drilling.Common/Review/CReviewManager.cs:4051–4051](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4051-L4051)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18025,7 +18025,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Failed` · L4052–4052
 
-[Drilling.Common/Review/CReviewManager.cs:4052–4052](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4052-L4052)
+[Drilling.Common/Review/CReviewManager.cs:4052–4052](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4052-L4052)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18040,7 +18040,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `AllPoint` · L4057–4057
 
-[Drilling.Common/Review/CReviewManager.cs:4057–4057](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4057-L4057)
+[Drilling.Common/Review/CReviewManager.cs:4057–4057](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4057-L4057)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18055,7 +18055,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SamplePoint` · L4058–4058
 
-[Drilling.Common/Review/CReviewManager.cs:4058–4058](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4058-L4058)
+[Drilling.Common/Review/CReviewManager.cs:4058–4058](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4058-L4058)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18070,7 +18070,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Edge` · L4059–4059
 
-[Drilling.Common/Review/CReviewManager.cs:4059–4059](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4059-L4059)
+[Drilling.Common/Review/CReviewManager.cs:4059–4059](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4059-L4059)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18085,7 +18085,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Center` · L4060–4060
 
-[Drilling.Common/Review/CReviewManager.cs:4060–4060](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4060-L4060)
+[Drilling.Common/Review/CReviewManager.cs:4060–4060](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4060-L4060)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18100,7 +18100,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `HeadPoint` · L4061–4061
 
-[Drilling.Common/Review/CReviewManager.cs:4061–4061](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4061-L4061)
+[Drilling.Common/Review/CReviewManager.cs:4061–4061](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4061-L4061)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18115,7 +18115,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `CellPoint` · L4062–4062
 
-[Drilling.Common/Review/CReviewManager.cs:4062–4062](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4062-L4062)
+[Drilling.Common/Review/CReviewManager.cs:4062–4062](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4062-L4062)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18130,7 +18130,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `ZeroLine` · L4063–4063
 
-[Drilling.Common/Review/CReviewManager.cs:4063–4063](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4063-L4063)
+[Drilling.Common/Review/CReviewManager.cs:4063–4063](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4063-L4063)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18145,7 +18145,7 @@ flowchart TD
 
 ### PropertyDeclaration `BeamNo` · L4086–4086
 
-[Drilling.Common/Review/CReviewManager.cs:4086–4086](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4086-L4086)
+[Drilling.Common/Review/CReviewManager.cs:4086–4086](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4086-L4086)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18160,7 +18160,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_BeamNo` · L4086–4086
 
-[Drilling.Common/Review/CReviewManager.cs:4086–4086](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4086-L4086)
+[Drilling.Common/Review/CReviewManager.cs:4086–4086](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4086-L4086)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18175,7 +18175,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_BeamNo` · L4086–4086
 
-[Drilling.Common/Review/CReviewManager.cs:4086–4086](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4086-L4086)
+[Drilling.Common/Review/CReviewManager.cs:4086–4086](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4086-L4086)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18196,7 +18196,7 @@ flowchart TD
 
 ### PropertyDeclaration `BeamOffsetGx` · L4087–4087
 
-[Drilling.Common/Review/CReviewManager.cs:4087–4087](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4087-L4087)
+[Drilling.Common/Review/CReviewManager.cs:4087–4087](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4087-L4087)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18211,7 +18211,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_BeamOffsetGx` · L4087–4087
 
-[Drilling.Common/Review/CReviewManager.cs:4087–4087](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4087-L4087)
+[Drilling.Common/Review/CReviewManager.cs:4087–4087](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4087-L4087)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18226,7 +18226,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_BeamOffsetGx` · L4087–4087
 
-[Drilling.Common/Review/CReviewManager.cs:4087–4087](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4087-L4087)
+[Drilling.Common/Review/CReviewManager.cs:4087–4087](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4087-L4087)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18247,7 +18247,7 @@ flowchart TD
 
 ### PropertyDeclaration `BeamOffsetGy` · L4088–4088
 
-[Drilling.Common/Review/CReviewManager.cs:4088–4088](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4088-L4088)
+[Drilling.Common/Review/CReviewManager.cs:4088–4088](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4088-L4088)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18262,7 +18262,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_BeamOffsetGy` · L4088–4088
 
-[Drilling.Common/Review/CReviewManager.cs:4088–4088](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4088-L4088)
+[Drilling.Common/Review/CReviewManager.cs:4088–4088](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4088-L4088)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18277,7 +18277,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_BeamOffsetGy` · L4088–4088
 
-[Drilling.Common/Review/CReviewManager.cs:4088–4088](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4088-L4088)
+[Drilling.Common/Review/CReviewManager.cs:4088–4088](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4088-L4088)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18298,7 +18298,7 @@ flowchart TD
 
 ### PropertyDeclaration `ExclusionReason` · L4089–4089
 
-[Drilling.Common/Review/CReviewManager.cs:4089–4089](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4089-L4089)
+[Drilling.Common/Review/CReviewManager.cs:4089–4089](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4089-L4089)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18313,7 +18313,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ExclusionReason` · L4089–4089
 
-[Drilling.Common/Review/CReviewManager.cs:4089–4089](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4089-L4089)
+[Drilling.Common/Review/CReviewManager.cs:4089–4089](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4089-L4089)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18328,7 +18328,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ExclusionReason` · L4089–4089
 
-[Drilling.Common/Review/CReviewManager.cs:4089–4089](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4089-L4089)
+[Drilling.Common/Review/CReviewManager.cs:4089–4089](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4089-L4089)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18349,7 +18349,7 @@ flowchart TD
 
 ### PropertyDeclaration `VisionResultCode` · L4090–4090
 
-[Drilling.Common/Review/CReviewManager.cs:4090–4090](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4090-L4090)
+[Drilling.Common/Review/CReviewManager.cs:4090–4090](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4090-L4090)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18364,7 +18364,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_VisionResultCode` · L4090–4090
 
-[Drilling.Common/Review/CReviewManager.cs:4090–4090](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4090-L4090)
+[Drilling.Common/Review/CReviewManager.cs:4090–4090](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4090-L4090)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18379,7 +18379,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_VisionResultCode` · L4090–4090
 
-[Drilling.Common/Review/CReviewManager.cs:4090–4090](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4090-L4090)
+[Drilling.Common/Review/CReviewManager.cs:4090–4090](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4090-L4090)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18400,7 +18400,7 @@ flowchart TD
 
 ### PropertyDeclaration `NgReason` · L4091–4091
 
-[Drilling.Common/Review/CReviewManager.cs:4091–4091](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4091-L4091)
+[Drilling.Common/Review/CReviewManager.cs:4091–4091](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4091-L4091)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18415,7 +18415,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_NgReason` · L4091–4091
 
-[Drilling.Common/Review/CReviewManager.cs:4091–4091](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4091-L4091)
+[Drilling.Common/Review/CReviewManager.cs:4091–4091](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4091-L4091)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18430,7 +18430,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_NgReason` · L4091–4091
 
-[Drilling.Common/Review/CReviewManager.cs:4091–4091](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4091-L4091)
+[Drilling.Common/Review/CReviewManager.cs:4091–4091](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4091-L4091)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18451,7 +18451,7 @@ flowchart TD
 
 ### FieldDeclaration `VisionFind` · L4096–4096
 
-[Drilling.Common/Review/CReviewManager.cs:4096–4096](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4096-L4096)
+[Drilling.Common/Review/CReviewManager.cs:4096–4096](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4096-L4096)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18472,7 +18472,7 @@ flowchart TD
 
 ### FieldDeclaration `ToleranceX` · L4097–4097
 
-[Drilling.Common/Review/CReviewManager.cs:4097–4097](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4097-L4097)
+[Drilling.Common/Review/CReviewManager.cs:4097–4097](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4097-L4097)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18493,7 +18493,7 @@ flowchart TD
 
 ### FieldDeclaration `ToleranceY` · L4098–4098
 
-[Drilling.Common/Review/CReviewManager.cs:4098–4098](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4098-L4098)
+[Drilling.Common/Review/CReviewManager.cs:4098–4098](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4098-L4098)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18514,7 +18514,7 @@ flowchart TD
 
 ### FieldDeclaration `ToleranceXy` · L4099–4099
 
-[Drilling.Common/Review/CReviewManager.cs:4099–4099](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4099-L4099)
+[Drilling.Common/Review/CReviewManager.cs:4099–4099](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4099-L4099)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18535,7 +18535,7 @@ flowchart TD
 
 ### FieldDeclaration `Reinspection` · L4100–4100
 
-[Drilling.Common/Review/CReviewManager.cs:4100–4100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4100-L4100)
+[Drilling.Common/Review/CReviewManager.cs:4100–4100](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4100-L4100)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18556,7 +18556,7 @@ flowchart TD
 
 ### PropertyDeclaration `ResultCodeText` · L4115–4117
 
-[Drilling.Common/Review/CReviewManager.cs:4115–4117](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4115-L4117)
+[Drilling.Common/Review/CReviewManager.cs:4115–4117](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4115-L4117)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18586,7 +18586,7 @@ flowchart TD
 
 ### MethodDeclaration `ToLogText` · L4119–4123
 
-[Drilling.Common/Review/CReviewManager.cs:4119–4123](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4119-L4123)
+[Drilling.Common/Review/CReviewManager.cs:4119–4123](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4119-L4123)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18605,7 +18605,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1158–1158](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1158-L1158) | summary.ToLogText | False |
+| [Drilling.Common/Review/CReviewManager.cs:1158–1158](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1158-L1158) | summary.ToLogText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18624,7 +18624,7 @@ flowchart TD
 
 ### MethodDeclaration `ToDisplayText` · L4125–4128
 
-[Drilling.Common/Review/CReviewManager.cs:4125–4128](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4125-L4128)
+[Drilling.Common/Review/CReviewManager.cs:4125–4128](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4125-L4128)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18637,9 +18637,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L59-L59) | ngSummary.ToDisplayText | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L71-L71) | ngSummary.ToDisplayText | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:108–108](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L108-L108) | ngSummary.ToDisplayText | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L59-L59) | ngSummary.ToDisplayText | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L71-L71) | ngSummary.ToDisplayText | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:108–108](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L108-L108) | ngSummary.ToDisplayText | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -18651,7 +18651,7 @@ flowchart TD
 
 ### MethodDeclaration `ToMatrixName` · L4141–4148
 
-[Drilling.Common/Review/CReviewManager.cs:4141–4148](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4141-L4148)
+[Drilling.Common/Review/CReviewManager.cs:4141–4148](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4141-L4148)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18671,45 +18671,45 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:260–260](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L260-L260) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:696–696](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L696-L696) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:714–714](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L714-L714) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L132-L132) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.Common/Review/CReviewManager.cs:732–732](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L732-L732) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.Common/Review/CReviewManager.cs:1801–1801](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1801-L1801) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L91-L91) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:614–614](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L614-L614) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:835–835](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L835-L835) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1055–1055](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1055-L1055) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1179–1179](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1179-L1179) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1297–1297](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1297-L1297) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.cs:1343–1343](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.cs#L1343-L1343) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:282–282](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L282-L282) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1007–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1007-L1007) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L191-L191) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L314-L314) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L489-L489) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:756–756](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L756-L756) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L313-L313) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2558–2558](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2558-L2558) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3202–3202](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3202-L3202) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5875–5875](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5875-L5875) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6942–6942](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6942-L6942) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7242–7242](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7242-L7242) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7813–7813](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7813-L7813) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1972–1972](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L1972-L1972) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:2560–2560](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L2560-L2560) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:4312–4312](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L4312-L4312) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3217–3217](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3217-L3217) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3267–3267](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3267-L3267) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3670–3670](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3670-L3670) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2649–2649](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2649-L2649) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4301–4301](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4301-L4301) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4643–4643](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4643-L4643) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2472–2472](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2472-L2472) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5504–5504](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5504-L5504) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5527–5527](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5527-L5527) | CReviewShotNameFormatter.ToMatrixName | False |
-| [Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs#L17-L17) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:260–260](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L260-L260) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:696–696](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L696-L696) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:714–714](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L714-L714) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L132-L132) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.Common/Review/CReviewManager.cs:732–732](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L732-L732) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.Common/Review/CReviewManager.cs:1801–1801](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1801-L1801) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L91-L91) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:614–614](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.cs#L614-L614) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:835–835](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.cs#L835-L835) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1055–1055](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.cs#L1055-L1055) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1179–1179](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.cs#L1179-L1179) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1297–1297](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.cs#L1297-L1297) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.cs:1343–1343](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.cs#L1343-L1343) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:282–282](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L282-L282) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1007–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1007-L1007) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L191-L191) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L314-L314) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L489-L489) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:756–756](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L756-L756) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L313-L313) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2558–2558](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2558-L2558) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3202–3202](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3202-L3202) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5875–5875](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5875-L5875) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6942–6942](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6942-L6942) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7242–7242](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7242-L7242) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7813–7813](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7813-L7813) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1972–1972](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L1972-L1972) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:2560–2560](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L2560-L2560) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:4312–4312](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L4312-L4312) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3244–3244](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3244-L3244) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3294–3294](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3294-L3294) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3697–3697](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3697-L3697) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2649–2649](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2649-L2649) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4301–4301](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4301-L4301) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4643–4643](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4643-L4643) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2472–2472](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2472-L2472) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5504–5504](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5504-L5504) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5527–5527](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5527-L5527) | CReviewShotNameFormatter.ToMatrixName | False |
+| [Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs#L17-L17) | CReviewShotNameFormatter.ToMatrixName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18740,7 +18740,7 @@ flowchart TD
 
 ### MethodDeclaration `ToColumnLetters` · L4150–4162
 
-[Drilling.Common/Review/CReviewManager.cs:4150–4162](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4150-L4162)
+[Drilling.Common/Review/CReviewManager.cs:4150–4162](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4150-L4162)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18759,7 +18759,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:4147–4147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4147-L4147) | ToColumnLetters | False |
+| [Drilling.Common/Review/CReviewManager.cs:4147–4147](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4147-L4147) | ToColumnLetters | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18794,7 +18794,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCellPoints` · L4175–4201
 
-[Drilling.Common/Review/CReviewManager.cs:4175–4201](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4175-L4201)
+[Drilling.Common/Review/CReviewManager.cs:4175–4201](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4175-L4201)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18813,18 +18813,18 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L353-L353) | allPlan.GetCellPoints | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2005–2005](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2005-L2005) | plan.GetCellPoints | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2033–2033](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2033-L2033) | plan.GetCellPoints | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2034–2034](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2034-L2034) | plan.GetCellPoints | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2062–2062](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2062-L2062) | allPlan.GetCellPoints | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2122–2122](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2122-L2122) | allPlan.GetCellPoints | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2253–2253](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L2253-L2253) | allPlan.GetCellPoints | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3231–3231](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3231-L3231) | .GetCellPoints | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3333–3333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3333-L3333) | .GetCellPoints | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3821–3821](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L3821-L3821) | _lastAllPlan.GetCellPoints | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:4878–4878](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L4878-L4878) | .GetCellPoints | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:5337–5337](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L5337-L5337) | plan.GetCellPoints | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L353-L353) | allPlan.GetCellPoints | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2005–2005](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2005-L2005) | plan.GetCellPoints | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2033–2033](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2033-L2033) | plan.GetCellPoints | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2034–2034](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2034-L2034) | plan.GetCellPoints | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2062–2062](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2062-L2062) | allPlan.GetCellPoints | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2122–2122](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2122-L2122) | allPlan.GetCellPoints | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2253–2253](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L2253-L2253) | allPlan.GetCellPoints | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3231–3231](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3231-L3231) | .GetCellPoints | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3333–3333](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3333-L3333) | .GetCellPoints | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3821–3821](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L3821-L3821) | _lastAllPlan.GetCellPoints | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4878–4878](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L4878-L4878) | .GetCellPoints | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:5337–5337](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L5337-L5337) | plan.GetCellPoints | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18884,7 +18884,7 @@ flowchart TD
 
 ### MethodDeclaration `FindPoint` · L4203–4222
 
-[Drilling.Common/Review/CReviewManager.cs:4203–4222](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4203-L4222)
+[Drilling.Common/Review/CReviewManager.cs:4203–4222](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4203-L4222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18904,11 +18904,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L102-L102) | allPlan.FindPoint | False |
-| [Drilling.Common/Review/CReviewManager.cs:1404–1404](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1404-L1404) | allPlan.FindPoint | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:459–459](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L459-L459) | plan.FindPoint | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:628–628](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L628-L628) | allPlan.FindPoint | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1868–1868](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuReview.cs#L1868-L1868) | plan.FindPoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L102-L102) | allPlan.FindPoint | False |
+| [Drilling.Common/Review/CReviewManager.cs:1404–1404](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1404-L1404) | allPlan.FindPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:459–459](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L459-L459) | plan.FindPoint | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:628–628](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L628-L628) | allPlan.FindPoint | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1868–1868](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuReview.cs#L1868-L1868) | plan.FindPoint | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18954,7 +18954,7 @@ flowchart TD
 
 ### PropertyDeclaration `CorrectionPlan` · L4224–4224
 
-[Drilling.Common/Review/CReviewManager.cs:4224–4224](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4224-L4224)
+[Drilling.Common/Review/CReviewManager.cs:4224–4224](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4224-L4224)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18969,7 +18969,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CorrectionPlan` · L4224–4224
 
-[Drilling.Common/Review/CReviewManager.cs:4224–4224](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4224-L4224)
+[Drilling.Common/Review/CReviewManager.cs:4224–4224](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4224-L4224)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18984,7 +18984,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_CorrectionPlan` · L4224–4224
 
-[Drilling.Common/Review/CReviewManager.cs:4224–4224](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4224-L4224)
+[Drilling.Common/Review/CReviewManager.cs:4224–4224](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4224-L4224)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19005,7 +19005,7 @@ flowchart TD
 
 ### PropertyDeclaration `InspectionMethod` · L4225–4225
 
-[Drilling.Common/Review/CReviewManager.cs:4225–4225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4225-L4225)
+[Drilling.Common/Review/CReviewManager.cs:4225–4225](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4225-L4225)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19020,7 +19020,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_InspectionMethod` · L4225–4225
 
-[Drilling.Common/Review/CReviewManager.cs:4225–4225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4225-L4225)
+[Drilling.Common/Review/CReviewManager.cs:4225–4225](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4225-L4225)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19035,7 +19035,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_InspectionMethod` · L4225–4225
 
-[Drilling.Common/Review/CReviewManager.cs:4225–4225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4225-L4225)
+[Drilling.Common/Review/CReviewManager.cs:4225–4225](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4225-L4225)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19056,7 +19056,7 @@ flowchart TD
 
 ### PropertyDeclaration `ResultType` · L4226–4226
 
-[Drilling.Common/Review/CReviewManager.cs:4226–4226](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4226-L4226)
+[Drilling.Common/Review/CReviewManager.cs:4226–4226](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4226-L4226)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19071,7 +19071,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ResultType` · L4226–4226
 
-[Drilling.Common/Review/CReviewManager.cs:4226–4226](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4226-L4226)
+[Drilling.Common/Review/CReviewManager.cs:4226–4226](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4226-L4226)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19086,7 +19086,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ResultType` · L4226–4226
 
-[Drilling.Common/Review/CReviewManager.cs:4226–4226](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4226-L4226)
+[Drilling.Common/Review/CReviewManager.cs:4226–4226](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4226-L4226)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19107,7 +19107,7 @@ flowchart TD
 
 ### PropertyDeclaration `StageScanDirectionY` · L4227–4227
 
-[Drilling.Common/Review/CReviewManager.cs:4227–4227](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4227-L4227)
+[Drilling.Common/Review/CReviewManager.cs:4227–4227](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4227-L4227)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19122,7 +19122,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_StageScanDirectionY` · L4227–4227
 
-[Drilling.Common/Review/CReviewManager.cs:4227–4227](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4227-L4227)
+[Drilling.Common/Review/CReviewManager.cs:4227–4227](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4227-L4227)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19137,7 +19137,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_StageScanDirectionY` · L4227–4227
 
-[Drilling.Common/Review/CReviewManager.cs:4227–4227](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4227-L4227)
+[Drilling.Common/Review/CReviewManager.cs:4227–4227](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4227-L4227)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19158,7 +19158,7 @@ flowchart TD
 
 ### PropertyDeclaration `StageSpeed` · L4228–4228
 
-[Drilling.Common/Review/CReviewManager.cs:4228–4228](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4228-L4228)
+[Drilling.Common/Review/CReviewManager.cs:4228–4228](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4228-L4228)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19173,7 +19173,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_StageSpeed` · L4228–4228
 
-[Drilling.Common/Review/CReviewManager.cs:4228–4228](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4228-L4228)
+[Drilling.Common/Review/CReviewManager.cs:4228–4228](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4228-L4228)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19188,7 +19188,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_StageSpeed` · L4228–4228
 
-[Drilling.Common/Review/CReviewManager.cs:4228–4228](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4228-L4228)
+[Drilling.Common/Review/CReviewManager.cs:4228–4228](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4228-L4228)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19209,7 +19209,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShiftOffsetX` · L4229–4229
 
-[Drilling.Common/Review/CReviewManager.cs:4229–4229](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4229-L4229)
+[Drilling.Common/Review/CReviewManager.cs:4229–4229](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4229-L4229)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19224,7 +19224,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ShiftOffsetX` · L4229–4229
 
-[Drilling.Common/Review/CReviewManager.cs:4229–4229](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4229-L4229)
+[Drilling.Common/Review/CReviewManager.cs:4229–4229](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4229-L4229)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19239,7 +19239,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ShiftOffsetX` · L4229–4229
 
-[Drilling.Common/Review/CReviewManager.cs:4229–4229](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4229-L4229)
+[Drilling.Common/Review/CReviewManager.cs:4229–4229](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4229-L4229)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19260,7 +19260,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShiftOffsetY` · L4230–4230
 
-[Drilling.Common/Review/CReviewManager.cs:4230–4230](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4230-L4230)
+[Drilling.Common/Review/CReviewManager.cs:4230–4230](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4230-L4230)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19275,7 +19275,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ShiftOffsetY` · L4230–4230
 
-[Drilling.Common/Review/CReviewManager.cs:4230–4230](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4230-L4230)
+[Drilling.Common/Review/CReviewManager.cs:4230–4230](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4230-L4230)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19290,7 +19290,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ShiftOffsetY` · L4230–4230
 
-[Drilling.Common/Review/CReviewManager.cs:4230–4230](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4230-L4230)
+[Drilling.Common/Review/CReviewManager.cs:4230–4230](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4230-L4230)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19311,7 +19311,7 @@ flowchart TD
 
 ### FieldDeclaration `ReviewPointCaches` · L4232–4232
 
-[Drilling.Common/Review/CReviewManager.cs:4232–4232](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4232-L4232)
+[Drilling.Common/Review/CReviewManager.cs:4232–4232](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4232-L4232)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19339,7 +19339,7 @@ flowchart TD
 
 ### PropertyDeclaration `ReviewPointCache` · L4233–4233
 
-[Drilling.Common/Review/CReviewManager.cs:4233–4233](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4233-L4233)
+[Drilling.Common/Review/CReviewManager.cs:4233–4233](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4233-L4233)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19368,7 +19368,7 @@ flowchart TD
 
 ### PropertyDeclaration `ReviewPoints` · L4234–4234
 
-[Drilling.Common/Review/CReviewManager.cs:4234–4234](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4234-L4234)
+[Drilling.Common/Review/CReviewManager.cs:4234–4234](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4234-L4234)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19389,7 +19389,7 @@ flowchart TD
 
 ### PropertyDeclaration `RuntimeId` · L4237–4237
 
-[Drilling.Common/Review/CReviewManager.cs:4237–4237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4237-L4237)
+[Drilling.Common/Review/CReviewManager.cs:4237–4237](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4237-L4237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19404,7 +19404,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_RuntimeId` · L4237–4237
 
-[Drilling.Common/Review/CReviewManager.cs:4237–4237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4237-L4237)
+[Drilling.Common/Review/CReviewManager.cs:4237–4237](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4237-L4237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19419,7 +19419,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_RuntimeId` · L4237–4237
 
-[Drilling.Common/Review/CReviewManager.cs:4237–4237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4237-L4237)
+[Drilling.Common/Review/CReviewManager.cs:4237–4237](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4237-L4237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19440,7 +19440,7 @@ flowchart TD
 
 ### PropertyDeclaration `PointUpdates` · L4238–4238
 
-[Drilling.Common/Review/CReviewManager.cs:4238–4238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4238-L4238)
+[Drilling.Common/Review/CReviewManager.cs:4238–4238](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4238-L4238)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19455,7 +19455,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_PointUpdates` · L4238–4238
 
-[Drilling.Common/Review/CReviewManager.cs:4238–4238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4238-L4238)
+[Drilling.Common/Review/CReviewManager.cs:4238–4238](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4238-L4238)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19470,7 +19470,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_PointUpdates` · L4238–4238
 
-[Drilling.Common/Review/CReviewManager.cs:4238–4238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4238-L4238)
+[Drilling.Common/Review/CReviewManager.cs:4238–4238](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4238-L4238)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19491,7 +19491,7 @@ flowchart TD
 
 ### PropertyDeclaration `ReviewPoints` · L4242–4242
 
-[Drilling.Common/Review/CReviewManager.cs:4242–4242](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4242-L4242)
+[Drilling.Common/Review/CReviewManager.cs:4242–4242](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4242-L4242)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19523,7 +19523,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ReviewPoints` · L4242–4242
 
-[Drilling.Common/Review/CReviewManager.cs:4242–4242](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4242-L4242)
+[Drilling.Common/Review/CReviewManager.cs:4242–4242](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4242-L4242)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19538,7 +19538,7 @@ flowchart TD
 
 ### PropertyDeclaration `ResultStatus` · L4255–4255
 
-[Drilling.Common/Review/CReviewManager.cs:4255–4255](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4255-L4255)
+[Drilling.Common/Review/CReviewManager.cs:4255–4255](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4255-L4255)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19553,7 +19553,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ResultStatus` · L4255–4255
 
-[Drilling.Common/Review/CReviewManager.cs:4255–4255](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4255-L4255)
+[Drilling.Common/Review/CReviewManager.cs:4255–4255](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4255-L4255)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19568,7 +19568,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ResultStatus` · L4255–4255
 
-[Drilling.Common/Review/CReviewManager.cs:4255–4255](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4255-L4255)
+[Drilling.Common/Review/CReviewManager.cs:4255–4255](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4255-L4255)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19589,7 +19589,7 @@ flowchart TD
 
 ### PropertyDeclaration `TotalCount` · L4256–4256
 
-[Drilling.Common/Review/CReviewManager.cs:4256–4256](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4256-L4256)
+[Drilling.Common/Review/CReviewManager.cs:4256–4256](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4256-L4256)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19604,7 +19604,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_TotalCount` · L4256–4256
 
-[Drilling.Common/Review/CReviewManager.cs:4256–4256](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4256-L4256)
+[Drilling.Common/Review/CReviewManager.cs:4256–4256](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4256-L4256)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19619,7 +19619,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_TotalCount` · L4256–4256
 
-[Drilling.Common/Review/CReviewManager.cs:4256–4256](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4256-L4256)
+[Drilling.Common/Review/CReviewManager.cs:4256–4256](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4256-L4256)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19640,7 +19640,7 @@ flowchart TD
 
 ### PropertyDeclaration `TargetFilePath` · L4257–4257
 
-[Drilling.Common/Review/CReviewManager.cs:4257–4257](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4257-L4257)
+[Drilling.Common/Review/CReviewManager.cs:4257–4257](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4257-L4257)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19655,7 +19655,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_TargetFilePath` · L4257–4257
 
-[Drilling.Common/Review/CReviewManager.cs:4257–4257](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4257-L4257)
+[Drilling.Common/Review/CReviewManager.cs:4257–4257](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4257-L4257)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19670,7 +19670,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_TargetFilePath` · L4257–4257
 
-[Drilling.Common/Review/CReviewManager.cs:4257–4257](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4257-L4257)
+[Drilling.Common/Review/CReviewManager.cs:4257–4257](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4257-L4257)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19691,7 +19691,7 @@ flowchart TD
 
 ### PropertyDeclaration `BeamNo` · L4262–4262
 
-[Drilling.Common/Review/CReviewManager.cs:4262–4262](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4262-L4262)
+[Drilling.Common/Review/CReviewManager.cs:4262–4262](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4262-L4262)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19706,7 +19706,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_BeamNo` · L4262–4262
 
-[Drilling.Common/Review/CReviewManager.cs:4262–4262](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4262-L4262)
+[Drilling.Common/Review/CReviewManager.cs:4262–4262](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4262-L4262)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19721,7 +19721,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_BeamNo` · L4262–4262
 
-[Drilling.Common/Review/CReviewManager.cs:4262–4262](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4262-L4262)
+[Drilling.Common/Review/CReviewManager.cs:4262–4262](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4262-L4262)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19742,7 +19742,7 @@ flowchart TD
 
 ### PropertyDeclaration `GroupColumn` · L4263–4263
 
-[Drilling.Common/Review/CReviewManager.cs:4263–4263](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4263-L4263)
+[Drilling.Common/Review/CReviewManager.cs:4263–4263](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4263-L4263)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19757,7 +19757,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_GroupColumn` · L4263–4263
 
-[Drilling.Common/Review/CReviewManager.cs:4263–4263](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4263-L4263)
+[Drilling.Common/Review/CReviewManager.cs:4263–4263](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4263-L4263)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19772,7 +19772,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_GroupColumn` · L4263–4263
 
-[Drilling.Common/Review/CReviewManager.cs:4263–4263](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4263-L4263)
+[Drilling.Common/Review/CReviewManager.cs:4263–4263](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4263-L4263)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19793,7 +19793,7 @@ flowchart TD
 
 ### PropertyDeclaration `GroupRow` · L4264–4264
 
-[Drilling.Common/Review/CReviewManager.cs:4264–4264](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4264-L4264)
+[Drilling.Common/Review/CReviewManager.cs:4264–4264](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4264-L4264)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19808,7 +19808,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_GroupRow` · L4264–4264
 
-[Drilling.Common/Review/CReviewManager.cs:4264–4264](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4264-L4264)
+[Drilling.Common/Review/CReviewManager.cs:4264–4264](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4264-L4264)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19823,7 +19823,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_GroupRow` · L4264–4264
 
-[Drilling.Common/Review/CReviewManager.cs:4264–4264](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4264-L4264)
+[Drilling.Common/Review/CReviewManager.cs:4264–4264](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4264-L4264)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19844,7 +19844,7 @@ flowchart TD
 
 ### PropertyDeclaration `DesignX` · L4265–4265
 
-[Drilling.Common/Review/CReviewManager.cs:4265–4265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4265-L4265)
+[Drilling.Common/Review/CReviewManager.cs:4265–4265](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4265-L4265)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19859,7 +19859,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DesignX` · L4265–4265
 
-[Drilling.Common/Review/CReviewManager.cs:4265–4265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4265-L4265)
+[Drilling.Common/Review/CReviewManager.cs:4265–4265](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4265-L4265)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19874,7 +19874,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_DesignX` · L4265–4265
 
-[Drilling.Common/Review/CReviewManager.cs:4265–4265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4265-L4265)
+[Drilling.Common/Review/CReviewManager.cs:4265–4265](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4265-L4265)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19895,7 +19895,7 @@ flowchart TD
 
 ### PropertyDeclaration `DesignY` · L4266–4266
 
-[Drilling.Common/Review/CReviewManager.cs:4266–4266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4266-L4266)
+[Drilling.Common/Review/CReviewManager.cs:4266–4266](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4266-L4266)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19910,7 +19910,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DesignY` · L4266–4266
 
-[Drilling.Common/Review/CReviewManager.cs:4266–4266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4266-L4266)
+[Drilling.Common/Review/CReviewManager.cs:4266–4266](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4266-L4266)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19925,7 +19925,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_DesignY` · L4266–4266
 
-[Drilling.Common/Review/CReviewManager.cs:4266–4266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4266-L4266)
+[Drilling.Common/Review/CReviewManager.cs:4266–4266](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4266-L4266)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19946,7 +19946,7 @@ flowchart TD
 
 ### PropertyDeclaration `ResultSource` · L4267–4267
 
-[Drilling.Common/Review/CReviewManager.cs:4267–4267](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4267-L4267)
+[Drilling.Common/Review/CReviewManager.cs:4267–4267](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4267-L4267)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19961,7 +19961,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ResultSource` · L4267–4267
 
-[Drilling.Common/Review/CReviewManager.cs:4267–4267](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4267-L4267)
+[Drilling.Common/Review/CReviewManager.cs:4267–4267](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4267-L4267)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19976,7 +19976,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ResultSource` · L4267–4267
 
-[Drilling.Common/Review/CReviewManager.cs:4267–4267](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4267-L4267)
+[Drilling.Common/Review/CReviewManager.cs:4267–4267](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4267-L4267)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19997,7 +19997,7 @@ flowchart TD
 
 ### PropertyDeclaration `VisionResultCode` · L4268–4268
 
-[Drilling.Common/Review/CReviewManager.cs:4268–4268](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4268-L4268)
+[Drilling.Common/Review/CReviewManager.cs:4268–4268](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4268-L4268)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20012,7 +20012,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_VisionResultCode` · L4268–4268
 
-[Drilling.Common/Review/CReviewManager.cs:4268–4268](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4268-L4268)
+[Drilling.Common/Review/CReviewManager.cs:4268–4268](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4268-L4268)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20027,7 +20027,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_VisionResultCode` · L4268–4268
 
-[Drilling.Common/Review/CReviewManager.cs:4268–4268](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4268-L4268)
+[Drilling.Common/Review/CReviewManager.cs:4268–4268](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4268-L4268)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20048,7 +20048,7 @@ flowchart TD
 
 ### PropertyDeclaration `NgReason` · L4269–4269
 
-[Drilling.Common/Review/CReviewManager.cs:4269–4269](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4269-L4269)
+[Drilling.Common/Review/CReviewManager.cs:4269–4269](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4269-L4269)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20063,7 +20063,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_NgReason` · L4269–4269
 
-[Drilling.Common/Review/CReviewManager.cs:4269–4269](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4269-L4269)
+[Drilling.Common/Review/CReviewManager.cs:4269–4269](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4269-L4269)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20078,7 +20078,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_NgReason` · L4269–4269
 
-[Drilling.Common/Review/CReviewManager.cs:4269–4269](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4269-L4269)
+[Drilling.Common/Review/CReviewManager.cs:4269–4269](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4269-L4269)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20099,7 +20099,7 @@ flowchart TD
 
 ### PropertyDeclaration `GlassId` · L4273–4273
 
-[Drilling.Common/Review/CReviewManager.cs:4273–4273](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4273-L4273)
+[Drilling.Common/Review/CReviewManager.cs:4273–4273](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4273-L4273)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20114,7 +20114,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_GlassId` · L4273–4273
 
-[Drilling.Common/Review/CReviewManager.cs:4273–4273](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4273-L4273)
+[Drilling.Common/Review/CReviewManager.cs:4273–4273](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4273-L4273)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20129,7 +20129,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_GlassId` · L4273–4273
 
-[Drilling.Common/Review/CReviewManager.cs:4273–4273](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4273-L4273)
+[Drilling.Common/Review/CReviewManager.cs:4273–4273](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4273-L4273)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20150,7 +20150,7 @@ flowchart TD
 
 ### PropertyDeclaration `InspectionMethod` · L4274–4274
 
-[Drilling.Common/Review/CReviewManager.cs:4274–4274](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4274-L4274)
+[Drilling.Common/Review/CReviewManager.cs:4274–4274](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4274-L4274)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20165,7 +20165,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_InspectionMethod` · L4274–4274
 
-[Drilling.Common/Review/CReviewManager.cs:4274–4274](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4274-L4274)
+[Drilling.Common/Review/CReviewManager.cs:4274–4274](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4274-L4274)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20180,7 +20180,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_InspectionMethod` · L4274–4274
 
-[Drilling.Common/Review/CReviewManager.cs:4274–4274](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4274-L4274)
+[Drilling.Common/Review/CReviewManager.cs:4274–4274](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4274-L4274)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20201,7 +20201,7 @@ flowchart TD
 
 ### PropertyDeclaration `RunType` · L4275–4275
 
-[Drilling.Common/Review/CReviewManager.cs:4275–4275](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4275-L4275)
+[Drilling.Common/Review/CReviewManager.cs:4275–4275](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4275-L4275)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20216,7 +20216,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_RunType` · L4275–4275
 
-[Drilling.Common/Review/CReviewManager.cs:4275–4275](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4275-L4275)
+[Drilling.Common/Review/CReviewManager.cs:4275–4275](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4275-L4275)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20231,7 +20231,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_RunType` · L4275–4275
 
-[Drilling.Common/Review/CReviewManager.cs:4275–4275](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4275-L4275)
+[Drilling.Common/Review/CReviewManager.cs:4275–4275](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4275-L4275)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20252,7 +20252,7 @@ flowchart TD
 
 ### PropertyDeclaration `Rule` · L4276–4276
 
-[Drilling.Common/Review/CReviewManager.cs:4276–4276](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4276-L4276)
+[Drilling.Common/Review/CReviewManager.cs:4276–4276](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4276-L4276)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20267,7 +20267,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Rule` · L4276–4276
 
-[Drilling.Common/Review/CReviewManager.cs:4276–4276](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4276-L4276)
+[Drilling.Common/Review/CReviewManager.cs:4276–4276](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4276-L4276)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20282,7 +20282,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_Rule` · L4276–4276
 
-[Drilling.Common/Review/CReviewManager.cs:4276–4276](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4276-L4276)
+[Drilling.Common/Review/CReviewManager.cs:4276–4276](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4276-L4276)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20303,7 +20303,7 @@ flowchart TD
 
 ### PropertyDeclaration `RuleScope` · L4277–4277
 
-[Drilling.Common/Review/CReviewManager.cs:4277–4277](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4277-L4277)
+[Drilling.Common/Review/CReviewManager.cs:4277–4277](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4277-L4277)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20318,7 +20318,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_RuleScope` · L4277–4277
 
-[Drilling.Common/Review/CReviewManager.cs:4277–4277](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4277-L4277)
+[Drilling.Common/Review/CReviewManager.cs:4277–4277](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4277-L4277)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20333,7 +20333,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_RuleScope` · L4277–4277
 
-[Drilling.Common/Review/CReviewManager.cs:4277–4277](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4277-L4277)
+[Drilling.Common/Review/CReviewManager.cs:4277–4277](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4277-L4277)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20354,7 +20354,7 @@ flowchart TD
 
 ### PropertyDeclaration `BeamNo` · L4278–4278
 
-[Drilling.Common/Review/CReviewManager.cs:4278–4278](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4278-L4278)
+[Drilling.Common/Review/CReviewManager.cs:4278–4278](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4278-L4278)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20369,7 +20369,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_BeamNo` · L4278–4278
 
-[Drilling.Common/Review/CReviewManager.cs:4278–4278](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4278-L4278)
+[Drilling.Common/Review/CReviewManager.cs:4278–4278](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4278-L4278)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20384,7 +20384,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_BeamNo` · L4278–4278
 
-[Drilling.Common/Review/CReviewManager.cs:4278–4278](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4278-L4278)
+[Drilling.Common/Review/CReviewManager.cs:4278–4278](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4278-L4278)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20405,7 +20405,7 @@ flowchart TD
 
 ### PropertyDeclaration `ReferenceCellNo` · L4279–4279
 
-[Drilling.Common/Review/CReviewManager.cs:4279–4279](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4279-L4279)
+[Drilling.Common/Review/CReviewManager.cs:4279–4279](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4279-L4279)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20420,7 +20420,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ReferenceCellNo` · L4279–4279
 
-[Drilling.Common/Review/CReviewManager.cs:4279–4279](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4279-L4279)
+[Drilling.Common/Review/CReviewManager.cs:4279–4279](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4279-L4279)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20435,7 +20435,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ReferenceCellNo` · L4279–4279
 
-[Drilling.Common/Review/CReviewManager.cs:4279–4279](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4279-L4279)
+[Drilling.Common/Review/CReviewManager.cs:4279–4279](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4279-L4279)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20456,7 +20456,7 @@ flowchart TD
 
 ### PropertyDeclaration `ReferenceShot` · L4280–4280
 
-[Drilling.Common/Review/CReviewManager.cs:4280–4280](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4280-L4280)
+[Drilling.Common/Review/CReviewManager.cs:4280–4280](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4280-L4280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20471,7 +20471,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ReferenceShot` · L4280–4280
 
-[Drilling.Common/Review/CReviewManager.cs:4280–4280](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4280-L4280)
+[Drilling.Common/Review/CReviewManager.cs:4280–4280](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4280-L4280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20486,7 +20486,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ReferenceShot` · L4280–4280
 
-[Drilling.Common/Review/CReviewManager.cs:4280–4280](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4280-L4280)
+[Drilling.Common/Review/CReviewManager.cs:4280–4280](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4280-L4280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20507,7 +20507,7 @@ flowchart TD
 
 ### PropertyDeclaration `RoughReference` · L4281–4281
 
-[Drilling.Common/Review/CReviewManager.cs:4281–4281](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4281-L4281)
+[Drilling.Common/Review/CReviewManager.cs:4281–4281](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4281-L4281)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20522,7 +20522,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_RoughReference` · L4281–4281
 
-[Drilling.Common/Review/CReviewManager.cs:4281–4281](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4281-L4281)
+[Drilling.Common/Review/CReviewManager.cs:4281–4281](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4281-L4281)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20537,7 +20537,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_RoughReference` · L4281–4281
 
-[Drilling.Common/Review/CReviewManager.cs:4281–4281](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4281-L4281)
+[Drilling.Common/Review/CReviewManager.cs:4281–4281](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4281-L4281)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20558,7 +20558,7 @@ flowchart TD
 
 ### PropertyDeclaration `FineLineCount` · L4282–4282
 
-[Drilling.Common/Review/CReviewManager.cs:4282–4282](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4282-L4282)
+[Drilling.Common/Review/CReviewManager.cs:4282–4282](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4282-L4282)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20573,7 +20573,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_FineLineCount` · L4282–4282
 
-[Drilling.Common/Review/CReviewManager.cs:4282–4282](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4282-L4282)
+[Drilling.Common/Review/CReviewManager.cs:4282–4282](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4282-L4282)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20588,7 +20588,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_FineLineCount` · L4282–4282
 
-[Drilling.Common/Review/CReviewManager.cs:4282–4282](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4282-L4282)
+[Drilling.Common/Review/CReviewManager.cs:4282–4282](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4282-L4282)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20609,7 +20609,7 @@ flowchart TD
 
 ### PropertyDeclaration `Origin` · L4283–4283
 
-[Drilling.Common/Review/CReviewManager.cs:4283–4283](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4283-L4283)
+[Drilling.Common/Review/CReviewManager.cs:4283–4283](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4283-L4283)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20624,7 +20624,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Origin` · L4283–4283
 
-[Drilling.Common/Review/CReviewManager.cs:4283–4283](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4283-L4283)
+[Drilling.Common/Review/CReviewManager.cs:4283–4283](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4283-L4283)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20639,7 +20639,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_Origin` · L4283–4283
 
-[Drilling.Common/Review/CReviewManager.cs:4283–4283](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4283-L4283)
+[Drilling.Common/Review/CReviewManager.cs:4283–4283](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4283-L4283)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20660,7 +20660,7 @@ flowchart TD
 
 ### PropertyDeclaration `LineCount` · L4284–4284
 
-[Drilling.Common/Review/CReviewManager.cs:4284–4284](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4284-L4284)
+[Drilling.Common/Review/CReviewManager.cs:4284–4284](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4284-L4284)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20675,7 +20675,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_LineCount` · L4284–4284
 
-[Drilling.Common/Review/CReviewManager.cs:4284–4284](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4284-L4284)
+[Drilling.Common/Review/CReviewManager.cs:4284–4284](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4284-L4284)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20690,7 +20690,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_LineCount` · L4284–4284
 
-[Drilling.Common/Review/CReviewManager.cs:4284–4284](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4284-L4284)
+[Drilling.Common/Review/CReviewManager.cs:4284–4284](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4284-L4284)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20711,7 +20711,7 @@ flowchart TD
 
 ### PropertyDeclaration `ResultStatus` · L4285–4285
 
-[Drilling.Common/Review/CReviewManager.cs:4285–4285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4285-L4285)
+[Drilling.Common/Review/CReviewManager.cs:4285–4285](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4285-L4285)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20726,7 +20726,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ResultStatus` · L4285–4285
 
-[Drilling.Common/Review/CReviewManager.cs:4285–4285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4285-L4285)
+[Drilling.Common/Review/CReviewManager.cs:4285–4285](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4285-L4285)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20741,7 +20741,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ResultStatus` · L4285–4285
 
-[Drilling.Common/Review/CReviewManager.cs:4285–4285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4285-L4285)
+[Drilling.Common/Review/CReviewManager.cs:4285–4285](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4285-L4285)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20762,7 +20762,7 @@ flowchart TD
 
 ### PropertyDeclaration `TotalCount` · L4286–4286
 
-[Drilling.Common/Review/CReviewManager.cs:4286–4286](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4286-L4286)
+[Drilling.Common/Review/CReviewManager.cs:4286–4286](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4286-L4286)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20777,7 +20777,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_TotalCount` · L4286–4286
 
-[Drilling.Common/Review/CReviewManager.cs:4286–4286](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4286-L4286)
+[Drilling.Common/Review/CReviewManager.cs:4286–4286](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4286-L4286)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20792,7 +20792,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_TotalCount` · L4286–4286
 
-[Drilling.Common/Review/CReviewManager.cs:4286–4286](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4286-L4286)
+[Drilling.Common/Review/CReviewManager.cs:4286–4286](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4286-L4286)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20813,7 +20813,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShiftOffsetX` · L4287–4287
 
-[Drilling.Common/Review/CReviewManager.cs:4287–4287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4287-L4287)
+[Drilling.Common/Review/CReviewManager.cs:4287–4287](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4287-L4287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20828,7 +20828,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ShiftOffsetX` · L4287–4287
 
-[Drilling.Common/Review/CReviewManager.cs:4287–4287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4287-L4287)
+[Drilling.Common/Review/CReviewManager.cs:4287–4287](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4287-L4287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20843,7 +20843,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ShiftOffsetX` · L4287–4287
 
-[Drilling.Common/Review/CReviewManager.cs:4287–4287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4287-L4287)
+[Drilling.Common/Review/CReviewManager.cs:4287–4287](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4287-L4287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20864,7 +20864,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShiftOffsetY` · L4288–4288
 
-[Drilling.Common/Review/CReviewManager.cs:4288–4288](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4288-L4288)
+[Drilling.Common/Review/CReviewManager.cs:4288–4288](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4288-L4288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20879,7 +20879,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ShiftOffsetY` · L4288–4288
 
-[Drilling.Common/Review/CReviewManager.cs:4288–4288](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4288-L4288)
+[Drilling.Common/Review/CReviewManager.cs:4288–4288](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4288-L4288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20894,7 +20894,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ShiftOffsetY` · L4288–4288
 
-[Drilling.Common/Review/CReviewManager.cs:4288–4288](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4288-L4288)
+[Drilling.Common/Review/CReviewManager.cs:4288–4288](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4288-L4288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20915,7 +20915,7 @@ flowchart TD
 
 ### PropertyDeclaration `RootPath` · L4314–4314
 
-[Drilling.Common/Review/CReviewManager.cs:4314–4314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4314-L4314)
+[Drilling.Common/Review/CReviewManager.cs:4314–4314](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4314-L4314)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20930,7 +20930,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_RootPath` · L4314–4314
 
-[Drilling.Common/Review/CReviewManager.cs:4314–4314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4314-L4314)
+[Drilling.Common/Review/CReviewManager.cs:4314–4314](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4314-L4314)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20945,7 +20945,7 @@ flowchart TD
 
 ### MethodDeclaration `Load` · L4316–4316
 
-[Drilling.Common/Review/CReviewManager.cs:4316–4316](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4316-L4316)
+[Drilling.Common/Review/CReviewManager.cs:4316–4316](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4316-L4316)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20967,7 +20967,7 @@ flowchart TD
 
 ### MethodDeclaration `Save` · L4317–4317
 
-[Drilling.Common/Review/CReviewManager.cs:4317–4317](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4317-L4317)
+[Drilling.Common/Review/CReviewManager.cs:4317–4317](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4317-L4317)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20989,7 +20989,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveZeroLine` · L4339–4339
 
-[Drilling.Common/Review/CReviewManager.cs:4339–4339](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4339-L4339)
+[Drilling.Common/Review/CReviewManager.cs:4339–4339](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4339-L4339)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21009,7 +21009,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3521–3521](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3521-L3521) | reviewResultFile.SaveZeroLine | True |
+| [Drilling.Common/Review/CReviewManager.cs:3521–3521](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3521-L3521) | reviewResultFile.SaveZeroLine | True |
 
 호출하는 대상과 해석 범위:
 
@@ -21028,7 +21028,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveFineCorrection` · L4340–4340
 
-[Drilling.Common/Review/CReviewManager.cs:4340–4340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4340-L4340)
+[Drilling.Common/Review/CReviewManager.cs:4340–4340](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4340-L4340)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21048,7 +21048,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3098–3098](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3098-L3098) | reviewResultFile.SaveFineCorrection | True |
+| [Drilling.Common/Review/CReviewManager.cs:3098–3098](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3098-L3098) | reviewResultFile.SaveFineCorrection | True |
 
 호출하는 대상과 해석 범위:
 
@@ -21067,7 +21067,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveRoughCorrection` · L4341–4341
 
-[Drilling.Common/Review/CReviewManager.cs:4341–4341](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4341-L4341)
+[Drilling.Common/Review/CReviewManager.cs:4341–4341](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4341-L4341)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21087,7 +21087,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3488–3488](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3488-L3488) | reviewResultFile.SaveRoughCorrection | True |
+| [Drilling.Common/Review/CReviewManager.cs:3488–3488](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3488-L3488) | reviewResultFile.SaveRoughCorrection | True |
 
 호출하는 대상과 해석 범위:
 
@@ -21106,7 +21106,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveOneShot` · L4342–4342
 
-[Drilling.Common/Review/CReviewManager.cs:4342–4342](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4342-L4342)
+[Drilling.Common/Review/CReviewManager.cs:4342–4342](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4342-L4342)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21126,7 +21126,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:3307–3307](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3307-L3307) | reviewResultFile.SaveOneShot | True |
+| [Drilling.Common/Review/CReviewManager.cs:3307–3307](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3307-L3307) | reviewResultFile.SaveOneShot | True |
 
 호출하는 대상과 해석 범위:
 
@@ -21145,7 +21145,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadLastBeamInspection` · L4343–4343
 
-[Drilling.Common/Review/CReviewManager.cs:4343–4343](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4343-L4343)
+[Drilling.Common/Review/CReviewManager.cs:4343–4343](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4343-L4343)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21164,7 +21164,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1573–1573](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1573-L1573) | reviewResultFile.LoadLastBeamInspection | True |
+| [Drilling.Common/Review/CReviewManager.cs:1573–1573](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1573-L1573) | reviewResultFile.LoadLastBeamInspection | True |
 
 호출하는 대상과 해석 범위:
 
@@ -21183,7 +21183,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveBeamInspection` · L4344–4344
 
-[Drilling.Common/Review/CReviewManager.cs:4344–4344](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4344-L4344)
+[Drilling.Common/Review/CReviewManager.cs:4344–4344](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4344-L4344)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21205,7 +21205,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1489–1489](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1489-L1489) | reviewResultFile.SaveBeamInspection | True |
+| [Drilling.Common/Review/CReviewManager.cs:1489–1489](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1489-L1489) | reviewResultFile.SaveBeamInspection | True |
 
 호출하는 대상과 해석 범위:
 
@@ -21224,7 +21224,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveReinspectionRevision` · L4345–4345
 
-[Drilling.Common/Review/CReviewManager.cs:4345–4345](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4345-L4345)
+[Drilling.Common/Review/CReviewManager.cs:4345–4345](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4345-L4345)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21246,7 +21246,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:390–394](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L390-L394) | _reviewResultFile.SaveReinspectionRevision | True |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:390–394](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L390-L394) | _reviewResultFile.SaveReinspectionRevision | True |
 
 호출하는 대상과 해석 범위:
 
@@ -21265,7 +21265,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveEditedRevision` · L4346–4346
 
-[Drilling.Common/Review/CReviewManager.cs:4346–4346](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4346-L4346)
+[Drilling.Common/Review/CReviewManager.cs:4346–4346](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4346-L4346)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21287,7 +21287,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:487–491](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L487-L491) | _reviewResultFile.SaveEditedRevision | True |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:487–491](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L487-L491) | _reviewResultFile.SaveEditedRevision | True |
 
 호출하는 대상과 해석 범위:
 
@@ -21306,7 +21306,7 @@ flowchart TD
 
 ### PropertyDeclaration `RootPath` · L4347–4347
 
-[Drilling.Common/Review/CReviewManager.cs:4347–4347](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4347-L4347)
+[Drilling.Common/Review/CReviewManager.cs:4347–4347](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4347-L4347)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21321,7 +21321,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_RootPath` · L4347–4347
 
-[Drilling.Common/Review/CReviewManager.cs:4347–4347](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4347-L4347)
+[Drilling.Common/Review/CReviewManager.cs:4347–4347](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4347-L4347)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21336,7 +21336,7 @@ flowchart TD
 
 ### PropertyDeclaration `SearchRootPaths` · L4348–4348
 
-[Drilling.Common/Review/CReviewManager.cs:4348–4348](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4348-L4348)
+[Drilling.Common/Review/CReviewManager.cs:4348–4348](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4348-L4348)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21351,7 +21351,7 @@ flowchart TD
 
 ### PropertyDeclaration `LastSavedPath` · L4349–4349
 
-[Drilling.Common/Review/CReviewManager.cs:4349–4349](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4349-L4349)
+[Drilling.Common/Review/CReviewManager.cs:4349–4349](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4349-L4349)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21366,7 +21366,7 @@ flowchart TD
 
 ### MethodDeclaration `ListCorrectionResults` · L4350–4351
 
-[Drilling.Common/Review/CReviewManager.cs:4350–4351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4350-L4351)
+[Drilling.Common/Review/CReviewManager.cs:4350–4351](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4350-L4351)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21385,8 +21385,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1582–1582](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1582-L1582) | reviewResultFile.ListCorrectionResults | True |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs:279–279](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L279-L279) | _reviewResultFile.ListCorrectionResults | True |
+| [Drilling.Common/Review/CReviewManager.cs:1582–1582](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1582-L1582) | reviewResultFile.ListCorrectionResults | True |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs:279–279](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L279-L279) | _reviewResultFile.ListCorrectionResults | True |
 
 호출하는 대상과 해석 범위:
 
@@ -21404,7 +21404,7 @@ flowchart TD
 
 ### MethodDeclaration `Load` · L4353–4353
 
-[Drilling.Common/Review/CReviewManager.cs:4353–4353](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4353-L4353)
+[Drilling.Common/Review/CReviewManager.cs:4353–4353](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4353-L4353)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21424,15 +21424,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1589–1589](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1589-L1589) | reviewResultFile.Load | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:179–179](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L179-L179) | _reviewResultFile.Load | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1486–1486](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1486-L1486) | _reviewResultFile.Load | False |
+| [Drilling.Common/Review/CReviewManager.cs:1589–1589](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1589-L1589) | reviewResultFile.Load | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:179–179](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L179-L179) | _reviewResultFile.Load | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1486–1486](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1486-L1486) | _reviewResultFile.Load | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `Save` · L4354–4354
 
-[Drilling.Common/Review/CReviewManager.cs:4354–4354](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4354-L4354)
+[Drilling.Common/Review/CReviewManager.cs:4354–4354](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4354-L4354)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21452,13 +21452,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1617–1617](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1617-L1617) | reviewResultFile.Save | False |
+| [Drilling.Common/Review/CReviewManager.cs:1617–1617](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1617-L1617) | reviewResultFile.Save | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### PropertyDeclaration `IsDesignCoordinate` · L4360–4360
 
-[Drilling.Common/Review/CReviewManager.cs:4360–4360](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4360-L4360)
+[Drilling.Common/Review/CReviewManager.cs:4360–4360](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4360-L4360)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21473,7 +21473,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsDesignCoordinate` · L4360–4360
 
-[Drilling.Common/Review/CReviewManager.cs:4360–4360](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4360-L4360)
+[Drilling.Common/Review/CReviewManager.cs:4360–4360](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4360-L4360)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21488,7 +21488,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_IsDesignCoordinate` · L4360–4360
 
-[Drilling.Common/Review/CReviewManager.cs:4360–4360](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4360-L4360)
+[Drilling.Common/Review/CReviewManager.cs:4360–4360](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4360-L4360)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21509,7 +21509,7 @@ flowchart TD
 
 ### MethodDeclaration `Empty` · L4365–4368
 
-[Drilling.Common/Review/CReviewManager.cs:4365–4368](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4365-L4368)
+[Drilling.Common/Review/CReviewManager.cs:4365–4368](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4365-L4368)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21528,11 +21528,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L94-L94) | ST_REVIEW_OFFSET_FILE_DATA.Empty | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L100-L100) | ST_REVIEW_OFFSET_FILE_DATA.Empty | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L106-L106) | ST_REVIEW_OFFSET_FILE_DATA.Empty | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L308-L308) | ST_REVIEW_OFFSET_FILE_DATA.Empty | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L479-L479) | ST_REVIEW_OFFSET_FILE_DATA.Empty | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L94-L94) | ST_REVIEW_OFFSET_FILE_DATA.Empty | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L100-L100) | ST_REVIEW_OFFSET_FILE_DATA.Empty | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L106-L106) | ST_REVIEW_OFFSET_FILE_DATA.Empty | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L308-L308) | ST_REVIEW_OFFSET_FILE_DATA.Empty | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L479-L479) | ST_REVIEW_OFFSET_FILE_DATA.Empty | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21551,7 +21551,7 @@ flowchart TD
 
 ### PropertyDeclaration `ExistingApplication` · L4390–4390
 
-[Drilling.Common/Review/CReviewManager.cs:4390–4390](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4390-L4390)
+[Drilling.Common/Review/CReviewManager.cs:4390–4390](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4390-L4390)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21566,7 +21566,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ExistingApplication` · L4390–4390
 
-[Drilling.Common/Review/CReviewManager.cs:4390–4390](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4390-L4390)
+[Drilling.Common/Review/CReviewManager.cs:4390–4390](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4390-L4390)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21581,7 +21581,7 @@ flowchart TD
 
 ### PropertyDeclaration `RootPath` · L4395–4395
 
-[Drilling.Common/Review/CReviewManager.cs:4395–4395](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4395-L4395)
+[Drilling.Common/Review/CReviewManager.cs:4395–4395](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4395-L4395)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21596,7 +21596,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_RootPath` · L4395–4395
 
-[Drilling.Common/Review/CReviewManager.cs:4395–4395](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4395-L4395)
+[Drilling.Common/Review/CReviewManager.cs:4395–4395](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4395-L4395)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21611,7 +21611,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadLatest` · L4397–4397
 
-[Drilling.Common/Review/CReviewManager.cs:4397–4397](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4397-L4397)
+[Drilling.Common/Review/CReviewManager.cs:4397–4397](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4397-L4397)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21631,31 +21631,31 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L124-L124) | offsets.LoadLatest | False |
-| [Drilling.Common/Station/CStationProcess.cs:1560–1560](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1560-L1560) | _reviewOffsetFile.LoadLatest | False |
-| [Drilling.Common/Station/CStationProcess.cs:1595–1595](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1595-L1595) | _reviewOffsetFile.LoadLatest | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L99-L99) | _reviewOffsetFile.LoadLatest | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L115-L115) | _reviewOffsetFile.LoadLatest | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L175-L175) | _reviewOffsetFile.LoadLatest | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L229-L229) | _reviewOffsetFile.LoadLatest | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:480–480](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L480-L480) | _reviewOffsetFile.LoadLatest | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:734–734](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L734-L734) | _reviewOffsetFile.LoadLatest | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1603–1603](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1603-L1603) | _reviewOffsetFile.LoadLatest | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1835–1835](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1835-L1835) | _reviewOffsetFile.LoadLatest | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1921–1921](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1921-L1921) | _reviewOffsetFile.LoadLatest | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3195–3195](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3195-L3195) | _reviewOffsetFile.LoadLatest | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4100–4100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4100-L4100) | _reviewOffsetFile.LoadLatest | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4191–4191](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4191-L4191) | _reviewOffsetFile.LoadLatest | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4213–4213](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4213-L4213) | _reviewOffsetFile.LoadLatest | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4287–4287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4287-L4287) | _reviewOffsetFile.LoadLatest | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4310–4310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4310-L4310) | _reviewOffsetFile.LoadLatest | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3110–3110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3110-L3110) | _reviewOffsetFile.LoadLatest | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L124-L124) | offsets.LoadLatest | False |
+| [Drilling.Common/Station/CStationProcess.cs:1560–1560](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Station/CStationProcess.cs#L1560-L1560) | _reviewOffsetFile.LoadLatest | False |
+| [Drilling.Common/Station/CStationProcess.cs:1595–1595](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Station/CStationProcess.cs#L1595-L1595) | _reviewOffsetFile.LoadLatest | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L99-L99) | _reviewOffsetFile.LoadLatest | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L115-L115) | _reviewOffsetFile.LoadLatest | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L175-L175) | _reviewOffsetFile.LoadLatest | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L229-L229) | _reviewOffsetFile.LoadLatest | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:480–480](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L480-L480) | _reviewOffsetFile.LoadLatest | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:734–734](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L734-L734) | _reviewOffsetFile.LoadLatest | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1603–1603](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1603-L1603) | _reviewOffsetFile.LoadLatest | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1835–1835](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1835-L1835) | _reviewOffsetFile.LoadLatest | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1921–1921](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1921-L1921) | _reviewOffsetFile.LoadLatest | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3195–3195](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3195-L3195) | _reviewOffsetFile.LoadLatest | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4100–4100](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4100-L4100) | _reviewOffsetFile.LoadLatest | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4191–4191](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4191-L4191) | _reviewOffsetFile.LoadLatest | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4213–4213](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4213-L4213) | _reviewOffsetFile.LoadLatest | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4287–4287](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4287-L4287) | _reviewOffsetFile.LoadLatest | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4310–4310](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4310-L4310) | _reviewOffsetFile.LoadLatest | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3137–3137](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3137-L3137) | _reviewOffsetFile.LoadLatest | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `SaveNew` · L4398–4398
 
-[Drilling.Common/Review/CReviewManager.cs:4398–4398](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4398-L4398)
+[Drilling.Common/Review/CReviewManager.cs:4398–4398](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4398-L4398)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21676,16 +21676,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:198–200](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L198-L200) | _reviewOffsetFile.SaveNew | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3218–3218](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3218-L3218) | _reviewOffsetFile.SaveNew | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4123–4123](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4123-L4123) | _reviewOffsetFile.SaveNew | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4323–4323](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4323-L4323) | _reviewOffsetFile.SaveNew | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:198–200](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L198-L200) | _reviewOffsetFile.SaveNew | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3218–3218](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3218-L3218) | _reviewOffsetFile.SaveNew | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4123–4123](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4123-L4123) | _reviewOffsetFile.SaveNew | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4323–4323](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4323-L4323) | _reviewOffsetFile.SaveNew | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `FindSourceApplication` · L4399–4402
 
-[Drilling.Common/Review/CReviewManager.cs:4399–4402](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4399-L4402)
+[Drilling.Common/Review/CReviewManager.cs:4399–4402](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4399-L4402)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21706,13 +21706,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2414–2416](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2414-L2416) | _reviewOffsetFile.FindSourceApplication | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2414–2416](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2414-L2416) | _reviewOffsetFile.FindSourceApplication | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `SaveNewFromSource` · L4403–4408
 
-[Drilling.Common/Review/CReviewManager.cs:4403–4408](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4403-L4408)
+[Drilling.Common/Review/CReviewManager.cs:4403–4408](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4403-L4408)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21735,15 +21735,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:146–151](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L146-L151) | offsets.SaveNewFromSource | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2430–2434](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2430-L2434) | _reviewOffsetFile.SaveNewFromSource | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2444–2448](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2444-L2448) | _reviewOffsetFile.SaveNewFromSource | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:146–151](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L146-L151) | offsets.SaveNewFromSource | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2430–2434](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2430-L2434) | _reviewOffsetFile.SaveNewFromSource | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2444–2448](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2444-L2448) | _reviewOffsetFile.SaveNewFromSource | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `RollbackLatest` · L4409–4412
 
-[Drilling.Common/Review/CReviewManager.cs:4409–4412](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4409-L4412)
+[Drilling.Common/Review/CReviewManager.cs:4409–4412](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4409-L4412)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21764,13 +21764,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4212–4212](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4212-L4212) | _reviewOffsetFile.RollbackLatest | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4212–4212](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4212-L4212) | _reviewOffsetFile.RollbackLatest | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### PropertyDeclaration `CurrentPlan` · L4417–4417
 
-[Drilling.Common/Review/CReviewManager.cs:4417–4417](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4417-L4417)
+[Drilling.Common/Review/CReviewManager.cs:4417–4417](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4417-L4417)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21785,7 +21785,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CurrentPlan` · L4417–4417
 
-[Drilling.Common/Review/CReviewManager.cs:4417–4417](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4417-L4417)
+[Drilling.Common/Review/CReviewManager.cs:4417–4417](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4417-L4417)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21800,7 +21800,7 @@ flowchart TD
 
 ### PropertyDeclaration `CurrentPoint` · L4419–4419
 
-[Drilling.Common/Review/CReviewManager.cs:4419–4419](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4419-L4419)
+[Drilling.Common/Review/CReviewManager.cs:4419–4419](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4419-L4419)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21815,7 +21815,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CurrentPoint` · L4419–4419
 
-[Drilling.Common/Review/CReviewManager.cs:4419–4419](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4419-L4419)
+[Drilling.Common/Review/CReviewManager.cs:4419–4419](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4419-L4419)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21830,7 +21830,7 @@ flowchart TD
 
 ### PropertyDeclaration `LastMeasuredPoint` · L4421–4421
 
-[Drilling.Common/Review/CReviewManager.cs:4421–4421](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4421-L4421)
+[Drilling.Common/Review/CReviewManager.cs:4421–4421](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4421-L4421)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21845,7 +21845,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_LastMeasuredPoint` · L4421–4421
 
-[Drilling.Common/Review/CReviewManager.cs:4421–4421](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4421-L4421)
+[Drilling.Common/Review/CReviewManager.cs:4421–4421](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4421-L4421)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21860,7 +21860,7 @@ flowchart TD
 
 ### PropertyDeclaration `SequenceState` · L4423–4423
 
-[Drilling.Common/Review/CReviewManager.cs:4423–4423](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4423-L4423)
+[Drilling.Common/Review/CReviewManager.cs:4423–4423](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4423-L4423)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21875,7 +21875,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SequenceState` · L4423–4423
 
-[Drilling.Common/Review/CReviewManager.cs:4423–4423](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4423-L4423)
+[Drilling.Common/Review/CReviewManager.cs:4423–4423](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4423-L4423)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21890,7 +21890,7 @@ flowchart TD
 
 ### MethodDeclaration `CreatePlan` · L4425–4425
 
-[Drilling.Common/Review/CReviewManager.cs:4425–4425](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4425-L4425)
+[Drilling.Common/Review/CReviewManager.cs:4425–4425](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4425-L4425)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21912,7 +21912,7 @@ flowchart TD
 
 ### MethodDeclaration `CreatePlan` · L4426–4426
 
-[Drilling.Common/Review/CReviewManager.cs:4426–4426](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4426-L4426)
+[Drilling.Common/Review/CReviewManager.cs:4426–4426](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4426-L4426)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21935,7 +21935,7 @@ flowchart TD
 
 ### MethodDeclaration `CreatePlan` · L4427–4427
 
-[Drilling.Common/Review/CReviewManager.cs:4427–4427](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4427-L4427)
+[Drilling.Common/Review/CReviewManager.cs:4427–4427](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4427-L4427)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21960,7 +21960,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateAllPlan` · L4428–4428
 
-[Drilling.Common/Review/CReviewManager.cs:4428–4428](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4428-L4428)
+[Drilling.Common/Review/CReviewManager.cs:4428–4428](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4428-L4428)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21982,7 +21982,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateAllPlan` · L4429–4429
 
-[Drilling.Common/Review/CReviewManager.cs:4429–4429](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4429-L4429)
+[Drilling.Common/Review/CReviewManager.cs:4429–4429](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4429-L4429)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22006,7 +22006,7 @@ flowchart TD
 
 ### MethodDeclaration `Start` · L4430–4430
 
-[Drilling.Common/Review/CReviewManager.cs:4430–4430](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4430-L4430)
+[Drilling.Common/Review/CReviewManager.cs:4430–4430](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4430-L4430)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22030,7 +22030,7 @@ flowchart TD
 
 ### MethodDeclaration `Stop` · L4431–4431
 
-[Drilling.Common/Review/CReviewManager.cs:4431–4431](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4431-L4431)
+[Drilling.Common/Review/CReviewManager.cs:4431–4431](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4431-L4431)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22045,7 +22045,7 @@ flowchart TD
 
 ### MethodDeclaration `RetryRemaining` · L4432–4432
 
-[Drilling.Common/Review/CReviewManager.cs:4432–4432](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4432-L4432)
+[Drilling.Common/Review/CReviewManager.cs:4432–4432](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4432-L4432)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22067,7 +22067,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Flying` · L4437–4437
 
-[Drilling.Common/Review/CReviewManager.cs:4437–4437](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4437-L4437)
+[Drilling.Common/Review/CReviewManager.cs:4437–4437](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4437-L4437)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22082,7 +22082,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `PtoP` · L4438–4438
 
-[Drilling.Common/Review/CReviewManager.cs:4438–4438](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4438-L4438)
+[Drilling.Common/Review/CReviewManager.cs:4438–4438](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4438-L4438)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22097,7 +22097,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Wait` · L4443–4443
 
-[Drilling.Common/Review/CReviewManager.cs:4443–4443](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4443-L4443)
+[Drilling.Common/Review/CReviewManager.cs:4443–4443](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4443-L4443)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22112,7 +22112,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Running` · L4444–4444
 
-[Drilling.Common/Review/CReviewManager.cs:4444–4444](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4444-L4444)
+[Drilling.Common/Review/CReviewManager.cs:4444–4444](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4444-L4444)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22127,7 +22127,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Complete` · L4445–4445
 
-[Drilling.Common/Review/CReviewManager.cs:4445–4445](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4445-L4445)
+[Drilling.Common/Review/CReviewManager.cs:4445–4445](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4445-L4445)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22142,7 +22142,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Ng` · L4446–4446
 
-[Drilling.Common/Review/CReviewManager.cs:4446–4446](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4446-L4446)
+[Drilling.Common/Review/CReviewManager.cs:4446–4446](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4446-L4446)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22157,7 +22157,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Error` · L4447–4447
 
-[Drilling.Common/Review/CReviewManager.cs:4447–4447](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4447-L4447)
+[Drilling.Common/Review/CReviewManager.cs:4447–4447](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4447-L4447)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22172,7 +22172,7 @@ flowchart TD
 
 ### PropertyDeclaration `Context` · L4453–4453
 
-[Drilling.Common/Review/CReviewManager.cs:4453–4453](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4453-L4453)
+[Drilling.Common/Review/CReviewManager.cs:4453–4453](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4453-L4453)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22187,7 +22187,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Context` · L4453–4453
 
-[Drilling.Common/Review/CReviewManager.cs:4453–4453](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4453-L4453)
+[Drilling.Common/Review/CReviewManager.cs:4453–4453](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4453-L4453)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22202,7 +22202,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_Context` · L4453–4453
 
-[Drilling.Common/Review/CReviewManager.cs:4453–4453](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4453-L4453)
+[Drilling.Common/Review/CReviewManager.cs:4453–4453](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4453-L4453)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22223,7 +22223,7 @@ flowchart TD
 
 ### PropertyDeclaration `StopOnNgLine` · L4454–4454
 
-[Drilling.Common/Review/CReviewManager.cs:4454–4454](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4454-L4454)
+[Drilling.Common/Review/CReviewManager.cs:4454–4454](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4454-L4454)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22238,7 +22238,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_StopOnNgLine` · L4454–4454
 
-[Drilling.Common/Review/CReviewManager.cs:4454–4454](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4454-L4454)
+[Drilling.Common/Review/CReviewManager.cs:4454–4454](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4454-L4454)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22253,7 +22253,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_StopOnNgLine` · L4454–4454
 
-[Drilling.Common/Review/CReviewManager.cs:4454–4454](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4454-L4454)
+[Drilling.Common/Review/CReviewManager.cs:4454–4454](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4454-L4454)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22274,7 +22274,7 @@ flowchart TD
 
 ### PropertyDeclaration `PreparedMonitorRunId` · L4455–4455
 
-[Drilling.Common/Review/CReviewManager.cs:4455–4455](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4455-L4455)
+[Drilling.Common/Review/CReviewManager.cs:4455–4455](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4455-L4455)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22289,7 +22289,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_PreparedMonitorRunId` · L4455–4455
 
-[Drilling.Common/Review/CReviewManager.cs:4455–4455](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4455-L4455)
+[Drilling.Common/Review/CReviewManager.cs:4455–4455](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4455-L4455)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22304,7 +22304,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_PreparedMonitorRunId` · L4455–4455
 
-[Drilling.Common/Review/CReviewManager.cs:4455–4455](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4455-L4455)
+[Drilling.Common/Review/CReviewManager.cs:4455–4455](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4455-L4455)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22325,7 +22325,7 @@ flowchart TD
 
 ### PropertyDeclaration `CountMismatchRetries` · L4456–4456
 
-[Drilling.Common/Review/CReviewManager.cs:4456–4456](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4456-L4456)
+[Drilling.Common/Review/CReviewManager.cs:4456–4456](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4456-L4456)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22340,7 +22340,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CountMismatchRetries` · L4456–4456
 
-[Drilling.Common/Review/CReviewManager.cs:4456–4456](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4456-L4456)
+[Drilling.Common/Review/CReviewManager.cs:4456–4456](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4456-L4456)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22355,7 +22355,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_CountMismatchRetries` · L4456–4456
 
-[Drilling.Common/Review/CReviewManager.cs:4456–4456](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4456-L4456)
+[Drilling.Common/Review/CReviewManager.cs:4456–4456](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4456-L4456)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22376,7 +22376,7 @@ flowchart TD
 
 ### PropertyDeclaration `ImmediateRetry` · L4458–4458
 
-[Drilling.Common/Review/CReviewManager.cs:4458–4458](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4458-L4458)
+[Drilling.Common/Review/CReviewManager.cs:4458–4458](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4458-L4458)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22391,7 +22391,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ImmediateRetry` · L4458–4458
 
-[Drilling.Common/Review/CReviewManager.cs:4458–4458](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4458-L4458)
+[Drilling.Common/Review/CReviewManager.cs:4458–4458](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4458-L4458)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22406,7 +22406,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ImmediateRetry` · L4458–4458
 
-[Drilling.Common/Review/CReviewManager.cs:4458–4458](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4458-L4458)
+[Drilling.Common/Review/CReviewManager.cs:4458–4458](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4458-L4458)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22427,7 +22427,7 @@ flowchart TD
 
 ### PropertyDeclaration `RunId` · L4463–4463
 
-[Drilling.Common/Review/CReviewManager.cs:4463–4463](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4463-L4463)
+[Drilling.Common/Review/CReviewManager.cs:4463–4463](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4463-L4463)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22442,7 +22442,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_RunId` · L4463–4463
 
-[Drilling.Common/Review/CReviewManager.cs:4463–4463](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4463-L4463)
+[Drilling.Common/Review/CReviewManager.cs:4463–4463](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4463-L4463)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22457,7 +22457,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_RunId` · L4463–4463
 
-[Drilling.Common/Review/CReviewManager.cs:4463–4463](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4463-L4463)
+[Drilling.Common/Review/CReviewManager.cs:4463–4463](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4463-L4463)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22478,7 +22478,7 @@ flowchart TD
 
 ### PropertyDeclaration `ResultFilePath` · L4464–4464
 
-[Drilling.Common/Review/CReviewManager.cs:4464–4464](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4464-L4464)
+[Drilling.Common/Review/CReviewManager.cs:4464–4464](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4464-L4464)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22493,7 +22493,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ResultFilePath` · L4464–4464
 
-[Drilling.Common/Review/CReviewManager.cs:4464–4464](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4464-L4464)
+[Drilling.Common/Review/CReviewManager.cs:4464–4464](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4464-L4464)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22508,7 +22508,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ResultFilePath` · L4464–4464
 
-[Drilling.Common/Review/CReviewManager.cs:4464–4464](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4464-L4464)
+[Drilling.Common/Review/CReviewManager.cs:4464–4464](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4464-L4464)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22529,7 +22529,7 @@ flowchart TD
 
 ### PropertyDeclaration `ResultSaveError` · L4465–4465
 
-[Drilling.Common/Review/CReviewManager.cs:4465–4465](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4465-L4465)
+[Drilling.Common/Review/CReviewManager.cs:4465–4465](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4465-L4465)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22544,7 +22544,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ResultSaveError` · L4465–4465
 
-[Drilling.Common/Review/CReviewManager.cs:4465–4465](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4465-L4465)
+[Drilling.Common/Review/CReviewManager.cs:4465–4465](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4465-L4465)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22559,7 +22559,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ResultSaveError` · L4465–4465
 
-[Drilling.Common/Review/CReviewManager.cs:4465–4465](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4465-L4465)
+[Drilling.Common/Review/CReviewManager.cs:4465–4465](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4465-L4465)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22580,7 +22580,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsStageSimulation` · L4470–4470
 
-[Drilling.Common/Review/CReviewManager.cs:4470–4470](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4470-L4470)
+[Drilling.Common/Review/CReviewManager.cs:4470–4470](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4470-L4470)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22595,7 +22595,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsStageSimulation` · L4470–4470
 
-[Drilling.Common/Review/CReviewManager.cs:4470–4470](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4470-L4470)
+[Drilling.Common/Review/CReviewManager.cs:4470–4470](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4470-L4470)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22610,7 +22610,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_IsStageSimulation` · L4470–4470
 
-[Drilling.Common/Review/CReviewManager.cs:4470–4470](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4470-L4470)
+[Drilling.Common/Review/CReviewManager.cs:4470–4470](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4470-L4470)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22631,7 +22631,7 @@ flowchart TD
 
 ### PropertyDeclaration `GlassId` · L4471–4471
 
-[Drilling.Common/Review/CReviewManager.cs:4471–4471](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4471-L4471)
+[Drilling.Common/Review/CReviewManager.cs:4471–4471](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4471-L4471)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22646,7 +22646,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_GlassId` · L4471–4471
 
-[Drilling.Common/Review/CReviewManager.cs:4471–4471](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4471-L4471)
+[Drilling.Common/Review/CReviewManager.cs:4471–4471](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4471-L4471)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22661,7 +22661,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_GlassId` · L4471–4471
 
-[Drilling.Common/Review/CReviewManager.cs:4471–4471](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4471-L4471)
+[Drilling.Common/Review/CReviewManager.cs:4471–4471](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4471-L4471)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22682,7 +22682,7 @@ flowchart TD
 
 ### PropertyDeclaration `CaptureAttempts` · L4472–4472
 
-[Drilling.Common/Review/CReviewManager.cs:4472–4472](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4472-L4472)
+[Drilling.Common/Review/CReviewManager.cs:4472–4472](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4472-L4472)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22709,7 +22709,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CaptureAttempts` · L4472–4472
 
-[Drilling.Common/Review/CReviewManager.cs:4472–4472](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4472-L4472)
+[Drilling.Common/Review/CReviewManager.cs:4472–4472](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4472-L4472)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22724,7 +22724,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_CaptureAttempts` · L4472–4472
 
-[Drilling.Common/Review/CReviewManager.cs:4472–4472](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4472-L4472)
+[Drilling.Common/Review/CReviewManager.cs:4472–4472](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4472-L4472)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22745,7 +22745,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Move` · L4477–4477
 
-[Drilling.Common/Review/CReviewManager.cs:4477–4477](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4477-L4477)
+[Drilling.Common/Review/CReviewManager.cs:4477–4477](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4477-L4477)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22760,7 +22760,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Inspection` · L4478–4478
 
-[Drilling.Common/Review/CReviewManager.cs:4478–4478](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4478-L4478)
+[Drilling.Common/Review/CReviewManager.cs:4478–4478](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4478-L4478)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22775,7 +22775,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `MoveAndInspection` · L4479–4479
 
-[Drilling.Common/Review/CReviewManager.cs:4479–4479](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4479-L4479)
+[Drilling.Common/Review/CReviewManager.cs:4479–4479](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4479-L4479)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22790,7 +22790,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `MarkFindSingle` · L4484–4484
 
-[Drilling.Common/Review/CReviewManager.cs:4484–4484](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4484-L4484)
+[Drilling.Common/Review/CReviewManager.cs:4484–4484](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4484-L4484)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22805,7 +22805,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `MarkFindSettingSingle` · L4485–4485
 
-[Drilling.Common/Review/CReviewManager.cs:4485–4485](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4485-L4485)
+[Drilling.Common/Review/CReviewManager.cs:4485–4485](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4485-L4485)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22820,7 +22820,7 @@ flowchart TD
 
 ### PropertyDeclaration `Resolution` · L4490–4490
 
-[Drilling.Common/Review/CReviewManager.cs:4490–4490](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4490-L4490)
+[Drilling.Common/Review/CReviewManager.cs:4490–4490](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4490-L4490)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22835,7 +22835,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Resolution` · L4490–4490
 
-[Drilling.Common/Review/CReviewManager.cs:4490–4490](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4490-L4490)
+[Drilling.Common/Review/CReviewManager.cs:4490–4490](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4490-L4490)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22850,7 +22850,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_Resolution` · L4490–4490
 
-[Drilling.Common/Review/CReviewManager.cs:4490–4490](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4490-L4490)
+[Drilling.Common/Review/CReviewManager.cs:4490–4490](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4490-L4490)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22871,7 +22871,7 @@ flowchart TD
 
 ### PropertyDeclaration `CameraResolution` · L4491–4491
 
-[Drilling.Common/Review/CReviewManager.cs:4491–4491](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4491-L4491)
+[Drilling.Common/Review/CReviewManager.cs:4491–4491](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4491-L4491)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22886,7 +22886,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CameraResolution` · L4491–4491
 
-[Drilling.Common/Review/CReviewManager.cs:4491–4491](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4491-L4491)
+[Drilling.Common/Review/CReviewManager.cs:4491–4491](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4491-L4491)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22901,7 +22901,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_CameraResolution` · L4491–4491
 
-[Drilling.Common/Review/CReviewManager.cs:4491–4491](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4491-L4491)
+[Drilling.Common/Review/CReviewManager.cs:4491–4491](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4491-L4491)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22922,7 +22922,7 @@ flowchart TD
 
 ### PropertyDeclaration `ResultFilePath` · L4492–4492
 
-[Drilling.Common/Review/CReviewManager.cs:4492–4492](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4492-L4492)
+[Drilling.Common/Review/CReviewManager.cs:4492–4492](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4492-L4492)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22937,7 +22937,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ResultFilePath` · L4492–4492
 
-[Drilling.Common/Review/CReviewManager.cs:4492–4492](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4492-L4492)
+[Drilling.Common/Review/CReviewManager.cs:4492–4492](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4492-L4492)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22952,7 +22952,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ResultFilePath` · L4492–4492
 
-[Drilling.Common/Review/CReviewManager.cs:4492–4492](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4492-L4492)
+[Drilling.Common/Review/CReviewManager.cs:4492–4492](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4492-L4492)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22973,7 +22973,7 @@ flowchart TD
 
 ### PropertyDeclaration `ResultSaveError` · L4493–4493
 
-[Drilling.Common/Review/CReviewManager.cs:4493–4493](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4493-L4493)
+[Drilling.Common/Review/CReviewManager.cs:4493–4493](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4493-L4493)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22988,7 +22988,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ResultSaveError` · L4493–4493
 
-[Drilling.Common/Review/CReviewManager.cs:4493–4493](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4493-L4493)
+[Drilling.Common/Review/CReviewManager.cs:4493–4493](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4493-L4493)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23003,7 +23003,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ResultSaveError` · L4493–4493
 
-[Drilling.Common/Review/CReviewManager.cs:4493–4493](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4493-L4493)
+[Drilling.Common/Review/CReviewManager.cs:4493–4493](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4493-L4493)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23024,7 +23024,7 @@ flowchart TD
 
 ### PropertyDeclaration `ResultFilePath` · L4498–4498
 
-[Drilling.Common/Review/CReviewManager.cs:4498–4498](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4498-L4498)
+[Drilling.Common/Review/CReviewManager.cs:4498–4498](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4498-L4498)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23039,7 +23039,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ResultFilePath` · L4498–4498
 
-[Drilling.Common/Review/CReviewManager.cs:4498–4498](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4498-L4498)
+[Drilling.Common/Review/CReviewManager.cs:4498–4498](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4498-L4498)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23054,7 +23054,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ResultFilePath` · L4498–4498
 
-[Drilling.Common/Review/CReviewManager.cs:4498–4498](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4498-L4498)
+[Drilling.Common/Review/CReviewManager.cs:4498–4498](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4498-L4498)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23075,7 +23075,7 @@ flowchart TD
 
 ### PropertyDeclaration `ResultSaveError` · L4499–4499
 
-[Drilling.Common/Review/CReviewManager.cs:4499–4499](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4499-L4499)
+[Drilling.Common/Review/CReviewManager.cs:4499–4499](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4499-L4499)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23090,7 +23090,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ResultSaveError` · L4499–4499
 
-[Drilling.Common/Review/CReviewManager.cs:4499–4499](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4499-L4499)
+[Drilling.Common/Review/CReviewManager.cs:4499–4499](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4499-L4499)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23105,7 +23105,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ResultSaveError` · L4499–4499
 
-[Drilling.Common/Review/CReviewManager.cs:4499–4499](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4499-L4499)
+[Drilling.Common/Review/CReviewManager.cs:4499–4499](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4499-L4499)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23126,7 +23126,7 @@ flowchart TD
 
 ### PropertyDeclaration `GlassId` · L4512–4512
 
-[Drilling.Common/Review/CReviewManager.cs:4512–4512](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4512-L4512)
+[Drilling.Common/Review/CReviewManager.cs:4512–4512](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4512-L4512)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23141,7 +23141,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_GlassId` · L4512–4512
 
-[Drilling.Common/Review/CReviewManager.cs:4512–4512](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4512-L4512)
+[Drilling.Common/Review/CReviewManager.cs:4512–4512](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4512-L4512)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23156,7 +23156,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_GlassId` · L4512–4512
 
-[Drilling.Common/Review/CReviewManager.cs:4512–4512](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4512-L4512)
+[Drilling.Common/Review/CReviewManager.cs:4512–4512](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4512-L4512)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23177,7 +23177,7 @@ flowchart TD
 
 ### PropertyDeclaration `Resolution` · L4517–4517
 
-[Drilling.Common/Review/CReviewManager.cs:4517–4517](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4517-L4517)
+[Drilling.Common/Review/CReviewManager.cs:4517–4517](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4517-L4517)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23192,7 +23192,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Resolution` · L4517–4517
 
-[Drilling.Common/Review/CReviewManager.cs:4517–4517](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4517-L4517)
+[Drilling.Common/Review/CReviewManager.cs:4517–4517](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4517-L4517)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23207,7 +23207,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_Resolution` · L4517–4517
 
-[Drilling.Common/Review/CReviewManager.cs:4517–4517](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4517-L4517)
+[Drilling.Common/Review/CReviewManager.cs:4517–4517](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4517-L4517)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23228,7 +23228,7 @@ flowchart TD
 
 ### MethodDeclaration `Read` · L4521–4521
 
-[Drilling.Common/Review/CReviewManager.cs:4521–4521](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4521-L4521)
+[Drilling.Common/Review/CReviewManager.cs:4521–4521](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4521-L4521)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23247,11 +23247,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2569–2569](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2569-L2569) | ST_REVIEW_MOTION_PARAMETERS.Read | False |
-| [Drilling.Common/Review/CReviewManager.cs:2680–2680](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2680-L2680) | ST_REVIEW_MOTION_PARAMETERS.Read | False |
-| [Drilling.Common/Review/CReviewManager.cs:2727–2727](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2727-L2727) | ST_REVIEW_MOTION_PARAMETERS.Read | False |
-| [Drilling.Common/Review/CReviewManager.cs:3247–3247](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3247-L3247) | ST_REVIEW_MOTION_PARAMETERS.Read | False |
-| [Drilling.Common/Review/CReviewManager.cs:3360–3360](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L3360-L3360) | ST_REVIEW_MOTION_PARAMETERS.Read | False |
+| [Drilling.Common/Review/CReviewManager.cs:2569–2569](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2569-L2569) | ST_REVIEW_MOTION_PARAMETERS.Read | False |
+| [Drilling.Common/Review/CReviewManager.cs:2680–2680](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2680-L2680) | ST_REVIEW_MOTION_PARAMETERS.Read | False |
+| [Drilling.Common/Review/CReviewManager.cs:2727–2727](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2727-L2727) | ST_REVIEW_MOTION_PARAMETERS.Read | False |
+| [Drilling.Common/Review/CReviewManager.cs:3247–3247](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3247-L3247) | ST_REVIEW_MOTION_PARAMETERS.Read | False |
+| [Drilling.Common/Review/CReviewManager.cs:3360–3360](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L3360-L3360) | ST_REVIEW_MOTION_PARAMETERS.Read | False |
 
 호출하는 대상과 해석 범위:
 
@@ -23271,7 +23271,7 @@ flowchart TD
 
 ### MethodDeclaration `Read` · L4522–4535
 
-[Drilling.Common/Review/CReviewManager.cs:4522–4535](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4522-L4535)
+[Drilling.Common/Review/CReviewManager.cs:4522–4535](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4522-L4535)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23290,10 +23290,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:4521–4521](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4521-L4521) | Read | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L29-L29) | ST_REVIEW_MOTION_PARAMETERS.Read | False |
-| [Drilling.Common/Station/CStationProcess.cs:6347–6347](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L6347-L6347) | ST_REVIEW_MOTION_PARAMETERS.Read | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3767–3767](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3767-L3767) | ST_REVIEW_MOTION_PARAMETERS.Read | False |
+| [Drilling.Common/Review/CReviewManager.cs:4521–4521](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4521-L4521) | Read | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L29-L29) | ST_REVIEW_MOTION_PARAMETERS.Read | False |
+| [Drilling.Common/Station/CStationProcess.cs:6347–6347](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Station/CStationProcess.cs#L6347-L6347) | ST_REVIEW_MOTION_PARAMETERS.Read | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3767–3767](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3767-L3767) | ST_REVIEW_MOTION_PARAMETERS.Read | False |
 
 호출하는 대상과 해석 범위:
 
@@ -23328,7 +23328,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Get` · L4525–4532
 
-[Drilling.Common/Review/CReviewManager.cs:4525–4532](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4525-L4532)
+[Drilling.Common/Review/CReviewManager.cs:4525–4532](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4525-L4532)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23348,8 +23348,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:4534–4534](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4534-L4534) | Get | False |
-| [Drilling.Common/Review/CReviewManager.cs:4534–4534](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4534-L4534) | Get | False |
+| [Drilling.Common/Review/CReviewManager.cs:4534–4534](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4534-L4534) | Get | False |
+| [Drilling.Common/Review/CReviewManager.cs:4534–4534](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4534-L4534) | Get | False |
 
 호출하는 대상과 해석 범위:
 
@@ -23389,7 +23389,7 @@ flowchart TD
 
 ### FieldDeclaration `Shots` · L4544–4544
 
-[Drilling.Common/Review/CReviewManager.cs:4544–4544](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4544-L4544)
+[Drilling.Common/Review/CReviewManager.cs:4544–4544](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4544-L4544)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23417,7 +23417,7 @@ flowchart TD
 
 ### FieldDeclaration `Positions` · L4545–4545
 
-[Drilling.Common/Review/CReviewManager.cs:4545–4545](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4545-L4545)
+[Drilling.Common/Review/CReviewManager.cs:4545–4545](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4545-L4545)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23445,7 +23445,7 @@ flowchart TD
 
 ### FieldDeclaration `Cells` · L4546–4546
 
-[Drilling.Common/Review/CReviewManager.cs:4546–4546](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4546-L4546)
+[Drilling.Common/Review/CReviewManager.cs:4546–4546](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4546-L4546)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23473,7 +23473,7 @@ flowchart TD
 
 ### FieldDeclaration `Selected` · L4547–4547
 
-[Drilling.Common/Review/CReviewManager.cs:4547–4547](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4547-L4547)
+[Drilling.Common/Review/CReviewManager.cs:4547–4547](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4547-L4547)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23488,7 +23488,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L4548–4564
 
-[Drilling.Common/Review/CReviewManager.cs:4548–4564](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4548-L4564)
+[Drilling.Common/Review/CReviewManager.cs:4548–4564](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4548-L4564)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23507,7 +23507,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:4573–4573](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4573-L4573) | new Index | False |
+| [Drilling.Common/Review/CReviewManager.cs:4573–4573](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4573-L4573) | new Index | False |
 
 호출하는 대상과 해석 범위:
 
@@ -23562,7 +23562,7 @@ flowchart TD
 
 ### FieldDeclaration `_points` · L4567–4567
 
-[Drilling.Common/Review/CReviewManager.cs:4567–4567](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4567-L4567)
+[Drilling.Common/Review/CReviewManager.cs:4567–4567](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4567-L4567)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23577,7 +23577,7 @@ flowchart TD
 
 ### FieldDeclaration `_index` · L4568–4568
 
-[Drilling.Common/Review/CReviewManager.cs:4568–4568](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4568-L4568)
+[Drilling.Common/Review/CReviewManager.cs:4568–4568](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4568-L4568)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23592,7 +23592,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedPoints` · L4569–4569
 
-[Drilling.Common/Review/CReviewManager.cs:4569–4569](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4569-L4569)
+[Drilling.Common/Review/CReviewManager.cs:4569–4569](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4569-L4569)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23607,7 +23607,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedPoints` · L4569–4569
 
-[Drilling.Common/Review/CReviewManager.cs:4569–4569](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4569-L4569)
+[Drilling.Common/Review/CReviewManager.cs:4569–4569](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4569-L4569)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23622,7 +23622,7 @@ flowchart TD
 
 ### PropertyDeclaration `Count` · L4570–4570
 
-[Drilling.Common/Review/CReviewManager.cs:4570–4570](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4570-L4570)
+[Drilling.Common/Review/CReviewManager.cs:4570–4570](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4570-L4570)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23637,7 +23637,7 @@ flowchart TD
 
 ### IndexerDeclaration `this[]` · L4572–4572
 
-[Drilling.Common/Review/CReviewManager.cs:4572–4572](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4572-L4572)
+[Drilling.Common/Review/CReviewManager.cs:4572–4572](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4572-L4572)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23658,7 +23658,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L4573–4575
 
-[Drilling.Common/Review/CReviewManager.cs:4573–4575](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4573-L4575)
+[Drilling.Common/Review/CReviewManager.cs:4573–4575](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4573-L4575)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23677,8 +23677,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1103–1103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1103-L1103) | new CReviewRuntimePoints | False |
-| [Drilling.Common/Review/CReviewManager.cs:1109–1109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1109-L1109) | new CReviewRuntimePoints | False |
+| [Drilling.Common/Review/CReviewManager.cs:1103–1103](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1103-L1103) | new CReviewRuntimePoints | False |
+| [Drilling.Common/Review/CReviewManager.cs:1109–1109](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1109-L1109) | new CReviewRuntimePoints | False |
 
 호출하는 대상과 해석 범위:
 
@@ -23698,7 +23698,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L4577–4582
 
-[Drilling.Common/Review/CReviewManager.cs:4577–4582](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4577-L4582)
+[Drilling.Common/Review/CReviewManager.cs:4577–4582](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4577-L4582)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23718,7 +23718,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:4595–4595](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4595-L4595) | new CReviewRuntimePoints | False |
+| [Drilling.Common/Review/CReviewManager.cs:4595–4595](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4595-L4595) | new CReviewRuntimePoints | False |
 
 호출하는 대상과 해석 범위:
 
@@ -23740,7 +23740,7 @@ flowchart TD
 
 ### MethodDeclaration `Update` · L4584–4596
 
-[Drilling.Common/Review/CReviewManager.cs:4584–4596](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4584-L4596)
+[Drilling.Common/Review/CReviewManager.cs:4584–4596](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4584-L4596)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23759,7 +23759,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1112–1112](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1112-L1112) | points.Update | False |
+| [Drilling.Common/Review/CReviewManager.cs:1112–1112](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1112-L1112) | points.Update | False |
 
 호출하는 대상과 해석 범위:
 
@@ -23803,7 +23803,7 @@ flowchart TD
 
 ### MethodDeclaration `Find` · L4598–4598
 
-[Drilling.Common/Review/CReviewManager.cs:4598–4598](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4598-L4598)
+[Drilling.Common/Review/CReviewManager.cs:4598–4598](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4598-L4598)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23822,7 +23822,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:2236–2236](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2236-L2236) | runtime.Find | False |
+| [Drilling.Common/Review/CReviewManager.cs:2236–2236](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2236-L2236) | runtime.Find | False |
 
 호출하는 대상과 해석 범위:
 
@@ -23841,7 +23841,7 @@ flowchart TD
 
 ### MethodDeclaration `Find` · L4599–4599
 
-[Drilling.Common/Review/CReviewManager.cs:4599–4599](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4599-L4599)
+[Drilling.Common/Review/CReviewManager.cs:4599–4599](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4599-L4599)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23861,7 +23861,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:4206–4206](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4206-L4206) | runtime.Find | False |
+| [Drilling.Common/Review/CReviewManager.cs:4206–4206](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4206-L4206) | runtime.Find | False |
 
 호출하는 대상과 해석 범위:
 
@@ -23880,7 +23880,7 @@ flowchart TD
 
 ### MethodDeclaration `Cell` · L4600–4600
 
-[Drilling.Common/Review/CReviewManager.cs:4600–4600](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4600-L4600)
+[Drilling.Common/Review/CReviewManager.cs:4600–4600](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4600-L4600)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23899,7 +23899,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:4178–4178](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4178-L4178) | runtime.Cell | False |
+| [Drilling.Common/Review/CReviewManager.cs:4178–4178](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4178-L4178) | runtime.Cell | False |
 
 호출하는 대상과 해석 범위:
 
@@ -23922,7 +23922,7 @@ flowchart TD
 
 ### MethodDeclaration `GetEnumerator` · L4601–4601
 
-[Drilling.Common/Review/CReviewManager.cs:4601–4601](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4601-L4601)
+[Drilling.Common/Review/CReviewManager.cs:4601–4601](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4601-L4601)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23935,7 +23935,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:4602–4602](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4602-L4602) | GetEnumerator | False |
+| [Drilling.Common/Review/CReviewManager.cs:4602–4602](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4602-L4602) | GetEnumerator | False |
 
 호출하는 대상과 해석 범위:
 
@@ -23953,7 +23953,7 @@ flowchart TD
 
 ### MethodDeclaration `System.Collections.IEnumerable.GetEnumerator` · L4602–4602
 
-[Drilling.Common/Review/CReviewManager.cs:4602–4602](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4602-L4602)
+[Drilling.Common/Review/CReviewManager.cs:4602–4602](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4602-L4602)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23980,7 +23980,7 @@ flowchart TD
 
 ### PropertyDeclaration `Count` · L4605–4605
 
-[Drilling.Common/Review/CReviewManager.cs:4605–4605](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4605-L4605)
+[Drilling.Common/Review/CReviewManager.cs:4605–4605](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4605-L4605)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23995,7 +23995,7 @@ flowchart TD
 
 ### IndexerDeclaration `this[]` · L4607–4607
 
-[Drilling.Common/Review/CReviewManager.cs:4607–4607](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4607-L4607)
+[Drilling.Common/Review/CReviewManager.cs:4607–4607](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4607-L4607)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24016,7 +24016,7 @@ flowchart TD
 
 ### MethodDeclaration `GetEnumerator` · L4608–4612
 
-[Drilling.Common/Review/CReviewManager.cs:4608–4612](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4608-L4612)
+[Drilling.Common/Review/CReviewManager.cs:4608–4612](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4608-L4612)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24029,7 +24029,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:4614–4614](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4614-L4614) | GetEnumerator | False |
+| [Drilling.Common/Review/CReviewManager.cs:4614–4614](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4614-L4614) | GetEnumerator | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -24051,7 +24051,7 @@ flowchart TD
 
 ### MethodDeclaration `System.Collections.IEnumerable.GetEnumerator` · L4614–4614
 
-[Drilling.Common/Review/CReviewManager.cs:4614–4614](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L4614-L4614)
+[Drilling.Common/Review/CReviewManager.cs:4614–4614](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L4614-L4614)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

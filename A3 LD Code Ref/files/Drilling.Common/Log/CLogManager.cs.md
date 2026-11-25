@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 9212676723d170166d61a6d7baeafeec6cf6b660d2ae5ef59c22de14dc2e3728 |
 | 파일 분류 | code |
 | 원본 크기/행 | 81,211 bytes / 1,562 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -192,7 +192,7 @@
 
 ### FieldDeclaration `_alarmLogRoot` · L21–21
 
-[Drilling.Common/Log/CLogManager.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L21-L21)
+[Drilling.Common/Log/CLogManager.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -207,7 +207,7 @@
 
 ### FieldDeclaration `AlarmJson` · L22–25
 
-[Drilling.Common/Log/CLogManager.cs:22–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L22-L25)
+[Drilling.Common/Log/CLogManager.cs:22–25](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L22-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -236,7 +236,7 @@
 
 ### FieldDeclaration `DefaultReadDays` · L26–26
 
-[Drilling.Common/Log/CLogManager.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L26-L26)
+[Drilling.Common/Log/CLogManager.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -257,7 +257,7 @@
 
 ### FieldDeclaration `DefaultRecipeReadRows` · L27–27
 
-[Drilling.Common/Log/CLogManager.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L27-L27)
+[Drilling.Common/Log/CLogManager.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -278,7 +278,7 @@
 
 ### FieldDeclaration `DefaultSettingReadRows` · L28–28
 
-[Drilling.Common/Log/CLogManager.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L28-L28)
+[Drilling.Common/Log/CLogManager.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -299,7 +299,7 @@
 
 ### FieldDeclaration `FileLocks` · L31–31
 
-[Drilling.Common/Log/CLogManager.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L31-L31)
+[Drilling.Common/Log/CLogManager.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -327,7 +327,7 @@
 
 ### MethodDeclaration `GetFileLock` · L32–32
 
-[Drilling.Common/Log/CLogManager.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L32-L32)
+[Drilling.Common/Log/CLogManager.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L32-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -346,9 +346,9 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:414–414](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L414-L414) | GetFileLock | False |
-| [Drilling.Common/Log/CLogManager.cs:730–730](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L730-L730) | GetFileLock | False |
-| [Drilling.Common/Log/CLogManager.cs:752–752](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L752-L752) | GetFileLock | False |
+| [Drilling.Common/Log/CLogManager.cs:414–414](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L414-L414) | GetFileLock | False |
+| [Drilling.Common/Log/CLogManager.cs:730–730](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L730-L730) | GetFileLock | False |
+| [Drilling.Common/Log/CLogManager.cs:752–752](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L752-L752) | GetFileLock | False |
 
 호출하는 대상과 해석 범위:
 
@@ -370,7 +370,7 @@
 
 ### FieldDeclaration `_recipeLogRoot` · L33–33
 
-[Drilling.Common/Log/CLogManager.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L33-L33)
+[Drilling.Common/Log/CLogManager.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -385,7 +385,7 @@
 
 ### FieldDeclaration `_settingLogRoot` · L34–34
 
-[Drilling.Common/Log/CLogManager.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L34-L34)
+[Drilling.Common/Log/CLogManager.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L34-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -400,7 +400,7 @@
 
 ### FieldDeclaration `_interfaceLogRoot` · L35–35
 
-[Drilling.Common/Log/CLogManager.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L35-L35)
+[Drilling.Common/Log/CLogManager.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L35-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -415,7 +415,7 @@
 
 ### FieldDeclaration `_stationLogRoot` · L36–36
 
-[Drilling.Common/Log/CLogManager.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L36-L36)
+[Drilling.Common/Log/CLogManager.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L36-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -430,7 +430,7 @@
 
 ### FieldDeclaration `_productLogRoot` · L37–37
 
-[Drilling.Common/Log/CLogManager.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L37-L37)
+[Drilling.Common/Log/CLogManager.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L37-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -445,7 +445,7 @@
 
 ### FieldDeclaration `_uiLogRoot` · L38–38
 
-[Drilling.Common/Log/CLogManager.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L38-L38)
+[Drilling.Common/Log/CLogManager.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -460,7 +460,7 @@
 
 ### FieldDeclaration `_pmHistoryRoot` · L39–39
 
-[Drilling.Common/Log/CLogManager.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L39-L39)
+[Drilling.Common/Log/CLogManager.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -475,7 +475,7 @@
 
 ### FieldDeclaration `_pmHistoryLock` · L40–40
 
-[Drilling.Common/Log/CLogManager.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L40-L40)
+[Drilling.Common/Log/CLogManager.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L40-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -503,7 +503,7 @@
 
 ### FieldDeclaration `_pmHistoryCache` · L41–41
 
-[Drilling.Common/Log/CLogManager.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L41-L41)
+[Drilling.Common/Log/CLogManager.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L41-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -518,7 +518,7 @@
 
 ### FieldDeclaration `_sequenceLogLock` · L42–42
 
-[Drilling.Common/Log/CLogManager.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L42-L42)
+[Drilling.Common/Log/CLogManager.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L42-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -546,7 +546,7 @@
 
 ### FieldDeclaration `_sequenceText` · L43–43
 
-[Drilling.Common/Log/CLogManager.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L43-L43)
+[Drilling.Common/Log/CLogManager.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L43-L43)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -574,7 +574,7 @@
 
 ### FieldDeclaration `_sequenceQueue` · L44–44
 
-[Drilling.Common/Log/CLogManager.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L44-L44)
+[Drilling.Common/Log/CLogManager.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L44-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -589,7 +589,7 @@
 
 ### FieldDeclaration `_sequenceWriter` · L45–45
 
-[Drilling.Common/Log/CLogManager.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L45-L45)
+[Drilling.Common/Log/CLogManager.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L45-L45)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -604,7 +604,7 @@
 
 ### FieldDeclaration `_sequenceStopped` · L46–46
 
-[Drilling.Common/Log/CLogManager.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L46-L46)
+[Drilling.Common/Log/CLogManager.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -619,7 +619,7 @@
 
 ### FieldDeclaration `_sequenceLogError` · L47–47
 
-[Drilling.Common/Log/CLogManager.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L47-L47)
+[Drilling.Common/Log/CLogManager.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L47-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -640,7 +640,7 @@
 
 ### FieldDeclaration `_interfaceLogLock` · L48–48
 
-[Drilling.Common/Log/CLogManager.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L48-L48)
+[Drilling.Common/Log/CLogManager.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L48-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -668,7 +668,7 @@
 
 ### FieldDeclaration `_interfaceWriters` · L49–49
 
-[Drilling.Common/Log/CLogManager.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L49-L49)
+[Drilling.Common/Log/CLogManager.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L49-L49)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -696,7 +696,7 @@
 
 ### FieldDeclaration `_interfaceLoggingStopped` · L50–50
 
-[Drilling.Common/Log/CLogManager.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L50-L50)
+[Drilling.Common/Log/CLogManager.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L50-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -711,7 +711,7 @@
 
 ### FieldDeclaration `_interfaceLogError` · L51–51
 
-[Drilling.Common/Log/CLogManager.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L51-L51)
+[Drilling.Common/Log/CLogManager.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L51-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -732,7 +732,7 @@
 
 ### ConstructorDeclaration `.ctor` · L54–66
 
-[Drilling.Common/Log/CLogManager.cs:54–66](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L54-L66)
+[Drilling.Common/Log/CLogManager.cs:54–66](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L54-L66)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -751,10 +751,10 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L14-L14) | new | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CJhmiRecipeFile.cs#L29-L29) | new | False |
-| [Drilling.File/JHMI/CSettingFile.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CSettingFile.cs#L19-L19) | new | False |
-| [Drilling.UI/CAppStartup.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CAppStartup.cs#L31-L31) | new CLogManager | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L14-L14) | new | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CJhmiRecipeFile.cs#L29-L29) | new | False |
+| [Drilling.File/JHMI/CSettingFile.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CSettingFile.cs#L19-L19) | new | False |
+| [Drilling.UI/CAppStartup.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CAppStartup.cs#L31-L31) | new CLogManager | False |
 
 호출하는 대상과 해석 범위:
 
@@ -801,7 +801,7 @@
 
 ### PropertyDeclaration `LogDirectory` · L70–70
 
-[Drilling.Common/Log/CLogManager.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L70-L70)
+[Drilling.Common/Log/CLogManager.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L70-L70)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -816,7 +816,7 @@
 
 ### GetAccessorDeclaration `get_LogDirectory` · L70–70
 
-[Drilling.Common/Log/CLogManager.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L70-L70)
+[Drilling.Common/Log/CLogManager.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L70-L70)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -831,7 +831,7 @@
 
 ### MethodDeclaration `StartPmSession` · L72–90
 
-[Drilling.Common/Log/CLogManager.cs:72–90](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L72-L90)
+[Drilling.Common/Log/CLogManager.cs:72–90](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L72-L90)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -851,7 +851,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1309–1309](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1309-L1309) | _manager.Log().StartPmSession | False |
+| [Drilling.UI/CRootView.cs:1309–1309](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L1309-L1309) | _manager.Log().StartPmSession | False |
 
 호출하는 대상과 해석 범위:
 
@@ -925,7 +925,7 @@ flowchart TD
 
 ### MethodDeclaration `CompletePmSession` · L92–112
 
-[Drilling.Common/Log/CLogManager.cs:92–112](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L92-L112)
+[Drilling.Common/Log/CLogManager.cs:92–112](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L92-L112)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -944,7 +944,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1473–1473](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1473-L1473) | _manager.Log().CompletePmSession | False |
+| [Drilling.UI/CRootView.cs:1473–1473](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L1473-L1473) | _manager.Log().CompletePmSession | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1020,7 +1020,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadPmHistory` · L114–123
 
-[Drilling.Common/Log/CLogManager.cs:114–123](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L114-L123)
+[Drilling.Common/Log/CLogManager.cs:114–123](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L114-L123)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1039,7 +1039,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuPm.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L41-L41) | logManager.ReadPmHistory | False |
+| [Drilling.UI/Menu/Menus/CMenuPm.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L41-L41) | logManager.ReadPmHistory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1077,7 +1077,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadPmHistory` · L125–135
 
-[Drilling.Common/Log/CLogManager.cs:125–135](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L125-L135)
+[Drilling.Common/Log/CLogManager.cs:125–135](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L125-L135)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1090,7 +1090,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L120-L120) | LoadPmHistory | False |
+| [Drilling.Common/Log/CLogManager.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L120-L120) | LoadPmHistory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1132,7 +1132,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadPmHistoryEntry` · L137–148
 
-[Drilling.Common/Log/CLogManager.cs:137–148](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L137-L148)
+[Drilling.Common/Log/CLogManager.cs:137–148](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L137-L148)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1151,7 +1151,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L100-L100) | ReadPmHistoryEntry | False |
+| [Drilling.Common/Log/CLogManager.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L100-L100) | ReadPmHistoryEntry | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1188,7 +1188,7 @@ flowchart TD
 
 ### MethodDeclaration `WritePmHistoryEntry` · L150–166
 
-[Drilling.Common/Log/CLogManager.cs:150–166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L150-L166)
+[Drilling.Common/Log/CLogManager.cs:150–166](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L150-L166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1207,8 +1207,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L85-L85) | WritePmHistoryEntry | False |
-| [Drilling.Common/Log/CLogManager.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L107-L107) | WritePmHistoryEntry | False |
+| [Drilling.Common/Log/CLogManager.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L85-L85) | WritePmHistoryEntry | False |
+| [Drilling.Common/Log/CLogManager.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L107-L107) | WritePmHistoryEntry | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1266,7 +1266,7 @@ flowchart TD
 
 ### MethodDeclaration `PmHistoryPath` · L168–173
 
-[Drilling.Common/Log/CLogManager.cs:168–173](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L168-L173)
+[Drilling.Common/Log/CLogManager.cs:168–173](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L168-L173)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1285,8 +1285,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L97-L97) | PmHistoryPath | False |
-| [Drilling.Common/Log/CLogManager.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L152-L152) | PmHistoryPath | False |
+| [Drilling.Common/Log/CLogManager.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L97-L97) | PmHistoryPath | False |
+| [Drilling.Common/Log/CLogManager.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L152-L152) | PmHistoryPath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1310,7 +1310,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteStationState` · L175–183
 
-[Drilling.Common/Log/CLogManager.cs:175–183](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L175-L183)
+[Drilling.Common/Log/CLogManager.cs:175–183](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L175-L183)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1332,15 +1332,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L146-L146) | manager.Log().WriteStationState | False |
-| [Drilling.Common/Managers/CManager.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L149-L149) | _logManager.WriteStationState | False |
-| [Drilling.Common/Review/CReviewManager.cs:1039–1039](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1039-L1039) | logManager.WriteStationState | False |
-| [Drilling.Common/Station/CStationProcess.cs:1487–1487](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1487-L1487) | .WriteStationState | False |
-| [Drilling.Common/Station/CStationProcess.cs:2368–2368](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2368-L2368) | .WriteStationState | False |
-| [Drilling.Common/Station/CStationProcess.cs:2413–2413](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2413-L2413) | .WriteStationState | False |
-| [Drilling.UI/CRootView.cs:1199–1199](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1199-L1199) | logManager.WriteStationState | False |
-| [Drilling.UI/CRootView.cs:3102–3102](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3102-L3102) | _manager.Log().WriteStationState | False |
-| [Drilling.UI/CRootView.cs:3184–3188](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3184-L3188) | _manager.Log().WriteStationState | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L146-L146) | manager.Log().WriteStationState | False |
+| [Drilling.Common/Managers/CManager.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Managers/CManager.cs#L149-L149) | _logManager.WriteStationState | False |
+| [Drilling.Common/Review/CReviewManager.cs:1039–1039](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1039-L1039) | logManager.WriteStationState | False |
+| [Drilling.Common/Station/CStationProcess.cs:1487–1487](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Station/CStationProcess.cs#L1487-L1487) | .WriteStationState | False |
+| [Drilling.Common/Station/CStationProcess.cs:2368–2368](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Station/CStationProcess.cs#L2368-L2368) | .WriteStationState | False |
+| [Drilling.Common/Station/CStationProcess.cs:2413–2413](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Station/CStationProcess.cs#L2413-L2413) | .WriteStationState | False |
+| [Drilling.UI/CRootView.cs:1199–1199](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L1199-L1199) | logManager.WriteStationState | False |
+| [Drilling.UI/CRootView.cs:3102–3102](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L3102-L3102) | _manager.Log().WriteStationState | False |
+| [Drilling.UI/CRootView.cs:3184–3188](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L3184-L3188) | _manager.Log().WriteStationState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1386,7 +1386,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadRecipeRecent` · L185–208
 
-[Drilling.Common/Log/CLogManager.cs:185–208](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L185-L208)
+[Drilling.Common/Log/CLogManager.cs:185–208](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L185-L208)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1408,7 +1408,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:588–588](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CJhmiRecipeFile.cs#L588-L588) | _logManager.ReadRecipeRecent | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:588–588](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CJhmiRecipeFile.cs#L588-L588) | _logManager.ReadRecipeRecent | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1447,7 +1447,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L192–195
 
-[Drilling.Common/Log/CLogManager.cs:192–195](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L192-L195)
+[Drilling.Common/Log/CLogManager.cs:192–195](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L192-L195)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1474,7 +1474,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeRecipe` · L197–200
 
-[Drilling.Common/Log/CLogManager.cs:197–200](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L197-L200)
+[Drilling.Common/Log/CLogManager.cs:197–200](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L197-L200)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1508,7 +1508,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectChangedAt` · L202–205
 
-[Drilling.Common/Log/CLogManager.cs:202–205](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L202-L205)
+[Drilling.Common/Log/CLogManager.cs:202–205](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L202-L205)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1535,7 +1535,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteRecipeCreate` · L210–213
 
-[Drilling.Common/Log/CLogManager.cs:210–213](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L210-L213)
+[Drilling.Common/Log/CLogManager.cs:210–213](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L210-L213)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1554,8 +1554,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CJhmiRecipeFile.cs#L241-L241) | _logManager.WriteRecipeCreate | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1364–1364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1364-L1364) | _logManager.WriteRecipeCreate | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CJhmiRecipeFile.cs#L241-L241) | _logManager.WriteRecipeCreate | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1364–1364](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1364-L1364) | _logManager.WriteRecipeCreate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1573,7 +1573,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadRecipeRecent` · L215–218
 
-[Drilling.Common/Log/CLogManager.cs:215–218](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L215-L218)
+[Drilling.Common/Log/CLogManager.cs:215–218](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L215-L218)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1593,7 +1593,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CJhmiRecipeFile.cs#L33-L33) | _logManager.ReadRecipeRecent | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CJhmiRecipeFile.cs#L33-L33) | _logManager.ReadRecipeRecent | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1624,7 +1624,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteRecipeSelect` · L220–223
 
-[Drilling.Common/Log/CLogManager.cs:220–223](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L220-L223)
+[Drilling.Common/Log/CLogManager.cs:220–223](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L220-L223)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1644,7 +1644,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CJhmiRecipeFile.cs#L48-L48) | _logManager.WriteRecipeSelect | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CJhmiRecipeFile.cs#L48-L48) | _logManager.WriteRecipeSelect | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1665,7 +1665,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteRecipeDelete` · L225–228
 
-[Drilling.Common/Log/CLogManager.cs:225–228](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L225-L228)
+[Drilling.Common/Log/CLogManager.cs:225–228](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L225-L228)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1684,8 +1684,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CJhmiRecipeFile.cs#L411-L411) | _logManager.WriteRecipeDelete | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1231–1231](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1231-L1231) | _logManager.WriteRecipeDelete | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CJhmiRecipeFile.cs#L411-L411) | _logManager.WriteRecipeDelete | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1231–1231](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1231-L1231) | _logManager.WriteRecipeDelete | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1703,7 +1703,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteRecipeSave` · L230–233
 
-[Drilling.Common/Log/CLogManager.cs:230–233](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L230-L233)
+[Drilling.Common/Log/CLogManager.cs:230–233](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L230-L233)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1722,7 +1722,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CJhmiRecipeFile.cs#L237-L237) | _logManager.WriteRecipeSave | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CJhmiRecipeFile.cs#L237-L237) | _logManager.WriteRecipeSave | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1740,7 +1740,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteRecipeModify` · L235–238
 
-[Drilling.Common/Log/CLogManager.cs:235–238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L235-L238)
+[Drilling.Common/Log/CLogManager.cs:235–238](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L235-L238)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1776,7 +1776,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteRecipeModify` · L240–243
 
-[Drilling.Common/Log/CLogManager.cs:240–243](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L240-L243)
+[Drilling.Common/Log/CLogManager.cs:240–243](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L240-L243)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1814,7 +1814,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteRecipeModifyBatch` · L245–265
 
-[Drilling.Common/Log/CLogManager.cs:245–265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L245-L265)
+[Drilling.Common/Log/CLogManager.cs:245–265](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L245-L265)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1834,7 +1834,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CJhmiRecipeFile.cs#L236-L236) | _logManager.WriteRecipeModifyBatch | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CJhmiRecipeFile.cs#L236-L236) | _logManager.WriteRecipeModifyBatch | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1932,7 +1932,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteRecipeRename` · L267–270
 
-[Drilling.Common/Log/CLogManager.cs:267–270](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L267-L270)
+[Drilling.Common/Log/CLogManager.cs:267–270](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L267-L270)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1952,8 +1952,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:367–367](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CJhmiRecipeFile.cs#L367-L367) | _logManager.WriteRecipeRename | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1174–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1174-L1174) | _logManager.WriteRecipeRename | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:367–367](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CJhmiRecipeFile.cs#L367-L367) | _logManager.WriteRecipeRename | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1174–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1174-L1174) | _logManager.WriteRecipeRename | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1971,7 +1971,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadSettingRecent` · L272–290
 
-[Drilling.Common/Log/CLogManager.cs:272–290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L272-L290)
+[Drilling.Common/Log/CLogManager.cs:272–290](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L272-L290)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1992,7 +1992,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CSettingFile.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CSettingFile.cs#L139-L139) | _logManager.ReadSettingRecent | False |
+| [Drilling.File/JHMI/CSettingFile.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CSettingFile.cs#L139-L139) | _logManager.ReadSettingRecent | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2027,7 +2027,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L274–277
 
-[Drilling.Common/Log/CLogManager.cs:274–277](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L274-L277)
+[Drilling.Common/Log/CLogManager.cs:274–277](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L274-L277)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2054,7 +2054,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesSection` · L279–282
 
-[Drilling.Common/Log/CLogManager.cs:279–282](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L279-L282)
+[Drilling.Common/Log/CLogManager.cs:279–282](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L279-L282)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2081,7 +2081,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectChangedAt` · L284–287
 
-[Drilling.Common/Log/CLogManager.cs:284–287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L284-L287)
+[Drilling.Common/Log/CLogManager.cs:284–287](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L284-L287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2108,7 +2108,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteSettingModify` · L292–295
 
-[Drilling.Common/Log/CLogManager.cs:292–295](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L292-L295)
+[Drilling.Common/Log/CLogManager.cs:292–295](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L292-L295)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2130,10 +2130,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L249-L249) | _logManager.WriteSettingModify | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L264-L264) | _logManager.WriteSettingModify | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:279–279](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L279-L279) | _logManager.WriteSettingModify | False |
-| [Drilling.File/JHMI/CSettingFile.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CSettingFile.cs#L129-L129) | _logManager.WriteSettingModify | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L249-L249) | _logManager.WriteSettingModify | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L264-L264) | _logManager.WriteSettingModify | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:279–279](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L279-L279) | _logManager.WriteSettingModify | False |
+| [Drilling.File/JHMI/CSettingFile.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CSettingFile.cs#L129-L129) | _logManager.WriteSettingModify | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2151,7 +2151,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteSettingSave` · L297–300
 
-[Drilling.Common/Log/CLogManager.cs:297–300](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L297-L300)
+[Drilling.Common/Log/CLogManager.cs:297–300](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L297-L300)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2170,8 +2170,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L78-L78) | _logManager.WriteSettingSave | False |
-| [Drilling.File/JHMI/CSettingFile.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CSettingFile.cs#L133-L133) | _logManager.WriteSettingSave | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L78-L78) | _logManager.WriteSettingSave | False |
+| [Drilling.File/JHMI/CSettingFile.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CSettingFile.cs#L133-L133) | _logManager.WriteSettingSave | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2193,7 +2193,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteInterfaceConnection` · L302–305
 
-[Drilling.Common/Log/CLogManager.cs:302–305](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L302-L305)
+[Drilling.Common/Log/CLogManager.cs:302–305](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L302-L305)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2216,7 +2216,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:712–712](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L712-L712) | _logManager.WriteInterfaceConnection | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:712–712](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L712-L712) | _logManager.WriteInterfaceConnection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2234,7 +2234,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteInterfaceCommand` · L307–311
 
-[Drilling.Common/Log/CLogManager.cs:307–311](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L307-L311)
+[Drilling.Common/Log/CLogManager.cs:307–311](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L307-L311)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2257,15 +2257,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:731–731](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L731-L731) | _logManager.WriteInterfaceCommand | False |
-| [Drilling.Common/Interface/CInterfaceManager.cs:744–744](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L744-L744) | .WriteInterfaceCommand | False |
-| [Drilling.Common/Interface/CInterfaceManager.cs:786–786](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L786-L786) | .WriteInterfaceCommand | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:33–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L33-L34) | _logManager.WriteInterfaceCommand | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L129-L129) | _logManager.WriteInterfaceCommand | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:846–846](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L846-L846) | .WriteInterfaceCommand | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:1899–1899](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L1899-L1899) | .WriteInterfaceCommand | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:2179–2179](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L2179-L2179) | .WriteInterfaceCommand | False |
-| [Drilling.Common/Station/CStationProcess.cs:1488–1488](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L1488-L1488) | .WriteInterfaceCommand | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:731–731](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L731-L731) | _logManager.WriteInterfaceCommand | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:744–744](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L744-L744) | .WriteInterfaceCommand | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:786–786](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L786-L786) | .WriteInterfaceCommand | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:33–34](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L33-L34) | _logManager.WriteInterfaceCommand | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs#L129-L129) | _logManager.WriteInterfaceCommand | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:846–846](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CMelsec.cs#L846-L846) | .WriteInterfaceCommand | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:1899–1899](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CMelsec.cs#L1899-L1899) | .WriteInterfaceCommand | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:2179–2179](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CMelsec.cs#L2179-L2179) | .WriteInterfaceCommand | False |
+| [Drilling.Common/Station/CStationProcess.cs:1488–1488](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Station/CStationProcess.cs#L1488-L1488) | .WriteInterfaceCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2288,7 +2288,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteInterfaceError` · L313–316
 
-[Drilling.Common/Log/CLogManager.cs:313–316](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L313-L316)
+[Drilling.Common/Log/CLogManager.cs:313–316](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L313-L316)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2310,14 +2310,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:727–727](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L727-L727) | _logManager.WriteInterfaceError | False |
-| [Drilling.Common/Interface/CInterfaceManager.cs:738–738](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L738-L738) | .WriteInterfaceError | False |
-| [Drilling.Common/Interface/CInterfaceManager.cs:791–791](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L791-L791) | .WriteInterfaceError | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L234-L234) | .WriteInterfaceError | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:786–786](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L786-L786) | .WriteInterfaceError | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:792–792](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L792-L792) | .WriteInterfaceError | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:2188–2188](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L2188-L2188) | .WriteInterfaceError | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:2243–2243](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L2243-L2243) | .WriteInterfaceError | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:727–727](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L727-L727) | _logManager.WriteInterfaceError | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:738–738](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L738-L738) | .WriteInterfaceError | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:791–791](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L791-L791) | .WriteInterfaceError | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CMelsec.cs#L234-L234) | .WriteInterfaceError | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:786–786](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CMelsec.cs#L786-L786) | .WriteInterfaceError | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:792–792](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CMelsec.cs#L792-L792) | .WriteInterfaceError | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:2188–2188](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CMelsec.cs#L2188-L2188) | .WriteInterfaceError | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:2243–2243](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CMelsec.cs#L2243-L2243) | .WriteInterfaceError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2335,7 +2335,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteInterfaceProtocolTrace` · L318–339
 
-[Drilling.Common/Log/CLogManager.cs:318–339](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L318-L339)
+[Drilling.Common/Log/CLogManager.cs:318–339](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L318-L339)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2356,7 +2356,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:768–768](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L768-L768) | .WriteInterfaceProtocolTrace | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:768–768](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L768-L768) | .WriteInterfaceProtocolTrace | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2428,7 +2428,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteProductEvent` · L341–349
 
-[Drilling.Common/Log/CLogManager.cs:341–349](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L341-L349)
+[Drilling.Common/Log/CLogManager.cs:341–349](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L341-L349)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2451,10 +2451,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Product/CProductManager.cs:726–726](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Product/CProductManager.cs#L726-L726) | .WriteProductEvent | False |
-| [Drilling.Common/Product/CProductManager.cs:802–802](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Product/CProductManager.cs#L802-L802) | .WriteProductEvent | False |
-| [Drilling.Common/Product/CProductManager.cs:812–812](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Product/CProductManager.cs#L812-L812) | .WriteProductEvent | False |
-| [Drilling.Common/Review/CReviewManager.cs:1890–1890](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1890-L1890) | logManager.WriteProductEvent | False |
+| [Drilling.Common/Product/CProductManager.cs:727–727](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Product/CProductManager.cs#L727-L727) | .WriteProductEvent | False |
+| [Drilling.Common/Product/CProductManager.cs:803–803](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Product/CProductManager.cs#L803-L803) | .WriteProductEvent | False |
+| [Drilling.Common/Product/CProductManager.cs:813–813](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Product/CProductManager.cs#L813-L813) | .WriteProductEvent | False |
+| [Drilling.Common/Review/CReviewManager.cs:1890–1890](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1890-L1890) | logManager.WriteProductEvent | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2502,7 +2502,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteUiClick` · L351–354
 
-[Drilling.Common/Log/CLogManager.cs:351–354](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L351-L354)
+[Drilling.Common/Log/CLogManager.cs:351–354](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L351-L354)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2524,7 +2524,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CUiLogService.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L48-L48) | logManager.WriteUiClick | False |
+| [Drilling.UI/CUiLogService.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L48-L48) | logManager.WriteUiClick | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2542,7 +2542,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteRecipeAction` · L356–364
 
-[Drilling.Common/Log/CLogManager.cs:356–364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L356-L364)
+[Drilling.Common/Log/CLogManager.cs:356–364](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L356-L364)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2565,12 +2565,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L212-L212) | WriteRecipeAction | False |
-| [Drilling.Common/Log/CLogManager.cs:222–222](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L222-L222) | WriteRecipeAction | False |
-| [Drilling.Common/Log/CLogManager.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L227-L227) | WriteRecipeAction | False |
-| [Drilling.Common/Log/CLogManager.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L232-L232) | WriteRecipeAction | False |
-| [Drilling.Common/Log/CLogManager.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L237-L237) | WriteRecipeAction | False |
-| [Drilling.Common/Log/CLogManager.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L269-L269) | WriteRecipeAction | False |
+| [Drilling.Common/Log/CLogManager.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L212-L212) | WriteRecipeAction | False |
+| [Drilling.Common/Log/CLogManager.cs:222–222](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L222-L222) | WriteRecipeAction | False |
+| [Drilling.Common/Log/CLogManager.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L227-L227) | WriteRecipeAction | False |
+| [Drilling.Common/Log/CLogManager.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L232-L232) | WriteRecipeAction | False |
+| [Drilling.Common/Log/CLogManager.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L237-L237) | WriteRecipeAction | False |
+| [Drilling.Common/Log/CLogManager.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L269-L269) | WriteRecipeAction | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2608,7 +2608,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteRecipeAction` · L366–374
 
-[Drilling.Common/Log/CLogManager.cs:366–374](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L366-L374)
+[Drilling.Common/Log/CLogManager.cs:366–374](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L366-L374)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2633,7 +2633,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L242-L242) | WriteRecipeAction | False |
+| [Drilling.Common/Log/CLogManager.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L242-L242) | WriteRecipeAction | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2683,7 +2683,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteSettingAction` · L376–384
 
-[Drilling.Common/Log/CLogManager.cs:376–384](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L376-L384)
+[Drilling.Common/Log/CLogManager.cs:376–384](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L376-L384)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2706,8 +2706,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L294-L294) | WriteSettingAction | False |
-| [Drilling.Common/Log/CLogManager.cs:299–299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L299-L299) | WriteSettingAction | False |
+| [Drilling.Common/Log/CLogManager.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L294-L294) | WriteSettingAction | False |
+| [Drilling.Common/Log/CLogManager.cs:299–299](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L299-L299) | WriteSettingAction | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2755,7 +2755,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteInterfaceAction` · L386–395
 
-[Drilling.Common/Log/CLogManager.cs:386–395](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L386-L395)
+[Drilling.Common/Log/CLogManager.cs:386–395](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L386-L395)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2778,9 +2778,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L304-L304) | WriteInterfaceAction | False |
-| [Drilling.Common/Log/CLogManager.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L310-L310) | WriteInterfaceAction | False |
-| [Drilling.Common/Log/CLogManager.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L315-L315) | WriteInterfaceAction | False |
+| [Drilling.Common/Log/CLogManager.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L304-L304) | WriteInterfaceAction | False |
+| [Drilling.Common/Log/CLogManager.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L310-L310) | WriteInterfaceAction | False |
+| [Drilling.Common/Log/CLogManager.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L315-L315) | WriteInterfaceAction | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2828,7 +2828,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteUiAction` · L397–405
 
-[Drilling.Common/Log/CLogManager.cs:397–405](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L397-L405)
+[Drilling.Common/Log/CLogManager.cs:397–405](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L397-L405)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2851,7 +2851,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L353-L353) | WriteUiAction | False |
+| [Drilling.Common/Log/CLogManager.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L353-L353) | WriteUiAction | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2897,7 +2897,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendLine` · L407–410
 
-[Drilling.Common/Log/CLogManager.cs:407–410](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L407-L410)
+[Drilling.Common/Log/CLogManager.cs:407–410](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L407-L410)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2918,12 +2918,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:182–182](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L182-L182) | AppendLine | False |
-| [Drilling.Common/Log/CLogManager.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L348-L348) | AppendLine | False |
-| [Drilling.Common/Log/CLogManager.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L363-L363) | AppendLine | False |
-| [Drilling.Common/Log/CLogManager.cs:373–373](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L373-L373) | AppendLine | False |
-| [Drilling.Common/Log/CLogManager.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L383-L383) | AppendLine | False |
-| [Drilling.Common/Log/CLogManager.cs:404–404](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L404-L404) | AppendLine | False |
+| [Drilling.Common/Log/CLogManager.cs:182–182](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L182-L182) | AppendLine | False |
+| [Drilling.Common/Log/CLogManager.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L348-L348) | AppendLine | False |
+| [Drilling.Common/Log/CLogManager.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L363-L363) | AppendLine | False |
+| [Drilling.Common/Log/CLogManager.cs:373–373](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L373-L373) | AppendLine | False |
+| [Drilling.Common/Log/CLogManager.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L383-L383) | AppendLine | False |
+| [Drilling.Common/Log/CLogManager.cs:404–404](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L404-L404) | AppendLine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2941,7 +2941,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendText` · L412–419
 
-[Drilling.Common/Log/CLogManager.cs:412–419](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L412-L419)
+[Drilling.Common/Log/CLogManager.cs:412–419](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L412-L419)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2962,9 +2962,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L264-L264) | AppendText | False |
-| [Drilling.Common/Log/CLogManager.cs:409–409](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L409-L409) | AppendText | False |
-| [Drilling.Common/Log/CLogManager.cs:501–501](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L501-L501) | AppendText | False |
+| [Drilling.Common/Log/CLogManager.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L264-L264) | AppendText | False |
+| [Drilling.Common/Log/CLogManager.cs:409–409](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L409-L409) | AppendText | False |
+| [Drilling.Common/Log/CLogManager.cs:501–501](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L501-L501) | AppendText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2996,7 +2996,7 @@ flowchart TD
 
 ### PropertyDeclaration `InterfaceLogError` · L424–424
 
-[Drilling.Common/Log/CLogManager.cs:424–424](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L424-L424)
+[Drilling.Common/Log/CLogManager.cs:424–424](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L424-L424)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3023,7 +3023,7 @@ flowchart TD
 
 ### MethodDeclaration `QueueInterfaceText` · L426–437
 
-[Drilling.Common/Log/CLogManager.cs:426–437](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L426-L437)
+[Drilling.Common/Log/CLogManager.cs:426–437](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L426-L437)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3044,8 +3044,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L338-L338) | QueueInterfaceText | False |
-| [Drilling.Common/Log/CLogManager.cs:394–394](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L394-L394) | QueueInterfaceText | False |
+| [Drilling.Common/Log/CLogManager.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L338-L338) | QueueInterfaceText | False |
+| [Drilling.Common/Log/CLogManager.cs:394–394](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L394-L394) | QueueInterfaceText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3093,7 +3093,7 @@ flowchart TD
 
 ### MethodDeclaration `InterfaceWriteFailed` · L439–444
 
-[Drilling.Common/Log/CLogManager.cs:439–444](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L439-L444)
+[Drilling.Common/Log/CLogManager.cs:439–444](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L439-L444)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3112,7 +3112,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:435–435](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L435-L435) | InterfaceWriteFailed | False |
+| [Drilling.Common/Log/CLogManager.cs:435–435](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L435-L435) | InterfaceWriteFailed | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3130,7 +3130,7 @@ flowchart TD
 
 ### MethodDeclaration `FlushInterfaceAsync` · L446–454
 
-[Drilling.Common/Log/CLogManager.cs:446–454](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L446-L454)
+[Drilling.Common/Log/CLogManager.cs:446–454](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L446-L454)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3190,7 +3190,7 @@ flowchart TD
 
 ### MethodDeclaration `StopInterfaceLoggingAsync` · L456–467
 
-[Drilling.Common/Log/CLogManager.cs:456–467](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L456-L467)
+[Drilling.Common/Log/CLogManager.cs:456–467](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L456-L467)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3209,7 +3209,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L250-L250) | _logManager.StopInterfaceLoggingAsync | False |
+| [Drilling.Common/Managers/CManager.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Managers/CManager.cs#L250-L250) | _logManager.StopInterfaceLoggingAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3257,7 +3257,7 @@ flowchart TD
 
 ### FieldDeclaration `MaximumQueuedBytes` · L471–471
 
-[Drilling.Common/Log/CLogManager.cs:471–471](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L471-L471)
+[Drilling.Common/Log/CLogManager.cs:471–471](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L471-L471)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3278,7 +3278,7 @@ flowchart TD
 
 ### FieldDeclaration `_queue` · L472–473
 
-[Drilling.Common/Log/CLogManager.cs:472–473](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L472-L473)
+[Drilling.Common/Log/CLogManager.cs:472–473](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L472-L473)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3311,7 +3311,7 @@ flowchart TD
 
 ### FieldDeclaration `_worker` · L474–474
 
-[Drilling.Common/Log/CLogManager.cs:474–474](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L474-L474)
+[Drilling.Common/Log/CLogManager.cs:474–474](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L474-L474)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3326,7 +3326,7 @@ flowchart TD
 
 ### FieldDeclaration `_queuedBytes` · L475–475
 
-[Drilling.Common/Log/CLogManager.cs:475–475](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L475-L475)
+[Drilling.Common/Log/CLogManager.cs:475–475](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L475-L475)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3341,7 +3341,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L477–510
 
-[Drilling.Common/Log/CLogManager.cs:477–510](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L477-L510)
+[Drilling.Common/Log/CLogManager.cs:477–510](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L477-L510)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3362,7 +3362,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L433-L433) | new | False |
+| [Drilling.Common/Log/CLogManager.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L433-L433) | new | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3445,7 +3445,7 @@ flowchart TD
 
 ### MethodDeclaration `TryWrite` · L512–519
 
-[Drilling.Common/Log/CLogManager.cs:512–519](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L512-L519)
+[Drilling.Common/Log/CLogManager.cs:512–519](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L512-L519)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3464,7 +3464,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:434–434](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L434-L434) | writer.TryWrite | False |
+| [Drilling.Common/Log/CLogManager.cs:434–434](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L434-L434) | writer.TryWrite | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3500,7 +3500,7 @@ flowchart TD
 
 ### MethodDeclaration `Flush` · L521–530
 
-[Drilling.Common/Log/CLogManager.cs:521–530](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L521-L530)
+[Drilling.Common/Log/CLogManager.cs:521–530](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L521-L530)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3519,7 +3519,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L451-L451) | writer.Flush | False |
+| [Drilling.Common/Log/CLogManager.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L451-L451) | writer.Flush | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3567,7 +3567,7 @@ flowchart TD
 
 ### MethodDeclaration `Complete` · L532–536
 
-[Drilling.Common/Log/CLogManager.cs:532–536](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L532-L536)
+[Drilling.Common/Log/CLogManager.cs:532–536](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L532-L536)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3580,7 +3580,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:462–462](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L462-L462) | writer.Complete | False |
+| [Drilling.Common/Log/CLogManager.cs:462–462](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L462-L462) | writer.Complete | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3599,7 +3599,7 @@ flowchart TD
 
 ### MethodDeclaration `EnumerateRecentLogFiles` · L539–556
 
-[Drilling.Common/Log/CLogManager.cs:539–556](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L539-L556)
+[Drilling.Common/Log/CLogManager.cs:539–556](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L539-L556)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3619,9 +3619,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L207-L207) | EnumerateRecentLogFiles | False |
-| [Drilling.Common/Log/CLogManager.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L217-L217) | EnumerateRecentLogFiles | False |
-| [Drilling.Common/Log/CLogManager.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L289-L289) | EnumerateRecentLogFiles | False |
+| [Drilling.Common/Log/CLogManager.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L207-L207) | EnumerateRecentLogFiles | False |
+| [Drilling.Common/Log/CLogManager.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L217-L217) | EnumerateRecentLogFiles | False |
+| [Drilling.Common/Log/CLogManager.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L289-L289) | EnumerateRecentLogFiles | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3672,7 +3672,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadLogFile` · L558–572
 
-[Drilling.Common/Log/CLogManager.cs:558–572](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L558-L572)
+[Drilling.Common/Log/CLogManager.cs:558–572](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L558-L572)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3724,7 +3724,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseRecipeLine` · L574–611
 
-[Drilling.Common/Log/CLogManager.cs:574–611](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L574-L611)
+[Drilling.Common/Log/CLogManager.cs:574–611](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L574-L611)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3854,7 +3854,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateRecipeHistory` · L613–616
 
-[Drilling.Common/Log/CLogManager.cs:613–616](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L613-L616)
+[Drilling.Common/Log/CLogManager.cs:613–616](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L613-L616)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3880,20 +3880,20 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L597-L597) | CreateRecipeHistory | False |
-| [Drilling.Common/Log/CLogManager.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L598-L598) | CreateRecipeHistory | False |
-| [Drilling.Common/Log/CLogManager.cs:599–599](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L599-L599) | CreateRecipeHistory | False |
-| [Drilling.Common/Log/CLogManager.cs:600–600](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L600-L600) | CreateRecipeHistory | False |
-| [Drilling.Common/Log/CLogManager.cs:601–601](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L601-L601) | CreateRecipeHistory | False |
-| [Drilling.Common/Log/CLogManager.cs:602–602](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L602-L602) | CreateRecipeHistory | False |
-| [Drilling.Common/Log/CLogManager.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L603-L603) | CreateRecipeHistory | False |
-| [Drilling.Common/Log/CLogManager.cs:604–604](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L604-L604) | CreateRecipeHistory | False |
-| [Drilling.Common/Log/CLogManager.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L605-L605) | CreateRecipeHistory | False |
-| [Drilling.Common/Log/CLogManager.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L606-L606) | CreateRecipeHistory | False |
-| [Drilling.Common/Log/CLogManager.cs:607–607](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L607-L607) | CreateRecipeHistory | False |
-| [Drilling.Common/Log/CLogManager.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L608-L608) | CreateRecipeHistory | False |
-| [Drilling.Common/Log/CLogManager.cs:609–609](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L609-L609) | CreateRecipeHistory | False |
-| [Drilling.Common/Log/CLogManager.cs:610–610](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L610-L610) | CreateRecipeHistory | False |
+| [Drilling.Common/Log/CLogManager.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L597-L597) | CreateRecipeHistory | False |
+| [Drilling.Common/Log/CLogManager.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L598-L598) | CreateRecipeHistory | False |
+| [Drilling.Common/Log/CLogManager.cs:599–599](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L599-L599) | CreateRecipeHistory | False |
+| [Drilling.Common/Log/CLogManager.cs:600–600](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L600-L600) | CreateRecipeHistory | False |
+| [Drilling.Common/Log/CLogManager.cs:601–601](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L601-L601) | CreateRecipeHistory | False |
+| [Drilling.Common/Log/CLogManager.cs:602–602](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L602-L602) | CreateRecipeHistory | False |
+| [Drilling.Common/Log/CLogManager.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L603-L603) | CreateRecipeHistory | False |
+| [Drilling.Common/Log/CLogManager.cs:604–604](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L604-L604) | CreateRecipeHistory | False |
+| [Drilling.Common/Log/CLogManager.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L605-L605) | CreateRecipeHistory | False |
+| [Drilling.Common/Log/CLogManager.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L606-L606) | CreateRecipeHistory | False |
+| [Drilling.Common/Log/CLogManager.cs:607–607](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L607-L607) | CreateRecipeHistory | False |
+| [Drilling.Common/Log/CLogManager.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L608-L608) | CreateRecipeHistory | False |
+| [Drilling.Common/Log/CLogManager.cs:609–609](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L609-L609) | CreateRecipeHistory | False |
+| [Drilling.Common/Log/CLogManager.cs:610–610](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L610-L610) | CreateRecipeHistory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3922,7 +3922,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseSettingLine` · L618–632
 
-[Drilling.Common/Log/CLogManager.cs:618–632](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L618-L632)
+[Drilling.Common/Log/CLogManager.cs:618–632](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L618-L632)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4001,7 +4001,7 @@ flowchart TD
 
 ### MethodDeclaration `SplitFields` · L634–660
 
-[Drilling.Common/Log/CLogManager.cs:634–660](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L634-L660)
+[Drilling.Common/Log/CLogManager.cs:634–660](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L634-L660)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4020,8 +4020,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:581–581](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L581-L581) | SplitFields | False |
-| [Drilling.Common/Log/CLogManager.cs:625–625](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L625-L625) | SplitFields | False |
+| [Drilling.Common/Log/CLogManager.cs:581–581](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L581-L581) | SplitFields | False |
+| [Drilling.Common/Log/CLogManager.cs:625–625](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L625-L625) | SplitFields | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4083,7 +4083,7 @@ flowchart TD
 
 ### MethodDeclaration `EscapeField` · L662–665
 
-[Drilling.Common/Log/CLogManager.cs:662–665](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L662-L665)
+[Drilling.Common/Log/CLogManager.cs:662–665](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L662-L665)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4102,37 +4102,37 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L181-L181) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L181-L181) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L181-L181) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L181-L181) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L257-L257) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L261-L261) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L261-L261) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L261-L261) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L261-L261) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L261-L261) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L347-L347) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L347-L347) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L347-L347) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L347-L347) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L347-L347) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L372-L372) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L372-L372) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L372-L372) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L372-L372) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L372-L372) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L372-L372) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L382-L382) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L382-L382) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L382-L382) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:393–393](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L393-L393) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:393–393](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L393-L393) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:393–393](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L393-L393) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:403–403](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L403-L403) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:403–403](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L403-L403) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:403–403](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L403-L403) | EscapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:403–403](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L403-L403) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L181-L181) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L181-L181) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L181-L181) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L181-L181) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L257-L257) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L261-L261) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L261-L261) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L261-L261) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L261-L261) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L261-L261) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L347-L347) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L347-L347) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L347-L347) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L347-L347) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L347-L347) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L372-L372) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L372-L372) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L372-L372) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L372-L372) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L372-L372) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L372-L372) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L382-L382) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L382-L382) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L382-L382) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:393–393](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L393-L393) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:393–393](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L393-L393) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:393–393](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L393-L393) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:403–403](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L403-L403) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:403–403](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L403-L403) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:403–403](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L403-L403) | EscapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:403–403](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L403-L403) | EscapeField | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4155,7 +4155,7 @@ flowchart TD
 
 ### MethodDeclaration `ModuleLogName` · L667–675
 
-[Drilling.Common/Log/CLogManager.cs:667–675](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L667-L675)
+[Drilling.Common/Log/CLogManager.cs:667–675](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L667-L675)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4174,8 +4174,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L326-L326) | ModuleLogName | False |
-| [Drilling.Common/Log/CLogManager.cs:389–389](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L389-L389) | ModuleLogName | False |
+| [Drilling.Common/Log/CLogManager.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L326-L326) | ModuleLogName | False |
+| [Drilling.Common/Log/CLogManager.cs:389–389](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L389-L389) | ModuleLogName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4206,7 +4206,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeModuleName` · L677–680
 
-[Drilling.Common/Log/CLogManager.cs:677–680](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L677-L680)
+[Drilling.Common/Log/CLogManager.cs:677–680](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L677-L680)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4246,7 +4246,7 @@ flowchart TD
 
 ### MethodDeclaration `UnescapeField` · L682–685
 
-[Drilling.Common/Log/CLogManager.cs:682–685](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L682-L685)
+[Drilling.Common/Log/CLogManager.cs:682–685](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L682-L685)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4265,20 +4265,20 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:588–588](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L588-L588) | UnescapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L597-L597) | UnescapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L597-L597) | UnescapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L597-L597) | UnescapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L597-L597) | UnescapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L597-L597) | UnescapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L598-L598) | UnescapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L598-L598) | UnescapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L598-L598) | UnescapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L605-L605) | UnescapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L605-L605) | UnescapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:631–631](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L631-L631) | UnescapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:631–631](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L631-L631) | UnescapeField | False |
-| [Drilling.Common/Log/CLogManager.cs:631–631](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L631-L631) | UnescapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:588–588](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L588-L588) | UnescapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L597-L597) | UnescapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L597-L597) | UnescapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L597-L597) | UnescapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L597-L597) | UnescapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L597-L597) | UnescapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L598-L598) | UnescapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L598-L598) | UnescapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L598-L598) | UnescapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L605-L605) | UnescapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L605-L605) | UnescapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:631–631](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L631-L631) | UnescapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:631–631](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L631-L631) | UnescapeField | False |
+| [Drilling.Common/Log/CLogManager.cs:631–631](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L631-L631) | UnescapeField | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4297,7 +4297,7 @@ flowchart TD
 
 ### MethodDeclaration `TryReadSection` · L687–700
 
-[Drilling.Common/Log/CLogManager.cs:687–700](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L687-L700)
+[Drilling.Common/Log/CLogManager.cs:687–700](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L687-L700)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4317,7 +4317,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:626–626](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L626-L626) | TryReadSection | False |
+| [Drilling.Common/Log/CLogManager.cs:626–626](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L626-L626) | TryReadSection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4353,7 +4353,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseTimestamp` · L702–712
 
-[Drilling.Common/Log/CLogManager.cs:702–712](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L702-L712)
+[Drilling.Common/Log/CLogManager.cs:702–712](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L702-L712)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4372,8 +4372,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:587–587](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L587-L587) | ParseTimestamp | False |
-| [Drilling.Common/Log/CLogManager.cs:631–631](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L631-L631) | ParseTimestamp | False |
+| [Drilling.Common/Log/CLogManager.cs:587–587](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L587-L587) | ParseTimestamp | False |
+| [Drilling.Common/Log/CLogManager.cs:631–631](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L631-L631) | ParseTimestamp | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4397,7 +4397,7 @@ flowchart TD
 
 ### MethodDeclaration `Append` · L716–735
 
-[Drilling.Common/Log/CLogManager.cs:716–735](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L716-L735)
+[Drilling.Common/Log/CLogManager.cs:716–735](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L716-L735)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4462,7 +4462,7 @@ flowchart TD
 
 ### MethodDeclaration `Read` · L737–791
 
-[Drilling.Common/Log/CLogManager.cs:737–791](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L737-L791)
+[Drilling.Common/Log/CLogManager.cs:737–791](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L737-L791)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4603,7 +4603,7 @@ flowchart TD
 
 ### MethodDeclaration `AlarmLogPath` · L793–797
 
-[Drilling.Common/Log/CLogManager.cs:793–797](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L793-L797)
+[Drilling.Common/Log/CLogManager.cs:793–797](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L793-L797)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4622,8 +4622,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:728–728](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L728-L728) | AlarmLogPath | False |
-| [Drilling.Common/Log/CLogManager.cs:748–748](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L748-L748) | AlarmLogPath | False |
+| [Drilling.Common/Log/CLogManager.cs:728–728](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L728-L728) | AlarmLogPath | False |
+| [Drilling.Common/Log/CLogManager.cs:748–748](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L748-L748) | AlarmLogPath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4646,7 +4646,7 @@ flowchart TD
 
 ### PropertyDeclaration `SequenceLogError` · L802–802
 
-[Drilling.Common/Log/CLogManager.cs:802–802](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L802-L802)
+[Drilling.Common/Log/CLogManager.cs:802–802](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L802-L802)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4673,7 +4673,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteSequence` · L805–833
 
-[Drilling.Common/Log/CLogManager.cs:805–833](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L805-L833)
+[Drilling.Common/Log/CLogManager.cs:805–833](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L805-L833)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4701,10 +4701,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1038–1038](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1038-L1038) | logManager.WriteSequence | False |
-| [Drilling.Common/Review/CReviewManager.cs:2747–2747](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L2747-L2747) | .WriteSequence | False |
-| [Drilling.Common/Station/CStationProcess.cs:2379–2379](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L2379-L2379) | .WriteSequence | False |
-| [Drilling.UI/CRootView.cs:3264–3265](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3264-L3265) | _manager.Log().WriteSequence | False |
+| [Drilling.Common/Review/CReviewManager.cs:1038–1038](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1038-L1038) | logManager.WriteSequence | False |
+| [Drilling.Common/Review/CReviewManager.cs:2747–2747](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L2747-L2747) | .WriteSequence | False |
+| [Drilling.Common/Station/CStationProcess.cs:2379–2379](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Station/CStationProcess.cs#L2379-L2379) | .WriteSequence | False |
+| [Drilling.UI/CRootView.cs:3264–3265](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L3264-L3265) | _manager.Log().WriteSequence | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4785,7 +4785,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Field` · L826–826
 
-[Drilling.Common/Log/CLogManager.cs:826–826](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L826-L826)
+[Drilling.Common/Log/CLogManager.cs:826–826](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L826-L826)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4804,9 +4804,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:828–828](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L828-L828) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:828–828](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L828-L828) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:828–828](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L828-L828) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:828–828](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L828-L828) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:828–828](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L828-L828) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:828–828](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L828-L828) | Field | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4828,7 +4828,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsureSequenceWriter` · L835–841
 
-[Drilling.Common/Log/CLogManager.cs:835–841](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L835-L841)
+[Drilling.Common/Log/CLogManager.cs:835–841](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L835-L841)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4841,7 +4841,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:824–824](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L824-L824) | EnsureSequenceWriter | False |
+| [Drilling.Common/Log/CLogManager.cs:824–824](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L824-L824) | EnsureSequenceWriter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4881,7 +4881,7 @@ flowchart TD
 
 ### MethodDeclaration `FlushSequenceAsync` · L843–877
 
-[Drilling.Common/Log/CLogManager.cs:843–877](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L843-L877)
+[Drilling.Common/Log/CLogManager.cs:843–877](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L843-L877)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4985,7 +4985,7 @@ flowchart TD
 
 ### MethodDeclaration `StopSequenceLoggingAsync` · L879–893
 
-[Drilling.Common/Log/CLogManager.cs:879–893](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L879-L893)
+[Drilling.Common/Log/CLogManager.cs:879–893](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L879-L893)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5004,7 +5004,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:258–258](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L258-L258) | _logManager.StopSequenceLoggingAsync | False |
+| [Drilling.Common/Managers/CManager.cs:258–258](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Managers/CManager.cs#L258-L258) | _logManager.StopSequenceLoggingAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5049,7 +5049,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteSequenceQueue` · L895–927
 
-[Drilling.Common/Log/CLogManager.cs:895–927](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L895-L927)
+[Drilling.Common/Log/CLogManager.cs:895–927](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L895-L927)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5068,7 +5068,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:840–840](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L840-L840) | WriteSequenceQueue | False |
+| [Drilling.Common/Log/CLogManager.cs:840–840](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L840-L840) | WriteSequenceQueue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5159,7 +5159,7 @@ flowchart TD
 
 ### MethodDeclaration `SequenceWriteFailed` · L929–941
 
-[Drilling.Common/Log/CLogManager.cs:929–941](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L929-L941)
+[Drilling.Common/Log/CLogManager.cs:929–941](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L929-L941)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5178,9 +5178,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:818–818](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L818-L818) | SequenceWriteFailed | False |
-| [Drilling.Common/Log/CLogManager.cs:831–831](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L831-L831) | SequenceWriteFailed | False |
-| [Drilling.Common/Log/CLogManager.cs:921–921](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L921-L921) | SequenceWriteFailed | False |
+| [Drilling.Common/Log/CLogManager.cs:818–818](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L818-L818) | SequenceWriteFailed | False |
+| [Drilling.Common/Log/CLogManager.cs:831–831](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L831-L831) | SequenceWriteFailed | False |
+| [Drilling.Common/Log/CLogManager.cs:921–921](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L921-L921) | SequenceWriteFailed | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5220,7 +5220,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L948–948
 
-[Drilling.Common/Log/CLogManager.cs:948–948](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L948-L948)
+[Drilling.Common/Log/CLogManager.cs:948–948](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L948-L948)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5239,7 +5239,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L20-L20) | new CLogFileScope | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L20-L20) | new CLogFileScope | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5260,7 +5260,7 @@ flowchart TD
 
 ### PropertyDeclaration `RootDirectory` · L949–949
 
-[Drilling.Common/Log/CLogManager.cs:949–949](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L949-L949)
+[Drilling.Common/Log/CLogManager.cs:949–949](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L949-L949)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5275,7 +5275,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_RootDirectory` · L949–949
 
-[Drilling.Common/Log/CLogManager.cs:949–949](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L949-L949)
+[Drilling.Common/Log/CLogManager.cs:949–949](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L949-L949)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5290,7 +5290,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveDirectory` · L951–957
 
-[Drilling.Common/Log/CLogManager.cs:951–957](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L951-L957)
+[Drilling.Common/Log/CLogManager.cs:951–957](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L951-L957)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5309,7 +5309,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L61-L61) | _fileScope.ResolveDirectory | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L61-L61) | _fileScope.ResolveDirectory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5345,7 +5345,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveFile` · L959–965
 
-[Drilling.Common/Log/CLogManager.cs:959–965](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L959-L965)
+[Drilling.Common/Log/CLogManager.cs:959–965](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L959-L965)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5364,7 +5364,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L146-L146) | _fileScope.ResolveFile | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L146-L146) | _fileScope.ResolveFile | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5402,7 +5402,7 @@ flowchart TD
 
 ### MethodDeclaration `IsLogFile` · L967–967
 
-[Drilling.Common/Log/CLogManager.cs:967–967](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L967-L967)
+[Drilling.Common/Log/CLogManager.cs:967–967](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L967-L967)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5421,8 +5421,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:962–962](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L962-L962) | IsLogFile | False |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L61-L61) | CLogFileScope.IsLogFile | False |
+| [Drilling.Common/Log/CLogManager.cs:962–962](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L962-L962) | IsLogFile | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L61-L61) | CLogFileScope.IsLogFile | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5442,7 +5442,7 @@ flowchart TD
 
 ### MethodDeclaration `IsAlarm` · L968–968
 
-[Drilling.Common/Log/CLogManager.cs:968–968](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L968-L968)
+[Drilling.Common/Log/CLogManager.cs:968–968](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L968-L968)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5461,7 +5461,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L61-L61) | CLogFileScope.IsAlarm | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L61-L61) | CLogFileScope.IsAlarm | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5481,7 +5481,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolvePath` · L969–988
 
-[Drilling.Common/Log/CLogManager.cs:969–988](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L969-L988)
+[Drilling.Common/Log/CLogManager.cs:969–988](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L969-L988)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5500,8 +5500,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:953–953](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L953-L953) | ResolvePath | False |
-| [Drilling.Common/Log/CLogManager.cs:961–961](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L961-L961) | ResolvePath | False |
+| [Drilling.Common/Log/CLogManager.cs:953–953](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L953-L953) | ResolvePath | False |
+| [Drilling.Common/Log/CLogManager.cs:961–961](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L961-L961) | ResolvePath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5570,7 +5570,7 @@ flowchart TD
 
 ### MethodDeclaration `RejectLink` · L990–994
 
-[Drilling.Common/Log/CLogManager.cs:990–994](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L990-L994)
+[Drilling.Common/Log/CLogManager.cs:990–994](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L990-L994)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5589,8 +5589,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:980–980](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L980-L980) | RejectLink | False |
-| [Drilling.Common/Log/CLogManager.cs:984–984](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L984-L984) | RejectLink | False |
+| [Drilling.Common/Log/CLogManager.cs:980–980](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L980-L980) | RejectLink | False |
+| [Drilling.Common/Log/CLogManager.cs:984–984](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L984-L984) | RejectLink | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5621,7 +5621,7 @@ flowchart TD
 
 ### FieldDeclaration `IdPattern` · L1001–1001
 
-[Drilling.Common/Log/CLogManager.cs:1001–1001](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1001-L1001)
+[Drilling.Common/Log/CLogManager.cs:1001–1001](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1001-L1001)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5649,7 +5649,7 @@ flowchart TD
 
 ### FieldDeclaration `ActionPattern` · L1002–1002
 
-[Drilling.Common/Log/CLogManager.cs:1002–1002](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1002-L1002)
+[Drilling.Common/Log/CLogManager.cs:1002–1002](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1002-L1002)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5677,7 +5677,7 @@ flowchart TD
 
 ### FieldDeclaration `ExceptionPattern` · L1003–1003
 
-[Drilling.Common/Log/CLogManager.cs:1003–1003](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1003-L1003)
+[Drilling.Common/Log/CLogManager.cs:1003–1003](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1003-L1003)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5705,7 +5705,7 @@ flowchart TD
 
 ### FieldDeclaration `RunIdPattern` · L1004–1004
 
-[Drilling.Common/Log/CLogManager.cs:1004–1004](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1004-L1004)
+[Drilling.Common/Log/CLogManager.cs:1004–1004](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1004-L1004)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5733,7 +5733,7 @@ flowchart TD
 
 ### FieldDeclaration `_addresses` · L1005–1005
 
-[Drilling.Common/Log/CLogManager.cs:1005–1005](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1005-L1005)
+[Drilling.Common/Log/CLogManager.cs:1005–1005](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1005-L1005)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5761,7 +5761,7 @@ flowchart TD
 
 ### FieldDeclaration `_signals` · L1006–1006
 
-[Drilling.Common/Log/CLogManager.cs:1006–1006](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1006-L1006)
+[Drilling.Common/Log/CLogManager.cs:1006–1006](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1006-L1006)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5789,7 +5789,7 @@ flowchart TD
 
 ### FieldDeclaration `_writes` · L1007–1007
 
-[Drilling.Common/Log/CLogManager.cs:1007–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1007-L1007)
+[Drilling.Common/Log/CLogManager.cs:1007–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1007-L1007)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5817,7 +5817,7 @@ flowchart TD
 
 ### FieldDeclaration `_glassByCycle` · L1008–1008
 
-[Drilling.Common/Log/CLogManager.cs:1008–1008](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1008-L1008)
+[Drilling.Common/Log/CLogManager.cs:1008–1008](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1008-L1008)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5845,7 +5845,7 @@ flowchart TD
 
 ### FieldDeclaration `_glassCycles` · L1009–1009
 
-[Drilling.Common/Log/CLogManager.cs:1009–1009](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1009-L1009)
+[Drilling.Common/Log/CLogManager.cs:1009–1009](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1009-L1009)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5873,7 +5873,7 @@ flowchart TD
 
 ### FieldDeclaration `_reviewCycle` · L1010–1010
 
-[Drilling.Common/Log/CLogManager.cs:1010–1010](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1010-L1010)
+[Drilling.Common/Log/CLogManager.cs:1010–1010](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1010-L1010)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5894,7 +5894,7 @@ flowchart TD
 
 ### FieldDeclaration `_reviewGlass` · L1010–1010
 
-[Drilling.Common/Log/CLogManager.cs:1010–1010](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1010-L1010)
+[Drilling.Common/Log/CLogManager.cs:1010–1010](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1010-L1010)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5915,7 +5915,7 @@ flowchart TD
 
 ### FieldDeclaration `ActionNames` · L1011–1044
 
-[Drilling.Common/Log/CLogManager.cs:1011–1044](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1011-L1044)
+[Drilling.Common/Log/CLogManager.cs:1011–1044](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1011-L1044)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5974,7 +5974,7 @@ flowchart TD
 
 ### MethodDeclaration `Format` · L1045–1096
 
-[Drilling.Common/Log/CLogManager.cs:1045–1096](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1045-L1096)
+[Drilling.Common/Log/CLogManager.cs:1045–1096](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1045-L1096)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5995,7 +5995,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:814–814](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L814-L814) | _sequenceText.Format | False |
+| [Drilling.Common/Log/CLogManager.cs:814–814](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L814-L814) | _sequenceText.Format | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6115,7 +6115,7 @@ flowchart TD
 
 ### MethodDeclaration `RememberGlass` · L1098–1107
 
-[Drilling.Common/Log/CLogManager.cs:1098–1107](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1098-L1107)
+[Drilling.Common/Log/CLogManager.cs:1098–1107](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1098-L1107)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6135,8 +6135,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:1068–1068](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1068-L1068) | RememberGlass | False |
-| [Drilling.Common/Log/CLogManager.cs:1072–1072](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1072-L1072) | RememberGlass | False |
+| [Drilling.Common/Log/CLogManager.cs:1068–1068](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1068-L1068) | RememberGlass | False |
+| [Drilling.Common/Log/CLogManager.cs:1072–1072](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1072-L1072) | RememberGlass | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6178,7 +6178,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatCore` · L1109–1273
 
-[Drilling.Common/Log/CLogManager.cs:1109–1273](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1109-L1273)
+[Drilling.Common/Log/CLogManager.cs:1109–1273](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1109-L1273)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6199,7 +6199,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:1073–1073](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1073-L1073) | FormatCore | False |
+| [Drilling.Common/Log/CLogManager.cs:1073–1073](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1073-L1073) | FormatCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6800,7 +6800,7 @@ flowchart TD
 
 ### MethodDeclaration `CommonFlow` · L1275–1330
 
-[Drilling.Common/Log/CLogManager.cs:1275–1330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1275-L1330)
+[Drilling.Common/Log/CLogManager.cs:1275–1330](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1275-L1330)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6819,7 +6819,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:1235–1235](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1235-L1235) | CommonFlow | False |
+| [Drilling.Common/Log/CLogManager.cs:1235–1235](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1235-L1235) | CommonFlow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7013,7 +7013,7 @@ flowchart TD
 
 ### MethodDeclaration `Signal` · L1332–1357
 
-[Drilling.Common/Log/CLogManager.cs:1332–1357](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1332-L1357)
+[Drilling.Common/Log/CLogManager.cs:1332–1357](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1332-L1357)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7034,16 +7034,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:1141–1141](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1141-L1141) | Signal | False |
-| [Drilling.Common/Log/CLogManager.cs:1145–1145](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1145-L1145) | Signal | False |
-| [Drilling.Common/Log/CLogManager.cs:1147–1147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1147-L1147) | Signal | False |
-| [Drilling.Common/Log/CLogManager.cs:1149–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1149-L1149) | Signal | False |
-| [Drilling.Common/Log/CLogManager.cs:1162–1162](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1162-L1162) | Signal | False |
-| [Drilling.Common/Log/CLogManager.cs:1162–1162](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1162-L1162) | Signal | False |
-| [Drilling.Common/Log/CLogManager.cs:1174–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1174-L1174) | Signal | False |
-| [Drilling.Common/Log/CLogManager.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1295-L1295) | Signal | False |
-| [Drilling.Common/Log/CLogManager.cs:1299–1299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1299-L1299) | Signal | False |
-| [Drilling.Common/Log/CLogManager.cs:1301–1301](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1301-L1301) | Signal | False |
+| [Drilling.Common/Log/CLogManager.cs:1141–1141](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1141-L1141) | Signal | False |
+| [Drilling.Common/Log/CLogManager.cs:1145–1145](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1145-L1145) | Signal | False |
+| [Drilling.Common/Log/CLogManager.cs:1147–1147](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1147-L1147) | Signal | False |
+| [Drilling.Common/Log/CLogManager.cs:1149–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1149-L1149) | Signal | False |
+| [Drilling.Common/Log/CLogManager.cs:1162–1162](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1162-L1162) | Signal | False |
+| [Drilling.Common/Log/CLogManager.cs:1162–1162](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1162-L1162) | Signal | False |
+| [Drilling.Common/Log/CLogManager.cs:1174–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1174-L1174) | Signal | False |
+| [Drilling.Common/Log/CLogManager.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1295-L1295) | Signal | False |
+| [Drilling.Common/Log/CLogManager.cs:1299–1299](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1299-L1299) | Signal | False |
+| [Drilling.Common/Log/CLogManager.cs:1301–1301](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1301-L1301) | Signal | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7127,7 +7127,7 @@ flowchart TD
 
 ### MethodDeclaration `Data` · L1359–1368
 
-[Drilling.Common/Log/CLogManager.cs:1359–1368](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1359-L1368)
+[Drilling.Common/Log/CLogManager.cs:1359–1368](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1359-L1368)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7148,8 +7148,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:1199–1199](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1199-L1199) | Data | False |
-| [Drilling.Common/Log/CLogManager.cs:1201–1201](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1201-L1201) | Data | False |
+| [Drilling.Common/Log/CLogManager.cs:1199–1199](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1199-L1199) | Data | False |
+| [Drilling.Common/Log/CLogManager.cs:1201–1201](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1201-L1201) | Data | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7200,7 +7200,7 @@ flowchart TD
 
 ### MethodDeclaration `Address` · L1370–1370
 
-[Drilling.Common/Log/CLogManager.cs:1370–1370](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1370-L1370)
+[Drilling.Common/Log/CLogManager.cs:1370–1370](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1370-L1370)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7219,13 +7219,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:1303–1303](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1303-L1303) | Address | False |
-| [Drilling.Common/Log/CLogManager.cs:1356–1356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1356-L1356) | Address | False |
-| [Drilling.Common/Log/CLogManager.cs:1363–1363](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1363-L1363) | Address | False |
-| [Drilling.Common/Log/CLogManager.cs:1364–1364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1364-L1364) | Address | False |
-| [Drilling.Common/Log/CLogManager.cs:1365–1365](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1365-L1365) | Address | False |
-| [Drilling.Common/Log/CLogManager.cs:1366–1366](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1366-L1366) | Address | False |
-| [Drilling.Common/Log/CLogManager.cs:1367–1367](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1367-L1367) | Address | False |
+| [Drilling.Common/Log/CLogManager.cs:1303–1303](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1303-L1303) | Address | False |
+| [Drilling.Common/Log/CLogManager.cs:1356–1356](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1356-L1356) | Address | False |
+| [Drilling.Common/Log/CLogManager.cs:1363–1363](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1363-L1363) | Address | False |
+| [Drilling.Common/Log/CLogManager.cs:1364–1364](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1364-L1364) | Address | False |
+| [Drilling.Common/Log/CLogManager.cs:1365–1365](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1365-L1365) | Address | False |
+| [Drilling.Common/Log/CLogManager.cs:1366–1366](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1366-L1366) | Address | False |
+| [Drilling.Common/Log/CLogManager.cs:1367–1367](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1367-L1367) | Address | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7244,7 +7244,7 @@ flowchart TD
 
 ### MethodDeclaration `OnOff` · L1371–1377
 
-[Drilling.Common/Log/CLogManager.cs:1371–1377](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1371-L1377)
+[Drilling.Common/Log/CLogManager.cs:1371–1377](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1371-L1377)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7263,12 +7263,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:1209–1209](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1209-L1209) | OnOff | False |
-| [Drilling.Common/Log/CLogManager.cs:1209–1209](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1209-L1209) | OnOff | False |
-| [Drilling.Common/Log/CLogManager.cs:1303–1303](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1303-L1303) | OnOff | False |
-| [Drilling.Common/Log/CLogManager.cs:1356–1356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1356-L1356) | OnOff | False |
-| [Drilling.Common/Log/CLogManager.cs:1364–1364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1364-L1364) | OnOff | False |
-| [Drilling.Common/Log/CLogManager.cs:1366–1366](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1366-L1366) | OnOff | False |
+| [Drilling.Common/Log/CLogManager.cs:1209–1209](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1209-L1209) | OnOff | False |
+| [Drilling.Common/Log/CLogManager.cs:1209–1209](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1209-L1209) | OnOff | False |
+| [Drilling.Common/Log/CLogManager.cs:1303–1303](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1303-L1303) | OnOff | False |
+| [Drilling.Common/Log/CLogManager.cs:1356–1356](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1356-L1356) | OnOff | False |
+| [Drilling.Common/Log/CLogManager.cs:1364–1364](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1364-L1364) | OnOff | False |
+| [Drilling.Common/Log/CLogManager.cs:1366–1366](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1366-L1366) | OnOff | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -7289,7 +7289,7 @@ flowchart TD
 
 ### MethodDeclaration `Duration` · L1378–1378
 
-[Drilling.Common/Log/CLogManager.cs:1378–1378](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1378-L1378)
+[Drilling.Common/Log/CLogManager.cs:1378–1378](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1378-L1378)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7308,8 +7308,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:1137–1137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1137-L1137) | Duration | False |
-| [Drilling.Common/Log/CLogManager.cs:1314–1314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1314-L1314) | Duration | False |
+| [Drilling.Common/Log/CLogManager.cs:1137–1137](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1137-L1137) | Duration | False |
+| [Drilling.Common/Log/CLogManager.cs:1314–1314](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1314-L1314) | Duration | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7328,7 +7328,7 @@ flowchart TD
 
 ### MethodDeclaration `NumberAfterId` · L1379–1379
 
-[Drilling.Common/Log/CLogManager.cs:1379–1379](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1379-L1379)
+[Drilling.Common/Log/CLogManager.cs:1379–1379](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1379-L1379)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7348,7 +7348,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:1199–1199](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1199-L1199) | NumberAfterId | False |
+| [Drilling.Common/Log/CLogManager.cs:1199–1199](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1199-L1199) | NumberAfterId | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7367,7 +7367,7 @@ flowchart TD
 
 ### MethodDeclaration `Reason` · L1380–1386
 
-[Drilling.Common/Log/CLogManager.cs:1380–1386](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1380-L1386)
+[Drilling.Common/Log/CLogManager.cs:1380–1386](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1380-L1386)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7386,12 +7386,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:1137–1137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1137-L1137) | Reason | False |
-| [Drilling.Common/Log/CLogManager.cs:1145–1145](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1145-L1145) | Reason | False |
-| [Drilling.Common/Log/CLogManager.cs:1149–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1149-L1149) | Reason | False |
-| [Drilling.Common/Log/CLogManager.cs:1180–1180](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1180-L1180) | Reason | False |
-| [Drilling.Common/Log/CLogManager.cs:1201–1201](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1201-L1201) | Reason | False |
-| [Drilling.Common/Log/CLogManager.cs:1328–1328](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1328-L1328) | Reason | False |
+| [Drilling.Common/Log/CLogManager.cs:1137–1137](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1137-L1137) | Reason | False |
+| [Drilling.Common/Log/CLogManager.cs:1145–1145](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1145-L1145) | Reason | False |
+| [Drilling.Common/Log/CLogManager.cs:1149–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1149-L1149) | Reason | False |
+| [Drilling.Common/Log/CLogManager.cs:1180–1180](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1180-L1180) | Reason | False |
+| [Drilling.Common/Log/CLogManager.cs:1201–1201](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1201-L1201) | Reason | False |
+| [Drilling.Common/Log/CLogManager.cs:1328–1328](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1328-L1328) | Reason | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7427,7 +7427,7 @@ flowchart TD
 
 ### MethodDeclaration `Field` · L1388–1396
 
-[Drilling.Common/Log/CLogManager.cs:1388–1396](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1388-L1396)
+[Drilling.Common/Log/CLogManager.cs:1388–1396](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1388-L1396)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7447,49 +7447,49 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:1047–1047](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1047-L1047) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1049–1049](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1049-L1049) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1058–1058](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1058-L1058) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1060–1060](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1060-L1060) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1119–1119](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1119-L1119) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1123–1123](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1123-L1123) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1141–1141](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1141-L1141) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1145–1145](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1145-L1145) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1147–1147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1147-L1147) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1147–1147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1147-L1147) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1149–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1149-L1149) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1155–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1155-L1155) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1157–1157](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1157-L1157) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1158–1158](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1158-L1158) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1162–1162](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1162-L1162) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1162–1162](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1162-L1162) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1178–1178](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1178-L1178) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1203–1203](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1203-L1203) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1203–1203](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1203-L1203) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1203–1203](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1203-L1203) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1205–1205](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1205-L1205) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1207–1207](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1207-L1207) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1209–1209](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1209-L1209) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1209–1209](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1209-L1209) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1213–1213](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1213-L1213) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1215–1215](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1215-L1215) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1219–1219](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1219-L1219) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1223–1223](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1223-L1223) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1254–1254](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1254-L1254) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1254–1254](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1254-L1254) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1285–1285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1285-L1285) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1290–1290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1290-L1290) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1299–1299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1299-L1299) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1301–1301](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1301-L1301) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1303–1303](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1303-L1303) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1318–1318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1318-L1318) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1318–1318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1318-L1318) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1318–1318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1318-L1318) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1318–1318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1318-L1318) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1322–1322](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1322-L1322) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1326–1326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1326-L1326) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1378–1378](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1378-L1378) | Field | False |
-| [Drilling.Common/Log/CLogManager.cs:1379–1379](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1379-L1379) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1047–1047](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1047-L1047) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1049–1049](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1049-L1049) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1058–1058](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1058-L1058) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1060–1060](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1060-L1060) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1119–1119](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1119-L1119) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1123–1123](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1123-L1123) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1141–1141](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1141-L1141) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1145–1145](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1145-L1145) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1147–1147](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1147-L1147) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1147–1147](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1147-L1147) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1149–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1149-L1149) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1155–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1155-L1155) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1157–1157](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1157-L1157) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1158–1158](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1158-L1158) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1162–1162](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1162-L1162) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1162–1162](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1162-L1162) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1178–1178](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1178-L1178) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1203–1203](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1203-L1203) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1203–1203](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1203-L1203) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1203–1203](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1203-L1203) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1205–1205](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1205-L1205) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1207–1207](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1207-L1207) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1209–1209](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1209-L1209) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1209–1209](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1209-L1209) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1213–1213](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1213-L1213) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1215–1215](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1215-L1215) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1219–1219](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1219-L1219) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1223–1223](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1223-L1223) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1254–1254](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1254-L1254) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1254–1254](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1254-L1254) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1285–1285](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1285-L1285) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1290–1290](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1290-L1290) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1299–1299](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1299-L1299) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1301–1301](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1301-L1301) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1303–1303](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1303-L1303) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1318–1318](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1318-L1318) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1318–1318](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1318-L1318) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1318–1318](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1318-L1318) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1318–1318](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1318-L1318) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1322–1322](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1322-L1322) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1326–1326](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1326-L1326) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1378–1378](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1378-L1378) | Field | False |
+| [Drilling.Common/Log/CLogManager.cs:1379–1379](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1379-L1379) | Field | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7529,7 +7529,7 @@ flowchart TD
 
 ### MethodDeclaration `ProcessText` · L1398–1398
 
-[Drilling.Common/Log/CLogManager.cs:1398–1398](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1398-L1398)
+[Drilling.Common/Log/CLogManager.cs:1398–1398](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1398-L1398)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7548,7 +7548,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:1233–1233](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1233-L1233) | ProcessText | False |
+| [Drilling.Common/Log/CLogManager.cs:1233–1233](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1233-L1233) | ProcessText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7610,7 +7610,7 @@ flowchart TD
 
 ### FieldDeclaration `PageCharacterLimit` · L1405–1405
 
-[Drilling.Common/Log/CLogManager.cs:1405–1405](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1405-L1405)
+[Drilling.Common/Log/CLogManager.cs:1405–1405](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1405-L1405)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7631,7 +7631,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAllAsync` · L1408–1411
 
-[Drilling.Common/Log/CLogManager.cs:1408–1411](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1408-L1411)
+[Drilling.Common/Log/CLogManager.cs:1408–1411](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1408-L1411)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7666,7 +7666,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAllAsync` · L1413–1453
 
-[Drilling.Common/Log/CLogManager.cs:1413–1453](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1413-L1453)
+[Drilling.Common/Log/CLogManager.cs:1413–1453](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1413-L1453)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7687,8 +7687,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:1410–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1410-L1410) | ReadAllAsync | False |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L146-L146) | CLogTextReader.ReadAllAsync | False |
+| [Drilling.Common/Log/CLogManager.cs:1410–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1410-L1410) | ReadAllAsync | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L146-L146) | CLogTextReader.ReadAllAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7808,7 +7808,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadPage` · L1455–1485
 
-[Drilling.Common/Log/CLogManager.cs:1455–1485](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1455-L1485)
+[Drilling.Common/Log/CLogManager.cs:1455–1485](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1455-L1485)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7932,7 +7932,7 @@ flowchart TD
 
 ### MethodDeclaration `DetectEncoding` · L1487–1500
 
-[Drilling.Common/Log/CLogManager.cs:1487–1500](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1487-L1500)
+[Drilling.Common/Log/CLogManager.cs:1487–1500](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1487-L1500)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7951,8 +7951,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:1426–1426](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1426-L1426) | DetectEncoding | False |
-| [Drilling.Common/Log/CLogManager.cs:1466–1466](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1466-L1466) | DetectEncoding | False |
+| [Drilling.Common/Log/CLogManager.cs:1426–1426](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1426-L1426) | DetectEncoding | False |
+| [Drilling.Common/Log/CLogManager.cs:1466–1466](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1466-L1466) | DetectEncoding | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8018,7 +8018,7 @@ flowchart TD
 
 ### PropertyDeclaration `LogDirectory` · L1512–1518
 
-[Drilling.Common/Log/CLogManager.cs:1512–1518](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1512-L1518)
+[Drilling.Common/Log/CLogManager.cs:1512–1518](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1512-L1518)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8033,7 +8033,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_LogDirectory` · L1514–1517
 
-[Drilling.Common/Log/CLogManager.cs:1514–1517](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1514-L1517)
+[Drilling.Common/Log/CLogManager.cs:1514–1517](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1514-L1517)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8063,7 +8063,7 @@ flowchart TD
 
 ### PropertyDeclaration `LogPath` · L1520–1526
 
-[Drilling.Common/Log/CLogManager.cs:1520–1526](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1520-L1526)
+[Drilling.Common/Log/CLogManager.cs:1520–1526](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1520-L1526)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8078,7 +8078,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_LogPath` · L1522–1525
 
-[Drilling.Common/Log/CLogManager.cs:1522–1525](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1522-L1525)
+[Drilling.Common/Log/CLogManager.cs:1522–1525](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1522-L1525)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8106,7 +8106,7 @@ flowchart TD
 
 ### MethodDeclaration `Write` · L1528–1531
 
-[Drilling.Common/Log/CLogManager.cs:1528–1531](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1528-L1531)
+[Drilling.Common/Log/CLogManager.cs:1528–1531](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1528-L1531)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8126,13 +8126,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L239-L239) | CProgramOpenLog.Write | False |
-| [Drilling.Common/Managers/CManager.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L254-L254) | CProgramOpenLog.Write | False |
-| [Drilling.Common/Managers/CManager.cs:262–262](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L262-L262) | CProgramOpenLog.Write | False |
-| [Drilling.Common/Managers/CManager.cs:275–275](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Managers/CManager.cs#L275-L275) | CProgramOpenLog.Write | False |
-| [Drilling.UI/CApp.xaml.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L41-L41) | CProgramOpenLog.Write | False |
-| [Drilling.UI/CApp.xaml.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L68-L68) | CProgramOpenLog.Write | False |
-| [Drilling.UI/CAppStartup.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CAppStartup.cs#L47-L47) | CProgramOpenLog.Write | False |
+| [Drilling.Common/Managers/CManager.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Managers/CManager.cs#L239-L239) | CProgramOpenLog.Write | False |
+| [Drilling.Common/Managers/CManager.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Managers/CManager.cs#L254-L254) | CProgramOpenLog.Write | False |
+| [Drilling.Common/Managers/CManager.cs:262–262](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Managers/CManager.cs#L262-L262) | CProgramOpenLog.Write | False |
+| [Drilling.Common/Managers/CManager.cs:275–275](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Managers/CManager.cs#L275-L275) | CProgramOpenLog.Write | False |
+| [Drilling.UI/CApp.xaml.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L41-L41) | CProgramOpenLog.Write | False |
+| [Drilling.UI/CApp.xaml.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L68-L68) | CProgramOpenLog.Write | False |
+| [Drilling.UI/CAppStartup.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CAppStartup.cs#L47-L47) | CProgramOpenLog.Write | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8152,7 +8152,7 @@ flowchart TD
 
 ### MethodDeclaration `Write` · L1533–1544
 
-[Drilling.Common/Log/CLogManager.cs:1533–1544](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1533-L1544)
+[Drilling.Common/Log/CLogManager.cs:1533–1544](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1533-L1544)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8172,11 +8172,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:1530–1530](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1530-L1530) | Write | False |
-| [Drilling.UI/CApp.xaml.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L29-L29) | CProgramOpenLog.Write | False |
-| [Drilling.UI/CApp.xaml.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L37-L37) | CProgramOpenLog.Write | False |
-| [Drilling.UI/CApp.xaml.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L62-L62) | CProgramOpenLog.Write | False |
-| [Drilling.UI/CAppStartup.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CAppStartup.cs#L112-L112) | CProgramOpenLog.Write | False |
+| [Drilling.Common/Log/CLogManager.cs:1530–1530](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1530-L1530) | Write | False |
+| [Drilling.UI/CApp.xaml.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L29-L29) | CProgramOpenLog.Write | False |
+| [Drilling.UI/CApp.xaml.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L37-L37) | CProgramOpenLog.Write | False |
+| [Drilling.UI/CApp.xaml.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L62-L62) | CProgramOpenLog.Write | False |
+| [Drilling.UI/CAppStartup.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CAppStartup.cs#L112-L112) | CProgramOpenLog.Write | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8209,7 +8209,7 @@ flowchart TD
 
 ### MethodDeclaration `FindProjectRoot` · L1546–1560
 
-[Drilling.Common/Log/CLogManager.cs:1546–1560](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1546-L1560)
+[Drilling.Common/Log/CLogManager.cs:1546–1560](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1546-L1560)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8222,7 +8222,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Log/CLogManager.cs:1516–1516](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Log/CLogManager.cs#L1516-L1516) | FindProjectRoot | False |
+| [Drilling.Common/Log/CLogManager.cs:1516–1516](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Log/CLogManager.cs#L1516-L1516) | FindProjectRoot | False |
 
 호출하는 대상과 해석 범위:
 

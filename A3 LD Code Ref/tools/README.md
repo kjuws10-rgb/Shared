@@ -33,9 +33,9 @@ python tools\build_reference.py --source D:\A3RefWork\source-readonly --model D:
 python tools\validate_reference.py --source D:\A3RefWork\source-readonly --output D:\A3RefWork\staging\A3Ref --report D:\A3RefWork\validation.json
 ```
 
-첫 추출은 코드 전체를 한 문서 분석용 부분 컴파일로 구성합니다. WPF·벤더 SDK·프로젝트별 정식 빌드를 재현하지 않습니다. 따라서 분석 진단 수를 장비 빌드 오류 수로 보고하면 안 됩니다. 로컬 함수는 원본 경로/선언 위치를 ID에 포함해 동명 함수가 섞이지 않게 합니다. 18개 추출기 합성 회귀검사에는 동명 로컬 함수, record·primary constructor·partial·init, enum/operator/indexer 및 다중 필드 초기화 호출·연산 소속 검사가 포함됩니다. Python 합성 회귀 11개는 XAML 이벤트/생성 필드 후보, 민감 셀 미복제, 원문 복원과 생성 출력의 선택 자료 분리, 물리 CRLF→LF 정규화와 EOL 마커 앞 원문 공백 보존, 추가 XAML 이벤트 5종과 PasswordChanged, 생성기 목록과 독립된 XML 검증, 코드 비하인드 EventArgs 핸들러 후보, 원본/수동 입력과 출력의 양방향 중첩 차단, backtick/tilde 코드 블록과 같은 문자로 된 닫기 경계를 임시 fixture에서 확인합니다.
+첫 추출은 코드 전체를 한 문서 분석용 부분 컴파일로 구성합니다. WPF·벤더 SDK·프로젝트별 정식 빌드를 재현하지 않습니다. 따라서 분석 진단 수를 장비 빌드 오류 수로 보고하면 안 됩니다. 로컬 함수는 원본 경로/선언 위치를 ID에 포함해 동명 함수가 섞이지 않게 합니다. 18개 추출기 합성 회귀검사에는 동명 로컬 함수, record·primary constructor·partial·init, enum/operator/indexer 및 다중 필드 초기화 호출·연산 소속 검사가 포함됩니다. 기존 Python 합성 회귀 11개는 XAML 이벤트/생성 필드 후보, 민감 셀 미복제, 원문 복원과 생성 출력의 선택 자료 분리, 물리 CRLF→LF 정규화와 EOL 마커 앞 원문 공백 보존, 추가 XAML 이벤트 5종과 PasswordChanged, 생성기 목록과 독립된 XML 검증, 코드 비하인드 EventArgs 핸들러 후보, 원본/수동 입력과 출력의 양방향 중첩 차단, backtick/tilde 코드 블록과 같은 문자로 된 닫기 경계를 임시 fixture에서 확인합니다.
 
-현재 문서 생성기는 1.1.4, 검증기는 1.1.3, Roslyn 추출기는 1.0.3입니다. manifest의 `generatorVersion`과 `extractorVersion`을 따로 기록합니다. 기존 UTF-8/LF·경로 중첩 차단과 PasswordChanged 보존을 유지하며, 생성기 1.1.4는 backtick과 tilde 코드 블록을 모두 HTML pre/code로 렌더링합니다. 검증기 1.1.3도 같은 문자·충분한 길이로 닫힌 두 종류의 코드 블록을 인식해 내부 예제 링크를 문서 이동 링크로 오인하지 않습니다. 비밀번호 값이나 입력 내용을 추출하는 변경이 아닙니다. 검증기는 생성기에서 가져오지 않는 독립 이벤트 목록과 기존 XML/코드 비하인드 EventArgs 후보 검사를 유지합니다. 이 후보는 런타임 이벤트 연결 확정이 아닙니다. 멤버 수는 명시적인 C# 원문 선언 기준이며 컴파일러가 합성하는 record 속성·primary constructor 멤버와 WPF 생성 필드를 원문 멤버로 주장하지 않습니다. XAML의 이름 있는 요소·이벤트·Binding은 원본 줄 범위를 포함해 `metadata/xaml/`에 별도로 보존합니다. 이 목록은 런타임 바인딩 성공을 증명하지 않습니다.
+현재 문서 생성기는 1.1.5, 검증기는 1.1.4, Roslyn 추출기는 1.0.3입니다. manifest의 `generatorVersion`과 `extractorVersion`을 따로 기록합니다. 기존 UTF-8/LF·경로 중첩 차단과 PasswordChanged 보존을 유지하며, 생성기 1.1.4는 backtick과 tilde 코드 블록을 모두 HTML pre/code로 렌더링합니다. 검증기 1.1.3도 같은 문자·충분한 길이로 닫힌 두 종류의 코드 블록을 인식해 내부 예제 링크를 문서 이동 링크로 오인하지 않습니다. 비밀번호 값이나 입력 내용을 추출하는 변경이 아닙니다. 검증기는 생성기에서 가져오지 않는 독립 이벤트 목록과 기존 XML/코드 비하인드 EventArgs 후보 검사를 유지합니다. 이 후보는 런타임 이벤트 연결 확정이 아닙니다. 멤버 수는 명시적인 C# 원문 선언 기준이며 컴파일러가 합성하는 record 속성·primary constructor 멤버와 WPF 생성 필드를 원문 멤버로 주장하지 않습니다. XAML의 이름 있는 요소·이벤트·Binding은 원본 줄 범위를 포함해 `metadata/xaml/`에 별도로 보존합니다. 이 목록은 런타임 바인딩 성공을 증명하지 않습니다.
 
 ## 검증과 게시
 
@@ -65,3 +65,12 @@ python tools\validate_reference.py --source D:\A3RefWork\source-readonly --outpu
 SDK 바이너리를 문서 본문에 복제하거나 역컴파일하지 않습니다. 운영/측정 CSV의 데이터 본문은 생략하고 스키마만 제공합니다. 이 자료를 첨부하는 것은 검색 지식을 갱신하는 것이며 모델 가중치를 학습시키는 동작이 아닙니다.
 
 CSV·bak 파일은 개별 문서/그림/목차에 포함하되 annotation 원문 사본을 만들지 않습니다. JHMI 정의 표는 앞 4개 정의 필드만 쓰고 인증 키가 있는 행은 제외하며 사설 IP가 있는 셀은 미복제로 표시합니다. 설정의 임의 텍스트 본문을 비밀값 탐지로 완전히 보호한다고 주장하지 않으므로 새 텍스트 설정은 게시 전에 별도 검토합니다. `Data/`에서 나온 검색 근거는 선택 Markdown으로 보내고 생성기 C# 원문은 기본 Markdown에 둡니다. JSONL에는 두 범위를 모두 보존합니다.
+
+
+## 1.1.5 · 운영 JSON과 대용량 자료 전송
+
+`Data/**/*.json`도 운영 자료로 분류합니다. 개별 문서·SVG·Commit/경로/크기/SHA·행 수는 유지하되 값과 원문 annotation을 만들지 않습니다. JSON의 식별자 형태 속성 경로·자료형만 제공합니다. 동적 키와 민감 이름은 치환하며 파싱 실패 시에도 원문으로 되돌아가 공개하지 않습니다. JSON 설정/정의가 `Data/` 밖에 있으면 기존 소스 정책을 따릅니다.
+
+생성 스크립트가 많이 추가되면 선택 Markdown을 8MB 전송 단위로 분할합니다. 기존 `A3_LD_Generated_Output_Optional.md`는 목차가 되고 `...-part-001.md`부터 연속 조각이 생깁니다. 작은 자료는 기존 단일 파일을 유지합니다. 근거 레코드 중간을 자르거나 자료를 버리지 않으며 JSONL에도 전량 남깁니다. 기본 코드 Markdown과 생성 스크립트 선택 자료의 구분은 유지합니다. 재생성은 빈 staging에서 수행하므로 옛 조각이 끼어들지 않습니다.
+
+추가 합성 회귀 3개를 포함해 Python은 현재 14개입니다. 운영 JSON 값·동적 키·깨진 JSON의 미공개, 조각별 순서/정확히 한 번 보존, 완전 생성→분할→검증 및 provenance/문자 변조 거절을 확인합니다. 검증기는 JSONL 원문/SHA/행 범위와 모든 Markdown 조각의 경로·범위·분류/건수를 독립 대조합니다. 이 도구 검증은 장비 통신·런타임 원자성·모델 정확도 시험이 아닙니다.

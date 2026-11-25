@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "a3-manual-refresh-validation/1",
+  "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
+  "passed": true,
+  "changeReason": "Additional independent source tracing identified a preexisting ProcessId/Product lifecycle linkage gap. Two explanatory notes were added after the full source/annotation/RAG audit; final section numbers were clarified.",
+  "priorManualRefreshReport": "manual-refresh-initial-validation.json",
+  "fullStaticBaselineReport": "static-validation.json",
+  "fullIndependentBaselineReport": "generator-independent-validation.json",
+  "changedOutputs": {
+    "manual/architecture/04-product-and-station-lifecycle.md": {
+      "beforeSha256": "f2ecf3a1acfcddd739eea70a6c399c8bb12300ed94dca7ecdeb7ce27805d3348",
+      "afterSha256": "a86d37722b4f491239d61f7205c22ed699d174e6b163b4fe9421bb2778cd1087"
+    },
+    "manual-html/architecture/04-product-and-station-lifecycle.md.html": {
+      "beforeSha256": "6b805240a344d072830a62e00fe92a3309e44cb6bc02e3bc5c50525cb9330210",
+      "afterSha256": "5c46c2b364960e23906bf83f223c8c6656bd115eb981b7d8545a2d942d17fb7c"
+    },
+    "manual/architecture/10-stage-glass-data-and-product-fields.md": {
+      "beforeSha256": "8a16d93afa5b74a8c5f4859a59640852ee8e4f5dad3370b0cac77ec726013c1a",
+      "afterSha256": "8a16d93afa5b74a8c5f4859a59640852ee8e4f5dad3370b0cac77ec726013c1a"
+    },
+    "manual-html/architecture/10-stage-glass-data-and-product-fields.md.html": {
+      "beforeSha256": "4ae5aa66bd1f38bd91278a549b5aa6be83764c112e8dc3df750bb8626daeb84d",
+      "afterSha256": "4ae5aa66bd1f38bd91278a549b5aa6be83764c112e8dc3df750bb8626daeb84d"
+    },
+    "offline-studio/A3_LD_Code_Ref_OfflineStudio.md": {
+      "beforeSha256": "9b58616e7d19a0a23d4d67dc1ca4db1cfa075742b845a2290dca335be40b528b",
+      "afterSha256": "e412fb50a6117298f8c30453ca4cf85b976c20dbf6a16780240394877a47123b"
+    }
+  },
+  "actualChangedOutputs": [
+    "manual-html/architecture/04-product-and-station-lifecycle.md.html",
+    "manual/architecture/04-product-and-station-lifecycle.md",
+    "offline-studio/A3_LD_Code_Ref_OfflineStudio.md"
+  ],
+  "onlyTwoManualsTwoHtmlAndPrimaryPrefixChanged": true,
+  "allOtherOutputFileNamesSizesAndTimestampsUnchanged": true,
+  "primaryAutomaticRagSuffixSha256Before": "390a0d34f82a8294d7b7605d417a01d930054ec89d958cbd091ee65eda91021b",
+  "primaryAutomaticRagSuffixSha256After": "390a0d34f82a8294d7b7605d417a01d930054ec89d958cbd091ee65eda91021b",
+  "primaryAutomaticSourceRecordsUnchanged": 21988,
+  "jsonlOptionalAnnotationAndMetadataNotWritten": true,
+  "newManualNoteHeadingsIncluded": true,
+  "documentationLocalLinksChecked": 212,
+  "documentationSourceRangesChecked": 693,
+  "syntaxAndSourceModelUnchanged": true,
+  "originalSourceModified": false,
+  "equipmentExecution": "not_run",
+  "equipmentBuild": "not_run",
+  "scope": "Targeted revalidation of all modified explanatory artifacts; full source/RAG/annotation evidence reused for unchanged artifacts, not re-run."
+}

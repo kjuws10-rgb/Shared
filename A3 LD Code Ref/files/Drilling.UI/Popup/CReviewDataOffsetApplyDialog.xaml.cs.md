@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 3742c6502d2bb6239b48667075e9888516f95b2effce223b8cd48e4130a40303 |
 | 파일 분류 | code |
 | 원본 크기/행 | 2,204 bytes / 73 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -39,7 +39,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L10–14
 
-[Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs:10–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs#L10-L14)
+[Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs:10–14](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs#L10-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -58,7 +58,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:104–107](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L104-L107) | new CReviewDataOffsetApplyDialog | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:104–107](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L104-L107) | new CReviewDataOffsetApplyDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -77,7 +77,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `ShotMap_MouseLeftButtonDown` · L16–28
 
-[Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs:16–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs#L16-L28)
+[Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs:16–28](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs#L16-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -129,7 +129,7 @@ flowchart TD
 
 ### MethodDeclaration `OffsetPreviewGrid_SelectionChanged` · L30–39
 
-[Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs:30–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs#L30-L39)
+[Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs:30–39](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs#L30-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -174,7 +174,7 @@ flowchart TD
 
 ### MethodDeclaration `ScrollSelectedRow` · L41–51
 
-[Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs:41–51](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs#L41-L51)
+[Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs:41–51](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs#L41-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -193,7 +193,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs#L26-L26) | ScrollSelectedRow | False |
+| [Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs#L26-L26) | ScrollSelectedRow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -225,7 +225,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveClicked` · L53–59
 
-[Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs:53–59](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs#L53-L59)
+[Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs:53–59](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs#L53-L59)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -263,7 +263,7 @@ flowchart TD
 
 ### MethodDeclaration `CancelClicked` · L61–64
 
-[Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs:61–64](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs#L61-L64)
+[Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs:61–64](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs#L61-L64)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -291,7 +291,7 @@ flowchart TD
 
 ### MethodDeclaration `OnKeyDown` · L66–72
 
-[Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs:66–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs#L66-L72)
+[Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs:66–72](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs#L66-L72)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs
-Commit: 334b3599651b2e8e0181fd4459bafaf3cddafff3
+Commit: 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Popup
@@ -307,8 +307,8 @@ L000156 |             } ⟦EOL⟧
 L000157 |  ⟦EOL⟧
 // 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.GetCachedSnapshot(out var map) / 지역 변수를 선언합니다: var values = interfaces.Melsec.GetCachedSnapshot(out var map); / 변수의 초기값을 지정합니다: values = interfaces.Melsec.GetCachedSnapshot(out var map)
 L000158 |             var values = interfaces.Melsec.GetCachedSnapshot(out var map); ⟦EOL⟧
-// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: map.Where(row => CMelsec.IsStageFlowSimulationSignal(row) || CMelsec.IsStageSimulationSignal(row) || CMelsec.IsStageAlignSimulationSignal(row) || CMelsec.IsStageProtectWindowSimulationSignal(row) || CMelsec.IsDistortionM… / 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageFlowSimulationSignal(row) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageSimulationSignal(row) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageAlignSimulationSignal(row) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageProtectWindowSimulationSignal(row) / 함수·
-L000159 |             var signals = map.Where(row => CMelsec.IsStageFlowSimulationSignal(row) || CMelsec.IsStageSimulationSignal(row) || CMelsec.IsStageAlignSimulationSignal(row) || CMelsec.IsStageProtectWindowSimulationSignal(row) || CMelsec.IsDistortionMeasurementSimulationValue(row)).OrderBy(row => ScenarioOrder(row.Group)).ThenBy(row => row.DeviceNo).ThenBy(row => SignalOrder(row.Id)).ThenBy(row => row.Id).ToArray(); ⟦EOL⟧
+// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: map.Where(row => CMelsec.IsStageGlassDataSimulationValue(row) || CMelsec.IsStageFlowSimulationSignal(row) || CMelsec.IsStageSimulationSignal(row) || CMelsec.IsStageAlignSimulationSignal(row) || CMelsec.IsStageProtectWind… / 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageGlassDataSimulationValue(row) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageFlowSimulationSignal(row) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageSimulationSignal(row) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageAlignSimulationSignal(row) / 함수·델리게이트
+L000159 |             var signals = map.Where(row => CMelsec.IsStageGlassDataSimulationValue(row) || CMelsec.IsStageFlowSimulationSignal(row) || CMelsec.IsStageSimulationSignal(row) || CMelsec.IsStageAlignSimulationSignal(row) || CMelsec.IsStageProtectWindowSimulationSignal(row) || CMelsec.IsDistortionMeasurementSimulationValue(row)).OrderBy(row => ScenarioOrder(row.Group)).ThenBy(row => row.DeviceNo).ThenBy(row => SignalOrder(row.Id)).ThenBy(row => row.Id).ToArray(); ⟦EOL⟧
 // 해설 L160: 함수·델리게이트 또는 객체 생성자를 호출합니다: _map.SequenceEqual(signals) / 조건에 따라 분기합니다: if (!_map.SequenceEqual(signals))
 L000160 |             if (!_map.SequenceEqual(signals)) ⟦EOL⟧
 // 해설 L161: 구문 블록 경계입니다 · 소속 Refresh.
@@ -319,497 +319,545 @@ L000162 |                 _map = signals; ⟦EOL⟧
 L000163 |                 Rows.Clear(); ⟦EOL⟧
 // 해설 L164: 컬렉션 요소를 순회합니다: foreach (var signal in signals)
 L000164 |                 foreach (var signal in signals) ⟦EOL⟧
-// 해설 L165: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Add(new(signal, value => { if (CMelsec.IsStageAlignSimulationSignal(signal)) interfaces.Melsec.SetStageAlignSimulationValue(signal.Id, value); else if (CMelsec.IsStageProtectWindowSimulationSignal(signal)) interface… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(signal, value => { if (CMelsec.IsStageAlignSimulationSignal(signal)) interfaces.Melsec.SetStageAlignSimulationValue(signal.Id, value); else if (CMelsec.IsStageProtectWindowSimulationSignal(signal)) interfaces.Melsec.…
+// 해설 L165: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Add(new(signal, value => { if (CMelsec.IsStageGlassDataSimulationValue(signal)) interfaces.Melsec.SetStageGlassDataSimulationValue(signal.Id, value.ToString(CultureInfo.InvariantCulture)); else if (CMelsec.IsStageAl… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(signal, value => { if (CMelsec.IsStageGlassDataSimulationValue(signal)) interfaces.Melsec.SetStageGlassDataSimulationValue(signal.Id, value.ToString(CultureInfo.InvariantCulture)); else if (CMelsec.IsStageAlignSimula…
 L000165 |                     Rows.Add(new(signal, value => ⟦EOL⟧
 // 해설 L166: 구문 블록 경계입니다 · 소속 Refresh.
 L000166 |                     { ⟦EOL⟧
-// 해설 L167: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageAlignSimulationSignal(signal) / 조건에 따라 분기합니다: if (CMelsec.IsStageAlignSimulationSignal(signal))
-L000167 |                         if (CMelsec.IsStageAlignSimulationSignal(signal)) ⟦EOL⟧
-// 해설 L168: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.SetStageAlignSimulationValue(signal.Id, value)
-L000168 |                             interfaces.Melsec.SetStageAlignSimulationValue(signal.Id, value); ⟦EOL⟧
-// 해설 L169: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageProtectWindowSimulationSignal(signal) / 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (CMelsec.IsStageProtectWindowSimulationSignal(signal))
-L000169 |                         else if (CMelsec.IsStageProtectWindowSimulationSignal(signal)) ⟦EOL⟧
-// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.SetStageProtectWindowSimulationValue(signal.Id, value)
-L000170 |                             interfaces.Melsec.SetStageProtectWindowSimulationValue(signal.Id, value); ⟦EOL⟧
-// 해설 L171: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageFlowSimulationSignal(signal) / 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (CMelsec.IsStageFlowSimulationSignal(signal))
-L000171 |                         else if (CMelsec.IsStageFlowSimulationSignal(signal)) ⟦EOL⟧
-// 해설 L172: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.SetStageFlowSimulationValue(signal.Id, value)
-L000172 |                             interfaces.Melsec.SetStageFlowSimulationValue(signal.Id, value); ⟦EOL⟧
-// 해설 L173: 앞 조건이 거짓인 경로입니다: else
-L000173 |                         else ⟦EOL⟧
-// 해설 L174: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.SetStageSimulationSignal(signal.Id, value == 1)
-L000174 |                             interfaces.Melsec.SetStageSimulationSignal(signal.Id, value == 1); ⟦EOL⟧
-// 해설 L175: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.SetDistortionMeasurementSimulationValue(signal.Id, value)
-L000175 |                     }, setMeasurement: value => interfaces.Melsec.SetDistortionMeasurementSimulationValue(signal.Id, value))); ⟦EOL⟧
-// 해설 L176: 구문 블록 경계입니다 · 소속 Refresh.
-L000176 |             } ⟦EOL⟧
-L000177 |  ⟦EOL⟧
-// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).ToDictionary(row => row.Number) / 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec) / 지역 변수를 선언합니다: var connections = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).ToDictionary(row => row.Number); / 변수의 초기값을 지정합니다: connections = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).ToDictionary(row => row.Number)
-L000178 |             var connections = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).ToDictionary(row => row.Number); ⟦EOL⟧
-// 해설 L179: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(" | ", signals.Select(row => row.DeviceNo).Distinct().Select(number => { var state = connections.TryGetValue(number, out var status) ? status.IsSimulation ? "SIMULATION" : status.ConnectionState.ToString().To… / 함수·델리게이트 또는 객체 생성자를 호출합니다: signals.Select(row => row.DeviceNo).Distinct().Select(number => { var state = connections.TryGetValue(number, out var status) ? status.IsSimulation ? "SIMULATION" : status.ConnectionState.ToString().ToUpperInvariant() : … / 함수·델리게이트 또는 객체 생성자를 호출합니다: signals.Sel
-L000179 |             var text = string.Join("   |   ", signals.Select(row => row.DeviceNo).Distinct().Select(number => ⟦EOL⟧
-// 해설 L180: 구문 블록 경계입니다 · 소속 Refresh.
-L000180 |             { ⟦EOL⟧
-// 해설 L181: 함수·델리게이트 또는 객체 생성자를 호출합니다: connections.TryGetValue(number, out var status) / 함수·델리게이트 또는 객체 생성자를 호출합니다: status.ConnectionState.ToString().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: status.ConnectionState.ToString() / 조건에 따라 결과식을 선택합니다: connections.TryGetValue(number, out var status) ? status.IsSimulation ? "SIMULATION" : status.ConnectionState.ToString().ToUpperInvariant() : "OFFLINE" / 조건에 따라 결과식을 선택합니다: status.IsSimulation ? "SIMULATION" : status.ConnectionState.ToString().ToUpperInvariant() / 지역 변수를 선언합니다: var state = connecti
-L000181 |                 var state = connections.TryGetValue(number, out var status) ? status.IsSimulation ? "SIMULATION" : status.ConnectionState.ToString().ToUpperInvariant() : "OFFLINE"; ⟦EOL⟧
-// 해설 L182: 호출자에게 값 또는 제어를 반환합니다: return $"MELSEC_{number} : {state}";
-L000182 |                 return $"MELSEC_{number} : {state}"; ⟦EOL⟧
-// 해설 L183: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationPanel.Refresh()
-L000183 |             })); ⟦EOL⟧
-// 해설 L184: 조건에 따라 분기합니다: if (text.Length == 0)
-L000184 |             if (text.Length == 0) ⟦EOL⟧
-// 해설 L185: 값을 대상에 대입합니다: text = "등록된 Stage 수신 신호가 없습니다."
-L000185 |                 text = "등록된 Stage 수신 신호가 없습니다."; ⟦EOL⟧
-// 해설 L186: 조건에 따라 분기합니다: if (_connectionText != text)
-L000186 |             if (_connectionText != text) ⟦EOL⟧
-// 해설 L187: 구문 블록 경계입니다 · 소속 Refresh.
-L000187 |             { ⟦EOL⟧
-// 해설 L188: 값을 대상에 대입합니다: _connectionText = text
-L000188 |                 _connectionText = text; ⟦EOL⟧
-// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(ConnectionText))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(ConnectionText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ConnectionText)
-L000189 |                 PropertyChanged?.Invoke(this, new(nameof(ConnectionText))); ⟦EOL⟧
+// 해설 L167: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageGlassDataSimulationValue(signal) / 조건에 따라 분기합니다: if (CMelsec.IsStageGlassDataSimulationValue(signal))
+L000167 |                         if (CMelsec.IsStageGlassDataSimulationValue(signal)) ⟦EOL⟧
+// 해설 L168: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.SetStageGlassDataSimulationValue(signal.Id, value.ToString(CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString(CultureInfo.InvariantCulture)
+L000168 |                             interfaces.Melsec.SetStageGlassDataSimulationValue(signal.Id, value.ToString(CultureInfo.InvariantCulture)); ⟦EOL⟧
+// 해설 L169: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageAlignSimulationSignal(signal) / 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (CMelsec.IsStageAlignSimulationSignal(signal))
+L000169 |                         else if (CMelsec.IsStageAlignSimulationSignal(signal)) ⟦EOL⟧
+// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.SetStageAlignSimulationValue(signal.Id, value)
+L000170 |                             interfaces.Melsec.SetStageAlignSimulationValue(signal.Id, value); ⟦EOL⟧
+// 해설 L171: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageProtectWindowSimulationSignal(signal) / 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (CMelsec.IsStageProtectWindowSimulationSignal(signal))
+L000171 |                         else if (CMelsec.IsStageProtectWindowSimulationSignal(signal)) ⟦EOL⟧
+// 해설 L172: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.SetStageProtectWindowSimulationValue(signal.Id, value)
+L000172 |                             interfaces.Melsec.SetStageProtectWindowSimulationValue(signal.Id, value); ⟦EOL⟧
+// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageFlowSimulationSignal(signal) / 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (CMelsec.IsStageFlowSimulationSignal(signal))
+L000173 |                         else if (CMelsec.IsStageFlowSimulationSignal(signal)) ⟦EOL⟧
+// 해설 L174: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.SetStageFlowSimulationValue(signal.Id, value)
+L000174 |                             interfaces.Melsec.SetStageFlowSimulationValue(signal.Id, value); ⟦EOL⟧
+// 해설 L175: 앞 조건이 거짓인 경로입니다: else
+L000175 |                         else ⟦EOL⟧
+// 해설 L176: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.SetStageSimulationSignal(signal.Id, value == 1)
+L000176 |                             interfaces.Melsec.SetStageSimulationSignal(signal.Id, value == 1); ⟦EOL⟧
+// 해설 L177: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.SetDistortionMeasurementSimulationValue(signal.Id, value)
+L000177 |                     }, setMeasurement: value => interfaces.Melsec.SetDistortionMeasurementSimulationValue(signal.Id, value), ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.Melsec.SetStageGlassDataSimulationValue(signal.Id, value)
+L000178 |                         setText: value => interfaces.Melsec.SetStageGlassDataSimulationValue(signal.Id, value))); ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 Refresh.
+L000179 |             } ⟦EOL⟧
+L000180 |  ⟦EOL⟧
+// 해설 L181: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).ToDictionary(row => row.Number) / 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec) / 지역 변수를 선언합니다: var connections = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).ToDictionary(row => row.Number); / 변수의 초기값을 지정합니다: connections = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).ToDictionary(row => row.Number)
+L000181 |             var connections = interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).ToDictionary(row => row.Number); ⟦EOL⟧
+// 해설 L182: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(" | ", signals.Select(row => row.DeviceNo).Distinct().Select(number => { var state = connections.TryGetValue(number, out var status) ? status.IsSimulation ? "SIMULATION" : status.ConnectionState.ToString().To… / 함수·델리게이트 또는 객체 생성자를 호출합니다: signals.Select(row => row.DeviceNo).Distinct().Select(number => { var state = connections.TryGetValue(number, out var status) ? status.IsSimulation ? "SIMULATION" : status.ConnectionState.ToString().ToUpperInvariant() : … / 함수·델리게이트 또는 객체 생성자를 호출합니다: signals.Sel
+L000182 |             var text = string.Join("   |   ", signals.Select(row => row.DeviceNo).Distinct().Select(number => ⟦EOL⟧
+// 해설 L183: 구문 블록 경계입니다 · 소속 Refresh.
+L000183 |             { ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: connections.TryGetValue(number, out var status) / 함수·델리게이트 또는 객체 생성자를 호출합니다: status.ConnectionState.ToString().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: status.ConnectionState.ToString() / 조건에 따라 결과식을 선택합니다: connections.TryGetValue(number, out var status) ? status.IsSimulation ? "SIMULATION" : status.ConnectionState.ToString().ToUpperInvariant() : "OFFLINE" / 조건에 따라 결과식을 선택합니다: status.IsSimulation ? "SIMULATION" : status.ConnectionState.ToString().ToUpperInvariant() / 지역 변수를 선언합니다: var state = connecti
+L000184 |                 var state = connections.TryGetValue(number, out var status) ? status.IsSimulation ? "SIMULATION" : status.ConnectionState.ToString().ToUpperInvariant() : "OFFLINE"; ⟦EOL⟧
+// 해설 L185: 호출자에게 값 또는 제어를 반환합니다: return $"MELSEC_{number} : {state}";
+L000185 |                 return $"MELSEC_{number} : {state}"; ⟦EOL⟧
+// 해설 L186: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationPanel.Refresh()
+L000186 |             })); ⟦EOL⟧
+// 해설 L187: 조건에 따라 분기합니다: if (text.Length == 0)
+L000187 |             if (text.Length == 0) ⟦EOL⟧
+// 해설 L188: 값을 대상에 대입합니다: text = "등록된 Stage 수신 신호가 없습니다."
+L000188 |                 text = "등록된 Stage 수신 신호가 없습니다."; ⟦EOL⟧
+// 해설 L189: 조건에 따라 분기합니다: if (_connectionText != text)
+L000189 |             if (_connectionText != text) ⟦EOL⟧
 // 해설 L190: 구문 블록 경계입니다 · 소속 Refresh.
-L000190 |             } ⟦EOL⟧
-L000191 |  ⟦EOL⟧
-// 해설 L192: 컬렉션 요소를 순회합니다: foreach (var row in Rows)
-L000192 |             foreach (var row in Rows) ⟦EOL⟧
+L000190 |             { ⟦EOL⟧
+// 해설 L191: 값을 대상에 대입합니다: _connectionText = text
+L000191 |                 _connectionText = text; ⟦EOL⟧
+// 해설 L192: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(ConnectionText))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(ConnectionText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ConnectionText)
+L000192 |                 PropertyChanged?.Invoke(this, new(nameof(ConnectionText))); ⟦EOL⟧
 // 해설 L193: 구문 블록 경계입니다 · 소속 Refresh.
-L000193 |             { ⟦EOL⟧
-// 해설 L194: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(row.Id, out var sample)
-L000194 |                 values.TryGetValue(row.Id, out var sample); ⟦EOL⟧
-// 해설 L195: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Refresh(sample, interfaces.IsSimul(EN_EQP_MODULE.Melsec, row.DeviceNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.IsSimul(EN_EQP_MODULE.Melsec, row.DeviceNo)
-L000195 |                 row.Refresh(sample, interfaces.IsSimul(EN_EQP_MODULE.Melsec, row.DeviceNo)); ⟦EOL⟧
+L000193 |             } ⟦EOL⟧
+L000194 |  ⟦EOL⟧
+// 해설 L195: 컬렉션 요소를 순회합니다: foreach (var row in Rows)
+L000195 |             foreach (var row in Rows) ⟦EOL⟧
 // 해설 L196: 구문 블록 경계입니다 · 소속 Refresh.
-L000196 |             } ⟦EOL⟧
-L000197 |  ⟦EOL⟧
-// 해설 L198: 조건에 따라 분기합니다: if (_lastCanSeed != CanSeedMeasurements)
-L000198 |             if (_lastCanSeed != CanSeedMeasurements) ⟦EOL⟧
+L000196 |             { ⟦EOL⟧
+// 해설 L197: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(row.Id, out var sample)
+L000197 |                 values.TryGetValue(row.Id, out var sample); ⟦EOL⟧
+// 해설 L198: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Refresh(sample, interfaces.IsSimul(EN_EQP_MODULE.Melsec, row.DeviceNo)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.IsSimul(EN_EQP_MODULE.Melsec, row.DeviceNo)
+L000198 |                 row.Refresh(sample, interfaces.IsSimul(EN_EQP_MODULE.Melsec, row.DeviceNo)); ⟦EOL⟧
 // 해설 L199: 구문 블록 경계입니다 · 소속 Refresh.
-L000199 |             { ⟦EOL⟧
-// 해설 L200: 값을 대상에 대입합니다: _lastCanSeed = CanSeedMeasurements
-L000200 |                 _lastCanSeed = CanSeedMeasurements; ⟦EOL⟧
-// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(CanSeedMeasurements))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(CanSeedMeasurements)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanSeedMeasurements)
-L000201 |                 PropertyChanged?.Invoke(this, new(nameof(CanSeedMeasurements))); ⟦EOL⟧
-// 해설 L202: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
-L000202 |                 _seedMeasurements?.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L203: 구문 블록 경계입니다 · 소속 Refresh.
-L000203 |             } ⟦EOL⟧
-// 해설 L204: 조건에 따라 분기합니다: if (_lastCanChangeReplies != CanChangeAutomaticReplies)
-L000204 |             if (_lastCanChangeReplies != CanChangeAutomaticReplies) ⟦EOL⟧
-// 해설 L205: 구문 블록 경계입니다 · 소속 Refresh.
-L000205 |             { ⟦EOL⟧
-// 해설 L206: 값을 대상에 대입합니다: _lastCanChangeReplies = CanChangeAutomaticReplies
-L000206 |                 _lastCanChangeReplies = CanChangeAutomaticReplies; ⟦EOL⟧
-// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(CanChangeAutomaticReplies))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(CanChangeAutomaticReplies)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanChangeAutomaticReplies)
-L000207 |                 PropertyChanged?.Invoke(this, new(nameof(CanChangeAutomaticReplies))); ⟦EOL⟧
+L000199 |             } ⟦EOL⟧
+L000200 |  ⟦EOL⟧
+// 해설 L201: 조건에 따라 분기합니다: if (_lastCanSeed != CanSeedMeasurements)
+L000201 |             if (_lastCanSeed != CanSeedMeasurements) ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 Refresh.
+L000202 |             { ⟦EOL⟧
+// 해설 L203: 값을 대상에 대입합니다: _lastCanSeed = CanSeedMeasurements
+L000203 |                 _lastCanSeed = CanSeedMeasurements; ⟦EOL⟧
+// 해설 L204: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(CanSeedMeasurements))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(CanSeedMeasurements)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanSeedMeasurements)
+L000204 |                 PropertyChanged?.Invoke(this, new(nameof(CanSeedMeasurements))); ⟦EOL⟧
+// 해설 L205: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000205 |                 _seedMeasurements?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L206: 구문 블록 경계입니다 · 소속 Refresh.
+L000206 |             } ⟦EOL⟧
+// 해설 L207: 조건에 따라 분기합니다: if (_lastCanChangeReplies != CanChangeAutomaticReplies)
+L000207 |             if (_lastCanChangeReplies != CanChangeAutomaticReplies) ⟦EOL⟧
 // 해설 L208: 구문 블록 경계입니다 · 소속 Refresh.
-L000208 |             } ⟦EOL⟧
-L000209 |  ⟦EOL⟧
-// 해설 L210: 조건에 따라 분기합니다: if (_lastAutomaticReplies != AutomaticReplies)
-L000210 |             if (_lastAutomaticReplies != AutomaticReplies) ⟦EOL⟧
+L000208 |             { ⟦EOL⟧
+// 해설 L209: 값을 대상에 대입합니다: _lastCanChangeReplies = CanChangeAutomaticReplies
+L000209 |                 _lastCanChangeReplies = CanChangeAutomaticReplies; ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(CanChangeAutomaticReplies))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(CanChangeAutomaticReplies)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanChangeAutomaticReplies)
+L000210 |                 PropertyChanged?.Invoke(this, new(nameof(CanChangeAutomaticReplies))); ⟦EOL⟧
 // 해설 L211: 구문 블록 경계입니다 · 소속 Refresh.
-L000211 |             { ⟦EOL⟧
-// 해설 L212: 값을 대상에 대입합니다: _lastAutomaticReplies = AutomaticReplies
-L000212 |                 _lastAutomaticReplies = AutomaticReplies; ⟦EOL⟧
-// 해설 L213: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(AutomaticReplies))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(AutomaticReplies)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(AutomaticReplies)
-L000213 |                 PropertyChanged?.Invoke(this, new(nameof(AutomaticReplies))); ⟦EOL⟧
+L000211 |             } ⟦EOL⟧
+L000212 |  ⟦EOL⟧
+// 해설 L213: 조건에 따라 분기합니다: if (_lastAutomaticReplies != AutomaticReplies)
+L000213 |             if (_lastAutomaticReplies != AutomaticReplies) ⟦EOL⟧
 // 해설 L214: 구문 블록 경계입니다 · 소속 Refresh.
-L000214 |             } ⟦EOL⟧
-// 해설 L215: 구문 블록 경계입니다 · 소속 Refresh.
-L000215 |         } ⟦EOL⟧
-L000216 |  ⟦EOL⟧
-// 해설 L217: 함수·델리게이트 또는 객체 생성자를 호출합니다: group.ToUpperInvariant() / 값별 결과식을 선택합니다: group.ToUpperInvariant() switch { "DISTORTION" => -2, "VISION_DISTORTION_DATA" => -1, "IF_DOREADY" => 0, "IF_PROCESS" => 1, "IF_REVIEW" => 2, "IF_TOP_POWERMETER" => 3, "IF_PROCESS_MOVE" => 4, "IF_IOF" => 5, "IF_ALIGN" => 6, "IF_PT
-L000217 |         private static int ScenarioOrder(string group) => group.ToUpperInvariant() switch ⟦EOL⟧
-// 해설 L218: 구문 블록 경계입니다 · 소속 ScenarioOrder.
-L000218 |         { ⟦EOL⟧
-// 해설 L219: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string)
-L000219 |             "DISTORTION" => -2, ⟦EOL⟧
-// 해설 L220: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string)
-L000220 |             "VISION_DISTORTION_DATA" => -1, ⟦EOL⟧
-// 해설 L221: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string)
-L000221 |             "IF_DOREADY" => 0, ⟦EOL⟧
+L000214 |             { ⟦EOL⟧
+// 해설 L215: 값을 대상에 대입합니다: _lastAutomaticReplies = AutomaticReplies
+L000215 |                 _lastAutomaticReplies = AutomaticReplies; ⟦EOL⟧
+// 해설 L216: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(AutomaticReplies))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(AutomaticReplies)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(AutomaticReplies)
+L000216 |                 PropertyChanged?.Invoke(this, new(nameof(AutomaticReplies))); ⟦EOL⟧
+// 해설 L217: 구문 블록 경계입니다 · 소속 Refresh.
+L000217 |             } ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 Refresh.
+L000218 |         } ⟦EOL⟧
+L000219 |  ⟦EOL⟧
+// 해설 L220: 함수·델리게이트 또는 객체 생성자를 호출합니다: group.ToUpperInvariant() / 값별 결과식을 선택합니다: group.ToUpperInvariant() switch { "STAGE_GLASS_DATA" => -3, "DISTORTION" => -2, "VISION_DISTORTION_DATA" => -1, "IF_DOREADY" => 0, "IF_PROCESS" => 1, "IF_REVIEW" => 2, "IF_TOP_POWERMETER" => 3, "IF_PROCESS_MOVE" => 4, "IF_IOF" =>
+L000220 |         private static int ScenarioOrder(string group) => group.ToUpperInvariant() switch ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 ScenarioOrder.
+L000221 |         { ⟦EOL⟧
 // 해설 L222: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string)
-L000222 |             "IF_PROCESS" => 1, ⟦EOL⟧
+L000222 |             "STAGE_GLASS_DATA" => -3, ⟦EOL⟧
 // 해설 L223: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string)
-L000223 |             "IF_REVIEW" => 2, ⟦EOL⟧
+L000223 |             "DISTORTION" => -2, ⟦EOL⟧
 // 해설 L224: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string)
-L000224 |             "IF_TOP_POWERMETER" => 3, ⟦EOL⟧
+L000224 |             "VISION_DISTORTION_DATA" => -1, ⟦EOL⟧
 // 해설 L225: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string)
-L000225 |             "IF_PROCESS_MOVE" => 4, ⟦EOL⟧
+L000225 |             "IF_DOREADY" => 0, ⟦EOL⟧
 // 해설 L226: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string)
-L000226 |             "IF_IOF" => 5, ⟦EOL⟧
+L000226 |             "IF_PROCESS" => 1, ⟦EOL⟧
 // 해설 L227: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string)
-L000227 |             "IF_ALIGN" => 6, ⟦EOL⟧
+L000227 |             "IF_REVIEW" => 2, ⟦EOL⟧
 // 해설 L228: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string)
-L000228 |             "IF_PTW" => 7, ⟦EOL⟧
+L000228 |             "IF_TOP_POWERMETER" => 3, ⟦EOL⟧
 // 해설 L229: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string)
-L000229 |             _ => 8 ⟦EOL⟧
-// 해설 L230: 구문 블록 경계입니다 · 소속 ScenarioOrder.
-L000230 |         }; ⟦EOL⟧
-// 해설 L231: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Equals("SDC_DO_ALIGN_STATUS", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Equals("SDC_DO_ALIGN_COMPLETE", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_ABLE", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_START", StringComparison.OrdinalIgnoreCase) / 조건에 따라 결과식을 선택합니다: id.Equals("SDC_DO_ALIGN_STATUS", StringComparison.OrdinalIgnoreCase) ? 0 : id.Equals("SDC_DO_ALIGN_COMPLETE", StringComparison.OrdinalIgnoreCase) ? 1
-L000231 |         private static int SignalOrder(string id) => id.Equals("SDC_DO_ALIGN_STATUS", StringComparison.OrdinalIgnoreCase) ? 0 : id.Equals("SDC_DO_ALIGN_COMPLETE", StringComparison.OrdinalIgnoreCase) ? 1 : id.Contains("_ABLE", StringComparison.OrdinalIgnoreCase) ? 0 : id.Contains("_START", StringComparison.OrdinalIgnoreCase) ? 1 : 2; ⟦EOL⟧
-// 해설 L232: 구문 블록 경계입니다.
-L000232 |     } ⟦EOL⟧
-L000233 |  ⟦EOL⟧
-// 해설 L234: 타입의 구조/상속 선언입니다: public sealed class CMelsecStageSimulationRow : INotifyPropertyChanged
-L000234 |     public sealed class CMelsecStageSimulationRow : INotifyPropertyChanged ⟦EOL⟧
-// 해설 L235: 구문 블록 경계입니다.
-L000235 |     { ⟦EOL⟧
-// 해설 L236: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CMelsecStageSimulationRow._canSet
-L000236 |         private bool _canSet; ⟦EOL⟧
-// 해설 L237: 변수의 초기값을 지정합니다: _currentValue = "—"
-L000237 |         private string _currentValue = "—"; ⟦EOL⟧
-// 해설 L238: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CMelsecStageSimulationRow._inputValue
-L000238 |         private string _inputValue; ⟦EOL⟧
-// 해설 L239: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Popup.CMelsecStageSimulationRow._readScale
-L000239 |         private readonly double _readScale; ⟦EOL⟧
-// 해설 L240: 변수의 초기값을 지정합니다: _stateBrush = Brushes.Gray
-L000240 |         private Brush _stateBrush = Brushes.Gray; ⟦EOL⟧
-// 해설 L241: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Popup.CMelsecStageSimulationRow.PropertyChanged
-L000241 |         public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
-// 해설 L242: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CMelsecStageSimulationRow.Id
-L000242 |         public string Id { get; } ⟦EOL⟧
-// 해설 L243: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CMelsecStageSimulationRow.DeviceNo
-L000243 |         public int DeviceNo { get; } ⟦EOL⟧
-// 해설 L244: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CMelsecStageSimulationRow.Scenario
-L000244 |         public string Scenario { get; } ⟦EOL⟧
-// 해설 L245: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CMelsecStageSimulationRow.Name
-L000245 |         public string Name { get; } ⟦EOL⟧
-// 해설 L246: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CMelsecStageSimulationRow.Address
-L000246 |         public string Address { get; } ⟦EOL⟧
-// 해설 L247: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CMelsecStageSimulationRow.Description
-L000247 |         public string Description { get; } ⟦EOL⟧
-// 해설 L248: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CMelsecStageSimulationRow.CurrentValue
-L000248 |         public string CurrentValue => _currentValue; ⟦EOL⟧
-// 해설 L249: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Popup.CMelsecStageSimulationRow.StateBrush
-L000249 |         public Brush StateBrush => _stateBrush; ⟦EOL⟧
-// 해설 L250: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CMelsecStageSimulationRow.CanSet
-L000250 |         public bool CanSet => _canSet; ⟦EOL⟧
-// 해설 L251: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsNumeric
-L000251 |         public bool IsNumeric { get; } ⟦EOL⟧
-// 해설 L252: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsCount
-L000252 |         public bool IsCount { get; } ⟦EOL⟧
-// 해설 L253: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsMeasurement
-L000253 |         public bool IsMeasurement { get; } ⟦EOL⟧
-// 해설 L254: 조건에 따라 결과식을 선택합니다: IsMeasurement ? "mm 단위의 부호 포함 숫자 (소수 입력 가능)" : "원시 정수: 0~65535"
-L000254 |         public string InputHint => IsMeasurement ? "mm 단위의 부호 포함 숫자 (소수 입력 가능)" : "원시 정수: 0~65535"; ⟦EOL⟧
-// 해설 L255: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsAlignBusyWord
-L000255 |         public bool IsAlignBusyWord { get; } ⟦EOL⟧
-L000256 |  ⟦EOL⟧
-// 해설 L257: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CMelsecStageSimulationRow.InputValue
-L000257 |         public string InputValue ⟦EOL⟧
-// 해설 L258: 구문 블록 경계입니다 · 소속 InputValue.
-L000258 |         { ⟦EOL⟧
-// 해설 L259: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CMelsecStageSimulationRow.InputValue.get
-L000259 |             get => _inputValue; ⟦EOL⟧
-// 해설 L260: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.InputValue.set
-L000260 |             set ⟦EOL⟧
-// 해설 L261: 구문 블록 경계입니다 · 소속 set_InputValue.
-L000261 |             { ⟦EOL⟧
-// 해설 L262: 조건에 따라 분기합니다: if (_inputValue == value)
-L000262 |                 if (_inputValue == value) ⟦EOL⟧
-// 해설 L263: 호출자에게 값 또는 제어를 반환합니다: return;
-L000263 |                     return; ⟦EOL⟧
-// 해설 L264: 값을 대상에 대입합니다: _inputValue = value
-L000264 |                 _inputValue = value; ⟦EOL⟧
-// 해설 L265: 함수·델리게이트 또는 객체 생성자를 호출합니다: Changed()
-L000265 |                 Changed(); ⟦EOL⟧
-// 해설 L266: 구문 블록 경계입니다 · 소속 set_InputValue.
-L000266 |             } ⟦EOL⟧
-// 해설 L267: 구문 블록 경계입니다 · 소속 InputValue.
-L000267 |         } ⟦EOL⟧
-L000268 |  ⟦EOL⟧
-// 해설 L269: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationRow.SetOnCommand
-L000269 |         public CButtonCommand SetOnCommand { get; } ⟦EOL⟧
-// 해설 L270: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationRow.SetOffCommand
-L000270 |         public CButtonCommand SetOffCommand { get; } ⟦EOL⟧
-// 해설 L271: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationRow.SetValueCommand
-L000271 |         public CButtonCommand SetValueCommand { get; } ⟦EOL⟧
-L000272 |  ⟦EOL⟧
-// 해설 L273: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000273 |         public CMelsecStageSimulationRow(ST_MELSEC_MAP_DATA data, Action<int> set, Action<string>? showWarning = null, Action<double>? setMeasurement = null) ⟦EOL⟧
-// 해설 L274: 구문 블록 경계입니다 · 소속 .ctor.
-L000274 |         { ⟦EOL⟧
-// 해설 L275: 값을 대상에 대입합니다: Id = data.Id
-L000275 |             Id = data.Id; ⟦EOL⟧
-// 해설 L276: 값을 대상에 대입합니다: IsMeasurement = CMelsec.IsDistortionMeasurementSimulationValue(data) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsDistortionMeasurementSimulationValue(data)
-L000276 |             IsMeasurement = CMelsec.IsDistortionMeasurementSimulationValue(data); ⟦EOL⟧
-// 해설 L277: 값을 대상에 대입합니다: DeviceNo = data.DeviceNo
-L000277 |             DeviceNo = data.DeviceNo; ⟦EOL⟧
-// 해설 L278: 값을 대상에 대입합니다: Scenario = data.Group.ToUpperInvariant() switch { "DISTORTION" => "Distortion", "VISION_DISTORTION_DATA" => "Distortion Data", "IF_DOREADY" => "DoReady", "IF_PROCESS" => "Process", "IF_REVIEW" => "Review", "IF_TOP_POWERMETER" => " / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Group.ToUpperInvariant() / 값별 결과식을 선택합니다: data.Group.ToUpperInvariant() switch { "DISTORTION" => "Distortion", "VISION_DISTORTION_DATA" => "Distortion Data", "IF_DOREADY" => "DoReady", "IF_PROCESS" => "Process", "IF_REVIEW" => "Review", "IF_TOP_POWERMETER" => "
-L000278 |             Scenario = data.Group.ToUpperInvariant() switch ⟦EOL⟧
-// 해설 L279: 구문 블록 경계입니다 · 소속 .ctor.
-L000279 |             { ⟦EOL⟧
-// 해설 L280: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000280 |                 "DISTORTION" => "Distortion", ⟦EOL⟧
-// 해설 L281: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000281 |                 "VISION_DISTORTION_DATA" => "Distortion Data", ⟦EOL⟧
-// 해설 L282: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000282 |                 "IF_DOREADY" => "DoReady", ⟦EOL⟧
-// 해설 L283: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000283 |                 "IF_PROCESS" => "Process", ⟦EOL⟧
-// 해설 L284: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000284 |                 "IF_REVIEW" => "Review", ⟦EOL⟧
-// 해설 L285: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000285 |                 "IF_TOP_POWERMETER" => "TPM", ⟦EOL⟧
-// 해설 L286: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000286 |                 "IF_PROCESS_MOVE" => "Process / Move", ⟦EOL⟧
-// 해설 L287: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000287 |                 "IF_IOF" => "IOF", ⟦EOL⟧
-// 해설 L288: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000288 |                 "IF_ALIGN" => "Align", ⟦EOL⟧
-// 해설 L289: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000289 |                 "IF_PTW" => "Protect Window", ⟦EOL⟧
-// 해설 L290: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000290 |                 _ => data.Group ⟦EOL⟧
-// 해설 L291: 구문 블록 경계입니다 · 소속 .ctor.
-L000291 |             }; ⟦EOL⟧
-// 해설 L292: 값을 대상에 대입합니다: IsCount = data.Id.Equals(CMelsec.StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals(CMelsec.StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase)
-L000292 |             IsCount = data.Id.Equals(CMelsec.StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
-// 해설 L293: 값을 대상에 대입합니다: IsAlignBusyWord = data.Id.Equals(CMelsec.StageAlignBusyWordId, StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals(CMelsec.StageAlignBusyWordId, StringComparison.OrdinalIgnoreCase)
-L000293 |             IsAlignBusyWord = data.Id.Equals(CMelsec.StageAlignBusyWordId, StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
-// 해설 L294: 값을 대상에 대입합니다: Name = data.Id switch { "IPS_REVIEW_CONTROL_MODE_X" => "Review X Permit", "IPS_REVIEW_CONTROL_MODE_Y" => "Stage Y Permit", "IPS_IOF_READ_COMPLETE" => "IOF Read Done", "IPS_IOF_BUFFER_RUN_COMPLETE" => "IOF Buffer Done", CMelsec.Sta / 값별 결과식을 선택합니다: data.Id switch { "IPS_REVIEW_CONTROL_MODE_X" => "Review X Permit", "IPS_REVIEW_CONTROL_MODE_Y" => "Stage Y Permit", "IPS_IOF_READ_COMPLETE" => "IOF Read Done", "IPS_IOF_BUFFER_RUN_COMPLETE" => "IOF Buffer Done", CMelsec.StageAlign
-L000294 |             Name = data.Id switch ⟦EOL⟧
-// 해설 L295: 구문 블록 경계입니다 · 소속 .ctor.
-L000295 |             { ⟦EOL⟧
-// 해설 L296: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000296 |                 "IPS_REVIEW_CONTROL_MODE_X" => "Review X Permit", ⟦EOL⟧
-// 해설 L297: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000297 |                 "IPS_REVIEW_CONTROL_MODE_Y" => "Stage Y Permit", ⟦EOL⟧
-// 해설 L298: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000298 |                 "IPS_IOF_READ_COMPLETE" => "IOF Read Done", ⟦EOL⟧
-// 해설 L299: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000299 |                 "IPS_IOF_BUFFER_RUN_COMPLETE" => "IOF Buffer Done", ⟦EOL⟧
-// 해설 L300: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000300 |                 CMelsec.StageAlignBusyWordId => "ALIGN BUSY (bit 1)", ⟦EOL⟧
-// 해설 L301: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000301 |                 CMelsec.StageProtectWindowCountId => "Tray Count", ⟦EOL⟧
-// 해설 L302: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000302 |                 CMelsec.StageProtectWindowCompleteId => "교체완료 신호", ⟦EOL⟧
-// 해설 L303: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000303 |                 _ => data.Name ⟦EOL⟧
-// 해설 L304: 구문 블록 경계입니다 · 소속 .ctor.
-L000304 |             }; ⟦EOL⟧
-// 해설 L305: 조건에 따라 분기합니다: if (IsMeasurement)
-L000305 |             if (IsMeasurement) ⟦EOL⟧
-// 해설 L306: 구문 블록 경계입니다 · 소속 .ctor.
-L000306 |             { ⟦EOL⟧
-// 해설 L307: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Split('_') / 함수·델리게이트 또는 객체 생성자를 호출합니다: int.Parse(parts[1].AsSpan(3), CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: parts[1].AsSpan(3) / 지역 변수를 선언합니다: var parts = data.Id.Split('_'); / 지역 변수를 선언합니다: var position = int.Parse(parts[1].AsSpan(3), CultureInfo.InvariantCulture); / 변수의 초기값을 지정합니다: parts = data.Id.Split('_') / 변수의 초기값을 지정합니다: position = int.Parse(parts[1].AsSpan(3), CultureInfo.InvariantCulture)
-L000307 |                 var parts = data.Id.Split('_'); var position = int.Parse(parts[1].AsSpan(3), CultureInfo.InvariantCulture); ⟦EOL⟧
-// 해설 L308: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.Parse(parts[2].AsSpan(3, 1), CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: parts[2].AsSpan(3, 1) / 지역 변수를 선언합니다: var camera = int.Parse(parts[2].AsSpan(3, 1), CultureInfo.InvariantCulture); / 지역 변수를 선언합니다: var axis = data.Id[^1]; / 변수의 초기값을 지정합니다: camera = int.Parse(parts[2].AsSpan(3, 1), CultureInfo.InvariantCulture) / 변수의 초기값을 지정합니다: axis = data.Id[^1]
-L000308 |                 var camera = int.Parse(parts[2].AsSpan(3, 1), CultureInfo.InvariantCulture); var axis = data.Id[^1]; ⟦EOL⟧
-// 해설 L309: 값을 대상에 대입합니다: Name = position == 0 ? $"AK{camera} {axis} (mm)" : $"Group {position - 1} / DK{(position - 1) * 2 + (camera == 2 ? 1 : 2)} {axis} (mm)" / 조건에 따라 결과식을 선택합니다: position == 0 ? $"AK{camera} {axis} (mm)" : $"Group {position - 1} / DK{(position - 1) * 2 + (camera == 2 ? 1 : 2)} {axis} (mm)" / 조건에 따라 결과식을 선택합니다: camera == 2 ? 1 : 2
-L000309 |                 Name = position == 0 ? $"AK{camera} {axis} (mm)" : $"Group {position - 1} / DK{(position - 1) * 2 + (camera == 2 ? 1 : 2)} {axis} (mm)"; ⟦EOL⟧
-// 해설 L310: 구문 블록 경계입니다 · 소속 .ctor.
-L000310 |             } ⟦EOL⟧
-// 해설 L311: 값을 대상에 대입합니다: Address = CMelsec.IsSimulationOnlyRoute(data) ? $"MELSEC_{data.DeviceNo} / SIM ONLY" : $"MELSEC_{data.DeviceNo} / {data.Address}" / 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsSimulationOnlyRoute(data) / 조건에 따라 결과식을 선택합니다: CMelsec.IsSimulationOnlyRoute(data) ? $"MELSEC_{data.DeviceNo} / SIM ONLY" : $"MELSEC_{data.DeviceNo} / {data.Address}"
-L000311 |             Address = CMelsec.IsSimulationOnlyRoute(data) ? $"MELSEC_{data.DeviceNo} / SIM ONLY" : $"MELSEC_{data.DeviceNo} / {data.Address}"; ⟦EOL⟧
-// 해설 L312: 값을 대상에 대입합니다: Description = data.Description
-L000312 |             Description = data.Description; ⟦EOL⟧
-// 해설 L313: 값을 대상에 대입합니다: IsNumeric = CMelsec.IsStageAlignSimulationSignal(data) || IsCount || IsMeasurement / 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageAlignSimulationSignal(data)
-L000313 |             IsNumeric = CMelsec.IsStageAlignSimulationSignal(data) || IsCount || IsMeasurement; ⟦EOL⟧
-// 해설 L314: 값을 대상에 대입합니다: _inputValue = IsMeasurement ? "0" : IsAlignBusyWord ? "2" : IsNumeric && !IsCount ? "10000" : "0" / 조건에 따라 결과식을 선택합니다: IsMeasurement ? "0" : IsAlignBusyWord ? "2" : IsNumeric && !IsCount ? "10000" : "0" / 조건에 따라 결과식을 선택합니다: IsAlignBusyWord ? "2" : IsNumeric && !IsCount ? "10000" : "0" / 조건에 따라 결과식을 선택합니다: IsNumeric && !IsCount ? "10000" : "0"
-L000314 |             _inputValue = IsMeasurement ? "0" : IsAlignBusyWord ? "2" : IsNumeric && !IsCount ? "10000" : "0"; ⟦EOL⟧
-// 해설 L315: 값을 대상에 대입합니다: _readScale = data.ReadScale
-L000315 |             _readScale = data.ReadScale; ⟦EOL⟧
-// 해설 L316: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning("Stage 신호 변경 실패", message) / 지역 변수를 선언합니다: var warn = showWarning ?? (message => CRecipeConfirmDialog.ShowWarning("Stage 신호 변경 실패", message)); / 변수의 초기값을 지정합니다: warn = showWarning ?? (message => CRecipeConfirmDialog.ShowWarning("Stage 신호 변경 실패", message))
-L000316 |             var warn = showWarning ?? (message => CRecipeConfirmDialog.ShowWarning("Stage 신호 변경 실패", message)); ⟦EOL⟧
-// 해설 L317: 선언·서명/매개변수·접근 조건입니다 · void Set(int)
-L000317 |             void Set(int value) ⟦EOL⟧
-// 해설 L318: 구문 블록 경계입니다 · 소속 Set.
-L000318 |             { ⟦EOL⟧
-// 해설 L319: 조건에 따라 분기합니다: if (!_canSet)
-L000319 |                 if (!_canSet) ⟦EOL⟧
-// 해설 L320: 호출자에게 값 또는 제어를 반환합니다: return;
-L000320 |                     return; ⟦EOL⟧
-// 해설 L321: 예외 처리 범위입니다: try
-L000321 |                 try ⟦EOL⟧
-// 해설 L322: 구문 블록 경계입니다 · 소속 Set.
-L000322 |                 { ⟦EOL⟧
-// 해설 L323: 함수·델리게이트 또는 객체 생성자를 호출합니다: set(value)
-L000323 |                     set(value); ⟦EOL⟧
-// 해설 L324: 구문 블록 경계입니다 · 소속 Set.
-L000324 |                 } ⟦EOL⟧
-// 해설 L325: 지정 예외를 처리합니다: catch (Exception exception)
-L000325 |                 catch (Exception exception) ⟦EOL⟧
-// 해설 L326: 구문 블록 경계입니다 · 소속 Set.
-L000326 |                 { ⟦EOL⟧
-// 해설 L327: 함수·델리게이트 또는 객체 생성자를 호출합니다: warn(exception.Message)
-L000327 |                     warn(exception.Message); ⟦EOL⟧
-// 해설 L328: 구문 블록 경계입니다 · 소속 Set.
-L000328 |                 } ⟦EOL⟧
-// 해설 L329: 구문 블록 경계입니다 · 소속 Set.
-L000329 |             } ⟦EOL⟧
-L000330 |  ⟦EOL⟧
-// 해설 L331: 값을 대상에 대입합니다: SetOnCommand = new(_ => Set(1), _ => _canSet && !IsNumeric) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_ => Set(1), _ => _canSet && !IsNumeric) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Set(1)
-L000331 |             SetOnCommand = new(_ => Set(1), _ => _canSet && !IsNumeric); ⟦EOL⟧
-// 해설 L332: 값을 대상에 대입합니다: SetOffCommand = new(_ => Set(0), _ => _canSet && !IsNumeric) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_ => Set(0), _ => _canSet && !IsNumeric) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Set(0)
-L000332 |             SetOffCommand = new(_ => Set(0), _ => _canSet && !IsNumeric); ⟦EOL⟧
-// 해설 L333: 값을 대상에 대입합니다: SetValueCommand = new(_ => { if (!_canSet || !IsNumeric) return; if (IsMeasurement) { try { if (!double.TryParse(InputValue, NumberStyles.Float, CultureInfo.InvariantCulture, out var mm) || !double.IsFinite(mm)) throw new InvalidO / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_ => { if (!_canSet || !IsNumeric) return; if (IsMeasurement) { try { if (!double.TryParse(InputValue, NumberStyles.Float, CultureInfo.InvariantCulture, out var mm) || !double.IsFinite(mm)) throw new InvalidOperation…
-L000333 |             SetValueCommand = new(_ => ⟦EOL⟧
-// 해설 L334: 구문 블록 경계입니다 · 소속 .ctor.
-L000334 |             { ⟦EOL⟧
-// 해설 L335: 조건에 따라 분기합니다: if (!_canSet || !IsNumeric)
-L000335 |                 if (!_canSet || !IsNumeric) ⟦EOL⟧
-// 해설 L336: 호출자에게 값 또는 제어를 반환합니다: return;
-L000336 |                     return; ⟦EOL⟧
-// 해설 L337: 조건에 따라 분기합니다: if (IsMeasurement)
-L000337 |                 if (IsMeasurement) ⟦EOL⟧
-// 해설 L338: 구문 블록 경계입니다 · 소속 .ctor.
-L000338 |                 { ⟦EOL⟧
-// 해설 L339: 예외 처리 범위입니다: try
-L000339 |                     try ⟦EOL⟧
-// 해설 L340: 구문 블록 경계입니다 · 소속 .ctor.
-L000340 |                     { ⟦EOL⟧
-// 해설 L341: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(InputValue, NumberStyles.Float, CultureInfo.InvariantCulture, out var mm) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(mm) / 조건에 따라 분기합니다: if (!double.TryParse(InputValue, NumberStyles.Float, CultureInfo.InvariantCulture, out var mm) || !double.IsFinite(mm))
-L000341 |                         if (!double.TryParse(InputValue, NumberStyles.Float, CultureInfo.InvariantCulture, out var mm) || !double.IsFinite(mm)) ⟦EOL⟧
-// 해설 L342: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("유효한 mm 숫자를 입력하세요. 음수와 소수 입력이 가능합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("유효한 mm 숫자를 입력하세요. 음수와 소수 입력이 가능합니다.");
-L000342 |                             throw new InvalidOperationException("유효한 mm 숫자를 입력하세요. 음수와 소수 입력이 가능합니다."); ⟦EOL⟧
-// 해설 L343: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("측정값 입력이 연결되어 있지 않습니다.") / 조건에 따라 분기합니다: if (setMeasurement is null) / 예외를 발생/전달합니다: throw new InvalidOperationException("측정값 입력이 연결되어 있지 않습니다.");
-L000343 |                         if (setMeasurement is null) throw new InvalidOperationException("측정값 입력이 연결되어 있지 않습니다."); ⟦EOL⟧
-// 해설 L344: 함수·델리게이트 또는 객체 생성자를 호출합니다: setMeasurement(mm)
-L000344 |                         setMeasurement(mm); ⟦EOL⟧
-// 해설 L345: 구문 블록 경계입니다 · 소속 .ctor.
-L000345 |                     } ⟦EOL⟧
-// 해설 L346: 함수·델리게이트 또는 객체 생성자를 호출합니다: warn(error.Message) / 지정 예외를 처리합니다: catch (Exception error)
-L000346 |                     catch (Exception error) { warn(error.Message); } ⟦EOL⟧
-// 해설 L347: 호출자에게 값 또는 제어를 반환합니다: return;
-L000347 |                     return; ⟦EOL⟧
-// 해설 L348: 구문 블록 경계입니다 · 소속 .ctor.
-L000348 |                 } ⟦EOL⟧
-// 해설 L349: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(InputValue, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) / 조건에 따라 분기합니다: if (!int.TryParse(InputValue, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) || value is < 0 or > ushort.MaxValue)
-L000349 |                 if (!int.TryParse(InputValue, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) || value is < 0 or > ushort.MaxValue) ⟦EOL⟧
-// 해설 L350: 구문 블록 경계입니다 · 소속 .ctor.
-L000350 |                 { ⟦EOL⟧
-// 해설 L351: 함수·델리게이트 또는 객체 생성자를 호출합니다: warn("0~65535의 원시 정수를 입력하세요.")
-L000351 |                     warn("0~65535의 원시 정수를 입력하세요."); ⟦EOL⟧
-// 해설 L352: 호출자에게 값 또는 제어를 반환합니다: return;
-L000352 |                     return; ⟦EOL⟧
-// 해설 L353: 구문 블록 경계입니다 · 소속 .ctor.
-L000353 |                 } ⟦EOL⟧
-L000354 |  ⟦EOL⟧
-// 해설 L355: 함수·델리게이트 또는 객체 생성자를 호출합니다: Set(value)
-L000355 |                 Set(value); ⟦EOL⟧
-// 해설 L356: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?)
-L000356 |             }, _ => _canSet && IsNumeric); ⟦EOL⟧
+L000229 |             "IF_PROCESS_MOVE" => 4, ⟦EOL⟧
+// 해설 L230: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string)
+L000230 |             "IF_IOF" => 5, ⟦EOL⟧
+// 해설 L231: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string)
+L000231 |             "IF_ALIGN" => 6, ⟦EOL⟧
+// 해설 L232: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string)
+L000232 |             "IF_PTW" => 7, ⟦EOL⟧
+// 해설 L233: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string)
+L000233 |             _ => 8 ⟦EOL⟧
+// 해설 L234: 구문 블록 경계입니다 · 소속 ScenarioOrder.
+L000234 |         }; ⟦EOL⟧
+// 해설 L235: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Equals("SDC_DO_ALIGN_STATUS", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Equals("SDC_DO_ALIGN_COMPLETE", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_ABLE", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_START", StringComparison.OrdinalIgnoreCase) / 조건에 따라 결과식을 선택합니다: id.Equals("SDC_DO_ALIGN_STATUS", StringComparison.OrdinalIgnoreCase) ? 0 : id.Equals("SDC_DO_ALIGN_COMPLETE", StringComparison.OrdinalIgnoreCase) ? 1
+L000235 |         private static int SignalOrder(string id) => id.Equals("SDC_DO_ALIGN_STATUS", StringComparison.OrdinalIgnoreCase) ? 0 : id.Equals("SDC_DO_ALIGN_COMPLETE", StringComparison.OrdinalIgnoreCase) ? 1 : id.Contains("_ABLE", StringComparison.OrdinalIgnoreCase) ? 0 : id.Contains("_START", StringComparison.OrdinalIgnoreCase) ? 1 : 2; ⟦EOL⟧
+// 해설 L236: 구문 블록 경계입니다.
+L000236 |     } ⟦EOL⟧
+L000237 |  ⟦EOL⟧
+// 해설 L238: 타입의 구조/상속 선언입니다: public sealed class CMelsecStageSimulationRow : INotifyPropertyChanged
+L000238 |     public sealed class CMelsecStageSimulationRow : INotifyPropertyChanged ⟦EOL⟧
+// 해설 L239: 구문 블록 경계입니다.
+L000239 |     { ⟦EOL⟧
+// 해설 L240: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CMelsecStageSimulationRow._canSet
+L000240 |         private bool _canSet; ⟦EOL⟧
+// 해설 L241: 변수의 초기값을 지정합니다: _currentValue = "—"
+L000241 |         private string _currentValue = "—"; ⟦EOL⟧
+// 해설 L242: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CMelsecStageSimulationRow._inputValue
+L000242 |         private string _inputValue; ⟦EOL⟧
+// 해설 L243: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Popup.CMelsecStageSimulationRow._readScale
+L000243 |         private readonly double _readScale; ⟦EOL⟧
+// 해설 L244: 변수의 초기값을 지정합니다: _stateBrush = Brushes.Gray
+L000244 |         private Brush _stateBrush = Brushes.Gray; ⟦EOL⟧
+// 해설 L245: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Popup.CMelsecStageSimulationRow.PropertyChanged
+L000245 |         public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
+// 해설 L246: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CMelsecStageSimulationRow.Id
+L000246 |         public string Id { get; } ⟦EOL⟧
+// 해설 L247: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Popup.CMelsecStageSimulationRow.DeviceNo
+L000247 |         public int DeviceNo { get; } ⟦EOL⟧
+// 해설 L248: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CMelsecStageSimulationRow.Scenario
+L000248 |         public string Scenario { get; } ⟦EOL⟧
+// 해설 L249: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CMelsecStageSimulationRow.Name
+L000249 |         public string Name { get; } ⟦EOL⟧
+// 해설 L250: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CMelsecStageSimulationRow.Address
+L000250 |         public string Address { get; } ⟦EOL⟧
+// 해설 L251: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CMelsecStageSimulationRow.Description
+L000251 |         public string Description { get; } ⟦EOL⟧
+// 해설 L252: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CMelsecStageSimulationRow.CurrentValue
+L000252 |         public string CurrentValue => _currentValue; ⟦EOL⟧
+// 해설 L253: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Popup.CMelsecStageSimulationRow.StateBrush
+L000253 |         public Brush StateBrush => _stateBrush; ⟦EOL⟧
+// 해설 L254: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CMelsecStageSimulationRow.CanSet
+L000254 |         public bool CanSet => _canSet; ⟦EOL⟧
+// 해설 L255: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsNumeric
+L000255 |         public bool IsNumeric { get; } ⟦EOL⟧
+// 해설 L256: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsText
+L000256 |         public bool IsText { get; } ⟦EOL⟧
+// 해설 L257: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CMelsecStageSimulationRow.HasValueInput
+L000257 |         public bool HasValueInput => IsNumeric || IsText; ⟦EOL⟧
+// 해설 L258: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsCount
+L000258 |         public bool IsCount { get; } ⟦EOL⟧
+// 해설 L259: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsMeasurement
+L000259 |         public bool IsMeasurement { get; } ⟦EOL⟧
+// 해설 L260: 조건에 따라 결과식을 선택합니다: IsText ? "MELSEC ASCII 문자열" : IsMeasurement ? "mm 단위의 부호 포함 숫자 (소수 입력 가능)" : "원시 정수: 0~65535" / 조건에 따라 결과식을 선택합니다: IsMeasurement ? "mm 단위의 부호 포함 숫자 (소수 입력 가능)" : "원시 정수: 0~65535"
+L000260 |         public string InputHint => IsText ? "MELSEC ASCII 문자열" : IsMeasurement ? "mm 단위의 부호 포함 숫자 (소수 입력 가능)" : "원시 정수: 0~65535"; ⟦EOL⟧
+// 해설 L261: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CMelsecStageSimulationRow.IsAlignBusyWord
+L000261 |         public bool IsAlignBusyWord { get; } ⟦EOL⟧
+L000262 |  ⟦EOL⟧
+// 해설 L263: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CMelsecStageSimulationRow.InputValue
+L000263 |         public string InputValue ⟦EOL⟧
+// 해설 L264: 구문 블록 경계입니다 · 소속 InputValue.
+L000264 |         { ⟦EOL⟧
+// 해설 L265: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CMelsecStageSimulationRow.InputValue.get
+L000265 |             get => _inputValue; ⟦EOL⟧
+// 해설 L266: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.InputValue.set
+L000266 |             set ⟦EOL⟧
+// 해설 L267: 구문 블록 경계입니다 · 소속 set_InputValue.
+L000267 |             { ⟦EOL⟧
+// 해설 L268: 조건에 따라 분기합니다: if (_inputValue == value)
+L000268 |                 if (_inputValue == value) ⟦EOL⟧
+// 해설 L269: 호출자에게 값 또는 제어를 반환합니다: return;
+L000269 |                     return; ⟦EOL⟧
+// 해설 L270: 값을 대상에 대입합니다: _inputValue = value
+L000270 |                 _inputValue = value; ⟦EOL⟧
+// 해설 L271: 함수·델리게이트 또는 객체 생성자를 호출합니다: Changed()
+L000271 |                 Changed(); ⟦EOL⟧
+// 해설 L272: 구문 블록 경계입니다 · 소속 set_InputValue.
+L000272 |             } ⟦EOL⟧
+// 해설 L273: 구문 블록 경계입니다 · 소속 InputValue.
+L000273 |         } ⟦EOL⟧
+L000274 |  ⟦EOL⟧
+// 해설 L275: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationRow.SetOnCommand
+L000275 |         public CButtonCommand SetOnCommand { get; } ⟦EOL⟧
+// 해설 L276: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationRow.SetOffCommand
+L000276 |         public CButtonCommand SetOffCommand { get; } ⟦EOL⟧
+// 해설 L277: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CMelsecStageSimulationRow.SetValueCommand
+L000277 |         public CButtonCommand SetValueCommand { get; } ⟦EOL⟧
+L000278 |  ⟦EOL⟧
+// 해설 L279: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000279 |         public CMelsecStageSimulationRow(ST_MELSEC_MAP_DATA data, Action<int> set, Action<string>? showWarning = null, Action<double>? setMeasurement = null, Action<string>? setText = null) ⟦EOL⟧
+// 해설 L280: 구문 블록 경계입니다 · 소속 .ctor.
+L000280 |         { ⟦EOL⟧
+// 해설 L281: 값을 대상에 대입합니다: Id = data.Id
+L000281 |             Id = data.Id; ⟦EOL⟧
+// 해설 L282: 값을 대상에 대입합니다: IsMeasurement = CMelsec.IsDistortionMeasurementSimulationValue(data) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsDistortionMeasurementSimulationValue(data)
+L000282 |             IsMeasurement = CMelsec.IsDistortionMeasurementSimulationValue(data); ⟦EOL⟧
+// 해설 L283: 값을 대상에 대입합니다: DeviceNo = data.DeviceNo
+L000283 |             DeviceNo = data.DeviceNo; ⟦EOL⟧
+// 해설 L284: 값을 대상에 대입합니다: Scenario = data.Group.ToUpperInvariant() switch { "DISTORTION" => "Distortion", "VISION_DISTORTION_DATA" => "Distortion Data", "STAGE_GLASS_DATA" => "Glass Data", "IF_DOREADY" => "DoReady", "IF_PROCESS" => "Process", "IF_REVIEW" = / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Group.ToUpperInvariant() / 값별 결과식을 선택합니다: data.Group.ToUpperInvariant() switch { "DISTORTION" => "Distortion", "VISION_DISTORTION_DATA" => "Distortion Data", "STAGE_GLASS_DATA" => "Glass Data", "IF_DOREADY" => "DoReady", "IF_PROCESS" => "Process", "IF_REVIEW" =
+L000284 |             Scenario = data.Group.ToUpperInvariant() switch ⟦EOL⟧
+// 해설 L285: 구문 블록 경계입니다 · 소속 .ctor.
+L000285 |             { ⟦EOL⟧
+// 해설 L286: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000286 |                 "DISTORTION" => "Distortion", ⟦EOL⟧
+// 해설 L287: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000287 |                 "VISION_DISTORTION_DATA" => "Distortion Data", ⟦EOL⟧
+// 해설 L288: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000288 |                 "STAGE_GLASS_DATA" => "Glass Data", ⟦EOL⟧
+// 해설 L289: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000289 |                 "IF_DOREADY" => "DoReady", ⟦EOL⟧
+// 해설 L290: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000290 |                 "IF_PROCESS" => "Process", ⟦EOL⟧
+// 해설 L291: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000291 |                 "IF_REVIEW" => "Review", ⟦EOL⟧
+// 해설 L292: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000292 |                 "IF_TOP_POWERMETER" => "TPM", ⟦EOL⟧
+// 해설 L293: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000293 |                 "IF_PROCESS_MOVE" => "Process / Move", ⟦EOL⟧
+// 해설 L294: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000294 |                 "IF_IOF" => "IOF", ⟦EOL⟧
+// 해설 L295: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000295 |                 "IF_ALIGN" => "Align", ⟦EOL⟧
+// 해설 L296: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000296 |                 "IF_PTW" => "Protect Window", ⟦EOL⟧
+// 해설 L297: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000297 |                 _ => data.Group ⟦EOL⟧
+// 해설 L298: 구문 블록 경계입니다 · 소속 .ctor.
+L000298 |             }; ⟦EOL⟧
+// 해설 L299: 값을 대상에 대입합니다: IsCount = data.Id.Equals(CMelsec.StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals(CMelsec.StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase)
+L000299 |             IsCount = data.Id.Equals(CMelsec.StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L300: 값을 대상에 대입합니다: IsAlignBusyWord = data.Id.Equals(CMelsec.StageAlignBusyWordId, StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals(CMelsec.StageAlignBusyWordId, StringComparison.OrdinalIgnoreCase)
+L000300 |             IsAlignBusyWord = data.Id.Equals(CMelsec.StageAlignBusyWordId, StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L301: 값을 대상에 대입합니다: Name = data.Id switch { "IPS_REVIEW_CONTROL_MODE_X" => "Review X Permit", "IPS_REVIEW_CONTROL_MODE_Y" => "Stage Y Permit", "IPS_IOF_READ_COMPLETE" => "IOF Read Done", "IPS_IOF_BUFFER_RUN_COMPLETE" => "IOF Buffer Done", CMelsec.Sta / 값별 결과식을 선택합니다: data.Id switch { "IPS_REVIEW_CONTROL_MODE_X" => "Review X Permit", "IPS_REVIEW_CONTROL_MODE_Y" => "Stage Y Permit", "IPS_IOF_READ_COMPLETE" => "IOF Read Done", "IPS_IOF_BUFFER_RUN_COMPLETE" => "IOF Buffer Done", CMelsec.StageAlign
+L000301 |             Name = data.Id switch ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다 · 소속 .ctor.
+L000302 |             { ⟦EOL⟧
+// 해설 L303: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000303 |                 "IPS_REVIEW_CONTROL_MODE_X" => "Review X Permit", ⟦EOL⟧
+// 해설 L304: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000304 |                 "IPS_REVIEW_CONTROL_MODE_Y" => "Stage Y Permit", ⟦EOL⟧
+// 해설 L305: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000305 |                 "IPS_IOF_READ_COMPLETE" => "IOF Read Done", ⟦EOL⟧
+// 해설 L306: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000306 |                 "IPS_IOF_BUFFER_RUN_COMPLETE" => "IOF Buffer Done", ⟦EOL⟧
+// 해설 L307: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000307 |                 CMelsec.StageAlignBusyWordId => "ALIGN BUSY (bit 1)", ⟦EOL⟧
+// 해설 L308: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000308 |                 CMelsec.StageProtectWindowCountId => "Tray Count", ⟦EOL⟧
+// 해설 L309: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000309 |                 CMelsec.StageProtectWindowCompleteId => "교체완료 신호", ⟦EOL⟧
+// 해설 L310: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000310 |                 _ => data.Name ⟦EOL⟧
+// 해설 L311: 구문 블록 경계입니다 · 소속 .ctor.
+L000311 |             }; ⟦EOL⟧
+// 해설 L312: 조건에 따라 분기합니다: if (IsMeasurement)
+L000312 |             if (IsMeasurement) ⟦EOL⟧
+// 해설 L313: 구문 블록 경계입니다 · 소속 .ctor.
+L000313 |             { ⟦EOL⟧
+// 해설 L314: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Split('_') / 함수·델리게이트 또는 객체 생성자를 호출합니다: int.Parse(parts[1].AsSpan(3), CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: parts[1].AsSpan(3) / 지역 변수를 선언합니다: var parts = data.Id.Split('_'); / 지역 변수를 선언합니다: var position = int.Parse(parts[1].AsSpan(3), CultureInfo.InvariantCulture); / 변수의 초기값을 지정합니다: parts = data.Id.Split('_') / 변수의 초기값을 지정합니다: position = int.Parse(parts[1].AsSpan(3), CultureInfo.InvariantCulture)
+L000314 |                 var parts = data.Id.Split('_'); var position = int.Parse(parts[1].AsSpan(3), CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L315: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.Parse(parts[2].AsSpan(3, 1), CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: parts[2].AsSpan(3, 1) / 지역 변수를 선언합니다: var camera = int.Parse(parts[2].AsSpan(3, 1), CultureInfo.InvariantCulture); / 지역 변수를 선언합니다: var axis = data.Id[^1]; / 변수의 초기값을 지정합니다: camera = int.Parse(parts[2].AsSpan(3, 1), CultureInfo.InvariantCulture) / 변수의 초기값을 지정합니다: axis = data.Id[^1]
+L000315 |                 var camera = int.Parse(parts[2].AsSpan(3, 1), CultureInfo.InvariantCulture); var axis = data.Id[^1]; ⟦EOL⟧
+// 해설 L316: 값을 대상에 대입합니다: Name = position == 0 ? $"AK{camera} {axis} (mm)" : $"Group {position - 1} / DK{(position - 1) * 2 + (camera == 2 ? 1 : 2)} {axis} (mm)" / 조건에 따라 결과식을 선택합니다: position == 0 ? $"AK{camera} {axis} (mm)" : $"Group {position - 1} / DK{(position - 1) * 2 + (camera == 2 ? 1 : 2)} {axis} (mm)" / 조건에 따라 결과식을 선택합니다: camera == 2 ? 1 : 2
+L000316 |                 Name = position == 0 ? $"AK{camera} {axis} (mm)" : $"Group {position - 1} / DK{(position - 1) * 2 + (camera == 2 ? 1 : 2)} {axis} (mm)"; ⟦EOL⟧
+// 해설 L317: 구문 블록 경계입니다 · 소속 .ctor.
+L000317 |             } ⟦EOL⟧
+// 해설 L318: 값을 대상에 대입합니다: Address = CMelsec.IsSimulationOnlyRoute(data) ? $"MELSEC_{data.DeviceNo} / SIM ONLY" : $"MELSEC_{data.DeviceNo} / {data.Address}" / 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsSimulationOnlyRoute(data) / 조건에 따라 결과식을 선택합니다: CMelsec.IsSimulationOnlyRoute(data) ? $"MELSEC_{data.DeviceNo} / SIM ONLY" : $"MELSEC_{data.DeviceNo} / {data.Address}"
+L000318 |             Address = CMelsec.IsSimulationOnlyRoute(data) ? $"MELSEC_{data.DeviceNo} / SIM ONLY" : $"MELSEC_{data.DeviceNo} / {data.Address}"; ⟦EOL⟧
+// 해설 L319: 값을 대상에 대입합니다: Description = data.Description
+L000319 |             Description = data.Description; ⟦EOL⟧
+// 해설 L320: 값을 대상에 대입합니다: IsText = CMelsec.IsStageGlassDataSimulationValue(data) && data.DataType == EN_MELSEC_DATA_TYPE.String / 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageGlassDataSimulationValue(data)
+L000320 |             IsText = CMelsec.IsStageGlassDataSimulationValue(data) && data.DataType == EN_MELSEC_DATA_TYPE.String; ⟦EOL⟧
+// 해설 L321: 값을 대상에 대입합니다: IsNumeric = CMelsec.IsStageAlignSimulationSignal(data) || IsCount || IsMeasurement || (CMelsec.IsStageGlassDataSimulationValue(data) && data.DataType == EN_MELSEC_DATA_TYPE.Word) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageAlignSimulationSignal(data)
+L000321 |             IsNumeric = CMelsec.IsStageAlignSimulationSignal(data) || IsCount || IsMeasurement ⟦EOL⟧
+// 해설 L322: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsec.IsStageGlassDataSimulationValue(data)
+L000322 |                 || (CMelsec.IsStageGlassDataSimulationValue(data) && data.DataType == EN_MELSEC_DATA_TYPE.Word); ⟦EOL⟧
+// 해설 L323: 값을 대상에 대입합니다: _inputValue = IsText ? "" : IsMeasurement ? "0" : IsAlignBusyWord ? "2" : IsNumeric && !IsCount ? "10000" : "0" / 조건에 따라 결과식을 선택합니다: IsText ? "" : IsMeasurement ? "0" : IsAlignBusyWord ? "2" : IsNumeric && !IsCount ? "10000" : "0" / 조건에 따라 결과식을 선택합니다: IsMeasurement ? "0" : IsAlignBusyWord ? "2" : IsNumeric && !IsCount ? "10000" : "0" / 조건에 따라 결과식을 선택합니다: IsAlignBusyWord ? "2" : IsNumeric && !IsCount ? "10000" : "0" / 조건에 따라 결과식을 선택합니다: IsNumeric && !IsCount ? "10000" : "0"
+L000323 |             _inputValue = IsText ? "" : IsMeasurement ? "0" : IsAlignBusyWord ? "2" : IsNumeric && !IsCount ? "10000" : "0"; ⟦EOL⟧
+// 해설 L324: 값을 대상에 대입합니다: _readScale = data.ReadScale
+L000324 |             _readScale = data.ReadScale; ⟦EOL⟧
+// 해설 L325: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning("Stage 신호 변경 실패", message) / 지역 변수를 선언합니다: var warn = showWarning ?? (message => CRecipeConfirmDialog.ShowWarning("Stage 신호 변경 실패", message)); / 변수의 초기값을 지정합니다: warn = showWarning ?? (message => CRecipeConfirmDialog.ShowWarning("Stage 신호 변경 실패", message))
+L000325 |             var warn = showWarning ?? (message => CRecipeConfirmDialog.ShowWarning("Stage 신호 변경 실패", message)); ⟦EOL⟧
+// 해설 L326: 선언·서명/매개변수·접근 조건입니다 · void Set(int)
+L000326 |             void Set(int value) ⟦EOL⟧
+// 해설 L327: 구문 블록 경계입니다 · 소속 Set.
+L000327 |             { ⟦EOL⟧
+// 해설 L328: 조건에 따라 분기합니다: if (!_canSet)
+L000328 |                 if (!_canSet) ⟦EOL⟧
+// 해설 L329: 호출자에게 값 또는 제어를 반환합니다: return;
+L000329 |                     return; ⟦EOL⟧
+// 해설 L330: 예외 처리 범위입니다: try
+L000330 |                 try ⟦EOL⟧
+// 해설 L331: 구문 블록 경계입니다 · 소속 Set.
+L000331 |                 { ⟦EOL⟧
+// 해설 L332: 함수·델리게이트 또는 객체 생성자를 호출합니다: set(value)
+L000332 |                     set(value); ⟦EOL⟧
+// 해설 L333: 구문 블록 경계입니다 · 소속 Set.
+L000333 |                 } ⟦EOL⟧
+// 해설 L334: 지정 예외를 처리합니다: catch (Exception exception)
+L000334 |                 catch (Exception exception) ⟦EOL⟧
+// 해설 L335: 구문 블록 경계입니다 · 소속 Set.
+L000335 |                 { ⟦EOL⟧
+// 해설 L336: 함수·델리게이트 또는 객체 생성자를 호출합니다: warn(exception.Message)
+L000336 |                     warn(exception.Message); ⟦EOL⟧
+// 해설 L337: 구문 블록 경계입니다 · 소속 Set.
+L000337 |                 } ⟦EOL⟧
+// 해설 L338: 구문 블록 경계입니다 · 소속 Set.
+L000338 |             } ⟦EOL⟧
+L000339 |  ⟦EOL⟧
+// 해설 L340: 값을 대상에 대입합니다: SetOnCommand = new(_ => Set(1), _ => _canSet && !IsNumeric) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_ => Set(1), _ => _canSet && !IsNumeric) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Set(1)
+L000340 |             SetOnCommand = new(_ => Set(1), _ => _canSet && !IsNumeric); ⟦EOL⟧
+// 해설 L341: 값을 대상에 대입합니다: SetOffCommand = new(_ => Set(0), _ => _canSet && !IsNumeric) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_ => Set(0), _ => _canSet && !IsNumeric) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Set(0)
+L000341 |             SetOffCommand = new(_ => Set(0), _ => _canSet && !IsNumeric); ⟦EOL⟧
+// 해설 L342: 값을 대상에 대입합니다: SetValueCommand = new(_ => { if (!_canSet || !HasValueInput) return; if (IsText) { try { if (setText is null) throw new InvalidOperationException("문자열 입력이 연결되어 있지 않습니다."); setText(InputValue); } catch (Exception error) { warn(erro / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_ => { if (!_canSet || !HasValueInput) return; if (IsText) { try { if (setText is null) throw new InvalidOperationException("문자열 입력이 연결되어 있지 않습니다."); setText(InputValue); } catch (Exception error) { warn(error.Messag…
+L000342 |             SetValueCommand = new(_ => ⟦EOL⟧
+// 해설 L343: 구문 블록 경계입니다 · 소속 .ctor.
+L000343 |             { ⟦EOL⟧
+// 해설 L344: 조건에 따라 분기합니다: if (!_canSet || !HasValueInput)
+L000344 |                 if (!_canSet || !HasValueInput) ⟦EOL⟧
+// 해설 L345: 호출자에게 값 또는 제어를 반환합니다: return;
+L000345 |                     return; ⟦EOL⟧
+// 해설 L346: 조건에 따라 분기합니다: if (IsText)
+L000346 |                 if (IsText) ⟦EOL⟧
+// 해설 L347: 구문 블록 경계입니다 · 소속 .ctor.
+L000347 |                 { ⟦EOL⟧
+// 해설 L348: 예외 처리 범위입니다: try
+L000348 |                     try ⟦EOL⟧
+// 해설 L349: 구문 블록 경계입니다 · 소속 .ctor.
+L000349 |                     { ⟦EOL⟧
+// 해설 L350: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("문자열 입력이 연결되어 있지 않습니다.") / 조건에 따라 분기합니다: if (setText is null) / 예외를 발생/전달합니다: throw new InvalidOperationException("문자열 입력이 연결되어 있지 않습니다.");
+L000350 |                         if (setText is null) throw new InvalidOperationException("문자열 입력이 연결되어 있지 않습니다."); ⟦EOL⟧
+// 해설 L351: 함수·델리게이트 또는 객체 생성자를 호출합니다: setText(InputValue)
+L000351 |                         setText(InputValue); ⟦EOL⟧
+// 해설 L352: 구문 블록 경계입니다 · 소속 .ctor.
+L000352 |                     } ⟦EOL⟧
+// 해설 L353: 함수·델리게이트 또는 객체 생성자를 호출합니다: warn(error.Message) / 지정 예외를 처리합니다: catch (Exception error)
+L000353 |                     catch (Exception error) { warn(error.Message); } ⟦EOL⟧
+// 해설 L354: 호출자에게 값 또는 제어를 반환합니다: return;
+L000354 |                     return; ⟦EOL⟧
+// 해설 L355: 구문 블록 경계입니다 · 소속 .ctor.
+L000355 |                 } ⟦EOL⟧
+// 해설 L356: 조건에 따라 분기합니다: if (IsMeasurement)
+L000356 |                 if (IsMeasurement) ⟦EOL⟧
 // 해설 L357: 구문 블록 경계입니다 · 소속 .ctor.
-L000357 |         } ⟦EOL⟧
-L000358 |  ⟦EOL⟧
-// 해설 L359: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)
-L000359 |         public void Refresh(ST_MELSEC_CACHED_VALUE? sample, bool simulation) ⟦EOL⟧
-// 해설 L360: 구문 블록 경계입니다 · 소속 Refresh.
-L000360 |         { ⟦EOL⟧
-// 해설 L361: 조건에 따라 분기합니다: if (_canSet != simulation)
-L000361 |             if (_canSet != simulation) ⟦EOL⟧
-// 해설 L362: 구문 블록 경계입니다 · 소속 Refresh.
-L000362 |             { ⟦EOL⟧
-// 해설 L363: 값을 대상에 대입합니다: _canSet = simulation
-L000363 |                 _canSet = simulation; ⟦EOL⟧
-// 해설 L364: 함수·델리게이트 또는 객체 생성자를 호출합니다: Changed(nameof(CanSet)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanSet)
-L000364 |                 Changed(nameof(CanSet)); ⟦EOL⟧
-// 해설 L365: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetOnCommand.NotifyCanExecuteChanged()
-L000365 |                 SetOnCommand.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L366: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetOffCommand.NotifyCanExecuteChanged()
-L000366 |                 SetOffCommand.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L367: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetValueCommand.NotifyCanExecuteChanged()
-L000367 |                 SetValueCommand.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L368: 구문 블록 경계입니다 · 소속 Refresh.
-L000368 |             } ⟦EOL⟧
-L000369 |  ⟦EOL⟧
-// 해설 L370: 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToString(sample.Value, System.Globalization.CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: sample is { IsValid: true } ? Convert.ToString(sample.Value, System.Globalization.CultureInfo.InvariantCulture) : null / 지역 변수를 선언합니다: var raw = sample is { IsValid: true } ? Convert.ToString(sample.Value, System.Globalization.CultureInfo.InvariantCulture) : null; / 변수의 초기값을 지정합니다: raw = sample is { IsValid: true } ? Convert.ToString(sample.Value, System.Globalization.CultureInfo.InvariantCulture) : null
-L000370 |             var raw = sample is { IsValid: true } ? Convert.ToString(sample.Value, System.Globalization.CultureInfo.InvariantCulture) : null; ⟦EOL⟧
-// 해설 L371: 지역 변수를 선언합니다: var text = raw switch { "1" => "ON (1)", "0" => "OFF (0)", null => "—", _ => raw }; / 값별 결과식을 선택합니다: raw switch { "1" => "ON (1)", "0" => "OFF (0)", null => "—", _ => raw } / 변수의 초기값을 지정합니다: text = raw switch { "1" => "ON (1)", "0" => "OFF (0)", null => "—", _ => raw }
-L000371 |             var text = raw switch ⟦EOL⟧
-// 해설 L372: 구문 블록 경계입니다 · 소속 Refresh.
-L000372 |             { ⟦EOL⟧
-// 해설 L373: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)
-L000373 |                 "1" => "ON (1)", ⟦EOL⟧
-// 해설 L374: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)
-L000374 |                 "0" => "OFF (0)", ⟦EOL⟧
-// 해설 L375: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)
-L000375 |                 null => "—", ⟦EOL⟧
-// 해설 L376: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)
-L000376 |                 _ => raw ⟦EOL⟧
-// 해설 L377: 구문 블록 경계입니다 · 소속 Refresh.
-L000377 |             }; ⟦EOL⟧
-// 해설 L378: 지역 변수를 선언합니다: var brush = raw switch { "1" => Brushes.ForestGreen, "0" => Brushes.DarkGoldenrod, null => Brushes.Gray, _ => Brushes.Firebrick }; / 값별 결과식을 선택합니다: raw switch { "1" => Brushes.ForestGreen, "0" => Brushes.DarkGoldenrod, null => Brushes.Gray, _ => Brushes.Firebrick } / 변수의 초기값을 지정합니다: brush = raw switch { "1" => Brushes.ForestGreen, "0" => Brushes.DarkGoldenrod, null => Brushes.Gray, _ => Brushes.Firebrick }
-L000378 |             var brush = raw switch ⟦EOL⟧
+L000357 |                 { ⟦EOL⟧
+// 해설 L358: 예외 처리 범위입니다: try
+L000358 |                     try ⟦EOL⟧
+// 해설 L359: 구문 블록 경계입니다 · 소속 .ctor.
+L000359 |                     { ⟦EOL⟧
+// 해설 L360: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(InputValue, NumberStyles.Float, CultureInfo.InvariantCulture, out var mm) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(mm) / 조건에 따라 분기합니다: if (!double.TryParse(InputValue, NumberStyles.Float, CultureInfo.InvariantCulture, out var mm) || !double.IsFinite(mm))
+L000360 |                         if (!double.TryParse(InputValue, NumberStyles.Float, CultureInfo.InvariantCulture, out var mm) || !double.IsFinite(mm)) ⟦EOL⟧
+// 해설 L361: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("유효한 mm 숫자를 입력하세요. 음수와 소수 입력이 가능합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("유효한 mm 숫자를 입력하세요. 음수와 소수 입력이 가능합니다.");
+L000361 |                             throw new InvalidOperationException("유효한 mm 숫자를 입력하세요. 음수와 소수 입력이 가능합니다."); ⟦EOL⟧
+// 해설 L362: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("측정값 입력이 연결되어 있지 않습니다.") / 조건에 따라 분기합니다: if (setMeasurement is null) / 예외를 발생/전달합니다: throw new InvalidOperationException("측정값 입력이 연결되어 있지 않습니다.");
+L000362 |                         if (setMeasurement is null) throw new InvalidOperationException("측정값 입력이 연결되어 있지 않습니다."); ⟦EOL⟧
+// 해설 L363: 함수·델리게이트 또는 객체 생성자를 호출합니다: setMeasurement(mm)
+L000363 |                         setMeasurement(mm); ⟦EOL⟧
+// 해설 L364: 구문 블록 경계입니다 · 소속 .ctor.
+L000364 |                     } ⟦EOL⟧
+// 해설 L365: 함수·델리게이트 또는 객체 생성자를 호출합니다: warn(error.Message) / 지정 예외를 처리합니다: catch (Exception error)
+L000365 |                     catch (Exception error) { warn(error.Message); } ⟦EOL⟧
+// 해설 L366: 호출자에게 값 또는 제어를 반환합니다: return;
+L000366 |                     return; ⟦EOL⟧
+// 해설 L367: 구문 블록 경계입니다 · 소속 .ctor.
+L000367 |                 } ⟦EOL⟧
+// 해설 L368: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(InputValue, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) / 조건에 따라 분기합니다: if (!int.TryParse(InputValue, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) || value is < 0 or > ushort.MaxValue)
+L000368 |                 if (!int.TryParse(InputValue, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) || value is < 0 or > ushort.MaxValue) ⟦EOL⟧
+// 해설 L369: 구문 블록 경계입니다 · 소속 .ctor.
+L000369 |                 { ⟦EOL⟧
+// 해설 L370: 함수·델리게이트 또는 객체 생성자를 호출합니다: warn("0~65535의 원시 정수를 입력하세요.")
+L000370 |                     warn("0~65535의 원시 정수를 입력하세요."); ⟦EOL⟧
+// 해설 L371: 호출자에게 값 또는 제어를 반환합니다: return;
+L000371 |                     return; ⟦EOL⟧
+// 해설 L372: 구문 블록 경계입니다 · 소속 .ctor.
+L000372 |                 } ⟦EOL⟧
+L000373 |  ⟦EOL⟧
+// 해설 L374: 함수·델리게이트 또는 객체 생성자를 호출합니다: Set(value)
+L000374 |                 Set(value); ⟦EOL⟧
+// 해설 L375: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?, System.Action<string>?)
+L000375 |             }, _ => _canSet && HasValueInput); ⟦EOL⟧
+// 해설 L376: 구문 블록 경계입니다 · 소속 .ctor.
+L000376 |         } ⟦EOL⟧
+L000377 |  ⟦EOL⟧
+// 해설 L378: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)
+L000378 |         public void Refresh(ST_MELSEC_CACHED_VALUE? sample, bool simulation) ⟦EOL⟧
 // 해설 L379: 구문 블록 경계입니다 · 소속 Refresh.
-L000379 |             { ⟦EOL⟧
-// 해설 L380: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)
-L000380 |                 "1" => Brushes.ForestGreen, ⟦EOL⟧
-// 해설 L381: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)
-L000381 |                 "0" => Brushes.DarkGoldenrod, ⟦EOL⟧
-// 해설 L382: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)
-L000382 |                 null => Brushes.Gray, ⟦EOL⟧
-// 해설 L383: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)
-L000383 |                 _ => Brushes.Firebrick ⟦EOL⟧
-// 해설 L384: 구문 블록 경계입니다 · 소속 Refresh.
-L000384 |             }; ⟦EOL⟧
-// 해설 L385: 조건에 따라 분기합니다: if (IsMeasurement && raw is not null)
-L000385 |             if (IsMeasurement && raw is not null) ⟦EOL⟧
-// 해설 L386: 구문 블록 경계입니다 · 소속 Refresh.
-L000386 |             { ⟦EOL⟧
-// 해설 L387: 값을 대상에 대입합니다: text = Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture).ToString("0.####", CultureInfo.InvariantCulture) + " mm" / 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture).ToString("0.####", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture)
-L000387 |                 text = Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture).ToString("0.####", CultureInfo.InvariantCulture) + " mm"; ⟦EOL⟧
-// 해설 L388: 값을 대상에 대입합니다: brush = Brushes.SteelBlue
-L000388 |                 brush = Brushes.SteelBlue; ⟦EOL⟧
-// 해설 L389: 구문 블록 경계입니다 · 소속 Refresh.
-L000389 |             } ⟦EOL⟧
-// 해설 L390: 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (IsNumeric && raw is not null)
-L000390 |             else if (IsNumeric && raw is not null) ⟦EOL⟧
+L000379 |         { ⟦EOL⟧
+// 해설 L380: 조건에 따라 분기합니다: if (_canSet != simulation)
+L000380 |             if (_canSet != simulation) ⟦EOL⟧
+// 해설 L381: 구문 블록 경계입니다 · 소속 Refresh.
+L000381 |             { ⟦EOL⟧
+// 해설 L382: 값을 대상에 대입합니다: _canSet = simulation
+L000382 |                 _canSet = simulation; ⟦EOL⟧
+// 해설 L383: 함수·델리게이트 또는 객체 생성자를 호출합니다: Changed(nameof(CanSet)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanSet)
+L000383 |                 Changed(nameof(CanSet)); ⟦EOL⟧
+// 해설 L384: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetOnCommand.NotifyCanExecuteChanged()
+L000384 |                 SetOnCommand.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L385: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetOffCommand.NotifyCanExecuteChanged()
+L000385 |                 SetOffCommand.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L386: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetValueCommand.NotifyCanExecuteChanged()
+L000386 |                 SetValueCommand.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L387: 구문 블록 경계입니다 · 소속 Refresh.
+L000387 |             } ⟦EOL⟧
+L000388 |  ⟦EOL⟧
+// 해설 L389: 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToString(sample.Value, System.Globalization.CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: sample is { IsValid: true } ? Convert.ToString(sample.Value, System.Globalization.CultureInfo.InvariantCulture) : null / 지역 변수를 선언합니다: var raw = sample is { IsValid: true } ? Convert.ToString(sample.Value, System.Globalization.CultureInfo.InvariantCulture) : null; / 변수의 초기값을 지정합니다: raw = sample is { IsValid: true } ? Convert.ToString(sample.Value, System.Globalization.CultureInfo.InvariantCulture) : null
+L000389 |             var raw = sample is { IsValid: true } ? Convert.ToString(sample.Value, System.Globalization.CultureInfo.InvariantCulture) : null; ⟦EOL⟧
+// 해설 L390: 지역 변수를 선언합니다: var text = raw switch { "1" => "ON (1)", "0" => "OFF (0)", null => "—", _ => raw }; / 값별 결과식을 선택합니다: raw switch { "1" => "ON (1)", "0" => "OFF (0)", null => "—", _ => raw } / 변수의 초기값을 지정합니다: text = raw switch { "1" => "ON (1)", "0" => "OFF (0)", null => "—", _ => raw }
+L000390 |             var text = raw switch ⟦EOL⟧
 // 해설 L391: 구문 블록 경계입니다 · 소속 Refresh.
 L000391 |             { ⟦EOL⟧
-// 해설 L392: 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture) / 지역 변수를 선언합니다: var scaled = Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture); / 변수의 초기값을 지정합니다: scaled = Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture)
-L000392 |                 var scaled = Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture); ⟦EOL⟧
-// 해설 L393: 지역 변수를 선언합니다: var rawValue = scaled / _readScale; / 변수의 초기값을 지정합니다: rawValue = scaled / _readScale
-L000393 |                 var rawValue = scaled / _readScale; ⟦EOL⟧
-// 해설 L394: 값을 대상에 대입합니다: text = IsCount ? scaled.ToString("0.########", CultureInfo.InvariantCulture) : $"{rawValue.ToString("0", CultureInfo.InvariantCulture)} → {scaled.ToString("0.########", CultureInfo.InvariantCulture)}" / 함수·델리게이트 또는 객체 생성자를 호출합니다: scaled.ToString("0.########", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: rawValue.ToString("0", CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: IsCount ? scaled.ToString("0.########", CultureInfo.InvariantCulture) : $"{rawValue.ToString("0", CultureInfo.InvariantCulture)} → {s
-L000394 |                 text = IsCount ? scaled.ToString("0.########", CultureInfo.InvariantCulture) : $"{rawValue.ToString("0", CultureInfo.InvariantCulture)} → {scaled.ToString("0.########", CultureInfo.InvariantCulture)}"; ⟦EOL⟧
-// 해설 L395: 값을 대상에 대입합니다: brush = IsCount ? Brushes.SteelBlue : scaled == 1 ? Brushes.ForestGreen : Brushes.Firebrick / 조건에 따라 결과식을 선택합니다: IsCount ? Brushes.SteelBlue : scaled == 1 ? Brushes.ForestGreen : Brushes.Firebrick / 조건에 따라 결과식을 선택합니다: scaled == 1 ? Brushes.ForestGreen : Brushes.Firebrick
-L000395 |                 brush = IsCount ? Brushes.SteelBlue : scaled == 1 ? Brushes.ForestGreen : Brushes.Firebrick; ⟦EOL⟧
-// 해설 L396: 조건에 따라 분기합니다: if (IsAlignBusyWord)
-L000396 |                 if (IsAlignBusyWord) ⟦EOL⟧
-// 해설 L397: 구문 블록 경계입니다 · 소속 Refresh.
-L000397 |                 { ⟦EOL⟧
-// 해설 L398: 지역 변수를 선언합니다: var active = ((int)rawValue & 2) != 0; / 변수의 초기값을 지정합니다: active = ((int)rawValue & 2) != 0
-L000398 |                     var active = ((int)rawValue & 2) != 0; ⟦EOL⟧
-// 해설 L399: 값을 대상에 대입합니다: text = $"{rawValue:0} · ALIGN {(active ? "ON" : "OFF")}" / 조건에 따라 결과식을 선택합니다: active ? "ON" : "OFF"
-L000399 |                     text = $"{rawValue:0} · ALIGN {(active ? "ON" : "OFF")}"; ⟦EOL⟧
-// 해설 L400: 값을 대상에 대입합니다: brush = active ? Brushes.ForestGreen : Brushes.DarkGoldenrod / 조건에 따라 결과식을 선택합니다: active ? Brushes.ForestGreen : Brushes.DarkGoldenrod
-L000400 |                     brush = active ? Brushes.ForestGreen : Brushes.DarkGoldenrod; ⟦EOL⟧
-// 해설 L401: 구문 블록 경계입니다 · 소속 Refresh.
-L000401 |                 } ⟦EOL⟧
-// 해설 L402: 구문 블록 경계입니다 · 소속 Refresh.
-L000402 |             } ⟦EOL⟧
-L000403 |  ⟦EOL⟧
-// 해설 L404: 조건에 따라 분기합니다: if (_currentValue != text)
-L000404 |             if (_currentValue != text) ⟦EOL⟧
+// 해설 L392: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)
+L000392 |                 "1" => "ON (1)", ⟦EOL⟧
+// 해설 L393: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)
+L000393 |                 "0" => "OFF (0)", ⟦EOL⟧
+// 해설 L394: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)
+L000394 |                 null => "—", ⟦EOL⟧
+// 해설 L395: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)
+L000395 |                 _ => raw ⟦EOL⟧
+// 해설 L396: 구문 블록 경계입니다 · 소속 Refresh.
+L000396 |             }; ⟦EOL⟧
+// 해설 L397: 지역 변수를 선언합니다: var brush = raw switch { "1" => Brushes.ForestGreen, "0" => Brushes.DarkGoldenrod, null => Brushes.Gray, _ => Brushes.Firebrick }; / 값별 결과식을 선택합니다: raw switch { "1" => Brushes.ForestGreen, "0" => Brushes.DarkGoldenrod, null => Brushes.Gray, _ => Brushes.Firebrick } / 변수의 초기값을 지정합니다: brush = raw switch { "1" => Brushes.ForestGreen, "0" => Brushes.DarkGoldenrod, null => Brushes.Gray, _ => Brushes.Firebrick }
+L000397 |             var brush = raw switch ⟦EOL⟧
+// 해설 L398: 구문 블록 경계입니다 · 소속 Refresh.
+L000398 |             { ⟦EOL⟧
+// 해설 L399: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)
+L000399 |                 "1" => Brushes.ForestGreen, ⟦EOL⟧
+// 해설 L400: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)
+L000400 |                 "0" => Brushes.DarkGoldenrod, ⟦EOL⟧
+// 해설 L401: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)
+L000401 |                 null => Brushes.Gray, ⟦EOL⟧
+// 해설 L402: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CMelsecStageSimulationRow.Refresh(Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE?, bool)
+L000402 |                 _ => Brushes.Firebrick ⟦EOL⟧
+// 해설 L403: 구문 블록 경계입니다 · 소속 Refresh.
+L000403 |             }; ⟦EOL⟧
+// 해설 L404: 조건에 따라 분기합니다: if (IsText && raw is not null)
+L000404 |             if (IsText && raw is not null) ⟦EOL⟧
 // 해설 L405: 구문 블록 경계입니다 · 소속 Refresh.
 L000405 |             { ⟦EOL⟧
-// 해설 L406: 값을 대상에 대입합니다: _currentValue = text
-L000406 |                 _currentValue = text; ⟦EOL⟧
-// 해설 L407: 함수·델리게이트 또는 객체 생성자를 호출합니다: Changed(nameof(CurrentValue)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CurrentValue)
-L000407 |                 Changed(nameof(CurrentValue)); ⟦EOL⟧
+// 해설 L406: 값을 대상에 대입합니다: text = raw.Length == 0 ? "(EMPTY)" : raw / 조건에 따라 결과식을 선택합니다: raw.Length == 0 ? "(EMPTY)" : raw
+L000406 |                 text = raw.Length == 0 ? "(EMPTY)" : raw; ⟦EOL⟧
+// 해설 L407: 값을 대상에 대입합니다: brush = Brushes.SteelBlue
+L000407 |                 brush = Brushes.SteelBlue; ⟦EOL⟧
 // 해설 L408: 구문 블록 경계입니다 · 소속 Refresh.
 L000408 |             } ⟦EOL⟧
-L000409 |  ⟦EOL⟧
-// 해설 L410: 조건에 따라 분기합니다: if (_stateBrush != brush)
-L000410 |             if (_stateBrush != brush) ⟦EOL⟧
-// 해설 L411: 구문 블록 경계입니다 · 소속 Refresh.
-L000411 |             { ⟦EOL⟧
-// 해설 L412: 값을 대상에 대입합니다: _stateBrush = brush
-L000412 |                 _stateBrush = brush; ⟦EOL⟧
-// 해설 L413: 함수·델리게이트 또는 객체 생성자를 호출합니다: Changed(nameof(StateBrush)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(StateBrush)
-L000413 |                 Changed(nameof(StateBrush)); ⟦EOL⟧
-// 해설 L414: 구문 블록 경계입니다 · 소속 Refresh.
-L000414 |             } ⟦EOL⟧
+// 해설 L409: 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (IsMeasurement && raw is not null)
+L000409 |             else if (IsMeasurement && raw is not null) ⟦EOL⟧
+// 해설 L410: 구문 블록 경계입니다 · 소속 Refresh.
+L000410 |             { ⟦EOL⟧
+// 해설 L411: 값을 대상에 대입합니다: text = Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture).ToString("0.####", CultureInfo.InvariantCulture) + " mm" / 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture).ToString("0.####", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture)
+L000411 |                 text = Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture).ToString("0.####", CultureInfo.InvariantCulture) + " mm"; ⟦EOL⟧
+// 해설 L412: 값을 대상에 대입합니다: brush = Brushes.SteelBlue
+L000412 |                 brush = Brushes.SteelBlue; ⟦EOL⟧
+// 해설 L413: 구문 블록 경계입니다 · 소속 Refresh.
+L000413 |             } ⟦EOL⟧
+// 해설 L414: 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (IsNumeric && raw is not null)
+L000414 |             else if (IsNumeric && raw is not null) ⟦EOL⟧
 // 해설 L415: 구문 블록 경계입니다 · 소속 Refresh.
-L000415 |         } ⟦EOL⟧
-L000416 |  ⟦EOL⟧
-// 해설 L417: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(name)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(name)
-L000417 |         private void Changed([CallerMemberName] string? name = null) => PropertyChanged?.Invoke(this, new(name)); ⟦EOL⟧
-// 해설 L418: 구문 블록 경계입니다.
-L000418 |     } ⟦EOL⟧
-// 해설 L419: 구문 블록 경계입니다.
-L000419 | } ⟦EOL⟧
+L000415 |             { ⟦EOL⟧
+// 해설 L416: 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture) / 지역 변수를 선언합니다: var scaled = Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture); / 변수의 초기값을 지정합니다: scaled = Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture)
+L000416 |                 var scaled = Convert.ToDouble(sample!.Value, CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L417: 지역 변수를 선언합니다: var rawValue = scaled / _readScale; / 변수의 초기값을 지정합니다: rawValue = scaled / _readScale
+L000417 |                 var rawValue = scaled / _readScale; ⟦EOL⟧
+// 해설 L418: 값을 대상에 대입합니다: text = IsCount ? scaled.ToString("0.########", CultureInfo.InvariantCulture) : $"{rawValue.ToString("0", CultureInfo.InvariantCulture)} → {scaled.ToString("0.########", CultureInfo.InvariantCulture)}" / 함수·델리게이트 또는 객체 생성자를 호출합니다: scaled.ToString("0.########", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: rawValue.ToString("0", CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: IsCount ? scaled.ToString("0.########", CultureInfo.InvariantCulture) : $"{rawValue.ToString("0", CultureInfo.InvariantCulture)} → {s
+L000418 |                 text = IsCount ? scaled.ToString("0.########", CultureInfo.InvariantCulture) : $"{rawValue.ToString("0", CultureInfo.InvariantCulture)} → {scaled.ToString("0.########", CultureInfo.InvariantCulture)}"; ⟦EOL⟧
+// 해설 L419: 값을 대상에 대입합니다: brush = IsCount ? Brushes.SteelBlue : scaled == 1 ? Brushes.ForestGreen : Brushes.Firebrick / 조건에 따라 결과식을 선택합니다: IsCount ? Brushes.SteelBlue : scaled == 1 ? Brushes.ForestGreen : Brushes.Firebrick / 조건에 따라 결과식을 선택합니다: scaled == 1 ? Brushes.ForestGreen : Brushes.Firebrick
+L000419 |                 brush = IsCount ? Brushes.SteelBlue : scaled == 1 ? Brushes.ForestGreen : Brushes.Firebrick; ⟦EOL⟧
+// 해설 L420: 조건에 따라 분기합니다: if (IsAlignBusyWord)
+L000420 |                 if (IsAlignBusyWord) ⟦EOL⟧
+// 해설 L421: 구문 블록 경계입니다 · 소속 Refresh.
+L000421 |                 { ⟦EOL⟧
+// 해설 L422: 지역 변수를 선언합니다: var active = ((int)rawValue & 2) != 0; / 변수의 초기값을 지정합니다: active = ((int)rawValue & 2) != 0
+L000422 |                     var active = ((int)rawValue & 2) != 0; ⟦EOL⟧
+// 해설 L423: 값을 대상에 대입합니다: text = $"{rawValue:0} · ALIGN {(active ? "ON" : "OFF")}" / 조건에 따라 결과식을 선택합니다: active ? "ON" : "OFF"
+L000423 |                     text = $"{rawValue:0} · ALIGN {(active ? "ON" : "OFF")}"; ⟦EOL⟧
+// 해설 L424: 값을 대상에 대입합니다: brush = active ? Brushes.ForestGreen : Brushes.DarkGoldenrod / 조건에 따라 결과식을 선택합니다: active ? Brushes.ForestGreen : Brushes.DarkGoldenrod
+L000424 |                     brush = active ? Brushes.ForestGreen : Brushes.DarkGoldenrod; ⟦EOL⟧
+// 해설 L425: 구문 블록 경계입니다 · 소속 Refresh.
+L000425 |                 } ⟦EOL⟧
+// 해설 L426: 구문 블록 경계입니다 · 소속 Refresh.
+L000426 |             } ⟦EOL⟧
+L000427 |  ⟦EOL⟧
+// 해설 L428: 조건에 따라 분기합니다: if (_currentValue != text)
+L000428 |             if (_currentValue != text) ⟦EOL⟧
+// 해설 L429: 구문 블록 경계입니다 · 소속 Refresh.
+L000429 |             { ⟦EOL⟧
+// 해설 L430: 값을 대상에 대입합니다: _currentValue = text
+L000430 |                 _currentValue = text; ⟦EOL⟧
+// 해설 L431: 함수·델리게이트 또는 객체 생성자를 호출합니다: Changed(nameof(CurrentValue)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CurrentValue)
+L000431 |                 Changed(nameof(CurrentValue)); ⟦EOL⟧
+// 해설 L432: 구문 블록 경계입니다 · 소속 Refresh.
+L000432 |             } ⟦EOL⟧
+L000433 |  ⟦EOL⟧
+// 해설 L434: 조건에 따라 분기합니다: if (_stateBrush != brush)
+L000434 |             if (_stateBrush != brush) ⟦EOL⟧
+// 해설 L435: 구문 블록 경계입니다 · 소속 Refresh.
+L000435 |             { ⟦EOL⟧
+// 해설 L436: 값을 대상에 대입합니다: _stateBrush = brush
+L000436 |                 _stateBrush = brush; ⟦EOL⟧
+// 해설 L437: 함수·델리게이트 또는 객체 생성자를 호출합니다: Changed(nameof(StateBrush)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(StateBrush)
+L000437 |                 Changed(nameof(StateBrush)); ⟦EOL⟧
+// 해설 L438: 구문 블록 경계입니다 · 소속 Refresh.
+L000438 |             } ⟦EOL⟧
+// 해설 L439: 구문 블록 경계입니다 · 소속 Refresh.
+L000439 |         } ⟦EOL⟧
+L000440 |  ⟦EOL⟧
+// 해설 L441: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(name)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(name)
+L000441 |         private void Changed([CallerMemberName] string? name = null) => PropertyChanged?.Invoke(this, new(name)); ⟦EOL⟧
+// 해설 L442: 구문 블록 경계입니다.
+L000442 |     } ⟦EOL⟧
+// 해설 L443: 구문 블록 경계입니다.
+L000443 | } ⟦EOL⟧

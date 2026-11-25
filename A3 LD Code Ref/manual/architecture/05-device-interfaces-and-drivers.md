@@ -1,6 +1,8 @@
 # 05. Device Interface·Automation1·Motion·MELSEC의 경계
 
-> 기준: `A3Drilling/master` · `334b3599651b2e8e0181fd4459bafaf3cddafff3`. 본 장은 해당 Commit의 소스를 정적으로 읽어 설명합니다. 정식 설비 빌드·장비 연결·가공을 실행한 결과가 아닙니다.
+> 최신 원본 기준: **2026-11-25 · master Ver11.23.0 · `0219666f9053b907d96d7e0aa7d0c6c1be3a73d4`**. 이전 버전의 변경 설명은 연혁으로 보존하며, 이번 Stage Glass Data·Product 필드 변경은 [상세장](10-stage-glass-data-and-product-fields.md)에서 다룹니다.
+
+> 기준: `A3Drilling/master` · `0219666f9053b907d96d7e0aa7d0c6c1be3a73d4`. 본 장은 해당 Commit의 소스를 정적으로 읽어 설명합니다. 정식 설비 빌드·장비 연결·가공을 실행한 결과가 아닙니다.
 
 화면 버튼에서 DLL을 직접 호출한다고 생각하면 추적이 어렵습니다. 이 프로그램은 통신 등록, 장치 명령, Motion 축 제어, MELSEC typed I/O를 나누어 다룹니다. 오류가 났을 때 **어느 대상/번호의 어느 경로**였는지 먼저 정해야 합니다.
 
@@ -20,13 +22,13 @@ flowchart TD
 
 ## 1. InterfaceManager의 책임
 
-`CInterfaceManager`는 장치 정의를 바탕으로 `CInterfaceDevice`를 만들고, 모듈+번호 또는 NickName으로 장치를 찾으며, 연결/명령/통신 상태를 묶습니다. 등록되지 않은 모듈/번호는 KeyNotFoundException, 중복 NickName은 명시적 InvalidOperationException이 될 수 있습니다. 번호가 있는 장치에서는 이름만으로 호출하는 코드를 새로 넣을 때 중복 가능성을 확인해야 합니다. [장치 찾기와 중복 이름 처리](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L658-L695).
+`CInterfaceManager`는 장치 정의를 바탕으로 `CInterfaceDevice`를 만들고, 모듈+번호 또는 NickName으로 장치를 찾으며, 연결/명령/통신 상태를 묶습니다. 등록되지 않은 모듈/번호는 KeyNotFoundException, 중복 NickName은 명시적 InvalidOperationException이 될 수 있습니다. 번호가 있는 장치에서는 이름만으로 호출하는 코드를 새로 넣을 때 중복 가능성을 확인해야 합니다. [장치 찾기와 중복 이름 처리](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L658-L695).
 
-`ExecuteDeviceFunction`은 device.ExecuteFunction을 호출하고 명령/응답 로그를 남깁니다. Vision line count 초과 예외는 알람 callback도 시도한 뒤 다시 던집니다. 통신 예외를 단순히 빈 문자열로 바꿔 UI에서 OK처럼 보이게 처리하는 변경은 원래 오류 경계를 약화시킬 수 있습니다. [명령 로그·예외·Vision 용량 알람](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L630-L655).
+`ExecuteDeviceFunction`은 device.ExecuteFunction을 호출하고 명령/응답 로그를 남깁니다. Vision line count 초과 예외는 알람 callback도 시도한 뒤 다시 던집니다. 통신 예외를 단순히 빈 문자열로 바꿔 UI에서 OK처럼 보이게 처리하는 변경은 원래 오류 경계를 약화시킬 수 있습니다. [명령 로그·예외·Vision 용량 알람](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L630-L655).
 
 ## 2. 장치별 Comm은 어떻게 선택되는가
 
-`CInterfaceDevice`는 연결 옵션을 파싱하고 `CComm.Create(Data, ConnectOption)`으로 실제 Comm을 구성합니다. Comm 팩토리는 같은 Assembly에서 `CCommBase` 하위 타입과 `CCommTypeAttribute`를 찾아 InterfaceType/DeviceName 매칭으로 선택합니다. DeviceNames가 구체적인 등록을 먼저 고릅니다. 맞는 타입이 없으면 `CReadyOnlyComm`을 반환합니다. [장치 Comm 생성](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L2987-L3006), [Attribute 기반 Comm 등록](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CComm.cs#L12-L60).
+`CInterfaceDevice`는 연결 옵션을 파싱하고 `CComm.Create(Data, ConnectOption)`으로 실제 Comm을 구성합니다. Comm 팩토리는 같은 Assembly에서 `CCommBase` 하위 타입과 `CCommTypeAttribute`를 찾아 InterfaceType/DeviceName 매칭으로 선택합니다. DeviceNames가 구체적인 등록을 먼저 고릅니다. 맞는 타입이 없으면 `CReadyOnlyComm`을 반환합니다. [장치 Comm 생성](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L2987-L3006), [Attribute 기반 Comm 등록](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CComm.cs#L12-L60).
 
 | 단계 | 확인 내용 |
 |---|---|
@@ -37,7 +39,7 @@ flowchart TD
 | 연결 | Online/Offline/Simulation과 마지막 오류를 별도로 확인 |
 | 응답 | Execute 반환값이 장치별 성공 계약과 일치하는지 |
 
-`CReadyOnlyComm`은 Connect/Execute 때 “Live ... not ready” 오류 상태를 설정합니다. 타입 생성에 성공했다는 사실만으로 실제 통신 드라이버가 지원된다고 설명하면 안 됩니다. [fallback 동작](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CComm.cs#L138-L153).
+`CReadyOnlyComm`은 Connect/Execute 때 “Live ... not ready” 오류 상태를 설정합니다. 타입 생성에 성공했다는 사실만으로 실제 통신 드라이버가 지원된다고 설명하면 안 됩니다. [fallback 동작](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CComm.cs#L138-L153).
 
 ## 3. Simulation은 통신/모션/Script 조건이 분리되어 있다
 
@@ -49,11 +51,11 @@ flowchart TD
 | `CAutomationManager.RunScript` | simulation이면 합성 Task status 반환 | Controller compiler·queue·가공 결과를 검증하지 않습니다. |
 | Script generator | `AUTOMATION1_SIMULATOR_USE`로 Y 출력 선택 | 통신 Simulation과 Script Simulator 조건이 동일하다고 가정하지 않습니다. |
 
-근거: [Interface Simulation 집계](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L97-L107), [SIM 응답](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L3147-L3164), [모션 Simulation과 실제 실행 분기](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Motion/CMotionManager.cs#L376-L396), [RunScript Simulation](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Automation/CAutomationManager.cs#L324-L334), [Script simulator Y](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/Script/CAutomation1ScriptFile.cs#L713-L715).
+근거: [Interface Simulation 집계](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L97-L107), [SIM 응답](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L3147-L3164), [모션 Simulation과 실제 실행 분기](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Motion/CMotionManager.cs#L376-L396), [RunScript Simulation](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Automation/CAutomationManager.cs#L324-L334), [Script simulator Y](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/Script/CAutomation1ScriptFile.cs#L713-L715).
 
 ## 4. AutomationManager와 Automation1Comm의 분업
 
-`CAutomationManager.UploadScript`는 로컬 경로와 Controller 파일명을 정규화한 뒤 `AUTOMATION1:SCRIPT|UPLOAD|...` 내부 명령을 만듭니다. `RunScript`는 TaskIndex와 파일명을 검증하고 내부 RUN 명령으로 전달합니다. 이 문자열은 모든 외부 장비가 그대로 이해하는 공통 프로토콜이 아니라 A3 내부 Comm 계층으로 내려가는 표현입니다. [Script API와 내부 명령](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Automation/CAutomationManager.cs#L301-L344).
+`CAutomationManager.UploadScript`는 로컬 경로와 Controller 파일명을 정규화한 뒤 `AUTOMATION1:SCRIPT|UPLOAD|...` 내부 명령을 만듭니다. `RunScript`는 TaskIndex와 파일명을 검증하고 내부 RUN 명령으로 전달합니다. 이 문자열은 모든 외부 장비가 그대로 이해하는 공통 프로토콜이 아니라 A3 내부 Comm 계층으로 내려가는 표현입니다. [Script API와 내부 명령](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Automation/CAutomationManager.cs#L301-L344).
 
 | API | 중요한 인자 | 호출 의미 |
 |---|---|---|
@@ -62,23 +64,23 @@ flowchart TD
 | `RunBufferedScripts` | scripts 목록, number, queueSize, linesPerCommand, timeoutMs, token | 업로드와 queue 기반 실행 경로 |
 | `RunStagePreparedBufferedScripts` | 준비된 scripts, queue 조건 | 준비 때 올린 정확한 파일을 재업로드 없이 실행하는 stageSession 경로 |
 
-`RunStagePreparedBufferedScripts`의 주석은 LocalScriptPath가 이 경로에서 쓰이지 않으며 큐를 완료/취소까지 소유한다고 명시합니다. 준비된 파일을 실행 시점의 임의 최신 파일로 대체하면 같은 회차라는 보장이 깨집니다. [Buffered API와 준비 파일 소유권](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Automation/CAutomationManager.cs#L347-L370).
+`RunStagePreparedBufferedScripts`의 주석은 LocalScriptPath가 이 경로에서 쓰이지 않으며 큐를 완료/취소까지 소유한다고 명시합니다. 준비된 파일을 실행 시점의 임의 최신 파일로 대체하면 같은 회차라는 보장이 깨집니다. [Buffered API와 준비 파일 소유권](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Automation/CAutomationManager.cs#L347-L370).
 
-`CAutomation1Comm`은 `_commLock → _statusReadLock` 순서를 명시합니다. 일반 명령과 연결/해제는 두 잠금을 통해 충돌을 막고, Buffered feed는 comm lock을 유지하되 read-only status lane을 열어 준비/피드백 조회를 허용합니다. 이 분리 경로에서 잠금 순서를 반대로 추가하면 교착을 만들 수 있습니다. [잠금과 실행상태 필드](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L13-L25), [일반/Buffered 실행과 finally 해제](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L76-L157).
+`CAutomation1Comm`은 `_commLock → _statusReadLock` 순서를 명시합니다. 일반 명령과 연결/해제는 두 잠금을 통해 충돌을 막고, Buffered feed는 comm lock을 유지하되 read-only status lane을 열어 준비/피드백 조회를 허용합니다. 이 분리 경로에서 잠금 순서를 반대로 추가하면 교착을 만들 수 있습니다. [잠금과 실행상태 필드](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L13-L25), [일반/Buffered 실행과 finally 해제](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L76-L157).
 
-Automation1 SDK ControllerOperationException은 연결 자체를 Offline으로 바꾸지 않고 명령 오류 응답을 돌려주는 분기가 있습니다. 다른 예외는 SetError를 통해 Offline 상태가 될 수 있습니다. **Task가 Fault인 것과 통신이 끊긴 것**을 같은 화면 문구로 합치지 않는 것이 좋습니다. [명령오류와 연결오류 분기](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L123-L143).
+Automation1 SDK ControllerOperationException은 연결 자체를 Offline으로 바꾸지 않고 명령 오류 응답을 돌려주는 분기가 있습니다. 다른 예외는 SetError를 통해 Offline 상태가 될 수 있습니다. **Task가 Fault인 것과 통신이 끊긴 것**을 같은 화면 문구로 합치지 않는 것이 좋습니다. [명령오류와 연결오류 분기](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L123-L143).
 
 ## 5. MotionManager는 논리 축과 실제 Controller를 연결한다
 
-`ExecuteAxisCommand(axisId, command, parameter, token, parameter2)`는 AxisId를 정규화하고 등록 정보를 찾습니다. 정의나 축 상태가 없으면 예외를 내고, ValidateAxisCommand를 거쳐 해당 Controller에 명령을 보낸 뒤 내부 상태에 반영합니다. AxisId, DevType, DevNo, 물리 축 식별자를 혼동하면 다른 장치로 명령이 갈 수 있습니다. [축 명령 경로](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Motion/CMotionManager.cs#L362-L396).
+`ExecuteAxisCommand(axisId, command, parameter, token, parameter2)`는 AxisId를 정규화하고 등록 정보를 찾습니다. 정의나 축 상태가 없으면 예외를 내고, ValidateAxisCommand를 거쳐 해당 Controller에 명령을 보낸 뒤 내부 상태에 반영합니다. AxisId, DevType, DevNo, 물리 축 식별자를 혼동하면 다른 장치로 명령이 갈 수 있습니다. [축 명령 경로](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Motion/CMotionManager.cs#L362-L396).
 
-초기화에서는 정의된 축을 Controller 단위로 묶어 각 Controller.Initialize에 전달합니다. 전체 Simulation 또는 개별 Controller Simulation이면 실제 초기화를 건너뜁니다. `Initialize` 반환만으로 모든 물리 축의 원점 완료를 의미한다고 설명하지 않습니다. [Controller별 초기화](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Motion/CMotionManager.cs#L96-L123).
+초기화에서는 정의된 축을 Controller 단위로 묶어 각 Controller.Initialize에 전달합니다. 전체 Simulation 또는 개별 Controller Simulation이면 실제 초기화를 건너뜁니다. `Initialize` 반환만으로 모든 물리 축의 원점 완료를 의미한다고 설명하지 않습니다. [Controller별 초기화](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Motion/CMotionManager.cs#L96-L123).
 
 ## 6. MELSEC은 일반 문자열 Execute가 아니라 별도 typed I/O다
 
-`CreateDevice`에서 MELSEC은 외부 통신 상태 경로로 표시됩니다. 해당 Device의 `ExecuteFunction`을 직접 호출하면 `MELSEC commands must use CMelsec typed read/write functions` 예외를 냅니다. 따라서 새 Stage 인터페이스를 일반 Socket처럼 `ExecuteFunction("...")`로 추가하면 안 됩니다. [MELSEC external 경로](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L168-L180), [typed I/O 강제](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L3147-L3152).
+`CreateDevice`에서 MELSEC은 외부 통신 상태 경로로 표시됩니다. 해당 Device의 `ExecuteFunction`을 직접 호출하면 `MELSEC commands must use CMelsec typed read/write functions` 예외를 냅니다. 따라서 새 Stage 인터페이스를 일반 Socket처럼 `ExecuteFunction("...")`로 추가하면 안 됩니다. [MELSEC external 경로](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L168-L180), [typed I/O 강제](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L3147-L3152).
 
-`CMelsec`에는 Map, 요청 Queue, Write Queue/상태, Read Snapshot, CachedValue, polling/backoff를 위한 상태가 분리되어 있습니다. 이는 소스 필드에서 확인되는 구조이며, 본 장이 모든 고객 주소와 신호 순서를 검증했다는 뜻은 아닙니다. [MELSEC 큐·맵·캐시·poll 상태](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L15-L58).
+`CMelsec`에는 Map, 요청 Queue, Write Queue/상태, Read Snapshot, CachedValue, polling/backoff를 위한 상태가 분리되어 있습니다. 이는 소스 필드에서 확인되는 구조이며, 본 장이 모든 고객 주소와 신호 순서를 검증했다는 뜻은 아닙니다. [MELSEC 큐·맵·캐시·poll 상태](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CMelsec.cs#L15-L58).
 
 새 I/F 항목은 **맵 정의 → 타입·주소·권한 → 읽기 fresh/cache 기준 → 쓰기완료/상대응답 → timeout/reset → 로그**까지 연결해서 검토해야 합니다. 주소가 보인다는 이유만으로 고객 승인된 신호 계약이라고 확정하지 않습니다. Heartbeat, RunEnable, Auto 상태처럼 시간 의미가 있는 신호는 현재값 1만 확인하는 것과 갱신이 살아있다는 것을 구분하여 계약해야 합니다.
 
@@ -101,7 +103,7 @@ Offline Studio에서 SDK 내부 동작을 답변해야 할 경우, 공식 API �
 
 ## 9. 11.13.0에서 바뀌어 현재 유지되는 통신 경계
 
-Distortion의 Stage ABLE/COMPLETE 수신 정의는 `UNASSIGNED·Use=false`에서 지정 주소·활성 입력으로 바뀌었습니다. `CMelsecMapFile`의 기본행 생성기도 같은 방향으로 고쳤습니다. 타입은 DWord, 방향 IN, 접근 R, 길이 2 Word, ReadScale `0.0001`, WriteScale `10000`인 정의입니다. 설명의 raw Int32 0/10000을 논리 0/1로 변환한다는 의도와, 실제 PLC가 같은 단위·주소를 쓰는지는 구분합니다. 현장 IP·접속 옵션 원문은 이 장에 공개하지 않습니다. [Stage Distortion 기본 맵 생성](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CMelsecMapFile.cs#L1659-L1670).
+Distortion의 Stage ABLE/COMPLETE 수신 정의는 `UNASSIGNED·Use=false`에서 지정 주소·활성 입력으로 바뀌었습니다. `CMelsecMapFile`의 기본행 생성기도 같은 방향으로 고쳤습니다. 타입은 DWord, 방향 IN, 접근 R, 길이 2 Word, ReadScale `0.0001`, WriteScale `10000`인 정의입니다. 설명의 raw Int32 0/10000을 논리 0/1로 변환한다는 의도와, 실제 PLC가 같은 단위·주소를 쓰는지는 구분합니다. 현장 IP·접속 옵션 원문은 이 장에 공개하지 않습니다. [Stage Distortion 기본 맵 생성](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L1680-L1691).
 
 ```mermaid
 flowchart LR
@@ -113,15 +115,15 @@ flowchart LR
  C --> A[Alarm 분석은 저장된 통신 로그를 읽음]
 ```
 
-보호윈도우 추가 요청은 새 직접 PLC 접속을 만들지 않습니다. 기존 `PublishIfChanged`가 typed WriteWord를 전달하고, 중앙 Snapshot에서 **쓰기 시작 이후의 readback**을 확인합니다. Stage Tray Count도 기존 통신 소유자의 `RefreshCachedValueAsync`로 새 값을 읽습니다. 값이 유효한 1 Word 비음수 정수인지 검사하며 별도 5초 한도를 둡니다. 추가 요청 정책의 0~3회와 통신 쓰기/읽기 timeout을 같은 '재시도 횟수'로 묶지 않습니다. [출력과 갱신시각 확인](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4469-L4513), [Tray Count fresh 취득](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L4799-L4820).
+보호윈도우 추가 요청은 새 직접 PLC 접속을 만들지 않습니다. 기존 `PublishIfChanged`가 typed WriteWord를 전달하고, 중앙 Snapshot에서 **쓰기 시작 이후의 readback**을 확인합니다. Stage Tray Count도 기존 통신 소유자의 `RefreshCachedValueAsync`로 새 값을 읽습니다. 값이 유효한 1 Word 비음수 정수인지 검사하며 별도 5초 한도를 둡니다. 추가 요청 정책의 0~3회와 통신 쓰기/읽기 timeout을 같은 '재시도 횟수'로 묶지 않습니다. [출력과 갱신시각 확인](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Station/CStationProcess.cs#L4469-L4513), [Tray Count fresh 취득](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Station/CStationProcess.cs#L4799-L4820).
 
-검증은 raw 0/10000의 논리 0/1 변환, ABLE/COMPLETE ON→OFF 순서, 오래된 정상 캐시와 새 오류 응답, DWord 인접 두 Word의 계약을 나눕니다. JHMI Interface 정의와 현장용 복사본도 변경됐지만 현재 `CInterfaceFile.GetInterfacePath`는 `JHMI_INTERFACE.csv`라는 고정 이름을 반환합니다. 현장용 복사본 추가만으로 실행 시 자동 선택된다고 설명하지 않습니다. [실제 Interface 정의 경로](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L107-L110). 이 분석은 구성 파일·래퍼 소스 검토이며 실제 통신·벤더 DLL 로드·실행·역컴파일은 수행하지 않았습니다.
+검증은 raw 0/10000의 논리 0/1 변환, ABLE/COMPLETE ON→OFF 순서, 오래된 정상 캐시와 새 오류 응답, DWord 인접 두 Word의 계약을 나눕니다. JHMI Interface 정의와 현장용 복사본도 변경됐지만 현재 `CInterfaceFile.GetInterfacePath`는 `JHMI_INTERFACE.csv`라는 고정 이름을 반환합니다. 현장용 복사본 추가만으로 실행 시 자동 선택된다고 설명하지 않습니다. [실제 Interface 정의 경로](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L107-L110). 이 분석은 구성 파일·래퍼 소스 검토이며 실제 통신·벤더 DLL 로드·실행·역컴파일은 수행하지 않았습니다.
 
 ## 10. 이전 11.17의 장치 변경 범위
 
 11.17.0 diff에는 새로운 Comm·SDK 래퍼·MELSEC 맵 변경이 없었습니다. 당시 구조 변화는 Default의 Head별 검사점 수, Review의 Shot별 Beam 할당, 화면/설정 소비에 있습니다. 이전 절의 Distortion 맵·typed I/O·스냅샷 한계는 현재 소스에서 유지됩니다. 새 DOE_EXIST를 설정했다고 일반 공정의 Laser 발진 횟수나 외부 장치 프로토콜이 자동 변경되는 것으로 설명하지 않습니다.
 
-Default OFF Head는 `grid=1,pitch=0,angle=0`으로 기존 Capture API를 한 번 호출하고, 같은 기존 Stage/Vision 세션을 사용합니다. Shot별 Beam 할당은 정규화한 ShotKey마다 Beam 목록을 합쳐 기존 대상 좌표 생성기로 전달합니다. 이 검사는 전역 Beam 유효범위와 Shot의 Head/제외조건을 확인하며 DOE_EXIST로 일반 Review의 Beam을 자동 치환하지 않습니다. [Default의 기존 Capture 소비](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3902-L3924), [할당 정규화·Beam 검증·좌표 대상](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Review/CReviewManager.cs#L1381-L1425).
+Default OFF Head는 `grid=1,pitch=0,angle=0`으로 기존 Capture API를 한 번 호출하고, 같은 기존 Stage/Vision 세션을 사용합니다. Shot별 Beam 할당은 정규화한 ShotKey마다 Beam 목록을 합쳐 기존 대상 좌표 생성기로 전달합니다. 이 검사는 전역 Beam 유효범위와 Shot의 Head/제외조건을 확인하며 DOE_EXIST로 일반 Review의 Beam을 자동 치환하지 않습니다. [Default의 기존 Capture 소비](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3902-L3924), [할당 정규화·Beam 검증·좌표 대상](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Review/CReviewManager.cs#L1381-L1425).
 
 ```mermaid
 flowchart LR
@@ -137,7 +139,7 @@ flowchart LR
 
 ## 11. Ver11.19.0의 새 상태 API와 기존 통신 계약
 
-새 GetCachedTalonStatus(number)는 Talon 상태 딕셔너리를 반환하며 통신 명령을 보내지 않습니다. PM은 이 API의 ThgHour를 소비합니다. 수집기의 최신성 판정과 캐시의 마지막 숫자는 다른 정보이므로, PM 화면에 수치가 있다는 이유로 지금 장치와 통신했다고 설명하지 않습니다. [Talon 상태 사전](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L1656-L1664), [새 cached API](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L2047-L2056), [PM 소비자](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuPm.cs#L93-L108)
+새 GetCachedTalonStatus(number)는 Talon 상태 딕셔너리를 반환하며 통신 명령을 보내지 않습니다. PM은 이 API의 ThgHour를 소비합니다. 수집기의 최신성 판정과 캐시의 마지막 숫자는 다른 정보이므로, PM 화면에 수치가 있다는 이유로 지금 장치와 통신했다고 설명하지 않습니다. [Talon 상태 사전](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L1656-L1664), [새 cached API](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L2047-L2056), [PM 소비자](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuPm.cs#L93-L108)
 
 | 변경 파일 | 이번 실제 코드 변화 | 유지되는 경계 |
 |---|---|---|
@@ -147,8 +149,16 @@ flowchart LR
 | CStageReviewSequences | 확인한 diff는 설명 주석 보강 | Process Move/IOF 소유권·상대 신호·도착 판정·cleanup은 새 기능으로 세지 않음 |
 | CStationProcess | AUTO INIT와 MachiningComplete 강제 초기화 추가 | Write 성공만으로 상대 의미·실기 동작을 확정하지 않음 |
 
-근거: [Direct I/O 직렬화](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L613-L630), [Scalar2Word](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Melsec/CMelsec.cs#L546-L577), [Vision pending](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Vision/CVisionComm.cs#L274-L303), [Manual 상태 집계](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Automation/CAutomationManager.cs#L1673-L1728), [기존 도착·cleanup](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStageReviewSequences.cs#L654-L702), [새 AUTO INIT](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Station/CStationProcess.cs#L3912-L3958)
+근거: [Direct I/O 직렬화](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CMelsec.cs#L613-L630), [Scalar2Word](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CMelsec.cs#L546-L577), [Vision pending](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Vision/CVisionComm.cs#L274-L303), [Manual 상태 집계](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Automation/CAutomationManager.cs#L1673-L1728), [기존 도착·cleanup](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Station/CStageReviewSequences.cs#L654-L702), [새 AUTO INIT](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Station/CStationProcess.cs#L3912-L3958)
 
-ManualMotionSession은 gate를 기다리는 요청부터 activeOperations를 증가시키고 finally에서 감소시킵니다. JOG 시작 callback을 보관하면 jogActive를 세우며 성공적으로 StopJog/StopAll이 해당 callback을 끝내야 내립니다. PM의 진행동작 차단이 대기 요청과 미확인 JOG까지 볼 수 있게 한 변화입니다. IsActive는 장치 encoder/Busy의 물리 정지 증명과 같지 않습니다. [대기·JOG·실패 상태 수명](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Automation/CAutomationManager.cs#L1673-L1767), [PM의 소유권 소비](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1340-L1370)
+ManualMotionSession은 gate를 기다리는 요청부터 activeOperations를 증가시키고 finally에서 감소시킵니다. JOG 시작 callback을 보관하면 jogActive를 세우며 성공적으로 StopJog/StopAll이 해당 callback을 끝내야 내립니다. PM의 진행동작 차단이 대기 요청과 미확인 JOG까지 볼 수 있게 한 변화입니다. IsActive는 장치 encoder/Busy의 물리 정지 증명과 같지 않습니다. [대기·JOG·실패 상태 수명](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Automation/CAutomationManager.cs#L1673-L1767), [PM의 소유권 소비](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L1340-L1370)
 
 검증 우선순위는 INIT의 실제 출력 readback, 장치 단절/STALE, JOG 시작 전후 PM 진입·정지 실패, Talon 번호 매핑입니다. 이번 문서 작업에서는 vendor DLL 로드·역컴파일·SDK 호출·장비 연결을 수행하지 않았습니다.
+
+## 12. Ver11.23.0: Stage Glass Data의 수신·SIM·표시 경계
+
+새 `CStageGlassDataMap`은 장치 실행 클래스가 아니라 WF600부터 시작하는 필드·주소 정의와 캐시 조립 helper다. 기본 JHMI는 44개 수신 항목을 MELSEC 0 / IN / R / Scale1 / Poll1000ms로 만든다. `ReadAsync`는 첫 항목의 새 Poll을 기다린 뒤 필요한 ID들을 캐시 사전으로 받고 누락·invalid·null·빈 H_GLASSID를 거절한다. GLASS_SIZE는 두 raw WORD를 쉼표 문자열로 합칠 뿐, mm 단위나 기판 방향으로 변환하지 않는다. [정의·새 읽기](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs#L26-L123), [기본 맵](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CMelsecMapFile.cs#L322-L343)
+
+SIM 입력은 ASCII/길이 또는 WORD0~65535를 검사하고 해당 장치가 SIMULATION인 때만 값을 바꾼다. 이 경로를 신규 실 PLC 쓰기 기능이라고 설명하면 안 된다. Monitor GROUP 선택 대기 값과 REFRESH로 적용된 필터도 별도다. [SIM 전용 가드](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Melsec/CMelsec.cs#L3060-L3097), [그룹 적용](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2912-L2941)
+
+동일 Poll Block 읽기와 물류 PC 업무 트랜잭션의 일관성은 다르다. 사용자 맵을 분산시키거나 Glass 갱신 중 읽으면 별도 현장 검증이 필요하다. 구체적인 생산자/소비자·오류·기본 주소·검증 시나리오는 [Stage Glass Data 상세장](10-stage-glass-data-and-product-fields.md)에 있다. 장치·벤더 DLL을 실행하지 않고 확인한 구조다.

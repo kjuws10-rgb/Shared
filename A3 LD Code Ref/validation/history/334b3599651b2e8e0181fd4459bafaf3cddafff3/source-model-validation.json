@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "a3-independent-source-model/1",
+  "passed": true,
+  "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+  "trackedFiles": 700,
+  "csharpFiles": 158,
+  "sourceHashesVerified": 158,
+  "physicalRangesVerified": 158986,
+  "typeDeclarations": 941,
+  "uniqueTypeIds": 930,
+  "partialSharedTypeIds": 4,
+  "members": 16511,
+  "uniqueMemberIds": 16511,
+  "duplicateMemberIds": 0,
+  "callSites": 43446,
+  "unownedCallRows": 0,
+  "unownedOperationRows": 0,
+  "compilationDiagnostics": {
+    "Error": 4348,
+    "Hidden": 431,
+    "Warning": 3
+  },
+  "errors": [],
+  "scope": "Independent Git/C# inventory, byte SHA and physical range/ID checks; no generator helpers imported. Roslyn terminal empty line is counted explicitly. Partial type declarations intentionally share a type ID. Partial compilation diagnostics are documentation limitations, not equipment-build results."
+}

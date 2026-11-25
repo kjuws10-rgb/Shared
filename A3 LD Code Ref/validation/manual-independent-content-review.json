@@ -1,0 +1,233 @@
+{
+  "schemaVersion": "a3-manual-independent-content-review/1",
+  "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
+  "baseCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+  "generatedAtUtc": "2026-11-25T01:39:41.995757+00:00",
+  "status": "content_verified",
+  "contentPassed": true,
+  "allChecksPassed": true,
+  "documentInputs": [
+    {
+      "path": "manual/architecture/10-stage-glass-data-and-product-fields.md",
+      "sha256": "92dc605b6698d0d457fd8396514783c84761010383a5460f576bb072a13d9dbe"
+    },
+    {
+      "path": "manual/architecture/04-product-and-station-lifecycle.md",
+      "sha256": "85d195b85eb5caf6f48db7a37bbea0525b8da314770744df177a4ba9b0b7c3d6"
+    },
+    {
+      "path": "manual/architecture/05-device-interfaces-and-drivers.md",
+      "sha256": "6c264f7f1e8dae013769e4673b49a6ee377cca93308a6a8e7960c905f082b6fa"
+    },
+    {
+      "path": "manual/review/05_결과_Revision_Product_연결.md",
+      "sha256": "316e3fcaa83dc17fd84c4de8eca2fa473662ed895b9258fc8d71d225f5e169d9"
+    }
+  ],
+  "sourceAnchors": {
+    "count": 208,
+    "errors": [],
+    "allFixedToLatest": true
+  },
+  "semanticClaims": [
+    {
+      "claim": "43 Stage fields, 44 map IDs, 360 WORD; GLASS_SIZE split and no mm conversion",
+      "document": "manual/architecture/10-stage-glass-data-and-product-fields.md",
+      "source": "CStageGlassDataMap.cs:26-83,108-157",
+      "result": "matches_source"
+    },
+    {
+      "claim": "Fresh first poll then selected cache copy; all Valid + nonempty H_GLASSID only; ReadAt is max",
+      "document": "manual/architecture/10-stage-glass-data-and-product-fields.md",
+      "source": "CStageGlassDataMap.cs:87-122; CMelsec.cs:2551-2565,2578-2637",
+      "result": "matches_source"
+    },
+    {
+      "claim": "Default block fits1920bytes; local cache block publication differs from PLC transaction atomicity",
+      "document": "manual/architecture/10-stage-glass-data-and-product-fields.md",
+      "source": "CMelsec.cs:17,2693-2717,2927-2947",
+      "result": "matches_source_conditional_not_runtime_proof"
+    },
+    {
+      "claim": "Existing map file does not receive new44 rows automatically",
+      "document": "manual/architecture/10-stage-glass-data-and-product-fields.md",
+      "source": "CMelsecMapFile.cs:102-110",
+      "result": "matches_source"
+    },
+    {
+      "claim": "Stage/Dummy/Cancel and10second reading; no Recipe auto-switch or DoReady",
+      "document": "manual/architecture/10-stage-glass-data-and-product-fields.md",
+      "source": "CRecipeConfirmDialog.xaml.cs:51-72; CMenuMonitor.cs:4429-4496",
+      "result": "matches_source"
+    },
+    {
+      "claim": "productFields optional fallback and separate parameters copy; previous active incomplete product blocked",
+      "document": "manual/architecture/04-product-and-station-lifecycle.md",
+      "source": "CProductManager.cs:129-200",
+      "result": "matches_source"
+    },
+    {
+      "claim": "PRODUCT_RESULT internal state vs external JUDGEMENT, old field fallback",
+      "document": "manual/architecture/10-stage-glass-data-and-product-fields.md",
+      "source": "CProductManager.cs:844-874,1050-1057",
+      "result": "matches_source"
+    },
+    {
+      "claim": "PRODUCT/RECIPE reserved fields and TYPE NAME VALUE format",
+      "document": "manual/architecture/10-stage-glass-data-and-product-fields.md",
+      "source": "CProductFile.cs:8-11,50-84,98-120,386-390",
+      "result": "matches_source"
+    },
+    {
+      "claim": "SIM ASCII byte capacity and unsigned WORD bounds; native mode guard",
+      "document": "manual/architecture/05-device-interfaces-and-drivers.md",
+      "source": "CMelsec.cs:3060-3095,2978-3007",
+      "result": "matches_source"
+    },
+    {
+      "claim": "Selected Recipe preparation and Product identity are not full PPID Job Change",
+      "document": "manual/architecture/04-product-and-station-lifecycle.md",
+      "source": "CRootView.cs:1627-1653; CReviewManager.cs:1593-1610",
+      "result": "matches_source"
+    },
+    {
+      "claim": "Product compact preserves6 review fields but omits VisionResultCode/NgReason",
+      "document": "manual/review/05_결과_Revision_Product_연결.md",
+      "source": "CProductFile.cs:157-164,298-309; CReviewManager.cs:1665-1681,1765-1788",
+      "result": "matches_source_not_new_runtime_test"
+    },
+    {
+      "claim": "Stage/Dummy Product has empty ProcessId while Root prepares new SCAN ProcessId; direct Station Product updates require matching ProcessId. This is an existing static lifecycle connection gap, not a reproduced equipment regression; reflection/external runtime are outside proof.",
+      "documents": [
+        "manual/architecture/04-product-and-station-lifecycle.md",
+        "manual/architecture/10-stage-glass-data-and-product-fields.md"
+      ],
+      "source": "CMenuMonitor.cs:4480-4488; CRootView.cs:1641-1653; CStationProcess.cs:1415-1516; whole-source declaration-only PrepareProductForProcess/StartProduct search",
+      "result": "matches_source_with_static_scope_limitations"
+    }
+  ],
+  "findings": [],
+  "reviewScope": "Complete newly added Stage Glass chapter and affected Product/device/Review additions; selected existing lifecycle/compact-persistence paragraphs. All source-anchor bounds checked, substantive source bodies independently read for the listed claims. Not every historical paragraph or execution path was re-reviewed. Follow-up reviewed the two added lifecycle-gap sections and their6 new citations only; retained all11 prior semantic reviews. Author full-manual QA totals were not combined with this review.",
+  "sourceInputs": [
+    {
+      "path": "Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs",
+      "sha256": "ae42e0681f9e8510476ad367eb29714feae95abc2dc1b4fb9e1af2129fc01eb3"
+    },
+    {
+      "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "sha256": "b57367eef12cab616f493e29ea7aed3ce1a583d13756a42890e07f57df8def1e"
+    },
+    {
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "sha256": "2bf74d7b1467df2ed769d1c20caa241b871981c39407b1e261f9c7009bff4869"
+    },
+    {
+      "path": "Drilling.File/Product/CProductFile.cs",
+      "sha256": "450b06158f48549c563ec41a8ef58a22614382b29effa8361879af0bcf1d2900"
+    },
+    {
+      "path": "Drilling.File/JHMI/CMelsecMapFile.cs",
+      "sha256": "af5bdafc70abcd66e7a8b1490a535eab6d841bcc487154c1efb4292773fd9e56"
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+      "sha256": "bdb093c436121df1cdb0860bcc39b1cc2c29eef2c4ce595ce3500ff423456878"
+    },
+    {
+      "path": "Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs",
+      "sha256": "7a383ef12d6fda215d2a83a04258002665f40ce18f8bd5caca61fbaaf93210b6"
+    },
+    {
+      "path": "Drilling.UI/CRootView.cs",
+      "sha256": "09f2e5df917b40012488baaad112bcba54488350e86e3bdc181cffa5ffeee8ab"
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "sha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d"
+    },
+    {
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "sha256": "7e5b1fd549370e222890c0882624bd116e1375ae160cb55e0d94cf3513f8b917"
+    }
+  ],
+  "operationalRecordsCopied": false,
+  "sourceChanged": false,
+  "documentsChangedByReviewer": false,
+  "equipmentExecuted": false,
+  "testsExecutedByThisReview": 0,
+  "followupLifecycleReview": {
+    "scope": "Only new lifecycle-gap sections in manual04 and manual10; no full manual QA rerun or runtime tests.",
+    "documentCount": 2,
+    "newSourceCitations": 6,
+    "newSemanticClaimCount": 1,
+    "existingSemanticClaimCountPreserved": 11,
+    "newCitations": [
+      {
+        "document": "manual/architecture/10-stage-glass-data-and-product-fields.md",
+        "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+        "start": 4480,
+        "end": 4488
+      },
+      {
+        "document": "manual/architecture/10-stage-glass-data-and-product-fields.md",
+        "path": "Drilling.UI/CRootView.cs",
+        "start": 1641,
+        "end": 1653
+      },
+      {
+        "document": "manual/architecture/10-stage-glass-data-and-product-fields.md",
+        "path": "Drilling.Common/Station/CStationProcess.cs",
+        "start": 1415,
+        "end": 1516
+      },
+      {
+        "document": "manual/architecture/04-product-and-station-lifecycle.md",
+        "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+        "start": 4480,
+        "end": 4488
+      },
+      {
+        "document": "manual/architecture/04-product-and-station-lifecycle.md",
+        "path": "Drilling.UI/CRootView.cs",
+        "start": 1641,
+        "end": 1653
+      },
+      {
+        "document": "manual/architecture/04-product-and-station-lifecycle.md",
+        "path": "Drilling.Common/Station/CStationProcess.cs",
+        "start": 1415,
+        "end": 1516
+      }
+    ],
+    "sourceBodyChecks": {
+      "monitorPassesEmptyProcessId": true,
+      "rootCreatesNewScanId": true,
+      "rootReusesGlassAndLotOnlyInShownPath": true,
+      "stationRequiresMatchingProcessId": true,
+      "completeReturnsWhenProductIdMissing": true,
+      "stopReturnsWhenProductIdMissing": true
+    },
+    "declarationOnlyOccurrences": [
+      ".\\Drilling.Common\\Product\\CProductManager.cs:203:    public async Task<ST_PRODUCT_DATA> PrepareProductForProcess(",
+      ".\\Drilling.Common\\Product\\CProductManager.cs:240:    public async Task<ST_PRODUCT_DATA> StartProduct(string productId, CancellationToken cancellationToken = default)"
+    ],
+    "sourceInputsUnchanged": true,
+    "authorFullQaCountsRecountedOrCombined": false,
+    "equipmentExecuted": false,
+    "runtimeTestsExecuted": 0
+  },
+  "headingNumberOnlyAmendment": {
+    "document": "manual/architecture/04-product-and-station-lifecycle.md",
+    "previousSha256": "165112a3c27edf5d1e9b76008707557223533bd7adc8fe4bf5e85ce4e4baeeeb",
+    "finalSha256": "85d195b85eb5caf6f48db7a37bbea0525b8da314770744df177a4ba9b0b7c3d6",
+    "changes": [
+      "last Ver11.23.0 section13 to16",
+      "last lifecycle-gap section14 to17"
+    ],
+    "reverseOnlyTheseTwoHeadingNumbersReproducesPreviousRawSha256": true,
+    "bodyCitationsAndAllOtherBytesUnchanged": true,
+    "semanticClaimsRetainedWithoutRecount": 12,
+    "anchorRangesRetainedWithoutRecount": 208,
+    "runtimeTestsExecuted": 0
+  }
+}

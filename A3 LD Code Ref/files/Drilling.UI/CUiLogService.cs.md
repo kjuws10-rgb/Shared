@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | e26730fb54b010598ad048992b59d5537b05e268bf8f8b7e3a478a0e8d633cf7 |
 | 파일 분류 | code |
 | 원본 크기/행 | 5,904 bytes / 200 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -44,7 +44,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `SyncRoot` · L13–13
 
-[Drilling.UI/CUiLogService.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L13-L13)
+[Drilling.UI/CUiLogService.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -72,7 +72,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_logManager` · L14–14
 
-[Drilling.UI/CUiLogService.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L14-L14)
+[Drilling.UI/CUiLogService.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -87,7 +87,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isRegistered` · L15–15
 
-[Drilling.UI/CUiLogService.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L15-L15)
+[Drilling.UI/CUiLogService.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -102,7 +102,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `Configure` · L17–31
 
-[Drilling.UI/CUiLogService.cs:17–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L17-L31)
+[Drilling.UI/CUiLogService.cs:17–31](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L17-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -121,7 +121,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CAppStartup.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CAppStartup.cs#L36-L36) | CUiLogService.Configure | False |
+| [Drilling.UI/CAppStartup.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CAppStartup.cs#L36-L36) | CUiLogService.Configure | False |
 
 호출하는 대상과 해석 범위:
 
@@ -159,7 +159,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteClick` · L33–56
 
-[Drilling.UI/CUiLogService.cs:33–56](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L33-L56)
+[Drilling.UI/CUiLogService.cs:33–56](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L33-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -181,8 +181,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L347-L347) | CUiLogService.WriteClick | False |
-| [Drilling.UI/CUiLogService.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L69-L69) | WriteClick | False |
+| [Drilling.UI/CRootView.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L347-L347) | CUiLogService.WriteClick | False |
+| [Drilling.UI/CUiLogService.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L69-L69) | WriteClick | False |
 
 호출하는 대상과 해석 범위:
 
@@ -233,7 +233,7 @@ flowchart TD
 
 ### MethodDeclaration `OnButtonClicked` · L58–70
 
-[Drilling.UI/CUiLogService.cs:58–70](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L58-L70)
+[Drilling.UI/CUiLogService.cs:58–70](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L58-L70)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -296,7 +296,7 @@ flowchart TD
 
 ### MethodDeclaration `ShouldSkipButton` · L72–93
 
-[Drilling.UI/CUiLogService.cs:72–93](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L72-L93)
+[Drilling.UI/CUiLogService.cs:72–93](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L72-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -315,7 +315,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CUiLogService.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L60-L60) | ShouldSkipButton | False |
+| [Drilling.UI/CUiLogService.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L60-L60) | ShouldSkipButton | False |
 
 호출하는 대상과 해석 범위:
 
@@ -373,7 +373,7 @@ flowchart TD
 
 ### MethodDeclaration `GetScreenName` · L95–112
 
-[Drilling.UI/CUiLogService.cs:95–112](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L95-L112)
+[Drilling.UI/CUiLogService.cs:95–112](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L95-L112)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -441,7 +441,7 @@ flowchart TD
 
 ### MethodDeclaration `GetControlName` · L114–135
 
-[Drilling.UI/CUiLogService.cs:114–135](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L114-L135)
+[Drilling.UI/CUiLogService.cs:114–135](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L114-L135)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -460,7 +460,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CUiLogService.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L66-L66) | GetControlName | False |
+| [Drilling.UI/CUiLogService.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L66-L66) | GetControlName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -516,7 +516,7 @@ flowchart TD
 
 ### MethodDeclaration `GetDetail` · L137–159
 
-[Drilling.UI/CUiLogService.cs:137–159](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L137-L159)
+[Drilling.UI/CUiLogService.cs:137–159](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L137-L159)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -535,7 +535,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CUiLogService.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L68-L68) | GetDetail | False |
+| [Drilling.UI/CUiLogService.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L68-L68) | GetDetail | False |
 
 호출하는 대상과 해석 범위:
 
@@ -601,7 +601,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatValue` · L161–193
 
-[Drilling.UI/CUiLogService.cs:161–193](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L161-L193)
+[Drilling.UI/CUiLogService.cs:161–193](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L161-L193)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -681,7 +681,7 @@ flowchart TD
 
 ### MethodDeclaration `Normalize` · L195–199
 
-[Drilling.UI/CUiLogService.cs:195–199](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L195-L199)
+[Drilling.UI/CUiLogService.cs:195–199](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L195-L199)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -701,13 +701,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CUiLogService.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L48-L48) | Normalize | False |
-| [Drilling.UI/CUiLogService.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L48-L48) | Normalize | False |
-| [Drilling.UI/CUiLogService.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L48-L48) | Normalize | False |
-| [Drilling.UI/CUiLogService.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L48-L48) | Normalize | False |
-| [Drilling.UI/CUiLogService.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L170-L170) | Normalize | False |
-| [Drilling.UI/CUiLogService.cs:189–189](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L189-L189) | Normalize | False |
-| [Drilling.UI/CUiLogService.cs:192–192](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CUiLogService.cs#L192-L192) | Normalize | False |
+| [Drilling.UI/CUiLogService.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L48-L48) | Normalize | False |
+| [Drilling.UI/CUiLogService.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L48-L48) | Normalize | False |
+| [Drilling.UI/CUiLogService.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L48-L48) | Normalize | False |
+| [Drilling.UI/CUiLogService.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L48-L48) | Normalize | False |
+| [Drilling.UI/CUiLogService.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L170-L170) | Normalize | False |
+| [Drilling.UI/CUiLogService.cs:189–189](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L189-L189) | Normalize | False |
+| [Drilling.UI/CUiLogService.cs:192–192](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CUiLogService.cs#L192-L192) | Normalize | False |
 
 호출하는 대상과 해석 범위:
 

@@ -1,0 +1,301 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Interface/Melsec/CStageGlassDataMap.cs
+Commit: 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+L000002 |  ⟦EOL⟧
+// 해설 L3: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Interface;
+L000003 | namespace Drilling.Common.Interface; ⟦EOL⟧
+L000004 |  ⟦EOL⟧
+// 해설 L5: 타입의 구조/상속 선언입니다: public sealed record ST_STAGE_GLASS_DATA_MAP_FIELD(
+L000005 | public sealed record ST_STAGE_GLASS_DATA_MAP_FIELD( ⟦EOL⟧
+// 해설 L6: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000006 |     string ProductField, ⟦EOL⟧
+// 해설 L7: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000007 |     string Id, ⟦EOL⟧
+// 해설 L8: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000008 |     string Name, ⟦EOL⟧
+// 해설 L9: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000009 |     int WordAddress, ⟦EOL⟧
+// 해설 L10: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000010 |     EN_MELSEC_DATA_TYPE DataType, ⟦EOL⟧
+// 해설 L11: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000011 |     int WordLength, ⟦EOL⟧
+// 해설 L12: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000012 |     int ComponentIndex = 0) ⟦EOL⟧
+// 해설 L13: 구문 블록 경계입니다.
+L000013 | { ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: WordAddress.ToString("X", CultureInfo.InvariantCulture)
+L000014 |     public string Address => "W" + WordAddress.ToString("X", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L15: 구문 블록 경계입니다.
+L000015 | } ⟦EOL⟧
+L000016 |  ⟦EOL⟧
+// 해설 L17: 타입의 구조/상속 선언입니다: public sealed record ST_STAGE_GLASS_DATA_SNAPSHOT(
+L000017 | public sealed record ST_STAGE_GLASS_DATA_SNAPSHOT( ⟦EOL⟧
+// 해설 L18: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000018 |     IReadOnlyDictionary<string, string> Values, ⟦EOL⟧
+// 해설 L19: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000019 |     DateTimeOffset ReadAt) ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다.
+L000020 | { ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: Values.GetValueOrDefault("H_GLASSID", "")
+L000021 |     public string GlassId => Values.GetValueOrDefault("H_GLASSID", ""); ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: Values.GetValueOrDefault("LOTID", "")
+L000022 |     public string LotId => Values.GetValueOrDefault("LOTID", ""); ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: Values.GetValueOrDefault("PPID", "")
+L000023 |     public string Ppid => Values.GetValueOrDefault("PPID", ""); ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다.
+L000024 | } ⟦EOL⟧
+L000025 |  ⟦EOL⟧
+// 해설 L26: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000026 | /// <summary>Spec 0.13 물류PC EQ Stage Edit GlassData(WF600) 공통 정의입니다.</summary> ⟦EOL⟧
+// 해설 L27: 타입의 구조/상속 선언입니다: public static class CStageGlassDataMap
+L000027 | public static class CStageGlassDataMap ⟦EOL⟧
+// 해설 L28: 구문 블록 경계입니다.
+L000028 | { ⟦EOL⟧
+// 해설 L29: 변수의 초기값을 지정합니다: BaseWordAddress = 0xF600
+L000029 |     private const int BaseWordAddress = 0xF600; ⟦EOL⟧
+// 해설 L30: 변수의 초기값을 지정합니다: MapIdPrefix = "STAGE_GLASS_"
+L000030 |     private const string MapIdPrefix = "STAGE_GLASS_"; ⟦EOL⟧
+L000031 |  ⟦EOL⟧
+// 해설 L32: 타입의 구조/상속 선언입니다: private sealed record ST_FIELD_SPEC(string Name, EN_MELSEC_DATA_TYPE DataType, int WordLength, bool SplitWords = false);
+L000032 |     private sealed record ST_FIELD_SPEC(string Name, EN_MELSEC_DATA_TYPE DataType, int WordLength, bool SplitWords = false); ⟦EOL⟧
+L000033 |  ⟦EOL⟧
+// 해설 L34: 변수의 초기값을 지정합니다: Specs = [ new("H_GLASSID", EN_MELSEC_DATA_TYPE.String, 8), new("E_GLASSID", EN_MELSEC_DATA_TYPE.String, 8), new("LOTID", EN_MELSEC_DATA_TYPE.String, 8), new("BATCHID", EN_MELSEC_DATA_TYPE.String, 8), new("JOBID", EN_MELSEC_DATA_TY
+L000034 |     private static readonly IReadOnlyList<ST_FIELD_SPEC> Specs = ⟦EOL⟧
+// 해설 L35: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC> Drilling.Common.Interface.CStageGlassDataMap.Specs
+L000035 |     [ ⟦EOL⟧
+// 해설 L36: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("H_GLASSID", EN_MELSEC_DATA_TYPE.String, 8)
+L000036 |         new("H_GLASSID", EN_MELSEC_DATA_TYPE.String, 8), ⟦EOL⟧
+// 해설 L37: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("E_GLASSID", EN_MELSEC_DATA_TYPE.String, 8)
+L000037 |         new("E_GLASSID", EN_MELSEC_DATA_TYPE.String, 8), ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("LOTID", EN_MELSEC_DATA_TYPE.String, 8)
+L000038 |         new("LOTID", EN_MELSEC_DATA_TYPE.String, 8), ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("BATCHID", EN_MELSEC_DATA_TYPE.String, 8)
+L000039 |         new("BATCHID", EN_MELSEC_DATA_TYPE.String, 8), ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("JOBID", EN_MELSEC_DATA_TYPE.String, 8)
+L000040 |         new("JOBID", EN_MELSEC_DATA_TYPE.String, 8), ⟦EOL⟧
+// 해설 L41: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("PORTID", EN_MELSEC_DATA_TYPE.String, 2)
+L000041 |         new("PORTID", EN_MELSEC_DATA_TYPE.String, 2), ⟦EOL⟧
+// 해설 L42: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("SLOTNO", EN_MELSEC_DATA_TYPE.String, 1)
+L000042 |         new("SLOTNO", EN_MELSEC_DATA_TYPE.String, 1), ⟦EOL⟧
+// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("PRODUCT_TYPE", EN_MELSEC_DATA_TYPE.String, 2)
+L000043 |         new("PRODUCT_TYPE", EN_MELSEC_DATA_TYPE.String, 2), ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("PRODUCT_KIND", EN_MELSEC_DATA_TYPE.String, 2)
+L000044 |         new("PRODUCT_KIND", EN_MELSEC_DATA_TYPE.String, 2), ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("PRODUCTID", EN_MELSEC_DATA_TYPE.String, 8)
+L000045 |         new("PRODUCTID", EN_MELSEC_DATA_TYPE.String, 8), ⟦EOL⟧
+// 해설 L46: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("RUNSPECID", EN_MELSEC_DATA_TYPE.String, 8)
+L000046 |         new("RUNSPECID", EN_MELSEC_DATA_TYPE.String, 8), ⟦EOL⟧
+// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("LAYERID", EN_MELSEC_DATA_TYPE.String, 4)
+L000047 |         new("LAYERID", EN_MELSEC_DATA_TYPE.String, 4), ⟦EOL⟧
+// 해설 L48: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("STEPID", EN_MELSEC_DATA_TYPE.String, 4)
+L000048 |         new("STEPID", EN_MELSEC_DATA_TYPE.String, 4), ⟦EOL⟧
+// 해설 L49: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("PPID", EN_MELSEC_DATA_TYPE.String, 10)
+L000049 |         new("PPID", EN_MELSEC_DATA_TYPE.String, 10), ⟦EOL⟧
+// 해설 L50: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("FLOWID", EN_MELSEC_DATA_TYPE.String, 10)
+L000050 |         new("FLOWID", EN_MELSEC_DATA_TYPE.String, 10), ⟦EOL⟧
+// 해설 L51: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("GLASS_SIZE", EN_MELSEC_DATA_TYPE.Word, 2, SplitWords: true)
+L000051 |         new("GLASS_SIZE", EN_MELSEC_DATA_TYPE.Word, 2, SplitWords: true), ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("GLASS_THICKNESS", EN_MELSEC_DATA_TYPE.Word, 1)
+L000052 |         new("GLASS_THICKNESS", EN_MELSEC_DATA_TYPE.Word, 1), ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("GLASS_STATE", EN_MELSEC_DATA_TYPE.Word, 1)
+L000053 |         new("GLASS_STATE", EN_MELSEC_DATA_TYPE.Word, 1), ⟦EOL⟧
+// 해설 L54: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("GLASS_ORDER", EN_MELSEC_DATA_TYPE.String, 2)
+L000054 |         new("GLASS_ORDER", EN_MELSEC_DATA_TYPE.String, 2), ⟦EOL⟧
+// 해설 L55: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("COMMENT", EN_MELSEC_DATA_TYPE.String, 8)
+L000055 |         new("COMMENT", EN_MELSEC_DATA_TYPE.String, 8), ⟦EOL⟧
+// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("USE_COUNT", EN_MELSEC_DATA_TYPE.String, 2)
+L000056 |         new("USE_COUNT", EN_MELSEC_DATA_TYPE.String, 2), ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("JUDGEMENT", EN_MELSEC_DATA_TYPE.String, 2)
+L000057 |         new("JUDGEMENT", EN_MELSEC_DATA_TYPE.String, 2), ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("REASON_CODE", EN_MELSEC_DATA_TYPE.String, 2)
+L000058 |         new("REASON_CODE", EN_MELSEC_DATA_TYPE.String, 2), ⟦EOL⟧
+// 해설 L59: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("INS_FLAG", EN_MELSEC_DATA_TYPE.String, 1)
+L000059 |         new("INS_FLAG", EN_MELSEC_DATA_TYPE.String, 1), ⟦EOL⟧
+// 해설 L60: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("ENC_FLAG", EN_MELSEC_DATA_TYPE.String, 1)
+L000060 |         new("ENC_FLAG", EN_MELSEC_DATA_TYPE.String, 1), ⟦EOL⟧
+// 해설 L61: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("PRERUN_FLAG", EN_MELSEC_DATA_TYPE.String, 1)
+L000061 |         new("PRERUN_FLAG", EN_MELSEC_DATA_TYPE.String, 1), ⟦EOL⟧
+// 해설 L62: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("TURN_DIR", EN_MELSEC_DATA_TYPE.String, 1)
+L000062 |         new("TURN_DIR", EN_MELSEC_DATA_TYPE.String, 1), ⟦EOL⟧
+// 해설 L63: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("FLIP_STATE", EN_MELSEC_DATA_TYPE.String, 1)
+L000063 |         new("FLIP_STATE", EN_MELSEC_DATA_TYPE.String, 1), ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("WORK_STATE", EN_MELSEC_DATA_TYPE.String, 2)
+L000064 |         new("WORK_STATE", EN_MELSEC_DATA_TYPE.String, 2), ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("MULTI_USE", EN_MELSEC_DATA_TYPE.String, 8)
+L000065 |         new("MULTI_USE", EN_MELSEC_DATA_TYPE.String, 8), ⟦EOL⟧
+// 해설 L66: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("PAIR_GLASSID", EN_MELSEC_DATA_TYPE.String, 8)
+L000066 |         new("PAIR_GLASSID", EN_MELSEC_DATA_TYPE.String, 8), ⟦EOL⟧
+// 해설 L67: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("PAIR_PPID", EN_MELSEC_DATA_TYPE.String, 10)
+L000067 |         new("PAIR_PPID", EN_MELSEC_DATA_TYPE.String, 10), ⟦EOL⟧
+// 해설 L68: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("OPTIONNAME1", EN_MELSEC_DATA_TYPE.String, 20)
+L000068 |         new("OPTIONNAME1", EN_MELSEC_DATA_TYPE.String, 20), ⟦EOL⟧
+// 해설 L69: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("OPTIONVALUE1", EN_MELSEC_DATA_TYPE.String, 20)
+L000069 |         new("OPTIONVALUE1", EN_MELSEC_DATA_TYPE.String, 20), ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("OPTIONNAME2", EN_MELSEC_DATA_TYPE.String, 20)
+L000070 |         new("OPTIONNAME2", EN_MELSEC_DATA_TYPE.String, 20), ⟦EOL⟧
+// 해설 L71: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("OPTIONVALUE2", EN_MELSEC_DATA_TYPE.String, 20)
+L000071 |         new("OPTIONVALUE2", EN_MELSEC_DATA_TYPE.String, 20), ⟦EOL⟧
+// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("OPTIONNAME3", EN_MELSEC_DATA_TYPE.String, 20)
+L000072 |         new("OPTIONNAME3", EN_MELSEC_DATA_TYPE.String, 20), ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("OPTIONVALUE3", EN_MELSEC_DATA_TYPE.String, 20)
+L000073 |         new("OPTIONVALUE3", EN_MELSEC_DATA_TYPE.String, 20), ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("OPTIONNAME4", EN_MELSEC_DATA_TYPE.String, 20)
+L000074 |         new("OPTIONNAME4", EN_MELSEC_DATA_TYPE.String, 20), ⟦EOL⟧
+// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("OPTIONVALUE4", EN_MELSEC_DATA_TYPE.String, 20)
+L000075 |         new("OPTIONVALUE4", EN_MELSEC_DATA_TYPE.String, 20), ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("OPTIONNAME5", EN_MELSEC_DATA_TYPE.String, 20)
+L000076 |         new("OPTIONNAME5", EN_MELSEC_DATA_TYPE.String, 20), ⟦EOL⟧
+// 해설 L77: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("OPTIONVALUE5", EN_MELSEC_DATA_TYPE.String, 20)
+L000077 |         new("OPTIONVALUE5", EN_MELSEC_DATA_TYPE.String, 20), ⟦EOL⟧
+// 해설 L78: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("ETC", EN_MELSEC_DATA_TYPE.String, 16)
+L000078 |         new("ETC", EN_MELSEC_DATA_TYPE.String, 16) ⟦EOL⟧
+// 해설 L79: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.CStageGlassDataMap.ST_FIELD_SPEC> Drilling.Common.Interface.CStageGlassDataMap.Specs
+L000079 |     ]; ⟦EOL⟧
+L000080 |  ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(Specs.Select(field => field.Name).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Specs.Select(field => field.Name).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Specs.Select(field => field.Name)
+L000081 |     public static IReadOnlyList<string> ProductFieldNames { get; } = Array.AsReadOnly(Specs.Select(field => field.Name).ToArray()); ⟦EOL⟧
+// 해설 L82: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateFields()
+L000082 |     public static IReadOnlyList<ST_STAGE_GLASS_DATA_MAP_FIELD> Fields { get; } = CreateFields(); ⟦EOL⟧
+// 해설 L83: 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(Fields.Select(field => field.Id).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Fields.Select(field => field.Id).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Fields.Select(field => field.Id)
+L000083 |     public static IReadOnlyList<string> MapIds { get; } = Array.AsReadOnly(Fields.Select(field => field.Id).ToArray()); ⟦EOL⟧
+L000084 |  ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Id.StartsWith(MapIdPrefix, StringComparison.OrdinalIgnoreCase)
+L000085 |     public static bool IsMapRow(ST_MELSEC_MAP_DATA row) => row.Id.StartsWith(MapIdPrefix, StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+L000086 |  ⟦EOL⟧
+// 해설 L87: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Interface.ST_STAGE_GLASS_DATA_SNAPSHOT> Drilling.Common.Interface.CStageGlassDataMap.ReadAsync(Drilling.Common.Interface.CMelsec, System.Threading.CancellationToken)
+L000087 |     public static async Task<ST_STAGE_GLASS_DATA_SNAPSHOT> ReadAsync(CMelsec melsec, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 ReadAsync.
+L000088 |     { ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(melsec)
+L000089 |         ArgumentNullException.ThrowIfNull(melsec); ⟦EOL⟧
+// 해설 L90: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000090 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+L000091 |  ⟦EOL⟧
+// 해설 L92: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000092 |         // 전 항목이 같은 연속 Poll Block이므로 첫 항목 새로고침 한 번으로 WF600~WF767을 원자적으로 갱신합니다. ⟦EOL⟧
+// 해설 L93: 비동기 완료를 기다립니다: await melsec.RefreshCachedValueAsync(Fields[0].Id, cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: melsec.RefreshCachedValueAsync(Fields[0].Id, cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: melsec.RefreshCachedValueAsync(Fields[0].Id, cancellationToken)
+L000093 |         await melsec.RefreshCachedValueAsync(Fields[0].Id, cancellationToken).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: melsec.GetCachedSnapshot(MapIds, out _) / 지역 변수를 선언합니다: var samples = melsec.GetCachedSnapshot(MapIds, out _); / 변수의 초기값을 지정합니다: samples = melsec.GetCachedSnapshot(MapIds, out _)
+L000094 |         var samples = melsec.GetCachedSnapshot(MapIds, out _); ⟦EOL⟧
+// 해설 L95: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<string>() / 지역 변수를 선언합니다: var errors = new List<string>(); / 변수의 초기값을 지정합니다: errors = new List<string>()
+L000095 |         var errors = new List<string>(); ⟦EOL⟧
+// 해설 L96: 컬렉션 요소를 순회합니다: foreach (var field in Fields)
+L000096 |         foreach (var field in Fields) ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 ReadAsync.
+L000097 |         { ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: samples.TryGetValue(field.Id, out var sample) / 조건에 따라 분기합니다: if (!samples.TryGetValue(field.Id, out var sample) || !sample.IsValid || sample.Value is null)
+L000098 |             if (!samples.TryGetValue(field.Id, out var sample) || !sample.IsValid || sample.Value is null) ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 ReadAsync.
+L000099 |             { ⟦EOL⟧
+// 해설 L100: 지역 변수를 선언합니다: var reason = sample?.ErrorMessage; / 변수의 초기값을 지정합니다: reason = sample?.ErrorMessage
+L000100 |                 var reason = sample?.ErrorMessage; ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Add(field.Name + (string.IsNullOrWhiteSpace(reason) ? " 데이터 없음" : $" · {reason}")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(reason) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(reason) ? " 데이터 없음" : $" · {reason}"
+L000101 |                 errors.Add(field.Name + (string.IsNullOrWhiteSpace(reason) ? " 데이터 없음" : $" · {reason}")); ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 ReadAsync.
+L000102 |             } ⟦EOL⟧
+// 해설 L103: 구문 블록 경계입니다 · 소속 ReadAsync.
+L000103 |         } ⟦EOL⟧
+L000104 |  ⟦EOL⟧
+// 해설 L105: 조건에 따라 분기합니다: if (errors.Count > 0)
+L000105 |         if (errors.Count > 0) ⟦EOL⟧
+// 해설 L106: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("STAGE PC Glass Data를 읽지 못했습니다.\n" + string.Join("\n", errors.Take(5))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join("\n", errors.Take(5)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Take(5) / 예외를 발생/전달합니다: throw new InvalidOperationException("STAGE PC Glass Data를 읽지 못했습니다.\n" + string.Join("\n", errors.Take(5)));
+L000106 |             throw new InvalidOperationException("STAGE PC Glass Data를 읽지 못했습니다.\n" + string.Join("\n", errors.Take(5))); ⟦EOL⟧
+L000107 |  ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var values = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: values = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+L000108 |         var values = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L109: 컬렉션 요소를 순회합니다: foreach (var spec in Specs)
+L000109 |         foreach (var spec in Specs) ⟦EOL⟧
+// 해설 L110: 구문 블록 경계입니다 · 소속 ReadAsync.
+L000110 |         { ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: Fields.Where(field => field.ProductField.Equals(spec.Name, StringComparison.OrdinalIgnoreCase)) .OrderBy(field => field.ComponentIndex).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Fields.Where(field => field.ProductField.Equals(spec.Name, StringComparison.OrdinalIgnoreCase)) .OrderBy(field => field.ComponentIndex) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Fields.Where(field => field.ProductField.Equals(spec.Name, StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: field.ProductField.Equals(spec.Name, StringCompa
+L000111 |             var fields = Fields.Where(field => field.ProductField.Equals(spec.Name, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L112: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Interface.ST_STAGE_GLASS_DATA_SNAPSHOT> Drilling.Common.Interface.CStageGlassDataMap.ReadAsync(Drilling.Common.Interface.CMelsec, System.Threading.CancellationToken)
+L000112 |                 .OrderBy(field => field.ComponentIndex).ToArray(); ⟦EOL⟧
+// 해설 L113: 값을 대상에 대입합니다: values[spec.Name] = string.Join(",", fields.Select(field => FormatValue(samples[field.Id].Value))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(",", fields.Select(field => FormatValue(samples[field.Id].Value))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.Select(field => FormatValue(samples[field.Id].Value)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatValue(samples[field.Id].Value)
+L000113 |             values[spec.Name] = string.Join(",", fields.Select(field => FormatValue(samples[field.Id].Value))); ⟦EOL⟧
+// 해설 L114: 구문 블록 경계입니다 · 소속 ReadAsync.
+L000114 |         } ⟦EOL⟧
+L000115 |  ⟦EOL⟧
+// 해설 L116: 값을 대상에 대입합니다: values["H_GLASSID"] = values["H_GLASSID"].Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: values["H_GLASSID"].Trim()
+L000116 |         values["H_GLASSID"] = values["H_GLASSID"].Trim(); ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(values["H_GLASSID"]) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(values["H_GLASSID"]))
+L000117 |         if (string.IsNullOrWhiteSpace(values["H_GLASSID"])) ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("STAGE PC Glass Data의 H_GLASSID가 비어 있습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("STAGE PC Glass Data의 H_GLASSID가 비어 있습니다.");
+L000118 |             throw new InvalidOperationException("STAGE PC Glass Data의 H_GLASSID가 비어 있습니다."); ⟦EOL⟧
+L000119 |  ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: Fields.Select(field => samples[field.Id].UpdatedAt).Where(value => value.HasValue) .Select(value => value!.Value).DefaultIfEmpty(DateTimeOffset.UtcNow).Max() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Fields.Select(field => samples[field.Id].UpdatedAt).Where(value => value.HasValue) .Select(value => value!.Value).DefaultIfEmpty(DateTimeOffset.UtcNow) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Fields.Select(field => samples[field.Id].UpdatedAt).Where(value => value.HasValue) .Select(value => value!.Value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Fi
+L000120 |         var readAt = Fields.Select(field => samples[field.Id].UpdatedAt).Where(value => value.HasValue) ⟦EOL⟧
+// 해설 L121: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Interface.ST_STAGE_GLASS_DATA_SNAPSHOT> Drilling.Common.Interface.CStageGlassDataMap.ReadAsync(Drilling.Common.Interface.CMelsec, System.Threading.CancellationToken)
+L000121 |             .Select(value => value!.Value).DefaultIfEmpty(DateTimeOffset.UtcNow).Max(); ⟦EOL⟧
+// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(values, readAt) / 호출자에게 값 또는 제어를 반환합니다: return new(values, readAt);
+L000122 |         return new(values, readAt); ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 ReadAsync.
+L000123 |     } ⟦EOL⟧
+L000124 |  ⟦EOL⟧
+// 해설 L125: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD> Drilling.Common.Interface.CStageGlassDataMap.CreateFields()
+L000125 |     private static IReadOnlyList<ST_STAGE_GLASS_DATA_MAP_FIELD> CreateFields() ⟦EOL⟧
+// 해설 L126: 구문 블록 경계입니다 · 소속 CreateFields.
+L000126 |     { ⟦EOL⟧
+// 해설 L127: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_STAGE_GLASS_DATA_MAP_FIELD>() / 지역 변수를 선언합니다: var result = new List<ST_STAGE_GLASS_DATA_MAP_FIELD>(); / 변수의 초기값을 지정합니다: result = new List<ST_STAGE_GLASS_DATA_MAP_FIELD>()
+L000127 |         var result = new List<ST_STAGE_GLASS_DATA_MAP_FIELD>(); ⟦EOL⟧
+// 해설 L128: 지역 변수를 선언합니다: var address = BaseWordAddress; / 변수의 초기값을 지정합니다: address = BaseWordAddress
+L000128 |         var address = BaseWordAddress; ⟦EOL⟧
+// 해설 L129: 컬렉션 요소를 순회합니다: foreach (var spec in Specs)
+L000129 |         foreach (var spec in Specs) ⟦EOL⟧
+// 해설 L130: 구문 블록 경계입니다 · 소속 CreateFields.
+L000130 |         { ⟦EOL⟧
+// 해설 L131: 조건에 따라 분기합니다: if (spec.SplitWords)
+L000131 |             if (spec.SplitWords) ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 CreateFields.
+L000132 |             { ⟦EOL⟧
+// 해설 L133: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < spec.WordLength; index++) / 변수의 초기값을 지정합니다: index = 0
+L000133 |                 for (var index = 0; index < spec.WordLength; index++) ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 CreateFields.
+L000134 |                 { ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Add(new(spec.Name, $"{MapIdPrefix}{spec.Name}_{index + 1}", $"{spec.Name}[{index + 1}]", address + index, EN_MELSEC_DATA_TYPE.Word, 1, index)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(spec.Name, $"{MapIdPrefix}{spec.Name}_{index + 1}", $"{spec.Name}[{index + 1}]", address + index, EN_MELSEC_DATA_TYPE.Word, 1, index)
+L000135 |                     result.Add(new(spec.Name, $"{MapIdPrefix}{spec.Name}_{index + 1}", $"{spec.Name}[{index + 1}]", ⟦EOL⟧
+// 해설 L136: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_STAGE_GLASS_DATA_MAP_FIELD> Drilling.Common.Interface.CStageGlassDataMap.CreateFields()
+L000136 |                         address + index, EN_MELSEC_DATA_TYPE.Word, 1, index)); ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 CreateFields.
+L000137 |                 } ⟦EOL⟧
+// 해설 L138: 구문 블록 경계입니다 · 소속 CreateFields.
+L000138 |             } ⟦EOL⟧
+// 해설 L139: 앞 조건이 거짓인 경로입니다: else
+L000139 |             else ⟦EOL⟧
+// 해설 L140: 구문 블록 경계입니다 · 소속 CreateFields.
+L000140 |             { ⟦EOL⟧
+// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Add(new(spec.Name, MapIdPrefix + spec.Name, spec.Name, address, spec.DataType, spec.WordLength)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(spec.Name, MapIdPrefix + spec.Name, spec.Name, address, spec.DataType, spec.WordLength)
+L000141 |                 result.Add(new(spec.Name, MapIdPrefix + spec.Name, spec.Name, address, spec.DataType, spec.WordLength)); ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 CreateFields.
+L000142 |             } ⟦EOL⟧
+L000143 |  ⟦EOL⟧
+// 해설 L144: 복합 대입 또는 이벤트 구독/해지 표현입니다: address += spec.WordLength
+L000144 |             address += spec.WordLength; ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 CreateFields.
+L000145 |         } ⟦EOL⟧
+L000146 |  ⟦EOL⟧
+// 해설 L147: 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(result.ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.ToArray() / 호출자에게 값 또는 제어를 반환합니다: return Array.AsReadOnly(result.ToArray());
+L000147 |         return Array.AsReadOnly(result.ToArray()); ⟦EOL⟧
+// 해설 L148: 구문 블록 경계입니다 · 소속 CreateFields.
+L000148 |     } ⟦EOL⟧
+L000149 |  ⟦EOL⟧
+// 해설 L150: 값별 결과식을 선택합니다: value switch { null => "", string text => text.Trim(), IFormattable formattable => formattable.ToString(null, CultureInfo.InvariantCulture), _ => value.ToString() ?? "" }
+L000150 |     private static string FormatValue(object? value) => value switch ⟦EOL⟧
+// 해설 L151: 구문 블록 경계입니다 · 소속 FormatValue.
+L000151 |     { ⟦EOL⟧
+// 해설 L152: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Interface.CStageGlassDataMap.FormatValue(object?)
+L000152 |         null => "", ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: text.Trim()
+L000153 |         string text => text.Trim(), ⟦EOL⟧
+// 해설 L154: 함수·델리게이트 또는 객체 생성자를 호출합니다: formattable.ToString(null, CultureInfo.InvariantCulture)
+L000154 |         IFormattable formattable => formattable.ToString(null, CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L155: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString()
+L000155 |         _ => value.ToString() ?? "" ⟦EOL⟧
+// 해설 L156: 구문 블록 경계입니다 · 소속 FormatValue.
+L000156 |     }; ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다.
+L000157 | } ⟦EOL⟧

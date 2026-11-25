@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "a3-targeted-tilde-browser-qa/1",
+  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "manualRendererVersion": "1.1.4",
+  "validatorVersion": "1.1.3",
+  "passed": true,
+  "checks": [
+    {
+      "name": "affected_manual_html_opens",
+      "passed": true
+    },
+    {
+      "name": "three_tilde_fences_render_as_code",
+      "passed": true,
+      "codeBlocks": 3
+    },
+    {
+      "name": "language_tags_preserved_as_metadata",
+      "passed": true
+    },
+    {
+      "name": "all_three_code_bodies_exactly_preserved",
+      "passed": true,
+      "sourceBlocks": 3
+    },
+    {
+      "name": "code_examples_have_no_navigation_anchors",
+      "passed": true
+    },
+    {
+      "name": "literal_tilde_fence_markers_not_visible",
+      "passed": true
+    },
+    {
+      "name": "desktop_no_horizontal_overflow",
+      "passed": true
+    },
+    {
+      "name": "manual_diagram_renders",
+      "passed": true
+    },
+    {
+      "name": "affected_html_all_local_links_resolve",
+      "passed": true,
+      "localLinks": 54,
+      "brokenLinks": 0
+    },
+    {
+      "name": "affected_html_source_commit_pinned",
+      "passed": true,
+      "sourceLinks": 53
+    },
+    {
+      "name": "mobile_320_no_horizontal_overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_code_blocks_preserved",
+      "passed": true
+    },
+    {
+      "name": "no_javascript_or_console_errors",
+      "passed": true,
+      "errors": 0
+    },
+    {
+      "name": "no_external_requests",
+      "passed": true,
+      "requests": 0
+    }
+  ],
+  "totalChecks": 14,
+  "scope": "Targeted affected HTML/code-block/link/mobile checks after the single-file repair. Earlier 56-check broad browser audit is preserved separately; no broad rerun claimed.",
+  "priorBroadReport": "tool-audit.browser.json",
+  "errors": [],
+  "requests": []
+}

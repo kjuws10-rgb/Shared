@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | df6f5ea261a763f08f0b7ad8e614a52a38d078be2ec4e93404c38082c96ca7b5 |
 | 파일 분류 | code |
 | 원본 크기/행 | 2,302 bytes / 61 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerMeasureView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerMeasureView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -37,7 +37,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L12–21
 
-[Drilling.UI/Views/CManualPowerMeasureView.xaml.cs:12–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerMeasureView.xaml.cs#L12-L21)
+[Drilling.UI/Views/CManualPowerMeasureView.xaml.cs:12–21](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerMeasureView.xaml.cs#L12-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -50,7 +50,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:2307–2307](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMain.cs#L2307-L2307) | new Drilling.UI.Views.CManualPowerMeasureView | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:2307–2307](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMain.cs#L2307-L2307) | new Drilling.UI.Views.CManualPowerMeasureView | False |
 
 호출하는 대상과 해석 범위:
 
@@ -74,7 +74,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OpenPowerMeasureInput` · L23–27
 
-[Drilling.UI/Views/CManualPowerMeasureView.xaml.cs:23–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerMeasureView.xaml.cs#L23-L27)
+[Drilling.UI/Views/CManualPowerMeasureView.xaml.cs:23–27](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerMeasureView.xaml.cs#L23-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -109,7 +109,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `PowerMeasureInputKeyDown` · L29–34
 
-[Drilling.UI/Views/CManualPowerMeasureView.xaml.cs:29–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerMeasureView.xaml.cs#L29-L34)
+[Drilling.UI/Views/CManualPowerMeasureView.xaml.cs:29–34](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerMeasureView.xaml.cs#L29-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -155,7 +155,7 @@ flowchart TD
 
 ### MethodDeclaration `ShowPowerMeasureInput` · L36–54
 
-[Drilling.UI/Views/CManualPowerMeasureView.xaml.cs:36–54](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerMeasureView.xaml.cs#L36-L54)
+[Drilling.UI/Views/CManualPowerMeasureView.xaml.cs:36–54](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerMeasureView.xaml.cs#L36-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -174,8 +174,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CManualPowerMeasureView.xaml.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerMeasureView.xaml.cs#L26-L26) | ShowPowerMeasureInput | False |
-| [Drilling.UI/Views/CManualPowerMeasureView.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerMeasureView.xaml.cs#L33-L33) | ShowPowerMeasureInput | False |
+| [Drilling.UI/Views/CManualPowerMeasureView.xaml.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerMeasureView.xaml.cs#L26-L26) | ShowPowerMeasureInput | False |
+| [Drilling.UI/Views/CManualPowerMeasureView.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerMeasureView.xaml.cs#L33-L33) | ShowPowerMeasureInput | False |
 
 호출하는 대상과 해석 범위:
 
@@ -234,7 +234,7 @@ flowchart TD
 
 ### MethodDeclaration `FitHeadRows` · L56–60
 
-[Drilling.UI/Views/CManualPowerMeasureView.xaml.cs:56–60](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualPowerMeasureView.xaml.cs#L56-L60)
+[Drilling.UI/Views/CManualPowerMeasureView.xaml.cs:56–60](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualPowerMeasureView.xaml.cs#L56-L60)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

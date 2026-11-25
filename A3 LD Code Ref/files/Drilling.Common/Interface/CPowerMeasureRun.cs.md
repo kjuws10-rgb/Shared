@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | e493b1e8caa9a16e8c7edf1939703c9f13b9c0032c7a5a8968bbe7bb231d9cf7 |
 | 파일 분류 | code |
 | 원본 크기/행 | 28,336 bytes / 418 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -86,7 +86,7 @@
 
 ### FieldDeclaration `_session` · L15–15
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L15-L15)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -114,7 +114,7 @@
 
 ### FieldDeclaration `_started` · L16–16
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L16-L16)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -135,7 +135,7 @@
 
 ### FieldDeclaration `_gate` · L17–17
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L17-L17)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -163,7 +163,7 @@
 
 ### FieldDeclaration `_prepared` · L18–18
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -178,7 +178,7 @@
 
 ### FieldDeclaration `_measured` · L18–18
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -193,7 +193,7 @@
 
 ### FieldDeclaration `_saved` · L18–18
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -208,7 +208,7 @@
 
 ### FieldDeclaration `_reported` · L18–18
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -223,7 +223,7 @@
 
 ### FieldDeclaration `_released` · L18–18
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -238,7 +238,7 @@
 
 ### FieldDeclaration `_result` · L19–19
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L19-L19)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -253,7 +253,7 @@
 
 ### MethodDeclaration `AutoTargets` · L20–35
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:20–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L20-L35)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:20–35](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L20-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -272,7 +272,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:3171–3171](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3171-L3171) | CPowerMeasureRun.AutoTargets | False |
+| [Drilling.UI/CRootView.cs:3171–3171](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L3171-L3171) | CPowerMeasureRun.AutoTargets | False |
 
 호출하는 대상과 해석 범위:
 
@@ -338,7 +338,7 @@
 
 ### MethodDeclaration `Number` · L36–41
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:36–41](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L36-L41)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:36–41](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L36-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -359,11 +359,11 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L26-L26) | Number | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L26-L26) | Number | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L29-L29) | Number | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L44-L44) | Number | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:161–161](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L161-L161) | CPowerMeasureRun.Number | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L26-L26) | Number | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L26-L26) | Number | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L29-L29) | Number | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L44-L44) | Number | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:161–161](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L161-L161) | CPowerMeasureRun.Number | False |
 
 호출하는 대상과 해석 범위:
 
@@ -394,7 +394,7 @@
 
 ### MethodDeclaration `Integer` · L42–46
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:42–46](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L42-L46)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:42–46](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L42-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -415,13 +415,13 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L28-L28) | Integer | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L28-L28) | Integer | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L30-L30) | Integer | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L30-L30) | Integer | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L30-L30) | Integer | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L33-L33) | Integer | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L162-L162) | CPowerMeasureRun.Integer | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L28-L28) | Integer | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L28-L28) | Integer | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L30-L30) | Integer | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L30-L30) | Integer | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L30-L30) | Integer | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L33-L33) | Integer | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L162-L162) | CPowerMeasureRun.Integer | False |
 
 호출하는 대상과 해석 범위:
 
@@ -448,7 +448,7 @@
 
 ### MethodDeclaration `Prepare` · L47–59
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:47–59](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L47-L59)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:47–59](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L47-L59)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -467,8 +467,8 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L124-L124) | Prepare | False |
-| [Drilling.UI/CRootView.cs:3172–3172](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3172-L3172) | run.Prepare | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L124-L124) | Prepare | False |
+| [Drilling.UI/CRootView.cs:3172–3172](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L3172-L3172) | run.Prepare | False |
 
 호출하는 대상과 해석 범위:
 
@@ -524,7 +524,7 @@ flowchart TD
 
 ### MethodDeclaration `Measure` · L60–108
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:60–108](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L60-L108)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:60–108](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L60-L108)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -543,8 +543,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L124-L124) | Measure | False |
-| [Drilling.UI/CRootView.cs:3173–3173](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3173-L3173) | (run ?? throw new InvalidOperationException("TPM 준비가 필요합니다.")).Measure | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L124-L124) | Measure | False |
+| [Drilling.UI/CRootView.cs:3173–3173](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L3173-L3173) | (run ?? throw new InvalidOperationException("TPM 준비가 필요합니다.")).Measure | False |
 
 호출하는 대상과 해석 범위:
 
@@ -716,7 +716,7 @@ flowchart TD
 
 ### MethodDeclaration `Save` · L109–121
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:109–121](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L109-L121)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:109–121](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L109-L121)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -735,8 +735,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L124-L124) | Save | False |
-| [Drilling.UI/CRootView.cs:3174–3174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3174-L3174) | (run ?? throw new InvalidOperationException("TPM 측정이 필요합니다.")).Save | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L124-L124) | Save | False |
+| [Drilling.UI/CRootView.cs:3174–3174](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L3174-L3174) | (run ?? throw new InvalidOperationException("TPM 측정이 필요합니다.")).Save | False |
 
 호출하는 대상과 해석 범위:
 
@@ -794,7 +794,7 @@ flowchart TD
 
 ### MethodDeclaration `Execute` · L122–126
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:122–126](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L122-L126)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:122–126](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L122-L126)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -813,7 +813,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6303–6303](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuManual.cs#L6303-L6303) | CPowerTableFile.CreateRun(_manager, recipe, targets, automatic: false).Execute | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6303–6303](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuManual.cs#L6303-L6303) | CPowerTableFile.CreateRun(_manager, recipe, targets, automatic: false).Execute | False |
 
 호출하는 대상과 해석 범위:
 
@@ -862,7 +862,7 @@ flowchart TD
 
 ### MethodDeclaration `DisposeAsync` · L127–138
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:127–138](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L127-L138)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:127–138](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L127-L138)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -875,9 +875,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L125-L125) | DisposeAsync | False |
-| [Drilling.UI/CRootView.cs:3169–3169](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3169-L3169) | run.DisposeAsync | False |
-| [Drilling.UI/CRootView.cs:3175–3175](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L3175-L3175) | run.DisposeAsync | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L125-L125) | DisposeAsync | False |
+| [Drilling.UI/CRootView.cs:3169–3169](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L3169-L3169) | run.DisposeAsync | False |
+| [Drilling.UI/CRootView.cs:3175–3175](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L3175-L3175) | run.DisposeAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -928,7 +928,7 @@ flowchart TD
 
 ### MethodDeclaration `Report` · L139–145
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:139–145](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L139-L145)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:139–145](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L139-L145)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -941,8 +941,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L97-L97) | Report | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L135-L135) | Report | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L97-L97) | Report | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L135-L135) | Report | False |
 
 호출하는 대상과 해석 범위:
 
@@ -979,7 +979,7 @@ flowchart TD
 
 ### MethodDeclaration `Log` · L146–146
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L146-L146)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L146-L146)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -999,10 +999,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L56-L56) | Log | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L104-L104) | Log | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L106-L106) | Log | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L118-L118) | Log | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L56-L56) | Log | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L104-L104) | Log | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L106-L106) | Log | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L118-L118) | Log | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1035,7 +1035,7 @@ flowchart TD
 
 ### MethodDeclaration `FindStart` · L147–147
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L147-L147)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L147-L147)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1074,7 +1074,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveMeasurement` · L148–148
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L148-L148)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L148-L148)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1114,7 +1114,7 @@ flowchart TD
 
 ### FieldDeclaration `_routes` · L154–154
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L154-L154)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L154-L154)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1135,7 +1135,7 @@ flowchart TD
 
 ### FieldDeclaration `_attenuators` · L155–155
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L155-L155)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L155-L155)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1156,7 +1156,7 @@ flowchart TD
 
 ### FieldDeclaration `_emissionGate` · L156–156
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:156–156](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L156-L156)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:156–156](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L156-L156)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1184,7 +1184,7 @@ flowchart TD
 
 ### FieldDeclaration `_emitting` · L157–157
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:157–157](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L157-L157)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:157–157](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L157-L157)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1212,7 +1212,7 @@ flowchart TD
 
 ### FieldDeclaration `_flagMayBeOn` · L158–158
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:158–158](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L158-L158)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:158–158](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L158-L158)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1227,7 +1227,7 @@ flowchart TD
 
 ### FieldDeclaration `_stage` · L159–159
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L159-L159)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L159-L159)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1242,7 +1242,7 @@ flowchart TD
 
 ### FieldDeclaration `_stageDevice` · L160–160
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L160-L160)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L160-L160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1257,7 +1257,7 @@ flowchart TD
 
 ### PropertyDeclaration `StageTolerance` · L161–161
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:161–161](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L161-L161)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:161–161](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L161-L161)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1286,7 +1286,7 @@ flowchart TD
 
 ### PropertyDeclaration `TimeoutMs` · L162–162
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L162-L162)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L162-L162)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1317,7 +1317,7 @@ flowchart TD
 
 ### PropertyDeclaration `Interfaces` · L163–163
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L163-L163)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L163-L163)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1344,7 +1344,7 @@ flowchart TD
 
 ### PropertyDeclaration `Automation` · L164–164
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L164-L164)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L164-L164)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1371,7 +1371,7 @@ flowchart TD
 
 ### FieldDeclaration `StageFeedbackIds` · L165–165
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:165–165](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L165-L165)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:165–165](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L165-L165)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1392,7 +1392,7 @@ flowchart TD
 
 ### MethodDeclaration `Sim` · L166–166
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L166-L166)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L166-L166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1412,9 +1412,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L167-L167) | Sim | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L167-L167) | Sim | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:394–394](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L394-L394) | Sim | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L167-L167) | Sim | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L167-L167) | Sim | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:394–394](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L394-L394) | Sim | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1434,7 +1434,7 @@ flowchart TD
 
 ### MethodDeclaration `IsSimulation` · L167–167
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L167-L167)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L167-L167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1453,9 +1453,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L143-L143) | _session.IsSimulation | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L147-L147) | _session.IsSimulation | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L148-L148) | _session.IsSimulation | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L143-L143) | _session.IsSimulation | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L147-L147) | _session.IsSimulation | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L148-L148) | _session.IsSimulation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1477,7 +1477,7 @@ flowchart TD
 
 ### MethodDeclaration `Connected` · L168–172
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:168–172](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L168-L172)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:168–172](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L168-L172)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1497,13 +1497,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:183–183](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L183-L183) | Connected | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:260–260](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L260-L260) | Connected | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:260–260](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L260-L260) | Connected | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L313-L313) | Connected | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L335-L335) | Connected | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L353-L353) | Connected | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L391-L391) | Connected | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:183–183](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L183-L183) | Connected | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:260–260](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L260-L260) | Connected | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:260–260](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L260-L260) | Connected | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L313-L313) | Connected | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L335-L335) | Connected | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L353-L353) | Connected | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L391-L391) | Connected | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1538,7 +1538,7 @@ flowchart TD
 
 ### MethodDeclaration `StageSnapshot` · L173–188
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:173–188](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L173-L188)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:173–188](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L173-L188)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1551,8 +1551,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L208-L208) | StageSnapshot | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L221-L221) | StageSnapshot | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L208-L208) | StageSnapshot | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L221-L221) | StageSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1624,7 +1624,7 @@ flowchart TD
 
 ### MethodDeclaration `StageEvidence` · L189–204
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:189–204](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L189-L204)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:189–204](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L189-L204)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1644,11 +1644,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L212-L212) | StageEvidence | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L215-L215) | StageEvidence | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L224-L224) | StageEvidence | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L234-L234) | StageEvidence | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L236-L236) | StageEvidence | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L212-L212) | StageEvidence | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L215-L215) | StageEvidence | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L224-L224) | StageEvidence | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L234-L234) | StageEvidence | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L236-L236) | StageEvidence | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1703,7 +1703,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsureStageReady` · L206–217
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:206–217](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L206-L217)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:206–217](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L206-L217)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1716,10 +1716,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L71-L71) | _session.EnsureStageReady | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L231-L231) | EnsureStageReady | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:361–361](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L361-L361) | EnsureStageReady | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L391-L391) | EnsureStageReady | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L71-L71) | _session.EnsureStageReady | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L231-L231) | EnsureStageReady | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:361–361](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L361-L361) | EnsureStageReady | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L391-L391) | EnsureStageReady | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1779,7 +1779,7 @@ flowchart TD
 
 ### MethodDeclaration `CheckStageReady` · L218–237
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:218–237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L218-L237)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:218–237](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L218-L237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1798,12 +1798,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L66-L66) | _session.CheckStageReady | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L242-L242) | CheckStageReady | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L248-L248) | CheckStageReady | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L326-L326) | CheckStageReady | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L346-L346) | CheckStageReady | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L353-L353) | CheckStageReady | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L66-L66) | _session.CheckStageReady | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L242-L242) | CheckStageReady | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L248-L248) | CheckStageReady | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L326-L326) | CheckStageReady | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L346-L346) | CheckStageReady | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L353-L353) | CheckStageReady | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1882,7 +1882,7 @@ flowchart TD
 
 ### MethodDeclaration `MaintainStageFeedback` · L238–245
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:238–245](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L238-L245)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:238–245](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L238-L245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1901,7 +1901,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L79-L79) | _session.MaintainStageFeedback | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L79-L79) | _session.MaintainStageFeedback | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1937,7 +1937,7 @@ flowchart TD
 
 ### MethodDeclaration `PrepareAll` · L246–308
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:246–308](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L246-L308)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:246–308](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L246-L308)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1956,7 +1956,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L54-L54) | _session.PrepareAll | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L54-L54) | _session.PrepareAll | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2238,7 +2238,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitLaserReady` · L309–325
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:309–325](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L309-L325)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:309–325](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L309-L325)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2258,8 +2258,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L298-L298) | WaitLaserReady | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:355–355](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L355-L355) | WaitLaserReady | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L298-L298) | WaitLaserReady | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:355–355](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L355-L355) | WaitLaserReady | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2322,7 +2322,7 @@ flowchart TD
 
 ### MethodDeclaration `Prepare` · L326–326
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L326-L326)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L326-L326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2356,7 +2356,7 @@ flowchart TD
 
 ### MethodDeclaration `GetAttenuatorPosition` · L327–342
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:327–342](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L327-L342)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:327–342](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L327-L342)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2376,7 +2376,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L297-L297) | GetAttenuatorPosition | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L297-L297) | GetAttenuatorPosition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2440,7 +2440,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveAttenuator` · L343–350
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:343–350](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L343-L350)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:343–350](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L343-L350)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2512,7 +2512,7 @@ flowchart TD
 
 ### MethodDeclaration `BeginMeasurement` · L351–369
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:351–369](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L351-L369)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:351–369](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L351-L369)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2601,7 +2601,7 @@ flowchart TD
 
 ### MethodDeclaration `EndMeasurement` · L370–388
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:370–388](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L370-L388)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:370–388](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L370-L388)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2620,8 +2620,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:345–345](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L345-L345) | EndMeasurement | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:403–403](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L403-L403) | EndMeasurement | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:345–345](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L345-L345) | EndMeasurement | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:403–403](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L403-L403) | EndMeasurement | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2692,7 +2692,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadPower` · L389–399
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:389–399](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L389-L399)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:389–399](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L389-L399)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2773,7 +2773,7 @@ flowchart TD
 
 ### MethodDeclaration `Finish` · L400–411
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:400–411](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L400-L411)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:400–411](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L400-L411)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2857,7 +2857,7 @@ flowchart TD
 
 ### MethodDeclaration `DisposeAsync` · L412–417
 
-[Drilling.Common/Interface/CPowerMeasureRun.cs:412–417](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L412-L417)
+[Drilling.Common/Interface/CPowerMeasureRun.cs:412–417](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L412-L417)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2870,7 +2870,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L133-L133) | _session.DisposeAsync | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L133-L133) | _session.DisposeAsync | False |
 
 호출하는 대상과 해석 범위:
 

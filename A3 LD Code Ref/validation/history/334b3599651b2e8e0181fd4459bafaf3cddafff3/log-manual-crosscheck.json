@@ -1,0 +1,859 @@
+{
+  "schema": "a3-log-manual-crosscheck/1",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "sourceBranch": "master",
+  "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+  "comparisonCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "scope": "manual source trace only; no equipment/App/SDK/script execution; no operational CSV/log/credentials copied",
+  "sourceDiff": {
+    "onlyAddedFile": "Drilling.Common/Log/CLogManager.cs",
+    "lineCount": 1562,
+    "sha256": "9212676723d170166d61a6d7baeafeec6cf6b660d2ae5ef59c22de14dc2e3728"
+  },
+  "sourceReads": [
+    {
+      "path": "Drilling.Common/Log/CLogManager.cs",
+      "ranges": [
+        [
+          1,
+          1562
+        ]
+      ],
+      "sha256": "9212676723d170166d61a6d7baeafeec6cf6b660d2ae5ef59c22de14dc2e3728"
+    },
+    {
+      "path": "Drilling.UI/CAppStartup.cs",
+      "ranges": [
+        [
+          1,
+          50
+        ]
+      ],
+      "sha256": "98e8716b093e6970d73233f8488d538acf7fa02f5d140ab1baebd9e8abdcd9b9"
+    },
+    {
+      "path": "Drilling.UI/CRootView.cs",
+      "ranges": [
+        [
+          127,
+          130
+        ],
+        [
+          1280,
+          1348
+        ],
+        [
+          1451,
+          1508
+        ]
+      ],
+      "sha256": "09f2e5df917b40012488baaad112bcba54488350e86e3bdc181cffa5ffeee8ab"
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuPm.cs",
+      "ranges": [
+        [
+          1,
+          95
+        ]
+      ],
+      "sha256": "1393394dca1a9500052acf8e9238a1ce0db7006515a36cc5c68d3d88fccb3258"
+    },
+    {
+      "path": "Drilling.UI/CUiLogService.cs",
+      "ranges": [
+        [
+          1,
+          108
+        ]
+      ],
+      "sha256": "e26730fb54b010598ad048992b59d5537b05e268bf8f8b7e3a478a0e8d633cf7"
+    },
+    {
+      "path": "Drilling.Common/Managers/CManager.cs",
+      "ranges": [
+        [
+          85,
+          110
+        ],
+        [
+          217,
+          264
+        ]
+      ],
+      "sha256": "6db41ef7d7938136bce10c0d3acd4d9293a57cc4336ff26dc3a79041db2914f8"
+    },
+    {
+      "path": "Drilling.File/JHMI/CSettingFile.cs",
+      "ranges": [
+        [
+          105,
+          136
+        ]
+      ],
+      "sha256": "c049c9c77518b5df70fe76f234c4c5d952c9ef880aed3cd8cdd8845be89c0ab4"
+    },
+    {
+      "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+      "ranges": [
+        [
+          215,
+          242
+        ]
+      ],
+      "sha256": "83965473a623f54f27fccf5d963e476d696721927341629e26b0a525581bada4"
+    },
+    {
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "ranges": [
+        [
+          2356,
+          2427
+        ]
+      ],
+      "sha256": "7e5b1fd549370e222890c0882624bd116e1375ae160cb55e0d94cf3513f8b917"
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "ranges": [
+        [
+          1005,
+          1050
+        ],
+        [
+          1864,
+          1902
+        ],
+        [
+          2737,
+          2755
+        ]
+      ],
+      "sha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d"
+    },
+    {
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "ranges": [
+        [
+          786,
+          824
+        ]
+      ],
+      "sha256": "93d3416633fddbcbd2ea9efe7958bd79a32c00eff8c017fb6cebfe757068596d"
+    },
+    {
+      "path": "Drilling.Common/Alarm/CAlarmManager.cs",
+      "ranges": [
+        [
+          341,
+          377
+        ]
+      ],
+      "sha256": "5cbff85f66cfcf6744d14dd9955a75c2eb21a6536e0f7fd7517472b7f95fa872"
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs",
+      "ranges": [
+        [
+          1,
+          35
+        ],
+        [
+          92,
+          197
+        ]
+      ],
+      "sha256": "5d06e93a3ba16a27c93f45c6825f5ef8324b118a9c80bb7ef241987423a8c303"
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs",
+      "ranges": [
+        [
+          778,
+          887
+        ],
+        [
+          916,
+          959
+        ]
+      ],
+      "sha256": "fb9a8f1f07a8aa9c53c455b2db44e2dd39ace8b00cc33f5efab5736239555dd9"
+    }
+  ],
+  "searchOnlyAdditionalCallSites": [
+    "Drilling.Common/Interface/CInterfaceManager.cs",
+    "Drilling.Common/Interface/Melsec/CMelsec.InterfaceLog.cs"
+  ],
+  "existingManualSource": "<private-local-artifact> LD Code Ref\\manual",
+  "preservedOriginalFiles": 33,
+  "modifiedManualFiles": [
+    "architecture/01-startup-and-composition.md",
+    "architecture/02-recipe-settings-and-csv.md",
+    "architecture/03-coordinate-script-and-mof.md",
+    "architecture/04-product-and-station-lifecycle.md",
+    "architecture/05-device-interfaces-and-drivers.md",
+    "architecture/06-threading-snapshots-and-logs.md",
+    "architecture/07-change-impact-and-offline-reference.md",
+    "architecture/08-alarm-cause-analysis.md",
+    "architecture/diagram-spec.json",
+    "architecture/README.md",
+    "review/01_Review_계획과_좌표계.md",
+    "review/02_Masking_Sampling_IOF.md",
+    "review/03_Vision_패킷과_단위.md",
+    "review/04_ReviewOffset_적용과_롤백.md",
+    "review/05_결과_Revision_Product_연결.md",
+    "review/06_DefaultOffset_ZeroOrder_FirstBeam.md",
+    "review/07_Align_Distortion_윈도우_복구.md",
+    "review/diagram-spec.json",
+    "architecture/diagrams/01-startup.svg",
+    "architecture/diagrams/02-recipe.svg",
+    "architecture/diagrams/03-coordinate.svg",
+    "architecture/diagrams/04-product.svg",
+    "architecture/diagrams/05-device.svg",
+    "architecture/diagrams/06-thread.svg",
+    "architecture/diagrams/07-change.svg",
+    "architecture/diagrams/08-alarm.svg"
+  ],
+  "newManualFiles": [
+    "architecture/09_Log_PM_큐와_이력추적.md",
+    "architecture/diagrams/09-log.svg"
+  ],
+  "manualMethodDefinitions": 91,
+  "manualMethodCoverage": [
+    {
+      "owner": "CLogManager",
+      "name": "GetFileLock",
+      "line": 32
+    },
+    {
+      "owner": "CLogManager",
+      "name": "CLogManager",
+      "line": 54
+    },
+    {
+      "owner": "CLogManager",
+      "name": "StartPmSession",
+      "line": 72
+    },
+    {
+      "owner": "CLogManager",
+      "name": "CompletePmSession",
+      "line": 92
+    },
+    {
+      "owner": "CLogManager",
+      "name": "ReadPmHistory",
+      "line": 114
+    },
+    {
+      "owner": "CLogManager",
+      "name": "LoadPmHistory",
+      "line": 125
+    },
+    {
+      "owner": "CLogManager",
+      "name": "ReadPmHistoryEntry",
+      "line": 137
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WritePmHistoryEntry",
+      "line": 150
+    },
+    {
+      "owner": "CLogManager",
+      "name": "PmHistoryPath",
+      "line": 168
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteStationState",
+      "line": 175
+    },
+    {
+      "owner": "CLogManager",
+      "name": "ReadRecipeRecent",
+      "line": 185
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteRecipeCreate",
+      "line": 210
+    },
+    {
+      "owner": "CLogManager",
+      "name": "ReadRecipeRecent",
+      "line": 215
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteRecipeSelect",
+      "line": 220
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteRecipeDelete",
+      "line": 225
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteRecipeSave",
+      "line": 230
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteRecipeModify",
+      "line": 235
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteRecipeModify",
+      "line": 240
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteRecipeModifyBatch",
+      "line": 245
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteRecipeRename",
+      "line": 267
+    },
+    {
+      "owner": "CLogManager",
+      "name": "ReadSettingRecent",
+      "line": 272
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteSettingModify",
+      "line": 292
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteSettingSave",
+      "line": 297
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteInterfaceConnection",
+      "line": 302
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteInterfaceCommand",
+      "line": 307
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteInterfaceError",
+      "line": 313
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteInterfaceProtocolTrace",
+      "line": 318
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteProductEvent",
+      "line": 341
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteUiClick",
+      "line": 351
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteRecipeAction",
+      "line": 356
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteRecipeAction",
+      "line": 366
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteSettingAction",
+      "line": 376
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteInterfaceAction",
+      "line": 386
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteUiAction",
+      "line": 397
+    },
+    {
+      "owner": "CLogManager",
+      "name": "AppendLine",
+      "line": 407
+    },
+    {
+      "owner": "CLogManager",
+      "name": "AppendText",
+      "line": 412
+    },
+    {
+      "owner": "CLogManager",
+      "name": "QueueInterfaceText",
+      "line": 426
+    },
+    {
+      "owner": "CLogManager",
+      "name": "InterfaceWriteFailed",
+      "line": 439
+    },
+    {
+      "owner": "CLogManager",
+      "name": "FlushInterfaceAsync",
+      "line": 446
+    },
+    {
+      "owner": "CLogManager",
+      "name": "StopInterfaceLoggingAsync",
+      "line": 456
+    },
+    {
+      "owner": "CLogManager.InterfaceLogWriter",
+      "name": "InterfaceLogWriter",
+      "line": 477
+    },
+    {
+      "owner": "CLogManager.InterfaceLogWriter",
+      "name": "TryWrite",
+      "line": 512
+    },
+    {
+      "owner": "CLogManager.InterfaceLogWriter",
+      "name": "Flush",
+      "line": 521
+    },
+    {
+      "owner": "CLogManager.InterfaceLogWriter",
+      "name": "Complete",
+      "line": 532
+    },
+    {
+      "owner": "CLogManager",
+      "name": "EnumerateRecentLogFiles",
+      "line": 539
+    },
+    {
+      "owner": "CLogManager",
+      "name": "ReadLogFile",
+      "line": 558
+    },
+    {
+      "owner": "CLogManager",
+      "name": "ParseRecipeLine",
+      "line": 574
+    },
+    {
+      "owner": "CLogManager",
+      "name": "CreateRecipeHistory",
+      "line": 613
+    },
+    {
+      "owner": "CLogManager",
+      "name": "ParseSettingLine",
+      "line": 618
+    },
+    {
+      "owner": "CLogManager",
+      "name": "SplitFields",
+      "line": 634
+    },
+    {
+      "owner": "CLogManager",
+      "name": "EscapeField",
+      "line": 662
+    },
+    {
+      "owner": "CLogManager",
+      "name": "ModuleLogName",
+      "line": 667
+    },
+    {
+      "owner": "CLogManager",
+      "name": "NormalizeModuleName",
+      "line": 677
+    },
+    {
+      "owner": "CLogManager",
+      "name": "UnescapeField",
+      "line": 682
+    },
+    {
+      "owner": "CLogManager",
+      "name": "TryReadSection",
+      "line": 687
+    },
+    {
+      "owner": "CLogManager",
+      "name": "ParseTimestamp",
+      "line": 702
+    },
+    {
+      "owner": "CLogManager",
+      "name": "Append",
+      "line": 716
+    },
+    {
+      "owner": "CLogManager",
+      "name": "Read",
+      "line": 737
+    },
+    {
+      "owner": "CLogManager",
+      "name": "AlarmLogPath",
+      "line": 793
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteSequence",
+      "line": 805
+    },
+    {
+      "owner": "CLogManager",
+      "name": "EnsureSequenceWriter",
+      "line": 835
+    },
+    {
+      "owner": "CLogManager",
+      "name": "FlushSequenceAsync",
+      "line": 843
+    },
+    {
+      "owner": "CLogManager",
+      "name": "StopSequenceLoggingAsync",
+      "line": 879
+    },
+    {
+      "owner": "CLogManager",
+      "name": "WriteSequenceQueue",
+      "line": 895
+    },
+    {
+      "owner": "CLogManager",
+      "name": "SequenceWriteFailed",
+      "line": 929
+    },
+    {
+      "owner": "CLogFileScope",
+      "name": "CLogFileScope",
+      "line": 948
+    },
+    {
+      "owner": "CLogFileScope",
+      "name": "ResolveDirectory",
+      "line": 951
+    },
+    {
+      "owner": "CLogFileScope",
+      "name": "ResolveFile",
+      "line": 959
+    },
+    {
+      "owner": "CLogFileScope",
+      "name": "IsLogFile",
+      "line": 967
+    },
+    {
+      "owner": "CLogFileScope",
+      "name": "IsAlarm",
+      "line": 968
+    },
+    {
+      "owner": "CLogFileScope",
+      "name": "ResolvePath",
+      "line": 969
+    },
+    {
+      "owner": "CLogFileScope",
+      "name": "RejectLink",
+      "line": 990
+    },
+    {
+      "owner": "CSequenceLogText",
+      "name": "Format",
+      "line": 1045
+    },
+    {
+      "owner": "CSequenceLogText",
+      "name": "RememberGlass",
+      "line": 1098
+    },
+    {
+      "owner": "CSequenceLogText",
+      "name": "FormatCore",
+      "line": 1109
+    },
+    {
+      "owner": "CSequenceLogText",
+      "name": "CommonFlow",
+      "line": 1275
+    },
+    {
+      "owner": "CSequenceLogText",
+      "name": "Signal",
+      "line": 1332
+    },
+    {
+      "owner": "CSequenceLogText",
+      "name": "Data",
+      "line": 1359
+    },
+    {
+      "owner": "CSequenceLogText",
+      "name": "Address",
+      "line": 1370
+    },
+    {
+      "owner": "CSequenceLogText",
+      "name": "OnOff",
+      "line": 1371
+    },
+    {
+      "owner": "CSequenceLogText",
+      "name": "Duration",
+      "line": 1378
+    },
+    {
+      "owner": "CSequenceLogText",
+      "name": "NumberAfterId",
+      "line": 1379
+    },
+    {
+      "owner": "CSequenceLogText",
+      "name": "Reason",
+      "line": 1380
+    },
+    {
+      "owner": "CSequenceLogText",
+      "name": "Field",
+      "line": 1388
+    },
+    {
+      "owner": "CSequenceLogText",
+      "name": "ProcessText",
+      "line": 1398
+    },
+    {
+      "owner": "CLogTextReader",
+      "name": "ReadAllAsync",
+      "line": 1408
+    },
+    {
+      "owner": "CLogTextReader",
+      "name": "ReadAllAsync",
+      "line": 1413
+    },
+    {
+      "owner": "CLogTextReader",
+      "name": "ReadPage",
+      "line": 1455
+    },
+    {
+      "owner": "CProgramOpenLog",
+      "name": "Write",
+      "line": 1528
+    },
+    {
+      "owner": "CProgramOpenLog",
+      "name": "Write",
+      "line": 1533
+    },
+    {
+      "owner": "CProgramOpenLog",
+      "name": "FindProjectRoot",
+      "line": 1546
+    }
+  ],
+  "separatePureRegression": {
+    "report": "audits/log-pure-regression.json",
+    "sha256": "14b322107460cf92555738264b883576cd484e6e9733fd70f15a03d06d097074",
+    "positiveRegressions": {
+      "passed": 27,
+      "total": 27
+    },
+    "findingReproductions": {
+      "reproduced": 5,
+      "probes": 5
+    },
+    "behaviorStatus": "defects_reproduced_not_program_correctness_pass",
+    "equipmentRuntimeValidated": false
+  },
+  "supersededClaims": [
+    "PM implementation absent → tracked declaration/UTF-8 JSON/tmp publication confirmed",
+    "PM storage format unknown → exact path/DTO/cache documented",
+    "Alarm PM auto-collection unknown → EnumerateFiles does not include PM JSON",
+    "Only old 11.19 delta → current one-file addition separated from prior changes"
+  ],
+  "preservedLimits": [
+    "PM restart active lock not restored",
+    "Recipe/Review coordinates and storage unchanged in this diff",
+    "Credential/operational record originals not copied; unmasked Setting log path source-checked",
+    "Formal build/runtime/equipment status not inferred from manual extraction"
+  ],
+  "validation": {
+    "fixedSourceLinkCount": 869,
+    "sourceLinkErrors": [],
+    "internalLinkErrors": [],
+    "svgErrors": [],
+    "markdownCount": 17,
+    "svgCount": 16,
+    "metadataJsonCount": 2,
+    "sourceHeadUnchanged": true,
+    "sourceGitStatus": "",
+    "diagramSpecEndpointValidation": "pass; source/target match declared node IDs in all architecture diagrams"
+  },
+  "outputFiles": [
+    {
+      "path": "architecture/01-startup-and-composition.md",
+      "sha256": "de148a6b6649d84e0bf858cce69ec00d973751b0461b139a9eec7c93584420db"
+    },
+    {
+      "path": "architecture/02-recipe-settings-and-csv.md",
+      "sha256": "8e113b08a48e565cd3987dab93898dd47e3f2bb5816fb90da5413f50f7141cca"
+    },
+    {
+      "path": "architecture/03-coordinate-script-and-mof.md",
+      "sha256": "51fab67e33444739248f903ef11318c88f5404f66345b52e2d2e72f31046ad5a"
+    },
+    {
+      "path": "architecture/04-product-and-station-lifecycle.md",
+      "sha256": "e884d3ed2072f5b64c782be966312ccb4b8e06686f756a10fd3ded43b073e701"
+    },
+    {
+      "path": "architecture/05-device-interfaces-and-drivers.md",
+      "sha256": "047bd90502b8b78a96d51a80501b352bde7cd0e062735bc43e58d3a254559534"
+    },
+    {
+      "path": "architecture/06-threading-snapshots-and-logs.md",
+      "sha256": "9f498c104e4d88c65e92bb9c8cbcdb8b54db4d11af3832f39c8b16f5b5f5b642"
+    },
+    {
+      "path": "architecture/07-change-impact-and-offline-reference.md",
+      "sha256": "8e383ea7ba23353b5f8245c35e86965cf1dfbaef9c855d28c80f133ae1f80be1"
+    },
+    {
+      "path": "architecture/08-alarm-cause-analysis.md",
+      "sha256": "213cd700e0375d7fde1e00c027f84553c204926a46953d0da0fa6281a24c485a"
+    },
+    {
+      "path": "architecture/09_Log_PM_큐와_이력추적.md",
+      "sha256": "7db2e129ef52c3e465a5e55e428f01ed98f2f7cb1132faabf035d9b6c8de98ab"
+    },
+    {
+      "path": "architecture/diagram-spec.json",
+      "sha256": "f232f2c8bb96667424d0d11bad685da7522b87b7b2f3c814cba8224d4d86e137"
+    },
+    {
+      "path": "architecture/diagrams/01-startup.svg",
+      "sha256": "7adfc7c8a9f438909db4d567d37105ef6fc919f380d37c0c862c6f731b79d3dc"
+    },
+    {
+      "path": "architecture/diagrams/02-recipe.svg",
+      "sha256": "70f28b32f6c410b50d61e4046aef6e11a609b5e68a3ef18c9cc0e05ad514af8e"
+    },
+    {
+      "path": "architecture/diagrams/03-coordinate.svg",
+      "sha256": "d3672a2bf6a3a10281e17b0079213f05c7f34f66d253c409fcc95ff4cdec4e0b"
+    },
+    {
+      "path": "architecture/diagrams/04-product.svg",
+      "sha256": "73bad5f49db14933965368806e2c7a32ab0119ec87cdaae8145c25d07b65dddd"
+    },
+    {
+      "path": "architecture/diagrams/05-device.svg",
+      "sha256": "2deee0fd2179b212eb4ff3a30b09526ff5bd1edf2d7fc51afa8a991e2f0bda00"
+    },
+    {
+      "path": "architecture/diagrams/06-thread.svg",
+      "sha256": "6648e5ac790fb8a279f5dec04676a2cb4715a9e90477d291028694f856c3cfad"
+    },
+    {
+      "path": "architecture/diagrams/07-change.svg",
+      "sha256": "3711518f82d67f8c22cc8bac01b511eb2a057c557bede336fc1fd5d752e549cf"
+    },
+    {
+      "path": "architecture/diagrams/08-alarm.svg",
+      "sha256": "92ca6d425fd8fd184bab5eaf4c363ef2fcd79b6bcb416f66ac47b1881e49e8bb"
+    },
+    {
+      "path": "architecture/diagrams/09-log.svg",
+      "sha256": "4bb0c53cfda928842a528c162330a5fff65b0dbc7dab9d3a170b21c0165ea1fd"
+    },
+    {
+      "path": "architecture/README.md",
+      "sha256": "2dd101d059475399bbe68a938feb5501dcf693000d6b8e557bb8410f82dfce24"
+    },
+    {
+      "path": "review/01_Review_계획과_좌표계.md",
+      "sha256": "e213155453f61f3f63686e7b3e129c085d8b84ecb417fb449ee4353036b30ce7"
+    },
+    {
+      "path": "review/02_Masking_Sampling_IOF.md",
+      "sha256": "5c80082d9c79b54ec5fc20f49a96b6a032bfb70f44775bc90d58a25bb79bff6d"
+    },
+    {
+      "path": "review/03_Vision_패킷과_단위.md",
+      "sha256": "88dd546cd316877ce63c0d257b3afc670ced25e2bdd7eec9197fc7653aa3f4ab"
+    },
+    {
+      "path": "review/04_ReviewOffset_적용과_롤백.md",
+      "sha256": "909e8987fde990192234e43afceed699d7b5a8e75b1aed5e31e760ea12cb9332"
+    },
+    {
+      "path": "review/05_결과_Revision_Product_연결.md",
+      "sha256": "b866a04bd22abff7ad36cfaed6b8c9138e0c4f985496c108a2b3d32b97f1308f"
+    },
+    {
+      "path": "review/06_DefaultOffset_ZeroOrder_FirstBeam.md",
+      "sha256": "b432a8945991ad867dc7c162ae2082f13cbfa00afa1068510570338487338602"
+    },
+    {
+      "path": "review/07_Align_Distortion_윈도우_복구.md",
+      "sha256": "340afcb9e27932c5c11f14b3c30935fb7f6b8d3aab70907382ec48631b34f1d0"
+    },
+    {
+      "path": "review/diagram-spec.json",
+      "sha256": "1da3f4e648575c300bddf3ff509e13a2ae8c3d9a824e68843aca79c45b96fe97"
+    },
+    {
+      "path": "review/diagrams/review-01.svg",
+      "sha256": "14df09641c7bfc00d6845ef2681ab3a3670c893f2b100816dc1bf34f8e7dc87b"
+    },
+    {
+      "path": "review/diagrams/review-02.svg",
+      "sha256": "bf29a150da07b52dd549ecdf195c0de2d6becfe1bc4524ce3aceb3ae2ac7aaa6"
+    },
+    {
+      "path": "review/diagrams/review-03.svg",
+      "sha256": "95b274c6a9b855cbfb6b20f303c32325cc16f59852d536d475c1b0a548479cc0"
+    },
+    {
+      "path": "review/diagrams/review-04.svg",
+      "sha256": "38f587e3de99967e29a8af74664868a33eb236f946e954758455add38fd6bdbe"
+    },
+    {
+      "path": "review/diagrams/review-05.svg",
+      "sha256": "ed61e4f305f3b9607e575157eb6e67425c53c65c75f360839e7c564ade0f5888"
+    },
+    {
+      "path": "review/diagrams/review-06.svg",
+      "sha256": "211d400e24d10db9480cd9977e098ba1aa0af0934181d61eb407dcd89315c466"
+    },
+    {
+      "path": "review/diagrams/review-07.svg",
+      "sha256": "deab59c212f2da2a7e18d1c819538ed58261a0f3fb7da6f6f80416a5da978275"
+    }
+  ]
+}

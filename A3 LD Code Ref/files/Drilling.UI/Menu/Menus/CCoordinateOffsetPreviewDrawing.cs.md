@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 8d2a3f1e2aa8de3a7f87950633058eb294c7145af6ddfcbceb2b0904dde75439 |
 | 파일 분류 | code |
 | 원본 크기/행 | 20,344 bytes / 418 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -59,7 +59,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `DesignWidth` · L9–9
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L9-L9)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L9-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -80,7 +80,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `DesignHeight` · L10–10
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L10-L10)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -101,7 +101,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `GridDivisionCount` · L11–11
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L11-L11)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -122,7 +122,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `DefaultMinimum` · L12–12
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L12-L12)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -143,7 +143,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `DefaultMaximum` · L13–13
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L13-L13)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -164,7 +164,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `PlotRect` · L14–14
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L14-L14)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -192,7 +192,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `Create` · L16–84
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:16–84](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L16-L84)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:16–84](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L16-L84)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -218,7 +218,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3256–3264](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3256-L3264) | CCoordinateOffsetPreviewDrawing.Create | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3283–3291](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3283-L3291) | CCoordinateOffsetPreviewDrawing.Create | False |
 
 호출하는 대상과 해석 범위:
 
@@ -415,7 +415,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateReviewCamera` · L86–168
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:86–168](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L86-L168)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:86–168](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L86-L168)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -443,7 +443,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3241–3251](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3241-L3251) | CCoordinateOffsetPreviewDrawing.CreateReviewCamera | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3268–3278](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3268-L3278) | CCoordinateOffsetPreviewDrawing.CreateReviewCamera | False |
 
 호출하는 대상과 해석 범위:
 
@@ -677,7 +677,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawInspectionMarker` · L170–178
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:170–178](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L170-L178)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:170–178](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L170-L178)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -736,7 +736,7 @@ flowchart TD
 
 ### MethodDeclaration `GetMarkerLabelOrigin` · L180–192
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:180–192](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L180-L192)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:180–192](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L180-L192)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -756,8 +756,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L153-L153) | GetMarkerLabelOrigin | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L154-L154) | GetMarkerLabelOrigin | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L153-L153) | GetMarkerLabelOrigin | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L154-L154) | GetMarkerLabelOrigin | False |
 
 호출하는 대상과 해석 범위:
 
@@ -795,7 +795,7 @@ flowchart TD
 
 ### MethodDeclaration `GetAppliedLabelOrigin` · L194–203
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:194–203](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L194-L203)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:194–203](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L194-L203)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -814,7 +814,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L71-L71) | GetAppliedLabelOrigin | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L71-L71) | GetAppliedLabelOrigin | False |
 
 호출하는 대상과 해석 범위:
 
@@ -858,7 +858,7 @@ flowchart TD
 
 ### MethodDeclaration `CalculateOrigin` · L205–211
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:205–211](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L205-L211)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:205–211](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L205-L211)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -880,8 +880,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L38-L38) | CalculateOrigin | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L110-L110) | CalculateOrigin | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L38-L38) | CalculateOrigin | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L110-L110) | CalculateOrigin | False |
 
 호출하는 대상과 해석 범위:
 
@@ -906,7 +906,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAxisOrigin` · L213–226
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:213–226](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L213-L226)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:213–226](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L213-L226)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -928,8 +928,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L208-L208) | SetAxisOrigin | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L209-L209) | SetAxisOrigin | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L208-L208) | SetAxisOrigin | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L209-L209) | SetAxisOrigin | False |
 
 호출하는 대상과 해석 범위:
 
@@ -972,7 +972,7 @@ flowchart TD
 
 ### MethodDeclaration `ClipToPlot` · L228–246
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:228–246](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L228-L246)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:228–246](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L228-L246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1054,7 +1054,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeDirection` · L248–259
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:248–259](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L248-L259)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:248–259](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L248-L259)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1074,10 +1074,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L28-L28) | NormalizeDirection | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L29-L29) | NormalizeDirection | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L100-L100) | NormalizeDirection | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L101-L101) | NormalizeDirection | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L28-L28) | NormalizeDirection | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L29-L29) | NormalizeDirection | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L100-L100) | NormalizeDirection | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L101-L101) | NormalizeDirection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1111,7 +1111,7 @@ flowchart TD
 
 ### MethodDeclaration `GetDirectionalScale` · L261–264
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:261–264](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L261-L264)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:261–264](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L261-L264)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1150,7 +1150,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawPositiveAxis` · L266–298
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:266–298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L266-L298)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:266–298](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L266-L298)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1237,7 +1237,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawGrid` · L300–342
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:300–342](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L300-L342)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:300–342](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L300-L342)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1386,7 +1386,7 @@ flowchart TD
 
 ### MethodDeclaration `GetScreenTickValue` · L344–350
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:344–350](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L344-L350)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:344–350](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L344-L350)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1408,8 +1408,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L332-L332) | GetScreenTickValue | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L333-L333) | GetScreenTickValue | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L332-L332) | GetScreenTickValue | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L333-L333) | GetScreenTickValue | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1424,7 +1424,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatTick` · L352–358
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:352–358](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L352-L358)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:352–358](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L352-L358)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1444,8 +1444,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L334-L334) | FormatTick | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L335-L335) | FormatTick | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L334-L334) | FormatTick | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L335-L335) | FormatTick | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1490,7 +1490,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawArrowHead` · L360–373
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:360–373](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L360-L373)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:360–373](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L360-L373)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1549,7 +1549,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawText` · L375–378
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:375–378](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L375-L378)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:375–378](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L375-L378)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1588,7 +1588,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawCenteredText` · L380–384
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:380–384](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L380-L384)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:380–384](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L380-L384)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1631,7 +1631,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawRightAlignedText` · L386–390
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:386–390](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L386-L390)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:386–390](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L386-L390)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1674,7 +1674,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawTextWithin` · L392–398
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:392–398](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L392-L398)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:392–398](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L392-L398)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1698,7 +1698,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L297-L297) | DrawTextWithin | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L297-L297) | DrawTextWithin | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1734,7 +1734,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateText` · L400–410
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:400–410](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L400-L410)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:400–410](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L400-L410)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1755,10 +1755,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:377–377](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L377-L377) | CreateText | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L382-L382) | CreateText | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L388-L388) | CreateText | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:394–394](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L394-L394) | CreateText | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:377–377](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L377-L377) | CreateText | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L382-L382) | CreateText | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L388-L388) | CreateText | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:394–394](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L394-L394) | CreateText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1779,7 +1779,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateBrush` · L412–417
 
-[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412–417](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L412-L417)
+[Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412–417](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L412-L417)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1800,31 +1800,31 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L47-L47) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L50-L50) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L52-L52) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L53-L53) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L60-L60) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L63-L63) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L65-L65) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L72-L72) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L77-L77) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L122-L122) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L125-L125) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L128-L128) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L129-L129) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L134-L134) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L135-L135) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L140-L140) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L143-L143) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L147-L147) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:156–156](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L156-L156) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:161–161](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L161-L161) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L175-L175) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L308-L308) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:309–309](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L309-L309) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L314-L314) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L338-L338) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L47-L47) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L50-L50) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L52-L52) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L53-L53) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L60-L60) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L63-L63) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L65-L65) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L72-L72) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L77-L77) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L122-L122) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L125-L125) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L128-L128) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L129-L129) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L134-L134) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L135-L135) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L140-L140) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L143-L143) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L147-L147) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:156–156](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L156-L156) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:161–161](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L161-L161) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L175-L175) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L308-L308) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:309–309](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L309-L309) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L314-L314) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L338-L338) | CreateBrush | False |
 
 호출하는 대상과 해석 범위:
 

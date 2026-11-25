@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 9690a272cdb61d231b85decbd9bfaf354e81d09c7bbab7671264d5fc3e11a7ee |
 | 파일 분류 | code |
 | 원본 크기/행 | 6,206 bytes / 180 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -57,7 +57,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `MonitorDefaultToNearest` · L11–11
 
-[Drilling.UI/CApp.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L11-L11)
+[Drilling.UI/CApp.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -78,7 +78,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_monitorFitTimer` · L12–12
 
-[Drilling.UI/CApp.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L12-L12)
+[Drilling.UI/CApp.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -93,7 +93,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isFittingMainWindow` · L13–13
 
-[Drilling.UI/CApp.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L13-L13)
+[Drilling.UI/CApp.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -108,7 +108,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_rootView` · L14–14
 
-[Drilling.UI/CApp.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L14-L14)
+[Drilling.UI/CApp.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -123,7 +123,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L15–21
 
-[Drilling.UI/CApp.xaml.cs:15–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L15-L21)
+[Drilling.UI/CApp.xaml.cs:15–21](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L15-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -154,7 +154,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OnStartup` · L23–45
 
-[Drilling.UI/CApp.xaml.cs:23–45](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L23-L45)
+[Drilling.UI/CApp.xaml.cs:23–45](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L23-L45)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -229,7 +229,7 @@ flowchart TD
 
 ### MethodDeclaration `OnExit` · L47–51
 
-[Drilling.UI/CApp.xaml.cs:47–51](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L47-L51)
+[Drilling.UI/CApp.xaml.cs:47–51](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L47-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -264,7 +264,7 @@ flowchart TD
 
 ### MethodDeclaration `RegisterExceptionHandlers` · L53–72
 
-[Drilling.UI/CApp.xaml.cs:53–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L53-L72)
+[Drilling.UI/CApp.xaml.cs:53–72](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L53-L72)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -277,7 +277,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CApp.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L25-L25) | RegisterExceptionHandlers | False |
+| [Drilling.UI/CApp.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L25-L25) | RegisterExceptionHandlers | False |
 
 호출하는 대상과 해석 범위:
 
@@ -298,7 +298,7 @@ flowchart TD
 
 ### LocalFunctionStatement `HandleUnhandledException` · L59–63
 
-[Drilling.UI/CApp.xaml.cs:59–63](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L59-L63)
+[Drilling.UI/CApp.xaml.cs:59–63](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L59-L63)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -338,7 +338,7 @@ flowchart TD
 
 ### LocalFunctionStatement `HandleUnobservedTaskException` · L66–69
 
-[Drilling.UI/CApp.xaml.cs:66–69](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L66-L69)
+[Drilling.UI/CApp.xaml.cs:66–69](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L66-L69)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -372,7 +372,7 @@ flowchart TD
 
 ### MethodDeclaration `ConfigureMainWindowBounds` · L74–93
 
-[Drilling.UI/CApp.xaml.cs:74–93](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L74-L93)
+[Drilling.UI/CApp.xaml.cs:74–93](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L74-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -391,7 +391,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CApp.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L33-L33) | ConfigureMainWindowBounds | False |
+| [Drilling.UI/CApp.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L33-L33) | ConfigureMainWindowBounds | False |
 
 호출하는 대상과 해석 범위:
 
@@ -437,7 +437,7 @@ flowchart TD
 
 ### MethodDeclaration `ScheduleMainWindowFit` · L95–104
 
-[Drilling.UI/CApp.xaml.cs:95–104](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L95-L104)
+[Drilling.UI/CApp.xaml.cs:95–104](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L95-L104)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -456,9 +456,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CApp.xaml.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L84-L84) | ScheduleMainWindowFit | False |
-| [Drilling.UI/CApp.xaml.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L91-L91) | ScheduleMainWindowFit | False |
-| [Drilling.UI/CApp.xaml.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L92-L92) | ScheduleMainWindowFit | False |
+| [Drilling.UI/CApp.xaml.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L84-L84) | ScheduleMainWindowFit | False |
+| [Drilling.UI/CApp.xaml.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L91-L91) | ScheduleMainWindowFit | False |
+| [Drilling.UI/CApp.xaml.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L92-L92) | ScheduleMainWindowFit | False |
 
 호출하는 대상과 해석 범위:
 
@@ -489,7 +489,7 @@ flowchart TD
 
 ### MethodDeclaration `FitMainWindowToCurrentMonitor` · L106–157
 
-[Drilling.UI/CApp.xaml.cs:106–157](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L106-L157)
+[Drilling.UI/CApp.xaml.cs:106–157](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L106-L157)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -508,8 +508,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CApp.xaml.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L88-L88) | FitMainWindowToCurrentMonitor | False |
-| [Drilling.UI/CApp.xaml.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L90-L90) | FitMainWindowToCurrentMonitor | False |
+| [Drilling.UI/CApp.xaml.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L88-L88) | FitMainWindowToCurrentMonitor | False |
+| [Drilling.UI/CApp.xaml.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L90-L90) | FitMainWindowToCurrentMonitor | False |
 
 호출하는 대상과 해석 범위:
 
@@ -605,7 +605,7 @@ flowchart TD
 
 ### MethodDeclaration `MonitorFromWindow` · L159–160
 
-[Drilling.UI/CApp.xaml.cs:159–160](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L159-L160)
+[Drilling.UI/CApp.xaml.cs:159–160](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L159-L160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -627,7 +627,7 @@ flowchart TD
 
 ### MethodDeclaration `GetMonitorInfo` · L161–162
 
-[Drilling.UI/CApp.xaml.cs:161–162](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L161-L162)
+[Drilling.UI/CApp.xaml.cs:161–162](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L161-L162)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -647,13 +647,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CApp.xaml.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L129-L129) | GetMonitorInfo | False |
+| [Drilling.UI/CApp.xaml.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L129-L129) | GetMonitorInfo | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### FieldDeclaration `cbSize` · L166–166
 
-[Drilling.UI/CApp.xaml.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L166-L166)
+[Drilling.UI/CApp.xaml.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L166-L166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -668,7 +668,7 @@ flowchart TD
 
 ### FieldDeclaration `rcMonitor` · L167–167
 
-[Drilling.UI/CApp.xaml.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L167-L167)
+[Drilling.UI/CApp.xaml.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L167-L167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -683,7 +683,7 @@ flowchart TD
 
 ### FieldDeclaration `rcWork` · L168–168
 
-[Drilling.UI/CApp.xaml.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L168-L168)
+[Drilling.UI/CApp.xaml.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L168-L168)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -698,7 +698,7 @@ flowchart TD
 
 ### FieldDeclaration `dwFlags` · L169–169
 
-[Drilling.UI/CApp.xaml.cs:169–169](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L169-L169)
+[Drilling.UI/CApp.xaml.cs:169–169](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L169-L169)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -713,7 +713,7 @@ flowchart TD
 
 ### FieldDeclaration `Left` · L175–175
 
-[Drilling.UI/CApp.xaml.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L175-L175)
+[Drilling.UI/CApp.xaml.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L175-L175)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -728,7 +728,7 @@ flowchart TD
 
 ### FieldDeclaration `Top` · L176–176
 
-[Drilling.UI/CApp.xaml.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L176-L176)
+[Drilling.UI/CApp.xaml.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L176-L176)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -743,7 +743,7 @@ flowchart TD
 
 ### FieldDeclaration `Right` · L177–177
 
-[Drilling.UI/CApp.xaml.cs:177–177](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L177-L177)
+[Drilling.UI/CApp.xaml.cs:177–177](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L177-L177)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -758,7 +758,7 @@ flowchart TD
 
 ### FieldDeclaration `Bottom` · L178–178
 
-[Drilling.UI/CApp.xaml.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CApp.xaml.cs#L178-L178)
+[Drilling.UI/CApp.xaml.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CApp.xaml.cs#L178-L178)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

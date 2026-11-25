@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 62c91dbbe4eb79d3c06d029eba2f74922a821d6894662af9bab29a52d5f2e69e |
 | 파일 분류 | code |
 | 원본 크기/행 | 9,098 bytes / 192 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -44,7 +44,7 @@
 
 ### FieldDeclaration `ManualResultTypes` · L10–10
 
-[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L10-L10)
+[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -65,7 +65,7 @@
 
 ### MethodDeclaration `ListCorrectionResults` · L12–17
 
-[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:12–17](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L12-L17)
+[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:12–17](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L12-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -101,7 +101,7 @@
 
 ### MethodDeclaration `ReadResultCatalog` · L19–29
 
-[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:19–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L19-L29)
+[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:19–29](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L19-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -120,7 +120,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L15-L15) | ReadResultCatalog | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L15-L15) | ReadResultCatalog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -153,7 +153,7 @@
 
 ### MethodDeclaration `ReadManualCatalog` · L31–47
 
-[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:31–47](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L31-L47)
+[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:31–47](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L31-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -173,7 +173,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L22-L22) | ReadManualCatalog | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L22-L22) | ReadManualCatalog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -231,7 +231,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAutoCatalog` · L49–59
 
-[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:49–59](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L49-L59)
+[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:49–59](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L49-L59)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -251,7 +251,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L23-L23) | ReadAutoCatalog | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L23-L23) | ReadAutoCatalog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -295,7 +295,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadZeroDefenceCatalog` · L61–84
 
-[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:61–84](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L61-L84)
+[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:61–84](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L61-L84)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -315,7 +315,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L24-L24) | ReadZeroDefenceCatalog | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L24-L24) | ReadZeroDefenceCatalog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -388,7 +388,7 @@ flowchart TD
 
 ### MethodDeclaration `AddFiles` · L86–100
 
-[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:86–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L86-L100)
+[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:86–100](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L86-L100)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -413,8 +413,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L44-L44) | AddFiles | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L57-L57) | AddFiles | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L44-L44) | AddFiles | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L57-L57) | AddFiles | False |
 
 호출하는 대상과 해석 범위:
 
@@ -448,7 +448,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadCatalogItem` · L102–165
 
-[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:102–165](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L102-L165)
+[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:102–165](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L102-L165)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -471,8 +471,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L80-L80) | ReadCatalogItem | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L98-L98) | ReadCatalogItem | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L80-L80) | ReadCatalogItem | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L98-L98) | ReadCatalogItem | False |
 
 호출하는 대상과 해석 범위:
 
@@ -593,7 +593,7 @@ flowchart TD
 
 ### MethodDeclaration `Value` · L167–167
 
-[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L167-L167)
+[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L167-L167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -613,10 +613,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L131-L131) | Value | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L132-L132) | Value | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L142-L142) | Value | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L147-L147) | Value | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L131-L131) | Value | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L132-L132) | Value | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L142-L142) | Value | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L147-L147) | Value | False |
 
 호출하는 대상과 해석 범위:
 
@@ -634,7 +634,7 @@ flowchart TD
 
 ### MethodDeclaration `ValueOrFallback` · L169–177
 
-[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:169–177](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L169-L177)
+[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:169–177](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L169-L177)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -655,11 +655,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L140-L140) | ValueOrFallback | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L143-L143) | ValueOrFallback | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L144-L144) | ValueOrFallback | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L145-L145) | ValueOrFallback | False |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L167-L167) | ValueOrFallback | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L140-L140) | ValueOrFallback | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L143-L143) | ValueOrFallback | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L144-L144) | ValueOrFallback | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L145-L145) | ValueOrFallback | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L167-L167) | ValueOrFallback | False |
 
 호출하는 대상과 해석 범위:
 
@@ -694,7 +694,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseSavedAt` · L179–184
 
-[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:179–184](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L179-L184)
+[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:179–184](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L179-L184)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -714,7 +714,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L131-L131) | ParseSavedAt | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L131-L131) | ParseSavedAt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -734,7 +734,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeCatalogStatus` · L186–190
 
-[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:186–190](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L186-L190)
+[Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:186–190](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L186-L190)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -753,7 +753,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L142-L142) | NormalizeCatalogStatus | False |
+| [Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs#L142-L142) | NormalizeCatalogStatus | False |
 
 호출하는 대상과 해석 범위:
 

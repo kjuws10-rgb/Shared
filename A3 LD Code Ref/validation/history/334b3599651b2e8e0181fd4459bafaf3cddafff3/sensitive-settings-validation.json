@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "a3-tool-sensitive-setting-policy/1",
+  "credentialRelatedRows": [
+    {
+      "sourcePath": "Config/JHMI_SETTING.csv",
+      "sourceLine": 113,
+      "settingKey": "PM_UNLOCK_PASSWORD",
+      "definitionRowSuppressedBySensitiveKey": true,
+      "hasValueColumn": true,
+      "valueCopiedIntoReport": false
+    },
+    {
+      "sourcePath": "Config/Setting/Setting.csv",
+      "sourceLine": 113,
+      "settingKey": "PM_UNLOCK_PASSWORD",
+      "definitionRowSuppressedBySensitiveKey": true,
+      "hasValueColumn": true,
+      "valueCopiedIntoReport": false
+    }
+  ],
+  "allJhmiCredentialDefinitionsSuppressed": true,
+  "allSettingCsvRemainsSchemaOnlyByGeneratorPolicy": true,
+  "valuesOrHashesInReport": false,
+  "scope": "Source CSV definition row policy; actual credential values are neither printed nor hashed.",
+  "trackedSettingEqualsTrackedDefinitionDefault": false,
+  "sourceKeyReferences": [],
+  "inputBoundary": "Generator reads Git-tracked readonlysource and supplied manual snapshot only; no separate live equipment/local private configuration was read or executed.",
+  "sourceUnlockPasswordReferenceLocations": [
+    {
+      "sourcePath": "Drilling.UI/CRootView.cs",
+      "sourceLine": 50
+    },
+    {
+      "sourcePath": "Drilling.UI/CRootView.cs",
+      "sourceLine": 1455
+    },
+    {
+      "sourcePath": "Drilling.UI/CRootView.cs",
+      "sourceLine": 1458
+    },
+    {
+      "sourcePath": "Drilling.UI/CRootView.cs",
+      "sourceLine": 1463
+    }
+  ],
+  "trackedSettingExactQuotedValueOccurrencesInCSharp": [],
+  "sourceValueScanScope": "Exact quoted string literal equality only; literals and credential hashes omitted."
+}

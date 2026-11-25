@@ -1,5 +1,12 @@
 # 코드 레퍼런스 변경 이력
 
+## 2026-11-25 · Stage Glass Data·Product 필드 분리
+
+원본 master `334b3599651b2e8e0181fd4459bafaf3cddafff3` → `0219666f9053b907d96d7e0aa7d0c6c1be3a73d4`의1 Commit·1,603파일변경을반영했습니다. Stage43필드/44map·WF600~WF767, Monitor의원본선택과Product생성, Host JUDGEMENT/내부 PRODUCT_RESULT분리·구형읽기호환을추적했습니다. PPID수신은Recipe자동전환/AutoJobChange가아닙니다. 좌표수식소스diff와달리Recipe의Align보정/허용값/Count·Setting실행옵션과추가ReviewOffset파일은실제공정입력에영향을줍니다. 실제운영CSV/세션JSON값은복제하지않고정의/구조만제공합니다. 생성AeroScript는미실행상태의원문해설과선택RAG로유지합니다.
+
+전체코드/자료를빠짐없이분류하고영향받는manual상세장·그림및새10장을갱신했습니다. 도구1.1.5/검증1.1.4는Data JSON을schema-only로보호하고대용량선택Markdown을8MB전송조각으로나눕니다. 내용을생략하거나검색자료갱신을모델학습으로주장하지않습니다. 과거검증은원래Git바이트로history에보존합니다.
+
+
 ## 2026-11-21 · 누락 Log 구현 추적 복원
 
 원본 master `28764c91d521777b8ee068dd7aaf2d3902ce9fe2` → `334b3599651b2e8e0181fd4459bafaf3cddafff3`의1 Commit·CLogManager.cs1파일/+1,562행을반영했습니다. 기존 호출자가 참조하던 로그·PM이력·파일범위/뷰어·한국어시퀀스 설명의 원본을 추적했습니다. 가공/Review/좌표 보정 수식과 Recipe CSV diff는 없습니다. 새09로그 상세장과 영향받는 기존 상세장·그림, 전체 파일/멤버·annotation·검색 자료를 현재Commit으로 갱신했습니다. 로그 빈필드/escape 왕복·민감 Setting값·큐유실/종료·PM재시작은 별도 근거와 한계를 구분합니다. 실제 운영 로그/측정레코드는 복제하지 않습니다.

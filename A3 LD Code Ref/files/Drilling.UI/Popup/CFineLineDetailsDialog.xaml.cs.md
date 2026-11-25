@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | d7e937843f35c4c2564b40485fecae44f968cf7f84d59337807737768a37d510 |
 | 파일 분류 | code |
 | 원본 크기/행 | 761 bytes / 23 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CFineLineDetailsDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CFineLineDetailsDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -35,7 +35,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L8–14
 
-[Drilling.UI/Popup/CFineLineDetailsDialog.xaml.cs:8–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CFineLineDetailsDialog.xaml.cs#L8-L14)
+[Drilling.UI/Popup/CFineLineDetailsDialog.xaml.cs:8–14](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CFineLineDetailsDialog.xaml.cs#L8-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -54,8 +54,8 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CAutoReviewMonitorDialog.xaml.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAutoReviewMonitorDialog.xaml.cs#L35-L35) | new CFineLineDetailsDialog | False |
-| [Drilling.UI/Popup/CFineLineDetailsDialog.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CFineLineDetailsDialog.xaml.cs#L18-L18) | new CFineLineDetailsDialog | False |
+| [Drilling.UI/Popup/CAutoReviewMonitorDialog.xaml.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAutoReviewMonitorDialog.xaml.cs#L35-L35) | new CFineLineDetailsDialog | False |
+| [Drilling.UI/Popup/CFineLineDetailsDialog.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CFineLineDetailsDialog.xaml.cs#L18-L18) | new CFineLineDetailsDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -80,7 +80,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `Show` · L15–21
 
-[Drilling.UI/Popup/CFineLineDetailsDialog.xaml.cs:15–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CFineLineDetailsDialog.xaml.cs#L15-L21)
+[Drilling.UI/Popup/CFineLineDetailsDialog.xaml.cs:15–21](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CFineLineDetailsDialog.xaml.cs#L15-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -130,7 +130,7 @@ flowchart TD
 
 ### MethodDeclaration `CloseClicked` · L22–22
 
-[Drilling.UI/Popup/CFineLineDetailsDialog.xaml.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CFineLineDetailsDialog.xaml.cs#L22-L22)
+[Drilling.UI/Popup/CFineLineDetailsDialog.xaml.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CFineLineDetailsDialog.xaml.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

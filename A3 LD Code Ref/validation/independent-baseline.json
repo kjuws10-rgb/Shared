@@ -1,153 +1,143 @@
 {
-  "schemaVersion": "a3-independent-baseline/1",
-  "sharedHead": "594ca27a4bdfa603350ccaccd1b3c464f31e56cd",
-  "candidateCount": 11,
-  "legacyDateOnlyCount": 0,
-  "eligibleA3DrillingCount": 6,
+  "schemaVersion": "a3-independent-baseline/2",
+  "checkedAt": "2026-11-25T00:41:13.726033+00:00",
+  "passed": true,
+  "sharedHead": "02939095d93863f4a7686e9014eac1f7a01a4f6d",
   "selected": {
-    "path": "20261120_090030_SW아키텍쳐분석",
-    "timestamp": "20261120_090030",
+    "path": "20261121_085657_SW아키텍쳐분석",
+    "timestamp": "20261121_085657",
     "eligible": true,
-    "sourceDeclaration": [
-      "| 원본 저장소 URL | https://github.com/kjuws10-rgb/A3Drilling.git |"
-    ],
-    "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2"
+    "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+    "sourceDeclarations": [
+      "- 원본 저장소: https://github.com/kjuws10-rgb/A3Drilling.git"
+    ]
   },
-  "reference": {
-    "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
-    "sourceBranch": "master",
-    "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
-    "validation": {
-      "status": "passed",
-      "staticReport": "validation/static-validation.json",
-      "browserReport": "validation/browser-validation.json",
-      "crosscheckReports": [
-        "validation/architecture-crosscheck.json",
-        "validation/review-crosscheck.json"
-      ],
-      "extractorReport": "validation/extractor-regression-validation.json",
-      "pythonRegressionReport": "validation/python-regression-validation.json",
-      "independentReport": "validation/generator-independent-validation.json",
-      "sourceModelReport": "validation/source-model-validation.json",
-      "xamlReport": "validation/xaml-independent-validation.json",
-      "sensitiveSettingsReport": "validation/sensitive-settings-validation.json",
-      "manualDerivedReport": "validation/manual-derived-validation.json",
-      "htmlFenceRegressionReport": "validation/html-fence-fix-validation.json",
-      "htmlFenceBrowserReport": "validation/html-fence-browser-validation.json",
-      "sourcePreservationReport": "validation/source-preservation.json",
-      "behaviorReports": [
-        "validation/margin-pure-regression.json",
-        "validation/review-pure-regression.json"
-      ],
-      "equipmentBuild": "not_run",
-      "equipmentExecution": "not_run",
-      "modelInferenceAccuracy": "not_tested_in_this_documentation_task",
-      "modelWeightTraining": "not_run",
-      "gitDiffCheck": "passed"
-    }
-  },
-  "matchesRootArchitecture": true,
-  "matchesRootReference": true,
   "candidates": [
+    {
+      "path": "20261121_085657_SW아키텍쳐분석",
+      "timestamp": "20261121_085657",
+      "eligible": true,
+      "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+      "sourceDeclarations": [
+        "- 원본 저장소: https://github.com/kjuws10-rgb/A3Drilling.git"
+      ]
+    },
     {
       "path": "20261120_090030_SW아키텍쳐분석",
       "timestamp": "20261120_090030",
       "eligible": true,
-      "sourceDeclaration": [
+      "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+      "sourceDeclarations": [
         "| 원본 저장소 URL | https://github.com/kjuws10-rgb/A3Drilling.git |"
-      ],
-      "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2"
+      ]
     },
     {
       "path": "20261118_090014_SW아키텍쳐분석",
       "timestamp": "20261118_090014",
       "eligible": true,
-      "sourceDeclaration": [
+      "sourceCommit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+      "sourceDeclarations": [
         "| 원본 저장소 URL | https://github.com/kjuws10-rgb/A3Drilling.git |"
-      ],
-      "sourceCommit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+      ]
     },
     {
       "path": "20261116_145750_SW아키텍쳐분석",
       "timestamp": "20261116_145750",
       "eligible": true,
-      "sourceDeclaration": [
+      "sourceCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+      "sourceDeclarations": [
         "| 원본 저장소 URL | https://github.com/kjuws10-rgb/A3Drilling.git |"
-      ],
-      "sourceCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986"
+      ]
     },
     {
       "path": "20261112_085708_SW아키텍쳐분석",
       "timestamp": "20261112_085708",
       "eligible": true,
-      "sourceDeclaration": [
+      "sourceCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+      "sourceDeclarations": [
         "| 원본 저장소 URL | https://github.com/kjuws10-rgb/A3Drilling.git |"
-      ],
-      "sourceCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e"
+      ]
     },
     {
       "path": "20261111_090553_SW아키텍쳐분석",
       "timestamp": "20261111_090553",
       "eligible": true,
-      "sourceDeclaration": [
+      "sourceCommit": "a1162209220fd31caa68cbf82b5a98db9588af39",
+      "sourceDeclarations": [
         "| 원본 저장소 URL | https://github.com/kjuws10-rgb/A3Drilling.git |"
-      ],
-      "sourceCommit": "a1162209220fd31caa68cbf82b5a98db9588af39"
+      ]
     },
     {
       "path": "20261108_090646_SW아키텍쳐분석",
       "timestamp": "20261108_090646",
       "eligible": true,
-      "sourceDeclaration": [
+      "sourceCommit": "3a6b021af7dad60578e7fb85e3191b43b3b3c183",
+      "sourceDeclarations": [
         "| 원본 저장소 URL | https://github.com/kjuws10-rgb/A3Drilling.git |",
         "원본 저장소의 파일 수정·추가·삭제·Commit·Push는 하지 않았습니다. Push가 비활성화된 별도 분석 clone과 별도 빌드 clone을 사용했으며 Shared에는 이번 분석 폴더만 게시했습니다. 분석 완료는 생산 수정·빌드 복구·설비 배포 완료를 뜻하지 않습니다."
-      ],
-      "sourceCommit": "3a6b021af7dad60578e7fb85e3191b43b3b3c183"
+      ]
     },
     {
       "path": "20261105_213021_SW아키텍쳐분석",
       "timestamp": "20261105_213021",
       "eligible": false,
-      "sourceDeclaration": [
+      "sourceCommit": "a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f",
+      "sourceDeclarations": [
         "원본 저장소에 수정·추가·삭제·Commit·Push를 하지 않았습니다. Push가 비활성화된 별도 분석 Clone과 별도 빌드 Clone을 사용했습니다. Shared에는 이번 분석 폴더만 게시합니다. 분석 완료는 제품 수정·빌드 복구·설비 배포 완료를 뜻하지 않습니다."
-      ],
-      "sourceCommit": "a966ebf527f9ff0f52b1d84a891fda6fc6fc3e6f"
+      ]
     },
     {
       "path": "20261102_143906_SW아키텍쳐분석",
       "timestamp": "20261102_143906",
       "eligible": false,
-      "sourceDeclaration": [
+      "sourceCommit": "8872e4ed5176b5d8a39f1711af9501f6fac94deb",
+      "sourceDeclarations": [
         "원본 저장소의 소스 수정·추가·삭제·Commit·Push는 하지 않았습니다. 분석 Clone의 Push URL은 DISABLED이며 빌드는 별도 검증 Clone에서만 수행했습니다. Shared에는 이번 분석 폴더만 게시합니다."
-      ],
-      "sourceCommit": "8872e4ed5176b5d8a39f1711af9501f6fac94deb"
-    },
-    {
-      "path": "20261031_090522_SW아키텍쳐분석",
-      "timestamp": "20261031_090522",
-      "eligible": false,
-      "sourceDeclaration": [
-        "원본 저장소의 파일 수정·추가·삭제·Commit·Push는 하지 않았습니다. Shared에는 이번 분석 폴더만 게시하며 생산 코드·실행 파일·개인 지식 작업실·전체 시험 로그를 복제하지 않습니다."
-      ],
-      "sourceCommit": "99d78ddf0e680b55dbd9662764b71a1ffe93a457"
-    },
-    {
-      "path": "20261028_090032_SW아키텍쳐분석",
-      "timestamp": "20261028_090032",
-      "eligible": false,
-      "sourceDeclaration": [
-        "원본 저장소의 파일 변경·추가·삭제·Commit·Push는 하지 않았습니다. Shared에는 이번 폴더의 보고서와 검증 요약만 게시하며 원본 코드, 실행 파일, 비공개 지식 작업실은 복제하지 않습니다."
-      ],
-      "sourceCommit": "223b905daf0d7421c187b727a65d180bfa7472d6"
-    },
-    {
-      "path": "20261022_090959_SW아키텍쳐분석",
-      "timestamp": "20261022_090959",
-      "eligible": false,
-      "sourceDeclaration": [],
-      "sourceCommit": "e6ff3c6fd8fb706adbff3ded070cca2502000b4d"
+      ]
     }
   ],
-  "scope": "Independent HEAD tree scan. No working-tree files, uncommitted reports or other repositories used as the baseline.",
-  "passed": true
+  "reference": {
+    "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+    "sourceBranch": "master",
+    "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+    "validation": {
+      "status": "passed",
+      "scope": "Documentation coverage/provenance/navigation validation; known behavior defects are reported separately, not a program correctness pass",
+      "staticReport": "validation/static-validation.json",
+      "browserReport": "validation/browser-validation.json",
+      "independentReport": "validation/generator-independent-validation.json",
+      "sourceModelReport": "validation/source-model-validation.json",
+      "sourceModelExtractionReport": "validation/source-model-extraction.json",
+      "crosscheckReports": [
+        "validation/architecture-crosscheck.json",
+        "validation/log-manual-crosscheck.json"
+      ],
+      "extractorReport": "validation/extractor-regression-validation.json",
+      "pythonRegressionReport": "validation/python-regression-validation.json",
+      "sourcePreservationReport": "validation/source-preservation.json",
+      "behaviorReport": "validation/log-pure-regression.json",
+      "positiveLogRegressions": {
+        "passed": 27,
+        "total": 27
+      },
+      "logDefectReproductions": {
+        "reproduced": 5,
+        "probes": 5,
+        "distinctFindingGroups": 3
+      },
+      "behaviorStatus": "defects_reproduced_not_program_correctness_pass",
+      "equipmentBuild": "not_run",
+      "equipmentExecution": "not_run",
+      "modelWeightTraining": "not_run",
+      "modelInferenceAccuracy": "not_tested",
+      "gitDiffCheck": "passed"
+    }
+  },
+  "sourceHead": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
+  "sourceWorktreeClean": true,
+  "sourcePushDisabled": true,
+  "sourceHasNewCommit": true,
+  "toolSourceFilesVerified": 9,
+  "toolCopyMatchesFreshShared": true,
+  "scope": "Independent Git HEAD tree baseline selection; new and old dated architecture folder formats considered; other-source README excluded. Existing validated baseline is older than source master, so regeneration is required."
 }

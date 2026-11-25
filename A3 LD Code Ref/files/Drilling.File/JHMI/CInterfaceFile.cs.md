@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 3046cea2bed6865cf48591ecedf5b5806bdb0add4df1414a37247b8d6f9e9419 |
 | 파일 분류 | code |
 | 원본 크기/행 | 20,534 bytes / 476 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -77,7 +77,7 @@
 
 ### FieldDeclaration `_logManager` · L14–14
 
-[Drilling.File/JHMI/CInterfaceFile.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L14-L14)
+[Drilling.File/JHMI/CInterfaceFile.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -105,7 +105,7 @@
 
 ### FieldDeclaration `FieldNames` · L15–15
 
-[Drilling.File/JHMI/CInterfaceFile.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L15-L15)
+[Drilling.File/JHMI/CInterfaceFile.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -126,7 +126,7 @@
 
 ### FieldDeclaration `Headers` · L16–16
 
-[Drilling.File/JHMI/CInterfaceFile.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L16-L16)
+[Drilling.File/JHMI/CInterfaceFile.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -147,7 +147,7 @@
 
 ### FieldDeclaration `RequiredHeaderGroups` · L17–30
 
-[Drilling.File/JHMI/CInterfaceFile.cs:17–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L17-L30)
+[Drilling.File/JHMI/CInterfaceFile.cs:17–30](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L17-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -168,7 +168,7 @@
 
 ### MethodDeclaration `LoadAll` · L31–52
 
-[Drilling.File/JHMI/CInterfaceFile.cs:31–52](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L31-L52)
+[Drilling.File/JHMI/CInterfaceFile.cs:31–52](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L31-L52)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -216,7 +216,7 @@
 
 ### LocalFunctionStatement `SelectDevice` · L36–39
 
-[Drilling.File/JHMI/CInterfaceFile.cs:36–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L36-L39)
+[Drilling.File/JHMI/CInterfaceFile.cs:36–39](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L36-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -243,7 +243,7 @@
 
 ### LocalFunctionStatement `SelectNumber` · L41–44
 
-[Drilling.File/JHMI/CInterfaceFile.cs:41–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L41-L44)
+[Drilling.File/JHMI/CInterfaceFile.cs:41–44](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L41-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -270,7 +270,7 @@
 
 ### LocalFunctionStatement `SelectNickName` · L46–49
 
-[Drilling.File/JHMI/CInterfaceFile.cs:46–49](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L46-L49)
+[Drilling.File/JHMI/CInterfaceFile.cs:46–49](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L46-L49)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -297,7 +297,7 @@
 
 ### MethodDeclaration `SaveAll` · L54–79
 
-[Drilling.File/JHMI/CInterfaceFile.cs:54–79](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L54-L79)
+[Drilling.File/JHMI/CInterfaceFile.cs:54–79](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L54-L79)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -361,7 +361,7 @@
 
 ### LocalFunctionStatement `SelectDevice` · L59–62
 
-[Drilling.File/JHMI/CInterfaceFile.cs:59–62](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L59-L62)
+[Drilling.File/JHMI/CInterfaceFile.cs:59–62](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L59-L62)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -388,7 +388,7 @@
 
 ### LocalFunctionStatement `SelectNumber` · L64–67
 
-[Drilling.File/JHMI/CInterfaceFile.cs:64–67](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L64-L67)
+[Drilling.File/JHMI/CInterfaceFile.cs:64–67](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L64-L67)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -415,7 +415,7 @@
 
 ### LocalFunctionStatement `SelectNickName` · L69–72
 
-[Drilling.File/JHMI/CInterfaceFile.cs:69–72](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L69-L72)
+[Drilling.File/JHMI/CInterfaceFile.cs:69–72](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L69-L72)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -442,7 +442,7 @@
 
 ### MethodDeclaration `LoadInterfaceRows` · L81–90
 
-[Drilling.File/JHMI/CInterfaceFile.cs:81–90](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L81-L90)
+[Drilling.File/JHMI/CInterfaceFile.cs:81–90](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L81-L90)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -455,9 +455,9 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L34-L34) | LoadInterfaceRows | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L58-L58) | LoadInterfaceRows | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L225-L225) | LoadInterfaceRows | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L34-L34) | LoadInterfaceRows | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L58-L58) | LoadInterfaceRows | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L225-L225) | LoadInterfaceRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -486,7 +486,7 @@
 
 ### LocalFunctionStatement `SelectItem` · L84–87
 
-[Drilling.File/JHMI/CInterfaceFile.cs:84–87](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L84-L87)
+[Drilling.File/JHMI/CInterfaceFile.cs:84–87](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L84-L87)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -521,7 +521,7 @@
 
 ### MethodDeclaration `Parse` · L92–105
 
-[Drilling.File/JHMI/CInterfaceFile.cs:92–105](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L92-L105)
+[Drilling.File/JHMI/CInterfaceFile.cs:92–105](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L92-L105)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -541,7 +541,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L86-L86) | Parse | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L86-L86) | Parse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -588,7 +588,7 @@
 
 ### MethodDeclaration `GetInterfacePath` · L107–110
 
-[Drilling.File/JHMI/CInterfaceFile.cs:107–110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L107-L110)
+[Drilling.File/JHMI/CInterfaceFile.cs:107–110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L107-L110)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -601,9 +601,9 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L75-L75) | GetInterfacePath | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L83-L83) | GetInterfacePath | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L89-L89) | GetInterfacePath | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L75-L75) | GetInterfacePath | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L83-L83) | GetInterfacePath | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L89-L89) | GetInterfacePath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -622,7 +622,7 @@
 
 ### MethodDeclaration `ReadArguments` · L112–120
 
-[Drilling.File/JHMI/CInterfaceFile.cs:112–120](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L112-L120)
+[Drilling.File/JHMI/CInterfaceFile.cs:112–120](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L112-L120)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -641,7 +641,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L102-L102) | ReadArguments | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L102-L102) | ReadArguments | False |
 
 호출하는 대상과 해석 범위:
 
@@ -664,7 +664,7 @@
 
 ### LocalFunctionStatement `SelectItem` · L114–117
 
-[Drilling.File/JHMI/CInterfaceFile.cs:114–117](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L114-L117)
+[Drilling.File/JHMI/CInterfaceFile.cs:114–117](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L114-L117)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -700,7 +700,7 @@
 
 ### MethodDeclaration `ToRow` · L122–139
 
-[Drilling.File/JHMI/CInterfaceFile.cs:122–139](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L122-L139)
+[Drilling.File/JHMI/CInterfaceFile.cs:122–139](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L122-L139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -769,7 +769,7 @@
 
 ### MethodDeclaration `Validate` · L141–168
 
-[Drilling.File/JHMI/CInterfaceFile.cs:141–168](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L141-L168)
+[Drilling.File/JHMI/CInterfaceFile.cs:141–168](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L141-L168)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -788,8 +788,8 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L35-L35) | Validate | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L57-L57) | Validate | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L35-L35) | Validate | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L57-L57) | Validate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -857,7 +857,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateConnectionArguments` · L170–221
 
-[Drilling.File/JHMI/CInterfaceFile.cs:170–221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L170-L221)
+[Drilling.File/JHMI/CInterfaceFile.cs:170–221](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L170-L221)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -876,7 +876,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L166-L166) | ValidateConnectionArguments | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L166-L166) | ValidateConnectionArguments | False |
 
 호출하는 대상과 해석 범위:
 
@@ -967,7 +967,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L172–175
 
-[Drilling.File/JHMI/CInterfaceFile.cs:172–175](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L172-L175)
+[Drilling.File/JHMI/CInterfaceFile.cs:172–175](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L172-L175)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1001,7 +1001,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateSavedRows` · L223–238
 
-[Drilling.File/JHMI/CInterfaceFile.cs:223–238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L223-L238)
+[Drilling.File/JHMI/CInterfaceFile.cs:223–238](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L223-L238)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1020,7 +1020,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L76-L76) | ValidateSavedRows | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L76-L76) | ValidateSavedRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1078,7 +1078,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteModifyLog` · L240–266
 
-[Drilling.File/JHMI/CInterfaceFile.cs:240–266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L240-L266)
+[Drilling.File/JHMI/CInterfaceFile.cs:240–266](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L240-L266)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1098,7 +1098,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L77-L77) | WriteModifyLog | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L77-L77) | WriteModifyLog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1165,7 +1165,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L257–260
 
-[Drilling.File/JHMI/CInterfaceFile.cs:257–260](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L257-L260)
+[Drilling.File/JHMI/CInterfaceFile.cs:257–260](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L257-L260)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1201,7 +1201,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteFieldModifyLog` · L268–281
 
-[Drilling.File/JHMI/CInterfaceFile.cs:268–281](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L268-L281)
+[Drilling.File/JHMI/CInterfaceFile.cs:268–281](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L268-L281)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1222,8 +1222,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L250-L250) | WriteFieldModifyLog | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L254-L254) | WriteFieldModifyLog | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L250-L250) | WriteFieldModifyLog | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L254-L254) | WriteFieldModifyLog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1267,7 +1267,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateEmptyFieldMap` · L283–296
 
-[Drilling.File/JHMI/CInterfaceFile.cs:283–296](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L283-L296)
+[Drilling.File/JHMI/CInterfaceFile.cs:283–296](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L283-L296)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1280,7 +1280,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L250-L250) | CreateEmptyFieldMap | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L250-L250) | CreateEmptyFieldMap | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1299,7 +1299,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectFieldName` · L285–288
 
-[Drilling.File/JHMI/CInterfaceFile.cs:285–288](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L285-L288)
+[Drilling.File/JHMI/CInterfaceFile.cs:285–288](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L285-L288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1326,7 +1326,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L290–293
 
-[Drilling.File/JHMI/CInterfaceFile.cs:290–293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L290-L293)
+[Drilling.File/JHMI/CInterfaceFile.cs:290–293](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L290-L293)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1353,7 +1353,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateFieldMap` · L298–316
 
-[Drilling.File/JHMI/CInterfaceFile.cs:298–316](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L298-L316)
+[Drilling.File/JHMI/CInterfaceFile.cs:298–316](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L298-L316)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1372,9 +1372,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L250-L250) | CreateFieldMap | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L254-L254) | CreateFieldMap | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L254-L254) | CreateFieldMap | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L250-L250) | CreateFieldMap | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L254-L254) | CreateFieldMap | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L254-L254) | CreateFieldMap | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1423,7 +1423,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildComparisonText` · L318–332
 
-[Drilling.File/JHMI/CInterfaceFile.cs:318–332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L318-L332)
+[Drilling.File/JHMI/CInterfaceFile.cs:318–332](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L318-L332)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1442,8 +1442,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L233-L233) | BuildComparisonText | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L233-L233) | BuildComparisonText | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L233-L233) | BuildComparisonText | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L233-L233) | BuildComparisonText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1480,7 +1480,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateInterfaceKey` · L334–337
 
-[Drilling.File/JHMI/CInterfaceFile.cs:334–337](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L334-L337)
+[Drilling.File/JHMI/CInterfaceFile.cs:334–337](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L334-L337)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1499,10 +1499,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L151-L151) | CreateInterfaceKey | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L228-L228) | CreateInterfaceKey | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L245-L245) | CreateInterfaceKey | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L259-L259) | CreateInterfaceKey | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L151-L151) | CreateInterfaceKey | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L228-L228) | CreateInterfaceKey | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L245-L245) | CreateInterfaceKey | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L259-L259) | CreateInterfaceKey | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1514,7 +1514,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatInterfaceLabel` · L339–342
 
-[Drilling.File/JHMI/CInterfaceFile.cs:339–342](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L339-L342)
+[Drilling.File/JHMI/CInterfaceFile.cs:339–342](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L339-L342)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1533,13 +1533,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L153-L153) | FormatInterfaceLabel | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:158–158](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L158-L158) | FormatInterfaceLabel | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L163-L163) | FormatInterfaceLabel | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L230-L230) | FormatInterfaceLabel | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L235-L235) | FormatInterfaceLabel | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L246-L246) | FormatInterfaceLabel | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L264-L264) | FormatInterfaceLabel | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L153-L153) | FormatInterfaceLabel | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:158–158](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L158-L158) | FormatInterfaceLabel | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L163-L163) | FormatInterfaceLabel | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L230-L230) | FormatInterfaceLabel | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L235-L235) | FormatInterfaceLabel | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L246-L246) | FormatInterfaceLabel | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L264-L264) | FormatInterfaceLabel | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1558,7 +1558,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseInterfaceType` · L344–362
 
-[Drilling.File/JHMI/CInterfaceFile.cs:344–362](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L344-L362)
+[Drilling.File/JHMI/CInterfaceFile.cs:344–362](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L344-L362)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1577,7 +1577,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L95-L95) | ParseInterfaceType | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L95-L95) | ParseInterfaceType | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1609,7 +1609,7 @@ flowchart TD
 
 ### MethodDeclaration `InterfaceTypeText` · L364–383
 
-[Drilling.File/JHMI/CInterfaceFile.cs:364–383](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L364-L383)
+[Drilling.File/JHMI/CInterfaceFile.cs:364–383](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L364-L383)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1628,9 +1628,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L126-L126) | InterfaceTypeText | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L303-L303) | InterfaceTypeText | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L323-L323) | InterfaceTypeText | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L126-L126) | InterfaceTypeText | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L303-L303) | InterfaceTypeText | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L323-L323) | InterfaceTypeText | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1652,7 +1652,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseDevice` · L385–400
 
-[Drilling.File/JHMI/CInterfaceFile.cs:385–400](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L385-L400)
+[Drilling.File/JHMI/CInterfaceFile.cs:385–400](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L385-L400)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1671,7 +1671,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L96-L96) | ParseDevice | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L96-L96) | ParseDevice | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1703,7 +1703,7 @@ flowchart TD
 
 ### MethodDeclaration `DeviceText` · L402–417
 
-[Drilling.File/JHMI/CInterfaceFile.cs:402–417](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L402-L417)
+[Drilling.File/JHMI/CInterfaceFile.cs:402–417](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L402-L417)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1722,10 +1722,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L127-L127) | DeviceText | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L304-L304) | DeviceText | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L324-L324) | DeviceText | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:341–341](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L341-L341) | DeviceText | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L127-L127) | DeviceText | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L304-L304) | DeviceText | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L324-L324) | DeviceText | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:341–341](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L341-L341) | DeviceText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1756,7 +1756,7 @@ flowchart TD
 
 ### MethodDeclaration `RequireText` · L419–422
 
-[Drilling.File/JHMI/CInterfaceFile.cs:419–422](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L419-L422)
+[Drilling.File/JHMI/CInterfaceFile.cs:419–422](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L419-L422)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1777,13 +1777,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L95-L95) | RequireText | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L96-L96) | RequireText | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L97-L97) | RequireText | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L98-L98) | RequireText | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L99-L99) | RequireText | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L100-L100) | RequireText | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L101-L101) | RequireText | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L95-L95) | RequireText | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L96-L96) | RequireText | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L97-L97) | RequireText | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L98-L98) | RequireText | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L99-L99) | RequireText | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L100-L100) | RequireText | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L101-L101) | RequireText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1802,7 +1802,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadRequiredBool` · L424–427
 
-[Drilling.File/JHMI/CInterfaceFile.cs:424–427](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L424-L427)
+[Drilling.File/JHMI/CInterfaceFile.cs:424–427](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L424-L427)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1823,8 +1823,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L100-L100) | ReadRequiredBool | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L101-L101) | ReadRequiredBool | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L100-L100) | ReadRequiredBool | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L101-L101) | ReadRequiredBool | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1843,7 +1843,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadRequiredInt` · L429–432
 
-[Drilling.File/JHMI/CInterfaceFile.cs:429–432](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L429-L432)
+[Drilling.File/JHMI/CInterfaceFile.cs:429–432](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L429-L432)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1864,7 +1864,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L97-L97) | ReadRequiredInt | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L97-L97) | ReadRequiredInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1883,7 +1883,7 @@ flowchart TD
 
 ### MethodDeclaration `RequireArgument` · L434–440
 
-[Drilling.File/JHMI/CInterfaceFile.cs:434–440](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L434-L440)
+[Drilling.File/JHMI/CInterfaceFile.cs:434–440](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L434-L440)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1904,9 +1904,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:187–187](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L187-L187) | RequireArgument | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L199-L199) | RequireArgument | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L216-L216) | RequireArgument | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:187–187](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L187-L187) | RequireArgument | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L199-L199) | RequireArgument | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L216-L216) | RequireArgument | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1937,7 +1937,7 @@ flowchart TD
 
 ### MethodDeclaration `RequirePositiveInt` · L442–448
 
-[Drilling.File/JHMI/CInterfaceFile.cs:442–448](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L442-L448)
+[Drilling.File/JHMI/CInterfaceFile.cs:442–448](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L442-L448)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1958,16 +1958,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L188-L188) | RequirePositiveInt | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:190–190](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L190-L190) | RequirePositiveInt | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L200-L200) | RequirePositiveInt | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L201-L201) | RequirePositiveInt | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L202-L202) | RequirePositiveInt | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:206–206](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L206-L206) | RequirePositiveInt | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L207-L207) | RequirePositiveInt | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L208-L208) | RequirePositiveInt | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L217-L217) | RequirePositiveInt | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L218-L218) | RequirePositiveInt | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L188-L188) | RequirePositiveInt | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:190–190](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L190-L190) | RequirePositiveInt | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L200-L200) | RequirePositiveInt | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L201-L201) | RequirePositiveInt | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L202-L202) | RequirePositiveInt | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:206–206](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L206-L206) | RequirePositiveInt | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L207-L207) | RequirePositiveInt | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L208-L208) | RequirePositiveInt | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L217-L217) | RequirePositiveInt | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L218-L218) | RequirePositiveInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1998,7 +1998,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateParity` · L450–459
 
-[Drilling.File/JHMI/CInterfaceFile.cs:450–459](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L450-L459)
+[Drilling.File/JHMI/CInterfaceFile.cs:450–459](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L450-L459)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2018,7 +2018,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:189–189](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L189-L189) | ValidateParity | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:189–189](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L189-L189) | ValidateParity | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2052,7 +2052,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateStopBits` · L461–470
 
-[Drilling.File/JHMI/CInterfaceFile.cs:461–470](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L461-L470)
+[Drilling.File/JHMI/CInterfaceFile.cs:461–470](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L461-L470)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2072,7 +2072,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L191-L191) | ValidateStopBits | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L191-L191) | ValidateStopBits | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2108,7 +2108,7 @@ flowchart TD
 
 ### MethodDeclaration `Normalize` · L472–475
 
-[Drilling.File/JHMI/CInterfaceFile.cs:472–475](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L472-L475)
+[Drilling.File/JHMI/CInterfaceFile.cs:472–475](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L472-L475)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2127,10 +2127,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CInterfaceFile.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L346-L346) | Normalize | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:387–387](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L387-L387) | Normalize | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L452-L452) | Normalize | False |
-| [Drilling.File/JHMI/CInterfaceFile.cs:463–463](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/JHMI/CInterfaceFile.cs#L463-L463) | Normalize | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L346-L346) | Normalize | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:387–387](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L387-L387) | Normalize | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L452-L452) | Normalize | False |
+| [Drilling.File/JHMI/CInterfaceFile.cs:463–463](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/JHMI/CInterfaceFile.cs#L463-L463) | Normalize | False |
 
 호출하는 대상과 해석 범위:
 

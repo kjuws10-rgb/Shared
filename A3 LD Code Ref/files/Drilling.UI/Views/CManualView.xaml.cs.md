@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | ab605fcdeeab4496960f7bad74eec9a3fe5c5dc60dcd24b36a6cb262d6ad2636 |
 | 파일 분류 | code |
 | 원본 크기/행 | 6,181 bytes / 154 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -50,7 +50,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L11–26
 
-[Drilling.UI/Views/CManualView.xaml.cs:11–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L11-L26)
+[Drilling.UI/Views/CManualView.xaml.cs:11–26](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L11-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -102,7 +102,7 @@ flowchart TD
 
 ### FieldDeclaration `_motionWindow` · L28–28
 
-[Drilling.UI/Views/CManualView.xaml.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L28-L28)
+[Drilling.UI/Views/CManualView.xaml.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -117,7 +117,7 @@ flowchart TD
 
 ### FieldDeclaration `_jogButton` · L29–29
 
-[Drilling.UI/Views/CManualView.xaml.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L29-L29)
+[Drilling.UI/Views/CManualView.xaml.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -132,7 +132,7 @@ flowchart TD
 
 ### FieldDeclaration `_jogAxis` · L30–30
 
-[Drilling.UI/Views/CManualView.xaml.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L30-L30)
+[Drilling.UI/Views/CManualView.xaml.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -147,7 +147,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenShiftOffsetDialog` · L32–36
 
-[Drilling.UI/Views/CManualView.xaml.cs:32–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L32-L36)
+[Drilling.UI/Views/CManualView.xaml.cs:32–36](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L32-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -195,7 +195,7 @@ flowchart TD
 
 ### MethodDeclaration `FitManualParameterRows` · L38–46
 
-[Drilling.UI/Views/CManualView.xaml.cs:38–46](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L38-L46)
+[Drilling.UI/Views/CManualView.xaml.cs:38–46](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L38-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -254,7 +254,7 @@ flowchart TD
 
 ### MethodDeclaration `JogPressed` · L48–56
 
-[Drilling.UI/Views/CManualView.xaml.cs:48–56](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L48-L56)
+[Drilling.UI/Views/CManualView.xaml.cs:48–56](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L48-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -314,7 +314,7 @@ flowchart TD
 
 ### MethodDeclaration `JogReleased` · L57–57
 
-[Drilling.UI/Views/CManualView.xaml.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L57-L57)
+[Drilling.UI/Views/CManualView.xaml.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L57-L57)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -349,7 +349,7 @@ flowchart TD
 
 ### MethodDeclaration `JogCaptureLost` · L58–58
 
-[Drilling.UI/Views/CManualView.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L58-L58)
+[Drilling.UI/Views/CManualView.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L58-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -383,7 +383,7 @@ flowchart TD
 
 ### MethodDeclaration `MotionWindowDeactivated` · L59–65
 
-[Drilling.UI/Views/CManualView.xaml.cs:59–65](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L59-L65)
+[Drilling.UI/Views/CManualView.xaml.cs:59–65](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L59-L65)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -429,7 +429,7 @@ flowchart TD
 
 ### MethodDeclaration `MotionVisibilityChanged` · L66–69
 
-[Drilling.UI/Views/CManualView.xaml.cs:66–69](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L66-L69)
+[Drilling.UI/Views/CManualView.xaml.cs:66–69](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L66-L69)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -475,7 +475,7 @@ flowchart TD
 
 ### MethodDeclaration `CancelPendingMotion` · L70–73
 
-[Drilling.UI/Views/CManualView.xaml.cs:70–73](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L70-L73)
+[Drilling.UI/Views/CManualView.xaml.cs:70–73](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L70-L73)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -488,9 +488,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CManualView.xaml.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L22-L22) | CancelPendingMotion | False |
-| [Drilling.UI/Views/CManualView.xaml.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L64-L64) | CancelPendingMotion | False |
-| [Drilling.UI/Views/CManualView.xaml.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L68-L68) | CancelPendingMotion | False |
+| [Drilling.UI/Views/CManualView.xaml.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L22-L22) | CancelPendingMotion | False |
+| [Drilling.UI/Views/CManualView.xaml.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L64-L64) | CancelPendingMotion | False |
+| [Drilling.UI/Views/CManualView.xaml.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L68-L68) | CancelPendingMotion | False |
 
 호출하는 대상과 해석 범위:
 
@@ -519,7 +519,7 @@ flowchart TD
 
 ### MethodDeclaration `ReleaseJog` · L74–82
 
-[Drilling.UI/Views/CManualView.xaml.cs:74–82](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L74-L82)
+[Drilling.UI/Views/CManualView.xaml.cs:74–82](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L74-L82)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -532,12 +532,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CManualView.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L21-L21) | ReleaseJog | False |
-| [Drilling.UI/Views/CManualView.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L54-L54) | ReleaseJog | False |
-| [Drilling.UI/Views/CManualView.xaml.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L57-L57) | ReleaseJog | False |
-| [Drilling.UI/Views/CManualView.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L58-L58) | ReleaseJog | False |
-| [Drilling.UI/Views/CManualView.xaml.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L61-L61) | ReleaseJog | False |
-| [Drilling.UI/Views/CManualView.xaml.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L68-L68) | ReleaseJog | False |
+| [Drilling.UI/Views/CManualView.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L21-L21) | ReleaseJog | False |
+| [Drilling.UI/Views/CManualView.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L54-L54) | ReleaseJog | False |
+| [Drilling.UI/Views/CManualView.xaml.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L57-L57) | ReleaseJog | False |
+| [Drilling.UI/Views/CManualView.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L58-L58) | ReleaseJog | False |
+| [Drilling.UI/Views/CManualView.xaml.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L61-L61) | ReleaseJog | False |
+| [Drilling.UI/Views/CManualView.xaml.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L68-L68) | ReleaseJog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -577,7 +577,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenTextInput` · L84–99
 
-[Drilling.UI/Views/CManualView.xaml.cs:84–99](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L84-L99)
+[Drilling.UI/Views/CManualView.xaml.cs:84–99](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L84-L99)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -646,7 +646,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenManualParameterInput` · L102–113
 
-[Drilling.UI/Views/CManualView.xaml.cs:102–113](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L102-L113)
+[Drilling.UI/Views/CManualView.xaml.cs:102–113](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L102-L113)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -703,7 +703,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenCommandStateInput` · L115–127
 
-[Drilling.UI/Views/CManualView.xaml.cs:115–127](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L115-L127)
+[Drilling.UI/Views/CManualView.xaml.cs:115–127](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L115-L127)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -765,7 +765,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenStageTargetInput` · L129–140
 
-[Drilling.UI/Views/CManualView.xaml.cs:129–140](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L129-L140)
+[Drilling.UI/Views/CManualView.xaml.cs:129–140](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L129-L140)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -822,7 +822,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenStageSpeedInput` · L142–153
 
-[Drilling.UI/Views/CManualView.xaml.cs:142–153](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CManualView.xaml.cs#L142-L153)
+[Drilling.UI/Views/CManualView.xaml.cs:142–153](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CManualView.xaml.cs#L142-L153)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

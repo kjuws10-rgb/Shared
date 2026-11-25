@@ -1,88 +1,276 @@
 {
   "schemaVersion": "a3-independent-static-qa/1",
-  "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+  "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
   "outputPath": "<private-run>\\staging\\A3Ref",
   "passed": true,
-  "assertions": 892627,
+  "assertions": 18223266,
   "assertionGroups": {
     "source_commit_matches_snapshot": 1,
     "source_worktree_clean": 1,
     "source_push_disabled": 1,
     "all_tracked_paths_match": 1,
     "all_original_byte_hashes_preserved": 1,
-    "inventory_sha_matches": 700,
-    "individual_output_exists": 2100,
-    "inventory_physical_line_count": 700,
-    "annotation_line_numbers_and_exact_source": 353,
-    "csv_schema_only": 335,
-    "split_csharp_sha_and_counts": 158,
-    "all_csharp_ranges_within_original": 158,
+    "inventory_sha_matches": 2289,
+    "individual_output_exists": 6867,
+    "inventory_physical_line_count": 2289,
+    "annotation_line_numbers_and_exact_source": 1379,
+    "csv_schema_only": 898,
+    "split_csharp_sha_and_counts": 159,
+    "all_csharp_ranges_within_original": 159,
     "dll_metadata_only": 12,
     "xaml_named_elements_complete": 58,
     "all_member_ids_unique": 1,
     "manifest_code_counts": 1,
     "extractor_ast_coverage_report": 1,
     "extractor_all_csharp_files_present": 1,
-    "rag_unique_id": 32191,
-    "rag_exact_provenance": 32191,
-    "rag_line_range": 32191,
-    "rag_exact_source_line": 724252,
-    "no_operational_csv_raw_record_in_rag": 335,
-    "rag_all_annotated_lines_covered": 353,
+    "rag_unique_id": 373996,
+    "rag_exact_provenance": 373996,
+    "rag_line_range": 373996,
+    "rag_exact_source_line": 17000077,
+    "no_operational_records_raw_body_in_rag": 898,
+    "rag_all_annotated_lines_covered": 1379,
     "all_rag_records_routed_to_primary": 1,
     "all_rag_records_routed_to_optional": 1,
     "rag_manifest_count": 1,
-    "physical_lf_documents": 2805,
-    "markdown_code_fences_closed": 729,
-    "local_link_within_output_and_exists": 4562,
+    "physical_lf_documents": 8905,
+    "markdown_code_fences_closed": 2458,
+    "local_link_within_output_and_exists": 13243,
     "html_fragment_target_exists": 1,
-    "pinned_source_commit_and_path": 29562,
-    "pinned_source_single_or_range_line_bounds": 28862,
+    "pinned_source_commit_and_path": 31220,
+    "pinned_source_single_or_range_line_bounds": 28931,
     "pm_password_csv_has_no_annotation": 2,
     "pm_password_definition_row_not_previewed": 2,
-    "integrated_manual_diagram_spec_frozen_sha": 1,
+    "manual_input_preserved_after_document_normalization": 37,
+    "integrated_manual_diagram_spec_semantic_json_equal": 1,
     "no_config_sensitive_literals_or_full_credential_rows_copied": 1,
     "source_unchanged_after_independent_qa": 1
   },
   "counts": {
-    "annotatedFiles": 353,
-    "annotatedPhysicalSourceLines": 671237,
-    "csharpFiles": 158,
-    "types": 941,
-    "members": 16511,
-    "calls": 43446,
+    "annotatedFiles": 1379,
+    "annotatedPhysicalSourceLines": 16947001,
+    "csharpFiles": 159,
+    "types": 946,
+    "members": 16543,
+    "calls": 43603,
     "xaml_namedElements": 385,
     "xaml_events": 308,
-    "xaml_bindings": 2956,
+    "xaml_bindings": 2960,
     "sourceParseErrors": 0,
     "disabledRegions": 0,
-    "ragRecords": 32191,
-    "primaryRagRecords": 21838,
-    "optionalRagRecords": 10353,
-    "outputFiles": 2812,
-    "outputBytes": 504195113,
-    "utf8Files": 2811,
-    "localLinks": 4562,
-    "svgFiles": 733,
-    "uniqueSourceCitations": 29562,
+    "ragRecords": 373996,
+    "primaryRagRecords": 21988,
+    "optionalRagRecords": 352008,
+    "outputFiles": 8912,
+    "outputBytes": 6131376622,
+    "utf8Files": 8911,
+    "localLinks": 13243,
+    "svgFiles": 2324,
+    "uniqueSourceCitations": 31220,
     "singleLineSourceCitations": 92,
     "pmCredentialSourceRows": 2,
-    "sensitivePolicyFilesScanned": 2762,
+    "sensitivePolicyFilesScanned": 8837,
     "nontrivialProtectedLiteralProbes": 12,
     "shortCredentialValuesCheckedBySchemaAndRowPolicyOnly": 2,
     "protectedCredentialRowFingerprints": 2,
     "sensitivePolicyLeaks": 0
   },
   "errors": [],
-  "sourceTrackedFiles": 700,
-  "schemaOnlyFiles": 335,
+  "sourceTrackedFiles": 2289,
+  "schemaOnlyFiles": 898,
   "dllMetadataOnlyFiles": 12,
   "xamlFiles": 58,
   "partialCompilationDiagnostics": {
-    "Error": 4348,
+    "Error": 4361,
     "Hidden": 431,
     "Warning": 3
   },
+  "manualNormalizationEvidence": [
+    {
+      "path": "architecture/01-startup-and-composition.md",
+      "inputRawSha256": "fa635814bb21adb7e1858e64bb7d5e68070b5971da4c532a88fa4f6493e82eb1",
+      "normalizedOutputSha256": "1ae86722c0e0c1e59a749ad81d4305ae8ac34e06ae43977b4b248f4b233c82a4"
+    },
+    {
+      "path": "architecture/02-recipe-settings-and-csv.md",
+      "inputRawSha256": "a8df96f44902f41de15d855fdf040822bf2db4a70652deaf5c46ae9c8a16a6e3",
+      "normalizedOutputSha256": "f6e8eb4499cb00ec47391585e3f6a5c32343fc101e673e92045fa665f832ae43"
+    },
+    {
+      "path": "architecture/03-coordinate-script-and-mof.md",
+      "inputRawSha256": "7c81def4e2d1ab699e035ad5d63fe454297867790147157d6355ea0259193b4d",
+      "normalizedOutputSha256": "0312c059b9e23880863b5e85cbc7d0515f1d6283cb9a617d163d141cd9e1f654"
+    },
+    {
+      "path": "architecture/04-product-and-station-lifecycle.md",
+      "inputRawSha256": "a7a62c361d887ca61e02392f4c5e9a92a99defb4bf39b320a3ab608cf95c08ad",
+      "normalizedOutputSha256": "8a275b331ce37cd1b7318473770b181b666534b09e7caf80065482912e0da479"
+    },
+    {
+      "path": "architecture/05-device-interfaces-and-drivers.md",
+      "inputRawSha256": "6c264f7f1e8dae013769e4673b49a6ee377cca93308a6a8e7960c905f082b6fa",
+      "normalizedOutputSha256": "1f266c1fa554009d2971c4fc9030e0e40e8d4d16d9f5e0541cbe139ae787ae68"
+    },
+    {
+      "path": "architecture/06-threading-snapshots-and-logs.md",
+      "inputRawSha256": "0c2b7a4464864e5c95c792f961b8a877fcb84a63136e742d2bc2e1cf4b7c760a",
+      "normalizedOutputSha256": "7e65ba81cfff7536f36af9d1f5c5221f8354049797f70c876183aeb7bcbba8b1"
+    },
+    {
+      "path": "architecture/07-change-impact-and-offline-reference.md",
+      "inputRawSha256": "32e5a0508b0140ede796b4729d1ffef60c1c319793c1a1303c96b9492ece24d9",
+      "normalizedOutputSha256": "f3509e19a96db6c3760d92dba85aea1b6a0c0f9dbc8a5a93f080d03d5b5e6841"
+    },
+    {
+      "path": "architecture/08-alarm-cause-analysis.md",
+      "inputRawSha256": "30880333105cc89e56709b7231a38771a82e2a30d09b618d8bdd5c7552c0b98b",
+      "normalizedOutputSha256": "dafdb6f6d4866a68b0a81d2b39280eb63ae914b6a5b53f9b8aa9ce3eaca24eca"
+    },
+    {
+      "path": "architecture/09_Log_PM_큐와_이력추적.md",
+      "inputRawSha256": "edb26f8aabf90f13f7ed852d2388b89c00e1f9d1ecb4aa91d19b8a6864db6918",
+      "normalizedOutputSha256": "32d59838c877d1025c8101cb653ce5fec165a463b3b780369e26e4faeb0f9b4f"
+    },
+    {
+      "path": "architecture/10-stage-glass-data-and-product-fields.md",
+      "inputRawSha256": "9d8bfd961969d17694aac76b7bc9e4a6116fc56be34e04696e299a8936a2ac61",
+      "normalizedOutputSha256": "eecf63a2be405656e0ddb02103e82763c6967ba2362ba92cb8a8b61098ed8e0f"
+    },
+    {
+      "path": "architecture/diagram-spec.json",
+      "inputRawSha256": "cacb3529881738e7bf583df2fdd57ffa9fc4649c39e7ec76028ca21d74647239",
+      "normalizedOutputSha256": "d6d907c8959b4f1bb6ad483c811cf576a32a9e3e075e1201655882fbdfea0d4a"
+    },
+    {
+      "path": "architecture/diagrams/01-startup.svg",
+      "inputRawSha256": "992986eff1f2a3f9d6e5167cdce7ba78dcd2489fc16bd2923682e937bcd4e73a",
+      "normalizedOutputSha256": "c0b8630aac91da04bda5a70b847ee896daf2dccff9e5fe32151152e61b391449"
+    },
+    {
+      "path": "architecture/diagrams/02-recipe.svg",
+      "inputRawSha256": "5d196c4f4ced9b13ce52e4cb3eddee3d0e05fd3825649a5a653a5815e3bac441",
+      "normalizedOutputSha256": "c4b9c1012eb2c3112c4b50515edc46cac5c5b0cc0768450bf29131d50c5ad92b"
+    },
+    {
+      "path": "architecture/diagrams/03-coordinate.svg",
+      "inputRawSha256": "fd75b3217668c626aee4350b276d9e97dd24b129e5fd435e312f09036dab7e7d",
+      "normalizedOutputSha256": "5e9f1224b33cdee2ff62dfc3bbe98a49219564a748bfa426b8645b4452315518"
+    },
+    {
+      "path": "architecture/diagrams/04-product.svg",
+      "inputRawSha256": "1e1a6b67db0aba7c92bb78ecb0374872df4cde218698f9c2b47998a81d65e79b",
+      "normalizedOutputSha256": "89d185e9bbe6bc46e06045157f3abcf04a7330a65c21666a444c5ade18bba4db"
+    },
+    {
+      "path": "architecture/diagrams/05-device.svg",
+      "inputRawSha256": "cb019fd76ca87e21099ea531e4173c8a50f31262c63edbe93a1a0e9681313fbb",
+      "normalizedOutputSha256": "52fcb48515a91a2a3a46a1e6c716dcb1d68cd074eade21c46c6f84538365cae7"
+    },
+    {
+      "path": "architecture/diagrams/06-thread.svg",
+      "inputRawSha256": "57196f50c27c7f160b753a02a10b98aab580f1b9b67d42e67c49cfc3a99ef833",
+      "normalizedOutputSha256": "b6c1b69c04479ab6dc809fe14a772d37b2dfa9e278e4548e3747cc0828b8401b"
+    },
+    {
+      "path": "architecture/diagrams/07-change.svg",
+      "inputRawSha256": "d6035950caf663e32d716ca8d7e0296716c759836a443014ddbe2d25db43659d",
+      "normalizedOutputSha256": "a1f31ebc941d24040de7f90cfcfc34b2e1248a2db2f9e28efa2f458551ecbe8f"
+    },
+    {
+      "path": "architecture/diagrams/08-alarm.svg",
+      "inputRawSha256": "4626c71cc45cdb1912b1443e55c7d93aa1ee9dd5f5424a6b469552dcb09dd3c3",
+      "normalizedOutputSha256": "7100f614aca73f9b27aa06bbe90b550930f630905018b9a5b84a7b067ea868f7"
+    },
+    {
+      "path": "architecture/diagrams/09-log.svg",
+      "inputRawSha256": "4723d24e68de05fd1d1099361be0e201307bb95c8837c71c2b00fbcae5089ee5",
+      "normalizedOutputSha256": "2b69b294497ad4da00aee49363d3d574cfcdccb1319475c44d89399edd4055e8"
+    },
+    {
+      "path": "architecture/diagrams/10-stage-glass.svg",
+      "inputRawSha256": "dd9ad2a7f4dd1415db0bc1503fcf578232aa692b67cbc4fd6bd3b354b46b7b69",
+      "normalizedOutputSha256": "c65db53c9d5a6549e75bdbf146d8d4d40e1601b36900bf43aa29410f91ee7693"
+    },
+    {
+      "path": "architecture/README.md",
+      "inputRawSha256": "d4e4956859a8ed8581a76354a296a6d6451dcab1422c0b0da127b4292ec01a18",
+      "normalizedOutputSha256": "7121c71713872a2390b45293f7c582d8f6216b44951d64ae14ac0fcbfc23abfc"
+    },
+    {
+      "path": "review/01_Review_계획과_좌표계.md",
+      "inputRawSha256": "6e970bfa1dcd994ab101994f4a8202d215c24a149f19be4022e11f28cbbb1bd5",
+      "normalizedOutputSha256": "dcb0de0d6207f083e1f035111b0c04324e4c467a4910e2f075da0f16fecf88fc"
+    },
+    {
+      "path": "review/02_Masking_Sampling_IOF.md",
+      "inputRawSha256": "471a640c354a74c0ba6e94da4a94045754598cd97a2b27f82adc410e460ad22a",
+      "normalizedOutputSha256": "273fe1e2ef3cc9261b8292685f09297b6fbc8137606217ee5c9bb6cb792c8e19"
+    },
+    {
+      "path": "review/03_Vision_패킷과_단위.md",
+      "inputRawSha256": "e203636629655fef5d94dd82944ea0e6e71fbea78c81f6154747f806486ccd8a",
+      "normalizedOutputSha256": "a7241c8a5c9aeb7bda2934446ac13743d866479a1ec3c9518e7260b7f4e36722"
+    },
+    {
+      "path": "review/04_ReviewOffset_적용과_롤백.md",
+      "inputRawSha256": "7c1b3a35c5f68bf1001841c55d99afda99538076d8436a1c617b5271128ae774",
+      "normalizedOutputSha256": "bbc83116f296395d9c37b37ad2098d8bfc2443bb12633a5030e399e0d3792c65"
+    },
+    {
+      "path": "review/05_결과_Revision_Product_연결.md",
+      "inputRawSha256": "316e3fcaa83dc17fd84c4de8eca2fa473662ed895b9258fc8d71d225f5e169d9",
+      "normalizedOutputSha256": "e8ef45f395cf5c7a654a9d79e9a66a59fd1c0422f1fc59117d493c4f7d5f56f3"
+    },
+    {
+      "path": "review/06_DefaultOffset_ZeroOrder_FirstBeam.md",
+      "inputRawSha256": "68e46920a20156df8b1eb53818b94a593f2348146cbb58efef9185037b06dc8a",
+      "normalizedOutputSha256": "c27d86aa17538491777ec6c37e050797063d2c108622d6c10770e638034f15f3"
+    },
+    {
+      "path": "review/07_Align_Distortion_윈도우_복구.md",
+      "inputRawSha256": "78606857a58b9094832f77c556fc2a7cdd89b6889b7caf66d832c0dad9982bc5",
+      "normalizedOutputSha256": "cdce362fe0ad0dd188c20f9b2e9160100cf052f3cc995c1e033ff9a6893d1983"
+    },
+    {
+      "path": "review/diagram-spec.json",
+      "inputRawSha256": "69550773a72e838c9af5f96ba652b5797ae0d0d5b5a4796e493286f31c276ef9",
+      "normalizedOutputSha256": "d9a93344fdf1f7eed7530e21ba18db2f9ed7d1980eed535a4bfc13de3700208f"
+    },
+    {
+      "path": "review/diagrams/review-01.svg",
+      "inputRawSha256": "f8bd405713cfebba119752a7fd1d89f38e08aedfe9f08c62b1cd83db3b6fae3f",
+      "normalizedOutputSha256": "14df09641c7bfc00d6845ef2681ab3a3670c893f2b100816dc1bf34f8e7dc87b"
+    },
+    {
+      "path": "review/diagrams/review-02.svg",
+      "inputRawSha256": "53198397b2f25022b28b59e7a98ebdb5f44fd65e43be0ce87293c0c0f0d71b65",
+      "normalizedOutputSha256": "bf29a150da07b52dd549ecdf195c0de2d6becfe1bc4524ce3aceb3ae2ac7aaa6"
+    },
+    {
+      "path": "review/diagrams/review-03.svg",
+      "inputRawSha256": "5a6546d731f3d4eda6251cd5f0a23573a0c392bb32cbf5a0518d1e10e7fd2188",
+      "normalizedOutputSha256": "95b274c6a9b855cbfb6b20f303c32325cc16f59852d536d475c1b0a548479cc0"
+    },
+    {
+      "path": "review/diagrams/review-04.svg",
+      "inputRawSha256": "89629e5b3e6938e1348bee006c9f367295ec655d81bf51f3db567eb1e84b7f8e",
+      "normalizedOutputSha256": "38f587e3de99967e29a8af74664868a33eb236f946e954758455add38fd6bdbe"
+    },
+    {
+      "path": "review/diagrams/review-05.svg",
+      "inputRawSha256": "04013885d4642ef9ed8594611dba1754bf994ad143773b6a78b86951ca581823",
+      "normalizedOutputSha256": "ed61e4f305f3b9607e575157eb6e67425c53c65c75f360839e7c564ade0f5888"
+    },
+    {
+      "path": "review/diagrams/review-06.svg",
+      "inputRawSha256": "7c1175c2434168a542f28df959f242ca59aadc0f5bdf408af1f1633e70d2a88d",
+      "normalizedOutputSha256": "211d400e24d10db9480cd9977e098ba1aa0af0934181d61eb407dcd89315c466"
+    },
+    {
+      "path": "review/diagrams/review-07.svg",
+      "inputRawSha256": "8c699da004244f0170ec6a5575975f01441e2595bb2eae5e7e7abc27aa033d19",
+      "normalizedOutputSha256": "deab59c212f2da2a7e18d1c819538ed58261a0f3fb7da6f6f80416a5da978275"
+    }
+  ],
   "operationalValuesOrCredentialHashesInReport": false,
   "scope": "Read-only source provenance/coverage/navigation policy checks. No source equipment build, vendor binary loading, controller or equipment-script execution."
 }

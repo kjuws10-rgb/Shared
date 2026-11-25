@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.Common/Interface/Melsec/CMelsec.cs
-Commit: 334b3599651b2e8e0181fd4459bafaf3cddafff3
+Commit: 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Interface
@@ -5796,491 +5796,563 @@ L003057 |             .Concat(Enumerable.Range(1, 3).SelectMany(position => new[
 L003058 |         public static bool IsDistortionMeasurementSimulationValue(ST_MELSEC_MAP_DATA row) => row.Use && DistortionMeasurementIds.Contains(row.Id) ⟦EOL⟧
 // 해설 L3059: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CMelsec.IsDistortionMeasurementSimulationValue(Drilling.Common.Interface.ST_MELSEC_MAP_DATA)
 L003059 |             && row.Direction == EN_MELSEC_DIRECTION.In && row.Access != EN_MELSEC_ACCESS.Write && row.DataType == EN_MELSEC_DATA_TYPE.Double && row.Length == 2; ⟦EOL⟧
-// 해설 L3060: 값을 대상에 대입합니다: [id] = mm / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetDistortionMeasurementSimulationValues(new Dictionary<string, double> { [id] = mm }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, double> { [id] = mm }
-L003060 |         public void SetDistortionMeasurementSimulationValue(string id, double mm) => SetDistortionMeasurementSimulationValues(new Dictionary<string, double> { [id] = mm }); ⟦EOL⟧
-// 해설 L3061: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.SetDistortionMeasurementSimulationValues(System.Collections.Generic.IReadOnlyDictionary<string, double>)
-L003061 |         public void SetDistortionMeasurementSimulationValues(IReadOnlyDictionary<string, double> values) ⟦EOL⟧
-// 해설 L3062: 구문 블록 경계입니다 · 소속 SetDistortionMeasurementSimulationValues.
-L003062 |         { ⟦EOL⟧
-// 해설 L3063: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("입력할 Distortion 측정값이 없습니다.") / 조건에 따라 분기합니다: if (values.Count == 0) / 예외를 발생/전달합니다: throw new ArgumentException("입력할 Distortion 측정값이 없습니다.");
-L003063 |             if (values.Count == 0) throw new ArgumentException("입력할 Distortion 측정값이 없습니다."); ⟦EOL⟧
-// 해설 L3064: 공유 상태의 임계 구역에 진입합니다: lock (_pollLock)
-L003064 |             lock (_pollLock) ⟦EOL⟧
-// 해설 L3065: 구문 블록 경계입니다 · 소속 SetDistortionMeasurementSimulationValues.
-L003065 |             { ⟦EOL⟧
-// 해설 L3066: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.Select(item => (Row: GetMapData(item.Key), item.Value)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: values.Select(item => (Row: GetMapData(item.Key), item.Value)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMapData(item.Key) / 지역 변수를 선언합니다: var rows = values.Select(item => (Row: GetMapData(item.Key), item.Value)).ToArray(); / 변수의 초기값을 지정합니다: rows = values.Select(item => (Row: GetMapData(item.Key), item.Value)).ToArray()
-L003066 |                 var rows = values.Select(item => (Row: GetMapData(item.Key), item.Value)).ToArray(); ⟦EOL⟧
-// 해설 L3067: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L003067 |                 // Check the entire set before changing any simulation memory. No native I/O is issued here. ⟦EOL⟧
-// 해설 L3068: 컬렉션 요소를 순회합니다: foreach (var item in rows)
-L003068 |                 foreach (var item in rows) ⟦EOL⟧
-// 해설 L3069: 구문 블록 경계입니다 · 소속 SetDistortionMeasurementSimulationValues.
-L003069 |                 { ⟦EOL⟧
-// 해설 L3070: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsDistortionMeasurementSimulationValue(item.Row) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimulation(GetInterfaceData(item.Row)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetInterfaceData(item.Row) / 조건에 따라 분기합니다: if (!IsDistortionMeasurementSimulationValue(item.Row) || !IsSimulation(GetInterfaceData(item.Row)))
-L003070 |                     if (!IsDistortionMeasurementSimulationValue(item.Row) || !IsSimulation(GetInterfaceData(item.Row))) ⟦EOL⟧
-// 해설 L3071: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("MELSEC SIMULATION의 Distortion 측정값만 변경할 수 있습니다: " + item.Row.Id) / 예외를 발생/전달합니다: throw new InvalidOperationException("MELSEC SIMULATION의 Distortion 측정값만 변경할 수 있습니다: " + item.Row.Id);
-L003071 |                         throw new InvalidOperationException("MELSEC SIMULATION의 Distortion 측정값만 변경할 수 있습니다: " + item.Row.Id); ⟦EOL⟧
-// 해설 L3072: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(item.Value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(values), "유효한 mm 숫자를 입력하세요.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(values) / 조건에 따라 분기합니다: if (!double.IsFinite(item.Value)) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(values), "유효한 mm 숫자를 입력하세요.");
-L003072 |                     if (!double.IsFinite(item.Value)) throw new ArgumentOutOfRangeException(nameof(values), "유효한 mm 숫자를 입력하세요."); ⟦EOL⟧
-// 해설 L3073: 값을 대상에 대입합니다: _ = EncodeIntegerValue(item.Row, item.Value / item.Row.ReadScale) / 함수·델리게이트 또는 객체 생성자를 호출합니다: EncodeIntegerValue(item.Row, item.Value / item.Row.ReadScale)
-L003073 |                     _ = EncodeIntegerValue(item.Row, item.Value / item.Row.ReadScale); ⟦EOL⟧
-// 해설 L3074: 구문 블록 경계입니다 · 소속 SetDistortionMeasurementSimulationValues.
-L003074 |                 } ⟦EOL⟧
-// 해설 L3075: 컬렉션 요소를 순회합니다: foreach (var item in rows)
-L003075 |                 foreach (var item in rows) ⟦EOL⟧
-// 해설 L3076: 구문 블록 경계입니다 · 소속 SetDistortionMeasurementSimulationValues.
-L003076 |                 { ⟦EOL⟧
-// 해설 L3077: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteSimulationValue(item.Row, item.Value)
-L003077 |                     WriteSimulationValue(item.Row, item.Value); ⟦EOL⟧
-// 해설 L3078: 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishSimulationInput(item.Row)
-L003078 |                     PublishSimulationInput(item.Row); ⟦EOL⟧
-// 해설 L3079: 구문 블록 경계입니다 · 소속 SetDistortionMeasurementSimulationValues.
-L003079 |                 } ⟦EOL⟧
-// 해설 L3080: 구문 블록 경계입니다 · 소속 SetDistortionMeasurementSimulationValues.
-L003080 |             } ⟦EOL⟧
-// 해설 L3081: 구문 블록 경계입니다 · 소속 SetDistortionMeasurementSimulationValues.
-L003081 |         } ⟦EOL⟧
-// 해설 L3082: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.PublishSimulationInput(Drilling.Common.Interface.ST_MELSEC_MAP_DATA)
-L003082 |         private void PublishSimulationInput(ST_MELSEC_MAP_DATA row) ⟦EOL⟧
-// 해설 L3083: 구문 블록 경계입니다 · 소속 PublishSimulationInput.
-L003083 |         { ⟦EOL⟧
-// 해설 L3084: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L003084 |             // Called with _pollLock held. This is injected input, not an actual driver read cycle. ⟦EOL⟧
-// 해설 L3085: 함수·델리게이트 또는 객체 생성자를 호출합니다: WordsToInt32(ReadSimulationWords(row.DeviceNo, ParseAddress(row.Address), 2)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSimulationWords(row.DeviceNo, ParseAddress(row.Address), 2) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseAddress(row.Address) / 지역 변수를 선언합니다: var raw = WordsToInt32(ReadSimulationWords(row.DeviceNo, ParseAddress(row.Address), 2)); / 변수의 초기값을 지정합니다: raw = WordsToInt32(ReadSimulationWords(row.DeviceNo, ParseAddress(row.Address), 2))
-L003085 |             var raw = WordsToInt32(ReadSimulationWords(row.DeviceNo, ParseAddress(row.Address), 2)); ⟦EOL⟧
-// 해설 L3086: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeId(row.Id) / 지역 변수를 선언합니다: var key = NormalizeId(row.Id); / 변수의 초기값을 지정합니다: key = NormalizeId(row.Id)
-L003086 |             var key = NormalizeId(row.Id); ⟦EOL⟧
-// 해설 L3087: 값을 대상에 대입합니다: _cachedValues[key] = new(key, raw * row.ReadScale, EN_MELSEC_CACHE_STATE.Valid, DateTimeOffset.UtcNow, 0, "") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(key, raw * row.ReadScale, EN_MELSEC_CACHE_STATE.Valid, DateTimeOffset.UtcNow, 0, "")
-L003087 |             _cachedValues[key] = new(key, raw * row.ReadScale, EN_MELSEC_CACHE_STATE.Valid, DateTimeOffset.UtcNow, 0, ""); ⟦EOL⟧
-// 해설 L3088: 구문 블록 경계입니다 · 소속 PublishSimulationInput.
-L003088 |         } ⟦EOL⟧
-L003089 |  ⟦EOL⟧
-// 해설 L3090: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsStageSimulationSignal(data)
-L003090 |         public static bool IsStageFlowSimulationSignal(ST_MELSEC_MAP_DATA data) => data.Use && data.Direction == EN_MELSEC_DIRECTION.In && data.Access != EN_MELSEC_ACCESS.Write && data.DataType == EN_MELSEC_DATA_TYPE.DWord && data.Length == 2 && (IsStageSimulationSignal(data) || data.Id is "IPS_REVIEW_CONTROL_MODE_X" or "IPS_REVIEW_CONTROL_MODE_Y" or "IPS_IOF_READ_COMPLETE" or "IPS_IOF_BUFFER_RUN_COMPLETE"); ⟦EOL⟧
-// 해설 L3091: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.SetStageFlowSimulationValue(string, int)
-L003091 |         public void SetStageFlowSimulationValue(string id, int value) ⟦EOL⟧
-// 해설 L3092: 구문 블록 경계입니다 · 소속 SetStageFlowSimulationValue.
-L003092 |         { ⟦EOL⟧
-// 해설 L3093: 공유 상태의 임계 구역에 진입합니다: lock (_pollLock)
-L003093 |             lock (_pollLock) ⟦EOL⟧
-// 해설 L3094: 구문 블록 경계입니다 · 소속 SetStageFlowSimulationValue.
-L003094 |             { ⟦EOL⟧
-// 해설 L3095: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMapData(id) / 지역 변수를 선언합니다: var data = GetMapData(id); / 변수의 초기값을 지정합니다: data = GetMapData(id)
-L003095 |                 var data = GetMapData(id); ⟦EOL⟧
-// 해설 L3096: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsStageFlowSimulationSignal(data) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimulation(GetInterfaceData(data)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetInterfaceData(data) / 조건에 따라 분기합니다: if (!IsStageFlowSimulationSignal(data) || !IsSimulation(GetInterfaceData(data)))
-L003096 |                 if (!IsStageFlowSimulationSignal(data) || !IsSimulation(GetInterfaceData(data))) ⟦EOL⟧
-// 해설 L3097: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("MELSEC Simulation의 Stage Move / IOF 수신 항목만 변경할 수 있습니다: " + id) / 예외를 발생/전달합니다: throw new InvalidOperationException("MELSEC Simulation의 Stage Move / IOF 수신 항목만 변경할 수 있습니다: " + id);
-L003097 |                     throw new InvalidOperationException("MELSEC Simulation의 Stage Move / IOF 수신 항목만 변경할 수 있습니다: " + id); ⟦EOL⟧
-// 해설 L3098: 조건에 따라 분기합니다: if (value is not (0 or 1))
-L003098 |                 if (value is not (0 or 1)) ⟦EOL⟧
-// 해설 L3099: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(value)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(value) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(value));
-L003099 |                     throw new ArgumentOutOfRangeException(nameof(value)); ⟦EOL⟧
-// 해설 L3100: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteSimulationValue(data, value)
-L003100 |                 WriteSimulationValue(data, value); ⟦EOL⟧
-// 해설 L3101: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimulationOnlyRoute(data) / 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishSimulationInput(data) / 조건에 따라 분기합니다: if (IsSimulationOnlyRoute(data))
-L003101 |                 if (IsSimulationOnlyRoute(data)) PublishSimulationInput(data); ⟦EOL⟧
-// 해설 L3102: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pollBlockById.TryGetValue(NormalizeId(id), out var block) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeId(id) / 조건에 따라 분기합니다: if (_pollBlockById.TryGetValue(NormalizeId(id), out var block))
-L003102 |                 if (_pollBlockById.TryGetValue(NormalizeId(id), out var block)) ⟦EOL⟧
-// 해설 L3103: 값을 대상에 대입합니다: block.NextReadAt = DateTimeOffset.MinValue
-L003103 |                     block.NextReadAt = DateTimeOffset.MinValue; ⟦EOL⟧
-// 해설 L3104: 구문 블록 경계입니다 · 소속 SetStageFlowSimulationValue.
-L003104 |             } ⟦EOL⟧
-// 해설 L3105: 구문 블록 경계입니다 · 소속 SetStageFlowSimulationValue.
-L003105 |         } ⟦EOL⟧
-L003106 |  ⟦EOL⟧
-// 해설 L3107: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(data.ReadScale) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals(StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals(StageProtectWindowCompleteId, StringComparison.OrdinalIgnoreCase)
-L003107 |         public static bool IsStageProtectWindowSimulationSignal(ST_MELSEC_MAP_DATA data) => data.Use && data.Direction == EN_MELSEC_DIRECTION.In && data.Access != EN_MELSEC_ACCESS.Write && double.IsFinite(data.ReadScale) && data.ReadScale > 0 && ((data.Id.Equals(StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase) && data.DataType == EN_MELSEC_DATA_TYPE.Word && data.Length == 1) || (data.Id.Equals(StageProtectWindowCompleteId, StringComparison.OrdinalIgnoreCase) && data.DataType == EN_MELSEC_DATA_TYPE.DWord && data.Length == 2)); ⟦EOL⟧
-// 해설 L3108: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L003108 |         /// <summary>Stage-owned Tray Count / completion input in simulation memory only.</summary> ⟦EOL⟧
-// 해설 L3109: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.SetStageProtectWindowSimulationValue(string, int)
-L003109 |         public void SetStageProtectWindowSimulationValue(string id, int value) ⟦EOL⟧
-// 해설 L3110: 구문 블록 경계입니다 · 소속 SetStageProtectWindowSimulationValue.
-L003110 |         { ⟦EOL⟧
-// 해설 L3111: 공유 상태의 임계 구역에 진입합니다: lock (_pollLock)
-L003111 |             lock (_pollLock) ⟦EOL⟧
-// 해설 L3112: 구문 블록 경계입니다 · 소속 SetStageProtectWindowSimulationValue.
-L003112 |             { ⟦EOL⟧
-// 해설 L3113: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMapData(id) / 지역 변수를 선언합니다: var data = GetMapData(id); / 변수의 초기값을 지정합니다: data = GetMapData(id)
-L003113 |                 var data = GetMapData(id); ⟦EOL⟧
-// 해설 L3114: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsStageProtectWindowSimulationSignal(data) / 조건에 따라 분기합니다: if (!IsStageProtectWindowSimulationSignal(data))
-L003114 |                 if (!IsStageProtectWindowSimulationSignal(data)) ⟦EOL⟧
-// 해설 L3115: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Stage 수신용 Protect Window 항목이 아닙니다: {id}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"Stage 수신용 Protect Window 항목이 아닙니다: {id}");
-L003115 |                     throw new InvalidOperationException($"Stage 수신용 Protect Window 항목이 아닙니다: {id}"); ⟦EOL⟧
-// 해설 L3116: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals(StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var isCount = data.Id.Equals(StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: isCount = data.Id.Equals(StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase)
-L003116 |                 var isCount = data.Id.Equals(StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
-// 해설 L3117: 조건에 따라 결과식을 선택합니다: isCount ? value is < 0 or > ushort.MaxValue : value is not (0 or 1) / 조건에 따라 분기합니다: if (isCount ? value is < 0 or > ushort.MaxValue : value is not (0 or 1))
-L003117 |                 if (isCount ? value is < 0 or > ushort.MaxValue : value is not (0 or 1)) ⟦EOL⟧
-// 해설 L3118: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(value), isCount ? "Tray Count 원시값은 0~65535의 정수여야 합니다." : "교체완료 신호는 0 또는 1이어야 합니다.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(value) / 조건에 따라 결과식을 선택합니다: isCount ? "Tray Count 원시값은 0~65535의 정수여야 합니다." : "교체완료 신호는 0 또는 1이어야 합니다." / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(value), isCount ? "Tray Count 원시값은 0~65535의 정수여야 합니다." : "교체완료 신호는 0 또는 1이어야 합니다.");
-L003118 |                     throw new ArgumentOutOfRangeException(nameof(value), isCount ? "Tray Count 원시값은 0~65535의 정수여야 합니다." : "교체완료 신호는 0 또는 1이어야 합니다."); ⟦EOL⟧
-// 해설 L3119: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimulation(GetInterfaceData(data)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetInterfaceData(data) / 조건에 따라 분기합니다: if (!IsSimulation(GetInterfaceData(data)))
-L003119 |                 if (!IsSimulation(GetInterfaceData(data))) ⟦EOL⟧
-// 해설 L3120: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"MELSEC_{data.DeviceNo}가 SIMULATION 상태일 때만 변경할 수 있습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"MELSEC_{data.DeviceNo}가 SIMULATION 상태일 때만 변경할 수 있습니다.");
-L003120 |                     throw new InvalidOperationException($"MELSEC_{data.DeviceNo}가 SIMULATION 상태일 때만 변경할 수 있습니다."); ⟦EOL⟧
-// 해설 L3121: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteSimulationValue(data, isCount ? value * data.ReadScale : value) / 조건에 따라 결과식을 선택합니다: isCount ? value * data.ReadScale : value
-L003121 |                 WriteSimulationValue(data, isCount ? value * data.ReadScale : value); ⟦EOL⟧
-// 해설 L3122: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pollBlockById.TryGetValue(NormalizeId(id), out var block) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeId(id) / 조건에 따라 분기합니다: if (_pollBlockById.TryGetValue(NormalizeId(id), out var block))
-L003122 |                 if (_pollBlockById.TryGetValue(NormalizeId(id), out var block)) ⟦EOL⟧
-// 해설 L3123: 값을 대상에 대입합니다: block.NextReadAt = DateTimeOffset.MinValue
-L003123 |                     block.NextReadAt = DateTimeOffset.MinValue; ⟦EOL⟧
-// 해설 L3124: 구문 블록 경계입니다 · 소속 SetStageProtectWindowSimulationValue.
-L003124 |             } ⟦EOL⟧
-// 해설 L3125: 구문 블록 경계입니다 · 소속 SetStageProtectWindowSimulationValue.
+// 해설 L3060: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CMelsec.IsStageGlassDataSimulationValue(Drilling.Common.Interface.ST_MELSEC_MAP_DATA)
+L003060 |         public static bool IsStageGlassDataSimulationValue(ST_MELSEC_MAP_DATA row) => row.Use ⟦EOL⟧
+// 해설 L3061: 함수·델리게이트 또는 객체 생성자를 호출합니다: CStageGlassDataMap.IsMapRow(row)
+L003061 |             && CStageGlassDataMap.IsMapRow(row) ⟦EOL⟧
+// 해설 L3062: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CMelsec.IsStageGlassDataSimulationValue(Drilling.Common.Interface.ST_MELSEC_MAP_DATA)
+L003062 |             && row.Direction == EN_MELSEC_DIRECTION.In ⟦EOL⟧
+// 해설 L3063: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CMelsec.IsStageGlassDataSimulationValue(Drilling.Common.Interface.ST_MELSEC_MAP_DATA)
+L003063 |             && row.Access != EN_MELSEC_ACCESS.Write ⟦EOL⟧
+// 해설 L3064: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.CMelsec.IsStageGlassDataSimulationValue(Drilling.Common.Interface.ST_MELSEC_MAP_DATA)
+L003064 |             && row.DataType is EN_MELSEC_DATA_TYPE.String or EN_MELSEC_DATA_TYPE.Word; ⟦EOL⟧
+// 해설 L3065: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.SetStageGlassDataSimulationValue(string, string)
+L003065 |         public void SetStageGlassDataSimulationValue(string id, string value) ⟦EOL⟧
+// 해설 L3066: 구문 블록 경계입니다 · 소속 SetStageGlassDataSimulationValue.
+L003066 |         { ⟦EOL⟧
+// 해설 L3067: 공유 상태의 임계 구역에 진입합니다: lock (_pollLock)
+L003067 |             lock (_pollLock) ⟦EOL⟧
+// 해설 L3068: 구문 블록 경계입니다 · 소속 SetStageGlassDataSimulationValue.
+L003068 |             { ⟦EOL⟧
+// 해설 L3069: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMapData(id) / 지역 변수를 선언합니다: var data = GetMapData(id); / 변수의 초기값을 지정합니다: data = GetMapData(id)
+L003069 |                 var data = GetMapData(id); ⟦EOL⟧
+// 해설 L3070: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsStageGlassDataSimulationValue(data) / 조건에 따라 분기합니다: if (!IsStageGlassDataSimulationValue(data))
+L003070 |                 if (!IsStageGlassDataSimulationValue(data)) ⟦EOL⟧
+// 해설 L3071: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Stage Glass Data 수신 항목이 아닙니다: {id}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"Stage Glass Data 수신 항목이 아닙니다: {id}");
+L003071 |                     throw new InvalidOperationException($"Stage Glass Data 수신 항목이 아닙니다: {id}"); ⟦EOL⟧
+// 해설 L3072: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimulation(GetInterfaceData(data)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetInterfaceData(data) / 조건에 따라 분기합니다: if (!IsSimulation(GetInterfaceData(data)))
+L003072 |                 if (!IsSimulation(GetInterfaceData(data))) ⟦EOL⟧
+// 해설 L3073: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"MELSEC_{data.DeviceNo}가 SIMULATION 상태일 때만 변경할 수 있습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"MELSEC_{data.DeviceNo}가 SIMULATION 상태일 때만 변경할 수 있습니다.");
+L003073 |                     throw new InvalidOperationException($"MELSEC_{data.DeviceNo}가 SIMULATION 상태일 때만 변경할 수 있습니다."); ⟦EOL⟧
+L003074 |  ⟦EOL⟧
+// 해설 L3075: 지역 변수를 선언합니다: object parsed;
+L003075 |                 object parsed; ⟦EOL⟧
+// 해설 L3076: 조건에 따라 분기합니다: if (data.DataType == EN_MELSEC_DATA_TYPE.String)
+L003076 |                 if (data.DataType == EN_MELSEC_DATA_TYPE.String) ⟦EOL⟧
+// 해설 L3077: 구문 블록 경계입니다 · 소속 SetStageGlassDataSimulationValue.
+L003077 |                 { ⟦EOL⟧
+// 해설 L3078: 값을 대상에 대입합니다: value ??= ""
+L003078 |                     value ??= ""; ⟦EOL⟧
+// 해설 L3079: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Any(character => character > sbyte.MaxValue) / 조건에 따라 분기합니다: if (value.Any(character => character > sbyte.MaxValue))
+L003079 |                     if (value.Any(character => character > sbyte.MaxValue)) ⟦EOL⟧
+// 해설 L3080: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Stage Glass Data 문자열은 ASCII 문자만 입력할 수 있습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Stage Glass Data 문자열은 ASCII 문자만 입력할 수 있습니다.");
+L003080 |                         throw new InvalidOperationException("Stage Glass Data 문자열은 ASCII 문자만 입력할 수 있습니다."); ⟦EOL⟧
+// 해설 L3081: 함수·델리게이트 또는 객체 생성자를 호출합니다: Encoding.ASCII.GetByteCount(value) / 조건에 따라 분기합니다: if (Encoding.ASCII.GetByteCount(value) > data.Length * 2)
+L003081 |                     if (Encoding.ASCII.GetByteCount(value) > data.Length * 2) ⟦EOL⟧
+// 해설 L3082: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{data.Name}은 최대 {data.Length * 2}자까지 입력할 수 있습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"{data.Name}은 최대 {data.Length * 2}자까지 입력할 수 있습니다.");
+L003082 |                         throw new InvalidOperationException($"{data.Name}은 최대 {data.Length * 2}자까지 입력할 수 있습니다."); ⟦EOL⟧
+// 해설 L3083: 값을 대상에 대입합니다: parsed = value
+L003083 |                     parsed = value; ⟦EOL⟧
+// 해설 L3084: 구문 블록 경계입니다 · 소속 SetStageGlassDataSimulationValue.
+L003084 |                 } ⟦EOL⟧
+// 해설 L3085: 앞 조건이 거짓인 경로입니다: else
+L003085 |                 else ⟦EOL⟧
+// 해설 L3086: 구문 블록 경계입니다 · 소속 SetStageGlassDataSimulationValue.
+L003086 |                 { ⟦EOL⟧
+// 해설 L3087: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var number) / 조건에 따라 분기합니다: if (!int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var number) || number is < 0 or > ushort.MaxValue)
+L003087 |                     if (!int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var number) || number is < 0 or > ushort.MaxValue) ⟦EOL⟧
+// 해설 L3088: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{data.Name}은 0~65535의 정수를 입력하세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"{data.Name}은 0~65535의 정수를 입력하세요.");
+L003088 |                         throw new InvalidOperationException($"{data.Name}은 0~65535의 정수를 입력하세요."); ⟦EOL⟧
+// 해설 L3089: 값을 대상에 대입합니다: parsed = number
+L003089 |                     parsed = number; ⟦EOL⟧
+// 해설 L3090: 구문 블록 경계입니다 · 소속 SetStageGlassDataSimulationValue.
+L003090 |                 } ⟦EOL⟧
+L003091 |  ⟦EOL⟧
+// 해설 L3092: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteSimulationValue(data, parsed)
+L003092 |                 WriteSimulationValue(data, parsed); ⟦EOL⟧
+// 해설 L3093: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pollBlockById.TryGetValue(NormalizeId(id), out var block) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeId(id) / 조건에 따라 분기합니다: if (_pollBlockById.TryGetValue(NormalizeId(id), out var block))
+L003093 |                 if (_pollBlockById.TryGetValue(NormalizeId(id), out var block)) ⟦EOL⟧
+// 해설 L3094: 값을 대상에 대입합니다: block.NextReadAt = DateTimeOffset.MinValue
+L003094 |                     block.NextReadAt = DateTimeOffset.MinValue; ⟦EOL⟧
+// 해설 L3095: 구문 블록 경계입니다 · 소속 SetStageGlassDataSimulationValue.
+L003095 |             } ⟦EOL⟧
+// 해설 L3096: 구문 블록 경계입니다 · 소속 SetStageGlassDataSimulationValue.
+L003096 |         } ⟦EOL⟧
+// 해설 L3097: 값을 대상에 대입합니다: [id] = mm / 함수·델리게이트 또는 객체 생성자를 호출합니다: SetDistortionMeasurementSimulationValues(new Dictionary<string, double> { [id] = mm }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, double> { [id] = mm }
+L003097 |         public void SetDistortionMeasurementSimulationValue(string id, double mm) => SetDistortionMeasurementSimulationValues(new Dictionary<string, double> { [id] = mm }); ⟦EOL⟧
+// 해설 L3098: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.SetDistortionMeasurementSimulationValues(System.Collections.Generic.IReadOnlyDictionary<string, double>)
+L003098 |         public void SetDistortionMeasurementSimulationValues(IReadOnlyDictionary<string, double> values) ⟦EOL⟧
+// 해설 L3099: 구문 블록 경계입니다 · 소속 SetDistortionMeasurementSimulationValues.
+L003099 |         { ⟦EOL⟧
+// 해설 L3100: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("입력할 Distortion 측정값이 없습니다.") / 조건에 따라 분기합니다: if (values.Count == 0) / 예외를 발생/전달합니다: throw new ArgumentException("입력할 Distortion 측정값이 없습니다.");
+L003100 |             if (values.Count == 0) throw new ArgumentException("입력할 Distortion 측정값이 없습니다."); ⟦EOL⟧
+// 해설 L3101: 공유 상태의 임계 구역에 진입합니다: lock (_pollLock)
+L003101 |             lock (_pollLock) ⟦EOL⟧
+// 해설 L3102: 구문 블록 경계입니다 · 소속 SetDistortionMeasurementSimulationValues.
+L003102 |             { ⟦EOL⟧
+// 해설 L3103: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.Select(item => (Row: GetMapData(item.Key), item.Value)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: values.Select(item => (Row: GetMapData(item.Key), item.Value)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMapData(item.Key) / 지역 변수를 선언합니다: var rows = values.Select(item => (Row: GetMapData(item.Key), item.Value)).ToArray(); / 변수의 초기값을 지정합니다: rows = values.Select(item => (Row: GetMapData(item.Key), item.Value)).ToArray()
+L003103 |                 var rows = values.Select(item => (Row: GetMapData(item.Key), item.Value)).ToArray(); ⟦EOL⟧
+// 해설 L3104: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L003104 |                 // Check the entire set before changing any simulation memory. No native I/O is issued here. ⟦EOL⟧
+// 해설 L3105: 컬렉션 요소를 순회합니다: foreach (var item in rows)
+L003105 |                 foreach (var item in rows) ⟦EOL⟧
+// 해설 L3106: 구문 블록 경계입니다 · 소속 SetDistortionMeasurementSimulationValues.
+L003106 |                 { ⟦EOL⟧
+// 해설 L3107: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsDistortionMeasurementSimulationValue(item.Row) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimulation(GetInterfaceData(item.Row)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetInterfaceData(item.Row) / 조건에 따라 분기합니다: if (!IsDistortionMeasurementSimulationValue(item.Row) || !IsSimulation(GetInterfaceData(item.Row)))
+L003107 |                     if (!IsDistortionMeasurementSimulationValue(item.Row) || !IsSimulation(GetInterfaceData(item.Row))) ⟦EOL⟧
+// 해설 L3108: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("MELSEC SIMULATION의 Distortion 측정값만 변경할 수 있습니다: " + item.Row.Id) / 예외를 발생/전달합니다: throw new InvalidOperationException("MELSEC SIMULATION의 Distortion 측정값만 변경할 수 있습니다: " + item.Row.Id);
+L003108 |                         throw new InvalidOperationException("MELSEC SIMULATION의 Distortion 측정값만 변경할 수 있습니다: " + item.Row.Id); ⟦EOL⟧
+// 해설 L3109: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(item.Value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(values), "유효한 mm 숫자를 입력하세요.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(values) / 조건에 따라 분기합니다: if (!double.IsFinite(item.Value)) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(values), "유효한 mm 숫자를 입력하세요.");
+L003109 |                     if (!double.IsFinite(item.Value)) throw new ArgumentOutOfRangeException(nameof(values), "유효한 mm 숫자를 입력하세요."); ⟦EOL⟧
+// 해설 L3110: 값을 대상에 대입합니다: _ = EncodeIntegerValue(item.Row, item.Value / item.Row.ReadScale) / 함수·델리게이트 또는 객체 생성자를 호출합니다: EncodeIntegerValue(item.Row, item.Value / item.Row.ReadScale)
+L003110 |                     _ = EncodeIntegerValue(item.Row, item.Value / item.Row.ReadScale); ⟦EOL⟧
+// 해설 L3111: 구문 블록 경계입니다 · 소속 SetDistortionMeasurementSimulationValues.
+L003111 |                 } ⟦EOL⟧
+// 해설 L3112: 컬렉션 요소를 순회합니다: foreach (var item in rows)
+L003112 |                 foreach (var item in rows) ⟦EOL⟧
+// 해설 L3113: 구문 블록 경계입니다 · 소속 SetDistortionMeasurementSimulationValues.
+L003113 |                 { ⟦EOL⟧
+// 해설 L3114: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteSimulationValue(item.Row, item.Value)
+L003114 |                     WriteSimulationValue(item.Row, item.Value); ⟦EOL⟧
+// 해설 L3115: 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishSimulationInput(item.Row)
+L003115 |                     PublishSimulationInput(item.Row); ⟦EOL⟧
+// 해설 L3116: 구문 블록 경계입니다 · 소속 SetDistortionMeasurementSimulationValues.
+L003116 |                 } ⟦EOL⟧
+// 해설 L3117: 구문 블록 경계입니다 · 소속 SetDistortionMeasurementSimulationValues.
+L003117 |             } ⟦EOL⟧
+// 해설 L3118: 구문 블록 경계입니다 · 소속 SetDistortionMeasurementSimulationValues.
+L003118 |         } ⟦EOL⟧
+// 해설 L3119: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.PublishSimulationInput(Drilling.Common.Interface.ST_MELSEC_MAP_DATA)
+L003119 |         private void PublishSimulationInput(ST_MELSEC_MAP_DATA row) ⟦EOL⟧
+// 해설 L3120: 구문 블록 경계입니다 · 소속 PublishSimulationInput.
+L003120 |         { ⟦EOL⟧
+// 해설 L3121: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L003121 |             // Called with _pollLock held. This is injected input, not an actual driver read cycle. ⟦EOL⟧
+// 해설 L3122: 함수·델리게이트 또는 객체 생성자를 호출합니다: WordsToInt32(ReadSimulationWords(row.DeviceNo, ParseAddress(row.Address), 2)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadSimulationWords(row.DeviceNo, ParseAddress(row.Address), 2) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseAddress(row.Address) / 지역 변수를 선언합니다: var raw = WordsToInt32(ReadSimulationWords(row.DeviceNo, ParseAddress(row.Address), 2)); / 변수의 초기값을 지정합니다: raw = WordsToInt32(ReadSimulationWords(row.DeviceNo, ParseAddress(row.Address), 2))
+L003122 |             var raw = WordsToInt32(ReadSimulationWords(row.DeviceNo, ParseAddress(row.Address), 2)); ⟦EOL⟧
+// 해설 L3123: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeId(row.Id) / 지역 변수를 선언합니다: var key = NormalizeId(row.Id); / 변수의 초기값을 지정합니다: key = NormalizeId(row.Id)
+L003123 |             var key = NormalizeId(row.Id); ⟦EOL⟧
+// 해설 L3124: 값을 대상에 대입합니다: _cachedValues[key] = new(key, raw * row.ReadScale, EN_MELSEC_CACHE_STATE.Valid, DateTimeOffset.UtcNow, 0, "") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(key, raw * row.ReadScale, EN_MELSEC_CACHE_STATE.Valid, DateTimeOffset.UtcNow, 0, "")
+L003124 |             _cachedValues[key] = new(key, raw * row.ReadScale, EN_MELSEC_CACHE_STATE.Valid, DateTimeOffset.UtcNow, 0, ""); ⟦EOL⟧
+// 해설 L3125: 구문 블록 경계입니다 · 소속 PublishSimulationInput.
 L003125 |         } ⟦EOL⟧
 L003126 |  ⟦EOL⟧
-// 해설 L3127: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.StartsWith("HANDSHAKE_STG_", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(data.ReadScale)
-L003127 |         public static bool IsStageSimulationSignal(ST_MELSEC_MAP_DATA data) => data.Use && data.Id.StartsWith("HANDSHAKE_STG_", StringComparison.OrdinalIgnoreCase) && data.Direction == EN_MELSEC_DIRECTION.In && data.Access != EN_MELSEC_ACCESS.Write && data.DataType == EN_MELSEC_DATA_TYPE.DWord && data.Length == 2 && double.IsFinite(data.ReadScale) && data.ReadScale > 0; ⟦EOL⟧
-// 해설 L3128: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals("SDC_DO_ALIGN_STATUS", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals("SDC_DO_ALIGN_COMPLETE", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals(StageAlignBusyWordId, StringComparison.OrdinalIgnoreCase)
-L003128 |         public static bool IsStageAlignSimulationSignal(ST_MELSEC_MAP_DATA data) => data.Use && (data.Id.Equals("SDC_DO_ALIGN_STATUS", StringComparison.OrdinalIgnoreCase) || data.Id.Equals("SDC_DO_ALIGN_COMPLETE", StringComparison.OrdinalIgnoreCase) || data.Id.Equals(StageAlignBusyWordId, StringComparison.OrdinalIgnoreCase)) && data.Direction == EN_MELSEC_DIRECTION.In && data.Access != EN_MELSEC_ACCESS.Write && data.DataType == EN_MELSEC_DATA_TYPE.Word && data.Length == 1; ⟦EOL⟧
-// 해설 L3129: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L003129 |         /// <summary>Writes a Stage-owned Align raw Word into simulation memory, never to a PLC.</summary> ⟦EOL⟧
-// 해설 L3130: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.SetStageAlignSimulationValue(string, int)
-L003130 |         public void SetStageAlignSimulationValue(string id, int rawValue) ⟦EOL⟧
-// 해설 L3131: 구문 블록 경계입니다 · 소속 SetStageAlignSimulationValue.
-L003131 |         { ⟦EOL⟧
-// 해설 L3132: 조건에 따라 분기합니다: if (rawValue is < 0 or > ushort.MaxValue)
-L003132 |             if (rawValue is < 0 or > ushort.MaxValue) ⟦EOL⟧
-// 해설 L3133: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(rawValue), "1 WORD 원시값은 0~65535의 정수여야 합니다.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(rawValue) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(rawValue), "1 WORD 원시값은 0~65535의 정수여야 합니다.");
-L003133 |                 throw new ArgumentOutOfRangeException(nameof(rawValue), "1 WORD 원시값은 0~65535의 정수여야 합니다."); ⟦EOL⟧
-// 해설 L3134: 공유 상태의 임계 구역에 진입합니다: lock (_pollLock)
-L003134 |             lock (_pollLock) ⟦EOL⟧
-// 해설 L3135: 구문 블록 경계입니다 · 소속 SetStageAlignSimulationValue.
-L003135 |             { ⟦EOL⟧
-// 해설 L3136: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMapData(id) / 지역 변수를 선언합니다: var data = GetMapData(id); / 변수의 초기값을 지정합니다: data = GetMapData(id)
-L003136 |                 var data = GetMapData(id); ⟦EOL⟧
-// 해설 L3137: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsStageAlignSimulationSignal(data) / 조건에 따라 분기합니다: if (!IsStageAlignSimulationSignal(data))
-L003137 |                 if (!IsStageAlignSimulationSignal(data)) ⟦EOL⟧
-// 해설 L3138: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Stage 수신용 ALIGN 신호가 아닙니다: {id}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"Stage 수신용 ALIGN 신호가 아닙니다: {id}");
-L003138 |                     throw new InvalidOperationException($"Stage 수신용 ALIGN 신호가 아닙니다: {id}"); ⟦EOL⟧
-// 해설 L3139: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimulation(GetInterfaceData(data)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetInterfaceData(data) / 조건에 따라 분기합니다: if (!IsSimulation(GetInterfaceData(data)))
-L003139 |                 if (!IsSimulation(GetInterfaceData(data))) ⟦EOL⟧
-// 해설 L3140: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"MELSEC_{data.DeviceNo}가 SIMULATION 상태일 때만 변경할 수 있습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"MELSEC_{data.DeviceNo}가 SIMULATION 상태일 때만 변경할 수 있습니다.");
-L003140 |                     throw new InvalidOperationException($"MELSEC_{data.DeviceNo}가 SIMULATION 상태일 때만 변경할 수 있습니다."); ⟦EOL⟧
-// 해설 L3141: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteSimulationValue(data, rawValue * data.ReadScale)
-L003141 |                 WriteSimulationValue(data, rawValue * data.ReadScale); ⟦EOL⟧
-// 해설 L3142: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pollBlockById.TryGetValue(NormalizeId(id), out var block) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeId(id) / 조건에 따라 분기합니다: if (_pollBlockById.TryGetValue(NormalizeId(id), out var block))
-L003142 |                 if (_pollBlockById.TryGetValue(NormalizeId(id), out var block)) ⟦EOL⟧
-// 해설 L3143: 값을 대상에 대입합니다: block.NextReadAt = DateTimeOffset.MinValue
-L003143 |                     block.NextReadAt = DateTimeOffset.MinValue; ⟦EOL⟧
-// 해설 L3144: 구문 블록 경계입니다 · 소속 SetStageAlignSimulationValue.
-L003144 |             } ⟦EOL⟧
-// 해설 L3145: 구문 블록 경계입니다 · 소속 SetStageAlignSimulationValue.
-L003145 |         } ⟦EOL⟧
-L003146 |  ⟦EOL⟧
-// 해설 L3147: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L003147 |         /// <summary>Stage 소유 입력을 Simulation 메모리에만 주입한다.</summary> ⟦EOL⟧
-// 해설 L3148: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.SetStageSimulationSignal(string, bool)
-L003148 |         public void SetStageSimulationSignal(string id, bool on) ⟦EOL⟧
-// 해설 L3149: 구문 블록 경계입니다 · 소속 SetStageSimulationSignal.
-L003149 |         { ⟦EOL⟧
-// 해설 L3150: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L003150 |             // @시뮬 [MELSEC] Stage입력 - Native PLC Write 없이 Simulation 메모리만 바꾸고 공통 Poller가 정상 입력처럼 읽는다. ⟦EOL⟧
-// 해설 L3151: 공유 상태의 임계 구역에 진입합니다: lock (_pollLock)
-L003151 |             lock (_pollLock) ⟦EOL⟧
-// 해설 L3152: 구문 블록 경계입니다 · 소속 SetStageSimulationSignal.
-L003152 |             { ⟦EOL⟧
-// 해설 L3153: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMapData(id) / 지역 변수를 선언합니다: var data = GetMapData(id); / 변수의 초기값을 지정합니다: data = GetMapData(id)
-L003153 |                 var data = GetMapData(id); ⟦EOL⟧
-// 해설 L3154: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsStageSimulationSignal(data) / 조건에 따라 분기합니다: if (!IsStageSimulationSignal(data))
-L003154 |                 if (!IsStageSimulationSignal(data)) ⟦EOL⟧
-// 해설 L3155: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Stage 수신용 핸드셰이크 신호가 아닙니다: {id}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"Stage 수신용 핸드셰이크 신호가 아닙니다: {id}");
-L003155 |                     throw new InvalidOperationException($"Stage 수신용 핸드셰이크 신호가 아닙니다: {id}"); ⟦EOL⟧
+// 해설 L3127: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsStageSimulationSignal(data)
+L003127 |         public static bool IsStageFlowSimulationSignal(ST_MELSEC_MAP_DATA data) => data.Use && data.Direction == EN_MELSEC_DIRECTION.In && data.Access != EN_MELSEC_ACCESS.Write && data.DataType == EN_MELSEC_DATA_TYPE.DWord && data.Length == 2 && (IsStageSimulationSignal(data) || data.Id is "IPS_REVIEW_CONTROL_MODE_X" or "IPS_REVIEW_CONTROL_MODE_Y" or "IPS_IOF_READ_COMPLETE" or "IPS_IOF_BUFFER_RUN_COMPLETE"); ⟦EOL⟧
+// 해설 L3128: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.SetStageFlowSimulationValue(string, int)
+L003128 |         public void SetStageFlowSimulationValue(string id, int value) ⟦EOL⟧
+// 해설 L3129: 구문 블록 경계입니다 · 소속 SetStageFlowSimulationValue.
+L003129 |         { ⟦EOL⟧
+// 해설 L3130: 공유 상태의 임계 구역에 진입합니다: lock (_pollLock)
+L003130 |             lock (_pollLock) ⟦EOL⟧
+// 해설 L3131: 구문 블록 경계입니다 · 소속 SetStageFlowSimulationValue.
+L003131 |             { ⟦EOL⟧
+// 해설 L3132: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMapData(id) / 지역 변수를 선언합니다: var data = GetMapData(id); / 변수의 초기값을 지정합니다: data = GetMapData(id)
+L003132 |                 var data = GetMapData(id); ⟦EOL⟧
+// 해설 L3133: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsStageFlowSimulationSignal(data) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimulation(GetInterfaceData(data)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetInterfaceData(data) / 조건에 따라 분기합니다: if (!IsStageFlowSimulationSignal(data) || !IsSimulation(GetInterfaceData(data)))
+L003133 |                 if (!IsStageFlowSimulationSignal(data) || !IsSimulation(GetInterfaceData(data))) ⟦EOL⟧
+// 해설 L3134: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("MELSEC Simulation의 Stage Move / IOF 수신 항목만 변경할 수 있습니다: " + id) / 예외를 발생/전달합니다: throw new InvalidOperationException("MELSEC Simulation의 Stage Move / IOF 수신 항목만 변경할 수 있습니다: " + id);
+L003134 |                     throw new InvalidOperationException("MELSEC Simulation의 Stage Move / IOF 수신 항목만 변경할 수 있습니다: " + id); ⟦EOL⟧
+// 해설 L3135: 조건에 따라 분기합니다: if (value is not (0 or 1))
+L003135 |                 if (value is not (0 or 1)) ⟦EOL⟧
+// 해설 L3136: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(value)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(value) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(value));
+L003136 |                     throw new ArgumentOutOfRangeException(nameof(value)); ⟦EOL⟧
+// 해설 L3137: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteSimulationValue(data, value)
+L003137 |                 WriteSimulationValue(data, value); ⟦EOL⟧
+// 해설 L3138: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimulationOnlyRoute(data) / 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishSimulationInput(data) / 조건에 따라 분기합니다: if (IsSimulationOnlyRoute(data))
+L003138 |                 if (IsSimulationOnlyRoute(data)) PublishSimulationInput(data); ⟦EOL⟧
+// 해설 L3139: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pollBlockById.TryGetValue(NormalizeId(id), out var block) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeId(id) / 조건에 따라 분기합니다: if (_pollBlockById.TryGetValue(NormalizeId(id), out var block))
+L003139 |                 if (_pollBlockById.TryGetValue(NormalizeId(id), out var block)) ⟦EOL⟧
+// 해설 L3140: 값을 대상에 대입합니다: block.NextReadAt = DateTimeOffset.MinValue
+L003140 |                     block.NextReadAt = DateTimeOffset.MinValue; ⟦EOL⟧
+// 해설 L3141: 구문 블록 경계입니다 · 소속 SetStageFlowSimulationValue.
+L003141 |             } ⟦EOL⟧
+// 해설 L3142: 구문 블록 경계입니다 · 소속 SetStageFlowSimulationValue.
+L003142 |         } ⟦EOL⟧
+L003143 |  ⟦EOL⟧
+// 해설 L3144: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(data.ReadScale) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals(StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals(StageProtectWindowCompleteId, StringComparison.OrdinalIgnoreCase)
+L003144 |         public static bool IsStageProtectWindowSimulationSignal(ST_MELSEC_MAP_DATA data) => data.Use && data.Direction == EN_MELSEC_DIRECTION.In && data.Access != EN_MELSEC_ACCESS.Write && double.IsFinite(data.ReadScale) && data.ReadScale > 0 && ((data.Id.Equals(StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase) && data.DataType == EN_MELSEC_DATA_TYPE.Word && data.Length == 1) || (data.Id.Equals(StageProtectWindowCompleteId, StringComparison.OrdinalIgnoreCase) && data.DataType == EN_MELSEC_DATA_TYPE.DWord && data.Length == 2)); ⟦EOL⟧
+// 해설 L3145: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L003145 |         /// <summary>Stage-owned Tray Count / completion input in simulation memory only.</summary> ⟦EOL⟧
+// 해설 L3146: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.SetStageProtectWindowSimulationValue(string, int)
+L003146 |         public void SetStageProtectWindowSimulationValue(string id, int value) ⟦EOL⟧
+// 해설 L3147: 구문 블록 경계입니다 · 소속 SetStageProtectWindowSimulationValue.
+L003147 |         { ⟦EOL⟧
+// 해설 L3148: 공유 상태의 임계 구역에 진입합니다: lock (_pollLock)
+L003148 |             lock (_pollLock) ⟦EOL⟧
+// 해설 L3149: 구문 블록 경계입니다 · 소속 SetStageProtectWindowSimulationValue.
+L003149 |             { ⟦EOL⟧
+// 해설 L3150: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMapData(id) / 지역 변수를 선언합니다: var data = GetMapData(id); / 변수의 초기값을 지정합니다: data = GetMapData(id)
+L003150 |                 var data = GetMapData(id); ⟦EOL⟧
+// 해설 L3151: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsStageProtectWindowSimulationSignal(data) / 조건에 따라 분기합니다: if (!IsStageProtectWindowSimulationSignal(data))
+L003151 |                 if (!IsStageProtectWindowSimulationSignal(data)) ⟦EOL⟧
+// 해설 L3152: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Stage 수신용 Protect Window 항목이 아닙니다: {id}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"Stage 수신용 Protect Window 항목이 아닙니다: {id}");
+L003152 |                     throw new InvalidOperationException($"Stage 수신용 Protect Window 항목이 아닙니다: {id}"); ⟦EOL⟧
+// 해설 L3153: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals(StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var isCount = data.Id.Equals(StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: isCount = data.Id.Equals(StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase)
+L003153 |                 var isCount = data.Id.Equals(StageProtectWindowCountId, StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L3154: 조건에 따라 결과식을 선택합니다: isCount ? value is < 0 or > ushort.MaxValue : value is not (0 or 1) / 조건에 따라 분기합니다: if (isCount ? value is < 0 or > ushort.MaxValue : value is not (0 or 1))
+L003154 |                 if (isCount ? value is < 0 or > ushort.MaxValue : value is not (0 or 1)) ⟦EOL⟧
+// 해설 L3155: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(value), isCount ? "Tray Count 원시값은 0~65535의 정수여야 합니다." : "교체완료 신호는 0 또는 1이어야 합니다.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(value) / 조건에 따라 결과식을 선택합니다: isCount ? "Tray Count 원시값은 0~65535의 정수여야 합니다." : "교체완료 신호는 0 또는 1이어야 합니다." / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(value), isCount ? "Tray Count 원시값은 0~65535의 정수여야 합니다." : "교체완료 신호는 0 또는 1이어야 합니다.");
+L003155 |                     throw new ArgumentOutOfRangeException(nameof(value), isCount ? "Tray Count 원시값은 0~65535의 정수여야 합니다." : "교체완료 신호는 0 또는 1이어야 합니다."); ⟦EOL⟧
 // 해설 L3156: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimulation(GetInterfaceData(data)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetInterfaceData(data) / 조건에 따라 분기합니다: if (!IsSimulation(GetInterfaceData(data)))
 L003156 |                 if (!IsSimulation(GetInterfaceData(data))) ⟦EOL⟧
 // 해설 L3157: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"MELSEC_{data.DeviceNo}가 SIMULATION 상태일 때만 변경할 수 있습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"MELSEC_{data.DeviceNo}가 SIMULATION 상태일 때만 변경할 수 있습니다.");
 L003157 |                     throw new InvalidOperationException($"MELSEC_{data.DeviceNo}가 SIMULATION 상태일 때만 변경할 수 있습니다."); ⟦EOL⟧
-// 해설 L3158: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteSimulationValue(data, on ? 1 : 0) / 조건에 따라 결과식을 선택합니다: on ? 1 : 0
-L003158 |                 WriteSimulationValue(data, on ? 1 : 0); ⟦EOL⟧
-// 해설 L3159: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimulationOnlyRoute(data) / 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishSimulationInput(data) / 조건에 따라 분기합니다: if (IsSimulationOnlyRoute(data))
-L003159 |                 if (IsSimulationOnlyRoute(data)) PublishSimulationInput(data); ⟦EOL⟧
-// 해설 L3160: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pollBlockById.TryGetValue(NormalizeId(id), out var block) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeId(id) / 조건에 따라 분기합니다: if (_pollBlockById.TryGetValue(NormalizeId(id), out var block))
-L003160 |                 if (_pollBlockById.TryGetValue(NormalizeId(id), out var block)) ⟦EOL⟧
-// 해설 L3161: 값을 대상에 대입합니다: block.NextReadAt = DateTimeOffset.MinValue
-L003161 |                     block.NextReadAt = DateTimeOffset.MinValue; ⟦EOL⟧
-// 해설 L3162: 구문 블록 경계입니다 · 소속 SetStageSimulationSignal.
-L003162 |             } ⟦EOL⟧
-// 해설 L3163: 구문 블록 경계입니다 · 소속 SetStageSimulationSignal.
-L003163 |         } ⟦EOL⟧
-// 해설 L3164: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #endregion
-L003164 | #endregion ⟦EOL⟧
-// 해설 L3165: 구문 블록 경계입니다.
-L003165 |     } ⟦EOL⟧
-L003166 |  ⟦EOL⟧
-// 해설 L3167: 타입의 구조/상속 선언입니다: public enum EN_MELSEC_DATA_TYPE
-L003167 |     public enum EN_MELSEC_DATA_TYPE ⟦EOL⟧
-// 해설 L3168: 구문 블록 경계입니다.
-L003168 |     { ⟦EOL⟧
-// 해설 L3169: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_DATA_TYPE.Bit
-L003169 |         Bit, ⟦EOL⟧
-// 해설 L3170: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_DATA_TYPE.Word
-L003170 |         Word, ⟦EOL⟧
-// 해설 L3171: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_DATA_TYPE.DWord
-L003171 |         DWord, ⟦EOL⟧
-// 해설 L3172: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L003172 |         // DOUBLE is the existing map name for a scaled signed Int32 occupying two words. ⟦EOL⟧
-// 해설 L3173: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L003173 |         // All numeric APIs/snapshots expose READ_SCALE-adjusted values and apply WRITE_SCALE on writes. ⟦EOL⟧
-// 해설 L3174: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_DATA_TYPE.Double
-L003174 |         Double, ⟦EOL⟧
-// 해설 L3175: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_DATA_TYPE.Float
-L003175 |         Float, ⟦EOL⟧
-// 해설 L3176: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_DATA_TYPE.String
-L003176 |         String ⟦EOL⟧
-// 해설 L3177: 구문 블록 경계입니다.
-L003177 |     } ⟦EOL⟧
-L003178 |  ⟦EOL⟧
-// 해설 L3179: 타입의 구조/상속 선언입니다: public enum EN_MELSEC_DIRECTION
-L003179 |     public enum EN_MELSEC_DIRECTION ⟦EOL⟧
-// 해설 L3180: 구문 블록 경계입니다.
-L003180 |     { ⟦EOL⟧
-// 해설 L3181: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_DIRECTION.In
-L003181 |         In, ⟦EOL⟧
-// 해설 L3182: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_DIRECTION.Out
-L003182 |         Out, ⟦EOL⟧
-// 해설 L3183: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_DIRECTION.InOut
-L003183 |         InOut ⟦EOL⟧
-// 해설 L3184: 구문 블록 경계입니다.
-L003184 |     } ⟦EOL⟧
-L003185 |  ⟦EOL⟧
-// 해설 L3186: 타입의 구조/상속 선언입니다: public enum EN_MELSEC_ACCESS
-L003186 |     public enum EN_MELSEC_ACCESS ⟦EOL⟧
-// 해설 L3187: 구문 블록 경계입니다.
-L003187 |     { ⟦EOL⟧
-// 해설 L3188: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_ACCESS.Read
-L003188 |         Read, ⟦EOL⟧
-// 해설 L3189: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_ACCESS.Write
-L003189 |         Write, ⟦EOL⟧
-// 해설 L3190: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_ACCESS.ReadWrite
-L003190 |         ReadWrite ⟦EOL⟧
-// 해설 L3191: 구문 블록 경계입니다.
-L003191 |     } ⟦EOL⟧
-L003192 |  ⟦EOL⟧
-// 해설 L3193: 타입의 구조/상속 선언입니다: public enum EN_MELSEC_PROCESS
-L003193 |     public enum EN_MELSEC_PROCESS ⟦EOL⟧
-// 해설 L3194: 구문 블록 경계입니다.
-L003194 |     { ⟦EOL⟧
-// 해설 L3195: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_PROCESS.Ready
-L003195 |         Ready, ⟦EOL⟧
-// 해설 L3196: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_PROCESS.PrepareWrite
-L003196 |         PrepareWrite, ⟦EOL⟧
-// 해설 L3197: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_PROCESS.Write
-L003197 |         Write, ⟦EOL⟧
-// 해설 L3198: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_PROCESS.WaitReadback
-L003198 |         WaitReadback, ⟦EOL⟧
-// 해설 L3199: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_PROCESS.RetryWrite
-L003199 |         RetryWrite, ⟦EOL⟧
-// 해설 L3200: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_PROCESS.CommunicationError
-L003200 |         CommunicationError, ⟦EOL⟧
-// 해설 L3201: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_PROCESS.Close
-L003201 |         Close ⟦EOL⟧
+// 해설 L3158: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteSimulationValue(data, isCount ? value * data.ReadScale : value) / 조건에 따라 결과식을 선택합니다: isCount ? value * data.ReadScale : value
+L003158 |                 WriteSimulationValue(data, isCount ? value * data.ReadScale : value); ⟦EOL⟧
+// 해설 L3159: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pollBlockById.TryGetValue(NormalizeId(id), out var block) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeId(id) / 조건에 따라 분기합니다: if (_pollBlockById.TryGetValue(NormalizeId(id), out var block))
+L003159 |                 if (_pollBlockById.TryGetValue(NormalizeId(id), out var block)) ⟦EOL⟧
+// 해설 L3160: 값을 대상에 대입합니다: block.NextReadAt = DateTimeOffset.MinValue
+L003160 |                     block.NextReadAt = DateTimeOffset.MinValue; ⟦EOL⟧
+// 해설 L3161: 구문 블록 경계입니다 · 소속 SetStageProtectWindowSimulationValue.
+L003161 |             } ⟦EOL⟧
+// 해설 L3162: 구문 블록 경계입니다 · 소속 SetStageProtectWindowSimulationValue.
+L003162 |         } ⟦EOL⟧
+L003163 |  ⟦EOL⟧
+// 해설 L3164: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.StartsWith("HANDSHAKE_STG_", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(data.ReadScale)
+L003164 |         public static bool IsStageSimulationSignal(ST_MELSEC_MAP_DATA data) => data.Use && data.Id.StartsWith("HANDSHAKE_STG_", StringComparison.OrdinalIgnoreCase) && data.Direction == EN_MELSEC_DIRECTION.In && data.Access != EN_MELSEC_ACCESS.Write && data.DataType == EN_MELSEC_DATA_TYPE.DWord && data.Length == 2 && double.IsFinite(data.ReadScale) && data.ReadScale > 0; ⟦EOL⟧
+// 해설 L3165: 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals("SDC_DO_ALIGN_STATUS", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals("SDC_DO_ALIGN_COMPLETE", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Id.Equals(StageAlignBusyWordId, StringComparison.OrdinalIgnoreCase)
+L003165 |         public static bool IsStageAlignSimulationSignal(ST_MELSEC_MAP_DATA data) => data.Use && (data.Id.Equals("SDC_DO_ALIGN_STATUS", StringComparison.OrdinalIgnoreCase) || data.Id.Equals("SDC_DO_ALIGN_COMPLETE", StringComparison.OrdinalIgnoreCase) || data.Id.Equals(StageAlignBusyWordId, StringComparison.OrdinalIgnoreCase)) && data.Direction == EN_MELSEC_DIRECTION.In && data.Access != EN_MELSEC_ACCESS.Write && data.DataType == EN_MELSEC_DATA_TYPE.Word && data.Length == 1; ⟦EOL⟧
+// 해설 L3166: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L003166 |         /// <summary>Writes a Stage-owned Align raw Word into simulation memory, never to a PLC.</summary> ⟦EOL⟧
+// 해설 L3167: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.SetStageAlignSimulationValue(string, int)
+L003167 |         public void SetStageAlignSimulationValue(string id, int rawValue) ⟦EOL⟧
+// 해설 L3168: 구문 블록 경계입니다 · 소속 SetStageAlignSimulationValue.
+L003168 |         { ⟦EOL⟧
+// 해설 L3169: 조건에 따라 분기합니다: if (rawValue is < 0 or > ushort.MaxValue)
+L003169 |             if (rawValue is < 0 or > ushort.MaxValue) ⟦EOL⟧
+// 해설 L3170: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(rawValue), "1 WORD 원시값은 0~65535의 정수여야 합니다.") / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(rawValue) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(rawValue), "1 WORD 원시값은 0~65535의 정수여야 합니다.");
+L003170 |                 throw new ArgumentOutOfRangeException(nameof(rawValue), "1 WORD 원시값은 0~65535의 정수여야 합니다."); ⟦EOL⟧
+// 해설 L3171: 공유 상태의 임계 구역에 진입합니다: lock (_pollLock)
+L003171 |             lock (_pollLock) ⟦EOL⟧
+// 해설 L3172: 구문 블록 경계입니다 · 소속 SetStageAlignSimulationValue.
+L003172 |             { ⟦EOL⟧
+// 해설 L3173: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMapData(id) / 지역 변수를 선언합니다: var data = GetMapData(id); / 변수의 초기값을 지정합니다: data = GetMapData(id)
+L003173 |                 var data = GetMapData(id); ⟦EOL⟧
+// 해설 L3174: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsStageAlignSimulationSignal(data) / 조건에 따라 분기합니다: if (!IsStageAlignSimulationSignal(data))
+L003174 |                 if (!IsStageAlignSimulationSignal(data)) ⟦EOL⟧
+// 해설 L3175: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Stage 수신용 ALIGN 신호가 아닙니다: {id}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"Stage 수신용 ALIGN 신호가 아닙니다: {id}");
+L003175 |                     throw new InvalidOperationException($"Stage 수신용 ALIGN 신호가 아닙니다: {id}"); ⟦EOL⟧
+// 해설 L3176: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimulation(GetInterfaceData(data)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetInterfaceData(data) / 조건에 따라 분기합니다: if (!IsSimulation(GetInterfaceData(data)))
+L003176 |                 if (!IsSimulation(GetInterfaceData(data))) ⟦EOL⟧
+// 해설 L3177: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"MELSEC_{data.DeviceNo}가 SIMULATION 상태일 때만 변경할 수 있습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"MELSEC_{data.DeviceNo}가 SIMULATION 상태일 때만 변경할 수 있습니다.");
+L003177 |                     throw new InvalidOperationException($"MELSEC_{data.DeviceNo}가 SIMULATION 상태일 때만 변경할 수 있습니다."); ⟦EOL⟧
+// 해설 L3178: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteSimulationValue(data, rawValue * data.ReadScale)
+L003178 |                 WriteSimulationValue(data, rawValue * data.ReadScale); ⟦EOL⟧
+// 해설 L3179: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pollBlockById.TryGetValue(NormalizeId(id), out var block) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeId(id) / 조건에 따라 분기합니다: if (_pollBlockById.TryGetValue(NormalizeId(id), out var block))
+L003179 |                 if (_pollBlockById.TryGetValue(NormalizeId(id), out var block)) ⟦EOL⟧
+// 해설 L3180: 값을 대상에 대입합니다: block.NextReadAt = DateTimeOffset.MinValue
+L003180 |                     block.NextReadAt = DateTimeOffset.MinValue; ⟦EOL⟧
+// 해설 L3181: 구문 블록 경계입니다 · 소속 SetStageAlignSimulationValue.
+L003181 |             } ⟦EOL⟧
+// 해설 L3182: 구문 블록 경계입니다 · 소속 SetStageAlignSimulationValue.
+L003182 |         } ⟦EOL⟧
+L003183 |  ⟦EOL⟧
+// 해설 L3184: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L003184 |         /// <summary>Stage 소유 입력을 Simulation 메모리에만 주입한다.</summary> ⟦EOL⟧
+// 해설 L3185: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Interface.CMelsec.SetStageSimulationSignal(string, bool)
+L003185 |         public void SetStageSimulationSignal(string id, bool on) ⟦EOL⟧
+// 해설 L3186: 구문 블록 경계입니다 · 소속 SetStageSimulationSignal.
+L003186 |         { ⟦EOL⟧
+// 해설 L3187: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L003187 |             // @시뮬 [MELSEC] Stage입력 - Native PLC Write 없이 Simulation 메모리만 바꾸고 공통 Poller가 정상 입력처럼 읽는다. ⟦EOL⟧
+// 해설 L3188: 공유 상태의 임계 구역에 진입합니다: lock (_pollLock)
+L003188 |             lock (_pollLock) ⟦EOL⟧
+// 해설 L3189: 구문 블록 경계입니다 · 소속 SetStageSimulationSignal.
+L003189 |             { ⟦EOL⟧
+// 해설 L3190: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMapData(id) / 지역 변수를 선언합니다: var data = GetMapData(id); / 변수의 초기값을 지정합니다: data = GetMapData(id)
+L003190 |                 var data = GetMapData(id); ⟦EOL⟧
+// 해설 L3191: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsStageSimulationSignal(data) / 조건에 따라 분기합니다: if (!IsStageSimulationSignal(data))
+L003191 |                 if (!IsStageSimulationSignal(data)) ⟦EOL⟧
+// 해설 L3192: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Stage 수신용 핸드셰이크 신호가 아닙니다: {id}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"Stage 수신용 핸드셰이크 신호가 아닙니다: {id}");
+L003192 |                     throw new InvalidOperationException($"Stage 수신용 핸드셰이크 신호가 아닙니다: {id}"); ⟦EOL⟧
+// 해설 L3193: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimulation(GetInterfaceData(data)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetInterfaceData(data) / 조건에 따라 분기합니다: if (!IsSimulation(GetInterfaceData(data)))
+L003193 |                 if (!IsSimulation(GetInterfaceData(data))) ⟦EOL⟧
+// 해설 L3194: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"MELSEC_{data.DeviceNo}가 SIMULATION 상태일 때만 변경할 수 있습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"MELSEC_{data.DeviceNo}가 SIMULATION 상태일 때만 변경할 수 있습니다.");
+L003194 |                     throw new InvalidOperationException($"MELSEC_{data.DeviceNo}가 SIMULATION 상태일 때만 변경할 수 있습니다."); ⟦EOL⟧
+// 해설 L3195: 함수·델리게이트 또는 객체 생성자를 호출합니다: WriteSimulationValue(data, on ? 1 : 0) / 조건에 따라 결과식을 선택합니다: on ? 1 : 0
+L003195 |                 WriteSimulationValue(data, on ? 1 : 0); ⟦EOL⟧
+// 해설 L3196: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimulationOnlyRoute(data) / 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishSimulationInput(data) / 조건에 따라 분기합니다: if (IsSimulationOnlyRoute(data))
+L003196 |                 if (IsSimulationOnlyRoute(data)) PublishSimulationInput(data); ⟦EOL⟧
+// 해설 L3197: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pollBlockById.TryGetValue(NormalizeId(id), out var block) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeId(id) / 조건에 따라 분기합니다: if (_pollBlockById.TryGetValue(NormalizeId(id), out var block))
+L003197 |                 if (_pollBlockById.TryGetValue(NormalizeId(id), out var block)) ⟦EOL⟧
+// 해설 L3198: 값을 대상에 대입합니다: block.NextReadAt = DateTimeOffset.MinValue
+L003198 |                     block.NextReadAt = DateTimeOffset.MinValue; ⟦EOL⟧
+// 해설 L3199: 구문 블록 경계입니다 · 소속 SetStageSimulationSignal.
+L003199 |             } ⟦EOL⟧
+// 해설 L3200: 구문 블록 경계입니다 · 소속 SetStageSimulationSignal.
+L003200 |         } ⟦EOL⟧
+// 해설 L3201: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #endregion
+L003201 | #endregion ⟦EOL⟧
 // 해설 L3202: 구문 블록 경계입니다.
 L003202 |     } ⟦EOL⟧
 L003203 |  ⟦EOL⟧
-// 해설 L3204: 타입의 구조/상속 선언입니다: public enum EN_MELSEC_WRITE_RESULT
-L003204 |     public enum EN_MELSEC_WRITE_RESULT ⟦EOL⟧
+// 해설 L3204: 타입의 구조/상속 선언입니다: public enum EN_MELSEC_DATA_TYPE
+L003204 |     public enum EN_MELSEC_DATA_TYPE ⟦EOL⟧
 // 해설 L3205: 구문 블록 경계입니다.
 L003205 |     { ⟦EOL⟧
-// 해설 L3206: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.None
-L003206 |         None, ⟦EOL⟧
-// 해설 L3207: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.Queued
-L003207 |         Queued, ⟦EOL⟧
-// 해설 L3208: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.Writing
-L003208 |         Writing, ⟦EOL⟧
-// 해설 L3209: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.WriteSuccess
-L003209 |         WriteSuccess, ⟦EOL⟧
-// 해설 L3210: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.WaitReadback
-L003210 |         WaitReadback, ⟦EOL⟧
-// 해설 L3211: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.Confirmed
-L003211 |         Confirmed, ⟦EOL⟧
-// 해설 L3212: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.Timeout
-L003212 |         Timeout, ⟦EOL⟧
-// 해설 L3213: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.CommunicationError
-L003213 |         CommunicationError, ⟦EOL⟧
-// 해설 L3214: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.InvalidParameter
-L003214 |         InvalidParameter, ⟦EOL⟧
-// 해설 L3215: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.Cancelled
-L003215 |         Cancelled ⟦EOL⟧
-// 해설 L3216: 구문 블록 경계입니다.
-L003216 |     } ⟦EOL⟧
-L003217 |  ⟦EOL⟧
-// 해설 L3218: 타입의 구조/상속 선언입니다: public enum EN_MELSEC_SIMULATION_READBACK
-L003218 |     public enum EN_MELSEC_SIMULATION_READBACK ⟦EOL⟧
-// 해설 L3219: 구문 블록 경계입니다.
-L003219 |     { ⟦EOL⟧
-// 해설 L3220: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_SIMULATION_READBACK.AutoEcho
-L003220 |         AutoEcho, ⟦EOL⟧
-// 해설 L3221: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_SIMULATION_READBACK.HoldValue
-L003221 |         HoldValue, ⟦EOL⟧
-// 해설 L3222: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_SIMULATION_READBACK.FailFirstAttempt
-L003222 |         FailFirstAttempt, ⟦EOL⟧
-// 해설 L3223: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_SIMULATION_READBACK.CommunicationError
-L003223 |         CommunicationError ⟦EOL⟧
+// 해설 L3206: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_DATA_TYPE.Bit
+L003206 |         Bit, ⟦EOL⟧
+// 해설 L3207: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_DATA_TYPE.Word
+L003207 |         Word, ⟦EOL⟧
+// 해설 L3208: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_DATA_TYPE.DWord
+L003208 |         DWord, ⟦EOL⟧
+// 해설 L3209: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L003209 |         // DOUBLE is the existing map name for a scaled signed Int32 occupying two words. ⟦EOL⟧
+// 해설 L3210: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L003210 |         // All numeric APIs/snapshots expose READ_SCALE-adjusted values and apply WRITE_SCALE on writes. ⟦EOL⟧
+// 해설 L3211: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_DATA_TYPE.Double
+L003211 |         Double, ⟦EOL⟧
+// 해설 L3212: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_DATA_TYPE.Float
+L003212 |         Float, ⟦EOL⟧
+// 해설 L3213: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_DATA_TYPE.String
+L003213 |         String ⟦EOL⟧
+// 해설 L3214: 구문 블록 경계입니다.
+L003214 |     } ⟦EOL⟧
+L003215 |  ⟦EOL⟧
+// 해설 L3216: 타입의 구조/상속 선언입니다: public enum EN_MELSEC_DIRECTION
+L003216 |     public enum EN_MELSEC_DIRECTION ⟦EOL⟧
+// 해설 L3217: 구문 블록 경계입니다.
+L003217 |     { ⟦EOL⟧
+// 해설 L3218: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_DIRECTION.In
+L003218 |         In, ⟦EOL⟧
+// 해설 L3219: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_DIRECTION.Out
+L003219 |         Out, ⟦EOL⟧
+// 해설 L3220: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_DIRECTION.InOut
+L003220 |         InOut ⟦EOL⟧
+// 해설 L3221: 구문 블록 경계입니다.
+L003221 |     } ⟦EOL⟧
+L003222 |  ⟦EOL⟧
+// 해설 L3223: 타입의 구조/상속 선언입니다: public enum EN_MELSEC_ACCESS
+L003223 |     public enum EN_MELSEC_ACCESS ⟦EOL⟧
 // 해설 L3224: 구문 블록 경계입니다.
-L003224 |     } ⟦EOL⟧
-L003225 |  ⟦EOL⟧
-// 해설 L3226: 타입의 구조/상속 선언입니다: public sealed record ST_MELSEC_WRITE_STATUS(
-L003226 |     public sealed record ST_MELSEC_WRITE_STATUS( ⟦EOL⟧
-// 해설 L3227: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003227 |         int RequestNo,  ⟦EOL⟧
-// 해설 L3228: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003228 |         string WriteId,  ⟦EOL⟧
-// 해설 L3229: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003229 |         string ReadbackId,  ⟦EOL⟧
-// 해설 L3230: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003230 |         string ExpectedValue,  ⟦EOL⟧
-// 해설 L3231: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003231 |         string ActualValue,  ⟦EOL⟧
-// 해설 L3232: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003232 |         EN_MELSEC_WRITE_RESULT Result,  ⟦EOL⟧
-// 해설 L3233: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003233 |         int CurrentRetryCount,  ⟦EOL⟧
-// 해설 L3234: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003234 |         int RetryCount,  ⟦EOL⟧
-// 해설 L3235: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003235 |         int TimeoutMs,  ⟦EOL⟧
-// 해설 L3236: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003236 |         long WriteBeforeReadCycle,  ⟦EOL⟧
-// 해설 L3237: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003237 |         long MinimumReadCycle,  ⟦EOL⟧
-// 해설 L3238: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003238 |         long ConfirmReadCycle,  ⟦EOL⟧
-// 해설 L3239: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003239 |         string ErrorMessage ⟦EOL⟧
-// 해설 L3240: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003240 |     ); ⟦EOL⟧
-// 해설 L3241: 타입의 구조/상속 선언입니다: public sealed record ST_MELSEC_MAP_DATA(
-L003241 |     public sealed record ST_MELSEC_MAP_DATA( ⟦EOL⟧
-// 해설 L3242: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003242 |         string Id,  ⟦EOL⟧
-// 해설 L3243: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003243 |         bool Use,  ⟦EOL⟧
-// 해설 L3244: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003244 |         string Group,  ⟦EOL⟧
-// 해설 L3245: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003245 |         string Name,  ⟦EOL⟧
-// 해설 L3246: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003246 |         int DeviceNo,  ⟦EOL⟧
-// 해설 L3247: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003247 |         string Address,  ⟦EOL⟧
-// 해설 L3248: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003248 |         EN_MELSEC_DATA_TYPE DataType,  ⟦EOL⟧
-// 해설 L3249: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003249 |         EN_MELSEC_DIRECTION Direction,  ⟦EOL⟧
-// 해설 L3250: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003250 |         EN_MELSEC_ACCESS Access,  ⟦EOL⟧
-// 해설 L3251: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003251 |         double ReadScale,  ⟦EOL⟧
-// 해설 L3252: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003252 |         double WriteScale,  ⟦EOL⟧
-// 해설 L3253: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003253 |         int Length,  ⟦EOL⟧
-// 해설 L3254: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003254 |         int PollMs,  ⟦EOL⟧
-// 해설 L3255: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003255 |         string Description ⟦EOL⟧
-// 해설 L3256: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L003256 |     ); ⟦EOL⟧
-// 해설 L3257: 타입의 구조/상속 선언입니다: public abstract class CMelsecMapFileBase
-L003257 |     public abstract class CMelsecMapFileBase ⟦EOL⟧
-// 해설 L3258: 구문 블록 경계입니다.
-L003258 |     { ⟦EOL⟧
-// 해설 L3259: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA> Drilling.Common.Interface.CMelsecMapFileBase.LoadAll(System.Threading.CancellationToken)
-L003259 |         public abstract IReadOnlyList<ST_MELSEC_MAP_DATA> LoadAll(CancellationToken cancellationToken = default); ⟦EOL⟧
-// 해설 L3260: 구문 블록 경계입니다.
-L003260 |     } ⟦EOL⟧
-L003261 |  ⟦EOL⟧
-// 해설 L3262: 타입의 구조/상속 선언입니다: public enum EN_MELSEC_CACHE_STATE
-L003262 |     public enum EN_MELSEC_CACHE_STATE ⟦EOL⟧
-// 해설 L3263: 구문 블록 경계입니다.
-L003263 |     { ⟦EOL⟧
-// 해설 L3264: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_CACHE_STATE.Pending
-L003264 |         Pending, ⟦EOL⟧
-// 해설 L3265: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_CACHE_STATE.Valid
-L003265 |         Valid, ⟦EOL⟧
-// 해설 L3266: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_CACHE_STATE.Stale
-L003266 |         Stale, ⟦EOL⟧
-// 해설 L3267: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_CACHE_STATE.Error
-L003267 |         Error, ⟦EOL⟧
-// 해설 L3268: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_CACHE_STATE.Offline
-L003268 |         Offline ⟦EOL⟧
-// 해설 L3269: 구문 블록 경계입니다.
-L003269 |     } ⟦EOL⟧
-L003270 |  ⟦EOL⟧
-// 해설 L3271: 타입의 구조/상속 선언입니다: public sealed record ST_MELSEC_CACHED_VALUE(string Id, object? Value, EN_MELSEC_CACHE_STATE State, DateTimeOffset? UpdatedAt, long ReadCycleNo, string ErrorMessage)
-L003271 |     public sealed record ST_MELSEC_CACHED_VALUE(string Id, object? Value, EN_MELSEC_CACHE_STATE State, DateTimeOffset? UpdatedAt, long ReadCycleNo, string ErrorMessage) ⟦EOL⟧
-// 해설 L3272: 구문 블록 경계입니다.
-L003272 |     { ⟦EOL⟧
-// 해설 L3273: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE.IsValid
-L003273 |         public bool IsValid => State == EN_MELSEC_CACHE_STATE.Valid; ⟦EOL⟧
-// 해설 L3274: 구문 블록 경계입니다.
-L003274 |     } ⟦EOL⟧
-L003275 |  ⟦EOL⟧
-// 해설 L3276: 타입의 구조/상속 선언입니다: public class CMelsecNetApi
-L003276 |     public class CMelsecNetApi ⟦EOL⟧
-// 해설 L3277: 구문 블록 경계입니다.
-L003277 |     { ⟦EOL⟧
-// 해설 L3278: 변수의 초기값을 지정합니다: OpenMode = -1
-L003278 |         public const short OpenMode = -1; ⟦EOL⟧
-// 해설 L3279: 변수의 초기값을 지정합니다: NativeLibraryName = "MDFUNC32.dll"
-L003279 |         public const string NativeLibraryName = "MDFUNC32.dll"; ⟦EOL⟧
-// 해설 L3280: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CMelsecNetApi.Open(short, out int)
-L003280 |         public virtual int Open(short channelNo, out int path) ⟦EOL⟧
-// 해설 L3281: 구문 블록 경계입니다 · 소속 Open.
-L003281 |         { ⟦EOL⟧
-// 해설 L3282: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsecNetNativeMethods.mdOpen(channelNo, OpenMode, out path) / 호출자에게 값 또는 제어를 반환합니다: return CMelsecNetNativeMethods.mdOpen(channelNo, OpenMode, out path);
-L003282 |             return CMelsecNetNativeMethods.mdOpen(channelNo, OpenMode, out path); ⟦EOL⟧
-// 해설 L3283: 구문 블록 경계입니다 · 소속 Open.
-L003283 |         } ⟦EOL⟧
-L003284 |  ⟦EOL⟧
-// 해설 L3285: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CMelsecNetApi.Close(int)
-L003285 |         public virtual int Close(int path) ⟦EOL⟧
-// 해설 L3286: 구문 블록 경계입니다 · 소속 Close.
-L003286 |         { ⟦EOL⟧
-// 해설 L3287: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsecNetNativeMethods.mdClose(path) / 호출자에게 값 또는 제어를 반환합니다: return CMelsecNetNativeMethods.mdClose(path);
-L003287 |             return CMelsecNetNativeMethods.mdClose(path); ⟦EOL⟧
-// 해설 L3288: 구문 블록 경계입니다 · 소속 Close.
-L003288 |         } ⟦EOL⟧
-L003289 |  ⟦EOL⟧
-// 해설 L3290: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CMelsecNetApi.SendEx(int, int, int, int, int, ref int, short[])
-L003290 |         public virtual int SendEx(int path, int networkNo, int stationNo, int deviceType, int deviceNo, ref int size, short[] data) ⟦EOL⟧
-// 해설 L3291: 구문 블록 경계입니다 · 소속 SendEx.
-L003291 |         { ⟦EOL⟧
-// 해설 L3292: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsecNetNativeMethods.mdSendEx(path, networkNo, stationNo, deviceType, deviceNo, ref size, data) / 호출자에게 값 또는 제어를 반환합니다: return CMelsecNetNativeMethods.mdSendEx(path, networkNo, stationNo, deviceType, deviceNo, ref size, data);
-L003292 |             return CMelsecNetNativeMethods.mdSendEx(path, networkNo, stationNo, deviceType, deviceNo, ref size, data); ⟦EOL⟧
-// 해설 L3293: 구문 블록 경계입니다 · 소속 SendEx.
-L003293 |         } ⟦EOL⟧
-L003294 |  ⟦EOL⟧
-// 해설 L3295: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CMelsecNetApi.ReceiveEx(int, int, int, int, int, ref int, short[])
-L003295 |         public virtual int ReceiveEx(int path, int networkNo, int stationNo, int deviceType, int deviceNo, ref int size, short[] data) ⟦EOL⟧
-// 해설 L3296: 구문 블록 경계입니다 · 소속 ReceiveEx.
-L003296 |         { ⟦EOL⟧
-// 해설 L3297: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsecNetNativeMethods.mdReceiveEx(path, networkNo, stationNo, deviceType, deviceNo, ref size, data) / 호출자에게 값 또는 제어를 반환합니다: return CMelsecNetNativeMethods.mdReceiveEx(path, networkNo, stationNo, deviceType, deviceNo, ref size, data);
-L003297 |             return CMelsecNetNativeMethods.mdReceiveEx(path, networkNo, stationNo, deviceType, deviceNo, ref size, data); ⟦EOL⟧
-// 해설 L3298: 구문 블록 경계입니다 · 소속 ReceiveEx.
-L003298 |         } ⟦EOL⟧
-// 해설 L3299: 구문 블록 경계입니다.
-L003299 |     } ⟦EOL⟧
-L003300 |  ⟦EOL⟧
-// 해설 L3301: 타입의 구조/상속 선언입니다: internal static class CMelsecNetNativeMethods
-L003301 |     internal static class CMelsecNetNativeMethods ⟦EOL⟧
-// 해설 L3302: 구문 블록 경계입니다.
-L003302 |     { ⟦EOL⟧
-// 해설 L3303: 선언·서명/매개변수·접근 조건입니다 · short Drilling.Common.Interface.CMelsecNetNativeMethods.mdOpen(short, short, out int)
-L003303 |         [DllImport(CMelsecNetApi.NativeLibraryName, EntryPoint = "mdOpen", CallingConvention = CallingConvention.StdCall)] ⟦EOL⟧
-// 해설 L3304: 선언·서명/매개변수·접근 조건입니다 · short Drilling.Common.Interface.CMelsecNetNativeMethods.mdOpen(short, short, out int)
-L003304 |         internal static extern short mdOpen(short channelNo, short mode, out int path); ⟦EOL⟧
-// 해설 L3305: 선언·서명/매개변수·접근 조건입니다 · short Drilling.Common.Interface.CMelsecNetNativeMethods.mdClose(int)
-L003305 |         [DllImport(CMelsecNetApi.NativeLibraryName, EntryPoint = "mdClose", CallingConvention = CallingConvention.StdCall)] ⟦EOL⟧
-// 해설 L3306: 선언·서명/매개변수·접근 조건입니다 · short Drilling.Common.Interface.CMelsecNetNativeMethods.mdClose(int)
-L003306 |         internal static extern short mdClose(int path); ⟦EOL⟧
-// 해설 L3307: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CMelsecNetNativeMethods.mdSendEx(int, int, int, int, int, ref int, short[])
-L003307 |         [DllImport(CMelsecNetApi.NativeLibraryName, EntryPoint = "mdSendEx", CallingConvention = CallingConvention.StdCall)] ⟦EOL⟧
-// 해설 L3308: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CMelsecNetNativeMethods.mdSendEx(int, int, int, int, int, ref int, short[])
-L003308 |         internal static extern int mdSendEx(int path, int networkNo, int stationNo, int deviceType, int deviceNo, ref int size, [In] short[] data); ⟦EOL⟧
-// 해설 L3309: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CMelsecNetNativeMethods.mdReceiveEx(int, int, int, int, int, ref int, short[])
-L003309 |         [DllImport(CMelsecNetApi.NativeLibraryName, EntryPoint = "mdReceiveEx", CallingConvention = CallingConvention.StdCall)] ⟦EOL⟧
-// 해설 L3310: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CMelsecNetNativeMethods.mdReceiveEx(int, int, int, int, int, ref int, short[])
-L003310 |         internal static extern int mdReceiveEx(int path, int networkNo, int stationNo, int deviceType, int deviceNo, ref int size, [Out] short[] data); ⟦EOL⟧
+L003224 |     { ⟦EOL⟧
+// 해설 L3225: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_ACCESS.Read
+L003225 |         Read, ⟦EOL⟧
+// 해설 L3226: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_ACCESS.Write
+L003226 |         Write, ⟦EOL⟧
+// 해설 L3227: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_ACCESS.ReadWrite
+L003227 |         ReadWrite ⟦EOL⟧
+// 해설 L3228: 구문 블록 경계입니다.
+L003228 |     } ⟦EOL⟧
+L003229 |  ⟦EOL⟧
+// 해설 L3230: 타입의 구조/상속 선언입니다: public enum EN_MELSEC_PROCESS
+L003230 |     public enum EN_MELSEC_PROCESS ⟦EOL⟧
+// 해설 L3231: 구문 블록 경계입니다.
+L003231 |     { ⟦EOL⟧
+// 해설 L3232: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_PROCESS.Ready
+L003232 |         Ready, ⟦EOL⟧
+// 해설 L3233: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_PROCESS.PrepareWrite
+L003233 |         PrepareWrite, ⟦EOL⟧
+// 해설 L3234: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_PROCESS.Write
+L003234 |         Write, ⟦EOL⟧
+// 해설 L3235: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_PROCESS.WaitReadback
+L003235 |         WaitReadback, ⟦EOL⟧
+// 해설 L3236: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_PROCESS.RetryWrite
+L003236 |         RetryWrite, ⟦EOL⟧
+// 해설 L3237: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_PROCESS.CommunicationError
+L003237 |         CommunicationError, ⟦EOL⟧
+// 해설 L3238: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_PROCESS.Close
+L003238 |         Close ⟦EOL⟧
+// 해설 L3239: 구문 블록 경계입니다.
+L003239 |     } ⟦EOL⟧
+L003240 |  ⟦EOL⟧
+// 해설 L3241: 타입의 구조/상속 선언입니다: public enum EN_MELSEC_WRITE_RESULT
+L003241 |     public enum EN_MELSEC_WRITE_RESULT ⟦EOL⟧
+// 해설 L3242: 구문 블록 경계입니다.
+L003242 |     { ⟦EOL⟧
+// 해설 L3243: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.None
+L003243 |         None, ⟦EOL⟧
+// 해설 L3244: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.Queued
+L003244 |         Queued, ⟦EOL⟧
+// 해설 L3245: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.Writing
+L003245 |         Writing, ⟦EOL⟧
+// 해설 L3246: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.WriteSuccess
+L003246 |         WriteSuccess, ⟦EOL⟧
+// 해설 L3247: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.WaitReadback
+L003247 |         WaitReadback, ⟦EOL⟧
+// 해설 L3248: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.Confirmed
+L003248 |         Confirmed, ⟦EOL⟧
+// 해설 L3249: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.Timeout
+L003249 |         Timeout, ⟦EOL⟧
+// 해설 L3250: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.CommunicationError
+L003250 |         CommunicationError, ⟦EOL⟧
+// 해설 L3251: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.InvalidParameter
+L003251 |         InvalidParameter, ⟦EOL⟧
+// 해설 L3252: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_WRITE_RESULT.Cancelled
+L003252 |         Cancelled ⟦EOL⟧
+// 해설 L3253: 구문 블록 경계입니다.
+L003253 |     } ⟦EOL⟧
+L003254 |  ⟦EOL⟧
+// 해설 L3255: 타입의 구조/상속 선언입니다: public enum EN_MELSEC_SIMULATION_READBACK
+L003255 |     public enum EN_MELSEC_SIMULATION_READBACK ⟦EOL⟧
+// 해설 L3256: 구문 블록 경계입니다.
+L003256 |     { ⟦EOL⟧
+// 해설 L3257: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_SIMULATION_READBACK.AutoEcho
+L003257 |         AutoEcho, ⟦EOL⟧
+// 해설 L3258: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_SIMULATION_READBACK.HoldValue
+L003258 |         HoldValue, ⟦EOL⟧
+// 해설 L3259: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_SIMULATION_READBACK.FailFirstAttempt
+L003259 |         FailFirstAttempt, ⟦EOL⟧
+// 해설 L3260: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_SIMULATION_READBACK.CommunicationError
+L003260 |         CommunicationError ⟦EOL⟧
+// 해설 L3261: 구문 블록 경계입니다.
+L003261 |     } ⟦EOL⟧
+L003262 |  ⟦EOL⟧
+// 해설 L3263: 타입의 구조/상속 선언입니다: public sealed record ST_MELSEC_WRITE_STATUS(
+L003263 |     public sealed record ST_MELSEC_WRITE_STATUS( ⟦EOL⟧
+// 해설 L3264: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003264 |         int RequestNo,  ⟦EOL⟧
+// 해설 L3265: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003265 |         string WriteId,  ⟦EOL⟧
+// 해설 L3266: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003266 |         string ReadbackId,  ⟦EOL⟧
+// 해설 L3267: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003267 |         string ExpectedValue,  ⟦EOL⟧
+// 해설 L3268: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003268 |         string ActualValue,  ⟦EOL⟧
+// 해설 L3269: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003269 |         EN_MELSEC_WRITE_RESULT Result,  ⟦EOL⟧
+// 해설 L3270: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003270 |         int CurrentRetryCount,  ⟦EOL⟧
+// 해설 L3271: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003271 |         int RetryCount,  ⟦EOL⟧
+// 해설 L3272: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003272 |         int TimeoutMs,  ⟦EOL⟧
+// 해설 L3273: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003273 |         long WriteBeforeReadCycle,  ⟦EOL⟧
+// 해설 L3274: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003274 |         long MinimumReadCycle,  ⟦EOL⟧
+// 해설 L3275: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003275 |         long ConfirmReadCycle,  ⟦EOL⟧
+// 해설 L3276: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003276 |         string ErrorMessage ⟦EOL⟧
+// 해설 L3277: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003277 |     ); ⟦EOL⟧
+// 해설 L3278: 타입의 구조/상속 선언입니다: public sealed record ST_MELSEC_MAP_DATA(
+L003278 |     public sealed record ST_MELSEC_MAP_DATA( ⟦EOL⟧
+// 해설 L3279: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003279 |         string Id,  ⟦EOL⟧
+// 해설 L3280: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003280 |         bool Use,  ⟦EOL⟧
+// 해설 L3281: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003281 |         string Group,  ⟦EOL⟧
+// 해설 L3282: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003282 |         string Name,  ⟦EOL⟧
+// 해설 L3283: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003283 |         int DeviceNo,  ⟦EOL⟧
+// 해설 L3284: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003284 |         string Address,  ⟦EOL⟧
+// 해설 L3285: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003285 |         EN_MELSEC_DATA_TYPE DataType,  ⟦EOL⟧
+// 해설 L3286: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003286 |         EN_MELSEC_DIRECTION Direction,  ⟦EOL⟧
+// 해설 L3287: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003287 |         EN_MELSEC_ACCESS Access,  ⟦EOL⟧
+// 해설 L3288: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003288 |         double ReadScale,  ⟦EOL⟧
+// 해설 L3289: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003289 |         double WriteScale,  ⟦EOL⟧
+// 해설 L3290: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003290 |         int Length,  ⟦EOL⟧
+// 해설 L3291: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003291 |         int PollMs,  ⟦EOL⟧
+// 해설 L3292: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003292 |         string Description ⟦EOL⟧
+// 해설 L3293: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L003293 |     ); ⟦EOL⟧
+// 해설 L3294: 타입의 구조/상속 선언입니다: public abstract class CMelsecMapFileBase
+L003294 |     public abstract class CMelsecMapFileBase ⟦EOL⟧
+// 해설 L3295: 구문 블록 경계입니다.
+L003295 |     { ⟦EOL⟧
+// 해설 L3296: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA> Drilling.Common.Interface.CMelsecMapFileBase.LoadAll(System.Threading.CancellationToken)
+L003296 |         public abstract IReadOnlyList<ST_MELSEC_MAP_DATA> LoadAll(CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L3297: 구문 블록 경계입니다.
+L003297 |     } ⟦EOL⟧
+L003298 |  ⟦EOL⟧
+// 해설 L3299: 타입의 구조/상속 선언입니다: public enum EN_MELSEC_CACHE_STATE
+L003299 |     public enum EN_MELSEC_CACHE_STATE ⟦EOL⟧
+// 해설 L3300: 구문 블록 경계입니다.
+L003300 |     { ⟦EOL⟧
+// 해설 L3301: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_CACHE_STATE.Pending
+L003301 |         Pending, ⟦EOL⟧
+// 해설 L3302: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_CACHE_STATE.Valid
+L003302 |         Valid, ⟦EOL⟧
+// 해설 L3303: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_CACHE_STATE.Stale
+L003303 |         Stale, ⟦EOL⟧
+// 해설 L3304: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_CACHE_STATE.Error
+L003304 |         Error, ⟦EOL⟧
+// 해설 L3305: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Interface.EN_MELSEC_CACHE_STATE.Offline
+L003305 |         Offline ⟦EOL⟧
+// 해설 L3306: 구문 블록 경계입니다.
+L003306 |     } ⟦EOL⟧
+L003307 |  ⟦EOL⟧
+// 해설 L3308: 타입의 구조/상속 선언입니다: public sealed record ST_MELSEC_CACHED_VALUE(string Id, object? Value, EN_MELSEC_CACHE_STATE State, DateTimeOffset? UpdatedAt, long ReadCycleNo, string ErrorMessage)
+L003308 |     public sealed record ST_MELSEC_CACHED_VALUE(string Id, object? Value, EN_MELSEC_CACHE_STATE State, DateTimeOffset? UpdatedAt, long ReadCycleNo, string ErrorMessage) ⟦EOL⟧
+// 해설 L3309: 구문 블록 경계입니다.
+L003309 |     { ⟦EOL⟧
+// 해설 L3310: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE.IsValid
+L003310 |         public bool IsValid => State == EN_MELSEC_CACHE_STATE.Valid; ⟦EOL⟧
 // 해설 L3311: 구문 블록 경계입니다.
 L003311 |     } ⟦EOL⟧
-// 해설 L3312: 구문 블록 경계입니다.
-L003312 | } ⟦EOL⟧
+L003312 |  ⟦EOL⟧
+// 해설 L3313: 타입의 구조/상속 선언입니다: public class CMelsecNetApi
+L003313 |     public class CMelsecNetApi ⟦EOL⟧
+// 해설 L3314: 구문 블록 경계입니다.
+L003314 |     { ⟦EOL⟧
+// 해설 L3315: 변수의 초기값을 지정합니다: OpenMode = -1
+L003315 |         public const short OpenMode = -1; ⟦EOL⟧
+// 해설 L3316: 변수의 초기값을 지정합니다: NativeLibraryName = "MDFUNC32.dll"
+L003316 |         public const string NativeLibraryName = "MDFUNC32.dll"; ⟦EOL⟧
+// 해설 L3317: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CMelsecNetApi.Open(short, out int)
+L003317 |         public virtual int Open(short channelNo, out int path) ⟦EOL⟧
+// 해설 L3318: 구문 블록 경계입니다 · 소속 Open.
+L003318 |         { ⟦EOL⟧
+// 해설 L3319: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsecNetNativeMethods.mdOpen(channelNo, OpenMode, out path) / 호출자에게 값 또는 제어를 반환합니다: return CMelsecNetNativeMethods.mdOpen(channelNo, OpenMode, out path);
+L003319 |             return CMelsecNetNativeMethods.mdOpen(channelNo, OpenMode, out path); ⟦EOL⟧
+// 해설 L3320: 구문 블록 경계입니다 · 소속 Open.
+L003320 |         } ⟦EOL⟧
+L003321 |  ⟦EOL⟧
+// 해설 L3322: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CMelsecNetApi.Close(int)
+L003322 |         public virtual int Close(int path) ⟦EOL⟧
+// 해설 L3323: 구문 블록 경계입니다 · 소속 Close.
+L003323 |         { ⟦EOL⟧
+// 해설 L3324: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsecNetNativeMethods.mdClose(path) / 호출자에게 값 또는 제어를 반환합니다: return CMelsecNetNativeMethods.mdClose(path);
+L003324 |             return CMelsecNetNativeMethods.mdClose(path); ⟦EOL⟧
+// 해설 L3325: 구문 블록 경계입니다 · 소속 Close.
+L003325 |         } ⟦EOL⟧
+L003326 |  ⟦EOL⟧
+// 해설 L3327: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CMelsecNetApi.SendEx(int, int, int, int, int, ref int, short[])
+L003327 |         public virtual int SendEx(int path, int networkNo, int stationNo, int deviceType, int deviceNo, ref int size, short[] data) ⟦EOL⟧
+// 해설 L3328: 구문 블록 경계입니다 · 소속 SendEx.
+L003328 |         { ⟦EOL⟧
+// 해설 L3329: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsecNetNativeMethods.mdSendEx(path, networkNo, stationNo, deviceType, deviceNo, ref size, data) / 호출자에게 값 또는 제어를 반환합니다: return CMelsecNetNativeMethods.mdSendEx(path, networkNo, stationNo, deviceType, deviceNo, ref size, data);
+L003329 |             return CMelsecNetNativeMethods.mdSendEx(path, networkNo, stationNo, deviceType, deviceNo, ref size, data); ⟦EOL⟧
+// 해설 L3330: 구문 블록 경계입니다 · 소속 SendEx.
+L003330 |         } ⟦EOL⟧
+L003331 |  ⟦EOL⟧
+// 해설 L3332: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CMelsecNetApi.ReceiveEx(int, int, int, int, int, ref int, short[])
+L003332 |         public virtual int ReceiveEx(int path, int networkNo, int stationNo, int deviceType, int deviceNo, ref int size, short[] data) ⟦EOL⟧
+// 해설 L3333: 구문 블록 경계입니다 · 소속 ReceiveEx.
+L003333 |         { ⟦EOL⟧
+// 해설 L3334: 함수·델리게이트 또는 객체 생성자를 호출합니다: CMelsecNetNativeMethods.mdReceiveEx(path, networkNo, stationNo, deviceType, deviceNo, ref size, data) / 호출자에게 값 또는 제어를 반환합니다: return CMelsecNetNativeMethods.mdReceiveEx(path, networkNo, stationNo, deviceType, deviceNo, ref size, data);
+L003334 |             return CMelsecNetNativeMethods.mdReceiveEx(path, networkNo, stationNo, deviceType, deviceNo, ref size, data); ⟦EOL⟧
+// 해설 L3335: 구문 블록 경계입니다 · 소속 ReceiveEx.
+L003335 |         } ⟦EOL⟧
+// 해설 L3336: 구문 블록 경계입니다.
+L003336 |     } ⟦EOL⟧
+L003337 |  ⟦EOL⟧
+// 해설 L3338: 타입의 구조/상속 선언입니다: internal static class CMelsecNetNativeMethods
+L003338 |     internal static class CMelsecNetNativeMethods ⟦EOL⟧
+// 해설 L3339: 구문 블록 경계입니다.
+L003339 |     { ⟦EOL⟧
+// 해설 L3340: 선언·서명/매개변수·접근 조건입니다 · short Drilling.Common.Interface.CMelsecNetNativeMethods.mdOpen(short, short, out int)
+L003340 |         [DllImport(CMelsecNetApi.NativeLibraryName, EntryPoint = "mdOpen", CallingConvention = CallingConvention.StdCall)] ⟦EOL⟧
+// 해설 L3341: 선언·서명/매개변수·접근 조건입니다 · short Drilling.Common.Interface.CMelsecNetNativeMethods.mdOpen(short, short, out int)
+L003341 |         internal static extern short mdOpen(short channelNo, short mode, out int path); ⟦EOL⟧
+// 해설 L3342: 선언·서명/매개변수·접근 조건입니다 · short Drilling.Common.Interface.CMelsecNetNativeMethods.mdClose(int)
+L003342 |         [DllImport(CMelsecNetApi.NativeLibraryName, EntryPoint = "mdClose", CallingConvention = CallingConvention.StdCall)] ⟦EOL⟧
+// 해설 L3343: 선언·서명/매개변수·접근 조건입니다 · short Drilling.Common.Interface.CMelsecNetNativeMethods.mdClose(int)
+L003343 |         internal static extern short mdClose(int path); ⟦EOL⟧
+// 해설 L3344: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CMelsecNetNativeMethods.mdSendEx(int, int, int, int, int, ref int, short[])
+L003344 |         [DllImport(CMelsecNetApi.NativeLibraryName, EntryPoint = "mdSendEx", CallingConvention = CallingConvention.StdCall)] ⟦EOL⟧
+// 해설 L3345: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CMelsecNetNativeMethods.mdSendEx(int, int, int, int, int, ref int, short[])
+L003345 |         internal static extern int mdSendEx(int path, int networkNo, int stationNo, int deviceType, int deviceNo, ref int size, [In] short[] data); ⟦EOL⟧
+// 해설 L3346: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CMelsecNetNativeMethods.mdReceiveEx(int, int, int, int, int, ref int, short[])
+L003346 |         [DllImport(CMelsecNetApi.NativeLibraryName, EntryPoint = "mdReceiveEx", CallingConvention = CallingConvention.StdCall)] ⟦EOL⟧
+// 해설 L3347: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Interface.CMelsecNetNativeMethods.mdReceiveEx(int, int, int, int, int, ref int, short[])
+L003347 |         internal static extern int mdReceiveEx(int path, int networkNo, int stationNo, int deviceType, int deviceNo, ref int size, [Out] short[] data); ⟦EOL⟧
+// 해설 L3348: 구문 블록 경계입니다.
+L003348 |     } ⟦EOL⟧
+// 해설 L3349: 구문 블록 경계입니다.
+L003349 | } ⟦EOL⟧

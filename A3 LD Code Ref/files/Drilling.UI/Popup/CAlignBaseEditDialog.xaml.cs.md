@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 2f5f3957d5333f8bda9392bb9df84a0be03e512cc7a7cf5f249ec07c955d9d3f |
 | 파일 분류 | code |
 | 원본 크기/행 | 2,621 bytes / 74 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -42,7 +42,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_panel` · L12–12
 
-[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L12-L12)
+[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -57,7 +57,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_save` · L13–13
 
-[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L13-L13)
+[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -72,7 +72,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_saving` · L14–14
 
-[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L14-L14)
+[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -87,7 +87,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L16–24
 
-[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:16–24](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L16-L24)
+[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:16–24](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L16-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -107,7 +107,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2752–2755](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2752-L2755) | new CAlignBaseEditDialog | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2752–2755](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2752-L2755) | new CAlignBaseEditDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -134,7 +134,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OpenCoordinateInput` · L26–37
 
-[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:26–37](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L26-L37)
+[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:26–37](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L26-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -204,7 +204,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveClicked` · L39–56
 
-[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:39–56](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L39-L56)
+[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:39–56](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L39-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -270,7 +270,7 @@ flowchart TD
 
 ### MethodDeclaration `SetSaving` · L58–64
 
-[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:58–64](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L58-L64)
+[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:58–64](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L58-L64)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -289,9 +289,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L45-L45) | SetSaving | False |
-| [Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L50-L50) | SetSaving | False |
-| [Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L54-L54) | SetSaving | False |
+| [Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L45-L45) | SetSaving | False |
+| [Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L50-L50) | SetSaving | False |
+| [Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L54-L54) | SetSaving | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -306,7 +306,7 @@ flowchart TD
 
 ### MethodDeclaration `CancelClicked` · L66–66
 
-[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L66-L66)
+[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L66-L66)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -344,7 +344,7 @@ flowchart TD
 
 ### MethodDeclaration `OnClosing` · L67–67
 
-[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L67-L67)
+[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L67-L67)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -382,7 +382,7 @@ flowchart TD
 
 ### MethodDeclaration `OnKeyDown` · L68–73
 
-[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:68–73](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L68-L73)
+[Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:68–73](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L68-L73)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

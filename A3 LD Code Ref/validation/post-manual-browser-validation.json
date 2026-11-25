@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "a3-post-manual-refresh-browser/1",
+  "passed": true,
+  "checks": [
+    {
+      "name": "04_new_note_once",
+      "passed": true
+    },
+    {
+      "name": "04_process_link_gap_text_available_to_browser_find",
+      "passed": true
+    },
+    {
+      "name": "04_section_numbers_contiguous_and_unique",
+      "passed": true
+    },
+    {
+      "name": "04_desktop_no_horizontal_overflow",
+      "passed": true
+    },
+    {
+      "name": "04_existing_images_still_rendered",
+      "passed": true
+    },
+    {
+      "name": "10_new_note_once",
+      "passed": true
+    },
+    {
+      "name": "10_process_link_gap_text_available_to_browser_find",
+      "passed": true
+    },
+    {
+      "name": "10_section_numbers_contiguous_and_unique",
+      "passed": true
+    },
+    {
+      "name": "10_desktop_no_horizontal_overflow",
+      "passed": true
+    },
+    {
+      "name": "10_existing_images_still_rendered",
+      "passed": true
+    },
+    {
+      "name": "no_external_requests",
+      "passed": true
+    },
+    {
+      "name": "no_page_javascript_errors",
+      "passed": true
+    }
+  ],
+  "externalRequests": [],
+  "javascriptErrors": [],
+  "scope": "Two actual updated HTML chapters reopened offline for all checks. Screenshots render extracted new-note DOM with the same inline CSS for readability; no staging HTML bytes changed, no source/RAG automatic data or equipment program executed."
+}

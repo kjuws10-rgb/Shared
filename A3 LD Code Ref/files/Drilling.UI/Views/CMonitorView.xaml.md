@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
-| 원본 SHA256 | d7595c09cb605ad998ce8c1805ff06d14319f655f3356d90d39b0374811fa42d |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
+| 원본 SHA256 | 1e2758ea85d4c0ca99f61306ffac97055f8010717fb0f5e54791a7a021d2f236 |
 | 파일 분류 | code |
-| 원본 크기/행 | 284,245 bytes / 3,874 physical lines |
+| 원본 크기/행 | 287,023 bytes / 3,918 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CMonitorView.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CMonitorView.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -24,7 +24,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 코드 비하인드 후보 | Drilling.UI/Views/CMonitorView.xaml.cs |
 | 이름 있는 요소 | TabBorder, InputBorder, ItemBorder, ToggleButton, Shell, SelectedText, PART_Popup, XpsOperationScrollViewer, MelsecReadGrid, MelsecWriteGrid, CoordinatePositionValuesToggle, ToggleBorder, CoordinateGlassPreviewViewport, CoordinateGlassPreviewHoverTip, CoordinateGlassPreviewHoverTipTranslateTransform, CoordinateGlassPreviewHoverTipText, CoordinateShotCoordinateGrid |
 | 이벤트 개수 | 49 |
-| Binding 표현 개수 | 426 |
+| Binding 표현 개수 | 430 |
 
 이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
@@ -38,15 +38,15 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | SelectedText | L172–172 |
 | PART_Popup | L172–172 |
 | XpsOperationScrollViewer | L492–492 |
-| MelsecReadGrid | L2937–2937 |
-| MelsecWriteGrid | L3006–3006 |
-| CoordinatePositionValuesToggle | L3236–3236 |
-| ToggleBorder | L3257–3257 |
-| CoordinateGlassPreviewViewport | L3325–3325 |
-| CoordinateGlassPreviewHoverTip | L3385–3385 |
-| CoordinateGlassPreviewHoverTipTranslateTransform | L3397–3397 |
-| CoordinateGlassPreviewHoverTipText | L3399–3399 |
-| CoordinateShotCoordinateGrid | L3736–3736 |
+| MelsecReadGrid | L2981–2981 |
+| MelsecWriteGrid | L3050–3050 |
+| CoordinatePositionValuesToggle | L3280–3280 |
+| ToggleBorder | L3301–3301 |
+| CoordinateGlassPreviewViewport | L3369–3369 |
+| CoordinateGlassPreviewHoverTip | L3429–3429 |
+| CoordinateGlassPreviewHoverTipTranslateTransform | L3441–3441 |
+| CoordinateGlassPreviewHoverTipText | L3443–3443 |
+| CoordinateShotCoordinateGrid | L3780–3780 |
 
 | 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
 | --- | --- | --- | --- |
@@ -88,17 +88,17 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | Click | OpenBetTableInput | L2493–2493 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
 | Click | OpenBetPositionInput | L2618–2618 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
 | Click | OpenBetPositionInput | L2652–2652 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| SizeChanged | MelsecGrid_SizeChanged | L2946–2946 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| SizeChanged | MelsecGrid_SizeChanged | L3015–3015 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| Click | OpenMelsecWriteInput | L3046–3046 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| PreviewMouseDown | MelsecWriteSelectionPreviewInput | L3062–3062 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| PreviewMouseWheel | MelsecWriteSelectionPreviewInput | L3063–3063 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| PreviewKeyDown | MelsecWriteSelectionPreviewInput | L3064–3064 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| PreviewTextInput | MelsecWriteSelectionPreviewInput | L3065–3065 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| MouseMove | CoordinateCellPreviewLabel_MouseMove | L3346–3346 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| MouseLeave | CoordinateCellPreviewLabel_MouseLeave | L3347–3347 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| MouseLeftButtonDown | CoordinateShotMap_MouseLeftButtonDown | L3487–3487 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| SelectionChanged | CoordinateShotCoordinateGrid_SelectionChanged | L3739–3739 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| SizeChanged | MelsecGrid_SizeChanged | L2990–2990 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| SizeChanged | MelsecGrid_SizeChanged | L3059–3059 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| Click | OpenMelsecWriteInput | L3090–3090 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseDown | MelsecWriteSelectionPreviewInput | L3106–3106 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseWheel | MelsecWriteSelectionPreviewInput | L3107–3107 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewKeyDown | MelsecWriteSelectionPreviewInput | L3108–3108 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewTextInput | MelsecWriteSelectionPreviewInput | L3109–3109 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| MouseMove | CoordinateCellPreviewLabel_MouseMove | L3390–3390 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| MouseLeave | CoordinateCellPreviewLabel_MouseLeave | L3391–3391 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| MouseLeftButtonDown | CoordinateShotMap_MouseLeftButtonDown | L3531–3531 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| SelectionChanged | CoordinateShotCoordinateGrid_SelectionChanged | L3783–3783 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
 
 | Binding 표현 | 원본 범위 |
 | --- | --- |
@@ -381,153 +381,157 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | {Binding CurrentScreen.Monitor.CreateGlassCommand} | L2705–2705 |
 | {Binding CurrentScreen.Monitor.DeleteGlassCommand} | L2710–2710 |
 | {Binding CurrentScreen.Monitor.ProductGlassItems} | L2712–2712 |
-| {Binding Name} | L2720–2720 |
-| {Binding Value} | L2721–2721 |
-| {Binding ValueBrush} | L2724–2724 |
-| {Binding Value} | L2728–2728 |
-| {Binding CurrentScreen.Monitor.ProductHistoryRows} | L2743–2743 |
-| {Binding Time} | L2750–2750 |
-| {Binding GlassId} | L2751–2751 |
-| {Binding RecipeId} | L2752–2752 |
-| {Binding Action} | L2753–2753 |
-| {Binding Result} | L2754–2754 |
-| {Binding ResultBrush} | L2757–2757 |
-| {Binding Detail} | L2763–2763 |
-| {Binding CurrentScreen.Monitor.ProductAlignItems} | L2780–2780 |
-| {Binding Name} | L2784–2784 |
-| {Binding Value} | L2785–2785 |
-| {Binding ValueBrush} | L2788–2788 |
-| {Binding Value} | L2791–2791 |
-| {Binding CurrentScreen.Monitor.ProductDistortionItems} | L2802–2802 |
-| {Binding Name} | L2806–2806 |
-| {Binding Value} | L2807–2807 |
-| {Binding ValueBrush} | L2810–2810 |
-| {Binding Value} | L2813–2813 |
-| {Binding CurrentScreen.Monitor.ProductProcessItems} | L2833–2833 |
-| {Binding Name} | L2837–2837 |
-| {Binding Value} | L2838–2838 |
-| {Binding ValueBrush} | L2841–2841 |
-| {Binding Value} | L2844–2844 |
-| {Binding CurrentScreen.Monitor.ProductRecipeItems} | L2855–2855 |
-| {Binding Name} | L2859–2859 |
-| {Binding Value} | L2860–2860 |
-| {Binding CurrentScreen.Monitor.ProductReviewItems} | L2877–2877 |
-| {Binding Name} | L2881–2881 |
-| {Binding Value} | L2882–2882 |
-| {Binding ValueBrush} | L2885–2885 |
-| {Binding Value} | L2888–2888 |
-| {Binding CurrentScreen.Monitor.ProductReviewRows} | L2899–2899 |
-| {Binding Shot} | L2902–2902 |
-| {Binding CellNo} | L2903–2903 |
-| {Binding BeamNo} | L2904–2904 |
-| {Binding ErrorX} | L2905–2905 |
-| {Binding ErrorY} | L2906–2906 |
-| {Binding Judge} | L2907–2907 |
-| {Binding JudgeBrush} | L2910–2910 |
-| {Binding CurrentScreen.Monitor.IsMelsec, Converter={StaticResource BooleanToVisibilityConverter}} | L2924–2924 |
-| {Binding CurrentScreen.Monitor.MelsecReadRows} | L2938–2938 |
-| {Binding Id} | L2952–2952 |
-| {Binding Group} | L2953–2953 |
-| {Binding Address} | L2954–2954 |
-| {Binding DataType} | L2955–2955 |
-| {Binding ReadValue} | L2956–2956 |
-| {Binding ValueBrush} | L2959–2959 |
-| {Binding PollMs} | L2964–2964 |
-| {Binding CurrentScreen.Monitor.MelsecWriteLockText} | L2981–2981 |
-| {Binding CurrentScreen.Monitor.ToggleMelsecWriteLockCommand} | L2982–2982 |
-| {Binding CurrentScreen.Monitor.IsMelsecWriteLockVisible} | L2994–2994 |
-| {Binding CurrentScreen.Monitor.IsMelsecWriteUnlocked} | L2997–2997 |
-| {Binding CurrentScreen.Monitor.MelsecWriteRows} | L3007–3007 |
-| {Binding Id} | L3021–3021 |
-| {Binding Group} | L3022–3022 |
-| {Binding Address} | L3023–3023 |
-| {Binding DataType} | L3024–3024 |
-| {Binding ReadValue} | L3025–3025 |
-| {Binding ValueBrush} | L3028–3028 |
-| {Binding WriteValue} | L3044–3044 |
-| {Binding CanWrite} | L3045–3045 |
-| {Binding UsesWriteSelection} | L3054–3054 |
-| {Binding WriteValueOptions} | L3059–3059 |
-| {Binding WriteValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L3060–3060 |
-| {Binding CanWrite} | L3061–3061 |
-| {Binding UsesWriteSelection} | L3075–3075 |
-| {Binding CanWrite} | L3093–3093 |
-| {Binding DataContext.CurrentScreen.Monitor.WriteMelsecCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L3096–3096 |
-| {Binding} | L3097–3097 |
-| {Binding} | L3118–3118 |
-| {Binding CurrentScreen.Monitor.IsPicoMotor, Converter={StaticResource BooleanToVisibilityConverter}} | L3119–3119 |
-| {Binding CurrentScreen.Monitor.IsLogViewer, Converter={StaticResource BooleanToVisibilityConverter}} | L3121–3121 |
-| {Binding CurrentScreen.Monitor.LogViewer} | L3122–3122 |
-| {Binding CurrentScreen.Monitor.IsCoordinateViewer, Converter={StaticResource BooleanToVisibilityConverter}} | L3124–3124 |
-| {Binding CurrentScreen.Monitor.CoordinateBasisOptions} | L3146–3146 |
-| {Binding BackgroundBrush} | L3157–3157 |
-| {Binding BorderBrush} | L3158–3158 |
-| {Binding TextBrush} | L3159–3159 |
-| {Binding DataContext.CurrentScreen.Monitor.SelectCoordinateBasisCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L3161–3161 |
+| {Binding Name} | L2721–2721 |
+| {Binding Value} | L2722–2722 |
+| {Binding ValueBrush} | L2725–2725 |
+| {Binding Value} | L2729–2729 |
+| {Binding CurrentScreen.Monitor.ProductHistoryRows} | L2744–2744 |
+| {Binding Time} | L2751–2751 |
+| {Binding GlassId} | L2752–2752 |
+| {Binding RecipeId} | L2753–2753 |
+| {Binding Action} | L2754–2754 |
+| {Binding Result} | L2755–2755 |
+| {Binding ResultBrush} | L2758–2758 |
+| {Binding Detail} | L2764–2764 |
+| {Binding CurrentScreen.Monitor.ProductAlignItems} | L2781–2781 |
+| {Binding Name} | L2785–2785 |
+| {Binding Value} | L2786–2786 |
+| {Binding ValueBrush} | L2789–2789 |
+| {Binding Value} | L2792–2792 |
+| {Binding CurrentScreen.Monitor.ProductDistortionItems} | L2803–2803 |
+| {Binding Name} | L2807–2807 |
+| {Binding Value} | L2808–2808 |
+| {Binding ValueBrush} | L2811–2811 |
+| {Binding Value} | L2814–2814 |
+| {Binding CurrentScreen.Monitor.ProductProcessItems} | L2834–2834 |
+| {Binding Name} | L2838–2838 |
+| {Binding Value} | L2839–2839 |
+| {Binding ValueBrush} | L2842–2842 |
+| {Binding Value} | L2845–2845 |
+| {Binding CurrentScreen.Monitor.ProductRecipeItems} | L2856–2856 |
+| {Binding Name} | L2860–2860 |
+| {Binding Value} | L2861–2861 |
+| {Binding CurrentScreen.Monitor.ProductReviewItems} | L2878–2878 |
+| {Binding Name} | L2882–2882 |
+| {Binding Value} | L2883–2883 |
+| {Binding ValueBrush} | L2886–2886 |
+| {Binding Value} | L2889–2889 |
+| {Binding CurrentScreen.Monitor.ProductReviewRows} | L2900–2900 |
+| {Binding Shot} | L2903–2903 |
+| {Binding CellNo} | L2904–2904 |
+| {Binding BeamNo} | L2905–2905 |
+| {Binding ErrorX} | L2906–2906 |
+| {Binding ErrorY} | L2907–2907 |
+| {Binding Judge} | L2908–2908 |
+| {Binding JudgeBrush} | L2911–2911 |
+| {Binding CurrentScreen.Monitor.IsMelsec, Converter={StaticResource BooleanToVisibilityConverter}} | L2925–2925 |
+| {Binding CurrentScreen.Monitor.MelsecGroups} | L2954–2954 |
+| {Binding CurrentScreen.Monitor.SelectedMelsecGroupOption, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L2957–2957 |
+| {Binding CurrentScreen.Monitor.SelectMelsecGroupCommand} | L2964–2964 |
+| {Binding CurrentScreen.Monitor.SelectedMelsecGroupOption} | L2965–2965 |
+| {Binding CurrentScreen.Monitor.MelsecReadRows} | L2982–2982 |
+| {Binding Id} | L2996–2996 |
+| {Binding Group} | L2997–2997 |
+| {Binding Address} | L2998–2998 |
+| {Binding DataType} | L2999–2999 |
+| {Binding ReadValue} | L3000–3000 |
+| {Binding ValueBrush} | L3003–3003 |
+| {Binding PollMs} | L3008–3008 |
+| {Binding CurrentScreen.Monitor.MelsecWriteLockText} | L3025–3025 |
+| {Binding CurrentScreen.Monitor.ToggleMelsecWriteLockCommand} | L3026–3026 |
+| {Binding CurrentScreen.Monitor.IsMelsecWriteLockVisible} | L3038–3038 |
+| {Binding CurrentScreen.Monitor.IsMelsecWriteUnlocked} | L3041–3041 |
+| {Binding CurrentScreen.Monitor.MelsecWriteRows} | L3051–3051 |
+| {Binding Id} | L3065–3065 |
+| {Binding Group} | L3066–3066 |
+| {Binding Address} | L3067–3067 |
+| {Binding DataType} | L3068–3068 |
+| {Binding ReadValue} | L3069–3069 |
+| {Binding ValueBrush} | L3072–3072 |
+| {Binding WriteValue} | L3088–3088 |
+| {Binding CanWrite} | L3089–3089 |
+| {Binding UsesWriteSelection} | L3098–3098 |
+| {Binding WriteValueOptions} | L3103–3103 |
+| {Binding WriteValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L3104–3104 |
+| {Binding CanWrite} | L3105–3105 |
+| {Binding UsesWriteSelection} | L3119–3119 |
+| {Binding CanWrite} | L3137–3137 |
+| {Binding DataContext.CurrentScreen.Monitor.WriteMelsecCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L3140–3140 |
+| {Binding} | L3141–3141 |
 | {Binding} | L3162–3162 |
-| {Binding Name} | L3163–3163 |
-| {Binding IsChecked, ElementName=CoordinatePositionValuesToggle} | L3188–3188 |
-| {Binding CurrentScreen.Monitor.CoordinateValueRows} | L3200–3200 |
-| {Binding Source} | L3208–3208 |
-| {Binding Parameter} | L3209–3209 |
-| {Binding Value} | L3210–3210 |
-| {Binding Unit} | L3211–3211 |
-| {Binding CurrentScreen.Monitor.CoordinateGlassPreviewSummary} | L3318–3318 |
-| {Binding CurrentScreen.Monitor.CoordinateGlassPreviewImage} | L3328–3328 |
-| {Binding CurrentScreen.Monitor.CoordinateCellPreviewLabels} | L3332–3332 |
-| {Binding CellNo} | L3337–3337 |
-| {Binding Width} | L3338–3338 |
-| {Binding Height} | L3339–3339 |
-| {Binding DataContext.CurrentScreen.Monitor.SelectCoordinateCellCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L3340–3340 |
-| {Binding CellNo} | L3341–3341 |
-| {Binding IsSelected} | L3370–3370 |
-| {Binding CurrentScreen.Monitor.CoordinateSelectedCellName} | L3429–3429 |
-| {Binding CurrentScreen.Monitor.CoordinateShotMapSurfaceWidth} | L3483–3483 |
-| {Binding CurrentScreen.Monitor.CoordinateShotMapSurfaceHeight} | L3484–3484 |
-| {Binding CurrentScreen.Monitor.CoordinateShotMapImage} | L3488–3488 |
-| {Binding CurrentScreen.Monitor.CoordinateHasShotMap} | L3505–3505 |
-| {Binding CurrentScreen.Monitor.CoordinateCalculationSummary} | L3536–3536 |
-| {Binding CurrentScreen.Monitor.CoordinateCalculationRows} | L3549–3549 |
-| {Binding Description} | L3560–3560 |
-| {Binding IsResult} | L3562–3562 |
-| {Binding IsSelected, Mode=OneWay} | L3574–3574 |
-| {Binding DataContext.CurrentScreen.Monitor.ToggleCoordinateOffsetCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L3578–3578 |
-| {Binding} | L3579–3579 |
-| {Binding IsSelectable} | L3584–3584 |
-| {Binding Step} | L3594–3594 |
-| {Binding X} | L3595–3595 |
-| {Binding Y} | L3596–3596 |
-| {Binding CurrentScreen.Monitor.CoordinateOffsetPreviewMinimumText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L3633–3633 |
-| {Binding CurrentScreen.Monitor.CoordinateOffsetPreviewMaximumText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L3650–3650 |
-| {Binding CurrentScreen.Monitor.CoordinateOffsetPreviewGridText} | L3656–3656 |
-| {Binding DataContext.CurrentScreen.Monitor.ApplyCoordinateOffsetPreviewRangeCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L3669–3669 |
-| {Binding CurrentScreen.Monitor.CoordinateOffsetPreviewImage} | L3672–3672 |
-| {Binding CurrentScreen.Monitor.CoordinateHasCalculationRows} | L3684–3684 |
-| {Binding CurrentScreen.Monitor.CoordinateShotCoordinateSummary} | L3729–3729 |
-| {Binding CurrentScreen.Monitor.CoordinateShotCoordinateRows} | L3737–3737 |
-| {Binding CurrentScreen.Monitor.CoordinateSelectedShotCoordinateRow, Mode=OneWay} | L3738–3738 |
-| {Binding Shot} | L3754–3754 |
-| {Binding IsSelected} | L3756–3756 |
-| {Binding Shot} | L3765–3765 |
-| {Binding Head} | L3766–3766 |
-| {Binding X} | L3767–3767 |
-| {Binding Y} | L3768–3768 |
-| {Binding State} | L3772–3772 |
-| {Binding State} | L3780–3780 |
-| {Binding State} | L3783–3783 |
-| {Binding CurrentScreen.Monitor.CoordinateHasShotCoordinateRows} | L3801–3801 |
-| {Binding CurrentScreen.Monitor.IsGenericDevice, Converter={StaticResource BooleanToVisibilityConverter}} | L3824–3824 |
-| {Binding CurrentScreen.Monitor.StatusPanelTitle} | L3833–3833 |
-| {Binding CurrentScreen.Monitor.StatusRows} | L3836–3836 |
-| {Binding Item} | L3842–3842 |
-| {Binding Value} | L3843–3843 |
-| {Binding State} | L3844–3844 |
-| {Binding Description} | L3845–3845 |
-| {Binding CurrentScreen.Monitor.ParameterPanelTitle} | L3854–3854 |
-| {Binding CurrentScreen.Monitor.ParameterRows} | L3857–3857 |
-| {Binding Parameter} | L3863–3863 |
-| {Binding Value} | L3864–3864 |
-| {Binding Unit} | L3865–3865 |
+| {Binding CurrentScreen.Monitor.IsPicoMotor, Converter={StaticResource BooleanToVisibilityConverter}} | L3163–3163 |
+| {Binding CurrentScreen.Monitor.IsLogViewer, Converter={StaticResource BooleanToVisibilityConverter}} | L3165–3165 |
+| {Binding CurrentScreen.Monitor.LogViewer} | L3166–3166 |
+| {Binding CurrentScreen.Monitor.IsCoordinateViewer, Converter={StaticResource BooleanToVisibilityConverter}} | L3168–3168 |
+| {Binding CurrentScreen.Monitor.CoordinateBasisOptions} | L3190–3190 |
+| {Binding BackgroundBrush} | L3201–3201 |
+| {Binding BorderBrush} | L3202–3202 |
+| {Binding TextBrush} | L3203–3203 |
+| {Binding DataContext.CurrentScreen.Monitor.SelectCoordinateBasisCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L3205–3205 |
+| {Binding} | L3206–3206 |
+| {Binding Name} | L3207–3207 |
+| {Binding IsChecked, ElementName=CoordinatePositionValuesToggle} | L3232–3232 |
+| {Binding CurrentScreen.Monitor.CoordinateValueRows} | L3244–3244 |
+| {Binding Source} | L3252–3252 |
+| {Binding Parameter} | L3253–3253 |
+| {Binding Value} | L3254–3254 |
+| {Binding Unit} | L3255–3255 |
+| {Binding CurrentScreen.Monitor.CoordinateGlassPreviewSummary} | L3362–3362 |
+| {Binding CurrentScreen.Monitor.CoordinateGlassPreviewImage} | L3372–3372 |
+| {Binding CurrentScreen.Monitor.CoordinateCellPreviewLabels} | L3376–3376 |
+| {Binding CellNo} | L3381–3381 |
+| {Binding Width} | L3382–3382 |
+| {Binding Height} | L3383–3383 |
+| {Binding DataContext.CurrentScreen.Monitor.SelectCoordinateCellCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L3384–3384 |
+| {Binding CellNo} | L3385–3385 |
+| {Binding IsSelected} | L3414–3414 |
+| {Binding CurrentScreen.Monitor.CoordinateSelectedCellName} | L3473–3473 |
+| {Binding CurrentScreen.Monitor.CoordinateShotMapSurfaceWidth} | L3527–3527 |
+| {Binding CurrentScreen.Monitor.CoordinateShotMapSurfaceHeight} | L3528–3528 |
+| {Binding CurrentScreen.Monitor.CoordinateShotMapImage} | L3532–3532 |
+| {Binding CurrentScreen.Monitor.CoordinateHasShotMap} | L3549–3549 |
+| {Binding CurrentScreen.Monitor.CoordinateCalculationSummary} | L3580–3580 |
+| {Binding CurrentScreen.Monitor.CoordinateCalculationRows} | L3593–3593 |
+| {Binding Description} | L3604–3604 |
+| {Binding IsResult} | L3606–3606 |
+| {Binding IsSelected, Mode=OneWay} | L3618–3618 |
+| {Binding DataContext.CurrentScreen.Monitor.ToggleCoordinateOffsetCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L3622–3622 |
+| {Binding} | L3623–3623 |
+| {Binding IsSelectable} | L3628–3628 |
+| {Binding Step} | L3638–3638 |
+| {Binding X} | L3639–3639 |
+| {Binding Y} | L3640–3640 |
+| {Binding CurrentScreen.Monitor.CoordinateOffsetPreviewMinimumText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L3677–3677 |
+| {Binding CurrentScreen.Monitor.CoordinateOffsetPreviewMaximumText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L3694–3694 |
+| {Binding CurrentScreen.Monitor.CoordinateOffsetPreviewGridText} | L3700–3700 |
+| {Binding DataContext.CurrentScreen.Monitor.ApplyCoordinateOffsetPreviewRangeCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L3713–3713 |
+| {Binding CurrentScreen.Monitor.CoordinateOffsetPreviewImage} | L3716–3716 |
+| {Binding CurrentScreen.Monitor.CoordinateHasCalculationRows} | L3728–3728 |
+| {Binding CurrentScreen.Monitor.CoordinateShotCoordinateSummary} | L3773–3773 |
+| {Binding CurrentScreen.Monitor.CoordinateShotCoordinateRows} | L3781–3781 |
+| {Binding CurrentScreen.Monitor.CoordinateSelectedShotCoordinateRow, Mode=OneWay} | L3782–3782 |
+| {Binding Shot} | L3798–3798 |
+| {Binding IsSelected} | L3800–3800 |
+| {Binding Shot} | L3809–3809 |
+| {Binding Head} | L3810–3810 |
+| {Binding X} | L3811–3811 |
+| {Binding Y} | L3812–3812 |
+| {Binding State} | L3816–3816 |
+| {Binding State} | L3824–3824 |
+| {Binding State} | L3827–3827 |
+| {Binding CurrentScreen.Monitor.CoordinateHasShotCoordinateRows} | L3845–3845 |
+| {Binding CurrentScreen.Monitor.IsGenericDevice, Converter={StaticResource BooleanToVisibilityConverter}} | L3868–3868 |
+| {Binding CurrentScreen.Monitor.StatusPanelTitle} | L3877–3877 |
+| {Binding CurrentScreen.Monitor.StatusRows} | L3880–3880 |
+| {Binding Item} | L3886–3886 |
+| {Binding Value} | L3887–3887 |
+| {Binding State} | L3888–3888 |
+| {Binding Description} | L3889–3889 |
+| {Binding CurrentScreen.Monitor.ParameterPanelTitle} | L3898–3898 |
+| {Binding CurrentScreen.Monitor.ParameterRows} | L3901–3901 |
+| {Binding Parameter} | L3907–3907 |
+| {Binding Value} | L3908–3908 |
+| {Binding Unit} | L3909–3909 |
 
 ## 원문 전체 주석 해설본
 

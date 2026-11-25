@@ -1,0 +1,58 @@
+{
+  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "passed": true,
+  "reviewer": "/root/a3_baseline_check_1117",
+  "counterReviewer": "/root/a3_architecture_1116",
+  "outboundArchitectureReview": {
+    "chapters": [
+      "01-startup-and-composition.md",
+      "02-recipe-settings-and-csv.md",
+      "03-coordinate-script-and-mof.md",
+      "04-product-and-station-lifecycle.md",
+      "07-change-impact-and-offline-reference.md"
+    ],
+    "sourceChecks": [
+      "SIMPLE0/INSPECTION1 + InspectionReviewData 조립",
+      "AK Margin 설정 출처와 Default 합성 순서 예외",
+      "CStationProcess.ResetStageRequestsAsync 3912–3958",
+      "CRootView.TryEnterPmLock 1272–1330",
+      "CMenuPm.Build/수명 표시 34–90"
+    ],
+    "result": "필수 수정 모순 없음. INIT의 정지/출력 readback과 전체 홈복귀·물리 안전 보증을 구분했고 PM 미정의 로그 타입/저장 계약의 미확인을 유지함."
+  },
+  "inboundReview": {
+    "chapters": 7,
+    "topics": [
+      "Margin 계산",
+      "MeasuredRows",
+      "보정 적격 형식",
+      "전일자 이력 cache",
+      "FormatDouble",
+      "DOE/원빔",
+      "ShotMap 실제 범위"
+    ],
+    "requiredCorrections": [],
+    "acceptedClarifications": [
+      "일관된 Design+Margin/Review−Margin 경로의 상쇄 가능성을01장에 명시",
+      "Default의 Setting 다음 Recipe 덮기 순서·구형 객체 예외를06장에 명시"
+    ],
+    "result": "상대 담당자가 현재 설명과 관련 원문 대조 후 필수 모순 없음 회신"
+  },
+  "validation": {
+    "chapters": 7,
+    "svgs": 7,
+    "currentSourceCitations": 355,
+    "uniqueCitedSourceFiles": 33,
+    "fontOverflow": 0,
+    "pureHarnessTests": 23,
+    "pureHarnessPassed": true,
+    "equipmentBuild": false,
+    "equipmentExecution": false,
+    "vendorDllExecution": false
+  },
+  "sourceFinalCheck": {
+    "head": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+    "status": "",
+    "pushUrl": "DISABLED"
+  }
+}

@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 851123430444eedfd6a430f3cb55784c59af71755e77687a57de6896aa63f3b1 |
-| 파일 분류 | code |
+| 파일 분류 | data_schema |
 | 원본 크기/행 | 85 bytes / 1 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Data/ManualMof/LastSuccessfulMof.json) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Data/ManualMof/LastSuccessfulMof.json) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -17,15 +17,21 @@
 
 ![파일 관계도](../../../diagrams/files/8d1bae46a91b0a32d1e9.svg)
 
-## 설정/빌드 연결
+## 운영 JSON 구조 참고
 
-실행 중 생성·저장된 참고 산출물입니다. 코드·정의·실측/이력 데이터를 구분합니다.
+측정·작업 세션은 실행 코드가 아닙니다. 실제 값·동적 키·원문 사본은 복제하지 않으며 속성 경로와 자료형만 제공합니다. 파싱 실패 시에도 본문을 공개하지 않습니다.
 
-## 원문 전체 주석 해설본
+| 항목 | 값 |
+| --- | --- |
+| 파싱 상태 | parsed |
+| 원문 행 수 | 1 |
 
-[원본 모든 행과 행별 해설 보기](../../../annotated/Data/ManualMof/LastSuccessfulMof.json.annotated.txt)
-
-원본을 빠뜨리거나 임의로 줄이지 않았습니다. `L000001 |` 표시는 원본 행 번호, `// 해설`은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.
+| 속성 경로 | 자료형 |
+| --- | --- |
+| $ | object |
+| $.CompletedAt | string |
+| $.ShiftOffsetX | number |
+| $.ShiftOffsetY | number |
 
 ## 수정·재검증 체크
 

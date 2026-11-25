@@ -1,0 +1,288 @@
+{
+  "schemaVersion": "a3-independent-browser-qa/1",
+  "sourceCommit": "334b3599651b2e8e0181fd4459bafaf3cddafff3",
+  "outputPath": "<private-run>\\staging\\A3Ref",
+  "offline": true,
+  "passed": true,
+  "checks": [
+    {
+      "name": "offline_homepage_loaded",
+      "passed": true
+    },
+    {
+      "name": "initial_all_tracked_rows",
+      "passed": true
+    },
+    {
+      "name": "no_external_asset_dependencies",
+      "passed": true
+    },
+    {
+      "name": "initial_count_label",
+      "passed": true
+    },
+    {
+      "name": "newly_restored_log_source_is_in_catalog",
+      "passed": true
+    },
+    {
+      "name": "source_path_search",
+      "passed": true,
+      "actualCount": 1,
+      "expectedCount": 1
+    },
+    {
+      "name": "method_name_available_for_search",
+      "passed": true
+    },
+    {
+      "name": "method_name_search",
+      "passed": true,
+      "actualCount": 1,
+      "expectedCount": 1
+    },
+    {
+      "name": "korean_keyword_search",
+      "passed": true,
+      "actualCount": 214,
+      "expectedCount": 214
+    },
+    {
+      "name": "multiple_word_search",
+      "passed": true,
+      "actualCount": 220,
+      "expectedCount": 220
+    },
+    {
+      "name": "case_lowercase_search",
+      "passed": true,
+      "actualCount": 242,
+      "expectedCount": 242
+    },
+    {
+      "name": "case_uppercase_search",
+      "passed": true,
+      "actualCount": 242,
+      "expectedCount": 242
+    },
+    {
+      "name": "case_insensitive_identical_rows",
+      "passed": true
+    },
+    {
+      "name": "empty_result_search",
+      "passed": true,
+      "actualCount": 0,
+      "expectedCount": 0
+    },
+    {
+      "name": "kind_filter_code",
+      "passed": true,
+      "actualCount": 343,
+      "expectedCount": 343
+    },
+    {
+      "name": "kind_filter_data_schema",
+      "passed": true,
+      "actualCount": 335,
+      "expectedCount": 335
+    },
+    {
+      "name": "kind_filter_binary_reference",
+      "passed": true,
+      "actualCount": 12,
+      "expectedCount": 12
+    },
+    {
+      "name": "kind_filter_build_or_reference",
+      "passed": true,
+      "actualCount": 10,
+      "expectedCount": 10
+    },
+    {
+      "name": "combined_query_and_kind_filter",
+      "passed": true,
+      "actualCount": 75,
+      "expectedCount": 75
+    },
+    {
+      "name": "reset_restores_all_rows",
+      "passed": true,
+      "actualCount": 700,
+      "expectedCount": 700
+    },
+    {
+      "name": "all_file_navigation_targets",
+      "passed": true
+    },
+    {
+      "name": "desktop_homepage_no_horizontal_overflow",
+      "passed": true
+    },
+    {
+      "name": "homepage_images_rendered",
+      "passed": true
+    },
+    {
+      "name": "new_source_search_before_navigation",
+      "passed": true,
+      "actualCount": 1,
+      "expectedCount": 1
+    },
+    {
+      "name": "file_page_navigation",
+      "passed": true
+    },
+    {
+      "name": "file_page_source_path_heading",
+      "passed": true
+    },
+    {
+      "name": "file_page_source_commit_pinned",
+      "passed": true
+    },
+    {
+      "name": "file_page_annotation_link_exists",
+      "passed": true
+    },
+    {
+      "name": "annotation_document_opens_as_text",
+      "passed": true
+    },
+    {
+      "name": "manual_chapters_available",
+      "passed": true,
+      "chapterCount": 17
+    },
+    {
+      "name": "all_manual_pages_listed_on_homepage",
+      "passed": true
+    },
+    {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
+      "name": "manual_chapter_readable_heading",
+      "passed": true
+    },
+    {
+      "name": "all_manual_pages_open_and_images_render",
+      "passed": true,
+      "chapterCount": 17,
+      "brokenImages": 0
+    },
+    {
+      "name": "all_svg_files_render_offline",
+      "passed": true,
+      "svgFiles": 733,
+      "brokenSvg": 0
+    },
+    {
+      "name": "mobile_320_homepage_no_horizontal_overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_320_all_rows_available",
+      "passed": true
+    },
+    {
+      "name": "mobile_320_search",
+      "passed": true,
+      "actualCount": 224,
+      "expectedCount": 224
+    },
+    {
+      "name": "mobile_768_homepage_no_horizontal_overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_768_all_rows_available",
+      "passed": true
+    },
+    {
+      "name": "mobile_768_search",
+      "passed": true,
+      "actualCount": 224,
+      "expectedCount": 224
+    },
+    {
+      "name": "no_browser_javascript_errors",
+      "passed": true,
+      "errorCount": 0
+    },
+    {
+      "name": "no_external_network_requests",
+      "passed": true,
+      "requestCount": 0
+    }
+  ],
+  "javascriptErrors": [],
+  "externalRequests": [],
+  "screenshots": [
+    "tool-audit.desktop.png",
+    "tool-audit.mobile320.png",
+    "tool-audit.mobile768.png"
+  ],
+  "scope": "Static generated documentation in headless Chromium; no equipment source or device script execution."
+}

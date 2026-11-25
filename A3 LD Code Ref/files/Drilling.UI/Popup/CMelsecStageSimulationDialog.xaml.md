@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
-| 원본 SHA256 | 4c98c61bb6b0e56f2c4e11fd22fec1fb0bfe213ba3976de2329dc9db41aadbd5 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
+| 원본 SHA256 | a334c0d89d733bf7fa5e87f398a7039e6e0a1afa80af82b4d6509a0f38451a58 |
 | 파일 분류 | code |
-| 원본 크기/행 | 9,031 bytes / 111 physical lines |
+| 원본 크기/행 | 9,035 bytes / 111 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -62,7 +62,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | {Binding CanSet} | L86–86 |
 | {Binding InputHint} | L89–89 |
 | {Binding SetValueCommand} | L91–91 |
-| {Binding IsNumeric} | L95–95 |
+| {Binding HasValueInput} | L95–95 |
 
 ## 원문 전체 주석 해설본
 

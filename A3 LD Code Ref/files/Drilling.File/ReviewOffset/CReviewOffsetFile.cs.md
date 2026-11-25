@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | f14cd0667a5687200ac831d5c70d988e7c3493c5e8c285e946d98b246fb3be6f |
 | 파일 분류 | code |
 | 원본 크기/행 | 32,868 bytes / 818 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -77,7 +77,7 @@
 
 ### FieldDeclaration `ApplyHistoryDirectoryName` · L10–10
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L10-L10)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -98,7 +98,7 @@
 
 ### FieldDeclaration `ApplyHistoryFileName` · L11–11
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L11-L11)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -119,7 +119,7 @@
 
 ### FieldDeclaration `Headers` · L12–19
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:12–19](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L12-L19)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:12–19](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L12-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -140,7 +140,7 @@
 
 ### FieldDeclaration `RequiredHeaderGroups` · L21–27
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:21–27](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L21-L27)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:21–27](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L21-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -161,7 +161,7 @@
 
 ### FieldDeclaration `ApplyHistoryHeaders` · L29–34
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:29–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L29-L34)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:29–34](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L29-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -182,7 +182,7 @@
 
 ### FieldDeclaration `ApplyHistoryRequiredHeaderGroups` · L36–41
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:36–41](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L36-L41)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:36–41](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L36-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -203,7 +203,7 @@
 
 ### FieldDeclaration `_applicationRoot` · L43–43
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L43-L43)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L43-L43)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -218,7 +218,7 @@
 
 ### FieldDeclaration `_recipeRoot` · L44–44
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L44-L44)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L44-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -233,7 +233,7 @@
 
 ### FieldDeclaration `_now` · L45–45
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L45-L45)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L45-L45)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -248,7 +248,7 @@
 
 ### FieldDeclaration `_fileLock` · L46–46
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L46-L46)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -276,7 +276,7 @@
 
 ### FieldDeclaration `_applyHistoryCache` · L47–48
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:47–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L47-L48)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:47–48](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L47-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -304,7 +304,7 @@
 
 ### FieldDeclaration `_recipeApplyHistoryCache` · L49–50
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:49–50](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L49-L50)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:49–50](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L49-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -332,7 +332,7 @@
 
 ### ConstructorDeclaration `.ctor` · L60–66
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:60–66](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L60-L66)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:60–66](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L60-L66)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -352,7 +352,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CAppStartup.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CAppStartup.cs#L30-L30) | new CReviewOffsetFile | False |
+| [Drilling.UI/CAppStartup.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CAppStartup.cs#L30-L30) | new CReviewOffsetFile | False |
 
 호출하는 대상과 해석 범위:
 
@@ -379,7 +379,7 @@
 
 ### PropertyDeclaration `RootPath` · L68–68
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L68-L68)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L68-L68)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -394,7 +394,7 @@
 
 ### MethodDeclaration `LoadLatest` · L70–83
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:70–83](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L70-L83)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:70–83](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L70-L83)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -449,7 +449,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadLatestCore` · L85–110
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:85–110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L85-L110)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:85–110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L85-L110)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -469,7 +469,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L77-L77) | LoadLatestCore | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L77-L77) | LoadLatestCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -535,7 +535,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveNew` · L112–126
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:112–126](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L112-L126)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:112–126](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L112-L126)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -591,7 +591,7 @@ flowchart TD
 
 ### MethodDeclaration `FindSourceApplication` · L128–148
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:128–148](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L128-L148)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:128–148](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L128-L148)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -657,7 +657,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveNewFromSource` · L150–222
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:150–222](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L150-L222)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:150–222](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L150-L222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -784,7 +784,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveNewCore` · L224–269
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:224–269](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L224-L269)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:224–269](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L224-L269)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -806,8 +806,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L120-L120) | SaveNewCore | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:176–180](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L176-L180) | SaveNewCore | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L120-L120) | SaveNewCore | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:176–180](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L176-L180) | SaveNewCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -915,7 +915,7 @@ flowchart TD
 
 ### MethodDeclaration `RollbackLatest` · L271–403
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:271–403](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L271-L403)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:271–403](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L271-L403)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1174,7 +1174,7 @@ flowchart TD
 
 ### MethodDeclaration `EnumerateActiveFiles` · L405–410
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:405–410](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L405-L410)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:405–410](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L405-L410)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1193,9 +1193,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L103-L103) | EnumerateActiveFiles | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L289-L289) | EnumerateActiveFiles | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L332-L332) | EnumerateActiveFiles | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L103-L103) | EnumerateActiveFiles | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L289-L289) | EnumerateActiveFiles | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L332-L332) | EnumerateActiveFiles | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1216,7 +1216,7 @@ flowchart TD
 
 ### MethodDeclaration `FindSourceApplicationAcrossHistory` · L412–449
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:412–449](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L412-L449)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:412–449](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L412-L449)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1237,8 +1237,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:139–142](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L139-L142) | FindSourceApplicationAcrossHistory | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:167–170](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L167-L170) | FindSourceApplicationAcrossHistory | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:139–142](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L139-L142) | FindSourceApplicationAcrossHistory | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:167–170](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L167-L170) | FindSourceApplicationAcrossHistory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1306,7 +1306,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateRecipeApplyHistoryCache` · L451–470
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:451–470](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L451-L470)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:451–470](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L451-L470)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1326,7 +1326,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L193-L193) | UpdateRecipeApplyHistoryCache | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L193-L193) | UpdateRecipeApplyHistoryCache | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1364,7 +1364,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadApplyHistory` · L472–546
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:472–546](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L472-L546)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:472–546](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L472-L546)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1384,9 +1384,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L166-L166) | LoadApplyHistory | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L315-L315) | LoadApplyHistory | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L433-L433) | LoadApplyHistory | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L166-L166) | LoadApplyHistory | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L315-L315) | LoadApplyHistory | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L433-L433) | LoadApplyHistory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1502,7 +1502,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendApplyHistory` · L548–569
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:548–569](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L548-L569)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:548–569](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L548-L569)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1524,7 +1524,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:188–192](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L188-L192) | AppendApplyHistory | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:188–192](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L188-L192) | AppendApplyHistory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1567,7 +1567,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteApplyHistory` · L571–598
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:571–598](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L571-L598)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:571–598](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L571-L598)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1588,9 +1588,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L327-L327) | WriteApplyHistory | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:366–366](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L366-L366) | WriteApplyHistory | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:558–558](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L558-L558) | WriteApplyHistory | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L327-L327) | WriteApplyHistory | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:366–366](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L366-L366) | WriteApplyHistory | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:558–558](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L558-L558) | WriteApplyHistory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1657,7 +1657,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateApplyHistoryCache` · L600–620
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:600–620](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L600-L620)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:600–620](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L600-L620)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1677,9 +1677,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:544–544](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L544-L544) | UpdateApplyHistoryCache | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:566–568](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L566-L568) | UpdateApplyHistoryCache | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:589–589](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L589-L589) | UpdateApplyHistoryCache | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:544–544](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L544-L544) | UpdateApplyHistoryCache | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:566–568](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L566-L568) | UpdateApplyHistoryCache | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:589–589](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L589-L589) | UpdateApplyHistoryCache | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1723,7 +1723,7 @@ flowchart TD
 
 ### MethodDeclaration `ToApplyHistoryCsvRow` · L622–631
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:622–631](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L622-L631)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:622–631](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L622-L631)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1742,7 +1742,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:565–565](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L565-L565) | ToApplyHistoryCsvRow | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:565–565](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L565-L565) | ToApplyHistoryCsvRow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1766,7 +1766,7 @@ flowchart TD
 
 ### MethodDeclaration `GetApplyHistoryPath` · L633–643
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:633–643](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L633-L643)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:633–643](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L633-L643)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1786,8 +1786,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:165–165](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L165-L165) | GetApplyHistoryPath | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L313-L313) | GetApplyHistoryPath | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:165–165](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L165-L165) | GetApplyHistoryPath | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L313-L313) | GetApplyHistoryPath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1818,7 +1818,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeSourceIdentity` · L645–670
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:645–670](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L645-L670)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:645–670](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L645-L670)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1838,8 +1838,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L138-L138) | NormalizeSourceIdentity | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L163-L163) | NormalizeSourceIdentity | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L138-L138) | NormalizeSourceIdentity | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L163-L163) | NormalizeSourceIdentity | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1905,7 +1905,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeStoredSourceIdentity` · L672–678
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:672–678](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L672-L678)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:672–678](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L672-L678)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1924,7 +1924,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:504–508](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L504-L508) | NormalizeStoredSourceIdentity | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:504–508](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L504-L508) | NormalizeStoredSourceIdentity | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1954,7 +1954,7 @@ flowchart TD
 
 ### MethodDeclaration `RequireRecipeId` · L680–689
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:680–689](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L680-L689)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:680–689](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L680-L689)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1974,8 +1974,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L137-L137) | RequireRecipeId | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L162-L162) | RequireRecipeId | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L137-L137) | RequireRecipeId | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L162-L162) | RequireRecipeId | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2011,7 +2011,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateArchivePath` · L691–702
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:691–702](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L691-L702)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:691–702](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L691-L702)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2031,7 +2031,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L312-L312) | CreateArchivePath | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L312-L312) | CreateArchivePath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2077,7 +2077,7 @@ flowchart TD
 
 ### MethodDeclaration `Load` · L704–736
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:704–736](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L704-L736)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:704–736](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L704-L736)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2098,9 +2098,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L109-L109) | Load | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L305-L305) | Load | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L307-L307) | Load | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L109-L109) | Load | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L305-L305) | Load | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L307-L307) | Load | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2177,7 +2177,7 @@ flowchart TD
 
 ### MethodDeclaration `GetRecipeOffsetDirectory` · L738–741
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:738–741](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L738-L741)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:738–741](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L738-L741)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2196,11 +2196,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L97-L97) | GetRecipeOffsetDirectory | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L242-L242) | GetRecipeOffsetDirectory | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L287-L287) | GetRecipeOffsetDirectory | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:423–423](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L423-L423) | GetRecipeOffsetDirectory | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:637–637](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L637-L637) | GetRecipeOffsetDirectory | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L97-L97) | GetRecipeOffsetDirectory | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L242-L242) | GetRecipeOffsetDirectory | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L287-L287) | GetRecipeOffsetDirectory | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:423–423](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L423-L423) | GetRecipeOffsetDirectory | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:637–637](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L637-L637) | GetRecipeOffsetDirectory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2221,7 +2221,7 @@ flowchart TD
 
 ### MethodDeclaration `ToOffsetRow` · L743–766
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:743–766](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L743-L766)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:743–766](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L743-L766)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2241,7 +2241,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:719–719](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L719-L719) | ToOffsetRow | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:719–719](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L719-L719) | ToOffsetRow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2304,7 +2304,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Number` · L757–759
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:757–759](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L757-L759)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:757–759](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L757-L759)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2323,8 +2323,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:760–760](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L760-L760) | Number | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:761–761](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L761-L761) | Number | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:760–760](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L760-L760) | Number | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:761–761](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L761-L761) | Number | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2350,7 +2350,7 @@ flowchart TD
 
 ### MethodDeclaration `ToCsvRow` · L768–778
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:768–778](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L768-L778)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:768–778](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L768-L778)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2396,7 +2396,7 @@ flowchart TD
 
 ### MethodDeclaration `TryParseSavedAt` · L780–797
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:780–797](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L780-L797)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:780–797](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L780-L797)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2415,7 +2415,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:727–727](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L727-L727) | TryParseSavedAt | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:727–727](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L727-L727) | TryParseSavedAt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2454,7 +2454,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeRecipeId` · L799–802
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:799–802](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L799-L802)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:799–802](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L799-L802)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2473,10 +2473,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L91-L91) | NormalizeRecipeId | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L232-L232) | NormalizeRecipeId | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:281–281](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L281-L281) | NormalizeRecipeId | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:682–682](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L682-L682) | NormalizeRecipeId | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L91-L91) | NormalizeRecipeId | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L232-L232) | NormalizeRecipeId | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:281–281](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L281-L281) | NormalizeRecipeId | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:682–682](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L682-L682) | NormalizeRecipeId | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2497,7 +2497,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatDouble` · L804–807
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:804–807](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L804-L807)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:804–807](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L804-L807)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2516,8 +2516,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:774–774](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L774-L774) | FormatDouble | False |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:775–775](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L775-L775) | FormatDouble | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:774–774](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L774-L774) | FormatDouble | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:775–775](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L775-L775) | FormatDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2536,7 +2536,7 @@ flowchart TD
 
 ### MethodDeclaration `SanitizeFileName` · L809–817
 
-[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:809–817](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L809-L817)
+[Drilling.File/ReviewOffset/CReviewOffsetFile.cs:809–817](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L809-L817)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2555,7 +2555,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:740–740](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L740-L740) | SanitizeFileName | False |
+| [Drilling.File/ReviewOffset/CReviewOffsetFile.cs:740–740](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L740-L740) | SanitizeFileName | False |
 
 호출하는 대상과 해석 범위:
 

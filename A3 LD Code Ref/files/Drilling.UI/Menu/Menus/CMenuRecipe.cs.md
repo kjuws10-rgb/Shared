@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | e0104bc6649a3788f1f485c67e9f75eba049577a527e0e75bd7a04395ed65425 |
 | 파일 분류 | code |
 | 원본 크기/행 | 215,704 bytes / 4,736 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -858,7 +858,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `CellParameterKeys` · L21–21
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L21-L21)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -879,7 +879,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `PatternParameterKeys` · L22–22
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L22-L22)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -900,7 +900,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `GlassSettingKeys` · L23–32
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:23–32](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L23-L32)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:23–32](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L23-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -921,7 +921,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `RecipeFilesPageSize` · L33–33
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L33-L33)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -942,7 +942,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `MaximumMaskingHoleCount` · L34–34
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L34-L34)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L34-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -963,7 +963,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `MaximumCellModelTypeCount` · L35–35
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L35-L35)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L35-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -984,7 +984,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `MinimumLayoutPatternWidth` · L36–36
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L36-L36)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L36-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1005,7 +1005,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `MinimumLayoutPatternHeight` · L37–37
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L37-L37)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L37-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1026,7 +1026,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `SelectRecipeSettingKey` · L38–38
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L38-L38)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1047,7 +1047,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_recipeManager` · L39–39
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L39-L39)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1062,7 +1062,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_settingManager` · L40–40
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L40-L40)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L40-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1077,7 +1077,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectRecipeIdProvider` · L41–41
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L41-L41)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L41-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1092,7 +1092,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectRecipeIdSetter` · L42–42
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L42-L42)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L42-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1107,7 +1107,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_viewRecipeIdProvider` · L43–43
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L43-L43)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L43-L43)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1122,7 +1122,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_viewRecipeIdSetter` · L44–44
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L44-L44)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L44-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1137,7 +1137,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedCategoryProvider` · L45–45
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L45-L45)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L45-L45)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1152,7 +1152,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedCategorySetter` · L46–46
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L46-L46)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1167,7 +1167,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedGroup` · L47–47
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L47-L47)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L47-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1188,7 +1188,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedCellNo` · L48–48
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L48-L48)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L48-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1209,7 +1209,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedCellShotNo` · L49–49
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L49-L49)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L49-L49)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1230,7 +1230,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedShotGroup` · L50–50
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L50-L50)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L50-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1245,7 +1245,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_recipeCells` · L51–51
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L51-L51)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L51-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1266,7 +1266,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_recipeFiles` · L52–52
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L52-L52)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L52-L52)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1287,7 +1287,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_previewTrackedItems` · L53–53
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L53-L53)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L53-L53)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1308,7 +1308,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_headPreviewSettings` · L54–54
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L54-L54)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L54-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1329,7 +1329,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_alignKeyMargins` · L55–57
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:55–57](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L55-L57)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:55–57](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L55-L57)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1357,7 +1357,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_previewRefreshCancellation` · L58–58
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L58-L58)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L58-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1372,7 +1372,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastRecipeListSelectedFile` · L59–59
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L59-L59)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L59-L59)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1393,7 +1393,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastValidChessValues` · L60–60
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L60-L60)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L60-L60)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1421,7 +1421,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isRevertingChessValue` · L61–61
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L61-L61)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L61-L61)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1436,7 +1436,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isBatchUpdatingCellPlacement` · L62–62
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L62-L62)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L62-L62)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1451,7 +1451,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_recipeFilesPageText` · L63–63
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L63-L63)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L63-L63)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1472,7 +1472,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_recipeFilesPageIndex` · L64–64
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L64-L64)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L64-L64)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1487,7 +1487,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_recipeFilesPageCount` · L65–65
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L65-L65)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L65-L65)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1502,7 +1502,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_editScreenProvider` · L66–66
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L66-L66)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L66-L66)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1517,7 +1517,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_setStatusMessage` · L67–67
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L67-L67)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L67-L67)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1532,7 +1532,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_showLoadingScreen` · L68–68
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L68-L68)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L68-L68)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1547,7 +1547,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_refreshShellStatus` · L69–69
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L69-L69)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L69-L69)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1562,7 +1562,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_refreshCurrentScreen` · L70–70
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L70-L70)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L70-L70)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1577,7 +1577,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L71–218
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:71–218](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L71-L218)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:71–218](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L71-L218)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1608,7 +1608,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2590–2604](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L2590-L2604) | new CMenuRecipe | False |
+| [Drilling.UI/CRootView.cs:2590–2604](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L2590-L2604) | new CMenuRecipe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1699,7 +1699,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `ViewCallback` · L101–104
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:101–104](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L101-L104)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:101–104](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L101-L104)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1733,7 +1733,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `ShowPreviousRecipePageCallback` · L107–110
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:107–110](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L107-L110)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:107–110](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L107-L110)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1767,7 +1767,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `CanShowPreviousRecipePageCallback` · L112–115
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:112–115](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L112-L115)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:112–115](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L112-L115)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1801,7 +1801,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `ShowNextRecipePageCallback` · L118–121
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:118–121](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L118-L121)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:118–121](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L118-L121)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1835,7 +1835,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `CanShowNextRecipePageCallback` · L123–126
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:123–126](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L123-L126)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:123–126](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L123-L126)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1869,7 +1869,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `SelectCategoryCallback` · L129–132
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:129–132](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L129-L132)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:129–132](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L129-L132)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1903,7 +1903,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `SelectGroupCallback` · L135–138
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:135–138](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L135-L138)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:135–138](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L135-L138)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1937,7 +1937,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `SelectCellCallback` · L141–144
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:141–144](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L141-L144)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:141–144](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L141-L144)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1971,7 +1971,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `SelectPreviewCellCallback` · L147–150
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:147–150](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L147-L150)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:147–150](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L147-L150)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2005,7 +2005,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `BackToCellPreviewCallback` · L153–156
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:153–156](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L153-L156)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:153–156](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L153-L156)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2038,7 +2038,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `PreviousCellCallback` · L160–163
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:160–163](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L160-L163)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:160–163](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L160-L163)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2072,7 +2072,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `MatchesObject` · L165–168
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:165–168](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L165-L168)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:165–168](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L165-L168)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2099,7 +2099,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `NextCellCallback` · L171–174
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:171–174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L171-L174)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:171–174](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L171-L174)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2133,7 +2133,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `MatchesObject2` · L176–179
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:176–179](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L176-L179)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:176–179](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L176-L179)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2160,7 +2160,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `SelectRecipeCallback` · L183–186
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:183–186](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L183-L186)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:183–186](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L183-L186)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2194,7 +2194,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `CanSelectRecipeCallback` · L188–191
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:188–191](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L188-L191)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:188–191](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L188-L191)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2228,7 +2228,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `CreateCallback` · L194–197
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:194–197](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L194-L197)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:194–197](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L194-L197)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2262,7 +2262,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `ModifyCallback` · L200–203
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:200–203](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L200-L203)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:200–203](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L200-L203)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2296,7 +2296,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `SaveCallback` · L206–209
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:206–209](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L206-L209)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:206–209](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L206-L209)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2330,7 +2330,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `DeleteCallback` · L212–215
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:212–215](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L212-L215)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:212–215](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L212-L215)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2364,7 +2364,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `Menu` · L220–226
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:220–226](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L220-L226)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:220–226](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L220-L226)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2379,7 +2379,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_Menu` · L222–225
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:222–225](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L222-L225)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:222–225](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L222-L225)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2400,7 +2400,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OnDeactivated` · L228–231
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:228–231](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L228-L231)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:228–231](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L228-L231)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2429,7 +2429,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `RecipeList` · L233–233
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L233-L233)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L233-L233)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2444,7 +2444,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_RecipeList` · L233–233
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L233-L233)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L233-L233)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2459,7 +2459,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_RecipeList` · L233–233
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L233-L233)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L233-L233)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2480,7 +2480,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `Parameters` · L234–234
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L234-L234)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L234-L234)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2495,7 +2495,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_Parameters` · L234–234
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L234-L234)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L234-L234)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2510,7 +2510,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_Parameters` · L234–234
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L234-L234)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L234-L234)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2531,7 +2531,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `History` · L235–235
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L235-L235)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L235-L235)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2546,7 +2546,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_History` · L235–235
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L235-L235)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L235-L235)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2561,7 +2561,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_History` · L235–235
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L235-L235)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L235-L235)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2582,7 +2582,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `Actions` · L236–236
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L236-L236)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L236-L236)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2597,7 +2597,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_Actions` · L236–236
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L236-L236)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L236-L236)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2612,7 +2612,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_Actions` · L236–236
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L236-L236)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L236-L236)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2633,7 +2633,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `SelectedRecipeFile` · L237–237
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L237-L237)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L237-L237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2648,7 +2648,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_SelectedRecipeFile` · L237–237
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L237-L237)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L237-L237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2663,7 +2663,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_SelectedRecipeFile` · L237–237
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L237-L237)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L237-L237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2684,7 +2684,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `SelectRecipeFile` · L238–238
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L238-L238)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L238-L238)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2699,7 +2699,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_SelectRecipeFile` · L238–238
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L238-L238)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L238-L238)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2714,7 +2714,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_SelectRecipeFile` · L238–238
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L238-L238)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L238-L238)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2735,7 +2735,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `ViewRecipeFile` · L240–246
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:240–246](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L240-L246)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:240–246](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L240-L246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2750,7 +2750,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_ViewRecipeFile` · L242–245
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:242–245](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L242-L245)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:242–245](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L242-L245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2771,7 +2771,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `IsViewRecipeSelected` · L248–248
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L248-L248)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L248-L248)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2786,7 +2786,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_IsViewRecipeSelected` · L248–248
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L248-L248)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L248-L248)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2801,7 +2801,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_IsViewRecipeSelected` · L248–248
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L248-L248)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L248-L248)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2822,7 +2822,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `RecipeSelectionSummaryText` · L250–261
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:250–261](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L250-L261)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:250–261](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L250-L261)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2837,7 +2837,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_RecipeSelectionSummaryText` · L252–260
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:252–260](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L252-L260)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:252–260](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L252-L260)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2879,7 +2879,7 @@ flowchart TD
 
 ### PropertyDeclaration `RecipeFiles` · L263–274
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:263–274](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L263-L274)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:263–274](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L263-L274)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2894,7 +2894,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_RecipeFiles` · L265–268
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:265–268](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L265-L268)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:265–268](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L265-L268)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2915,7 +2915,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_RecipeFiles` · L270–273
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:270–273](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L270-L273)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:270–273](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L270-L273)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2948,7 +2948,7 @@ flowchart TD
 
 ### PropertyDeclaration `RecipeFilesPageText` · L276–287
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:276–287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L276-L287)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:276–287](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L276-L287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2963,7 +2963,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_RecipeFilesPageText` · L278–281
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:278–281](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L278-L281)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:278–281](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L278-L281)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2984,7 +2984,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_RecipeFilesPageText` · L283–286
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:283–286](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L283-L286)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:283–286](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L283-L286)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3017,7 +3017,7 @@ flowchart TD
 
 ### PropertyDeclaration `ItemTabs` · L289–289
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L289-L289)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L289-L289)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3032,7 +3032,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ItemTabs` · L289–289
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L289-L289)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L289-L289)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3047,7 +3047,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ItemTabs` · L289–289
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L289-L289)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L289-L289)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3068,7 +3068,7 @@ flowchart TD
 
 ### PropertyDeclaration `GroupTabs` · L290–290
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L290-L290)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L290-L290)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3083,7 +3083,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_GroupTabs` · L290–290
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L290-L290)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L290-L290)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3098,7 +3098,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_GroupTabs` · L290–290
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L290-L290)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L290-L290)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3119,7 +3119,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellOverviewRows` · L291–291
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L291-L291)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L291-L291)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3134,7 +3134,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CellOverviewRows` · L291–291
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L291-L291)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L291-L291)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3149,7 +3149,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CellOverviewRows` · L291–291
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L291-L291)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L291-L291)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3170,7 +3170,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShotGroupRows` · L292–292
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L292-L292)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L292-L292)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3185,7 +3185,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ShotGroupRows` · L292–292
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L292-L292)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L292-L292)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3200,7 +3200,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ShotGroupRows` · L292–292
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L292-L292)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L292-L292)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3221,7 +3221,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedShotGroup` · L294–322
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:294–322](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L294-L322)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:294–322](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L294-L322)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3236,7 +3236,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedShotGroup` · L296–299
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:296–299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L296-L299)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:296–299](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L296-L299)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3257,7 +3257,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_SelectedShotGroup` · L301–321
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:301–321](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L301-L321)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:301–321](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L301-L321)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3317,7 +3317,7 @@ flowchart TD
 
 ### PropertyDeclaration `GlassSizeXItem` · L324–324
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L324-L324)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L324-L324)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3332,7 +3332,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_GlassSizeXItem` · L324–324
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L324-L324)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L324-L324)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3347,7 +3347,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_GlassSizeXItem` · L324–324
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L324-L324)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L324-L324)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3368,7 +3368,7 @@ flowchart TD
 
 ### PropertyDeclaration `GlassSizeYItem` · L325–325
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L325-L325)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L325-L325)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3383,7 +3383,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_GlassSizeYItem` · L325–325
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L325-L325)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L325-L325)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3398,7 +3398,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_GlassSizeYItem` · L325–325
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L325-L325)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L325-L325)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3419,7 +3419,7 @@ flowchart TD
 
 ### PropertyDeclaration `MaxCellNumberItem` · L326–326
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L326-L326)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L326-L326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3434,7 +3434,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_MaxCellNumberItem` · L326–326
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L326-L326)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L326-L326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3449,7 +3449,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_MaxCellNumberItem` · L326–326
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L326-L326)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L326-L326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3470,7 +3470,7 @@ flowchart TD
 
 ### PropertyDeclaration `PixelSizeItem` · L327–327
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L327-L327)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L327-L327)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3485,7 +3485,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_PixelSizeItem` · L327–327
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L327-L327)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L327-L327)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3500,7 +3500,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_PixelSizeItem` · L327–327
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L327-L327)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L327-L327)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3521,7 +3521,7 @@ flowchart TD
 
 ### PropertyDeclaration `PixelCountXItem` · L328–328
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L328-L328)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L328-L328)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3536,7 +3536,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_PixelCountXItem` · L328–328
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L328-L328)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L328-L328)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3551,7 +3551,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_PixelCountXItem` · L328–328
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L328-L328)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L328-L328)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3572,7 +3572,7 @@ flowchart TD
 
 ### PropertyDeclaration `PixelCountYItem` · L329–329
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L329-L329)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L329-L329)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3587,7 +3587,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_PixelCountYItem` · L329–329
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L329-L329)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L329-L329)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3602,7 +3602,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_PixelCountYItem` · L329–329
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L329-L329)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L329-L329)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3623,7 +3623,7 @@ flowchart TD
 
 ### PropertyDeclaration `ProcessPitchItem` · L330–330
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L330-L330)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L330-L330)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3638,7 +3638,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ProcessPitchItem` · L330–330
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L330-L330)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L330-L330)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3653,7 +3653,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ProcessPitchItem` · L330–330
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L330-L330)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L330-L330)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3674,7 +3674,7 @@ flowchart TD
 
 ### PropertyDeclaration `ChessItem` · L331–331
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L331-L331)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L331-L331)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3689,7 +3689,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ChessItem` · L331–331
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L331-L331)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L331-L331)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3704,7 +3704,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ChessItem` · L331–331
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L331-L331)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L331-L331)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3725,7 +3725,7 @@ flowchart TD
 
 ### PropertyDeclaration `SplitBeamCountItem` · L332–332
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L332-L332)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L332-L332)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3740,7 +3740,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SplitBeamCountItem` · L332–332
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L332-L332)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L332-L332)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3755,7 +3755,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_SplitBeamCountItem` · L332–332
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L332-L332)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L332-L332)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3776,7 +3776,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellModelTypeCountItem` · L333–333
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L333-L333)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L333-L333)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3791,7 +3791,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CellModelTypeCountItem` · L333–333
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L333-L333)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L333-L333)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3806,7 +3806,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CellModelTypeCountItem` · L333–333
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L333-L333)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L333-L333)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3827,7 +3827,7 @@ flowchart TD
 
 ### PropertyDeclaration `AkMarginXText` · L334–334
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L334-L334)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L334-L334)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3854,7 +3854,7 @@ flowchart TD
 
 ### PropertyDeclaration `AkMarginYText` · L335–335
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L335-L335)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L335-L335)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3881,7 +3881,7 @@ flowchart TD
 
 ### PropertyDeclaration `EscEdgeToGlassEdgeItem` · L336–336
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L336-L336)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L336-L336)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3896,7 +3896,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_EscEdgeToGlassEdgeItem` · L336–336
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L336-L336)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L336-L336)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3911,7 +3911,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_EscEdgeToGlassEdgeItem` · L336–336
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L336-L336)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L336-L336)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3932,7 +3932,7 @@ flowchart TD
 
 ### PropertyDeclaration `GlassCenterToScannerCenterItem` · L337–337
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:337–337](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L337-L337)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:337–337](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L337-L337)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3947,7 +3947,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_GlassCenterToScannerCenterItem` · L337–337
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:337–337](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L337-L337)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:337–337](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L337-L337)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3962,7 +3962,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_GlassCenterToScannerCenterItem` · L337–337
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:337–337](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L337-L337)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:337–337](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L337-L337)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3983,7 +3983,7 @@ flowchart TD
 
 ### PropertyDeclaration `DistortionKeyItems` · L338–338
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L338-L338)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L338-L338)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3998,7 +3998,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DistortionKeyItems` · L338–338
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L338-L338)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L338-L338)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4013,7 +4013,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_DistortionKeyItems` · L338–338
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L338-L338)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L338-L338)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4034,7 +4034,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsCellCategory` · L339–339
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L339-L339)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L339-L339)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4049,7 +4049,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsCellCategory` · L339–339
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L339-L339)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L339-L339)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4064,7 +4064,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_IsCellCategory` · L339–339
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L339-L339)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L339-L339)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4085,7 +4085,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsHeadCategory` · L340–340
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L340-L340)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L340-L340)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4100,7 +4100,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsHeadCategory` · L340–340
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L340-L340)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L340-L340)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4115,7 +4115,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_IsHeadCategory` · L340–340
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L340-L340)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L340-L340)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4136,7 +4136,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsZeroDefenceCategory` · L341–341
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:341–341](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L341-L341)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:341–341](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L341-L341)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4165,7 +4165,7 @@ flowchart TD
 
 ### PropertyDeclaration `ZeroDefence` · L342–342
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:342–342](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L342-L342)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:342–342](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L342-L342)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4180,7 +4180,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ZeroDefence` · L342–342
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:342–342](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L342-L342)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:342–342](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L342-L342)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4195,7 +4195,7 @@ flowchart TD
 
 ### FieldDeclaration `_isCellDetailVisible` · L344–344
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L344-L344)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L344-L344)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4210,7 +4210,7 @@ flowchart TD
 
 ### FieldDeclaration `_isCellPlacementExpanded` · L345–345
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:345–345](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L345-L345)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:345–345](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L345-L345)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4225,7 +4225,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsCellDetailVisible` · L346–352
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:346–352](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L346-L352)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:346–352](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L346-L352)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4240,7 +4240,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsCellDetailVisible` · L348–351
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:348–351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L348-L351)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:348–351](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L348-L351)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4261,7 +4261,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsCellPreviewVisible` · L354–360
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:354–360](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L354-L360)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:354–360](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L354-L360)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4276,7 +4276,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsCellPreviewVisible` · L356–359
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:356–359](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L356-L359)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:356–359](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L356-L359)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4297,7 +4297,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsCellPlacementExpanded` · L362–368
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:362–368](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L362-L368)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:362–368](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L362-L368)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4312,7 +4312,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsCellPlacementExpanded` · L364–367
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:364–367](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L364-L367)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:364–367](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L364-L367)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4333,7 +4333,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellPlacementExpandButtonText` · L370–376
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:370–376](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L370-L376)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:370–376](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L370-L376)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4348,7 +4348,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CellPlacementExpandButtonText` · L372–375
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:372–375](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L372-L375)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:372–375](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L372-L375)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4370,7 +4370,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellPreviewImage` · L378–378
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L378-L378)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L378-L378)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4385,7 +4385,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CellPreviewImage` · L378–378
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L378-L378)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L378-L378)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4400,7 +4400,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CellPreviewImage` · L378–378
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L378-L378)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L378-L378)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4421,7 +4421,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellPreviewLabels` · L379–379
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L379-L379)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L379-L379)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4436,7 +4436,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CellPreviewLabels` · L379–379
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L379-L379)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L379-L379)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4451,7 +4451,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CellPreviewLabels` · L379–379
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L379-L379)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L379-L379)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4472,7 +4472,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellPreviewSummaryText` · L380–380
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:380–380](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L380-L380)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:380–380](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L380-L380)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4487,7 +4487,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CellPreviewSummaryText` · L380–380
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:380–380](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L380-L380)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:380–380](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L380-L380)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4502,7 +4502,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CellPreviewSummaryText` · L380–380
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:380–380](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L380-L380)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:380–380](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L380-L380)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4523,7 +4523,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellShotMapImage` · L381–381
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:381–381](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L381-L381)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:381–381](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L381-L381)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4538,7 +4538,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CellShotMapImage` · L381–381
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:381–381](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L381-L381)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:381–381](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L381-L381)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4553,7 +4553,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CellShotMapImage` · L381–381
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:381–381](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L381-L381)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:381–381](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L381-L381)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4574,7 +4574,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedShotDetailImage` · L382–382
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L382-L382)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L382-L382)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4589,7 +4589,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedShotDetailImage` · L382–382
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L382-L382)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L382-L382)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4604,7 +4604,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_SelectedShotDetailImage` · L382–382
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L382-L382)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L382-L382)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4625,7 +4625,7 @@ flowchart TD
 
 ### PropertyDeclaration `HeadPreviewImage` · L383–383
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L383-L383)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L383-L383)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4640,7 +4640,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_HeadPreviewImage` · L383–383
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L383-L383)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L383-L383)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4655,7 +4655,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_HeadPreviewImage` · L383–383
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L383-L383)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L383-L383)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4676,7 +4676,7 @@ flowchart TD
 
 ### PropertyDeclaration `HeadPreviewLabels` · L384–384
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:384–384](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L384-L384)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:384–384](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L384-L384)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4691,7 +4691,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_HeadPreviewLabels` · L384–384
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:384–384](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L384-L384)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:384–384](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L384-L384)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4706,7 +4706,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_HeadPreviewLabels` · L384–384
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:384–384](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L384-L384)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:384–384](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L384-L384)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4727,7 +4727,7 @@ flowchart TD
 
 ### PropertyDeclaration `HeadPreviewSummaryText` · L385–385
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:385–385](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L385-L385)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:385–385](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L385-L385)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4742,7 +4742,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_HeadPreviewSummaryText` · L385–385
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:385–385](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L385-L385)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:385–385](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L385-L385)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4757,7 +4757,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_HeadPreviewSummaryText` · L385–385
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:385–385](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L385-L385)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:385–385](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L385-L385)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4778,7 +4778,7 @@ flowchart TD
 
 ### PropertyDeclaration `CurrentCellIndicatorText` · L387–393
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:387–393](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L387-L393)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:387–393](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L387-L393)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4793,7 +4793,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CurrentCellIndicatorText` · L389–392
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:389–392](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L389-L392)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:389–392](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L389-L392)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4814,7 +4814,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedCellNavigationText` · L395–401
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:395–401](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L395-L401)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:395–401](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L395-L401)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4829,7 +4829,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedCellNavigationText` · L397–400
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:397–400](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L397-L400)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:397–400](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L397-L400)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4857,7 +4857,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedCellShotGroupTitle` · L403–410
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:403–410](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L403-L410)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:403–410](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L403-L410)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4872,7 +4872,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedCellShotGroupTitle` · L405–409
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:405–409](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L405-L409)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:405–409](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L405-L409)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4903,7 +4903,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsSelectedCellShotMapLandscape` · L412–419
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:412–419](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L412-L419)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:412–419](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L412-L419)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4918,7 +4918,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsSelectedCellShotMapLandscape` · L414–418
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:414–418](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L414-L418)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:414–418](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L414-L418)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4948,7 +4948,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellShotMapPanelHeight` · L421–427
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:421–427](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L421-L427)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:421–427](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L421-L427)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4963,7 +4963,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CellShotMapPanelHeight` · L423–426
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:423–426](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L423-L426)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:423–426](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L423-L426)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4985,7 +4985,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellShotMapSurfaceWidth` · L429–436
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:429–436](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L429-L436)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:429–436](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L429-L436)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5000,7 +5000,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CellShotMapSurfaceWidth` · L431–435
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:431–435](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L431-L435)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:431–435](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L431-L435)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5033,7 +5033,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellShotMapSurfaceHeight` · L438–445
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:438–445](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L438-L445)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:438–445](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L438-L445)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5048,7 +5048,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CellShotMapSurfaceHeight` · L440–444
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:440–444](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L440-L444)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:440–444](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L440-L444)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5081,7 +5081,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellShotMapGridColumn` · L447–447
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:447–447](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L447-L447)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:447–447](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L447-L447)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5102,7 +5102,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellShotMapGridColumnSpan` · L448–448
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:448–448](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L448-L448)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:448–448](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L448-L448)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5123,7 +5123,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellShotMapGridRow` · L449–449
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:449–449](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L449-L449)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:449–449](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L449-L449)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5138,7 +5138,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellShotMapGridRowSpan` · L450–450
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L450-L450)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L450-L450)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5159,7 +5159,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellShotDetailGridColumn` · L451–451
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L451-L451)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L451-L451)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5180,7 +5180,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellShotDetailGridColumnSpan` · L452–452
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L452-L452)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L452-L452)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5201,7 +5201,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellShotDetailGridRow` · L453–453
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:453–453](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L453-L453)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:453–453](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L453-L453)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5222,7 +5222,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellShotDetailGridRowSpan` · L454–454
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L454-L454)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L454-L454)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5243,7 +5243,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellShotDetailVerticalGap` · L455–455
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:455–455](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L455-L455)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:455–455](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L455-L455)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5273,7 +5273,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedShotDetailGridColumn` · L456–456
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:456–456](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L456-L456)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:456–456](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L456-L456)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5288,7 +5288,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedShotDetailGridColumnSpan` · L457–457
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:457–457](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L457-L457)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:457–457](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L457-L457)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5309,7 +5309,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedShotDetailGridRow` · L458–458
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:458–458](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L458-L458)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:458–458](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L458-L458)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5324,7 +5324,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShotInformationGridColumn` · L459–459
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:459–459](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L459-L459)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:459–459](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L459-L459)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5345,7 +5345,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShotInformationGridColumnSpan` · L460–460
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L460-L460)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L460-L460)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5366,7 +5366,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShotInformationGridRow` · L461–461
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:461–461](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L461-L461)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:461–461](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L461-L461)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5387,7 +5387,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedCellExcludedTargetText` · L463–470
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:463–470](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L463-L470)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:463–470](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L463-L470)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5402,7 +5402,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedCellExcludedTargetText` · L465–469
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:465–469](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L465-L469)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:465–469](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L465-L469)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5433,7 +5433,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedCellHasExcludedTargets` · L472–478
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:472–478](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L472-L478)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:472–478](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L472-L478)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5448,7 +5448,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedCellHasExcludedTargets` · L474–477
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:474–477](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L474-L477)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:474–477](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L474-L477)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5476,7 +5476,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedShotGroupIndicatorText` · L480–486
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:480–486](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L480-L486)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:480–486](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L480-L486)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5491,7 +5491,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedShotGroupIndicatorText` · L482–485
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:482–485](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L482-L485)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:482–485](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L482-L485)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5513,7 +5513,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedShotGroupGridText` · L488–495
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:488–495](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L488-L495)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:488–495](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L488-L495)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5528,7 +5528,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedShotGroupGridText` · L490–494
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:490–494](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L490-L494)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:490–494](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L490-L494)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5559,7 +5559,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedShotGroupCenterText` · L497–503
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:497–503](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L497-L503)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:497–503](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L497-L503)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5574,7 +5574,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedShotGroupCenterText` · L499–502
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:499–502](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L499-L502)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:499–502](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L499-L502)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5596,7 +5596,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedShotGroupBeamText` · L505–512
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:505–512](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L505-L512)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:505–512](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L505-L512)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5611,7 +5611,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedShotGroupBeamText` · L507–511
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:507–511](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L507-L511)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:507–511](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L507-L511)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5641,7 +5641,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedShotGroupPixelWindowText` · L514–523
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:514–523](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L514-L523)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:514–523](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L514-L523)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5656,7 +5656,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedShotGroupPixelWindowText` · L516–522
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:516–522](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L516-L522)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:516–522](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L516-L522)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5694,7 +5694,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedShotGroupPitchText` · L525–532
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:525–532](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L525-L532)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:525–532](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L525-L532)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5709,7 +5709,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedShotGroupPitchText` · L527–531
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:527–531](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L527-L531)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:527–531](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L527-L531)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5740,7 +5740,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedShotGroupStateText` · L534–540
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:534–540](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L534-L540)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:534–540](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L534-L540)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5755,7 +5755,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedShotGroupStateText` · L536–539
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:536–539](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L536-L539)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:536–539](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L536-L539)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5776,7 +5776,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShotGroupPatternSummary` · L542–542
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:542–542](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L542-L542)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:542–542](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L542-L542)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5791,7 +5791,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ShotGroupPatternSummary` · L542–542
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:542–542](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L542-L542)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:542–542](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L542-L542)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5806,7 +5806,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ShotGroupPatternSummary` · L542–542
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:542–542](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L542-L542)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:542–542](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L542-L542)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5827,7 +5827,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedGroup` · L543–543
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:543–543](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L543-L543)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:543–543](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L543-L543)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5842,7 +5842,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedGroup` · L543–543
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:543–543](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L543-L543)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:543–543](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L543-L543)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5857,7 +5857,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_SelectedGroup` · L543–543
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:543–543](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L543-L543)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:543–543](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L543-L543)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5878,7 +5878,7 @@ flowchart TD
 
 ### PropertyDeclaration `AllManagedItems` · L544–544
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:544–544](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L544-L544)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:544–544](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L544-L544)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5893,7 +5893,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AllManagedItems` · L544–544
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:544–544](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L544-L544)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:544–544](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L544-L544)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5908,7 +5908,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_AllManagedItems` · L544–544
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:544–544](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L544-L544)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:544–544](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L544-L544)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5929,7 +5929,7 @@ flowchart TD
 
 ### PropertyDeclaration `ManagedItems` · L545–545
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:545–545](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L545-L545)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:545–545](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L545-L545)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5944,7 +5944,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ManagedItems` · L545–545
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:545–545](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L545-L545)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:545–545](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L545-L545)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5959,7 +5959,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ManagedItems` · L545–545
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:545–545](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L545-L545)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:545–545](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L545-L545)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5980,7 +5980,7 @@ flowchart TD
 
 ### FieldDeclaration `_changeHistory` · L547–547
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:547–547](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L547-L547)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:547–547](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L547-L547)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6001,7 +6001,7 @@ flowchart TD
 
 ### PropertyDeclaration `ChangeHistory` · L548–548
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:548–548](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L548-L548)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:548–548](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L548-L548)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6016,7 +6016,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ChangeHistory` · L548–548
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:548–548](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L548-L548)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:548–548](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L548-L548)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6031,7 +6031,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ChangeHistory` · L548–548
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:548–548](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L548-L548)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:548–548](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L548-L548)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6064,7 +6064,7 @@ flowchart TD
 
 ### PropertyDeclaration `StateRows` · L549–549
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:549–549](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L549-L549)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:549–549](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L549-L549)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6079,7 +6079,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_StateRows` · L549–549
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:549–549](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L549-L549)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:549–549](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L549-L549)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6094,7 +6094,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_StateRows` · L549–549
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:549–549](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L549-L549)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:549–549](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L549-L549)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6115,7 +6115,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectCommand` · L550–550
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:550–550](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L550-L550)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:550–550](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L550-L550)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6130,7 +6130,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectCommand` · L550–550
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:550–550](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L550-L550)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:550–550](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L550-L550)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6145,7 +6145,7 @@ flowchart TD
 
 ### PropertyDeclaration `PreviousRecipePageCommand` · L551–551
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:551–551](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L551-L551)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:551–551](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L551-L551)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6160,7 +6160,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_PreviousRecipePageCommand` · L551–551
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:551–551](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L551-L551)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:551–551](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L551-L551)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6175,7 +6175,7 @@ flowchart TD
 
 ### PropertyDeclaration `NextRecipePageCommand` · L552–552
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L552-L552)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L552-L552)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6190,7 +6190,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_NextRecipePageCommand` · L552–552
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L552-L552)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L552-L552)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6205,7 +6205,7 @@ flowchart TD
 
 ### PropertyDeclaration `ViewCommand` · L553–553
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:553–553](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L553-L553)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:553–553](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L553-L553)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6220,7 +6220,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ViewCommand` · L553–553
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:553–553](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L553-L553)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:553–553](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L553-L553)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6235,7 +6235,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectCategoryCommand` · L554–554
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:554–554](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L554-L554)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:554–554](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L554-L554)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6250,7 +6250,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectCategoryCommand` · L554–554
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:554–554](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L554-L554)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:554–554](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L554-L554)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6265,7 +6265,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectGroupCommand` · L555–555
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L555-L555)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L555-L555)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6280,7 +6280,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectGroupCommand` · L555–555
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L555-L555)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L555-L555)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6295,7 +6295,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectCellCommand` · L556–556
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:556–556](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L556-L556)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:556–556](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L556-L556)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6310,7 +6310,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectCellCommand` · L556–556
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:556–556](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L556-L556)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:556–556](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L556-L556)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6325,7 +6325,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectPreviewCellCommand` · L557–557
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L557-L557)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L557-L557)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6340,7 +6340,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectPreviewCellCommand` · L557–557
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L557-L557)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L557-L557)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6355,7 +6355,7 @@ flowchart TD
 
 ### PropertyDeclaration `BackToCellPreviewCommand` · L558–558
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:558–558](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L558-L558)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:558–558](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L558-L558)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6370,7 +6370,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_BackToCellPreviewCommand` · L558–558
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:558–558](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L558-L558)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:558–558](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L558-L558)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6385,7 +6385,7 @@ flowchart TD
 
 ### PropertyDeclaration `ToggleCellPlacementCommand` · L559–559
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:559–559](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L559-L559)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:559–559](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L559-L559)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6400,7 +6400,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ToggleCellPlacementCommand` · L559–559
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:559–559](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L559-L559)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:559–559](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L559-L559)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6415,7 +6415,7 @@ flowchart TD
 
 ### PropertyDeclaration `PreviousCellCommand` · L560–560
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:560–560](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L560-L560)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:560–560](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L560-L560)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6430,7 +6430,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_PreviousCellCommand` · L560–560
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:560–560](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L560-L560)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:560–560](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L560-L560)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6445,7 +6445,7 @@ flowchart TD
 
 ### PropertyDeclaration `NextCellCommand` · L561–561
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:561–561](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L561-L561)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:561–561](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L561-L561)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6460,7 +6460,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_NextCellCommand` · L561–561
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:561–561](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L561-L561)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:561–561](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L561-L561)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6475,7 +6475,7 @@ flowchart TD
 
 ### PropertyDeclaration `NavigateShotGroupCommand` · L562–562
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:562–562](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L562-L562)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:562–562](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L562-L562)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6490,7 +6490,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_NavigateShotGroupCommand` · L562–562
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:562–562](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L562-L562)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:562–562](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L562-L562)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6505,7 +6505,7 @@ flowchart TD
 
 ### PropertyDeclaration `CreateCommand` · L563–563
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:563–563](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L563-L563)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:563–563](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L563-L563)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6520,7 +6520,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CreateCommand` · L563–563
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:563–563](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L563-L563)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:563–563](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L563-L563)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6535,7 +6535,7 @@ flowchart TD
 
 ### PropertyDeclaration `ModifyCommand` · L564–564
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:564–564](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L564-L564)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:564–564](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L564-L564)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6550,7 +6550,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ModifyCommand` · L564–564
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:564–564](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L564-L564)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:564–564](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L564-L564)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6565,7 +6565,7 @@ flowchart TD
 
 ### PropertyDeclaration `SaveCommand` · L565–565
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:565–565](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L565-L565)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:565–565](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L565-L565)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6580,7 +6580,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SaveCommand` · L565–565
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:565–565](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L565-L565)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:565–565](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L565-L565)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6595,7 +6595,7 @@ flowchart TD
 
 ### PropertyDeclaration `DeleteCommand` · L566–566
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L566-L566)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L566-L566)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6610,7 +6610,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DeleteCommand` · L566–566
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L566-L566)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L566-L566)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6625,7 +6625,7 @@ flowchart TD
 
 ### MethodDeclaration `Build` · L568–691
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:568–691](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L568-L691)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:568–691](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L568-L691)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6904,7 +6904,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L608–611
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:608–611](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L608-L611)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:608–611](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L608-L611)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6931,7 +6931,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L613–616
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:613–616](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L613-L616)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:613–616](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L613-L616)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6967,7 +6967,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesSourceGroup` · L621–624
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:621–624](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L621-L624)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:621–624](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L621-L624)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7001,7 +7001,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildDisplay` · L627–630
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:627–630](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L627-L630)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:627–630](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L627-L630)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7035,7 +7035,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildDisplay2` · L632–635
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:632–635](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L632-L635)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:632–635](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L632-L635)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7069,7 +7069,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildDisplay3` · L637–640
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:637–640](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L637-L640)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:637–640](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L637-L640)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7105,7 +7105,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem2` · L667–670
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:667–670](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L667-L670)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:667–670](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L667-L670)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7132,7 +7132,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildDisplay4` · L673–676
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:673–676](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L673-L676)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:673–676](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L673-L676)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7168,7 +7168,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildDisplay5` · L678–681
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:678–681](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L678-L681)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:678–681](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L678-L681)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7202,7 +7202,7 @@ flowchart TD
 
 ### MethodDeclaration `ShowPreviousRecipePage` · L693–703
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:693–703](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L693-L703)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:693–703](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L693-L703)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7215,7 +7215,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L109-L109) | ShowPreviousRecipePage | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L109-L109) | ShowPreviousRecipePage | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7249,7 +7249,7 @@ flowchart TD
 
 ### MethodDeclaration `ShowNextRecipePage` · L705–715
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:705–715](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L705-L715)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:705–715](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L705-L715)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7262,7 +7262,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L120-L120) | ShowNextRecipePage | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L120-L120) | ShowNextRecipePage | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7296,7 +7296,7 @@ flowchart TD
 
 ### MethodDeclaration `CanShowPreviousRecipePage` · L717–720
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:717–720](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L717-L720)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:717–720](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L717-L720)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7309,8 +7309,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L114-L114) | CanShowPreviousRecipePage | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:695–695](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L695-L695) | CanShowPreviousRecipePage | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L114-L114) | CanShowPreviousRecipePage | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:695–695](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L695-L695) | CanShowPreviousRecipePage | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -7322,7 +7322,7 @@ flowchart TD
 
 ### MethodDeclaration `CanShowNextRecipePage` · L722–725
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:722–725](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L722-L725)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:722–725](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L722-L725)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7335,8 +7335,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L125-L125) | CanShowNextRecipePage | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:707–707](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L707-L707) | CanShowNextRecipePage | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L125-L125) | CanShowNextRecipePage | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:707–707](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L707-L707) | CanShowNextRecipePage | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -7348,7 +7348,7 @@ flowchart TD
 
 ### MethodDeclaration `NotifyRecipeFilesPageCommands` · L727–731
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:727–731](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L727-L731)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:727–731](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L727-L731)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7361,9 +7361,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:701–701](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L701-L701) | NotifyRecipeFilesPageCommands | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:713–713](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L713-L713) | NotifyRecipeFilesPageCommands | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1716–1716](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1716-L1716) | NotifyRecipeFilesPageCommands | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:701–701](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L701-L701) | NotifyRecipeFilesPageCommands | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:713–713](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L713-L713) | NotifyRecipeFilesPageCommands | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1716–1716](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1716-L1716) | NotifyRecipeFilesPageCommands | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7383,7 +7383,7 @@ flowchart TD
 
 ### MethodDeclaration `View` · L733–750
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:733–750](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L733-L750)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:733–750](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L733-L750)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7402,7 +7402,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L103-L103) | View | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L103-L103) | View | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7413,7 +7413,7 @@ flowchart TD
 | 741 | recipeId.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 | 741 | GetRecipeIdFromParameter | resolved | string Drilling.UI.Menu.Menus.CMenuRecipe.GetRecipeIdFromParameter(object?) · Drilling.UI/Menu/Menus/CMenuRecipe.cs:3042 |
 | 741 | HasEditedItems | resolved | bool Drilling.UI.Menu.Menus.CMenuRecipe.HasEditedItems() · Drilling.UI/Menu/Menus/CMenuRecipe.cs:1668 |
-| 741 | CRecipeConfirmDialog.ShowConfirmation | resolved | bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:11 |
+| 741 | CRecipeConfirmDialog.ShowConfirmation | resolved | bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:12 |
 | 746 | _viewRecipeIdSetter | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
 | 747 | NotifyCommands | resolved | void Drilling.UI.Menu.Menus.CMenuRecipe.NotifyCommands() · Drilling.UI/Menu/Menus/CMenuRecipe.cs:1295 |
 | 748 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
@@ -7456,7 +7456,7 @@ flowchart TD
 
 ### MethodDeclaration `Select` · L752–781
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:752–781](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L752-L781)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:752–781](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L752-L781)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7469,7 +7469,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:185–185](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L185-L185) | Select | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:185–185](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L185-L185) | Select | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7480,7 +7480,7 @@ flowchart TD
 | 757 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
 | 761 | CanSelectViewRecipe | resolved | bool Drilling.UI.Menu.Menus.CMenuRecipe.CanSelectViewRecipe() · Drilling.UI/Menu/Menus/CMenuRecipe.cs:1653 |
 | 763 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 767 | CRecipeConfirmDialog.ShowConfirmation | resolved | bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:11 |
+| 767 | CRecipeConfirmDialog.ShowConfirmation | resolved | bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:12 |
 | 772 | _selectRecipeIdProvider | resolved · 동적 구현 선택 가능 | string System.Func<string>.Invoke() |
 | 773 | _selectRecipeIdSetter | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
 | 774 | _settingManager.SetValue | resolved | void Drilling.Common.Managers.CSettingManager.SetValue(Drilling.Common.Managers.EN_SETTING_TAB, string, string, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:73 |
@@ -7489,7 +7489,7 @@ flowchart TD
 | 777 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
 | 778 | _refreshShellStatus | resolved · 동적 구현 선택 가능 | void System.Action.Invoke() |
 | 779 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
-| 780 | CRecipeConfirmDialog.ShowCompletion | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowCompletion(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:81 |
+| 780 | CRecipeConfirmDialog.ShowCompletion | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowCompletion(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:105 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -7540,7 +7540,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectCategory` · L783–795
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:783–795](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L783-L795)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:783–795](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L783-L795)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7559,7 +7559,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L131-L131) | SelectCategory | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L131-L131) | SelectCategory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7602,7 +7602,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectGroup` · L797–807
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:797–807](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L797-L807)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:797–807](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L797-L807)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7621,7 +7621,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L137-L137) | SelectGroup | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L137-L137) | SelectGroup | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7660,7 +7660,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectCell` · L809–830
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:809–830](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L809-L830)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:809–830](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L809-L830)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7679,9 +7679,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L143-L143) | SelectCell | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:835–835](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L835-L835) | SelectCell | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:873–873](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L873-L873) | SelectCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L143-L143) | SelectCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:835–835](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L835-L835) | SelectCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:873–873](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L873-L873) | SelectCell | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7737,7 +7737,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectPreviewCell` · L832–836
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:832–836](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L832-L836)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:832–836](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L832-L836)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7756,7 +7756,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L149-L149) | SelectPreviewCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L149-L149) | SelectPreviewCell | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7777,7 +7777,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectShotGroupAt` · L838–847
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:838–847](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L838-L847)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:838–847](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L838-L847)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7827,7 +7827,7 @@ flowchart TD
 
 ### MethodDeclaration `GetShotGroupNameAt` · L849–858
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:849–858](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L849-L858)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:849–858](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L849-L858)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7877,7 +7877,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectAdjacentCell` · L860–874
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:860–874](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L860-L874)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:860–874](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L860-L874)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7896,8 +7896,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L162-L162) | SelectAdjacentCell | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L173-L173) | SelectAdjacentCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L162-L162) | SelectAdjacentCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L173-L173) | SelectAdjacentCell | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7933,7 +7933,7 @@ flowchart TD
 
 ### MethodDeclaration `NavigateShotGroup` · L876–884
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:876–884](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L876-L884)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:876–884](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L876-L884)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7978,7 +7978,7 @@ flowchart TD
 
 ### MethodDeclaration `CanNavigateShotGroup` · L886–889
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:886–889](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L886-L889)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:886–889](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L886-L889)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8012,7 +8012,7 @@ flowchart TD
 
 ### MethodDeclaration `TryGetNavigatedCellShotNo` · L891–928
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:891–928](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L891-L928)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:891–928](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L891-L928)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8032,8 +8032,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:878–878](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L878-L878) | TryGetNavigatedCellShotNo | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:888–888](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L888-L888) | TryGetNavigatedCellShotNo | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:878–878](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L878-L878) | TryGetNavigatedCellShotNo | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:888–888](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L888-L888) | TryGetNavigatedCellShotNo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8097,7 +8097,7 @@ flowchart TD
 
 ### MethodDeclaration `SetCellDetailVisible` · L930–940
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:930–940](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L930-L940)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:930–940](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L930-L940)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8116,8 +8116,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L155-L155) | SetCellDetailVisible | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:834–834](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L834-L834) | SetCellDetailVisible | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L155-L155) | SetCellDetailVisible | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:834–834](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L834-L834) | SetCellDetailVisible | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8153,7 +8153,7 @@ flowchart TD
 
 ### MethodDeclaration `ToggleCellPlacementExpanded` · L942–947
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:942–947](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L942-L947)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:942–947](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L942-L947)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8166,8 +8166,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L159-L159) | ToggleCellPlacementExpanded | False |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CRecipeView.xaml.cs#L294-L294) | recipe.ToggleCellPlacementExpanded | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L159-L159) | ToggleCellPlacementExpanded | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CRecipeView.xaml.cs#L294-L294) | recipe.ToggleCellPlacementExpanded | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8192,7 +8192,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateCellPlacementWizardContext` · L949–961
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:949–961](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L949-L961)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:949–961](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L949-L961)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8205,7 +8205,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CRecipeView.xaml.cs#L318-L318) | recipe.CreateCellPlacementWizardContext | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CRecipeView.xaml.cs#L318-L318) | recipe.CreateCellPlacementWizardContext | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8240,7 +8240,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyCellPlacementWizard` · L963–1009
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:963–1009](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L963-L1009)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:963–1009](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L963-L1009)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8259,7 +8259,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CRecipeView.xaml.cs#L324-L324) | recipe.ApplyCellPlacementWizard | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CRecipeView.xaml.cs#L324-L324) | recipe.ApplyCellPlacementWizard | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8354,7 +8354,7 @@ flowchart TD
 
 ### MethodDeclaration `SetManagedValue` · L1011–1018
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1011–1018](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1011-L1018)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1011–1018](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1011-L1018)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8374,9 +8374,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:996–996](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L996-L996) | SetManagedValue | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:997–997](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L997-L997) | SetManagedValue | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:998–998](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L998-L998) | SetManagedValue | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:996–996](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L996-L996) | SetManagedValue | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:997–997](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L997-L997) | SetManagedValue | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:998–998](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L998-L998) | SetManagedValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8407,7 +8407,7 @@ flowchart TD
 
 ### MethodDeclaration `CalculatePlacementWizardGridIndex` · L1020–1030
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1020–1030](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1020-L1030)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1020–1030](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1020-L1030)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8429,7 +8429,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:984–984](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L984-L984) | CalculatePlacementWizardGridIndex | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:984–984](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L984-L984) | CalculatePlacementWizardGridIndex | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8465,7 +8465,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatWizardDouble` · L1032–1035
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1032–1035](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1032-L1035)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1032–1035](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1032-L1035)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8484,8 +8484,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:996–996](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L996-L996) | FormatWizardDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:997–997](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L997-L997) | FormatWizardDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:996–996](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L996-L996) | FormatWizardDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:997–997](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L997-L997) | FormatWizardDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8504,7 +8504,7 @@ flowchart TD
 
 ### MethodDeclaration `Save` · L1037–1074
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1037–1074](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1037-L1074)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1037–1074](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1037-L1074)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8525,15 +8525,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L208-L208) | Save | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L208-L208) | Save | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1039 | CRecipeConfirmDialog.ShowConfirmation | resolved | bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:11 |
-| 1040 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
-| 1041 | CRecipeConfirmDialog.ShowCompletion | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowCompletion(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:81 |
+| 1039 | CRecipeConfirmDialog.ShowConfirmation | resolved | bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:12 |
+| 1040 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:110 |
+| 1041 | CRecipeConfirmDialog.ShowCompletion | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowCompletion(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:105 |
 | 1042 | Path.GetFileNameWithoutExtension | resolved | string? System.IO.Path.GetFileNameWithoutExtension(string?) |
 | 1043 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
 | 1045 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
@@ -8623,7 +8623,7 @@ flowchart TD
 
 ### MethodDeclaration `Modify` · L1076–1174
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1076–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1076-L1174)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1076–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1076-L1174)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8644,14 +8644,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L202-L202) | Modify | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L202-L202) | Modify | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 1082 | ShowRecipeNameDialog | resolved | string? Drilling.UI.Menu.Menus.CMenuRecipe.ShowRecipeNameDialog(string, string, string, System.Func<string, string>?) · Drilling.UI/Menu/Menus/CMenuRecipe.cs:3117 |
-| 1084 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
+| 1084 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:110 |
 | 1085 | GetRecipeIdFromParameter | resolved | string Drilling.UI.Menu.Menus.CMenuRecipe.GetRecipeIdFromParameter(object?) · Drilling.UI/Menu/Menus/CMenuRecipe.cs:3042 |
 | 1086 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
 | 1088 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
@@ -8813,7 +8813,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L1099–1102
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1099–1102](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1099-L1102)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1099–1102](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1099-L1102)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8849,7 +8849,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsIsEdited` · L1132–1135
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1132–1135](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1132-L1135)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1132–1135](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1132-L1135)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8876,7 +8876,7 @@ flowchart TD
 
 ### MethodDeclaration `Create` · L1176–1240
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1176–1240](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1176-L1240)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1176–1240](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1176-L1240)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8897,14 +8897,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:196–196](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L196-L196) | Create | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:196–196](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L196-L196) | Create | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 1182 | ShowRecipeNameDialog | resolved | string? Drilling.UI.Menu.Menus.CMenuRecipe.ShowRecipeNameDialog(string, string, string, System.Func<string, string>?) · Drilling.UI/Menu/Menus/CMenuRecipe.cs:3117 |
-| 1184 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
+| 1184 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:110 |
 | 1187 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
 | 1191 | _recipeManager.LoadRecipes | resolved | System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_RECIPE_DEFINITION>> Drilling.Common.Managers.CRecipeManager.LoadRecipes(System.Threading.CancellationToken) · Drilling.Common/Managers/CRecipeManager.cs:40 |
 | 1197 | GetRecipeIdFromParameter | resolved | string Drilling.UI.Menu.Menus.CMenuRecipe.GetRecipeIdFromParameter(object?) · Drilling.UI/Menu/Menus/CMenuRecipe.cs:3042 |
@@ -9025,7 +9025,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L1192–1195
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1192–1195](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1192-L1195)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1192–1195](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1192-L1195)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9061,7 +9061,7 @@ flowchart TD
 
 ### MethodDeclaration `Delete` · L1242–1293
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1242–1293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1242-L1293)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1242–1293](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1242-L1293)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9083,14 +9083,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L214-L214) | Delete | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L214-L214) | Delete | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1251 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
-| 1252 | CRecipeConfirmDialog.ShowCompletion | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowCompletion(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:81 |
+| 1251 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:110 |
+| 1252 | CRecipeConfirmDialog.ShowCompletion | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowCompletion(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:105 |
 | 1253 | GetRecipeIdFromParameter | resolved | string Drilling.UI.Menu.Menus.CMenuRecipe.GetRecipeIdFromParameter(object?) · Drilling.UI/Menu/Menus/CMenuRecipe.cs:3042 |
 | 1254 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
 | 1256 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
@@ -9189,7 +9189,7 @@ flowchart TD
 
 ### MethodDeclaration `NotifyCommands` · L1295–1301
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1295–1301](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1295-L1301)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1295–1301](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1295-L1301)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9202,14 +9202,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:747–747](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L747-L747) | NotifyCommands | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:776–776](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L776-L776) | NotifyCommands | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1068–1068](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1068-L1068) | NotifyCommands | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1170–1170](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1170-L1170) | NotifyCommands | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1236–1236](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1236-L1236) | NotifyCommands | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1288–1288](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1288-L1288) | NotifyCommands | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1383–1383](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1383-L1383) | NotifyCommands | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3093–3093](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3093-L3093) | NotifyCommands | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:747–747](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L747-L747) | NotifyCommands | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:776–776](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L776-L776) | NotifyCommands | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1068–1068](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1068-L1068) | NotifyCommands | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1170–1170](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1170-L1170) | NotifyCommands | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1236–1236](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1236-L1236) | NotifyCommands | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1288–1288](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1288-L1288) | NotifyCommands | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1383–1383](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1383-L1383) | NotifyCommands | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3093–3093](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3093-L3093) | NotifyCommands | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9233,7 +9233,7 @@ flowchart TD
 
 ### MethodDeclaration `Apply` · L1303–1384
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1303–1384](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1303-L1384)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1303–1384](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1303-L1384)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9272,7 +9272,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:642–664](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L642-L664) | Apply | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:642–664](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L642-L664) | Apply | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9415,7 +9415,7 @@ flowchart TD
 
 ### MethodDeclaration `TrackPreviewItems` · L1386–1398
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1386–1398](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1386-L1398)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1386–1398](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1386-L1398)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9434,8 +9434,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1369–1369](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1369-L1369) | TrackPreviewItems | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2784–2784](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2784-L2784) | TrackPreviewItems | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1369–1369](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1369-L1369) | TrackPreviewItems | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2784–2784](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2784-L2784) | TrackPreviewItems | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -9462,7 +9462,7 @@ flowchart TD
 
 ### MethodDeclaration `OnPreviewItemValueChanged` · L1400–1441
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1400–1441](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1400-L1441)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1400–1441](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1400-L1441)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9545,7 +9545,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshCellPreviewFromManagedItems` · L1443–1460
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1443–1460](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1443-L1460)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1443–1460](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1443-L1460)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9558,7 +9558,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1007–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1007-L1007) | RefreshCellPreviewFromManagedItems | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1007–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1007-L1007) | RefreshCellPreviewFromManagedItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9623,7 +9623,7 @@ flowchart TD
 
 ### MethodDeclaration `TryAcceptChessValue` · L1462–1484
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1462–1484](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1462-L1484)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1462–1484](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1462-L1484)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9642,7 +9642,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1428–1428](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1428-L1428) | TryAcceptChessValue | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1428–1428](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1428-L1428) | TryAcceptChessValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9650,7 +9650,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | 1464 | NormalizeChessValue | resolved | string Drilling.UI.Menu.Menus.CMenuRecipe.NormalizeChessValue(string?) · Drilling.UI/Menu/Menus/CMenuRecipe.cs:1549 |
 | 1466 | TryFindChessEmptyRow | resolved | bool Drilling.UI.Menu.Menus.CMenuRecipe.TryFindChessEmptyRow(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_RECIPE_PARAMETER_EDITOR_ITEM>, string, string, out int, out int, out int) · Drilling.UI/Menu/Menus/CMenuRecipe.cs:1486 |
-| 1472 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
+| 1472 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:110 |
 | 1476 | _lastValidChessValues.GetValueOrDefault | resolved | string System.Collections.Generic.IReadOnlyDictionary<string, string>.GetValueOrDefault<string, string>(string, string) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -9691,7 +9691,7 @@ flowchart TD
 
 ### MethodDeclaration `TryFindChessEmptyRow` · L1486–1547
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1486–1547](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1486-L1547)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1486–1547](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1486-L1547)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9715,7 +9715,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1466–1466](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1466-L1466) | TryFindChessEmptyRow | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1466–1466](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1466-L1466) | TryFindChessEmptyRow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9810,7 +9810,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeChessValue` · L1549–1552
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1549–1552](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1549-L1552)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1549–1552](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1549-L1552)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9829,8 +9829,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1348–1348](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1348-L1348) | NormalizeChessValue | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1464–1464](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1464-L1464) | NormalizeChessValue | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1348–1348](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1348-L1348) | NormalizeChessValue | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1464–1464](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1464-L1464) | NormalizeChessValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9853,7 +9853,7 @@ flowchart TD
 
 ### MethodDeclaration `ScheduleCellStructureRefresh` · L1554–1569
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1554–1569](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1554-L1569)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1554–1569](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1554-L1569)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9866,7 +9866,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1435–1435](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1435-L1435) | ScheduleCellStructureRefresh | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1435–1435](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1435-L1435) | ScheduleCellStructureRefresh | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9910,7 +9910,7 @@ flowchart TD
 
 ### MethodDeclaration `SchedulePreviewRefresh` · L1571–1604
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1571–1604](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1571-L1604)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1571–1604](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1571-L1604)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9923,7 +9923,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1439–1439](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1439-L1439) | SchedulePreviewRefresh | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1439–1439](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1439-L1439) | SchedulePreviewRefresh | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10011,7 +10011,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L1577–1580
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1577–1580](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1577-L1580)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1577–1580](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1577-L1580)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10038,7 +10038,7 @@ flowchart TD
 
 ### MethodDeclaration `ScheduleHeadPreviewRefresh` · L1606–1627
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1606–1627](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1606-L1627)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1606–1627](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1606-L1627)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10051,7 +10051,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1414–1414](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1414-L1414) | ScheduleHeadPreviewRefresh | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1414–1414](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1414-L1414) | ScheduleHeadPreviewRefresh | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10111,7 +10111,7 @@ flowchart TD
 
 ### MethodDeclaration `GetSelectedRecipe` · L1629–1646
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1629–1646](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1629-L1646)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1629–1646](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1629-L1646)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10131,8 +10131,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:575–575](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L575-L575) | GetSelectedRecipe | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:584–584](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L584-L584) | GetSelectedRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:575–575](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L575-L575) | GetSelectedRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:584–584](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L584-L584) | GetSelectedRecipe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10171,7 +10171,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L1631–1634
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1631–1634](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1631-L1634)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1631–1634](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1631-L1634)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10205,7 +10205,7 @@ flowchart TD
 
 ### MethodDeclaration `GetEditItems` · L1648–1651
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1648–1651](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1648-L1651)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1648–1651](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1648-L1651)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10226,7 +10226,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:595–595](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L595-L595) | GetEditItems | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:595–595](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L595-L595) | GetEditItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10246,7 +10246,7 @@ flowchart TD
 
 ### MethodDeclaration `CanSelectViewRecipe` · L1653–1656
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1653–1656](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1653-L1656)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1653–1656](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1653-L1656)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10259,8 +10259,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:190–190](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L190-L190) | CanSelectViewRecipe | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:761–761](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L761-L761) | CanSelectViewRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:190–190](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L190-L190) | CanSelectViewRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:761–761](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L761-L761) | CanSelectViewRecipe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10279,7 +10279,7 @@ flowchart TD
 
 ### MethodDeclaration `CanEditViewRecipe` · L1658–1661
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1658–1661](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1658-L1661)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1658–1661](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1658-L1661)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10292,12 +10292,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L205-L205) | CanEditViewRecipe | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:211–211](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L211-L211) | CanEditViewRecipe | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:666–666](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L666-L666) | CanEditViewRecipe | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1049–1049](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1049-L1049) | CanEditViewRecipe | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1092–1092](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1092-L1092) | CanEditViewRecipe | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3088–3088](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3088-L3088) | CanEditViewRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L205-L205) | CanEditViewRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:211–211](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L211-L211) | CanEditViewRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:666–666](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L666-L666) | CanEditViewRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1049–1049](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1049-L1049) | CanEditViewRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1092–1092](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1092-L1092) | CanEditViewRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3088–3088](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3088-L3088) | CanEditViewRecipe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10316,7 +10316,7 @@ flowchart TD
 
 ### MethodDeclaration `CanDeleteViewRecipe` · L1663–1666
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1663–1666](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1663-L1666)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1663–1666](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1663-L1666)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10329,8 +10329,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L217-L217) | CanDeleteViewRecipe | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1260–1260](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1260-L1260) | CanDeleteViewRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L217-L217) | CanDeleteViewRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1260–1260](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1260-L1260) | CanDeleteViewRecipe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10349,7 +10349,7 @@ flowchart TD
 
 ### MethodDeclaration `HasEditedItems` · L1668–1671
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1668–1671](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1668-L1671)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1668–1671](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1668-L1671)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10362,7 +10362,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:741–741](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L741-L741) | HasEditedItems | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:741–741](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L741-L741) | HasEditedItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10381,7 +10381,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildActions` · L1673–1676
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1673–1676](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1673-L1676)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1673–1676](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1673-L1676)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10394,7 +10394,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L646-L646) | BuildActions | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L646-L646) | BuildActions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10421,7 +10421,7 @@ flowchart TD
 
 ### MethodDeclaration `GetRecipeFileName` · L1678–1681
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1678–1681](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1678-L1681)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1678–1681](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1678-L1681)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10440,10 +10440,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:585–585](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L585-L585) | GetRecipeFileName | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:586–586](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L586-L586) | GetRecipeFileName | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1733–1733](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1733-L1733) | GetRecipeFileName | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1758–1758](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1758-L1758) | GetRecipeFileName | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:585–585](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L585-L585) | GetRecipeFileName | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:586–586](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L586-L586) | GetRecipeFileName | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1733–1733](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1733-L1733) | GetRecipeFileName | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1758–1758](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1758-L1758) | GetRecipeFileName | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -10456,7 +10456,7 @@ flowchart TD
 
 ### MethodDeclaration `SyncRecipeFilesPage` · L1683–1717
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1683–1717](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1683-L1717)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1683–1717](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1683-L1717)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10476,7 +10476,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:593–593](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L593-L593) | SyncRecipeFilesPage | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:593–593](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L593-L593) | SyncRecipeFilesPage | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10535,7 +10535,7 @@ flowchart TD
 
 ### MethodDeclaration `GetRecipeFilesPageCount` · L1719–1727
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1719–1727](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1719-L1727)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1719–1727](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1719-L1727)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10554,7 +10554,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1685–1685](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1685-L1685) | GetRecipeFilesPageCount | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1685–1685](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1685-L1685) | GetRecipeFilesPageCount | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -10577,7 +10577,7 @@ flowchart TD
 
 ### MethodDeclaration `FindRecipeFileIndex` · L1729–1740
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1729–1740](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1729-L1740)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1729–1740](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1729-L1740)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10597,7 +10597,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1688–1688](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1688-L1688) | FindRecipeFileIndex | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1688–1688](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1688-L1688) | FindRecipeFileIndex | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10633,7 +10633,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildRecipeFiles` · L1742–1765
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1742–1765](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1742-L1765)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1742–1765](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1742-L1765)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10655,7 +10655,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:650–650](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L650-L650) | BuildRecipeFiles | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:650–650](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L650-L650) | BuildRecipeFiles | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10715,7 +10715,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildManagedItems` · L1767–1801
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1767–1801](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1767-L1801)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1767–1801](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1767-L1801)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10734,7 +10734,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L594-L594) | BuildManagedItems | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L594-L594) | BuildManagedItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10777,7 +10777,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L1774–1777
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1774–1777](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1774-L1777)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1774–1777](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1774-L1777)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10811,7 +10811,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildRecipe` · L1779–1798
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1779–1798](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1779-L1798)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1779–1798](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1779-L1798)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10830,7 +10830,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1800–1800](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1800-L1800) | BuildRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1800–1800](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1800-L1800) | BuildRecipe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10861,7 +10861,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildCategories` · L1803–1831
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1803–1831](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1803-L1831)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1803–1831](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1803-L1831)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10880,7 +10880,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L597-L597) | BuildCategories | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L597-L597) | BuildCategories | False |
 
 호출하는 대상과 해석 범위:
 
@@ -10938,7 +10938,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectCategory` · L1805–1808
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1805–1808](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1805-L1808)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1805–1808](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1805-L1808)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10965,7 +10965,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L1810–1813
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1810–1813](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1810-L1813)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1810–1813](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1810-L1813)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -10999,7 +10999,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L1817–1820
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1817–1820](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1817-L1820)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1817–1820](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1817-L1820)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11033,7 +11033,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCellCount` · L1833–1849
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1833–1849](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1833-L1849)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1833–1849](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1833-L1849)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11052,12 +11052,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:596–596](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L596-L596) | GetCellCount | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:601–601](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L601-L601) | GetCellCount | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:951–951](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L951-L951) | GetCellCount | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:970–970](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L970-L970) | GetCellCount | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1445–1445](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1445-L1445) | GetCellCount | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1585–1585](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1585-L1585) | GetCellCount | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:596–596](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L596-L596) | GetCellCount | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:601–601](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L601-L601) | GetCellCount | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:951–951](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L951-L951) | GetCellCount | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:970–970](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L970-L970) | GetCellCount | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1445–1445](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1445-L1445) | GetCellCount | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1585–1585](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1585-L1585) | GetCellCount | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11108,7 +11108,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L1835–1838
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1835–1838](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1835-L1838)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1835–1838](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1835-L1838)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11142,7 +11142,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildCells` · L1851–1880
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1851–1880](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1851-L1880)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1851–1880](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1851-L1880)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11163,9 +11163,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:602–602](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L602-L602) | BuildCells | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1445–1445](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1445-L1445) | BuildCells | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1585–1585](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1585-L1585) | BuildCells | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:602–602](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L602-L602) | BuildCells | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1445–1445](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1445-L1445) | BuildCells | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1585–1585](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1585-L1585) | BuildCells | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11220,7 +11220,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSortKey` · L1862–1865
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1862–1865](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1862-L1865)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1862–1865](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1862-L1865)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11254,7 +11254,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildRecipe` · L1867–1877
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1867–1877](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1867-L1877)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1867–1877](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1867-L1877)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11324,7 +11324,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCellItemGroupOrder` · L1882–1895
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1882–1895](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1882-L1895)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1882–1895](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1882-L1895)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11343,7 +11343,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1864–1864](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1864-L1864) | GetCellItemGroupOrder | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1864–1864](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1864-L1864) | GetCellItemGroupOrder | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11379,7 +11379,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadCellDouble` · L1897–1906
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1897–1906](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1897-L1906)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1897–1906](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1897-L1906)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11399,15 +11399,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1870–1870](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1870-L1870) | ReadCellDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1871–1871](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1871-L1871) | ReadCellDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1872–1872](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1872-L1872) | ReadCellDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2559–2559](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2559-L2559) | ReadCellDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2560–2560](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2560-L2560) | ReadCellDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2561–2561](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2561-L2561) | ReadCellDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2698–2698](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2698-L2698) | ReadCellDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2699–2699](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2699-L2699) | ReadCellDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2700–2700](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2700-L2700) | ReadCellDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1870–1870](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1870-L1870) | ReadCellDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1871–1871](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1871-L1871) | ReadCellDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1872–1872](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1872-L1872) | ReadCellDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2559–2559](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2559-L2559) | ReadCellDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2560–2560](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2560-L2560) | ReadCellDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2561–2561](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2561-L2561) | ReadCellDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2698–2698](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2698-L2698) | ReadCellDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2699–2699](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2699-L2699) | ReadCellDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2700–2700](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2700-L2700) | ReadCellDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11431,7 +11431,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L1899–1902
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1899–1902](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1899-L1902)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1899–1902](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1899-L1902)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11465,7 +11465,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadCellInt` · L1908–1917
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1908–1917](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1908-L1917)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1908–1917](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1908-L1917)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11486,7 +11486,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1873–1873](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1873-L1873) | ReadCellInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1873–1873](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1873-L1873) | ReadCellInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11510,7 +11510,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesCellParameterKey` · L1910–1913
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1910–1913](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1910-L1913)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1910–1913](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1910-L1913)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11544,7 +11544,7 @@ flowchart TD
 
 ### MethodDeclaration `TryGetCellNo` · L1919–1928
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1919–1928](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1919-L1928)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1919–1928](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1919-L1928)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11563,11 +11563,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1861–1861](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1861-L1861) | TryGetCellNo | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1963–1963](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1963-L1963) | TryGetCellNo | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2628–2628](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2628-L2628) | TryGetCellNo | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2794–2794](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2794-L2794) | TryGetCellNo | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3267–3267](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3267-L3267) | TryGetCellNo | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1861–1861](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1861-L1861) | TryGetCellNo | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1963–1963](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1963-L1963) | TryGetCellNo | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2628–2628](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2628-L2628) | TryGetCellNo | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2794–2794](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2794-L2794) | TryGetCellNo | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3267–3267](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3267-L3267) | TryGetCellNo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11606,7 +11606,7 @@ flowchart TD
 
 ### MethodDeclaration `TryGetModelTypeFromModelKey` · L1930–1939
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1930–1939](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1930-L1939)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1930–1939](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1930-L1939)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11625,11 +11625,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1497–1497](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1497-L1497) | TryGetModelTypeFromModelKey | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1943–1943](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1943-L1943) | TryGetModelTypeFromModelKey | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1948–1948](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1948-L1948) | TryGetModelTypeFromModelKey | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1953–1953](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1953-L1953) | TryGetModelTypeFromModelKey | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1958–1958](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1958-L1958) | TryGetModelTypeFromModelKey | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1497–1497](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1497-L1497) | TryGetModelTypeFromModelKey | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1943–1943](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1943-L1943) | TryGetModelTypeFromModelKey | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1948–1948](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1948-L1948) | TryGetModelTypeFromModelKey | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1953–1953](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1953-L1953) | TryGetModelTypeFromModelKey | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1958–1958](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1958-L1958) | TryGetModelTypeFromModelKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11670,7 +11670,7 @@ flowchart TD
 
 ### MethodDeclaration `IsModelPitchKey` · L1941–1944
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1941–1944](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1941-L1944)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1941–1944](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1941-L1944)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11689,7 +11689,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1958–1958](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1958-L1958) | IsModelPitchKey | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1958–1958](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1958-L1958) | IsModelPitchKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11710,7 +11710,7 @@ flowchart TD
 
 ### MethodDeclaration `IsModelChessKey` · L1946–1949
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1946–1949](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1946-L1949)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1946–1949](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1946-L1949)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11729,9 +11729,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1346–1346](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1346-L1346) | IsModelChessKey | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1428–1428](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1428-L1428) | IsModelChessKey | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1958–1958](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1958-L1958) | IsModelChessKey | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1346–1346](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1346-L1346) | IsModelChessKey | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1428–1428](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1428-L1428) | IsModelChessKey | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1958–1958](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1958-L1958) | IsModelChessKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11752,7 +11752,7 @@ flowchart TD
 
 ### MethodDeclaration `IsModelChessTypeKey` · L1951–1954
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1951–1954](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1951-L1954)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1951–1954](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1951-L1954)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11771,7 +11771,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1958–1958](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1958-L1958) | IsModelChessTypeKey | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1958–1958](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1958-L1958) | IsModelChessTypeKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11792,7 +11792,7 @@ flowchart TD
 
 ### MethodDeclaration `IsModelPatternKey` · L1956–1959
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1956–1959](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1956-L1959)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1956–1959](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1956-L1959)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11834,7 +11834,7 @@ flowchart TD
 
 ### MethodDeclaration `IsMovedToCellTab` · L1961–1964
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1961–1964](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1961-L1964)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1961–1964](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1961-L1964)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11853,7 +11853,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:615–615](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L615-L615) | IsMovedToCellTab | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:615–615](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L615-L615) | IsMovedToCellTab | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11878,7 +11878,7 @@ flowchart TD
 
 ### MethodDeclaration `FindManagedItem` · L1966–1974
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1966–1974](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1966-L1974)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1966–1974](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1966-L1974)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11898,20 +11898,20 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1013–1013](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1013-L1013) | FindManagedItem | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1338–1338](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1338-L1338) | FindManagedItem | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1339–1339](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1339-L1339) | FindManagedItem | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1340–1340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1340-L1340) | FindManagedItem | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1341–1341](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1341-L1341) | FindManagedItem | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1342–1342](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1342-L1342) | FindManagedItem | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1343–1343](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1343-L1343) | FindManagedItem | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1344–1344](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1344-L1344) | FindManagedItem | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1345–1345](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1345-L1345) | FindManagedItem | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1353–1353](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1353-L1353) | FindManagedItem | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1354–1354](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1354-L1354) | FindManagedItem | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1356–1356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1356-L1356) | FindManagedItem | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1357–1357](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1357-L1357) | FindManagedItem | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1980–1980](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1980-L1980) | FindManagedItem | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1013–1013](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1013-L1013) | FindManagedItem | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1338–1338](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1338-L1338) | FindManagedItem | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1339–1339](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1339-L1339) | FindManagedItem | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1340–1340](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1340-L1340) | FindManagedItem | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1341–1341](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1341-L1341) | FindManagedItem | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1342–1342](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1342-L1342) | FindManagedItem | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1343–1343](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1343-L1343) | FindManagedItem | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1344–1344](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1344-L1344) | FindManagedItem | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1345–1345](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1345-L1345) | FindManagedItem | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1353–1353](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1353-L1353) | FindManagedItem | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1354–1354](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1354-L1354) | FindManagedItem | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1356–1356](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1356-L1356) | FindManagedItem | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1357–1357](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1357-L1357) | FindManagedItem | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1980–1980](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1980-L1980) | FindManagedItem | False |
 
 호출하는 대상과 해석 범위:
 
@@ -11930,7 +11930,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L1968–1971
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1968–1971](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1968-L1971)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1968–1971](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1968-L1971)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11964,7 +11964,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildDistortionKeyItems` · L1976–1982
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1976–1982](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1976-L1982)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1976–1982](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1976-L1982)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -11983,7 +11983,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1358–1358](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1358-L1358) | BuildDistortionKeyItems | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1358–1358](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1358-L1358) | BuildDistortionKeyItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12011,7 +12011,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsureCellPlacementItems` · L1984–2039
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1984–2039](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1984-L2039)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1984–2039](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1984-L2039)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12031,7 +12031,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:596–596](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L596-L596) | EnsureCellPlacementItems | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:596–596](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L596-L596) | EnsureCellPlacementItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12105,7 +12105,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L1988–1996
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1988–1996](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1988-L1996)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1988–1996](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1988-L1996)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12139,7 +12139,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L1990–1993
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1990–1993](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1990-L1993)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1990–1993](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1990-L1993)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12173,7 +12173,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L1998–2001
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1998–2001](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1998-L2001)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:1998–2001](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1998-L2001)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12200,7 +12200,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectKey` · L2003–2006
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2003–2006](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2003-L2006)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2003–2006](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2003-L2006)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12227,7 +12227,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCellParameterGroup` · L2041–2044
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2041–2044](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2041-L2044)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2041–2044](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2041-L2044)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12246,8 +12246,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2021–2021](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2021-L2021) | GetCellParameterGroup | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2028–2028](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2028-L2028) | GetCellParameterGroup | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2021–2021](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2021-L2021) | GetCellParameterGroup | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2028–2028](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2028-L2028) | GetCellParameterGroup | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -12259,7 +12259,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCellScopedParameterName` · L2046–2049
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2046–2049](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2046-L2049)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2046–2049](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2046-L2049)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12278,7 +12278,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2013–2013](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2013-L2013) | GetCellScopedParameterName | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2013–2013](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2013-L2013) | GetCellScopedParameterName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12298,7 +12298,7 @@ flowchart TD
 
 ### MethodDeclaration `IsCellPlacementParameter` · L2051–2054
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2051–2054](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2051-L2054)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2051–2054](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2051-L2054)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12338,7 +12338,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildCellOverviewRows` · L2056–2065
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2056–2065](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2056-L2065)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2056–2065](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2056-L2065)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12358,9 +12358,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:653–653](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L653-L653) | BuildCellOverviewRows | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1447–1447](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1447-L1447) | BuildCellOverviewRows | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1587–1587](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1587-L1587) | BuildCellOverviewRows | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:653–653](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L653-L653) | BuildCellOverviewRows | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1447–1447](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1447-L1447) | BuildCellOverviewRows | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1587–1587](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1587-L1587) | BuildCellOverviewRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12385,7 +12385,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildRecipe` · L2059–2062
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2059–2062](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2059-L2062)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2059–2062](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2059-L2062)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12419,7 +12419,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildCellModelOptions` · L2067–2071
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2067–2071](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2067-L2071)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2067–2071](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2067-L2071)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12438,7 +12438,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2058–2058](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2058-L2058) | BuildCellModelOptions | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2058–2058](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2058-L2058) | BuildCellModelOptions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12467,7 +12467,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCellModelTypeCount` · L2073–2076
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2073–2076](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2073-L2076)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2073–2076](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2073-L2076)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12486,10 +12486,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:952–952](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L952-L952) | GetCellModelTypeCount | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:971–971](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L971-L971) | GetCellModelTypeCount | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1860–1860](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1860-L1860) | GetCellModelTypeCount | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2069–2069](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2069-L2069) | GetCellModelTypeCount | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:952–952](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L952-L952) | GetCellModelTypeCount | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:971–971](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L971-L971) | GetCellModelTypeCount | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1860–1860](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1860-L1860) | GetCellModelTypeCount | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2069–2069](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2069-L2069) | GetCellModelTypeCount | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12510,7 +12510,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshCellPatternViewer` · L2078–2116
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2078–2116](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2078-L2116)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2078–2116](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2078-L2116)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12523,9 +12523,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L320-L320) | RefreshCellPatternViewer | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2750–2750](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2750-L2750) | RefreshCellPatternViewer | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2789–2789](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2789-L2789) | RefreshCellPatternViewer | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L320-L320) | RefreshCellPatternViewer | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2750–2750](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2750-L2750) | RefreshCellPatternViewer | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2789–2789](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2789-L2789) | RefreshCellPatternViewer | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12687,7 +12687,7 @@ flowchart TD
 
 ### MethodDeclaration `GetSelectedRecipeCell` · L2118–2126
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2118–2126](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2118-L2126)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2118–2126](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2118-L2126)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12700,19 +12700,19 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L407-L407) | GetSelectedRecipeCell | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:416–416](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L416-L416) | GetSelectedRecipeCell | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L433-L433) | GetSelectedRecipeCell | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:442–442](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L442-L442) | GetSelectedRecipeCell | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:467–467](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L467-L467) | GetSelectedRecipeCell | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:476–476](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L476-L476) | GetSelectedRecipeCell | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:492–492](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L492-L492) | GetSelectedRecipeCell | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:518–518](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L518-L518) | GetSelectedRecipeCell | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L529-L529) | GetSelectedRecipeCell | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:840–840](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L840-L840) | GetSelectedRecipeCell | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:851–851](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L851-L851) | GetSelectedRecipeCell | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:894–894](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L894-L894) | GetSelectedRecipeCell | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2080–2080](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2080-L2080) | GetSelectedRecipeCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L407-L407) | GetSelectedRecipeCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:416–416](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L416-L416) | GetSelectedRecipeCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L433-L433) | GetSelectedRecipeCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:442–442](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L442-L442) | GetSelectedRecipeCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:467–467](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L467-L467) | GetSelectedRecipeCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:476–476](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L476-L476) | GetSelectedRecipeCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:492–492](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L492-L492) | GetSelectedRecipeCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:518–518](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L518-L518) | GetSelectedRecipeCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L529-L529) | GetSelectedRecipeCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:840–840](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L840-L840) | GetSelectedRecipeCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:851–851](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L851-L851) | GetSelectedRecipeCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:894–894](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L894-L894) | GetSelectedRecipeCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2080–2080](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2080-L2080) | GetSelectedRecipeCell | False |
 
 호출하는 대상과 해석 범위:
 
@@ -12731,7 +12731,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L2120–2123
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2120–2123](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2120-L2123)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2120–2123](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2120-L2123)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12758,7 +12758,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildLayoutPreview` · L2128–2252
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2128–2252](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2128-L2252)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2128–2252](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2128-L2252)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -12780,9 +12780,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:655–655](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L655-L655) | BuildLayoutPreview | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1448–1448](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1448-L1448) | BuildLayoutPreview | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1588–1588](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1588-L1588) | BuildLayoutPreview | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:655–655](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L655-L655) | BuildLayoutPreview | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1448–1448](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1448-L1448) | BuildLayoutPreview | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1588–1588](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1588-L1588) | BuildLayoutPreview | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13052,7 +13052,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L2141–2145
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2141–2145](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2141-L2145)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2141–2145](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2141-L2145)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13095,7 +13095,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L2222–2231
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2222–2231](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2222-L2231)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2222–2231](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2222-L2231)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13126,7 +13126,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildMaskingAreas` · L2254–2279
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2254–2279](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2254-L2279)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2254–2279](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2254-L2279)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13146,8 +13146,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2082–2082](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2082-L2082) | BuildMaskingAreas | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2622–2622](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2622-L2622) | BuildMaskingAreas | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2082–2082](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2082-L2082) | BuildMaskingAreas | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2622–2622](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2622-L2622) | BuildMaskingAreas | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13227,7 +13227,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildEdgeMaskingArea` · L2281–2351
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2281–2351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2281-L2351)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2281–2351](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2281-L2351)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13248,8 +13248,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2083–2083](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2083-L2083) | BuildEdgeMaskingArea | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2623–2623](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2623-L2623) | BuildEdgeMaskingArea | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2083–2083](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2083-L2083) | BuildEdgeMaskingArea | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2623–2623](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2623-L2623) | BuildEdgeMaskingArea | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13369,7 +13369,7 @@ flowchart TD
 
 ### LocalFunctionStatement `CreatePositiveOffsetPoint` · L2327–2330
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2327–2330](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2327-L2330)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2327–2330](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2327-L2330)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13389,10 +13389,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2296–2296](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2296-L2296) | CreatePositiveOffsetPoint | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2297–2297](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2297-L2297) | CreatePositiveOffsetPoint | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2298–2298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2298-L2298) | CreatePositiveOffsetPoint | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2299–2299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2299-L2299) | CreatePositiveOffsetPoint | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2296–2296](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2296-L2296) | CreatePositiveOffsetPoint | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2297–2297](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2297-L2297) | CreatePositiveOffsetPoint | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2298–2298](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2298-L2298) | CreatePositiveOffsetPoint | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2299–2299](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2299-L2299) | CreatePositiveOffsetPoint | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13415,7 +13415,7 @@ flowchart TD
 
 ### LocalFunctionStatement `AddCorner` · L2332–2340
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2332–2340](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2332-L2340)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2332–2340](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2332-L2340)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13489,7 +13489,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesDouble` · L2342–2345
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2342–2345](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2342-L2345)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2342–2345](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2342-L2345)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13523,7 +13523,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesDouble2` · L2347–2350
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2347–2350](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2347-L2350)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2347–2350](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2347-L2350)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13557,7 +13557,7 @@ flowchart TD
 
 ### MethodDeclaration `ShouldUseExpandedPreviewBounds` · L2353–2356
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2353–2356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2353-L2356)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2353–2356](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2353-L2356)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13594,7 +13594,7 @@ flowchart TD
 
 ### MethodDeclaration `ExpandPreviewBounds` · L2358–2367
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2358–2367](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2358-L2367)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2358–2367](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2358-L2367)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13659,7 +13659,7 @@ flowchart TD
 
 ### MethodDeclaration `ClampPreviewCoordinate` · L2369–2373
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2369–2373](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2369-L2373)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2369–2373](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2369-L2373)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13699,7 +13699,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildLayoutPreviewSummary` · L2375–2389
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2375–2389](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2375-L2389)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2375–2389](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2375-L2389)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13723,7 +13723,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2250–2250](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2250-L2250) | BuildLayoutPreviewSummary | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2250–2250](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2250-L2250) | BuildLayoutPreviewSummary | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13761,7 +13761,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildHeadPreview` · L2391–2454
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2391–2454](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2391-L2454)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2391–2454](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2391-L2454)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13783,8 +13783,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:657–657](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L657-L657) | BuildHeadPreview | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1615–1615](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1615-L1615) | BuildHeadPreview | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:657–657](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L657-L657) | BuildHeadPreview | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1615–1615](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1615-L1615) | BuildHeadPreview | False |
 
 호출하는 대상과 해석 범위:
 
@@ -13970,7 +13970,7 @@ flowchart TD
 
 ### MethodDeclaration `CalculateHeadPreviewLaneY` · L2456–2462
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2456–2462](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2456-L2462)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2456–2462](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2456-L2462)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -13991,7 +13991,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2438–2438](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2438-L2438) | CalculateHeadPreviewLaneY | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2438–2438](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2438-L2438) | CalculateHeadPreviewLaneY | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -14010,7 +14010,7 @@ flowchart TD
 
 ### MethodDeclaration `IsSelectedHeadPreviewGroup` · L2464–2467
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2464–2467](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2464-L2467)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2464–2467](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2464-L2467)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14030,7 +14030,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2441–2441](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2441-L2441) | IsSelectedHeadPreviewGroup | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2441–2441](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2441-L2441) | IsSelectedHeadPreviewGroup | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14051,7 +14051,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawHeadPreviewScale` · L2469–2478
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2469–2478](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2469-L2478)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2469–2478](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2469-L2478)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14108,7 +14108,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawAkCenterGuides` · L2480–2498
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2480–2498](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2480-L2498)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2480–2498](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2480-L2498)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14194,7 +14194,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawAkCenterGuideText` · L2500–2505
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2500–2505](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2500-L2505)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2500–2505](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2500-L2505)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14217,8 +14217,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2496–2496](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2496-L2496) | DrawAkCenterGuideText | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2497–2497](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2497-L2497) | DrawAkCenterGuideText | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2496–2496](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2496-L2496) | DrawAkCenterGuideText | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2497–2497](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2497-L2497) | DrawAkCenterGuideText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14247,7 +14247,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawPreviewAxisIndicator` · L2507–2527
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2507–2527](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2507-L2527)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2507–2527](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2507-L2527)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14335,7 +14335,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawPreviewAxisText` · L2529–2533
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2529–2533](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2529-L2533)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2529–2533](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2529-L2533)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14357,8 +14357,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2525–2525](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2525-L2525) | DrawPreviewAxisText | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2526–2526](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2526-L2526) | DrawPreviewAxisText | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2525–2525](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2525-L2525) | DrawPreviewAxisText | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2526–2526](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2526-L2526) | DrawPreviewAxisText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14382,7 +14382,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateHeadPreviewLabel` · L2535–2540
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2535–2540](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2535-L2540)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2535–2540](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2535-L2540)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14431,7 +14431,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildCellBoundaryGeometry` · L2542–2591
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2542–2591](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2542-L2591)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2542–2591](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2542-L2591)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14458,7 +14458,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2180–2180](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2180-L2180) | BuildCellBoundaryGeometry | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2180–2180](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2180-L2180) | BuildCellBoundaryGeometry | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14550,7 +14550,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildPoint` · L2574–2579
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2574–2579](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2574-L2579)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2574–2579](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2574-L2579)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14588,7 +14588,7 @@ flowchart TD
 
 ### MethodDeclaration `AddPointCircle` · L2593–2602
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2593–2602](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2593-L2602)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2593–2602](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2593-L2602)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14662,7 +14662,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildShotGroupRows` · L2604–2685
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2604–2685](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2604-L2685)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2604–2685](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2604-L2685)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14682,9 +14682,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:672–672](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L672-L672) | BuildShotGroupRows | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1454–1454](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1454-L1454) | BuildShotGroupRows | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1593–1593](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1593-L1593) | BuildShotGroupRows | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:672–672](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L672-L672) | BuildShotGroupRows | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1454–1454](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1454-L1454) | BuildShotGroupRows | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1593–1593](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1593-L1593) | BuildShotGroupRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -14764,7 +14764,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesRecipe` · L2626–2629
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2626–2629](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2626-L2629)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2626–2629](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2626-L2629)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14800,7 +14800,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectOverrideParameterKey` · L2631–2634
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2631–2634](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2631-L2634)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2631–2634](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2631-L2634)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14827,7 +14827,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectOverrideGroupKey` · L2636–2639
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2636–2639](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2636-L2639)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2636–2639](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2636-L2639)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14854,7 +14854,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L2641–2644
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2641–2644](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2641-L2644)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2641–2644](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2641-L2644)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14888,7 +14888,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildShot` · L2647–2682
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2647–2682](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2647-L2682)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2647–2682](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2647-L2682)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14940,7 +14940,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SetShotGroupOverrideValueCallback` · L2651–2654
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2651–2654](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2651-L2654)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2651–2654](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2651-L2654)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14974,7 +14974,7 @@ flowchart TD
 
 ### MethodDeclaration `CalculateCellPatternLayout` · L2687–2702
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2687–2702](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2687-L2702)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2687–2702](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2687-L2702)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -14996,7 +14996,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2606–2606](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2606-L2606) | CalculateCellPatternLayout | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2606–2606](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2606-L2606) | CalculateCellPatternLayout | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15045,7 +15045,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildFinalShotOffsets` · L2704–2739
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2704–2739](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2704-L2739)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2704–2739](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2704-L2739)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15065,7 +15065,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2625–2625](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2625-L2625) | BuildFinalShotOffsets | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2625–2625](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2625-L2625) | BuildFinalShotOffsets | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15123,7 +15123,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectManagedParameterKey` · L2708–2711
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2708–2711](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2708-L2711)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2708–2711](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2708-L2711)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15150,7 +15150,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectManagedParameterGroupKey` · L2713–2716
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2713–2716](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2713-L2716)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2713–2716](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2713-L2716)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15177,7 +15177,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L2718–2721
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2718–2721](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2718-L2721)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2718–2721](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2718-L2721)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15211,7 +15211,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateShotGroupRows` · L2741–2761
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2741–2761](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2741-L2761)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2741–2761](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2741-L2761)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15230,9 +15230,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:672–672](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L672-L672) | UpdateShotGroupRows | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1454–1454](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1454-L1454) | UpdateShotGroupRows | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1593–1593](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1593-L1593) | UpdateShotGroupRows | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:672–672](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L672-L672) | UpdateShotGroupRows | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1454–1454](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1454-L1454) | UpdateShotGroupRows | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1593–1593](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1593-L1593) | UpdateShotGroupRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15278,7 +15278,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L2755–2758
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2755–2758](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2755-L2758)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2755–2758](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2755-L2758)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15305,7 +15305,7 @@ flowchart TD
 
 ### MethodDeclaration `SetShotGroupOverrideValue` · L2763–2790
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2763–2790](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2763-L2790)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2763–2790](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2763-L2790)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15327,7 +15327,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2653–2653](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2653-L2653) | SetShotGroupOverrideValue | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2653–2653](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2653-L2653) | SetShotGroupOverrideValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15393,7 +15393,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L2773–2776
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2773–2776](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2773-L2776)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2773–2776](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2773-L2776)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15427,7 +15427,7 @@ flowchart TD
 
 ### MethodDeclaration `IsShotGroupOverrideKey` · L2792–2800
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2792–2800](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2792-L2800)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2792–2800](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2792-L2800)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15446,8 +15446,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1423–1423](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1423-L1423) | IsShotGroupOverrideKey | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2628–2628](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2628-L2628) | IsShotGroupOverrideKey | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1423–1423](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1423-L1423) | IsShotGroupOverrideKey | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2628–2628](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2628-L2628) | IsShotGroupOverrideKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15481,7 +15481,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadManagedDouble` · L2802–2811
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2802–2811](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2802-L2811)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2802–2811](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2802-L2811)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15502,24 +15502,24 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:956–956](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L956-L956) | ReadManagedDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:957–957](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L957-L957) | ReadManagedDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1510–1510](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1510-L1510) | ReadManagedDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1858–1858](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1858-L1858) | ReadManagedDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2136–2136](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2136-L2136) | ReadManagedDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2137–2137](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2137-L2137) | ReadManagedDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2140–2140](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2140-L2140) | ReadManagedDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2402–2402](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2402-L2402) | ReadManagedDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2403–2403](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2403-L2403) | ReadManagedDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2433–2433](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2433-L2433) | ReadManagedDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2434–2434](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2434-L2434) | ReadManagedDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2435–2435](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2435-L2435) | ReadManagedDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2436–2436](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2436-L2436) | ReadManagedDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2616–2616](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2616-L2616) | ReadManagedDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2617–2617](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2617-L2617) | ReadManagedDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2695–2695](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2695-L2695) | ReadManagedDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2815–2815](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2815-L2815) | ReadManagedDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2877–2877](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2877-L2877) | ReadManagedDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:956–956](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L956-L956) | ReadManagedDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:957–957](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L957-L957) | ReadManagedDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1510–1510](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1510-L1510) | ReadManagedDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1858–1858](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1858-L1858) | ReadManagedDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2136–2136](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2136-L2136) | ReadManagedDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2137–2137](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2137-L2137) | ReadManagedDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2140–2140](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2140-L2140) | ReadManagedDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2402–2402](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2402-L2402) | ReadManagedDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2403–2403](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2403-L2403) | ReadManagedDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2433–2433](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2433-L2433) | ReadManagedDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2434–2434](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2434-L2434) | ReadManagedDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2435–2435](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2435-L2435) | ReadManagedDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2436–2436](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2436-L2436) | ReadManagedDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2616–2616](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2616-L2616) | ReadManagedDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2617–2617](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2617-L2617) | ReadManagedDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2695–2695](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2695-L2695) | ReadManagedDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2815–2815](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2815-L2815) | ReadManagedDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2877–2877](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2877-L2877) | ReadManagedDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15543,7 +15543,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L2804–2807
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2804–2807](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2804-L2807)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2804–2807](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2804-L2807)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15577,7 +15577,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadManagedFiniteDouble` · L2813–2817
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2813–2817](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2813-L2817)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2813–2817](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2813-L2817)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15598,19 +15598,19 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2266–2266](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2266-L2266) | ReadManagedFiniteDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2267–2267](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2267-L2267) | ReadManagedFiniteDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2268–2268](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2268-L2268) | ReadManagedFiniteDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2269–2269](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2269-L2269) | ReadManagedFiniteDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2289–2289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2289-L2289) | ReadManagedFiniteDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2296–2296](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2296-L2296) | ReadManagedFiniteDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2296–2296](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2296-L2296) | ReadManagedFiniteDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2297–2297](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2297-L2297) | ReadManagedFiniteDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2297–2297](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2297-L2297) | ReadManagedFiniteDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2298–2298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2298-L2298) | ReadManagedFiniteDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2298–2298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2298-L2298) | ReadManagedFiniteDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2299–2299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2299-L2299) | ReadManagedFiniteDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2299–2299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2299-L2299) | ReadManagedFiniteDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2266–2266](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2266-L2266) | ReadManagedFiniteDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2267–2267](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2267-L2267) | ReadManagedFiniteDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2268–2268](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2268-L2268) | ReadManagedFiniteDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2269–2269](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2269-L2269) | ReadManagedFiniteDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2289–2289](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2289-L2289) | ReadManagedFiniteDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2296–2296](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2296-L2296) | ReadManagedFiniteDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2296–2296](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2296-L2296) | ReadManagedFiniteDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2297–2297](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2297-L2297) | ReadManagedFiniteDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2297–2297](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2297-L2297) | ReadManagedFiniteDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2298–2298](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2298-L2298) | ReadManagedFiniteDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2298–2298](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2298-L2298) | ReadManagedFiniteDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2299–2299](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2299-L2299) | ReadManagedFiniteDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2299–2299](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2299-L2299) | ReadManagedFiniteDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15634,7 +15634,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadManagedNullableDouble` · L2819–2828
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2819–2828](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2819-L2828)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2819–2828](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2819-L2828)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15674,7 +15674,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L2821–2824
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2821–2824](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2821-L2824)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2821–2824](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2821-L2824)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15708,7 +15708,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadManagedInt` · L2830–2839
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2830–2839](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2830-L2839)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2830–2839](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2830-L2839)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15729,26 +15729,26 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:509–509](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L509-L509) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:520–520](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L520-L520) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1498–1498](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1498-L1498) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1514–1514](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1514-L1514) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1859–1859](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1859-L1859) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2075–2075](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2075-L2075) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2081–2081](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2081-L2081) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2257–2257](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2257-L2257) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2406–2406](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2406-L2406) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2618–2618](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2618-L2618) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2697–2697](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2697-L2697) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2844–2844](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2844-L2844) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2844–2844](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2844-L2844) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2851–2851](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2851-L2851) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2852–2852](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2852-L2852) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2853–2853](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2853-L2853) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2854–2854](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2854-L2854) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2855–2855](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2855-L2855) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2881–2881](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2881-L2881) | ReadManagedInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2889–2889](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2889-L2889) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:509–509](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L509-L509) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:520–520](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L520-L520) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1498–1498](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1498-L1498) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1514–1514](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1514-L1514) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1859–1859](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1859-L1859) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2075–2075](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2075-L2075) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2081–2081](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2081-L2081) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2257–2257](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2257-L2257) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2406–2406](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2406-L2406) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2618–2618](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2618-L2618) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2697–2697](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2697-L2697) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2844–2844](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2844-L2844) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2844–2844](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2844-L2844) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2851–2851](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2851-L2851) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2852–2852](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2852-L2852) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2853–2853](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2853-L2853) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2854–2854](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2854-L2854) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2855–2855](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2855-L2855) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2881–2881](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2881-L2881) | ReadManagedInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2889–2889](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2889-L2889) | ReadManagedInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15772,7 +15772,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L2832–2835
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2832–2835](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2832-L2835)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2832–2835](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2832-L2835)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15806,7 +15806,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadManagedModelPixelCount` · L2841–2845
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2841–2845](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2841-L2845)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2841–2845](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2841-L2845)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15849,7 +15849,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadManagedModelPattern` · L2847–2857
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2847–2857](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2847-L2857)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2847–2857](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2847-L2857)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15869,12 +15869,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:519–519](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L519-L519) | ReadManagedModelPattern | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1504–1504](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1504-L1504) | ReadManagedModelPattern | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1874–1874](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1874-L1874) | ReadManagedModelPattern | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2619–2619](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2619-L2619) | ReadManagedModelPattern | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2696–2696](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2696-L2696) | ReadManagedModelPattern | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2871–2871](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2871-L2871) | ReadManagedModelPattern | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:519–519](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L519-L519) | ReadManagedModelPattern | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1504–1504](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1504-L1504) | ReadManagedModelPattern | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1874–1874](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1874-L1874) | ReadManagedModelPattern | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2619–2619](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2619-L2619) | ReadManagedModelPattern | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2696–2696](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2696-L2696) | ReadManagedModelPattern | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2871–2871](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2871-L2871) | ReadManagedModelPattern | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15911,7 +15911,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadIntText` · L2859–2862
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2859–2862](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2859-L2862)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2859–2862](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2859-L2862)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15931,8 +15931,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1491–1491](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1491-L1491) | ReadIntText | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1551–1551](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1551-L1551) | ReadIntText | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1491–1491](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1491-L1491) | ReadIntText | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1551–1551](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1551-L1551) | ReadIntText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -15952,7 +15952,7 @@ flowchart TD
 
 ### MethodDeclaration `PositiveModulo` · L2864–2867
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2864–2867](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2864-L2867)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2864–2867](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2864-L2867)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -15972,7 +15972,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1528–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1528-L1528) | PositiveModulo | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1528–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1528-L1528) | PositiveModulo | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -15984,7 +15984,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildShotGroupPatternSummary` · L2869–2892
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2869–2892](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2869-L2892)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2869–2892](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2869-L2892)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16003,9 +16003,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1355–1355](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1355-L1355) | BuildShotGroupPatternSummary | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1452–1452](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1452-L1452) | BuildShotGroupPatternSummary | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1592–1592](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1592-L1592) | BuildShotGroupPatternSummary | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1355–1355](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1355-L1355) | BuildShotGroupPatternSummary | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1452–1452](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1452-L1452) | BuildShotGroupPatternSummary | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1592–1592](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1592-L1592) | BuildShotGroupPatternSummary | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16056,7 +16056,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadSettingDouble` · L2894–2903
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2894–2903](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2894-L2903)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2894–2903](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2894-L2903)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16077,9 +16077,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2407–2407](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2407-L2407) | ReadSettingDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2408–2408](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2408-L2408) | ReadSettingDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2409–2409](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2409-L2409) | ReadSettingDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2407–2407](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2407-L2407) | ReadSettingDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2408–2408](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2408-L2408) | ReadSettingDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2409–2409](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2409-L2409) | ReadSettingDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16103,7 +16103,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L2896–2899
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2896–2899](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2896-L2899)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2896–2899](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2896-L2899)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16139,7 +16139,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatPreviewDouble` · L2905–2908
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2905–2908](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2905-L2908)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2905–2908](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2905-L2908)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16158,15 +16158,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2377–2377](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2377-L2377) | FormatPreviewDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2377–2377](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2377-L2377) | FormatPreviewDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2452–2452](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2452-L2452) | FormatPreviewDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2452–2452](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2452-L2452) | FormatPreviewDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2452–2452](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2452-L2452) | FormatPreviewDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2452–2452](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2452-L2452) | FormatPreviewDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2452–2452](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2452-L2452) | FormatPreviewDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2496–2496](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2496-L2496) | FormatPreviewDouble | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2497–2497](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2497-L2497) | FormatPreviewDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2377–2377](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2377-L2377) | FormatPreviewDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2377–2377](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2377-L2377) | FormatPreviewDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2452–2452](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2452-L2452) | FormatPreviewDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2452–2452](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2452-L2452) | FormatPreviewDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2452–2452](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2452-L2452) | FormatPreviewDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2452–2452](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2452-L2452) | FormatPreviewDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2452–2452](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2452-L2452) | FormatPreviewDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2496–2496](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2496-L2496) | FormatPreviewDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2497–2497](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2497-L2497) | FormatPreviewDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16185,7 +16185,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildCategoryTabs` · L2910–2918
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2910–2918](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2910-L2918)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2910–2918](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2910-L2918)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16205,7 +16205,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:651–651](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L651-L651) | BuildCategoryTabs | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:651–651](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L651-L651) | BuildCategoryTabs | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16226,7 +16226,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildRecipe` · L2912–2915
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2912–2915](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2912-L2915)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2912–2915](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2912-L2915)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16262,7 +16262,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildGroups` · L2920–2937
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2920–2937](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2920-L2937)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2920–2937](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2920-L2937)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16281,7 +16281,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:619–619](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L619-L619) | BuildGroups | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:619–619](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L619-L619) | BuildGroups | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16312,7 +16312,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSourceGroup` · L2922–2925
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2922–2925](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2922-L2925)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2922–2925](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2922-L2925)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16339,7 +16339,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L2927–2930
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2927–2930](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2927-L2930)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2927–2930](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2927-L2930)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16373,7 +16373,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildGroupTabs` · L2939–2947
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2939–2947](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2939-L2947)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2939–2947](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2939-L2947)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16393,7 +16393,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:652–652](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L652-L652) | BuildGroupTabs | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:652–652](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L652-L652) | BuildGroupTabs | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16414,7 +16414,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildRecipe` · L2941–2944
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2941–2944](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2941-L2944)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2941–2944](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2941-L2944)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16450,7 +16450,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildChangeHistory` · L2949–2957
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2949–2957](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2949-L2957)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2949–2957](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2949-L2957)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16469,7 +16469,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:662–662](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L662-L662) | BuildChangeHistory | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:662–662](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L662-L662) | BuildChangeHistory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16490,7 +16490,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildRecipe` · L2951–2954
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2951–2954](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2951-L2954)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2951–2954](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2951-L2954)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16529,7 +16529,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildStateRows` · L2959–2977
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2959–2977](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2959-L2977)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2959–2977](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2959-L2977)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16550,7 +16550,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:663–663](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L663-L663) | BuildStateRows | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:663–663](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L663-L663) | BuildStateRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16599,7 +16599,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsIsEdited` · L2966–2969
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2966–2969](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2966-L2969)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2966–2969](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2966-L2969)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16626,7 +16626,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeCategory` · L2979–2993
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2979–2993](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2979-L2993)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2979–2993](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2979-L2993)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16646,7 +16646,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L598-L598) | NormalizeCategory | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L598-L598) | NormalizeCategory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16681,7 +16681,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L2987–2990
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2987–2990](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2987-L2990)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2987–2990](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2987-L2990)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16715,7 +16715,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeGroup` · L2995–3004
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2995–3004](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2995-L3004)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2995–3004](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2995-L3004)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16735,7 +16735,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:620–620](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L620-L620) | NormalizeGroup | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:620–620](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L620-L620) | NormalizeGroup | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16759,7 +16759,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L2998–3001
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2998–3001](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2998-L3001)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:2998–3001](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2998-L3001)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16793,7 +16793,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeRecipeText` · L3006–3009
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3006–3009](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3006-L3009)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3006–3009](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3006-L3009)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16813,10 +16813,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1781–1781](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1781-L1781) | NormalizeRecipeText | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1782–1782](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1782-L1782) | NormalizeRecipeText | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2986–2986](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2986-L2986) | NormalizeRecipeText | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2997–2997](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2997-L2997) | NormalizeRecipeText | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1781–1781](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1781-L1781) | NormalizeRecipeText | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1782–1782](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1782-L1782) | NormalizeRecipeText | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2986–2986](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2986-L2986) | NormalizeRecipeText | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2997–2997](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2997-L2997) | NormalizeRecipeText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16840,7 +16840,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeUnit` · L3011–3014
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3011–3014](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3011-L3014)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3011–3014](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3011-L3014)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16859,7 +16859,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1788–1788](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1788-L1788) | NormalizeUnit | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1788–1788](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1788-L1788) | NormalizeUnit | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16879,7 +16879,7 @@ flowchart TD
 
 ### MethodDeclaration `GetValueState` · L3016–3024
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3016–3024](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3016-L3024)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3016–3024](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3016-L3024)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16898,7 +16898,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1790–1790](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1790-L1790) | GetValueState | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1790–1790](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1790-L1790) | GetValueState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16933,7 +16933,7 @@ flowchart TD
 
 ### MethodDeclaration `IsModified` · L3026–3029
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3026–3029](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3026-L3029)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3026–3029](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3026-L3029)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16952,7 +16952,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3018–3018](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3018-L3018) | IsModified | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3018–3018](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3018-L3018) | IsModified | False |
 
 호출하는 대상과 해석 범위:
 
@@ -16975,7 +16975,7 @@ flowchart TD
 
 ### MethodDeclaration `IsOnOffValue` · L3031–3035
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3031–3035](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3031-L3035)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3031–3035](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3031-L3035)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -16994,7 +16994,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3023–3023](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3023-L3023) | IsOnOffValue | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3023–3023](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3023-L3023) | IsOnOffValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17017,7 +17017,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeRecipeValue` · L3037–3040
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3037–3040](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3037-L3040)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3037–3040](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3037-L3040)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17036,8 +17036,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3028–3028](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3028-L3028) | NormalizeRecipeValue | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3028–3028](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3028-L3028) | NormalizeRecipeValue | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3028–3028](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3028-L3028) | NormalizeRecipeValue | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3028–3028](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3028-L3028) | NormalizeRecipeValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17056,7 +17056,7 @@ flowchart TD
 
 ### MethodDeclaration `GetRecipeIdFromParameter` · L3042–3051
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3042–3051](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3042-L3051)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3042–3051](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3042-L3051)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17075,12 +17075,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:735–735](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L735-L735) | GetRecipeIdFromParameter | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:741–741](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L741-L741) | GetRecipeIdFromParameter | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:754–754](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L754-L754) | GetRecipeIdFromParameter | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1085–1085](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1085-L1085) | GetRecipeIdFromParameter | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1197–1197](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1197-L1197) | GetRecipeIdFromParameter | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1253–1253](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1253-L1253) | GetRecipeIdFromParameter | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:735–735](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L735-L735) | GetRecipeIdFromParameter | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:741–741](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L741-L741) | GetRecipeIdFromParameter | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:754–754](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L754-L754) | GetRecipeIdFromParameter | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1085–1085](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1085-L1085) | GetRecipeIdFromParameter | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1197–1197](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1197-L1197) | GetRecipeIdFromParameter | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1253–1253](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1253-L1253) | GetRecipeIdFromParameter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17113,7 +17113,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateRecipeParameterFromRow` · L3053–3074
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3053–3074](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3053-L3074)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3053–3074](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3053-L3074)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17133,7 +17133,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3080–3080](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3080-L3080) | CreateRecipeParameterFromRow | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3080–3080](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3080-L3080) | CreateRecipeParameterFromRow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17159,7 +17159,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildRecipeParameters` · L3076–3084
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3076–3084](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3076-L3084)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3076–3084](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3076-L3084)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17178,10 +17178,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:666–666](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L666-L666) | BuildRecipeParameters | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1055–1055](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1055-L1055) | BuildRecipeParameters | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1124–1124](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1124-L1124) | BuildRecipeParameters | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1212–1212](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1212-L1212) | BuildRecipeParameters | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:666–666](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L666-L666) | BuildRecipeParameters | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1055–1055](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1055-L1055) | BuildRecipeParameters | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1124–1124](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1124-L1124) | BuildRecipeParameters | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1212–1212](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1212-L1212) | BuildRecipeParameters | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17202,7 +17202,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L3078–3081
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3078–3081](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3078-L3081)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3078–3081](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3078-L3081)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17236,7 +17236,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteZeroDefenceDraft` · L3086–3094
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3086–3094](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3086-L3094)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3086–3094](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3086-L3094)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17301,7 +17301,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateRecipeWithZeroDefence` · L3096–3115
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3096–3115](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3096-L3115)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3096–3115](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3096-L3115)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17320,9 +17320,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1056–1056](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1056-L1056) | ValidateRecipeWithZeroDefence | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1125–1125](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1125-L1125) | ValidateRecipeWithZeroDefence | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1213–1213](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1213-L1213) | ValidateRecipeWithZeroDefence | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1056–1056](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1056-L1056) | ValidateRecipeWithZeroDefence | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1125–1125](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1125-L1125) | ValidateRecipeWithZeroDefence | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1213–1213](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1213-L1213) | ValidateRecipeWithZeroDefence | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17393,7 +17393,7 @@ flowchart TD
 
 ### MethodDeclaration `ShowRecipeNameDialog` · L3117–3124
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3117–3124](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3117-L3124)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3117–3124](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3117-L3124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17415,8 +17415,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1082–1082](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1082-L1082) | ShowRecipeNameDialog | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1182–1182](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1182-L1182) | ShowRecipeNameDialog | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1082–1082](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1082-L1082) | ShowRecipeNameDialog | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1182–1182](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1182-L1182) | ShowRecipeNameDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17445,7 +17445,7 @@ flowchart TD
 
 ### MethodDeclaration `ConfirmRecipeDelete` · L3126–3133
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3126–3133](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3126-L3133)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3126–3133](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3126-L3133)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17466,7 +17466,7 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 3128 | new CRecipeConfirmDialog | resolved | Drilling.UI.Popup.CRecipeConfirmDialog.CRecipeConfirmDialog(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:154 |
+| 3128 | new CRecipeConfirmDialog | resolved | Drilling.UI.Popup.CRecipeConfirmDialog.CRecipeConfirmDialog(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:178 |
 | 3130 | GetActiveWindow | resolved | Window? Drilling.UI.Menu.Menus.CMenuRecipe.GetActiveWindow() · Drilling.UI/Menu/Menus/CMenuRecipe.cs:3135 |
 | 3132 | dialog.ShowDialog | unresolved | None |
 
@@ -17486,7 +17486,7 @@ flowchart TD
 
 ### MethodDeclaration `GetActiveWindow` · L3135–3138
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3135–3138](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3135-L3138)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3135–3138](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3135-L3138)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17499,8 +17499,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3121–3121](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3121-L3121) | GetActiveWindow | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3130–3130](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3130-L3130) | GetActiveWindow | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3121–3121](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3121-L3121) | GetActiveWindow | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3130–3130](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3130-L3130) | GetActiveWindow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17521,7 +17521,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeRecipeIdInput` · L3140–3149
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3140–3149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3140-L3149)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3140–3149](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3140-L3149)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17540,11 +17540,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:576–576](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L576-L576) | NormalizeRecipeIdInput | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:577–577](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L577-L577) | NormalizeRecipeIdInput | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1101–1101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1101-L1101) | NormalizeRecipeIdInput | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1194–1194](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1194-L1194) | NormalizeRecipeIdInput | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3123–3123](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3123-L3123) | NormalizeRecipeIdInput | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:576–576](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L576-L576) | NormalizeRecipeIdInput | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:577–577](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L577-L577) | NormalizeRecipeIdInput | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1101–1101](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1101-L1101) | NormalizeRecipeIdInput | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1194–1194](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1194-L1194) | NormalizeRecipeIdInput | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3123–3123](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3123-L3123) | NormalizeRecipeIdInput | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17580,7 +17580,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateRecipeId` · L3151–3208
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3151–3208](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3151-L3208)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3151–3208](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3151-L3208)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17601,10 +17601,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1101–1101](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1101-L1101) | ValidateRecipeId | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1117–1117](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1117-L1117) | ValidateRecipeId | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1194–1194](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1194-L1194) | ValidateRecipeId | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1205–1205](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1205-L1205) | ValidateRecipeId | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1101–1101](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1101-L1101) | ValidateRecipeId | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1117–1117](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1117-L1117) | ValidateRecipeId | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1194–1194](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1194-L1194) | ValidateRecipeId | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1205–1205](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1205-L1205) | ValidateRecipeId | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17666,7 +17666,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L3201–3204
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3201–3204](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3201-L3204)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3201–3204](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3201-L3204)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17702,7 +17702,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateRecipeParameters` · L3210–3260
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3210–3260](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3210-L3260)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3210–3260](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3210-L3260)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17721,7 +17721,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3098–3098](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3098-L3098) | ValidateRecipeParameters | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3098–3098](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3098-L3098) | ValidateRecipeParameters | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17817,7 +17817,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateCellModelTypes` · L3262–3279
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3262–3279](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3262-L3279)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3262–3279](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3262-L3279)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17836,7 +17836,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3233–3233](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3233-L3233) | ValidateCellModelTypes | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3233–3233](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3233-L3233) | ValidateCellModelTypes | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17883,7 +17883,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateIntParameter` · L3281–3289
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3281–3289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3281-L3289)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3281–3289](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3281-L3289)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17903,7 +17903,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3222–3222](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3222-L3222) | ValidateIntParameter | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3222–3222](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3222-L3222) | ValidateIntParameter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17935,7 +17935,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateDoubleParameter` · L3291–3299
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3291–3299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3291-L3299)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3291–3299](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3291-L3299)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -17955,7 +17955,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3223–3223](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3223-L3223) | ValidateDoubleParameter | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3223–3223](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3223-L3223) | ValidateDoubleParameter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -17989,7 +17989,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadRecipeParameterInt` · L3301–3310
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3301–3310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3301-L3310)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3301–3310](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3301-L3310)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18009,12 +18009,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3239–3239](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3239-L3239) | ReadRecipeParameterInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3248–3248](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3248-L3248) | ReadRecipeParameterInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3249–3249](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3249-L3249) | ReadRecipeParameterInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3250–3250](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3250-L3250) | ReadRecipeParameterInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3251–3251](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3251-L3251) | ReadRecipeParameterInt | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3264–3264](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3264-L3264) | ReadRecipeParameterInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3239–3239](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3239-L3239) | ReadRecipeParameterInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3248–3248](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3248-L3248) | ReadRecipeParameterInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3249–3249](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3249-L3249) | ReadRecipeParameterInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3250–3250](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3250-L3250) | ReadRecipeParameterInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3251–3251](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3251-L3251) | ReadRecipeParameterInt | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3264–3264](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3264-L3264) | ReadRecipeParameterInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18038,7 +18038,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L3303–3306
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3303–3306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3303-L3306)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3303–3306](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3303-L3306)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18072,7 +18072,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadRecipeParameterDouble` · L3312–3321
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3312–3321](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3312-L3321)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3312–3321](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3312-L3321)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18092,7 +18092,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3247–3247](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3247-L3247) | ReadRecipeParameterDouble | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3247–3247](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3247-L3247) | ReadRecipeParameterDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18118,7 +18118,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L3314–3317
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3314–3317](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3314-L3317)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3314–3317](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3314-L3317)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18152,7 +18152,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateBoolParameter` · L3323–3327
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3323–3327](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3323-L3327)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3323–3327](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3323-L3327)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18172,7 +18172,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3224–3224](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3224-L3224) | ValidateBoolParameter | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3224–3224](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3224-L3224) | ValidateBoolParameter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18196,7 +18196,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateNumericRange` · L3329–3342
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3329–3342](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3329-L3342)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3329–3342](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3329-L3342)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18216,8 +18216,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3288–3288](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3288-L3288) | ValidateNumericRange | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3298–3298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3298-L3298) | ValidateNumericRange | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3288–3288](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3288-L3288) | ValidateNumericRange | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3298–3298](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3298-L3298) | ValidateNumericRange | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18255,7 +18255,7 @@ flowchart TD
 
 ### MethodDeclaration `GetEditedRecipeName` · L3344–3352
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3344–3352](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3344-L3352)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3344–3352](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3344-L3352)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18275,7 +18275,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1066–1066](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1066-L1066) | GetEditedRecipeName | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1066–1066](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1066-L1066) | GetEditedRecipeName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18294,7 +18294,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L3346–3349
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3346–3349](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3346-L3349)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3346–3349](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3346-L3349)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18330,7 +18330,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeRecipeUnit` · L3354–3357
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3354–3357](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3354-L3357)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3354–3357](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3354-L3357)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18349,7 +18349,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3059–3059](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3059-L3059) | NormalizeRecipeUnit | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3059–3059](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3059-L3059) | NormalizeRecipeUnit | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -18362,7 +18362,7 @@ flowchart TD
 
 ### PropertyDeclaration `DisplayName` · L3362–3362
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3362–3362](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3362-L3362)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3362–3362](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3362-L3362)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18390,7 +18390,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShotCenters` · L3379–3385
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3379–3385](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3379-L3385)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3379–3385](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3379-L3385)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18405,7 +18405,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ShotCenters` · L3381–3384
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3381–3384](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3381-L3384)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3381–3384](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3381-L3384)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18426,7 +18426,7 @@ flowchart TD
 
 ### FieldDeclaration `Epsilon` · L3390–3390
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3390–3390](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3390-L3390)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3390–3390](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3390-L3390)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18447,7 +18447,7 @@ flowchart TD
 
 ### PropertyDeclaration `DisplayText` · L3391–3397
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3391–3397](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3391-L3397)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3391–3397](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3391-L3397)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18462,7 +18462,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DisplayText` · L3393–3396
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3393–3396](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3393-L3396)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3393–3396](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3393-L3396)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18483,7 +18483,7 @@ flowchart TD
 
 ### MethodDeclaration `Contains` · L3399–3402
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3399–3402](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3399-L3402)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3399–3402](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3399-L3402)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18510,7 +18510,7 @@ flowchart TD
 
 ### MethodDeclaration `Intersects` · L3404–3407
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3404–3407](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3404-L3407)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3404–3407](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3404-L3407)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18529,7 +18529,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3895–3895](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3895-L3895) | area.Intersects | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3895–3895](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3895-L3895) | area.Intersects | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -18541,7 +18541,7 @@ flowchart TD
 
 ### FieldDeclaration `Epsilon` · L3412–3412
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3412–3412](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3412-L3412)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3412–3412](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3412-L3412)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18562,7 +18562,7 @@ flowchart TD
 
 ### MethodDeclaration `Contains` · L3413–3416
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3413–3416](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3413-L3416)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3413–3416](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3413-L3416)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18596,7 +18596,7 @@ flowchart TD
 
 ### MethodDeclaration `Touches` · L3418–3421
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3418–3421](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3418-L3421)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3418–3421](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3418-L3421)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18615,7 +18615,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3905–3905](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3905-L3905) | _edgeMaskingArea.Touches | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3905–3905](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3905-L3905) | _edgeMaskingArea.Touches | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18634,7 +18634,7 @@ flowchart TD
 
 ### PropertyDeclaration `Empty` · L3426–3426
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3426–3426](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3426-L3426)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3426–3426](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3426-L3426)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18661,7 +18661,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Empty` · L3426–3426
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3426–3426](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3426-L3426)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3426–3426](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3426-L3426)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18676,7 +18676,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsMasked` · L3428–3434
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3428–3434](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3428-L3434)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3428–3434](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3428-L3434)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18691,7 +18691,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsMasked` · L3430–3433
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3430–3433](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3430-L3433)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3430–3433](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3430-L3433)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18712,7 +18712,7 @@ flowchart TD
 
 ### PropertyDeclaration `SummaryText` · L3436–3459
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3436–3459](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3436-L3459)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3436–3459](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3436-L3459)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18727,7 +18727,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SummaryText` · L3438–3458
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3438–3458](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3438-L3458)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3438–3458](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3438-L3458)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18786,7 +18786,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatList` · L3461–3488
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3461–3488](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3461-L3488)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3461–3488](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3461-L3488)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18806,8 +18806,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3453–3453](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3453-L3453) | FormatList | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3456–3456](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3456-L3456) | FormatList | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3453–3453](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3453-L3453) | FormatList | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3456–3456](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3456-L3456) | FormatList | False |
 
 호출하는 대상과 해석 범위:
 
@@ -18876,7 +18876,7 @@ flowchart TD
 
 ### PropertyDeclaration `DisplayText` · L3493–3499
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3493–3499](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3493-L3499)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3493–3499](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3493-L3499)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18891,7 +18891,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DisplayText` · L3495–3498
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3495–3498](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3495-L3498)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3495–3498](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3495-L3498)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18912,7 +18912,7 @@ flowchart TD
 
 ### PropertyDeclaration `YLabel` · L3501–3507
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3501–3507](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3501-L3507)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3501–3507](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3501-L3507)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18927,7 +18927,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_YLabel` · L3503–3506
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3503–3506](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3503-L3506)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3503–3506](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3503-L3506)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18948,7 +18948,7 @@ flowchart TD
 
 ### FieldDeclaration `_items` · L3512–3512
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3512–3512](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3512-L3512)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3512–3512](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3512-L3512)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18963,7 +18963,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L3513–3535
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3513–3535](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3513-L3535)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3513–3535](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3513-L3535)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -18984,7 +18984,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2061–2061](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2061-L2061) | new ST_RECIPE_CELL_OVERVIEW_ROW | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2061–2061](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2061-L2061) | new ST_RECIPE_CELL_OVERVIEW_ROW | False |
 
 호출하는 대상과 해석 범위:
 
@@ -19010,7 +19010,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L3519–3522
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3519–3522](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3519-L3522)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3519–3522](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3519-L3522)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19044,7 +19044,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectDictionaryKey` · L3524–3527
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3524–3527](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3524-L3527)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3524–3527](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3524-L3527)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19071,7 +19071,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L3529–3532
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3529–3532](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3529-L3532)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3529–3532](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3529-L3532)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19098,7 +19098,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellNo` · L3537–3537
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3537–3537](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3537-L3537)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3537–3537](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3537-L3537)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19113,7 +19113,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CellNo` · L3537–3537
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3537–3537](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3537-L3537)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3537–3537](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3537-L3537)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19128,7 +19128,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsCurrent` · L3538–3538
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3538–3538](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3538-L3538)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3538–3538](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3538-L3538)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19143,7 +19143,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsCurrent` · L3538–3538
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3538–3538](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3538-L3538)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3538–3538](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3538-L3538)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19158,7 +19158,7 @@ flowchart TD
 
 ### PropertyDeclaration `ModelOptions` · L3539–3539
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3539–3539](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3539-L3539)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3539–3539](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3539-L3539)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19173,7 +19173,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ModelOptions` · L3539–3539
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3539–3539](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3539-L3539)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3539–3539](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3539-L3539)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19188,7 +19188,7 @@ flowchart TD
 
 ### PropertyDeclaration `FirstX` · L3541–3552
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3541–3552](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3541-L3552)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3541–3552](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3541-L3552)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19203,7 +19203,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_FirstX` · L3543–3546
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3543–3546](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3543-L3546)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3543–3546](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3543-L3546)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19231,7 +19231,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_FirstX` · L3548–3551
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3548–3551](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3548-L3551)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3548–3551](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3548-L3551)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19264,7 +19264,7 @@ flowchart TD
 
 ### PropertyDeclaration `FirstY` · L3554–3565
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3554–3565](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3554-L3565)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3554–3565](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3554-L3565)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19279,7 +19279,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_FirstY` · L3556–3559
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3556–3559](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3556-L3559)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3556–3559](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3556-L3559)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19307,7 +19307,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_FirstY` · L3561–3564
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3561–3564](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3561-L3564)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3561–3564](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3561-L3564)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19340,7 +19340,7 @@ flowchart TD
 
 ### PropertyDeclaration `Rotation` · L3567–3578
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3567–3578](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3567-L3578)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3567–3578](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3567-L3578)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19355,7 +19355,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Rotation` · L3569–3572
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3569–3572](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3569-L3572)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3569–3572](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3569-L3572)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19383,7 +19383,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Rotation` · L3574–3577
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3574–3577](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3574-L3577)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3574–3577](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3574-L3577)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19416,7 +19416,7 @@ flowchart TD
 
 ### PropertyDeclaration `ModelType` · L3580–3591
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3580–3591](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3580-L3591)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3580–3591](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3580-L3591)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19431,7 +19431,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ModelType` · L3582–3585
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3582–3585](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3582-L3585)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3582–3585](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3582-L3585)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19459,7 +19459,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ModelType` · L3587–3590
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3587–3590](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3587-L3590)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3587–3590](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3587-L3590)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19492,7 +19492,7 @@ flowchart TD
 
 ### MethodDeclaration `GetItem` · L3593–3596
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3593–3596](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3593-L3596)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3593–3596](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3593-L3596)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19511,7 +19511,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CRecipeView.xaml.cs#L364-L364) | row.GetItem | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CRecipeView.xaml.cs#L364-L364) | row.GetItem | False |
 
 호출하는 대상과 해석 범위:
 
@@ -19531,7 +19531,7 @@ flowchart TD
 
 ### MethodDeclaration `Get` · L3598–3601
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3598–3601](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3598-L3601)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3598–3601](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3598-L3601)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19550,10 +19550,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3545–3545](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3545-L3545) | Get | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3558–3558](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3558-L3558) | Get | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3571–3571](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3571-L3571) | Get | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3584–3584](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3584-L3584) | Get | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3545–3545](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3545-L3545) | Get | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3558–3558](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3558-L3558) | Get | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3571–3571](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3571-L3571) | Get | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3584–3584](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3584-L3584) | Get | False |
 
 호출하는 대상과 해석 범위:
 
@@ -19573,7 +19573,7 @@ flowchart TD
 
 ### MethodDeclaration `Set` · L3603–3619
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3603–3619](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3603-L3619)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3603–3619](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3603-L3619)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19593,10 +19593,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3550–3550](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3550-L3550) | Set | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3563–3563](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3563-L3563) | Set | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3576–3576](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3576-L3576) | Set | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3589–3589](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3589-L3589) | Set | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3550–3550](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3550-L3550) | Set | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3563–3563](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3563-L3563) | Set | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3576–3576](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3576-L3576) | Set | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3589–3589](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3589-L3589) | Set | False |
 
 호출하는 대상과 해석 범위:
 
@@ -19639,7 +19639,7 @@ flowchart TD
 
 ### FieldDeclaration `_overrideChanged` · L3624–3624
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3624–3624](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3624-L3624)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3624–3624](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3624-L3624)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19654,7 +19654,7 @@ flowchart TD
 
 ### FieldDeclaration `_beamHalfSpan` · L3625–3625
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3625–3625](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3625-L3625)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3625–3625](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3625-L3625)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19669,7 +19669,7 @@ flowchart TD
 
 ### FieldDeclaration `_glassWidth` · L3626–3626
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3626–3626](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3626-L3626)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3626–3626](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3626-L3626)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19684,7 +19684,7 @@ flowchart TD
 
 ### FieldDeclaration `_glassHeight` · L3627–3627
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3627–3627](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3627-L3627)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3627–3627](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3627-L3627)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19699,7 +19699,7 @@ flowchart TD
 
 ### FieldDeclaration `_splitBeamCount` · L3628–3628
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3628–3628](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3628-L3628)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3628–3628](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3628-L3628)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19714,7 +19714,7 @@ flowchart TD
 
 ### FieldDeclaration `_beamPitch` · L3629–3629
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3629–3629](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3629-L3629)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3629–3629](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3629-L3629)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19729,7 +19729,7 @@ flowchart TD
 
 ### FieldDeclaration `_chess` · L3630–3630
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3630–3630](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3630-L3630)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3630–3630](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3630-L3630)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19744,7 +19744,7 @@ flowchart TD
 
 ### FieldDeclaration `_chessType` · L3631–3631
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3631–3631](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3631-L3631)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3631–3631](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3631-L3631)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19759,7 +19759,7 @@ flowchart TD
 
 ### FieldDeclaration `_baseCellCenterX` · L3632–3632
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3632–3632](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3632-L3632)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3632–3632](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3632-L3632)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19774,7 +19774,7 @@ flowchart TD
 
 ### FieldDeclaration `_baseCellCenterY` · L3633–3633
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3633–3633](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3633-L3633)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3633–3633](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3633-L3633)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19789,7 +19789,7 @@ flowchart TD
 
 ### FieldDeclaration `_additionalFinalOffsetX` · L3634–3634
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3634–3634](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3634-L3634)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3634–3634](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3634-L3634)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19804,7 +19804,7 @@ flowchart TD
 
 ### FieldDeclaration `_additionalFinalOffsetY` · L3635–3635
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3635–3635](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3635-L3635)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3635–3635](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3635-L3635)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19819,7 +19819,7 @@ flowchart TD
 
 ### FieldDeclaration `_maskingAreas` · L3636–3636
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3636–3636](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3636-L3636)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3636–3636](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3636-L3636)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19834,7 +19834,7 @@ flowchart TD
 
 ### FieldDeclaration `_edgeMaskingArea` · L3637–3637
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3637–3637](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3637-L3637)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3637–3637](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3637-L3637)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19849,7 +19849,7 @@ flowchart TD
 
 ### FieldDeclaration `_offsetX` · L3638–3638
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3638–3638](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3638-L3638)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3638–3638](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3638-L3638)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19864,7 +19864,7 @@ flowchart TD
 
 ### FieldDeclaration `_offsetY` · L3639–3639
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3639–3639](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3639-L3639)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3639–3639](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3639-L3639)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19879,7 +19879,7 @@ flowchart TD
 
 ### FieldDeclaration `_isSelected` · L3640–3640
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3640–3640](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3640-L3640)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3640–3640](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3640-L3640)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19894,7 +19894,7 @@ flowchart TD
 
 ### FieldDeclaration `_maskingState` · L3641–3641
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3641–3641](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3641-L3641)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3641–3641](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3641-L3641)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19915,7 +19915,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L3642–3688
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3642–3688](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3642-L3688)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3642–3688](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3642-L3688)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -19954,7 +19954,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2659–2681](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2659-L2681) | new ST_SHOT_GROUP_EDITOR_ROW | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2659–2681](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2659-L2681) | new ST_SHOT_GROUP_EDITOR_ROW | False |
 
 호출하는 대상과 해석 범위:
 
@@ -19997,7 +19997,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellShotNo` · L3690–3690
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3690–3690](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3690-L3690)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3690–3690](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3690-L3690)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20012,7 +20012,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CellShotNo` · L3690–3690
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3690–3690](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3690-L3690)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3690–3690](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3690-L3690)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20027,7 +20027,7 @@ flowchart TD
 
 ### PropertyDeclaration `Row` · L3691–3691
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3691–3691](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3691-L3691)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3691–3691](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3691-L3691)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20042,7 +20042,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Row` · L3691–3691
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3691–3691](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3691-L3691)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3691–3691](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3691-L3691)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20057,7 +20057,7 @@ flowchart TD
 
 ### PropertyDeclaration `Column` · L3692–3692
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3692–3692](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3692-L3692)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3692–3692](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3692-L3692)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20072,7 +20072,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Column` · L3692–3692
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3692–3692](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3692-L3692)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3692–3692](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3692-L3692)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20087,7 +20087,7 @@ flowchart TD
 
 ### PropertyDeclaration `MatrixPointName` · L3694–3700
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3694–3700](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3694-L3700)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3694–3700](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3694-L3700)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20102,7 +20102,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_MatrixPointName` · L3696–3699
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3696–3699](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3696-L3699)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3696–3699](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3696-L3699)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20130,7 +20130,7 @@ flowchart TD
 
 ### PropertyDeclaration `OffsetCoordinateText` · L3702–3708
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3702–3708](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3702-L3708)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3702–3708](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3702-L3708)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20145,7 +20145,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_OffsetCoordinateText` · L3704–3707
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3704–3707](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3704-L3707)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3704–3707](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3704-L3707)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20175,7 +20175,7 @@ flowchart TD
 
 ### PropertyDeclaration `BaseCenterX` · L3710–3710
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3710–3710](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3710-L3710)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3710–3710](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3710-L3710)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20190,7 +20190,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_BaseCenterX` · L3710–3710
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3710–3710](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3710-L3710)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3710–3710](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3710-L3710)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20205,7 +20205,7 @@ flowchart TD
 
 ### PropertyDeclaration `BaseCenterY` · L3711–3711
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3711–3711](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3711-L3711)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3711–3711](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3711-L3711)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20220,7 +20220,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_BaseCenterY` · L3711–3711
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3711–3711](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3711-L3711)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3711–3711](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3711-L3711)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20235,7 +20235,7 @@ flowchart TD
 
 ### PropertyDeclaration `CorrectedCenterX` · L3713–3719
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3713–3719](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3713-L3719)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3713–3719](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3713-L3719)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20250,7 +20250,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CorrectedCenterX` · L3715–3718
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3715–3718](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3715-L3718)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3715–3718](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3715-L3718)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20278,7 +20278,7 @@ flowchart TD
 
 ### PropertyDeclaration `CorrectedCenterY` · L3721–3727
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3721–3727](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3721-L3727)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3721–3727](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3721-L3727)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20293,7 +20293,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CorrectedCenterY` · L3723–3726
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3723–3726](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3723-L3726)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3723–3726](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3723-L3726)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20321,7 +20321,7 @@ flowchart TD
 
 ### PropertyDeclaration `CenterXText` · L3729–3735
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3729–3735](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3729-L3735)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3729–3735](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3729-L3735)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20336,7 +20336,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CenterXText` · L3731–3734
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3731–3734](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3731-L3734)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3731–3734](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3731-L3734)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20364,7 +20364,7 @@ flowchart TD
 
 ### PropertyDeclaration `CenterYText` · L3737–3743
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3737–3743](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3737-L3743)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3737–3743](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3737-L3743)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20379,7 +20379,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CenterYText` · L3739–3742
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3739–3742](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3739-L3742)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3739–3742](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3739-L3742)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20407,7 +20407,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsInsideGlass` · L3745–3751
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3745–3751](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3745-L3751)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3745–3751](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3745-L3751)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20422,7 +20422,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsInsideGlass` · L3747–3750
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3747–3750](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3747-L3750)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3747–3750](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3747-L3750)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20443,7 +20443,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsMasked` · L3753–3759
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3753–3759](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3753-L3759)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3753–3759](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3753-L3759)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20458,7 +20458,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsMasked` · L3755–3758
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3755–3758](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3755-L3758)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3755–3758](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3755-L3758)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20479,7 +20479,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsChessSkipped` · L3761–3772
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3761–3772](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3761-L3772)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3761–3772](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3761-L3772)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20494,7 +20494,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsChessSkipped` · L3763–3771
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3763–3771](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3763-L3771)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3763–3771](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3763-L3771)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20538,7 +20538,7 @@ flowchart TD
 
 ### PropertyDeclaration `MaskedBeamNumbers` · L3774–3780
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3774–3780](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3774-L3780)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3774–3780](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3774-L3780)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20553,7 +20553,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_MaskedBeamNumbers` · L3776–3779
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3776–3779](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3776-L3779)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3776–3779](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3776-L3779)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20574,7 +20574,7 @@ flowchart TD
 
 ### PropertyDeclaration `MaskingStateText` · L3782–3788
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3782–3788](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3782-L3788)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3782–3788](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3782-L3788)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20589,7 +20589,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_MaskingStateText` · L3784–3787
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3784–3787](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3784-L3787)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3784–3787](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3784-L3787)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20611,7 +20611,7 @@ flowchart TD
 
 ### PropertyDeclaration `PlacementState` · L3790–3806
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3790–3806](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3790-L3806)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3790–3806](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3790-L3806)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20626,7 +20626,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_PlacementState` · L3792–3805
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3792–3805](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3792-L3805)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3792–3805](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3792-L3805)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20663,7 +20663,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsSelected` · L3808–3819
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3808–3819](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3808-L3819)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3808–3819](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3808-L3819)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20678,7 +20678,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsSelected` · L3810–3813
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3810–3813](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3810-L3813)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3810–3813](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3810-L3813)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20699,7 +20699,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_IsSelected` · L3815–3818
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3815–3818](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3815-L3818)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3815–3818](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3815-L3818)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20732,7 +20732,7 @@ flowchart TD
 
 ### PropertyDeclaration `OffsetX` · L3821–3832
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3821–3832](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3821-L3832)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3821–3832](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3821-L3832)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20747,7 +20747,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_OffsetX` · L3823–3826
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3823–3826](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3823-L3826)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3823–3826](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3823-L3826)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20768,7 +20768,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_OffsetX` · L3828–3831
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3828–3831](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3828-L3831)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3828–3831](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3828-L3831)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20801,7 +20801,7 @@ flowchart TD
 
 ### PropertyDeclaration `OffsetY` · L3834–3845
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3834–3845](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3834-L3845)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3834–3845](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3834-L3845)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20816,7 +20816,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_OffsetY` · L3836–3839
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3836–3839](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3836-L3839)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3836–3839](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3836-L3839)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20837,7 +20837,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_OffsetY` · L3841–3844
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3841–3844](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3841-L3844)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3841–3844](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3841-L3844)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20870,7 +20870,7 @@ flowchart TD
 
 ### MethodDeclaration `SetOverride` · L3847–3865
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3847–3865](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3847-L3865)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3847–3865](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3847-L3865)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20891,8 +20891,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3830–3830](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3830-L3830) | SetOverride | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3843–3843](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3843-L3843) | SetOverride | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3830–3830](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3830-L3830) | SetOverride | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3843–3843](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3843-L3843) | SetOverride | False |
 
 호출하는 대상과 해석 범위:
 
@@ -20971,7 +20971,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshMaskingState` · L3867–3917
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3867–3917](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3867-L3917)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3867–3917](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3867-L3917)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -20984,8 +20984,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3687–3687](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3687-L3687) | RefreshMaskingState | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3858–3858](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3858-L3858) | RefreshMaskingState | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3687–3687](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3687-L3687) | RefreshMaskingState | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3858–3858](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3858-L3858) | RefreshMaskingState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21087,7 +21087,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeOffsetText` · L3919–3922
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3919–3922](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3919-L3922)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3919–3922](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3919-L3922)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21106,8 +21106,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3706–3706](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3706-L3706) | NormalizeOffsetText | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3706–3706](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3706-L3706) | NormalizeOffsetText | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3706–3706](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3706-L3706) | NormalizeOffsetText | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3706–3706](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3706-L3706) | NormalizeOffsetText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21129,7 +21129,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseOffset` · L3924–3927
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3924–3927](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3924-L3927)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3924–3927](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3924-L3927)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21148,8 +21148,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3717–3717](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3717-L3717) | ParseOffset | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3725–3725](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3725-L3725) | ParseOffset | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3717–3717](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3717-L3717) | ParseOffset | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3725–3725](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3725-L3725) | ParseOffset | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21171,7 +21171,7 @@ flowchart TD
 
 ### MethodDeclaration `PositiveModulo` · L3929–3932
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3929–3932](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3929-L3932)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3929–3932](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3929-L3932)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21191,9 +21191,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3770–3770](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3770-L3770) | PositiveModulo | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3770–3770](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3770-L3770) | PositiveModulo | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3770–3770](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3770-L3770) | PositiveModulo | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3770–3770](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3770-L3770) | PositiveModulo | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3770–3770](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3770-L3770) | PositiveModulo | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3770–3770](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3770-L3770) | PositiveModulo | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -21205,7 +21205,7 @@ flowchart TD
 
 ### MethodDeclaration `ToColumnLetter` · L3934–3946
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3934–3946](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3934-L3946)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3934–3946](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3934-L3946)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21224,7 +21224,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3698–3698](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3698-L3698) | ToColumnLetter | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3698–3698](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3698-L3698) | ToColumnLetter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -21259,7 +21259,7 @@ flowchart TD
 
 ### PropertyDeclaration `DisplayText` · L3953–3959
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3953–3959](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3953-L3959)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3953–3959](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3953-L3959)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21274,7 +21274,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DisplayText` · L3955–3958
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3955–3958](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3955-L3958)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3955–3958](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3955-L3958)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21295,7 +21295,7 @@ flowchart TD
 
 ### PropertyDeclaration `Height` · L3961–3967
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3961–3967](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3961-L3967)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3961–3967](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3961-L3967)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21310,7 +21310,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Height` · L3963–3966
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3963–3966](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3963-L3966)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3963–3966](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3963-L3966)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21331,7 +21331,7 @@ flowchart TD
 
 ### PropertyDeclaration `BackgroundBrush` · L3969–3975
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3969–3975](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3969-L3975)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3969–3975](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3969-L3975)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21346,7 +21346,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_BackgroundBrush` · L3971–3974
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3971–3974](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3971-L3974)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3971–3974](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3971-L3974)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21375,7 +21375,7 @@ flowchart TD
 
 ### PropertyDeclaration `BorderBrush` · L3977–3983
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3977–3983](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3977-L3983)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3977–3983](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3977-L3983)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21390,7 +21390,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_BorderBrush` · L3979–3982
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3979–3982](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3979-L3982)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3979–3982](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3979-L3982)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21419,7 +21419,7 @@ flowchart TD
 
 ### PropertyDeclaration `TextBrush` · L3985–3991
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3985–3991](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3985-L3991)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3985–3991](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3985-L3991)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21434,7 +21434,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_TextBrush` · L3987–3990
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3987–3990](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3987-L3990)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3987–3990](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3987-L3990)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21456,7 +21456,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsSelected` · L3996–4002
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3996–4002](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3996-L4002)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3996–4002](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3996-L4002)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21471,7 +21471,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsSelected` · L3998–4001
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3998–4001](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3998-L4001)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:3998–4001](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3998-L4001)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21492,7 +21492,7 @@ flowchart TD
 
 ### PropertyDeclaration `TextBrush` · L4004–4010
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4004–4010](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4004-L4010)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4004–4010](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4004-L4010)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21507,7 +21507,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_TextBrush` · L4006–4009
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4006–4009](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4006-L4009)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4006–4009](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4006-L4009)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21529,7 +21529,7 @@ flowchart TD
 
 ### FieldDeclaration `_initialValue` · L4015–4015
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4015–4015](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4015-L4015)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4015–4015](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4015-L4015)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21544,7 +21544,7 @@ flowchart TD
 
 ### FieldDeclaration `_initialValueState` · L4016–4016
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4016–4016](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4016-L4016)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4016–4016](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4016-L4016)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21559,7 +21559,7 @@ flowchart TD
 
 ### FieldDeclaration `_value` · L4017–4017
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4017–4017](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4017-L4017)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4017–4017](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4017-L4017)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21574,7 +21574,7 @@ flowchart TD
 
 ### FieldDeclaration `_valueState` · L4018–4018
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4018–4018](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4018-L4018)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4018–4018](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4018-L4018)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21589,7 +21589,7 @@ flowchart TD
 
 ### FieldDeclaration `_valueOptions` · L4019–4019
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4019–4019](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4019-L4019)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4019–4019](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4019-L4019)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21604,7 +21604,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L4020–4053
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4020–4053](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4020-L4053)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4020–4053](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4020-L4053)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21636,9 +21636,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1783–1797](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1783-L1797) | new ST_RECIPE_PARAMETER_EDITOR_ITEM | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2019–2033](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2019-L2033) | new ST_RECIPE_PARAMETER_EDITOR_ITEM | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2782–2782](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2782-L2782) | new ST_RECIPE_PARAMETER_EDITOR_ITEM | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1783–1797](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1783-L1797) | new ST_RECIPE_PARAMETER_EDITOR_ITEM | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2019–2033](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2019-L2033) | new ST_RECIPE_PARAMETER_EDITOR_ITEM | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2782–2782](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2782-L2782) | new ST_RECIPE_PARAMETER_EDITOR_ITEM | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -21665,7 +21665,7 @@ flowchart TD
 
 ### PropertyDeclaration `Category` · L4055–4055
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4055–4055](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4055-L4055)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4055–4055](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4055-L4055)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21680,7 +21680,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Category` · L4055–4055
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4055–4055](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4055-L4055)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4055–4055](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4055-L4055)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21695,7 +21695,7 @@ flowchart TD
 
 ### PropertyDeclaration `Group` · L4056–4056
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4056–4056](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4056-L4056)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4056–4056](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4056-L4056)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21710,7 +21710,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Group` · L4056–4056
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4056–4056](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4056-L4056)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4056–4056](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4056-L4056)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21725,7 +21725,7 @@ flowchart TD
 
 ### PropertyDeclaration `Item` · L4057–4057
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4057–4057](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4057-L4057)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4057–4057](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4057-L4057)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21740,7 +21740,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Item` · L4057–4057
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4057–4057](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4057-L4057)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4057–4057](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4057-L4057)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21755,7 +21755,7 @@ flowchart TD
 
 ### PropertyDeclaration `Value` · L4059–4076
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4059–4076](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4059-L4076)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4059–4076](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4059-L4076)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21770,7 +21770,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Value` · L4061–4064
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4061–4064](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4061-L4064)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4061–4064](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4061-L4064)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21791,7 +21791,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Value` · L4066–4075
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4066–4075](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4066-L4075)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4066–4075](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4066-L4075)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21841,7 +21841,7 @@ flowchart TD
 
 ### PropertyDeclaration `Unit` · L4078–4078
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4078–4078](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4078-L4078)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4078–4078](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4078-L4078)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21856,7 +21856,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Unit` · L4078–4078
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4078–4078](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4078-L4078)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4078–4078](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4078-L4078)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21871,7 +21871,7 @@ flowchart TD
 
 ### PropertyDeclaration `Description` · L4079–4079
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4079–4079](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4079-L4079)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4079–4079](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4079-L4079)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21886,7 +21886,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Description` · L4079–4079
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4079–4079](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4079-L4079)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4079–4079](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4079-L4079)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21901,7 +21901,7 @@ flowchart TD
 
 ### PropertyDeclaration `Key` · L4080–4080
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4080–4080](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4080-L4080)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4080–4080](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4080-L4080)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21916,7 +21916,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Key` · L4080–4080
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4080–4080](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4080-L4080)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4080–4080](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4080-L4080)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21931,7 +21931,7 @@ flowchart TD
 
 ### PropertyDeclaration `SourceGroup` · L4081–4081
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4081–4081](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4081-L4081)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4081–4081](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4081-L4081)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21946,7 +21946,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SourceGroup` · L4081–4081
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4081–4081](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4081-L4081)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4081–4081](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4081-L4081)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21961,7 +21961,7 @@ flowchart TD
 
 ### PropertyDeclaration `OriginalValue` · L4083–4089
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4083–4089](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4083-L4089)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4083–4089](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4083-L4089)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21976,7 +21976,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_OriginalValue` · L4085–4088
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4085–4088](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4085-L4088)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4085–4088](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4085-L4088)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -21997,7 +21997,7 @@ flowchart TD
 
 ### PropertyDeclaration `DataType` · L4091–4091
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4091–4091](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4091-L4091)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4091–4091](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4091-L4091)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22012,7 +22012,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DataType` · L4091–4091
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4091–4091](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4091-L4091)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4091–4091](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4091-L4091)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22027,7 +22027,7 @@ flowchart TD
 
 ### PropertyDeclaration `UsesSelectionEditor` · L4093–4099
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4093–4099](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4093-L4099)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4093–4099](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4093-L4099)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22042,7 +22042,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_UsesSelectionEditor` · L4095–4098
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4095–4098](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4095-L4098)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4095–4098](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4095-L4098)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22076,7 +22076,7 @@ flowchart TD
 
 ### PropertyDeclaration `ValueOptions` · L4101–4132
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4101–4132](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4101-L4132)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4101–4132](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4101-L4132)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22091,7 +22091,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ValueOptions` · L4103–4131
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4103–4131](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4103-L4131)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4103–4131](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4103-L4131)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22155,7 +22155,7 @@ flowchart TD
 
 ### MethodDeclaration `SetValueOptions` · L4134–4139
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4134–4139](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4134-L4139)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4134–4139](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4134-L4139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22195,7 +22195,7 @@ flowchart TD
 
 ### PropertyDeclaration `ChangeLimit` · L4141–4141
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4141–4141](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4141-L4141)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4141–4141](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4141-L4141)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22210,7 +22210,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ChangeLimit` · L4141–4141
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4141–4141](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4141-L4141)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4141–4141](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4141-L4141)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22225,7 +22225,7 @@ flowchart TD
 
 ### PropertyDeclaration `Min` · L4142–4142
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4142–4142](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4142-L4142)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4142–4142](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4142-L4142)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22240,7 +22240,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Min` · L4142–4142
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4142–4142](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4142-L4142)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4142–4142](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4142-L4142)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22255,7 +22255,7 @@ flowchart TD
 
 ### PropertyDeclaration `Max` · L4143–4143
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4143–4143](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4143-L4143)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4143–4143](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4143-L4143)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22270,7 +22270,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Max` · L4143–4143
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4143–4143](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4143-L4143)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4143–4143](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4143-L4143)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22285,7 +22285,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsEdited` · L4145–4151
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4145–4151](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4145-L4151)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4145–4151](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4145-L4151)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22300,7 +22300,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsEdited` · L4147–4150
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4147–4150](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4147-L4150)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4147–4150](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4147-L4150)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22332,7 +22332,7 @@ flowchart TD
 
 ### PropertyDeclaration `ValueState` · L4153–4167
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4153–4167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4153-L4167)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4153–4167](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4153-L4167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22347,7 +22347,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ValueState` · L4155–4158
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4155–4158](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4155-L4158)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4155–4158](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4155-L4158)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22368,7 +22368,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ValueState` · L4160–4166
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4160–4166](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4160-L4166)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4160–4166](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4160-L4166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22415,7 +22415,7 @@ flowchart TD
 
 ### PropertyDeclaration `ValueBrush` · L4169–4180
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4169–4180](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4169-L4180)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4169–4180](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4169-L4180)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22430,7 +22430,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ValueBrush` · L4171–4179
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4171–4179](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4171-L4179)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4171–4179](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4171-L4179)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22461,7 +22461,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeValue` · L4182–4185
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4182–4185](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4182-L4185)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4182–4185](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4182-L4185)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22480,8 +22480,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4149–4149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4149-L4149) | NormalizeValue | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4149–4149](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4149-L4149) | NormalizeValue | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4149–4149](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4149-L4149) | NormalizeValue | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4149–4149](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4149-L4149) | NormalizeValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -22500,7 +22500,7 @@ flowchart TD
 
 ### MethodDeclaration `IsCellModelSelectionKey` · L4187–4195
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4187–4195](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4187-L4195)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4187–4195](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4187-L4195)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22519,8 +22519,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4097–4097](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4097-L4097) | IsCellModelSelectionKey | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4125–4125](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4125-L4125) | IsCellModelSelectionKey | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4097–4097](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4097-L4097) | IsCellModelSelectionKey | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4125–4125](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4125-L4125) | IsCellModelSelectionKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -22556,7 +22556,7 @@ flowchart TD
 
 ### MethodDeclaration `IsModelChessKey` · L4197–4207
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4197–4207](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4197-L4207)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4197–4207](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4197-L4207)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22575,8 +22575,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4097–4097](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4097-L4097) | IsModelChessKey | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4115–4115](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4115-L4115) | IsModelChessKey | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4097–4097](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4097-L4097) | IsModelChessKey | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4115–4115](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4115-L4115) | IsModelChessKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -22618,7 +22618,7 @@ flowchart TD
 
 ### MethodDeclaration `IsModelChessTypeKey` · L4209–4219
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4209–4219](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4209-L4219)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4209–4219](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4209-L4219)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22637,8 +22637,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4097–4097](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4097-L4097) | IsModelChessTypeKey | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4120–4120](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4120-L4120) | IsModelChessTypeKey | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4097–4097](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4097-L4097) | IsModelChessTypeKey | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4120–4120](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4120-L4120) | IsModelChessTypeKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -22680,7 +22680,7 @@ flowchart TD
 
 ### PropertyDeclaration `AfterBrush` · L4224–4230
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4224–4230](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4224-L4230)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4224–4230](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4224-L4230)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22695,7 +22695,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AfterBrush` · L4226–4229
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4226–4229](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4226-L4229)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4226–4229](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4226-L4229)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22716,7 +22716,7 @@ flowchart TD
 
 ### PropertyDeclaration `ValueBrush` · L4235–4247
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4235–4247](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4235-L4247)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4235–4247](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4235-L4247)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22731,7 +22731,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ValueBrush` · L4237–4246
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4237–4246](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4237-L4246)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4237–4246](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4237-L4246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22762,7 +22762,7 @@ flowchart TD
 
 ### EventFieldDeclaration `PropertyChanged` · L4253–4253
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4253–4253](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4253-L4253)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4253–4253](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4253-L4253)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22777,7 +22777,7 @@ flowchart TD
 
 ### FieldDeclaration `_write` · L4254–4254
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4254–4254](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4254-L4254)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4254–4254](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4254-L4254)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22792,7 +22792,7 @@ flowchart TD
 
 ### FieldDeclaration `_plan` · L4255–4255
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4255–4255](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4255-L4255)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4255–4255](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4255-L4255)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22807,7 +22807,7 @@ flowchart TD
 
 ### FieldDeclaration `_signature` · L4256–4256
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4256–4256](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4256-L4256)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4256–4256](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4256-L4256)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22828,7 +22828,7 @@ flowchart TD
 
 ### FieldDeclaration `_points` · L4257–4257
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4257–4257](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4257-L4257)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4257–4257](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4257-L4257)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22856,7 +22856,7 @@ flowchart TD
 
 ### FieldDeclaration `_invalid` · L4258–4258
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4258–4258](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4258-L4258)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4258–4258](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4258-L4258)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22884,7 +22884,7 @@ flowchart TD
 
 ### FieldDeclaration `_availability` · L4259–4259
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4259–4259](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4259-L4259)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4259–4259](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4259-L4259)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22912,7 +22912,7 @@ flowchart TD
 
 ### FieldDeclaration `_settings` · L4260–4260
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4260–4260](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4260-L4260)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4260–4260](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4260-L4260)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22933,7 +22933,7 @@ flowchart TD
 
 ### FieldDeclaration `_candidate` · L4261–4261
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4261–4261](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4261-L4261)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4261–4261](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4261-L4261)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22948,7 +22948,7 @@ flowchart TD
 
 ### FieldDeclaration `_head` · L4262–4262
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4262–4262](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4262-L4262)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4262–4262](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4262-L4262)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22969,7 +22969,7 @@ flowchart TD
 
 ### FieldDeclaration `_cell` · L4262–4262
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4262–4262](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4262-L4262)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4262–4262](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4262-L4262)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -22984,7 +22984,7 @@ flowchart TD
 
 ### FieldDeclaration `_count` · L4262–4262
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4262–4262](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4262-L4262)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4262–4262](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4262-L4262)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23005,7 +23005,7 @@ flowchart TD
 
 ### FieldDeclaration `_group` · L4262–4262
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4262–4262](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4262-L4262)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4262–4262](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4262-L4262)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23026,7 +23026,7 @@ flowchart TD
 
 ### FieldDeclaration `_visibleAvailability` · L4263–4263
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4263–4263](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4263-L4263)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4263–4263](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4263-L4263)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23054,7 +23054,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L4264–4278
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4264–4278](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4264-L4278)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4264–4278](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4264-L4278)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23073,7 +23073,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L100-L100) | new CRecipeZeroDefencePanel | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L100-L100) | new CRecipeZeroDefencePanel | False |
 
 호출하는 대상과 해석 범위:
 
@@ -23144,7 +23144,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectCellCommand` · L4280–4280
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4280–4280](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4280-L4280)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4280–4280](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4280-L4280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23159,7 +23159,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectCellCommand` · L4280–4280
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4280–4280](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4280-L4280)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4280–4280](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4280-L4280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23174,7 +23174,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectGroupCommand` · L4281–4281
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4281–4281](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4281-L4281)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4281–4281](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4281-L4281)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23189,7 +23189,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectGroupCommand` · L4281–4281
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4281–4281](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4281-L4281)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4281–4281](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4281-L4281)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23204,7 +23204,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectShotCommand` · L4282–4282
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4282–4282](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4282-L4282)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4282–4282](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4282-L4282)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23219,7 +23219,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectShotCommand` · L4282–4282
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4282–4282](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4282-L4282)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4282–4282](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4282-L4282)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23234,7 +23234,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectBeamCommand` · L4283–4283
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4283–4283](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4283-L4283)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4283–4283](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4283-L4283)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23249,7 +23249,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectBeamCommand` · L4283–4283
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4283–4283](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4283-L4283)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4283–4283](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4283-L4283)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23264,7 +23264,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectCountCommand` · L4284–4284
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4284–4284](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4284-L4284)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4284–4284](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4284-L4284)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23279,7 +23279,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectCountCommand` · L4284–4284
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4284–4284](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4284-L4284)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4284–4284](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4284-L4284)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23294,7 +23294,7 @@ flowchart TD
 
 ### PropertyDeclaration `ClearGroupCommand` · L4285–4285
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4285–4285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4285-L4285)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4285–4285](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4285-L4285)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23309,7 +23309,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ClearGroupCommand` · L4285–4285
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4285–4285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4285-L4285)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4285–4285](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4285-L4285)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23324,7 +23324,7 @@ flowchart TD
 
 ### PropertyDeclaration `BackToGlassCommand` · L4286–4286
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4286–4286](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4286-L4286)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4286–4286](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4286-L4286)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23339,7 +23339,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_BackToGlassCommand` · L4286–4286
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4286–4286](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4286-L4286)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4286–4286](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4286-L4286)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23354,7 +23354,7 @@ flowchart TD
 
 ### PropertyDeclaration `CanEdit` · L4287–4287
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4287–4287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4287-L4287)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4287–4287](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4287-L4287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23369,7 +23369,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CanEdit` · L4287–4287
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4287–4287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4287-L4287)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4287–4287](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4287-L4287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23384,7 +23384,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CanEdit` · L4287–4287
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4287–4287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4287-L4287)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4287–4287](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4287-L4287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23405,7 +23405,7 @@ flowchart TD
 
 ### PropertyDeclaration `PointCount` · L4288–4288
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4288–4288](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4288-L4288)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4288–4288](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4288-L4288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23420,7 +23420,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsTwo` · L4289–4289
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4289–4289](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4289-L4289)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4289–4289](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4289-L4289)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23435,7 +23435,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsFour` · L4290–4290
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4290–4290](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4290-L4290)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4290–4290](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4290-L4290)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23450,7 +23450,7 @@ flowchart TD
 
 ### PropertyDeclaration `Status` · L4291–4291
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4291–4291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4291-L4291)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4291–4291](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4291-L4291)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23465,7 +23465,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Status` · L4291–4291
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4291–4291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4291-L4291)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4291–4291](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4291-L4291)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23480,7 +23480,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Status` · L4291–4291
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4291–4291](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4291-L4291)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4291–4291](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4291-L4291)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23501,7 +23501,7 @@ flowchart TD
 
 ### PropertyDeclaration `StatusBrush` · L4292–4292
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4292–4292](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4292-L4292)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4292–4292](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4292-L4292)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23516,7 +23516,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_StatusBrush` · L4292–4292
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4292–4292](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4292-L4292)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4292–4292](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4292-L4292)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23531,7 +23531,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_StatusBrush` · L4292–4292
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4292–4292](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4292-L4292)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4292–4292](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4292-L4292)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23552,7 +23552,7 @@ flowchart TD
 
 ### PropertyDeclaration `TimingSummary` · L4293–4293
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4293–4293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4293-L4293)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4293–4293](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4293-L4293)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23567,7 +23567,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_TimingSummary` · L4293–4293
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4293–4293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4293-L4293)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4293–4293](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4293-L4293)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23582,7 +23582,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_TimingSummary` · L4293–4293
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4293–4293](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4293-L4293)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4293–4293](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4293-L4293)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23603,7 +23603,7 @@ flowchart TD
 
 ### PropertyDeclaration `Summary` · L4294–4294
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4294–4294](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4294-L4294)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4294–4294](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4294-L4294)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23630,7 +23630,7 @@ flowchart TD
 
 ### PropertyDeclaration `GroupSize` · L4295–4295
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4295–4295](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4295-L4295)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4295–4295](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4295-L4295)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23651,7 +23651,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsAll` · L4296–4296
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4296–4296](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4296-L4296)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4296–4296](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4296-L4296)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23666,7 +23666,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedGroupNo` · L4297–4297
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4297–4297](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4297-L4297)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4297–4297](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4297-L4297)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23681,7 +23681,7 @@ flowchart TD
 
 ### PropertyDeclaration `ScopeHeads` · L4298–4298
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4298–4298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4298-L4298)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4298–4298](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4298-L4298)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23715,7 +23715,7 @@ flowchart TD
 
 ### PropertyDeclaration `ScopeTitle` · L4299–4299
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4299–4299](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4299-L4299)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4299–4299](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4299-L4299)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23743,7 +23743,7 @@ flowchart TD
 
 ### PropertyDeclaration `PreviewTitle` · L4300–4300
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4300–4300](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4300-L4300)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4300–4300](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4300-L4300)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23764,7 +23764,7 @@ flowchart TD
 
 ### PropertyDeclaration `CandidateText` · L4301–4301
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4301–4301](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4301-L4301)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4301–4301](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4301-L4301)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23793,7 +23793,7 @@ flowchart TD
 
 ### PropertyDeclaration `GlassVisibility` · L4302–4302
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4302–4302](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4302-L4302)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4302–4302](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4302-L4302)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23814,7 +23814,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShotVisibility` · L4303–4303
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4303–4303](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4303-L4303)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4303–4303](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4303-L4303)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23835,7 +23835,7 @@ flowchart TD
 
 ### PropertyDeclaration `PreviewImage` · L4304–4304
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4304–4304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4304-L4304)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4304–4304](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4304-L4304)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23850,7 +23850,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_PreviewImage` · L4304–4304
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4304–4304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4304-L4304)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4304–4304](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4304-L4304)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23865,7 +23865,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_PreviewImage` · L4304–4304
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4304–4304](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4304-L4304)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4304–4304](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4304-L4304)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23886,7 +23886,7 @@ flowchart TD
 
 ### PropertyDeclaration `GlassFrame` · L4305–4305
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4305–4305](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4305-L4305)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4305–4305](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4305-L4305)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23913,7 +23913,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_GlassFrame` · L4305–4305
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4305–4305](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4305-L4305)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4305–4305](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4305-L4305)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23928,7 +23928,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_GlassFrame` · L4305–4305
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4305–4305](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4305-L4305)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4305–4305](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4305-L4305)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23949,7 +23949,7 @@ flowchart TD
 
 ### PropertyDeclaration `Cells` · L4306–4306
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4306–4306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4306-L4306)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4306–4306](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4306-L4306)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23964,7 +23964,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Cells` · L4306–4306
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4306–4306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4306-L4306)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4306–4306](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4306-L4306)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -23979,7 +23979,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Cells` · L4306–4306
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4306–4306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4306-L4306)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4306–4306](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4306-L4306)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24000,7 +24000,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShotRows` · L4307–4307
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4307–4307](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4307-L4307)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4307–4307](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4307-L4307)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24015,7 +24015,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ShotRows` · L4307–4307
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4307–4307](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4307-L4307)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4307–4307](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4307-L4307)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24030,7 +24030,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ShotRows` · L4307–4307
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4307–4307](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4307-L4307)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4307–4307](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4307-L4307)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24051,7 +24051,7 @@ flowchart TD
 
 ### PropertyDeclaration `HeadRows` · L4308–4308
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4308–4308](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4308-L4308)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4308–4308](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4308-L4308)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24066,7 +24066,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_HeadRows` · L4308–4308
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4308–4308](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4308-L4308)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4308–4308](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4308-L4308)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24081,7 +24081,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_HeadRows` · L4308–4308
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4308–4308](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4308-L4308)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4308–4308](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4308-L4308)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24102,7 +24102,7 @@ flowchart TD
 
 ### PropertyDeclaration `Beams` · L4309–4309
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4309–4309](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4309-L4309)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4309–4309](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4309-L4309)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24117,7 +24117,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Beams` · L4309–4309
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4309–4309](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4309-L4309)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4309–4309](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4309-L4309)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24132,7 +24132,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Beams` · L4309–4309
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4309–4309](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4309-L4309)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4309–4309](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4309-L4309)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24153,7 +24153,7 @@ flowchart TD
 
 ### PropertyDeclaration `GroupCards` · L4310–4310
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4310–4310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4310-L4310)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4310–4310](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4310-L4310)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24168,7 +24168,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_GroupCards` · L4310–4310
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4310–4310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4310-L4310)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4310–4310](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4310-L4310)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24183,7 +24183,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_GroupCards` · L4310–4310
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4310–4310](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4310-L4310)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4310–4310](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4310-L4310)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24204,7 +24204,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectionLabels` · L4311–4311
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4311–4311](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4311-L4311)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4311–4311](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4311-L4311)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24219,7 +24219,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectionLabels` · L4311–4311
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4311–4311](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4311-L4311)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4311–4311](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4311-L4311)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24234,7 +24234,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_SelectionLabels` · L4311–4311
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4311–4311](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4311-L4311)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4311–4311](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4311-L4311)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24255,7 +24255,7 @@ flowchart TD
 
 ### PropertyDeclaration `SideLabelsFit` · L4312–4312
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4312–4312](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4312-L4312)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4312–4312](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4312-L4312)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24282,7 +24282,7 @@ flowchart TD
 
 ### PropertyDeclaration `PreviewCanvasHeight` · L4313–4313
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4313–4313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4313-L4313)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4313–4313](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4313-L4313)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24303,7 +24303,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectGroup` · L4315–4325
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4315–4325](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4315-L4325)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4315–4325](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4315-L4325)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24322,7 +24322,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4267–4267](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4267-L4267) | SelectGroup | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4267–4267](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4267-L4267) | SelectGroup | False |
 
 호출하는 대상과 해석 범위:
 
@@ -24358,7 +24358,7 @@ flowchart TD
 
 ### MethodDeclaration `Update` · L4327–4387
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4327–4387](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4327-L4387)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4327–4387](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4327-L4387)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24379,7 +24379,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:666–666](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L666-L666) | ZeroDefence.Update | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:666–666](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L666-L666) | ZeroDefence.Update | False |
 
 호출하는 대상과 해석 범위:
 
@@ -24505,7 +24505,7 @@ flowchart TD
 
 ### MethodDeclaration `ChangeCount` · L4389–4417
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4389–4417](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4389-L4417)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4389–4417](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4389-L4417)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24524,7 +24524,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4271–4271](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4271-L4271) | ChangeCount | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4271–4271](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4271-L4271) | ChangeCount | False |
 
 호출하는 대상과 해석 범위:
 
@@ -24589,7 +24589,7 @@ flowchart TD
 
 ### MethodDeclaration `RestoreCandidate` · L4419–4423
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4419–4423](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4419-L4423)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4419–4423](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4419-L4423)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24602,7 +24602,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4374–4374](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4374-L4374) | RestoreCandidate | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4374–4374](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4374-L4374) | RestoreCandidate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -24626,7 +24626,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectCell` · L4425–4432
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4425–4432](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4425-L4432)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4425–4432](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4425-L4432)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24645,7 +24645,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4268–4268](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4268-L4268) | SelectCell | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4268–4268](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4268-L4268) | SelectCell | False |
 
 호출하는 대상과 해석 범위:
 
@@ -24678,7 +24678,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectShot` · L4434–4454
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4434–4454](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4434-L4454)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4434–4454](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4434-L4454)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24697,7 +24697,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4269–4269](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4269-L4269) | SelectShot | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4269–4269](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4269-L4269) | SelectShot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -24765,7 +24765,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectBeam` · L4456–4481
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4456–4481](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4456-L4481)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4456–4481](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4456-L4481)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24784,7 +24784,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4270–4270](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4270-L4270) | SelectBeam | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4270–4270](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4270-L4270) | SelectBeam | False |
 
 호출하는 대상과 해석 범위:
 
@@ -24861,7 +24861,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateCandidate` · L4483–4490
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4483–4490](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4483-L4490)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4483–4490](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4483-L4490)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24880,9 +24880,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4463–4463](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4463-L4463) | ValidateCandidate | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4525–4525](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4525-L4525) | ValidateCandidate | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4670–4670](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4670-L4670) | ValidateCandidate | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4463–4463](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4463-L4463) | ValidateCandidate | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4525–4525](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4525-L4525) | ValidateCandidate | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4670–4670](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4670-L4670) | ValidateCandidate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -24921,7 +24921,7 @@ flowchart TD
 
 ### MethodDeclaration `InvalidateOtherHeadsInGroup` · L4492–4498
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4492–4498](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4492-L4498)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4492–4498](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4492-L4498)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24934,7 +24934,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4473–4473](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4473-L4473) | InvalidateOtherHeadsInGroup | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4473–4473](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4473-L4473) | InvalidateOtherHeadsInGroup | False |
 
 호출하는 대상과 해석 범위:
 
@@ -24972,7 +24972,7 @@ flowchart TD
 
 ### MethodDeclaration `GetShotAvailability` · L4500–4547
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4500–4547](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4500-L4547)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4500–4547](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4500-L4547)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -24991,8 +24991,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4442–4442](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4442-L4442) | GetShotAvailability | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4610–4610](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4610-L4610) | GetShotAvailability | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4442–4442](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4442-L4442) | GetShotAvailability | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4610–4610](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4610-L4610) | GetShotAvailability | False |
 
 호출하는 대상과 해석 범위:
 
@@ -25089,7 +25089,7 @@ flowchart TD
 
 ### MethodDeclaration `ClearGroup` · L4550–4572
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4550–4572](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4550-L4572)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4550–4572](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4550-L4572)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25102,7 +25102,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4272–4272](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4272-L4272) | ClearGroup | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4272–4272](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4272-L4272) | ClearGroup | False |
 
 호출하는 대상과 해석 범위:
 
@@ -25161,7 +25161,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateStatus` · L4574–4581
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4574–4581](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4574-L4581)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4574–4581](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4574-L4581)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25174,11 +25174,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4323–4323](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4323-L4323) | UpdateStatus | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4377–4377](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4377-L4377) | UpdateStatus | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4410–4410](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4410-L4410) | UpdateStatus | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4474–4474](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4474-L4474) | UpdateStatus | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4565–4565](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4565-L4565) | UpdateStatus | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4323–4323](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4323-L4323) | UpdateStatus | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4377–4377](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4377-L4377) | UpdateStatus | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4410–4410](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4410-L4410) | UpdateStatus | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4474–4474](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4474-L4474) | UpdateStatus | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4565–4565](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4565-L4565) | UpdateStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -25218,7 +25218,7 @@ flowchart TD
 
 ### MethodDeclaration `Reject` · L4583–4589
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4583–4589](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4583-L4589)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4583–4589](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4583-L4589)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25237,13 +25237,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4396–4396](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4396-L4396) | Reject | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4415–4415](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4415-L4415) | Reject | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4445–4445](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4445-L4445) | Reject | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4453–4453](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4453-L4453) | Reject | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4466–4466](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4466-L4466) | Reject | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4479–4479](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4479-L4479) | Reject | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4570–4570](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4570-L4570) | Reject | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4396–4396](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4396-L4396) | Reject | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4415–4415](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4415-L4415) | Reject | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4445–4445](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4445-L4445) | Reject | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4453–4453](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4453-L4453) | Reject | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4466–4466](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4466-L4466) | Reject | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4479–4479](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4479-L4479) | Reject | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4570–4570](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4570-L4570) | Reject | False |
 
 호출하는 대상과 해석 범위:
 
@@ -25269,7 +25269,7 @@ flowchart TD
 
 ### MethodDeclaration `OnPropertyChanged` · L4591–4591
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4591–4591](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4591-L4591)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4591–4591](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4591-L4591)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25288,9 +25288,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4587–4587](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4587-L4587) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4588–4588](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4588-L4588) | OnPropertyChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4689–4689](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4689-L4689) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4587–4587](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4587-L4587) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4588–4588](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4588-L4588) | OnPropertyChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4689–4689](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4689-L4689) | OnPropertyChanged | False |
 
 호출하는 대상과 해석 범위:
 
@@ -25310,7 +25310,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshView` · L4592–4690
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4592–4690](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4592-L4690)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4592–4690](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4592-L4690)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25323,16 +25323,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4276–4276](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4276-L4276) | RefreshView | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4324–4324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4324-L4324) | RefreshView | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4333–4333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4333-L4333) | RefreshView | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4349–4349](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4349-L4349) | RefreshView | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4386–4386](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4386-L4386) | RefreshView | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4411–4411](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4411-L4411) | RefreshView | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4431–4431](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4431-L4431) | RefreshView | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4451–4451](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4451-L4451) | RefreshView | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4475–4475](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4475-L4475) | RefreshView | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4566–4566](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4566-L4566) | RefreshView | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4276–4276](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4276-L4276) | RefreshView | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4324–4324](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4324-L4324) | RefreshView | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4333–4333](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4333-L4333) | RefreshView | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4349–4349](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4349-L4349) | RefreshView | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4386–4386](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4386-L4386) | RefreshView | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4411–4411](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4411-L4411) | RefreshView | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4431–4431](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4431-L4431) | RefreshView | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4451–4451](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4451-L4451) | RefreshView | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4475–4475](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4475-L4475) | RefreshView | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4566–4566](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4566-L4566) | RefreshView | False |
 
 호출하는 대상과 해석 범위:
 
@@ -25630,7 +25630,7 @@ flowchart TD
 
 ### PropertyDeclaration `Head` · L4695–4695
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4695–4695](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4695-L4695)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4695–4695](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4695-L4695)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25645,7 +25645,7 @@ flowchart TD
 
 ### PropertyDeclaration `Cell` · L4696–4696
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4696–4696](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4696-L4696)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4696–4696](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4696-L4696)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25666,7 +25666,7 @@ flowchart TD
 
 ### PropertyDeclaration `Shot` · L4697–4697
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4697–4697](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4697-L4697)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4697–4697](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4697-L4697)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25681,7 +25681,7 @@ flowchart TD
 
 ### PropertyDeclaration `Beam` · L4698–4698
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4698–4698](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4698-L4698)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4698–4698](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4698-L4698)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25708,7 +25708,7 @@ flowchart TD
 
 ### PropertyDeclaration `Coordinates` · L4699–4699
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4699–4699](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4699-L4699)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4699–4699](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4699-L4699)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25729,7 +25729,7 @@ flowchart TD
 
 ### PropertyDeclaration `Tooltip` · L4700–4700
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4700–4700](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4700-L4700)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4700–4700](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4700-L4700)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25750,7 +25750,7 @@ flowchart TD
 
 ### PropertyDeclaration `Background` · L4705–4705
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4705–4705](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4705-L4705)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4705–4705](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4705-L4705)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25771,7 +25771,7 @@ flowchart TD
 
 ### PropertyDeclaration `Foreground` · L4706–4706
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4706–4706](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4706-L4706)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4706–4706](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4706-L4706)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25792,7 +25792,7 @@ flowchart TD
 
 ### PropertyDeclaration `FontSize` · L4711–4711
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4711–4711](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4711-L4711)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4711–4711](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4711-L4711)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25819,7 +25819,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsUnavailable` · L4716–4716
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4716–4716](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4716-L4716)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4716–4716](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4716-L4716)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25834,7 +25834,7 @@ flowchart TD
 
 ### PropertyDeclaration `Detail` · L4717–4717
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4717–4717](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4717-L4717)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4717–4717](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4717-L4717)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25864,7 +25864,7 @@ flowchart TD
 
 ### PropertyDeclaration `Label` · L4723–4723
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4723–4723](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4723-L4723)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4723–4723](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4723-L4723)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25879,7 +25879,7 @@ flowchart TD
 
 ### PropertyDeclaration `Background` · L4724–4724
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4724–4724](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4724-L4724)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4724–4724](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4724-L4724)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25904,7 +25904,7 @@ flowchart TD
 
 ### PropertyDeclaration `Detail` · L4725–4725
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4725–4725](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4725-L4725)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4725–4725](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4725-L4725)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25928,7 +25928,7 @@ flowchart TD
 
 ### PropertyDeclaration `Name` · L4730–4730
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4730–4730](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4730-L4730)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4730–4730](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4730-L4730)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25943,7 +25943,7 @@ flowchart TD
 
 ### PropertyDeclaration `Coordinates` · L4731–4731
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4731–4731](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4731-L4731)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4731–4731](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4731-L4731)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25964,7 +25964,7 @@ flowchart TD
 
 ### PropertyDeclaration `Background` · L4732–4732
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4732–4732](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4732-L4732)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4732–4732](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4732-L4732)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -25986,7 +25986,7 @@ flowchart TD
 
 ### PropertyDeclaration `Foreground` · L4733–4733
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4733–4733](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4733-L4733)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4733–4733](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4733-L4733)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -26007,7 +26007,7 @@ flowchart TD
 
 ### PropertyDeclaration `Detail` · L4734–4734
 
-[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4734–4734](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4734-L4734)
+[Drilling.UI/Menu/Menus/CMenuRecipe.cs:4734–4734](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4734-L4734)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

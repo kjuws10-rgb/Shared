@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.UI/Views/CRecipeView.xaml.cs
-Commit: 334b3599651b2e8e0181fd4459bafaf3cddafff3
+Commit: 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System;

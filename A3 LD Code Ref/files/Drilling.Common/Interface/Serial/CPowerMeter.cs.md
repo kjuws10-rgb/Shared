@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | ae319b41165e250d08a037360e203f7d84c6c6912f19c6a72dfb8157356d9077 |
 | 파일 분류 | code |
 | 원본 크기/행 | 13,076 bytes / 361 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -71,7 +71,7 @@
 
 ### FieldDeclaration `ResponseTimeoutThreshold` · L17–17
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L17-L17)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -92,7 +92,7 @@
 
 ### FieldDeclaration `ResponsePollIntervalMs` · L18–18
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L18-L18)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -113,7 +113,7 @@
 
 ### FieldDeclaration `_consecutiveResponseTimeouts` · L19–19
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L19-L19)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -128,7 +128,7 @@
 
 ### PropertyDeclaration `CommandNewLine` · L20–26
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:20–26](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L20-L26)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:20–26](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L20-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -143,7 +143,7 @@
 
 ### GetAccessorDeclaration `get_CommandNewLine` · L22–25
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:22–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L22-L25)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:22–25](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L22-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -164,7 +164,7 @@
 
 ### MethodDeclaration `FormatCommand` · L28–31
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:28–31](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L28-L31)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:28–31](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L28-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -183,7 +183,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L53-L53) | FormatCommand | True |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L53-L53) | FormatCommand | True |
 
 호출하는 대상과 해석 범위:
 
@@ -202,7 +202,7 @@
 
 ### MethodDeclaration `ConfigureSerialPort` · L33–36
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:33–36](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L33-L36)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:33–36](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L33-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -229,7 +229,7 @@
 
 ### MethodDeclaration `Execute` · L38–130
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:38–130](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L38-L130)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:38–130](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L38-L130)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -382,7 +382,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadResponse` · L132–172
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:132–172](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L132-L172)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:132–172](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L132-L172)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -469,7 +469,7 @@ flowchart TD
 
 ### MethodDeclaration `IsNoResponseCommand` · L174–177
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:174–177](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L174-L177)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:174–177](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L174-L177)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -488,7 +488,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L58-L58) | IsNoResponseCommand | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L58-L58) | IsNoResponseCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -509,7 +509,7 @@ flowchart TD
 
 ### MethodDeclaration `Build` · L179–194
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:179–194](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L179-L194)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:179–194](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L179-L194)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -529,7 +529,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:1431–1431](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L1431-L1431) | CPowerMeter.Build | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:1431–1431](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L1431-L1431) | CPowerMeter.Build | False |
 
 호출하는 대상과 해석 범위:
 
@@ -560,7 +560,7 @@ flowchart TD
 
 ### MethodDeclaration `IsSuccessResponse` · L196–199
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:196–199](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L196-L199)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:196–199](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L196-L199)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -579,8 +579,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:1467–1467](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L1467-L1467) | CPowerMeter.IsSuccessResponse | False |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:204–204](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L204-L204) | IsSuccessResponse | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:1467–1467](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L1467-L1467) | CPowerMeter.IsSuccessResponse | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:204–204](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L204-L204) | IsSuccessResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -603,7 +603,7 @@ flowchart TD
 
 ### MethodDeclaration `Apply` · L201–255
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:201–255](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L201-L255)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:201–255](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L201-L255)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -627,8 +627,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:1446–1446](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L1446-L1446) | CPowerMeter.Apply | False |
-| [Drilling.Common/Interface/CInterfaceManager.cs:1465–1465](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CInterfaceManager.cs#L1465-L1465) | CPowerMeter.Apply | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:1446–1446](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L1446-L1446) | CPowerMeter.Apply | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:1465–1465](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CInterfaceManager.cs#L1465-L1465) | CPowerMeter.Apply | False |
 
 호출하는 대상과 해석 범위:
 
@@ -698,7 +698,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyPowerValue` · L257–272
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:257–272](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L257-L272)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:257–272](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L257-L272)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -718,7 +718,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L221-L221) | ApplyPowerValue | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L221-L221) | ApplyPowerValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -756,7 +756,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyBeamPosition` · L274–287
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:274–287](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L274-L287)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:274–287](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L274-L287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -776,7 +776,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L238-L238) | ApplyBeamPosition | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L238-L238) | ApplyBeamPosition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -814,7 +814,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateSimulationResponse` · L289–302
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:289–302](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L289-L302)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:289–302](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L289-L302)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -836,7 +836,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L203-L203) | CreateSimulationResponse | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L203-L203) | CreateSimulationResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -886,7 +886,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadWaveLengthNm` · L304–308
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:304–308](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L304-L308)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:304–308](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L304-L308)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -905,7 +905,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L232-L232) | ReadWaveLengthNm | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L232-L232) | ReadWaveLengthNm | False |
 
 호출하는 대상과 해석 범위:
 
@@ -927,7 +927,7 @@ flowchart TD
 
 ### MethodDeclaration `ToMeter` · L310–313
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:310–313](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L310-L313)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:310–313](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L310-L313)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -946,9 +946,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:187–187](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L187-L187) | ToMeter | False |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L297-L297) | ToMeter | False |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L298-L298) | ToMeter | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:187–187](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L187-L187) | ToMeter | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L297-L297) | ToMeter | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L298-L298) | ToMeter | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -961,7 +961,7 @@ flowchart TD
 
 ### MethodDeclaration `TryReadPower` · L315–320
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:315–320](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L315-L320)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:315–320](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L315-L320)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -981,8 +981,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:395–395](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/CPowerMeasureRun.cs#L395-L395) | CPowerMeter.TryReadPower | False |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L221-L221) | TryReadPower | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:395–395](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/CPowerMeasureRun.cs#L395-L395) | CPowerMeter.TryReadPower | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L221-L221) | TryReadPower | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1017,7 +1017,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDouble` · L322–326
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:322–326](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L322-L326)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:322–326](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L322-L326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1036,9 +1036,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L284-L284) | ReadDouble | False |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:285–285](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L285-L285) | ReadDouble | False |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L306-L306) | ReadDouble | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L284-L284) | ReadDouble | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:285–285](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L285-L285) | ReadDouble | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L306-L306) | ReadDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1062,7 +1062,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadLeadingNumber` · L328–337
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:328–337](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L328-L337)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:328–337](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L328-L337)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1081,7 +1081,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L324-L324) | ReadLeadingNumber | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L324-L324) | ReadLeadingNumber | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1109,7 +1109,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesChar` · L330–333
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:330–333](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L330-L333)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:330–333](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L330-L333)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1143,7 +1143,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `ReadPower` · L342–342
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:342–342](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L342-L342)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:342–342](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L342-L342)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1158,7 +1158,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `QueryHardwareDescription` · L343–343
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L343-L343)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L343-L343)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1173,7 +1173,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `QuerySerialNumber` · L344–344
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L344-L344)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L344-L344)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1188,7 +1188,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `QueryWaveLength` · L345–345
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:345–345](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L345-L345)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:345–345](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L345-L345)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1203,7 +1203,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetWaveLength` · L346–346
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L346-L346)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L346-L346)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1218,7 +1218,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `QueryBeamPosition` · L347–347
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L347-L347)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L347-L347)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1233,7 +1233,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `StartStreaming` · L348–348
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L348-L348)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L348-L348)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1248,7 +1248,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `StopStreaming` · L349–349
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:349–349](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L349-L349)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:349–349](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L349-L349)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1263,7 +1263,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Reset` · L350–350
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L350-L350)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L350-L350)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1278,7 +1278,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Refresh` · L351–351
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L351-L351)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L351-L351)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1293,7 +1293,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Ok` · L356–356
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L356-L356)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L356-L356)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1308,7 +1308,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Error` · L357–357
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L357-L357)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L357-L357)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1323,7 +1323,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Timeout` · L358–358
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L358-L358)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L358-L358)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1338,7 +1338,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `InvalidResponse` · L359–359
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L359-L359)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L359-L359)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1353,7 +1353,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `NotSupported` · L360–360
 
-[Drilling.Common/Interface/Serial/CPowerMeter.cs:360–360](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.Common/Interface/Serial/CPowerMeter.cs#L360-L360)
+[Drilling.Common/Interface/Serial/CPowerMeter.cs:360–360](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.Common/Interface/Serial/CPowerMeter.cs#L360-L360)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | c9bbf573db3ad2daf7010f437df04fd305f212a3b0960e8ffad05d986239f2a7 |
 | 파일 분류 | code |
 | 원본 크기/행 | 16,774 bytes / 197 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -45,7 +45,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `IsCompactProperty` · L13–13
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L13-L13)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -77,7 +77,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `IsCompact` · L14–14
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L14-L14)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -92,7 +92,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_IsCompact` · L14–14
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L14-L14)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -119,7 +119,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_IsCompact` · L14–14
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L14-L14)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -152,7 +152,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_display` · L17–17
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L17-L17)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -183,7 +183,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L18–50
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:18–50](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L18-L50)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:18–50](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L18-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -295,7 +295,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateDisplay` · L51–55
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:51–55](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L51-L55)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:51–55](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L51-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -308,9 +308,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L22-L22) | UpdateDisplay | False |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L24-L24) | UpdateDisplay | False |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L25-L25) | UpdateDisplay | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L22-L22) | UpdateDisplay | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L24-L24) | UpdateDisplay | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L25-L25) | UpdateDisplay | False |
 
 호출하는 대상과 해석 범위:
 
@@ -345,7 +345,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshFeedback` · L56–56
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L56-L56)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L56-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -358,8 +358,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L21-L21) | RefreshFeedback | False |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L53-L53) | RefreshFeedback | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L21-L21) | RefreshFeedback | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L53-L53) | RefreshFeedback | False |
 
 호출하는 대상과 해석 범위:
 
@@ -377,7 +377,7 @@ flowchart TD
 
 ### MethodDeclaration `EditConditions` · L60–196
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:60–196](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L60-L196)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:60–196](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L60-L196)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -401,7 +401,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3304–3305](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3304-L3305) | Drilling.UI.Views.CDefaultOffsetView.EditConditions | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3304–3305](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3304-L3305) | Drilling.UI.Views.CDefaultOffsetView.EditConditions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -537,20 +537,20 @@ flowchart TD
 | 178 | layout.Children.Add | unresolved | None |
 | 182 | double.TryParse | candidate | OverloadResolutionFailure |
 | 182 | double.IsFinite | resolved | bool double.IsFinite(double) |
-| 182 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
+| 182 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:110 |
 | 183 | double.TryParse | candidate | OverloadResolutionFailure |
 | 183 | double.IsFinite | resolved | bool double.IsFinite(double) |
-| 183 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
+| 183 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:110 |
 | 184 | double.TryParse | candidate | OverloadResolutionFailure |
 | 184 | double.IsFinite | resolved | bool double.IsFinite(double) |
-| 184 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
+| 184 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:110 |
 | 185 | models.Contains | resolved | bool System.Collections.Generic.IEnumerable<int>.Contains<int>(int) |
-| 185 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
+| 185 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:110 |
 | 188 | double.TryParse | candidate | OverloadResolutionFailure |
 | 188 | double.IsFinite | resolved | bool double.IsFinite(double) |
-| 188 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
+| 188 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:110 |
 | 190 | CDefaultOffsetCalibration.ValidateOptions | resolved | void Drilling.Common.Correction.CDefaultOffsetCalibration.ValidateOptions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:132 |
-| 191 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
+| 191 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:110 |
 | 195 | dialog.ShowDialog | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -925,7 +925,7 @@ flowchart TD
 
 ### LocalFunctionStatement `UpdateMachiningMode` · L119–124
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:119–124](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L119-L124)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:119–124](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L119-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -938,7 +938,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L125-L125) | UpdateMachiningMode | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L125-L125) | UpdateMachiningMode | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -954,7 +954,7 @@ flowchart TD
 
 ### LocalFunctionStatement `AddInputRow` · L126–132
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:126–132](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L126-L132)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:126–132](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L126-L132)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1011,7 +1011,7 @@ flowchart TD
 
 ### LocalFunctionStatement `UpdateCenterPreview` · L145–151
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:145–151](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L145-L151)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:145–151](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L145-L151)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1024,8 +1024,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L152-L152) | UpdateCenterPreview | False |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L153-L153) | UpdateCenterPreview | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L152-L152) | UpdateCenterPreview | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L153-L153) | UpdateCenterPreview | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1051,7 +1051,7 @@ flowchart TD
 
 ### LocalFunctionStatement `AddFieldRow` · L158–167
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:158–167](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L158-L167)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:158–167](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L158-L167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1071,7 +1071,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L168-L168) | AddFieldRow | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L168-L168) | AddFieldRow | False |
 
 호출하는 대상과 해석 범위:
 

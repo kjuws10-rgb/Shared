@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 334b3599651b2e8e0181fd4459bafaf3cddafff3 |
+| 원본 Commit | 0219666f9053b907d96d7e0aa7d0c6c1be3a73d4 |
 | 원본 SHA256 | 2bc4898263b350dd75b8a7510b2377d23112ee311aab33838794268788959dbd |
 | 파일 분류 | code |
 | 원본 크기/행 | 1,925 bytes / 60 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CPmView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CPmView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -39,7 +39,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isPmPasswordVisible` · L9–9
 
-[Drilling.UI/Views/CPmView.xaml.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CPmView.xaml.cs#L9-L9)
+[Drilling.UI/Views/CPmView.xaml.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CPmView.xaml.cs#L9-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -54,7 +54,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L11–14
 
-[Drilling.UI/Views/CPmView.xaml.cs:11–14](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CPmView.xaml.cs#L11-L14)
+[Drilling.UI/Views/CPmView.xaml.cs:11–14](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CPmView.xaml.cs#L11-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -81,7 +81,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OpenPmPasswordKeyboard` · L16–28
 
-[Drilling.UI/Views/CPmView.xaml.cs:16–28](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CPmView.xaml.cs#L16-L28)
+[Drilling.UI/Views/CPmView.xaml.cs:16–28](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CPmView.xaml.cs#L16-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -135,7 +135,7 @@ flowchart TD
 
 ### MethodDeclaration `ClearPmPassword` · L30–34
 
-[Drilling.UI/Views/CPmView.xaml.cs:30–34](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CPmView.xaml.cs#L30-L34)
+[Drilling.UI/Views/CPmView.xaml.cs:30–34](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CPmView.xaml.cs#L30-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -171,7 +171,7 @@ flowchart TD
 
 ### MethodDeclaration `PmPasswordChanged` · L36–39
 
-[Drilling.UI/Views/CPmView.xaml.cs:36–39](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CPmView.xaml.cs#L36-L39)
+[Drilling.UI/Views/CPmView.xaml.cs:36–39](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CPmView.xaml.cs#L36-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -199,7 +199,7 @@ flowchart TD
 
 ### MethodDeclaration `TogglePmPasswordVisibility` · L41–48
 
-[Drilling.UI/Views/CPmView.xaml.cs:41–48](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CPmView.xaml.cs#L41-L48)
+[Drilling.UI/Views/CPmView.xaml.cs:41–48](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CPmView.xaml.cs#L41-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -234,7 +234,7 @@ flowchart TD
 
 ### MethodDeclaration `UnlockPm` · L50–59
 
-[Drilling.UI/Views/CPmView.xaml.cs:50–59](https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Views/CPmView.xaml.cs#L50-L59)
+[Drilling.UI/Views/CPmView.xaml.cs:50–59](https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Views/CPmView.xaml.cs#L50-L59)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

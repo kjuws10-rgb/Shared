@@ -1,13 +1,13 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Popup/CPasswordInputDialog.xaml.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs">Git 원본</a></p><h1>Drilling.UI/Popup/CPasswordInputDialog.xaml.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Popup/CPasswordInputDialog.xaml.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs">Git 원본</a></p><h1>Drilling.UI/Popup/CPasswordInputDialog.xaml.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>334b3599651b2e8e0181fd4459bafaf3cddafff3</td></tr>
+<tr><td>원본 Commit</td><td>0219666f9053b907d96d7e0aa7d0c6c1be3a73d4</td></tr>
 <tr><td>원본 SHA256</td><td>605f668c0559885fd5eeff71c6db76017f29a2b8ed3aadc0175ebeb4c3b0576b</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
 <tr><td>원본 크기/행</td><td>2,730 bytes / 108 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
@@ -35,7 +35,7 @@
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
 <h3 id="L9">FieldDeclaration <code>SelectPasswordText</code> · L9–11</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L9-L11">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:9–11</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L9-L11">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:9–11</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Reflection.MethodInfo? Drilling.UI.Popup.CPasswordInputDialog.SelectPasswordText</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
@@ -54,7 +54,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L13">ConstructorDeclaration <code>.ctor</code> · L13–19</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L13-L19">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:13–19</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L13-L19">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:13–19</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.CPasswordInputDialog.CPasswordInputDialog(string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -67,7 +67,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/CRootView.cs#L1396-L1399">Drilling.UI/CRootView.cs:1396–1399</a></td><td>new CPasswordInputDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/CRootView.cs#L1396-L1399">Drilling.UI/CRootView.cs:1396–1399</a></td><td>new CPasswordInputDialog</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -85,7 +85,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L21">PropertyDeclaration <code>ResultPassword</code> · L21–27</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L21-L27">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:21–27</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L21-L27">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:21–27</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.CPasswordInputDialog.ResultPassword</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -95,7 +95,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L23">GetAccessorDeclaration <code>get_ResultPassword</code> · L23–26</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L23-L26">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:23–26</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L23-L26">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:23–26</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.CPasswordInputDialog.ResultPassword.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -109,7 +109,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L29">MethodDeclaration <code>BuildKeys</code> · L29–47</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L29-L47">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:29–47</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L29-L47">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:29–47</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CPasswordInputDialog.BuildKeys()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -118,7 +118,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L17-L17">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:17–17</a></td><td>BuildKeys</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L17-L17">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:17–17</a></td><td>BuildKeys</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -148,7 +148,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L31">LocalFunctionStatement <code>SelectItem</code> · L31–34</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L31-L34">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:31–34</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L31-L34">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:31–34</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string SelectItem(char)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -171,7 +171,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L49">MethodDeclaration <code>KeyClick</code> · L49–56</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L49-L56">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:49–56</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L49-L56">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:49–56</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CPasswordInputDialog.KeyClick(object, RoutedEventArgs)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -201,7 +201,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L58">MethodDeclaration <code>SpaceClick</code> · L58–62</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L58-L62">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:58–62</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L58-L62">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:58–62</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CPasswordInputDialog.SpaceClick(object, RoutedEventArgs)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -225,7 +225,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L64">MethodDeclaration <code>BackClick</code> · L64–71</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L64-L71">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:64–71</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L64-L71">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:64–71</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CPasswordInputDialog.BackClick(object, RoutedEventArgs)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -255,7 +255,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L73">MethodDeclaration <code>ClearClick</code> · L73–77</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L73-L77">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:73–77</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L73-L77">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:73–77</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CPasswordInputDialog.ClearClick(object, RoutedEventArgs)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -280,7 +280,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L79">MethodDeclaration <code>MoveCaretToEnd</code> · L79–83</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L79-L83">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:79–83</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L79-L83">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:79–83</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CPasswordInputDialog.MoveCaretToEnd()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -289,11 +289,11 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L18-L18">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:18–18</a></td><td>MoveCaretToEnd</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L54-L54">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:54–54</a></td><td>MoveCaretToEnd</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L61-L61">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:61–61</a></td><td>MoveCaretToEnd</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L69-L69">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:69–69</a></td><td>MoveCaretToEnd</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L76-L76">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:76–76</a></td><td>MoveCaretToEnd</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L18-L18">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:18–18</a></td><td>MoveCaretToEnd</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L54-L54">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:54–54</a></td><td>MoveCaretToEnd</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L61-L61">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:61–61</a></td><td>MoveCaretToEnd</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L69-L69">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:69–69</a></td><td>MoveCaretToEnd</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L76-L76">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:76–76</a></td><td>MoveCaretToEnd</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -307,7 +307,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L85">MethodDeclaration <code>CancelClick</code> · L85–88</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L85-L88">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:85–88</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L85-L88">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:85–88</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CPasswordInputDialog.CancelClick(object, RoutedEventArgs)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -326,7 +326,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L90">MethodDeclaration <code>OkClick</code> · L90–93</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L90-L93">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:90–93</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L90-L93">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:90–93</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CPasswordInputDialog.OkClick(object, RoutedEventArgs)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -345,7 +345,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L95">MethodDeclaration <code>WindowKeyDown</code> · L95–107</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/334b3599651b2e8e0181fd4459bafaf3cddafff3/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L95-L107">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:95–107</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/0219666f9053b907d96d7e0aa7d0c6c1be3a73d4/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L95-L107">Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:95–107</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CPasswordInputDialog.WindowKeyDown(object, KeyEventArgs)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>

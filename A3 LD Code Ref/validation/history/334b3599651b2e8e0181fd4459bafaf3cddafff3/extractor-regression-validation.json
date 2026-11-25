@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "a3-extractor-regression/1",
+  "passed": true,
+  "testsRun": 18,
+  "exitCode": 0,
+  "scope": "Copied Roslyn tool self-test against synthetic source and framework metadata only; no equipment app or vendor SDK executed.",
+  "programSha256": "6ce9c904a23779bda315d5080dd01f1187d0e2f8cef75b38660a2317697fa56e"
+}
