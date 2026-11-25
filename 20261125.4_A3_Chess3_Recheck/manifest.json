@@ -1,0 +1,54 @@
+{
+  "version": "11.25.4",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "sourceBranch": "master",
+  "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
+  "pages": 2,
+  "chess": 3,
+  "virtualShotGrid": [
+    6,
+    6
+  ],
+  "beamsPerShot": 16,
+  "TYPE1": {
+    "shots": 12,
+    "beamCenters": 192
+  },
+  "TYPE0": {
+    "shots": 4,
+    "beamCenters": 64
+  },
+  "pureExtractedPredicateChecks": 72,
+  "equipmentExecuted": false,
+  "originalSourceModified": false,
+  "prior3LogicalGridWasCorrect": true,
+  "diagramScope": "Cell logical map versus +X-right/+Y-up design coordinates; virtual Pixel.1/Pitch4/split4; rotations0/90",
+  "pdfType": "high-resolution image-based PDF",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 40,
+      "sha256": "e20976e4ca02d655e2b23e5d2326c025472009bb7d290768eb450ba2617b88ae"
+    },
+    {
+      "path": "A3_체스3_Git재확인_가공배치_11.25.4.pdf",
+      "bytes": 308455,
+      "sha256": "b1e3e21a4618e2af0f7d4db09c3890e1a2e9e858c6577c9d4f6432a7b8f4cd49"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3710,
+      "sha256": "89247d7f07396e0715deab3b84b015f93141e9f5d8244aea7c69666f7b4ff03b"
+    },
+    {
+      "path": "slide-1.png",
+      "bytes": 201446,
+      "sha256": "b9cdba18c343f2291cde6c1492502bd5e3416f6f60e7efc72c34639deb8b3a24"
+    },
+    {
+      "path": "slide-2.png",
+      "bytes": 160316,
+      "sha256": "ced26ba01633c5c2f9d088e42d8491b1784185815b062e36e5f5ff5be4d12975"
+    }
+  ]
+}
