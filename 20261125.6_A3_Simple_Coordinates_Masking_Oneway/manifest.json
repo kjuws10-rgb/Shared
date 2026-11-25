@@ -1,0 +1,29 @@
+{
+  "version": "11.25.6",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "sourceBranch": "master",
+  "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
+  "pageCount": 2,
+  "sourceModified": false,
+  "pdf": "A3_레시피_좌표_Masking_Oneway_2페이지_11.25.6.pdf",
+  "pdfSha256": "eb05bb68033b8ed30b69d35d8ed5d3cef2a3d5fda6d03dcef0df440266f33d96",
+  "editablePageId": "page_e1fd29ef818481919292fc341040d816",
+  "nativeState": 15,
+  "artifactRef": "artifact_external_91509cd3-9b3e-42e2-bac4-8c17db30628b",
+  "parameterSimplification": {
+    "rotation": 0,
+    "shiftX": 0,
+    "shiftY": 0,
+    "allOffsets": 0,
+    "pixelSize": 2,
+    "pitch": 4,
+    "numPixels": 24,
+    "splitBeamsPerAxis": 4
+  },
+  "chessTypesExplained": [
+    0
+  ],
+  "maskedFrameOrigin": "first DOE center at zero rotation",
+  "onDeviceValidation": false,
+  "operationalValuesUsed": false
+}
