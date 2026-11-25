@@ -1,0 +1,53 @@
+{
+  "version": "11.25.3",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "sourceBranch": "master",
+  "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
+  "pages": 2,
+  "exampleType": "virtual arithmetic from actual source formulas; not equipment measurements",
+  "scannerGXGY_mm": [
+    -0.97,
+    21.75
+  ],
+  "reviewXStageY_mm": [
+    108.9,
+    179.2
+  ],
+  "chessNoMask6x6": {
+    "TYPE1_CHESS2": 18,
+    "TYPE1_CHESS3": 12,
+    "TYPE0_CHESS2": 9,
+    "TYPE0_CHESS3": 4
+  },
+  "sourceModified": false,
+  "equipmentExecuted": false,
+  "operationalRecordsPublished": false,
+  "pdfType": "high-resolution image-based PDF",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 26,
+      "sha256": "9618185d97a7b73972851bc179ac276080c298f79adbc1847951e647f4254c27"
+    },
+    {
+      "path": "A3_좌표계산_Laser판정_체스2_3_11.25.3.pdf",
+      "bytes": 435187,
+      "sha256": "c335f9022b1537fe986e053643d77bd9149475a12743dbb04eda1a986106f6dd"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3080,
+      "sha256": "744a15b07b9881f6643c912eff13e70f20cd793e416d9266ddd513c7782a25e4"
+    },
+    {
+      "path": "slide-1.png",
+      "bytes": 336240,
+      "sha256": "6f4e0dd044fc142fe4c63f37c28e4bb724c1316b62bfcf87ff8494668cf3c7a2"
+    },
+    {
+      "path": "slide-2.png",
+      "bytes": 253755,
+      "sha256": "b8eba584cfb2286a797ad7dbf2db574622d182b51889b5bf620e1420ab7f3a06"
+    }
+  ]
+}
