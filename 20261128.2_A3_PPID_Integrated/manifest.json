@@ -1,0 +1,88 @@
+{
+  "version": "11.28.2",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "sourceBranch": "master",
+  "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
+  "combinedSvg": "A3_PPID_Integrated_11.28.2.svg",
+  "sources": [
+    {
+      "path": "Drilling.Common/Recipe/CCellPatternCalculator.cs",
+      "sha256": "a463bbfaf49c6e041202c8f39ba0dbbde1e996590557a8ae984f5cbe1f1588ae",
+      "lineCount": 490
+    },
+    {
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "sha256": "5cbe5fcab500424430a5153c7d7ea0e78af91a38a1f0229e9fb8e21a7448072c",
+      "lineCount": 1431
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "sha256": "84d4b5d645c01331393c69e4f45a9f2b6c19f896cec5e654daa021f85a8b27d7",
+      "lineCount": 4617
+    }
+  ],
+  "artifacts": [
+    {
+      "name": ".gitattributes",
+      "bytes": 108,
+      "sha256": "e84925087c11cca1e3e275a46dc297d2db35f57bcab287956d51eea34ff21613"
+    },
+    {
+      "name": "A3_PPID_Integrated_11.28.2.png",
+      "bytes": 594988,
+      "sha256": "fdbc7bb163d6e70f6625f9e99630646ea27973288076e28010dc71a2cc90b68e"
+    },
+    {
+      "name": "A3_PPID_Integrated_11.28.2.svg",
+      "bytes": 88880,
+      "sha256": "3fbf16e8c467f3d06c3957f48be63e282d2d5de068218f97cffa07713b46efc4"
+    },
+    {
+      "name": "README.md",
+      "bytes": 1975,
+      "sha256": "ecf6872e6270a609667e04bcf44614b93ccddf645b391d59a1c786e89c86c878"
+    }
+  ],
+  "validation": {
+    "version": "11.28.2",
+    "svgRootCount": 1,
+    "svgXml": "passed",
+    "textElements": 121,
+    "parameterCoverage": 28,
+    "removedPhrases": "passed",
+    "sourceLinks": 5,
+    "headBoundaryCases": 10,
+    "numericShotBeamCases": 1152,
+    "results": {
+      "design": [
+        120.95,
+        20.549999999999997
+      ],
+      "head": 2,
+      "stageY": 359.45,
+      "startY": 359.85,
+      "W": 20.550000000000033,
+      "scanner": [
+        0.9500000000000028,
+        20.550000000000033
+      ],
+      "inspectionDesign": [
+        121.0,
+        20.599999999999998
+      ],
+      "review": [
+        221.0,
+        179.4
+      ]
+    },
+    "nativeSvgBrowserRender": "passed",
+    "independentReviews": [
+      "edge_masking_geometry_1127:passed;normalized X labels refined",
+      "edge_masking_parameters_1127:passed"
+    ],
+    "productionBuild": "not_run",
+    "equipmentExecution": "not_run"
+  },
+  "sourceModified": false,
+  "equipmentExecuted": false
+}

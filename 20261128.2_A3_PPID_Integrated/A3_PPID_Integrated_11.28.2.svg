@@ -1,0 +1,1363 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2800" height="3270" viewBox="0 0 2800 3270">
+<title>PPID 파라미터 설명자료</title>
+<rect width="2800" height="3270" fill="#f3f6fa"/>
+<text xmlns="http://www.w3.org/2000/svg" x="60" y="98.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="53" font-weight="700" text-anchor="start" fill="#15304a">PPID 파라미터 설명자료</text>
+
+<g transform="translate(0,-60)">
+<rect xmlns="http://www.w3.org/2000/svg" x="60" y="172" width="2680" height="56" rx="12" fill="#e4eefb" stroke="none" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="82" y="216.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="30" font-weight="700" text-anchor="start" fill="#1762ad" xml:space="preserve">K = Align Key 중심     Pn = 각 Cell의 첫 Pixel 중심     On = 명목 첫 DOE(Shot) 중심     Qj = Hole Mask 시작점</text>
+
+<rect xmlns="http://www.w3.org/2000/svg" x="50" y="255" width="830" height="1445" rx="20" fill="#ffffff" stroke="none" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="80" y="317.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="34" font-weight="700" text-anchor="start" fill="#1762ad" xml:space="preserve">01</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="147" y="317.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="34" font-weight="700" text-anchor="start" fill="#15304a" xml:space="preserve">기판 전체 · Cell 배치와 회전</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="80" y="370.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="28" font-weight="400" text-anchor="start" fill="#15304a" xml:space="preserve">CELLn_ALIGN_TO_1ST_PIXEL_X/Y  [mm]</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="80" y="410.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="28" font-weight="400" text-anchor="start" fill="#15304a" xml:space="preserve">Align Key K에서 각 Cell의 첫 Pixel Pn까지</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="80" y="448.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#526b82" xml:space="preserve">Cell 배치는 위치 설명용 · 기판 장변은 세로</text>
+
+<rect xmlns="http://www.w3.org/2000/svg" x="150" y="490" width="610" height="990" rx="0" fill="#edf5fc" stroke="#7e9ab3" stroke-width="3" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="455" y="1470.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="28" font-weight="400" text-anchor="middle" fill="#526b82" xml:space="preserve">기판 전체</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="150,472 315,472" fill="none" stroke="#15304a" stroke-width="2" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="315,472 303.2941876694152,477.654551943446 303.2941876694152,466.345448056554" fill="#15304a" stroke="none" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="326" y="481.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#15304a" xml:space="preserve">+X</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="125,490 125,665" fill="none" stroke="#15304a" stroke-width="2" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="125,665 119.345448056554,653.2941876694152 130.654551943446,653.2941876694152" fill="#15304a" stroke="none" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="82" y="701.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#15304a" xml:space="preserve">+Y</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="181,550 203,550" fill="none" stroke="#1762ad" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="192,539 192,561" fill="none" stroke="#1762ad" stroke-width="3" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="211" y="561.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#1762ad" xml:space="preserve">K · Align 기준</text>
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="264.0,682.0 485.0,682.0 485.0,888.0 264.0,888.0" fill="#dff1ed" stroke="#008477" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="272.0,728.0 477.0,728.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="272.0,766.0 477.0,766.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="272.0,804.0 477.0,804.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="272.0,842.0 477.0,842.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="306.1666666666667,690.0 306.1666666666667,880.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="340.3333333333333,690.0 340.3333333333333,880.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="374.5,690.0 374.5,880.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="408.66666666666663,690.0 408.66666666666663,880.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="442.83333333333337,690.0 442.83333333333337,880.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="370.4" y="798.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="29" font-weight="700" text-anchor="middle" fill="#008477" xml:space="preserve">Cell1</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="370.4" y="840.9" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="23" font-weight="400" text-anchor="middle" fill="#008477" xml:space="preserve">Model1</text>
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="272" cy="690" r="7" fill="#008477" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="575.2186201803181,704.7462978871074 759.3983738543561,771.7822459789385 688.9422243292684,965.3589258608356 504.76247065523035,898.3229777690045" fill="#f6f9fc" stroke="#008477" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="567.0032345536246,750.7083195898646 736.1479062950881,812.2719453884849" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="554.0064691072491,786.416639179729 723.1511408487127,847.9802649783494" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="541.0097036608738,822.1249587695936 710.1543754023373,883.688584568214" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="528.0129382144984,857.8332783594581 697.1576099559619,919.3969041580784" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="608.1907786235772,725.2606042997701 543.2069513917002,903.8022022490927" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="636.3815572471545,735.5212085995402 571.3977300152775,914.0628065488628" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="664.5723358707318,745.7818128993102 599.5885086388547,924.3234108486329" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="692.763114494309,756.0424171990802 627.7792872624319,934.5840151484028" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="720.9538931178863,766.3030214988503 655.9700658860093,944.8446194481729" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="635.1959115431516" y="847.9671795630668" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="29" font-weight="700" text-anchor="middle" fill="#008477" xml:space="preserve">Cell2</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="618.3001164628637" y="887.8879950298907" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="23" font-weight="400" text-anchor="middle" fill="#008477" xml:space="preserve">Model1</text>
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="580" cy="715" r="7" fill="#008477" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="250.0,1022.0 471.0,1022.0 471.0,1228.0 250.0,1228.0" fill="#e9edf2" stroke="#526b82" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="258.0,1068.0 463.0,1068.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="258.0,1106.0 463.0,1106.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="258.0,1144.0 463.0,1144.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="258.0,1182.0 463.0,1182.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="292.1666666666667,1030.0 292.1666666666667,1220.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="326.3333333333333,1030.0 326.3333333333333,1220.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="360.5,1030.0 360.5,1220.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="394.66666666666663,1030.0 394.66666666666663,1220.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="428.83333333333337,1030.0 428.83333333333337,1220.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="356.4" y="1138.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="29" font-weight="700" text-anchor="middle" fill="#526b82" xml:space="preserve">Cell3</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="356.4" y="1180.9" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="23" font-weight="400" text-anchor="middle" fill="#526b82" xml:space="preserve">Model2</text>
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="258" cy="1030" r="7" fill="#526b82" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="502.0,1212.0 723.0,1212.0 723.0,1418.0 502.0,1418.0" fill="#f6f9fc" stroke="#008477" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="510.0,1258.0 715.0,1258.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="510.0,1296.0 715.0,1296.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="510.0,1334.0 715.0,1334.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="510.0,1372.0 715.0,1372.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="544.1666666666666,1220.0 544.1666666666666,1410.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="578.3333333333334,1220.0 578.3333333333334,1410.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="612.5,1220.0 612.5,1410.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="646.6666666666666,1220.0 646.6666666666666,1410.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="680.8333333333334,1220.0 680.8333333333334,1410.0" fill="none" stroke="#b7c9d8" stroke-width="1" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="608.4" y="1328.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="29" font-weight="700" text-anchor="middle" fill="#008477" xml:space="preserve">Cell n</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="608.4" y="1370.9" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="23" font-weight="400" text-anchor="middle" fill="#008477" xml:space="preserve">Model1</text>
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="510" cy="1220" r="7" fill="#008477" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="281" y="683.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#008477" xml:space="preserve">P1</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="589" y="708.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#008477" xml:space="preserve">P2</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="267" y="1023.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#008477" xml:space="preserve">P3</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="519" y="1213.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#008477" xml:space="preserve">Pn</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="370" y="1029.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="45" font-weight="400" text-anchor="start" fill="#526b82" xml:space="preserve">…</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="600" y="1139.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="45" font-weight="400" text-anchor="start" fill="#526b82" xml:space="preserve">…</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="192,610 272,610" fill="none" stroke="#1762ad" stroke-width="3" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="272,610 260.2941876694152,615.654551943446 260.2941876694152,604.345448056554" fill="#1762ad" stroke="none" stroke-width="2" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="192,610 203.7058123305848,604.345448056554 203.7058123305848,615.654551943446" fill="#1762ad" stroke="none" stroke-width="2" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="192,550 192,610" fill="none" stroke="#1762ad" stroke-width="2" stroke-dasharray="7 6" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="272,690 272,610" fill="none" stroke="#1762ad" stroke-width="2" stroke-dasharray="7 6" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="224" y="597.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="23" font-weight="400" text-anchor="middle" fill="#1762ad" xml:space="preserve">Cell1 X</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="222,550 222,690" fill="none" stroke="#1762ad" stroke-width="3" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="222,690 216.345448056554,678.2941876694152 227.654551943446,678.2941876694152" fill="#1762ad" stroke="none" stroke-width="2" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="222,550 227.654551943446,561.7058123305848 216.345448056554,561.7058123305848" fill="#1762ad" stroke="none" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="234" y="663.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#1762ad" xml:space="preserve">Cell1 Y</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="192,550 192,715 580,715" fill="none" stroke="#1762ad" stroke-width="2" stroke-dasharray="7 6" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="192,550 192,1220 510,1220" fill="none" stroke="#1762ad" stroke-width="2" stroke-dasharray="7 6" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="580,715 695,715" fill="none" stroke="#7541aa" stroke-width="2" stroke-dasharray="7 6" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="580,715 688.0646513903795,754.3323164824519" fill="none" stroke="#7541aa" stroke-width="3" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="688.0646513903795,754.3323164824519 675.1308152568844,755.6422336065087 678.998756589164,745.0151521362951" fill="#7541aa" stroke="none" stroke-width="2" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="668.0,715.0 667.9463927776804,718.0711557098201 667.7856364228645,721.138569689483 667.517926792408,724.1985047675535 667.1435900492581,727.2472328844858 666.6630822650743,730.2810396346898 666.0769888645749,733.2962287919628 665.3860239122877,736.2891268127707 664.5910292425721,739.256087311896 663.6929734339735,742.1934955049953 662.6929506291599,745.0977726126589" fill="none" stroke="#7541aa" stroke-width="3" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="680" y="765.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="26" font-weight="700" text-anchor="start" fill="#7541aa" xml:space="preserve">θ2</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="484,690 810,650 920,655" fill="none" stroke="#008477" stroke-width="3" stroke-dasharray="7 6" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="565" y="638.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#008477" xml:space="preserve">Cell1 확대 →</text>
+
+<rect xmlns="http://www.w3.org/2000/svg" x="80" y="1515" width="770" height="163" rx="12" fill="#f3f0f9" stroke="none" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="102" y="1562.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="29" font-weight="400" text-anchor="start" fill="#7541aa" xml:space="preserve">CELLn_ROTATION  [deg]</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="102" y="1605.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="29" font-weight="400" text-anchor="start" fill="#7541aa" xml:space="preserve">Pn을 기준으로 Cell 내부 배열을 회전</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="102" y="1648.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="29" font-weight="400" text-anchor="start" fill="#7541aa" xml:space="preserve">Cell1은 0°로 확대 · Cell2는 회전 예시</text>
+
+<rect xmlns="http://www.w3.org/2000/svg" x="920" y="255" width="1830" height="1115" rx="20" fill="#ffffff" stroke="none" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="950" y="317.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="34" font-weight="700" text-anchor="start" fill="#1762ad" xml:space="preserve">02</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1017" y="317.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="34" font-weight="700" text-anchor="start" fill="#15304a" xml:space="preserve">Cell1 확대 · Model1의 배열과 Mask 기준점</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="951" y="365.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="26" font-weight="400" text-anchor="start" fill="#526b82" xml:space="preserve">적용 조건: CELL1_MODEL_TYPE = 1  |  확대 도식: 회전 0°, 4×4 분기, PITCH=4, Hole=3 예시</text>
+
+<rect xmlns="http://www.w3.org/2000/svg" x="1209.0" y="589.0" width="1008.0" height="672.0" rx="0" fill="#f6f9fc" stroke="#a5b5c4" stroke-width="2" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1230,610 2196,610 2196,1240 1230,1240 1230,610" fill="none" stroke="#6e8a9d" stroke-width="2" stroke-dasharray="7 6" />
+
+<rect xmlns="http://www.w3.org/2000/svg" x="1230" y="610" width="42" height="42" rx="0" fill="#fbe2e6" stroke="#c42d43" stroke-width="2" />
+
+<rect xmlns="http://www.w3.org/2000/svg" x="2133.0" y="610" width="63.0" height="84" rx="0" fill="#fbe2e6" stroke="#c42d43" stroke-width="2" />
+
+<rect xmlns="http://www.w3.org/2000/svg" x="1230" y="1198" width="84" height="42" rx="0" fill="#fbe2e6" stroke="#c42d43" stroke-width="2" />
+
+<rect xmlns="http://www.w3.org/2000/svg" x="2154" y="1177.0" width="42" height="63.0" rx="0" fill="#fbe2e6" stroke="#c42d43" stroke-width="2" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1398" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1440" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1482" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1524" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1566" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1608" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1650" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1692" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1734" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1776" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1818" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1860" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1902" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1944" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1986" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2028" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2070" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2112" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2154" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2196" cy="610" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1398" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1440" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1482" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1524" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1566" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1608" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1650" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1692" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1734" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1776" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1818" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1860" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1902" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1944" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1986" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2028" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2070" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2112" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2154" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2196" cy="652" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1398" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1440" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1482" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1524" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1566" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1608" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1650" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1692" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1734" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1776" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1818" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1860" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1902" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1944" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1986" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2028" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2070" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2112" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2154" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2196" cy="694" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1398" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1440" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1482" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1524" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1566" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1608" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1650" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1692" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1734" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1776" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1818" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1860" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1902" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1944" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1986" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2028" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2070" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2112" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2154" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2196" cy="736" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1398" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1440" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1482" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1524" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1566" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1608" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1650" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1692" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1734" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1776" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1818" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1860" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1902" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1944" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1986" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2028" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2070" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2112" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2154" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2196" cy="778" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1398" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1440" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1482" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1524" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1566" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1608" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1650" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1692" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1734" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1776" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1818" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1860" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1902" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1944" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1986" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2028" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2070" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2112" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2154" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2196" cy="820" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1398" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1440" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1482" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1524" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1566" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1608" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1650" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1692" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1734" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1776" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1818" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1860" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1902" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1944" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1986" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2028" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2070" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2112" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2154" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2196" cy="862" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1398" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1440" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1482" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1524" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1566" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1608" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1650" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1692" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1734" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1776" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1818" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1860" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1902" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1944" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1986" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2028" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2070" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2112" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2154" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2196" cy="904" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1398" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1440" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1482" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1524" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1566" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1608" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1650" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1692" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1734" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1776" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1818" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1860" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1902" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1944" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1986" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2028" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2070" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2112" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2154" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2196" cy="946" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1398" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1440" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1482" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1524" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1566" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1608" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1650" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1692" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1734" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1776" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1818" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1860" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1902" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1944" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1986" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2028" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2070" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2112" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2154" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2196" cy="988" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1398" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1440" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1482" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1524" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1566" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1608" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1650" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1692" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1734" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1776" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1818" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1860" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1902" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1944" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1986" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2028" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2070" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2112" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2154" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2196" cy="1030" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1398" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1440" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1482" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1524" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1566" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1608" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1650" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1692" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1734" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1776" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1818" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1860" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1902" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1944" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1986" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2028" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2070" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2112" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2154" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2196" cy="1072" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1398" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1440" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1482" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1524" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1566" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1608" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1650" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1692" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1734" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1776" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1818" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1860" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1902" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1944" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1986" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2028" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2070" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2112" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2154" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2196" cy="1114" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1398" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1440" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1482" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1524" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1566" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1608" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1650" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1692" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1734" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1776" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1818" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1860" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1902" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1944" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1986" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2028" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2070" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2112" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2154" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2196" cy="1156" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1398" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1440" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1482" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1524" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1566" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1608" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1650" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1692" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1734" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1776" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1818" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1860" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1902" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1944" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1986" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2028" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2070" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2112" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2154" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2196" cy="1198" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1398" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1440" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1482" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1524" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1566" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1608" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1650" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1692" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1734" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1776" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1818" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1860" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1902" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1944" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1986" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2028" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2070" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2112" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2154" cy="1240" r="3" fill="#b1c3d1" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="2196" cy="1240" r="3" fill="#b1c3d1" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1286.0,673.0 1300.0,673.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1293.0,666.0 1293.0,680.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1454.0,673.0 1468.0,673.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1461.0,666.0 1461.0,680.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1622.0,673.0 1636.0,673.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1629.0,666.0 1629.0,680.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1790.0,673.0 1804.0,673.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1797.0,666.0 1797.0,680.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1958.0,673.0 1972.0,673.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1965.0,666.0 1965.0,680.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="2126.0,673.0 2140.0,673.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="2133.0,666.0 2133.0,680.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1286.0,841.0 1300.0,841.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1293.0,834.0 1293.0,848.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1454.0,841.0 1468.0,841.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1461.0,834.0 1461.0,848.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1622.0,841.0 1636.0,841.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1629.0,834.0 1629.0,848.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1790.0,841.0 1804.0,841.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1797.0,834.0 1797.0,848.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1958.0,841.0 1972.0,841.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1965.0,834.0 1965.0,848.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="2126.0,841.0 2140.0,841.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="2133.0,834.0 2133.0,848.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1286.0,1009.0 1300.0,1009.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1293.0,1002.0 1293.0,1016.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1454.0,1009.0 1468.0,1009.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1461.0,1002.0 1461.0,1016.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1622.0,1009.0 1636.0,1009.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1629.0,1002.0 1629.0,1016.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1790.0,1009.0 1804.0,1009.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1797.0,1002.0 1797.0,1016.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1958.0,1009.0 1972.0,1009.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1965.0,1002.0 1965.0,1016.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="2126.0,1009.0 2140.0,1009.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="2133.0,1002.0 2133.0,1016.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1286.0,1177.0 1300.0,1177.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1293.0,1170.0 1293.0,1184.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1454.0,1177.0 1468.0,1177.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1461.0,1170.0 1461.0,1184.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1622.0,1177.0 1636.0,1177.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1629.0,1170.0 1629.0,1184.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1790.0,1177.0 1804.0,1177.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1797.0,1170.0 1797.0,1184.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1958.0,1177.0 1972.0,1177.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1965.0,1170.0 1965.0,1184.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="2126.0,1177.0 2140.0,1177.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="2133.0,1170.0 2133.0,1184.0" fill="none" stroke="#b99bcc" stroke-width="3" />
+
+<rect xmlns="http://www.w3.org/2000/svg" x="1209.0" y="589.0" width="168.0" height="168.0" rx="0" fill="none" stroke="#7541aa" stroke-width="2" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="610" r="4" fill="#7541aa" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="610" r="4" fill="#7541aa" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="610" r="4" fill="#7541aa" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="610" r="4" fill="#7541aa" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="652" r="4" fill="#7541aa" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="652" r="4" fill="#7541aa" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="652" r="4" fill="#7541aa" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="652" r="4" fill="#7541aa" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="694" r="4" fill="#7541aa" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="694" r="4" fill="#7541aa" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="694" r="4" fill="#7541aa" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="694" r="4" fill="#7541aa" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="736" r="4" fill="#7541aa" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1272" cy="736" r="4" fill="#7541aa" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1314" cy="736" r="4" fill="#7541aa" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1356" cy="736" r="4" fill="#7541aa" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1230" cy="610" r="9" fill="#008477" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="1203" y="588.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="30" font-weight="700" text-anchor="start" fill="#008477" xml:space="preserve">P1</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1279.0,673.0 1307.0,673.0" fill="none" stroke="#7541aa" stroke-width="3" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1293.0,659.0 1293.0,687.0" fill="none" stroke="#7541aa" stroke-width="3" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="1308.0" y="721.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="29" font-weight="700" text-anchor="start" fill="#7541aa" xml:space="preserve">O = (0,0)</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1260" y="787.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#7541aa" xml:space="preserve">명목 첫 DOE 중심</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1230,610 1293.0,673.0" fill="none" stroke="#7541aa" stroke-width="3" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="1293.0,673.0 1280.724368697964,668.7211127455287 1288.7211127455287,660.7243686979641" fill="#7541aa" stroke="none" stroke-width="2" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1230,565 2196,565" fill="none" stroke="#15304a" stroke-width="2" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="2196,565 2184.2941876694154,570.654551943446 2184.2941876694154,559.345448056554" fill="#15304a" stroke="none" stroke-width="2" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="1230,565 1241.7058123305849,559.345448056554 1241.7058123305849,570.654551943446" fill="#15304a" stroke="none" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="1713.0" y="546.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="29" font-weight="700" text-anchor="middle" fill="#15304a" xml:space="preserve">MODEL1_NUM_OF_PIXEL_X = Nx개</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1185,610 1185,1240" fill="none" stroke="#15304a" stroke-width="2" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="1185,1240 1179.345448056554,1228.2941876694151 1190.654551943446,1228.2941876694151" fill="#15304a" stroke="none" stroke-width="2" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="1185,610 1190.654551943446,621.7058123305848 1179.345448056554,621.7058123305848" fill="#15304a" stroke="none" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" transform="translate(1135,925.0) rotate(-90)" text-anchor="middle" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="27" fill="#15304a" xml:space="preserve">MODEL1_NUM_OF_PIXEL_Y = Ny개</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="972" y="435.0" font-family="Consolas,monospace" font-size="25" font-weight="400" text-anchor="start" fill="#c42d43" xml:space="preserve">MODEL1_CELL_UP_LEFT_ROUND_X/Y</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1130,456 1230,610" fill="none" stroke="#c42d43" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="2160" y="435.0" font-family="Consolas,monospace" font-size="25" font-weight="400" text-anchor="start" fill="#c42d43" xml:space="preserve">MODEL1_CELL_UP_RIGHT_ROUND_X/Y</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="2420,456 2196,610" fill="none" stroke="#c42d43" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="960" y="1317.0" font-family="Consolas,monospace" font-size="25" font-weight="400" text-anchor="start" fill="#c42d43" xml:space="preserve">MODEL1_CELL_DOWN_LEFT_ROUND_X/Y</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1160,1295 1230,1240" fill="none" stroke="#c42d43" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="2120" y="1317.0" font-family="Consolas,monospace" font-size="25" font-weight="400" text-anchor="start" fill="#c42d43" xml:space="preserve">MODEL1_CELL_DOWN_RIGHT_ROUND_X/Y</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="2395,1295 2196,1240" fill="none" stroke="#c42d43" stroke-width="2" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1230,610 1272,610" fill="none" stroke="#c42d43" stroke-width="2" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="1272,610 1260.2941876694151,615.654551943446 1260.2941876694151,604.345448056554" fill="#c42d43" stroke="none" stroke-width="2" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1230,610 1230,652" fill="none" stroke="#c42d43" stroke-width="2" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="1230,652 1224.345448056554,640.2941876694152 1235.654551943446,640.2941876694152" fill="#c42d43" stroke="none" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="973" y="486.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#c42d43" xml:space="preserve">각 모서리 Pixel 중심에서 안쪽으로 X×Y [mm]</text>
+
+<rect xmlns="http://www.w3.org/2000/svg" x="1587.0" y="841.0" width="168.0" height="126.0" rx="0" fill="#fff0dd" stroke="#b75d0a" stroke-width="3" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1587.0" cy="841.0" r="7" fill="#b75d0a" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="1532.0" y="880.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#b75d0a" xml:space="preserve">Q1</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1671.0" y="914.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="26" font-weight="700" text-anchor="middle" fill="#b75d0a" xml:space="preserve">Hole1</text>
+
+<rect xmlns="http://www.w3.org/2000/svg" x="1881.0" y="757.0" width="84.0" height="126.0" rx="0" fill="#fff0dd" stroke="#b75d0a" stroke-width="3" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1881.0" cy="757.0" r="7" fill="#b75d0a" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="1891.0" y="749.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#b75d0a" xml:space="preserve">Q2</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1923.0" y="830.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="26" font-weight="700" text-anchor="middle" fill="#b75d0a" xml:space="preserve">Hole2</text>
+
+<rect xmlns="http://www.w3.org/2000/svg" x="1713.0" y="1093.0" width="168.0" height="84.0" rx="0" fill="#fff0dd" stroke="#b75d0a" stroke-width="3" />
+
+<circle xmlns="http://www.w3.org/2000/svg" cx="1713.0" cy="1093.0" r="7" fill="#b75d0a" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="1723.0" y="1085.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#b75d0a" xml:space="preserve">Q3</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1797.0" y="1145.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="26" font-weight="700" text-anchor="middle" fill="#b75d0a" xml:space="preserve">Hole3</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1293.0,673.0 1587.0,673.0" fill="none" stroke="#b75d0a" stroke-width="3" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="1587.0,673.0 1575.2941876694151,678.654551943446 1575.2941876694151,667.345448056554" fill="#b75d0a" stroke="none" stroke-width="2" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="1293.0,673.0 1304.7058123305849,667.345448056554 1304.7058123305849,678.654551943446" fill="#b75d0a" stroke="none" stroke-width="2" />
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1587.0,673.0 1587.0,841.0" fill="none" stroke="#b75d0a" stroke-width="2" stroke-dasharray="7 6" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="1440.0" y="649.0" font-family="Consolas,monospace" font-size="25" font-weight="400" text-anchor="middle" fill="#b75d0a" xml:space="preserve">HOLE1_X</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1555.0,673.0 1555.0,841.0" fill="none" stroke="#b75d0a" stroke-width="3" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="1555.0,841.0 1549.345448056554,829.2941876694152 1560.654551943446,829.2941876694152" fill="#b75d0a" stroke="none" stroke-width="2" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="1555.0,673.0 1560.654551943446,684.7058123305848 1549.345448056554,684.7058123305848" fill="#b75d0a" stroke="none" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="1605.0" y="735.0" font-family="Consolas,monospace" font-size="24" font-weight="400" text-anchor="start" fill="#b75d0a" xml:space="preserve">HOLE1_Y</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1587.0,821.0 1755.0,821.0" fill="none" stroke="#b75d0a" stroke-width="2" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="1755.0,821.0 1743.2941876694151,826.654551943446 1743.2941876694151,815.345448056554" fill="#b75d0a" stroke="none" stroke-width="2" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="1587.0,821.0 1598.7058123305849,815.345448056554 1598.7058123305849,826.654551943446" fill="#b75d0a" stroke="none" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="1671.0" y="802.0" font-family="Consolas,monospace" font-size="25" font-weight="400" text-anchor="middle" fill="#b75d0a" xml:space="preserve">SIZE_X</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="1781.0,841.0 1781.0,967.0" fill="none" stroke="#b75d0a" stroke-width="2" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="1781.0,967.0 1775.345448056554,955.2941876694152 1786.654551943446,955.2941876694152" fill="#b75d0a" stroke="none" stroke-width="2" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="1781.0,841.0 1786.654551943446,852.7058123305848 1775.345448056554,852.7058123305848" fill="#b75d0a" stroke="none" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="1793.0" y="910.0" font-family="Consolas,monospace" font-size="25" font-weight="400" text-anchor="start" fill="#b75d0a" xml:space="preserve">SIZE_Y</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="2360,1005 2505,1005" fill="none" stroke="#15304a" stroke-width="2" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="2505,1005 2493.2941876694154,1010.654551943446 2493.2941876694154,999.345448056554" fill="#15304a" stroke="none" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="2520" y="1014.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="26" font-weight="400" text-anchor="start" fill="#15304a" xml:space="preserve">+X</text>
+
+<polyline xmlns="http://www.w3.org/2000/svg" points="2360,1005 2360,1130" fill="none" stroke="#15304a" stroke-width="2" />
+
+<polygon xmlns="http://www.w3.org/2000/svg" points="2360,1130 2354.3454480565542,1118.2941876694151 2365.6545519434458,1118.2941876694151" fill="#15304a" stroke="none" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="2375" y="1128.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="26" font-weight="400" text-anchor="start" fill="#15304a" xml:space="preserve">+Y</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="2310" y="1191.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#526b82" xml:space="preserve">Cell 로컬 좌표</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="2308" y="1229.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#526b82" xml:space="preserve">회색 점: Pixel · 보라 십자: Shot 중심</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1420" y="1220.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#526b82" xml:space="preserve">점선: 첫↔마지막 Pixel 중심 범위</text>
+
+<rect xmlns="http://www.w3.org/2000/svg" x="920" y="1400" width="1830" height="410" rx="20" fill="#ffffff" stroke="none" stroke-width="2" />
+
+<text xmlns="http://www.w3.org/2000/svg" x="950" y="1457.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="34" font-weight="700" text-anchor="start" fill="#b75d0a" xml:space="preserve">03</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1017" y="1457.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="34" font-weight="700" text-anchor="start" fill="#15304a" xml:space="preserve">Hole Masking · O에서 사각 시작점 Qj까지</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="953" y="1498.0" font-family="Consolas,monospace" font-size="28" font-weight="400" text-anchor="start" fill="#b75d0a" xml:space="preserve">MODEL1_MASKING_HOLE_NUMBER = 0~3</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1740" y="1505.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="26" font-weight="400" text-anchor="start" fill="#526b82" xml:space="preserve">0: 없음  /  1: Hole1  /  2: Hole1~2  /  3: Hole1~3</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="957" y="1566.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="30" font-weight="700" text-anchor="start" fill="#b75d0a" xml:space="preserve">Q1</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1030" y="1553.5" font-family="Consolas,monospace" font-size="27" font-weight="400" text-anchor="start" fill="#b75d0a" xml:space="preserve">MODEL1_MASKING_HOLE1_X/Y</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1800" y="1553.5" font-family="Consolas,monospace" font-size="27" font-weight="400" text-anchor="start" fill="#b75d0a" xml:space="preserve">MODEL1_MASKING_HOLE1_SIZE_X/Y</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1030" y="1596.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#526b82" xml:space="preserve">O 기준 시작점 좌표 [mm] · 양수/음수 가능</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1800" y="1596.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#526b82" xml:space="preserve">Q에서 +X/+Y로 뻗는 가로/세로 크기 [mm]</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="957" y="1648.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="30" font-weight="700" text-anchor="start" fill="#b75d0a" xml:space="preserve">Q2</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1030" y="1635.5" font-family="Consolas,monospace" font-size="27" font-weight="400" text-anchor="start" fill="#b75d0a" xml:space="preserve">MODEL1_MASKING_HOLE2_X/Y</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1800" y="1635.5" font-family="Consolas,monospace" font-size="27" font-weight="400" text-anchor="start" fill="#b75d0a" xml:space="preserve">MODEL1_MASKING_HOLE2_SIZE_X/Y</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1030" y="1678.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#526b82" xml:space="preserve">O 기준 시작점 좌표 [mm] · 양수/음수 가능</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1800" y="1678.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#526b82" xml:space="preserve">Q에서 +X/+Y로 뻗는 가로/세로 크기 [mm]</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="957" y="1730.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="30" font-weight="700" text-anchor="start" fill="#b75d0a" xml:space="preserve">Q3</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1030" y="1717.5" font-family="Consolas,monospace" font-size="27" font-weight="400" text-anchor="start" fill="#b75d0a" xml:space="preserve">MODEL1_MASKING_HOLE3_X/Y</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1800" y="1717.5" font-family="Consolas,monospace" font-size="27" font-weight="400" text-anchor="start" fill="#b75d0a" xml:space="preserve">MODEL1_MASKING_HOLE3_SIZE_X/Y</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1030" y="1760.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#526b82" xml:space="preserve">O 기준 시작점 좌표 [mm] · 양수/음수 가능</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="1800" y="1760.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#526b82" xml:space="preserve">Q에서 +X/+Y로 뻗는 가로/세로 크기 [mm]</text>
+
+<text xmlns="http://www.w3.org/2000/svg" x="953" y="1798.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="24" font-weight="700" text-anchor="start" fill="#15304a" xml:space="preserve">Hole은 중심 좌표가 아닙니다. SIZE_X/Y &gt; 0일 때 사용 · Hole 개수 0이어도 Edge Mask는 별개입니다.</text>
+
+</g>
+<text x="65" y="1827.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="43" font-weight="700" text-anchor="start" xml:space="preserve" fill="#15304a">좌표 계산: 설계 → Head 선택 → 가공·검사</text>
+<text x="67" y="1870.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="27" font-weight="400" text-anchor="start" xml:space="preserve" fill="#526b82">예시(mm, Align Key 기준) · 회전/Shift/보정 0 · 축 교환/반전 없음 · 주행 방향 d=-1 · 시작 지연 0 · Head 사용 ON</text>
+<rect x="50" y="1900" width="1060" height="505" rx="20" fill="#ffffff" stroke="none" stroke-width="2"/>
+<text x="80" y="1958.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="35" font-weight="700" text-anchor="start" xml:space="preserve" fill="#008477">A. 설계 Shot 좌표</text>
+<text x="85" y="2017.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="30" font-weight="400" text-anchor="start" xml:space="preserve" fill="#15304a">첫 Pixel P=(120,20), PIXEL_SIZE=0.1</text>
+<text x="85" y="2062.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="27" font-weight="400" text-anchor="start" xml:space="preserve" fill="#15304a">MODEL1_PITCH=4 · 4×4 분기 · 열 c=2 / 행 r=1</text>
+<text x="85" y="2129.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="33" font-weight="400" text-anchor="start" xml:space="preserve" fill="#008477">G = 0.1 × 4 = 0.40</text>
+<text x="85" y="2181.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="32" font-weight="400" text-anchor="start" xml:space="preserve" fill="#008477">h = (G ÷ 4) × 1.5 = 0.15</text>
+<text x="85" y="2251.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="36" font-weight="700" text-anchor="start" xml:space="preserve" fill="#008477">D = P + (h+cG, h+rG)</text>
+<rect x="80" y="2281" width="995" height="89" rx="12" fill="#e8f5f1" stroke="none" stroke-width="2"/>
+<text x="105" y="2345.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="39" font-weight="700" text-anchor="start" xml:space="preserve" fill="#008477">D = (120.95,20.55)</text>
+<rect x="1150" y="1900" width="1600" height="505" rx="20" fill="#ffffff" stroke="none" stroke-width="2"/>
+<text x="1180" y="1958.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="35" font-weight="700" text-anchor="start" xml:space="preserve" fill="#7541aa">B. 어느 Head가 가공할지 찾기</text>
+<text x="1185" y="2016.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="29" font-weight="400" text-anchor="start" xml:space="preserve" fill="#7541aa">환산 X 기준점: H1=10, H2=120, H3=230  /  HeadGapX=110</text>
+<text x="1185" y="2070.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="32" font-weight="700" text-anchor="start" xml:space="preserve" fill="#7541aa">가공폭=110:  중심-55 ≤ Dx ≤ 중심+55</text>
+<rect x="1230.0" y="2132" width="485.0" height="95" rx="0" fill="#edf2f7" stroke="#9eb1c2" stroke-width="2"/>
+<text x="1472.5" y="2190.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="31" font-weight="700" text-anchor="middle" xml:space="preserve" fill="#526b82">Head #1</text>
+<rect x="1715.0" y="2132" width="485.0" height="95" rx="0" fill="#e8dcf5" stroke="#7541aa" stroke-width="2"/>
+<text x="1957.5" y="2190.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="31" font-weight="700" text-anchor="middle" xml:space="preserve" fill="#7541aa">Head #2</text>
+<rect x="2200.0" y="2132" width="485.0" height="95" rx="0" fill="#edf2f7" stroke="#9eb1c2" stroke-width="2"/>
+<text x="2442.5" y="2190.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="31" font-weight="700" text-anchor="middle" xml:space="preserve" fill="#526b82">Head #3</text>
+<text x="1230.0" y="2265.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="25" font-weight="400" text-anchor="middle" xml:space="preserve" fill="#526b82">-45</text>
+<text x="1715.0" y="2265.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="25" font-weight="400" text-anchor="middle" xml:space="preserve" fill="#526b82">65</text>
+<text x="2200.0" y="2265.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="25" font-weight="400" text-anchor="middle" xml:space="preserve" fill="#526b82">175</text>
+<text x="2685.0" y="2265.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="25" font-weight="400" text-anchor="middle" xml:space="preserve" fill="#526b82">285</text>
+<polyline points="1961.6886363636363,2078 1961.6886363636363,2126" fill="none" stroke="#7541aa" stroke-width="4"/>
+<polygon points="1961.6886363636363,2126 1956.0340844201903,2114.2941876694154 1967.3431883070823,2114.2941876694154" fill="#7541aa" stroke="none" stroke-width="2"/>
+<text x="1984.6886363636363" y="2099.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="26" font-weight="700" text-anchor="start" xml:space="preserve" fill="#7541aa">Dx=120.95</text>
+<text x="1185" y="2342.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="36" font-weight="700" text-anchor="start" xml:space="preserve" fill="#7541aa">65~175 안에 있으므로 → Head #2</text>
+<text x="1185" y="2387.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="25" font-weight="400" text-anchor="start" xml:space="preserve" fill="#526b82">겹치면: 중심 거리 → 배정 Shot 수 → Head 번호 순</text>
+<polyline points="1115,2155 1144,2155" fill="none" stroke="#008477" stroke-width="4"/>
+<polygon points="1144,2155 1132.2941876694151,2160.6545519434458 1132.2941876694151,2149.3454480565542" fill="#008477" stroke="none" stroke-width="2"/>
+<polyline points="1950,2405 1950,2444" fill="none" stroke="#7541aa" stroke-width="4"/>
+<polyline points="735,2444 2065,2444" fill="none" stroke="#7541aa" stroke-width="4"/>
+<polyline points="735,2444 735,2474" fill="none" stroke="#7541aa" stroke-width="4"/>
+<polygon points="735,2474 729.345448056554,2462.2941876694154 740.654551943446,2462.2941876694154" fill="#7541aa" stroke="none" stroke-width="2"/>
+<polyline points="2065,2444 2065,2474" fill="none" stroke="#7541aa" stroke-width="4"/>
+<polygon points="2065,2474 2059.3454480565542,2462.2941876694154 2070.6545519434458,2462.2941876694154" fill="#7541aa" stroke="none" stroke-width="2"/>
+<rect x="50" y="2480" width="1325" height="740" rx="20" fill="#ffffff" stroke="none" stroke-width="2"/>
+<text x="80" y="2537.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="34" font-weight="700" text-anchor="start" xml:space="preserve" fill="#7541aa">C. 선택한 Head #2 기준 Scanner 좌표</text>
+<text x="85" y="2603.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="33" font-weight="700" text-anchor="start" xml:space="preserve" fill="#7541aa">Head #2:  환산 X=120 / Y=380</text>
+<text x="85" y="2668.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="30" font-weight="400" text-anchor="start" xml:space="preserve" fill="#15304a">Stage 위치 = Head Y - Dy</text>
+<text x="85" y="2715.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="30" font-weight="400" text-anchor="start" xml:space="preserve" fill="#15304a">               = 380 - 20.55 = 359.45</text>
+<text x="85" y="2766.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="27" font-weight="400" text-anchor="start" xml:space="preserve" fill="#15304a">첫 Shot Dy=20.15 → 시작 Y=380-20.15=359.85</text>
+<text x="85" y="2825.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="28" font-weight="400" text-anchor="start" xml:space="preserve" fill="#15304a">W = (Stage 위치 - 시작 Y) × d + |첫 Shot Dy|</text>
+<text x="85" y="2881.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="28" font-weight="400" text-anchor="start" xml:space="preserve" fill="#7541aa">W = (359.45-359.85)×(-1)+20.15 = 20.55</text>
+<rect x="80" y="2923" width="1260" height="192" rx="14" fill="#f1eafa" stroke="none" stroke-width="2"/>
+<text x="105" y="2976.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="31" font-weight="700" text-anchor="start" xml:space="preserve" fill="#7541aa">GX = Dx - Head X = 120.95 - 120 = 0.95</text>
+<text x="105" y="3052.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="37" font-weight="700" text-anchor="start" xml:space="preserve" fill="#7541aa">GY = -d × W = 20.55</text>
+<text x="85" y="3193.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="28" font-weight="400" text-anchor="start" xml:space="preserve" fill="#526b82">Head 번호에 맞는 X/Y·축 방향 설정을 사용</text>
+<rect x="1410" y="2480" width="1340" height="740" rx="20" fill="#ffffff" stroke="none" stroke-width="2"/>
+<text x="1440" y="2537.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="34" font-weight="700" text-anchor="start" xml:space="preserve" fill="#1762ad">D. 같은 설계점에서 Review 좌표</text>
+<text x="1445" y="2601.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="31" font-weight="700" text-anchor="start" xml:space="preserve" fill="#1762ad">Head #2의 Shot · Beam 11을 검사</text>
+<text x="1445" y="2660.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="29" font-weight="400" text-anchor="start" xml:space="preserve" fill="#15304a">선택 Beam 위치 = Shot 중심 + (0.05,0.05)</text>
+<text x="1445" y="2719.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="35" font-weight="700" text-anchor="start" xml:space="preserve" fill="#1762ad">검사점 V = (121.00,20.60)</text>
+<text x="1445" y="2779.0" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="29" font-weight="400" text-anchor="start" xml:space="preserve" fill="#15304a">Align 촬영 기준 축 위치 C=(100,200)</text>
+<rect x="1440" y="2826" width="1275" height="204" rx="14" fill="#e8f1ff" stroke="none" stroke-width="2"/>
+<text x="1465" y="2888.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="36" font-weight="700" text-anchor="start" xml:space="preserve" fill="#1762ad">Review X = Cx + Vx = 221.00</text>
+<text x="1465" y="2966.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="36" font-weight="700" text-anchor="start" xml:space="preserve" fill="#1762ad">Stage Y = Cy - Vy = 179.40</text>
+<text x="1445" y="3120.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="28" font-weight="400" text-anchor="start" xml:space="preserve" fill="#526b82">가공 Head 배정은 공유하고, 검사 목표는 별도 계산</text>
+<text x="1445" y="3193.5" font-family="Malgun Gothic,Noto Sans KR,sans-serif" font-size="28" font-weight="700" text-anchor="start" xml:space="preserve" fill="#1762ad">Review X와 Stage Y를 이동해 측정</text>
+</svg>
