@@ -1,0 +1,96 @@
+{
+  "version": "11.28.0",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "sourceBranch": "master",
+  "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
+  "parameterFamilies": 28,
+  "sources": [
+    {
+      "path": "Drilling.Common/Recipe/CCellPatternCalculator.cs",
+      "sha256": "a463bbfaf49c6e041202c8f39ba0dbbde1e996590557a8ae984f5cbe1f1588ae",
+      "lineCount": 490
+    },
+    {
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "sha256": "5cbe5fcab500424430a5153c7d7ea0e78af91a38a1f0229e9fb8e21a7448072c",
+      "lineCount": 1431
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuRecipe.cs",
+      "sha256": "129b28e36b4ec71b0b759c4433a8a6ba9f0f6271cf3cebb3b55cfda8e2d9c3f1",
+      "lineCount": 4736
+    },
+    {
+      "path": "Config/JHMI_RCP.csv",
+      "sha256": "df231e5e6eb395d8a782ef516bf4ae0317018e147b889c5eb6197b1efcc557e3",
+      "lineCount": 355
+    }
+  ],
+  "artifacts": [
+    {
+      "name": ".gitattributes",
+      "bytes": 108,
+      "sha256": "e84925087c11cca1e3e275a46dc297d2db35f57bcab287956d51eea34ff21613"
+    },
+    {
+      "name": "A3_PPID_Parameter_Location_Map_11.28.0.png",
+      "bytes": 1035036,
+      "sha256": "b69296d01725ef526e6616125ddadbeb6aab120154fc2e2773c613d7465d37f3"
+    },
+    {
+      "name": "A3_PPID_Parameter_Location_Map_11.28.0.svg",
+      "bytes": 60272,
+      "sha256": "2f94000103449b909c4fa11f070a53289960b89ad36274454ecf03dd2c5b1c9e"
+    },
+    {
+      "name": "README.md",
+      "bytes": 4730,
+      "sha256": "18f2cc68d6ee50c8644dd454fd5e4c33f33bccd96868d4ad5864058ef55b35fa"
+    }
+  ],
+  "equipmentExecuted": false,
+  "sourceModified": false,
+  "parameterCoverage": [
+    "PIXEL_SIZE",
+    "MODEL1_NUM_OF_PIXEL_X",
+    "MODEL1_NUM_OF_PIXEL_Y",
+    "MODEL1_PITCH",
+    "MODEL1_MASKING_HOLE_NUMBER",
+    "MODEL1_MASKING_HOLE1_X",
+    "MODEL1_MASKING_HOLE1_Y",
+    "MODEL1_MASKING_HOLE1_SIZE_X",
+    "MODEL1_MASKING_HOLE1_SIZE_Y",
+    "MODEL1_MASKING_HOLE2_X",
+    "MODEL1_MASKING_HOLE2_Y",
+    "MODEL1_MASKING_HOLE2_SIZE_X",
+    "MODEL1_MASKING_HOLE2_SIZE_Y",
+    "MODEL1_MASKING_HOLE3_X",
+    "MODEL1_MASKING_HOLE3_Y",
+    "MODEL1_MASKING_HOLE3_SIZE_X",
+    "MODEL1_MASKING_HOLE3_SIZE_Y",
+    "MODEL1_CELL_UP_LEFT_ROUND_X",
+    "MODEL1_CELL_UP_LEFT_ROUND_Y",
+    "MODEL1_CELL_UP_RIGHT_ROUND_X",
+    "MODEL1_CELL_UP_RIGHT_ROUND_Y",
+    "MODEL1_CELL_DOWN_LEFT_ROUND_X",
+    "MODEL1_CELL_DOWN_LEFT_ROUND_Y",
+    "MODEL1_CELL_DOWN_RIGHT_ROUND_X",
+    "MODEL1_CELL_DOWN_RIGHT_ROUND_Y",
+    "CELLn_ALIGN_TO_1ST_PIXEL_X",
+    "CELLn_ALIGN_TO_1ST_PIXEL_Y",
+    "CELLn_ROTATION"
+  ],
+  "validation": {
+    "sourceReview": "passed",
+    "independentReviews": [
+      "edge_masking_geometry_1127",
+      "edge_masking_parameters_1127"
+    ],
+    "textBoundsOverflow": 0,
+    "nativeSvgXml": "passed",
+    "nativeSvgBrowserRender": "passed",
+    "arithmeticExamples": 2,
+    "equipmentExecution": "not_run",
+    "sourceModification": false
+  }
+}
