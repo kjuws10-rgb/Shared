@@ -1,0 +1,98 @@
+{
+  "version": "11.28.1",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "sourceBranch": "master",
+  "sourceCommit": "0219666f9053b907d96d7e0aa7d0c6c1be3a73d4",
+  "figures": 2,
+  "sources": [
+    {
+      "path": "Drilling.Common/Recipe/CCellPatternCalculator.cs",
+      "sha256": "a463bbfaf49c6e041202c8f39ba0dbbde1e996590557a8ae984f5cbe1f1588ae",
+      "lineCount": 490
+    },
+    {
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "sha256": "5cbe5fcab500424430a5153c7d7ea0e78af91a38a1f0229e9fb8e21a7448072c",
+      "lineCount": 1431
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "sha256": "84d4b5d645c01331393c69e4f45a9f2b6c19f896cec5e654daa021f85a8b27d7",
+      "lineCount": 4617
+    }
+  ],
+  "parameterCoverage": [
+    "PIXEL_SIZE",
+    "MODEL1_NUM_OF_PIXEL_X",
+    "MODEL1_NUM_OF_PIXEL_Y",
+    "MODEL1_PITCH",
+    "MODEL1_MASKING_HOLE_NUMBER",
+    "MODEL1_MASKING_HOLE1_X",
+    "MODEL1_MASKING_HOLE1_Y",
+    "MODEL1_MASKING_HOLE1_SIZE_X",
+    "MODEL1_MASKING_HOLE1_SIZE_Y",
+    "MODEL1_MASKING_HOLE2_X",
+    "MODEL1_MASKING_HOLE2_Y",
+    "MODEL1_MASKING_HOLE2_SIZE_X",
+    "MODEL1_MASKING_HOLE2_SIZE_Y",
+    "MODEL1_MASKING_HOLE3_X",
+    "MODEL1_MASKING_HOLE3_Y",
+    "MODEL1_MASKING_HOLE3_SIZE_X",
+    "MODEL1_MASKING_HOLE3_SIZE_Y",
+    "MODEL1_CELL_UP_LEFT_ROUND_X",
+    "MODEL1_CELL_UP_LEFT_ROUND_Y",
+    "MODEL1_CELL_UP_RIGHT_ROUND_X",
+    "MODEL1_CELL_UP_RIGHT_ROUND_Y",
+    "MODEL1_CELL_DOWN_LEFT_ROUND_X",
+    "MODEL1_CELL_DOWN_LEFT_ROUND_Y",
+    "MODEL1_CELL_DOWN_RIGHT_ROUND_X",
+    "MODEL1_CELL_DOWN_RIGHT_ROUND_Y",
+    "CELLn_ALIGN_TO_1ST_PIXEL_X",
+    "CELLn_ALIGN_TO_1ST_PIXEL_Y",
+    "CELLn_ROTATION"
+  ],
+  "artifacts": [
+    {
+      "name": ".gitattributes",
+      "bytes": 108,
+      "sha256": "e84925087c11cca1e3e275a46dc297d2db35f57bcab287956d51eea34ff21613"
+    },
+    {
+      "name": "A3_Design_Scanner_Review_Calculation_11.28.1.png",
+      "bytes": 740729,
+      "sha256": "72344718b5580bb74f8405a3e815637c49987738b045fa261aff82e73e60872c"
+    },
+    {
+      "name": "A3_Design_Scanner_Review_Calculation_11.28.1.svg",
+      "bytes": 40728,
+      "sha256": "e83ad7d06239149aa85a1d42953865443dbb05ebde5dbd72f2b5ec4efe30b364"
+    },
+    {
+      "name": "A3_PPID_Parameter_Location_Map_11.28.1.png",
+      "bytes": 741883,
+      "sha256": "9e5585c58e612c9a6fa2dd2cb7afdeda7cc598b2fc8bc8514a16a73cbc9ac8fb"
+    },
+    {
+      "name": "A3_PPID_Parameter_Location_Map_11.28.1.svg",
+      "bytes": 53040,
+      "sha256": "feba7658e7a5dc088ff290554ee6cd8185b83163a36c23e5d90d6c4419505c3a"
+    },
+    {
+      "name": "README.md",
+      "bytes": 5061,
+      "sha256": "67e85502abf55531a1aa143071fe49abacadb63c0e0cd5419aebb02f33d1392c"
+    }
+  ],
+  "validation": {
+    "sourceReview": "passed",
+    "independentPngReviews": "passed",
+    "parameterFamilies": 28,
+    "textOverflow": 0,
+    "svgXml": "passed",
+    "nativeSvgBrowserRender": "passed",
+    "numericShotBeamCases": 384,
+    "sourceLinks": 10
+  },
+  "equipmentExecuted": false,
+  "sourceModified": false
+}
